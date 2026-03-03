@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Map</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script async
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA729Oa7Bt6VZjx-PLdXIGMn-WuSaxpqu4&callback=initMap">
+    </script>
+    <script>
+      let map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById("map"), {
+          center: { lat: 44.5192, lng: -88.0198 },
+          zoom: 8,
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <div id="map" style="height: 100%; width: 100%;"></div>
+  </body>
+</html>
