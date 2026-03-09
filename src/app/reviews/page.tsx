@@ -2,6 +2,8 @@ import React from 'react';
 import Link from 'next/link';
 import { Star, BadgeCheck, MessageCircleHeart } from 'lucide-react';
 
+import ReviewSlider from '@/components/ReviewSlider';
+
 export const metadata = {
     title: 'Customer Reviews & Testimonials | Valley Window Care',
     description: 'Read what our customers in Northeast Wisconsin say about our window cleaning, roof washing, and exterior cleaning services. 100+ 5-star Google Reviews.',
@@ -182,6 +184,7 @@ export default function ReviewsPage() {
                 </div>
 
             </div>
-        </div>
+    <ReviewSlider />
+</div>
     );
 }

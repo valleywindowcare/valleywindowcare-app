@@ -1,226 +1,206 @@
-import fs from 'fs';
-import path from 'path';
 import React from 'react';
-import { notFound } from 'next/navigation';
-import Image from 'next/image';
-import { Calendar, ChevronLeft, ChevronRight } from 'lucide-react';
 import Link from 'next/link';
-import ReviewSlider from '@/components/ReviewSlider';
-import { Metadata } from 'next';
+import { notFound } from 'next/navigation';
+import { ChevronRight, Home, ArrowLeft } from 'lucide-react';
+import SafeHeroImage from '@/components/SafeHeroImage';
+import { blogData } from '@/data/blogData';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-import matter from 'gray-matter';
+import rehypeRaw from 'rehype-raw';
+import Script from 'next/script';
 
-const POSTS_DIR = path.join(process.cwd(), 'src/data/posts');
+// Generate Static Params for all 15 active CSV mappings
+import ReviewSlider from '@/components/ReviewSlider';
 
-// Get all blogs helper parsing physical Markdown files
-function getBlogs(): any[] {
-    let blogsList: any[] = [];
-    try {
-        if (fs.existsSync(POSTS_DIR)) {
-            const files = fs.readdirSync(POSTS_DIR).filter((f: string) => f.endsWith('.md'));
-            for (const file of files) {
-                const fileContent = fs.readFileSync(path.join(POSTS_DIR, file), 'utf8');
-                const { data, content } = matter(fileContent);
-                blogsList.push({
-                    slug: file.replace('.md', ''),
-                    ...data,
-                    content: content
-                });
-            }
-        }
-        return blogsList;
-    } catch (e) {
-        return [];
-    }
-}
-
-export async function generateStaticParams() {
-    const blogs = getBlogs();
-    return blogs.map((b: any) => ({
-        slug: b.slug,
+export function generateStaticParams() {
+    return blogData.map((post) => ({
+        slug: post.slug,
     }));
 }
 
-type BlogProps = {
+// Intercept Localized SEO Schemas
+type Props = {
     params: Promise<{ slug: string }>;
 };
 
-export async function generateMetadata({ params }: BlogProps): Promise<Metadata> {
+export async function generateMetadata({ params }: Props) {
     const resolvedParams = await params;
-    const { slug } = resolvedParams;
+    const post = blogData.find((p) => p.slug === resolvedParams.slug);
 
-    // Fallback if not found in baseline
-    const blogs = getBlogs();
-    const blog = blogs.find((b: any) => b.slug === slug);
-    if (blog) {
+    if (!post) {
         return {
-            title: `${blog.title} | Valley Window Care and Exterior Cleaning`,
-            description: blog.meta_description || `Read ${blog.title} on the Valley Window Care and Exterior Cleaning blog.`
+            title: 'Post Not Found | Valley Window Care',
         };
     }
 
-    return { title: 'Blog Post' };
+    return {
+        title: `${post.title} | Valley Window Care`,
+        description: post.excerpt,
+    };
 }
 
-export default async function BlogPost({ params }: BlogProps) {
+export default async function BlogPostTemplate({ params }: Props) {
     const resolvedParams = await params;
-    const { slug } = resolvedParams;
+    const post = blogData.find((p) => p.slug === resolvedParams.slug);
 
-    const blogs = getBlogs();
-    const blog = blogs.find((b: any) => b.slug === slug);
-
-    if (!blog) {
+    // Hard fallback if the requested URL isn't natively supported in our array
+    if (!post) {
         notFound();
     }
 
-    const jsonLd = {
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        "headline": blog.title,
-        "description": blog.meta_description || `Read ${blog.title} on the Valley Window Care and Exterior Cleaning blog.`,
-        "image": blog.image ? (blog.image.startsWith('/') ? `https://valleywindowcare.com${blog.image}` : blog.image) : "https://valleywindowcare.com/wp-content/uploads/2026/01/Roof-Cleaning-in-green-bay.png",
-        "datePublished": blog.date,
-        "dateModified": blog.date,
-        "author": {
-            "@type": "Person",
-            "name": "Valley Window Care",
-            "url": "https://valleywindowcare.com/about-us"
-        },
-        "publisher": {
-            "@type": "Organization",
-            "name": "Valley Window Care and Exterior Cleaning",
-            "logo": {
-                "@type": "ImageObject",
-                "url": "https://valleywindowcare.com/upscalemedia-transformed.png"
-            }
-        },
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": `https://valleywindowcare.com/blog/${blog.slug}`
-        }
-    };
-
     return (
-        <article className="bg-white min-h-screen">
-            {/* JSON-LD Schema Injection */}
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-            />
+        <main className="w-full overflow-hidden bg-white">
+            {/* HERO SECTION */}
+            <section className="relative w-full h-[40vh] sm:h-[50vh] flex items-center justify-center bg-navy">
+                <SafeHeroImage
+                    src={post.imagePath}
+                    fallbackSrc="/images/portfolio/building-wash-copy.webp"
+                    alt={post.title}
+                />
+                
+                {/* Dark Overlay for text legibility */}
+                <div className="absolute inset-0 bg-navy/70 z-10" />
 
-            {/* Minimalist Hero for Article */}
-            <div className="bg-navy pt-32 pb-20 relative">
-                <div className="absolute inset-0 opacity-10 bg-[url('/grid-pattern.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
-                <div className="container mx-auto px-4 relative z-10 text-center">
-                    <Link href="/blog" className="inline-flex items-center gap-2 text-gold hover:text-white transition-colors font-bold mb-8 uppercase tracking-widest text-sm">
-                        <ChevronLeft size={16} /> Back to Blog
-                    </Link>
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-tight mb-6 max-w-4xl mx-auto">
-                        {blog.title}
-                    </h1>
-                    <div className="flex items-center justify-center gap-2 text-white/70 font-semibold">
-                        <Calendar size={18} className="text-gold" />
-                        <time dateTime={blog.date}>
-                            {new Date(blog.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
-                        </time>
-                    </div>
-                </div>
-            </div>
-
-            {/* TWO-COLUMN LAYOUT */}
-            <div className="max-w-7xl mx-auto px-6 py-12 bg-white">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-
-                    {/* Main Content Column */}
-                    <div className="lg:col-span-8">
-                        {blog.image && (
-                            <div className="relative w-full h-[400px] mb-12 rounded-2xl overflow-hidden shadow-sm border border-gray-100">
-                                <Image
-                                    src={blog.image || '/site-gallery/authentic-crew-photo.jpg'}
-                                    alt={`Valley Window Care and Exterior Cleaning - ${blog.title}`}
-                                    fill
-                                    className="object-cover"
-                                    priority
-                                />
-                            </div>
-                        )}
-
-                        {/* Rendering the physical Markdown file directly formatted effectively via tailwind prose constraints */}
-                        <article className="prose prose-slate lg:prose-xl max-w-none prose-table:border prose-th:bg-blue-50 break-words [overflow-wrap:anywhere]">
-                            <ReactMarkdown
-                                remarkPlugins={[remarkGfm]}
-                                components={{
-                                    a: ({ node, ...props }) => (
-                                        <a {...props} className="font-bold text-navy hover:text-gold no-underline transition-colors border-b-2 border-navy/20 hover:border-gold" />
-                                    )
-                                }}
-                            >
-                                {blog.content}
-                            </ReactMarkdown>
-                        </article>
-                    </div>
-
-                    {/* Sidebar Column */}
-                    <div className="lg:col-span-4">
-                        <div className="sticky top-24 space-y-8">
-
-                            {/* Author Trust Element */}
-                            <div className="bg-slate-50 rounded-3xl p-8 border-2 border-navy/10 shadow-sm">
-                                <h3 className="text-xl font-bold text-navy mb-6 border-b border-gray-200 pb-4">About the Author</h3>
-                                <div className="relative w-full h-48 mb-6 rounded-2xl overflow-hidden shadow-md">
-                                    <Image
-                                        src="/site-gallery/authentic-crew-photo.jpg"
-                                        alt="James Voss - Valley Window Care"
-                                        fill
-                                        className="object-cover object-top"
-                                    />
-                                </div>
-                                <h4 className="font-bold text-lg text-navy-dark mb-2">James Voss</h4>
-                                <p className="text-gray-600 text-sm leading-relaxed mb-6">
-                                    Owner and lead operator of Valley Window Care and Exterior Cleaning. James Voss is a certified exterior specialist with over 15 years of hands-on experience in Northeast Wisconsin. He holds compliance training alongside leading industry bodies like the IWCA and PWNA, specializing in biodegradable, low-pressure restorative cleaning.
-                                </p>
-                                <a href="tel:920-609-7085" className="block w-full text-center bg-gold hover:bg-gold-light text-navy-dark font-bold py-3 px-4 rounded-xl shadow-md transition-colors uppercase tracking-wider text-sm" rel="nofollow">
-                                    Call (920) 609-7085
-                                </a>
-                            </div>
-
-                            {/* Services Quick Nav */}
-                            <div className="bg-navy rounded-3xl p-8 border border-navy-dark shadow-sm relative overflow-hidden">
-                                <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full blur-2xl -mr-10 -mt-10 pointer-events-none"></div>
-                                <h3 className="text-xl font-bold text-white mb-6 border-b border-white/10 pb-4 relative z-10">Our Core Services</h3>
-                                <ul className="space-y-4 relative z-10">
-                                    <li><Link href="/services/roof-cleaning" className="text-gray-300 hover:text-gold flex items-center gap-2 transition-colors font-medium"><ChevronRight size={16} className="text-gold" /> Roof Cleaning</Link></li>
-                                    <li><Link href="/services/house-washing" className="text-gray-300 hover:text-gold flex items-center gap-2 transition-colors font-medium"><ChevronRight size={16} className="text-gold" /> House Washing</Link></li>
-                                    <li><Link href="/services/window-cleaning" className="text-gray-300 hover:text-gold flex items-center gap-2 transition-colors font-medium"><ChevronRight size={16} className="text-gold" /> Window Cleaning</Link></li>
-                                    <li><Link href="/services/permanent-lighting" className="text-gray-300 hover:text-gold flex items-center gap-2 transition-colors font-medium"><ChevronRight size={16} className="text-gold" /> Permanent Lighting</Link></li>
-                                </ul>
-                            </div>
-
+                {/* Content */}
+                <div className="relative z-20 text-center px-4 max-w-4xl mx-auto mt-12">
+                    <div className="flex flex-wrap items-center justify-center gap-3 mb-6">
+                        <div className="inline-block bg-gold text-navy font-black px-4 py-1.5 rounded-full text-xs sm:text-sm tracking-widest uppercase shadow-lg border border-gold/20">
+                            {post.category}
+                        </div>
+                        <div className="inline-block bg-navy/40 backdrop-blur-md text-white font-medium px-4 py-1.5 rounded-full text-xs sm:text-sm tracking-widest uppercase border border-white/20 shadow-sm">
+                            {post.date}
                         </div>
                     </div>
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 tracking-tight drop-shadow-lg leading-tight w-full relative">
+                        {post.title}
+                    </h1>
+                </div>
+            </section>
 
-                </div> {/* End Grid */}
-            </div>
-
-            {/* Conversion Add-on: Review Carousel Injection */}
-            <div className="my-16 bg-slate-50 py-12 border-y border-gray-100">
-                <div className="container mx-auto px-4">
-                    <h3 className="text-3xl font-bold text-center text-navy mb-8">What Northeast Wisconsin Says About Us</h3>
-                    <ReviewSlider />
+            {/* BREADCRUMBS */}
+            <div className="bg-slate-50 border-b border-slate-200 sticky top-0 z-30 shadow-sm">
+                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+                    <nav className="flex items-center space-x-2 text-sm text-slate-600 font-medium">
+                        <Link href="/" className="hover:text-gold transition-colors flex items-center">
+                            <Home className="w-4 h-4 mr-1" />
+                            Home
+                        </Link>
+                        <ChevronRight className="w-4 h-4 text-slate-400 flex-shrink-0" />
+                        <Link href="/blog" className="hover:text-gold transition-colors">
+                            Blog
+                        </Link>
+                        <ChevronRight className="w-4 h-4 text-slate-400 flex-shrink-0" />
+                        <span className="text-navy truncate max-w-[150px] sm:max-w-[300px]">{post.title}</span>
+                    </nav>
                 </div>
             </div>
 
-            {/* CTA specific to blog bottom */}
-            <div className="container mx-auto px-4 mt-10 mb-20 max-w-4xl text-center">
-                <h3 className="text-3xl font-bold text-navy-dark tracking-tight mb-6">Need Exterior Cleaning Services?</h3>
-                <p className="text-gray-600 mb-8 max-w-2xl mx-auto text-lg">
-                    Whether you need a complete roof washing or just a concrete driveway cleanup, Valley Window Care and Exterior Cleaning delivers 5-star results.
-                </p>
-                <Link href="/contact" className="inline-block bg-gold hover:bg-gold-light text-navy-dark px-10 py-4 rounded-full font-bold btn-hover-fx shadow-md text-lg">
-                    GET A FREE QUOTE TODAY
+            {/* ARTICLE CONTENT */}
+            <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
+                
+                {/* Back Button */}
+                <Link 
+                    href="/blog" 
+                    className="inline-flex items-center text-slate-500 hover:text-navy font-medium mb-10 transition-colors group"
+                >
+                    <ArrowLeft className="w-5 h-5 mr-2 transform group-hover:-translate-x-1 transition-transform" />
+                    Back to Articles
                 </Link>
-            </div>
-        </article>
+
+                {/* Excerpt Leader */}
+                <div className="mb-12 PB-12 border-b border-slate-200">
+                    <p className="text-xl sm:text-2xl text-slate-700 font-medium leading-relaxed">
+                        {post.excerpt}
+                    </p>
+                </div>
+
+                {/* Main Body HTML & Markdown Injection */}
+                <div 
+                    className="prose prose-lg sm:prose-xl text-slate-700 max-w-none 
+                    prose-headings:text-navy prose-headings:font-bold 
+                    prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6
+                    prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-4
+                    prose-p:leading-relaxed prose-p:mb-6
+                    prose-a:text-gold prose-a:font-bold hover:prose-a:text-navy prose-a:transition-colors
+                    prose-strong:text-navy
+                    prose-li:my-2"
+                >
+                    <ReactMarkdown 
+                        remarkPlugins={[remarkGfm]} 
+                        rehypePlugins={[rehypeRaw]}
+                    >
+                        {post.content}
+                    </ReactMarkdown>
+                </div>
+
+                {/* Author Block */}
+                <div className="mt-16 sm:mt-24 pt-10 border-t border-slate-200 flex flex-col sm:flex-row items-center sm:items-start gap-6 bg-slate-50 rounded-2xl p-8 border border-slate-100 shadow-sm">
+                    <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden flex-shrink-0 border-4 border-white shadow-md">
+                        <img src="/images/portfolio/building-wash-copy.webp" 
+                            alt="Valley Window Care Team"
+                            className="w-full h-full object-cover"
+                        />
+                    </div>
+                    <div className="text-center sm:text-left">
+                        <h3 className="text-xl font-bold text-navy mb-2">
+                            {post.authorName || 'Written by James Voss'}
+                        </h3>
+                        <p className="text-slate-600 mb-4 leading-relaxed">
+                            {post.authorBio || 'James Voss is the Owner and Operator of Valley Window Care, bringing years of hands-on exterior cleaning and permanent lighting expertise to Northeast Wisconsin. Fully insured and committed to unparalleled quality, James specializes in protecting and elevating high-value properties.'}
+                        </p>
+                        <Link href="/about-us" className="text-gold font-bold hover:text-navy transition-colors underline underline-offset-4">
+                            Learn More About Us
+                        </Link>
+                    </div>
+                </div>
+            </article>
+
+            {/* CALL TO ACTION */}
+            <section className="bg-navy py-16 sm:py-24">
+                <div className="max-w-4xl mx-auto px-4 text-center">
+                    <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-6">Ready to Experience the Difference?</h2>
+                    <p className="text-lg sm:text-xl text-slate-300 mb-10 max-w-2xl mx-auto">Skip the guesswork. Let our fully insured, professional technicians restore your property safely and efficiently.</p>
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                        <Link href="tel:920-609-7085" className="inline-flex items-center justify-center bg-gold text-navy font-bold px-8 py-4 rounded-full text-lg hover:bg-white transition-all duration-300 shadow-[0_0_20px_rgba(234,179,8,0.3)] transform hover:-translate-y-1 w-full sm:w-auto">
+                            Call (920) 609-7085
+                        </Link>
+                        <Link href="/contact" className="inline-flex items-center justify-center bg-transparent border-2 border-slate-400 text-white font-bold px-8 py-4 rounded-full text-lg hover:border-white hover:bg-white/10 transition-all duration-300 w-full sm:w-auto">
+                            Get a Free Quote
+                        </Link>
+                    </div>
+                </div>
+            </section>
+            <ReviewSlider />
+
+            {/* JSON-LD Schema for Blog Posting */}
+            <Script id={`schema-${post.slug}`} type="application/ld+json" strategy="lazyOnload">
+                {JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "BlogPosting",
+                    "mainEntityOfPage": {
+                        "@type": "WebPage",
+                        "@id": `https://valleywindowcare.com/blog/${post.slug}`
+                    },
+                    "headline": post.title,
+                    "description": post.excerpt,
+                    "image": `https://valleywindowcare.com${post.imagePath}`,
+                    "author": {
+                        "@type": "Person",
+                        "name": post.authorName || "James Voss",
+                        "url": "https://valleywindowcare.com/about-us"
+                    },
+                    "publisher": {
+                        "@type": "Organization",
+                        "name": "Valley Window Care",
+                        "logo": {
+                            "@type": "ImageObject",
+                            "url": "https://valleywindowcare.com/valley-window-care-logo-without-background.png"
+                        }
+                    },
+                    "datePublished": post.date,
+                    "dateModified": post.date
+                })}
+            </Script>
+        </main>
     );
 }

@@ -14,7 +14,7 @@ export default function Footer() {
                         <div className="relative h-14 w-56 mb-6">
                             <Image
                                 src="/valley-window-care-logo-without-background.png"
-                                alt="Valley Window Care and Exterior Cleaning"
+                                alt="Expert exterior cleaning and window washing in Green Bay and the Fox Valley"
                                 fill
                                 className="object-contain object-center md:object-left"
                             />
@@ -23,13 +23,13 @@ export default function Footer() {
                             Discover why Valley Window Care and Exterior Cleaning is the trusted name in Wisconsin for professional window, roof, and permanent LED lighting services.
                         </p>
                         <div className="flex items-center gap-4">
-                            <a href="#" aria-label="Visit Valley Window Care on Facebook" className="w-10 h-10 rounded-full bg-navy text-white flex items-center justify-center hover:bg-gold transition-colors hover:scale-110 active:scale-95 duration-200">
+                            <a href="https://www.facebook.com/valleywindowcare" target="_blank" rel="noopener noreferrer" aria-label="Visit Valley Window Care on Facebook" className="w-10 h-10 rounded-full bg-navy text-white flex items-center justify-center hover:bg-gold transition-colors hover:scale-110 active:scale-95 duration-200">
                                 <Facebook size={18} />
                             </a>
-                            <a href="#" aria-label="Visit Valley Window Care on Instagram" className="w-10 h-10 rounded-full bg-navy text-white flex items-center justify-center hover:bg-gold transition-colors hover:scale-110 active:scale-95 duration-200">
+                            <a href="https://www.instagram.com/valleywindowcare" target="_blank" rel="noopener noreferrer" aria-label="Visit Valley Window Care on Instagram" className="w-10 h-10 rounded-full bg-navy text-white flex items-center justify-center hover:bg-gold transition-colors hover:scale-110 active:scale-95 duration-200">
                                 <Instagram size={18} />
                             </a>
-                            <a href="#" aria-label="Visit Valley Window Care on YouTube" className="w-10 h-10 rounded-full bg-navy text-white flex items-center justify-center hover:bg-gold transition-colors hover:scale-110 active:scale-95 duration-200">
+                            <a href="https://www.youtube.com/@valleywindowcare" target="_blank" rel="noopener noreferrer" aria-label="Visit Valley Window Care on YouTube" className="w-10 h-10 rounded-full bg-navy text-white flex items-center justify-center hover:bg-gold transition-colors hover:scale-110 active:scale-95 duration-200">
                                 <Youtube size={18} />
                             </a>
                         </div>
@@ -40,61 +40,61 @@ export default function Footer() {
                         <h3 className="text-gold font-bold uppercase tracking-widest text-sm mb-6">Core Services</h3>
                         <ul className="space-y-3 font-semibold text-navy">
                             <li>
-                                <Link href="/roof-cleaning-green-bay-wi" className="hover:text-gold transition-colors inline-block relative group">
+                                <Link href="/services/roof-cleaning" className="hover:text-gold transition-colors inline-block relative group">
                                     Roof Cleaning
                                     <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/house-washing-green-bay-wi" className="hover:text-gold transition-colors inline-block relative group">
+                                <Link href="/services/house-washing" className="hover:text-gold transition-colors inline-block relative group">
                                     House Washing
                                     <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/gutter-cleaning-green-bay-wi" className="hover:text-gold transition-colors inline-block relative group">
+                                <Link href="/services/gutter-cleaning" className="hover:text-gold transition-colors inline-block relative group">
                                     Gutter Cleaning
                                     <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/fence-cleaning-green-bay-wi" className="hover:text-gold transition-colors inline-block relative group">
+                                <Link href="/services/fence-cleaning" className="hover:text-gold transition-colors inline-block relative group">
                                     Fence Cleaning
                                     <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/deck-cleaning-green-bay-wi" className="hover:text-gold transition-colors inline-block relative group">
+                                <Link href="/services/deck-cleaning" className="hover:text-gold transition-colors inline-block relative group">
                                     Deck Cleaning
                                     <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/concrete-cleaning-green-bay-wi" className="hover:text-gold transition-colors inline-block relative group">
+                                <Link href="/services/concrete-cleaning" className="hover:text-gold transition-colors inline-block relative group">
                                     Concrete Cleaning
                                     <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/window-cleaning-green-bay-wi" className="hover:text-gold transition-colors inline-block relative group">
+                                <Link href="/services/window-cleaning" className="hover:text-gold transition-colors inline-block relative group">
                                     Window Cleaning
                                     <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/oxidation-removal-green-bay-wi" className="hover:text-gold transition-colors inline-block relative group">
+                                <Link href="/services/oxidation-removal" className="hover:text-gold transition-colors inline-block relative group">
                                     Oxidation Removal
                                     <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/permanent-led-lighting-green-bay-wi" className="hover:text-gold transition-colors inline-block relative group">
+                                <Link href="/services/permanent-led-lighting" className="hover:text-gold transition-colors inline-block relative group">
                                     Commercial LED Lighting
                                     <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/residential-permanent-led-lighting-green-bay-wi" className="hover:text-gold transition-colors inline-block relative group">
+                                <Link href="/services/residential-permanent-led-lighting" className="hover:text-gold transition-colors inline-block relative group">
                                     Residential Permanent LED Lighting
                                     <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
                                 </Link>
@@ -119,19 +119,19 @@ export default function Footer() {
                         <h3 className="text-gold font-bold uppercase tracking-widest text-sm mb-6">Get In Touch</h3>
                         <ul className="space-y-4">
                             <li>
-                                <a href="tel:920-609-7085" aria-label="Call Valley Window Care at (920) 609-7085" className="flex items-center gap-3 text-navy font-bold hover:text-gold transition-colors group" rel="nofollow">
+                                <a href="tel:920-609-7085" aria-label="Call Valley Window Care at (920)-609-7085" className="flex items-center gap-3 text-navy font-bold hover:text-gold transition-colors group" rel="nofollow">
                                     <div className="w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center shrink-0 group-hover:bg-gold/20 transition-colors">
                                         <Phone size={14} className="text-navy group-hover:text-gold transition-colors" />
                                     </div>
-                                    (920) 609-7085
+                                    (920)-609-7085
                                 </a>
                             </li>
                             <li>
-                                <a href="mailto:info@valleywindowcare.com" aria-label="Email info@valleywindowcare.com" className="flex items-center gap-3 text-navy font-bold hover:text-gold transition-colors group" rel="nofollow">
+                                <a href="mailto:James@ValleyWindowCare.com" aria-label="Email James@ValleyWindowCare.com" className="flex items-center gap-3 text-navy font-bold hover:text-gold transition-colors group" rel="nofollow">
                                     <div className="w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center shrink-0 group-hover:bg-gold/20 transition-colors">
                                         <Mail size={14} className="text-navy group-hover:text-gold transition-colors" />
                                     </div>
-                                    <span className="text-sm">info@valleywindowcare.com</span>
+                                    <span className="text-sm">James@ValleyWindowCare.com</span>
                                 </a>
                             </li>
                             <li>
@@ -139,7 +139,7 @@ export default function Footer() {
                                     <div className="w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center shrink-0">
                                         <MapPin size={14} className="text-navy" />
                                     </div>
-                                    <span className="text-sm leading-tight mt-1.5">Appleton & Green Bay,<br />Wisconsin</span>
+                                    <span className="text-sm leading-tight mt-1.5">4551 Trellis Drive E-2,<br />De Pere, Wisconsin 54115</span>
                                 </div>
                             </li>
                         </ul>
@@ -149,6 +149,12 @@ export default function Footer() {
                     <div className="flex flex-col items-center md:items-start text-center md:text-left">
                         <h3 className="text-gold font-bold uppercase tracking-widest text-sm mb-6">Legal & Trust</h3>
                         <ul className="space-y-3 font-semibold text-navy">
+                            <li>
+                                <Link href="/faq" className="hover:text-gold transition-colors inline-block relative group">
+                                    Frequently Asked Questions
+                                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
+                                </Link>
+                            </li>
                             <li>
                                 <Link href="/service-guarantee" className="hover:text-gold transition-colors inline-block relative group">
                                     Service Guarantee
@@ -185,22 +191,22 @@ export default function Footer() {
                         <h3 className="text-gold font-bold uppercase tracking-widest text-sm mb-6">Recent Work</h3>
                         <div className="grid grid-cols-2 gap-2 w-full max-w-[240px]">
                             <Link href="/services/commercial-hood-cleaning" aria-label="View Commercial Hood Cleaning" className="relative aspect-square rounded-lg overflow-hidden group block">
-                                <FooterGalleryImage src="/gallery/footer-assets/footer_hood_cleaning_1772481113171.png" alt="Commercial Hood Cleaning Results - Valley Window Care" />
+                                <FooterGalleryImage src="/images/portfolio/commercial-cleaning.webp" alt="Commercial Hood Cleaning Results - Valley Window Care" />
                             </Link>
                             <Link href="/services/roof-cleaning" aria-label="View Roof Cleaning" className="relative aspect-square rounded-lg overflow-hidden group block">
-                                <FooterGalleryImage src="/gallery/footer-assets/footer_roof_cleaning_1772481126835.png" alt="Roof Cleaning Results - Valley Window Care" />
+                                <FooterGalleryImage src="/images/portfolio/roof-cleaning.webp" alt="Roof Cleaning Results - Valley Window Care" />
                             </Link>
                             <Link href="/services/window-cleaning" aria-label="View Window Cleaning" className="relative aspect-square rounded-lg overflow-hidden group block">
-                                <FooterGalleryImage src="/gallery/footer-assets/footer_window_cleaning_1772481140215.png" alt="Window Cleaning Results - Valley Window Care" />
+                                <FooterGalleryImage src="/images/portfolio/window-cleaning.webp" alt="Window Cleaning Results - Valley Window Care" />
                             </Link>
                             <Link href="/services/house-washing" aria-label="View House Washing" className="relative aspect-square rounded-lg overflow-hidden group block">
-                                <FooterGalleryImage src="/gallery/footer-assets/footer_house_washing_1772481154476.png" alt="House Washing Results - Valley Window Care" />
+                                <FooterGalleryImage src="/images/portfolio/house-washing.webp" alt="House Washing Results - Valley Window Care" />
                             </Link>
                             <Link href="/services/commercial-exterior-cleaning" aria-label="View Commercial Pressure Washing" className="relative aspect-square rounded-lg overflow-hidden group block">
-                                <FooterGalleryImage src="/gallery/footer-assets/footer_pressure_washing_1772481170028.png" alt="Pressure Washing Results - Valley Window Care" />
+                                <FooterGalleryImage src="/images/portfolio/pressure-washing.webp" alt="Pressure Washing Results - Valley Window Care" />
                             </Link>
                             <Link href="/services/permanent-holiday-lighting" aria-label="View Permanent LED Lighting" className="relative aspect-square rounded-lg overflow-hidden group block">
-                                <FooterGalleryImage src="/gallery/footer-assets/footer_led_lighting_1772481182471.png" alt="Permanent LED Lighting Results - Valley Window Care" />
+                                <FooterGalleryImage src="/images/portfolio/permanent-lighting.webp" alt="Permanent LED Lighting Results - Valley Window Care" />
                             </Link>
                         </div>
                     </div>
@@ -223,7 +229,7 @@ export default function Footer() {
                         ].map((city, index, array) => (
                             <div key={city} className="flex items-center gap-x-4">
                                 <Link
-                                    href={`/service-areas/${city.toLowerCase().replace(/ /g, '-')}`}
+                                    href={`/service-areas/${city.toLowerCase().replace(/\s+/g, '-')}`}
                                     className="hover:text-gold transition-colors whitespace-nowrap"
                                 >
                                     {city}

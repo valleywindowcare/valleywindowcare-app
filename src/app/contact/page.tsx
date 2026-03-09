@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import Hero from "@/components/Hero";
 import { Phone, Mail, MapPin } from "lucide-react";
 
+import ReviewSlider from '@/components/ReviewSlider';
+
 export const metadata: Metadata = {
     title: "Contact Us | Valley Window Care and Exterior Cleaning",
     description: "Get a free quote for pressure washing, window cleaning, and exterior maintenance in Northeast Wisconsin.",
@@ -37,6 +39,7 @@ export default function ContactPage() {
                     </div>
                 </div>
             </div>
+            <ReviewSlider />
         </main>
     );
 }

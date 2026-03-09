@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 
 interface SafeHeroImageProps {
     src: string;
@@ -11,15 +10,11 @@ interface SafeHeroImageProps {
 export default function SafeHeroImage({ src, alt, fallbackSrc }: SafeHeroImageProps) {
     return (
         <div className="absolute inset-0 z-0">
-            <Image
+            <img
                 src={src}
                 alt={alt}
-                fill
-                priority
-                sizes="100vw"
-                className="object-cover"
-                quality={85}
-                unoptimized={true}
+                fetchPriority="high"
+                className="w-full h-full object-cover"
                 onError={(e) => {
                     e.currentTarget.src = fallbackSrc;
                     e.currentTarget.srcset = "";

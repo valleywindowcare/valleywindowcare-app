@@ -2,13 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 
+import ReviewSlider from '@/components/ReviewSlider';
+
 export const metadata: Metadata = {
     title: "Terms and Conditions | Valley Window Care",
     description: "Terms and conditions for usage of Valley Window Care and Exterior Cleaning services.",
-    robots: {
-        index: false,
-        follow: true,
-    },
 };
 
 export default function TermsAndConditionsPage() {
@@ -79,6 +77,7 @@ export default function TermsAndConditionsPage() {
                     </div>
                 </article>
             </div>
+            <ReviewSlider />
         </main>
     );
 }

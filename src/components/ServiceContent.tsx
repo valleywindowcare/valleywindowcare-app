@@ -4,9 +4,9 @@ import Link from "next/link";
 
 interface ServiceContentProps {
     title: string;
-    description: string;
-    benefits: string[];
-    process: string[];
+    description: React.ReactNode;
+    benefits: (string | React.ReactNode)[];
+    process: (string | React.ReactNode)[];
     city?: string; // Optional city injection for local SEO
     image?: string; // High-res architectural payload
 }
@@ -29,7 +29,7 @@ export default function ServiceContent({ title, description, benefits, process, 
     };
 
     const typesWeClean = getTypesWeClean(title);
-    const firstBenefit = benefits.length > 0 ? benefits[0].split(':')[0] : "Professional Exterior Cleaning";
+    const firstBenefit = benefits.length > 0 && typeof benefits[0] === 'string' ? benefits[0].split(':')[0] : "Professional Exterior Cleaning";
 
     return (
         <section className="bg-white w-full overflow-hidden">
@@ -47,12 +47,9 @@ export default function ServiceContent({ title, description, benefits, process, 
                             <p>
                                 Maintaining your property{localText} requires more than just occasional maintenance; it demands professional, dedicated expertise. <strong>Valley Window Care and Exterior Cleaning</strong> understands exactly how Wisconsin's volatile seasonal weather—from humid, algae-promoting summers to brutal, freezing winters—impacts your home's exterior surfaces. That's why our <strong>{title}</strong> services are specifically calibrated to handle local environmental buildup safely, rapidly, and effectively.
                             </p>
-                            <p>
+                            <div className="mt-6 mb-6">
                                 {description}
-                            </p>
-                            <p>
-                                Ignoring necessary {title.toLowerCase()} can lead to severe, long-term structural consequences. Organic growth like pervasive moss, lichen, and black algae aren't just cosmetic issues dragging down your curb appeal; they literally eat away at shingles, siding, and wood fibers. By utilizing our industry-leading techniques, we kill these highly destructive organisms at the absolute root level. For delicate surfaces, we deploy our proprietary low-pressure soft washing methodology, ensuring we never cause collateral damage while permanently achieving a pristine, restored finish.
-                            </p>
+                            </div>
                             <p>
                                 When you choose Valley Window Care for your {title.toLowerCase()}{localText}, you're investing in a trusted local team completely dedicated to unparalleled results. We exclusively utilize eco-friendly, biodegradable cleaning detergents that pose absolutely zero threat to your landscaping, your pets, or your family. Experience the profound difference of working directly with Northeast Wisconsin's premier 5-star rated exterior cleaning and architectural maintenance specialists.
                             </p>
@@ -61,15 +58,7 @@ export default function ServiceContent({ title, description, benefits, process, 
 
                     {/* Massive Action Image Interrogator */}
                     <div className="relative w-full h-80 sm:h-96 lg:h-[600px] rounded-3xl overflow-hidden shadow-2xl lg:mt-24 group">
-                        <Image
-                            src={image || "/site-gallery/authentic-crew-photo.jpg"} // Defaulting to the brand crew if critical failure, instead of a random job photo
-                            alt={`${title} in ${city || 'Green Bay'}, WI - Valley Window Care`}
-                            fill
-                            loading="lazy"
-                            quality={75}
-                            sizes="(max-width: 1024px) 100vw, 80vw"
-                            className="object-cover group-hover:scale-105 transition-transform duration-1000"
-                        />
+                        <img src="/images/portfolio/house-washing.webp" alt="Service Image" fetchPriority="high" className="absolute inset-0 w-full h-full object-cover z-0 group-hover:scale-105 transition-transform duration-1000" />
                         <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/20 to-transparent"></div>
                         <div className="absolute bottom-6 sm:bottom-12 left-6 sm:left-12 right-6 sm:right-12 text-white">
                             <p className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-2 tracking-tight">{title} Excellence</p>
@@ -87,8 +76,9 @@ export default function ServiceContent({ title, description, benefits, process, 
                             <h3 className="text-2xl font-bold text-navy mb-8 relative z-10">Why Choose Us For {title}?</h3>
                             <ul className="space-y-6 relative z-10">
                                 {benefits.map((benefit, index) => {
-                                    const [heading, ...rest] = benefit.split(':');
-                                    const body = rest.join(':').trim();
+                                    const isString = typeof benefit === 'string';
+                                    const heading = isString && benefit.includes(':') ? benefit.split(':')[0] : null;
+                                    const body = isString && benefit.includes(':') ? benefit.split(':').slice(1).join(':').trim() : null;
                                     return (
                                         <li key={index} className="flex gap-4">
                                             <div className="flex-shrink-0 mt-1 text-gold">
@@ -101,7 +91,7 @@ export default function ServiceContent({ title, description, benefits, process, 
                                                         <span className="text-gray-600 leading-relaxed">{body}</span>
                                                     </>
                                                 ) : (
-                                                    <span className="text-gray-600 leading-relaxed">{benefit}</span>
+                                                    <div className="text-gray-600 leading-relaxed">{typeof benefit === 'string' ? benefit : benefit}</div>
                                                 )}
                                             </div>
                                         </li>
@@ -118,7 +108,7 @@ export default function ServiceContent({ title, description, benefits, process, 
                                     <svg className="w-10 h-10 text-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
                                 </div>
                                 <h3 className="text-3xl font-extrabold mb-4 text-navy">#1 Licensed & Certified</h3>
-                                <p className="text-xl text-gray-600 md:px-6 mb-8 font-medium">Serving Northeast Wisconsin since <strong>2020</strong> with over <strong className="text-navy">5+ Years</strong> of collective industry experience.</p>
+                                <p className="text-xl text-gray-600 md:px-6 mb-8 font-medium">Serving Northeast Wisconsin since <strong>2020</strong> with over <strong className="text-navy">100+</strong> 5-Star Reviews.</p>
                                 <div className="space-y-4 text-left mx-auto max-w-xs bg-slate-50 border border-gray-100 p-6 rounded-2xl">
                                     <div className="flex items-center gap-3"><Check className="text-gold shrink-0" /> <span className="font-semibold text-sm text-navy-dark">Fully Insured & Bonded</span></div>
                                     <div className="flex items-center gap-3"><Check className="text-gold shrink-0" /> <span className="font-semibold text-sm text-navy-dark">Professional Grade Equipment</span></div>
@@ -143,8 +133,9 @@ export default function ServiceContent({ title, description, benefits, process, 
 
                             <div className="space-y-8 relative before:absolute before:inset-0 before:ml-6 before:-translate-x-px before:h-full before:w-1 before:bg-gray-200">
                                 {process.map((step, index) => {
-                                    const [heading, ...rest] = step.split(':');
-                                    const body = rest.join(':').trim();
+                                    const isString = typeof step === 'string';
+                                    const heading = isString && step.includes(':') ? step.split(':')[0] : null;
+                                    const body = isString && step.includes(':') ? step.split(':').slice(1).join(':').trim() : null;
 
                                     return (
                                         <div key={index} className="relative flex items-start gap-6 group">
@@ -158,7 +149,7 @@ export default function ServiceContent({ title, description, benefits, process, 
                                                         <p className="text-gray-600 leading-relaxed">{body}</p>
                                                     </>
                                                 ) : (
-                                                    <p className="text-gray-600 leading-relaxed">{step}</p>
+                                                    <div className="text-gray-600 leading-relaxed">{typeof step === 'string' ? step : step}</div>
                                                 )}
                                             </div>
                                         </div>
@@ -191,7 +182,7 @@ export default function ServiceContent({ title, description, benefits, process, 
 
                             <div className="mt-12 p-6 bg-slate-50 rounded-2xl border border-dashed border-gray-300 text-center">
                                 <p className="text-navy-dark font-medium mb-3">Don't see your specific material or property type listed?</p>
-                                <p className="text-gray-500 text-sm mb-4">Our specialized soft-washing and cleaning systems are highly versatile and adaptable to almost any exterior surface.</p>
+                                <p className="text-gray-500 text-sm mb-4">Our specialized soft-wash and cleaning systems are highly versatile and adaptable to almost any exterior surface.</p>
                             </div>
                         </div>
 

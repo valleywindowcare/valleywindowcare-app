@@ -1,0 +1,926 @@
+[
+  {
+    "expectedOld": "/window-cleaning",
+    "expectedNew": "/services/window-cleaning",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/pressure-washing",
+    "expectedNew": "/services/pressure-washing",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/roof-cleaning",
+    "expectedNew": "/services/roof-cleaning",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/gutter-cleaning",
+    "expectedNew": "/services/gutter-cleaning",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/paver-restoration",
+    "expectedNew": "/services/paver-patio-restorations",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/permanent-lighting",
+    "expectedNew": "/services/permanent-led-lighting",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq_category/window-cleaning",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq_category/pressure-washing",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq_category/roof-cleaning",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq_category/gutter-cleaning",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq_category/lighting",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq_category/paver-patio-restorations",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq_category/vent-hood-cleaning",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq_category/permanent-lighting",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq_category/hoa-exterior-cleaning",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq-items",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq-items/how-to-remove-rust-off-your-drive",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq-items/paver-patio-green-bay-wi",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq-items/window-cleaning-near-me",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq-items/how-often-should-i-have-my-roof-soft-washed",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq-items/weatherproof-permanent-lighting-wisconsin",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq-items/hoa-exterior-cleaning-faqs",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq-items/permanent-lighting-green-bay-wi",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq-items/permanent-lighting-green-bay",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq-items/are-you-licensed-and-insured",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq-items/do-you-offer-after-hours-cleaning",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq-items/how-often-should-vent-hoods-be-cleaned-in-wisconsin",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq-items/what-is-involved-in-paver-patio-restoration",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq-items/how-long-does-the-restoration-process-take",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq-items/will-the-pressure-washing-damage-my-pavers",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq-items/how-often-should-i-have-my-paver-patio-restored",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq-items/is-pressure-washing-safe-for-my-homes-siding-or-roof",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq-items/how-often-should-i-have-my-windows-professionally-cleaned",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq-items/whats-included-in-your-window-cleaning-service",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq-items/how-much-does-window-cleaning-cost",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq-items/what-areas-do-you-service",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq-items/do-you-offer-any-discounts-or-maintenance-packages",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq-items/do-you-clean-both-the-inside-and-outside-of-the-windows",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq-items/how-does-soft-washing-differ-from-pressure-washing",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq-items/are-lumi-lights-compatible-with-my-smart-home-system",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq-items/what-should-i-do-if-my-lumi-lights-arent-working",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq-items/how-do-i-control-my-lumi-lights",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq-items/can-lumi-lights-be-used-outdoors",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq-items/how-do-i-update-the-firmware-on-my-lumi-lights",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq-items/what-is-the-warranty-on-lumi-lights",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq-items/firmware-updates-are-done-through-the-lumi-lights-app-ensure-your-lights-are-connected-to-the-app-and-follow-the-prompts-to-update",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq-items/how-do-i-reset-my-lumi-lights",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq-items/why-should-i-clean-my-roof",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq-items/can-i-clean-my-own-roof",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq-items/what-methods-are-used-for-roof-cleaning",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq-items/will-roof-cleaning-damage-my-roof",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq-items/can-roof-cleaning-remove-moss-or-algae",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq-items/does-roof-cleaning-come-with-any-warranties",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq-items/will-roof-cleaning-affect-my-homes-energy-efficiency",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq-items/what-is-soft-washing",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq-items/what-are-the-benefits-of-soft-washing",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq-items/what-surfaces-can-be-cleaned-with-soft-washing",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq-items/is-soft-washing-safe-for-my-roof",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq-items/can-i-perform-soft-washing-myself",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq-items/why-is-gutter-cleaning-important",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq-items/should-i-consider-gutter-guards-or-covers",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq-items/how-do-professionals-clean-gutters",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq-items/what-are-the-risks-of-not-cleaning-my-gutters",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq-items/can-i-clean-my-gutters-myself",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq-items/how-often-should-i-clean-my-gutters",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq-items/how-often-does-my-roof-need-to-be-cleaned",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq-items/why-do-my-windows-look-smeared-after-cleaning",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq-items/is-hot-water-better-for-cleaning-windows",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq-items/is-dawn-dish-soap-good-for-washing-outside-windows",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq-items/can-vinegar-damage-glass-windows",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq-items/what-is-the-best-thing-to-use-to-clean-outside-windows",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq-items/is-hydrogen-peroxide-good-for-cleaning-windows",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq-items/whats-the-best-way-to-clean-windows-without-smearing",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq-items/how-long-should-a-window-cleaner-take",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq-items/when-should-you-not-clean-windows",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq-items/how-do-i-get-streak-free-windows",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq-items/what-do-professionals-use-to-clean-windows",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq-items/what-month-is-best-for-window-cleaning",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq-items/how-much-does-it-cost-to-clean-the-windows",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq-items/how-often-should-you-have-your-outside-windows-cleaned",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/faq-items/is-it-worth-getting-windows-cleaned",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/pressure-washing-company-in-green-bay-wisconsin",
+    "expectedNew": "/service-areas/green-bay/pressure-washing",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/rust-removal-in-green-bay-wisconsin",
+    "expectedNew": "/services/rust-removal-green-bay",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/paver-patio-restorations-in-green-bay-wisconsin",
+    "expectedNew": "/service-areas/green-bay/paver-patio-restorations",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/expert-exterior-cleaning-for-apartment-complexes-in-green-bay-wisconsin",
+    "expectedNew": "/service-areas/green-bay/apartment-exterior-cleaning",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/professional-exterior-cleaning-for-hoas-in-green-bay-wisconsin",
+    "expectedNew": "/service-areas/green-bay/hoa-services",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/gas-station-cleaning-in-green-bay-wisconsin",
+    "expectedNew": "/service-areas/green-bay/gas-station-cleaning",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/post-construction-cleanup-in-green-bay-wisconsin",
+    "expectedNew": "/service-areas/green-bay/post-construction-cleanup",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/roof-cleaning-company-in-green-bay-wisconsin",
+    "expectedNew": "/service-areas/green-bay/roof-cleaning",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/house-washing-company-in-green-bay-wisconsin",
+    "expectedNew": "/service-areas/green-bay/house-washing",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/power-washing-company-in-green-bay-wisconsin",
+    "expectedNew": "/service-areas/green-bay/pressure-washing",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/building-washing-in-green-bay-wisconsin",
+    "expectedNew": "/service-areas/green-bay/building-washing",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/window-cleaning-company-in-green-bay-wisconsin",
+    "expectedNew": "/service-areas/green-bay/window-cleaning",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/permanent-led-lighting-green-bay-wi",
+    "expectedNew": "/service-areas/green-bay/permanent-led-lighting",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/christmas-lighting-installation-in-green-bay-wisconsin",
+    "expectedNew": "/service-areas/green-bay/christmas-lighting",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/soft-washing-company-in-green-bay-wisconsin",
+    "expectedNew": "/services/soft-wash-green-bay",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/gutter-cleaning-company-in-green-bay-wisconsin",
+    "expectedNew": "/service-areas/green-bay/gutter-cleaning",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/blog/category-property-washing",
+    "expectedNew": "/blog",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/commercial-pressure-washing-company-in-green-bay-wisconsin",
+    "expectedNew": "/service-areas/green-bay/commercial-pressure-washing",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/concrete-cleaning-company-in-green-bay-wisconsin",
+    "expectedNew": "/service-areas/green-bay/concrete-cleaning",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/permanent-lighting-solutions-green-bay-wi",
+    "expectedNew": "/service-areas/green-bay/residential-permanent-led-lighting",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/driveway-cleaning-company-in-green-bay-wisconsin",
+    "expectedNew": "/services/driveway-cleaning-green-bay",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/professional-awning-cleaning-in-green-bay-wisconsin",
+    "expectedNew": "/services/commercial-awning-cleaning-green-bay",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/commercial-vent-hood-cleaning-in-green-bay-appleton-wiay-wi",
+    "expectedNew": "/service-areas/appleton/commercial-hood-cleaning",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/expert-hood-vent-cleaning-green-bay-hhood-vent-cleaning-green-bay",
+    "expectedNew": "/service-areas/green-bay/commercial-hood-cleaning",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/blog/permanent-lighting-green-bay-wi",
+    "expectedNew": "/blog",
+    "actualStatus": 200,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/window-cleaning-faqs",
+    "expectedNew": "/faq",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/solar-panel-cleaning-in-green-bay-wisconsin",
+    "expectedNew": "/services/solar-panel-cleaning-green-bay",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/fence-cleaning-in-green-bay-wisconsin",
+    "expectedNew": "/service-areas/green-bay/fence-cleaning",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/deck-cleaning-in-green-bay-wisconsin",
+    "expectedNew": "/service-areas/green-bay/deck-cleaning",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/parking-lot-and-garage-cleaning-in-green-bay-wisconsin",
+    "expectedNew": "/service-areas/green-bay/parking-lot-and-garage-cleaning",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/premium-drive-thru-cleaning-in-green-bay-wisconsin",
+    "expectedNew": "/service-areas/green-bay/premium-drive-thru-cleaning",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/storefront-cleaning-in-green-bay-wisconsin",
+    "expectedNew": "/service-areas/green-bay/storefront-cleaning",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/professional-graffiti-removal-in-green-bay-wisconsin",
+    "expectedNew": "/service-areas/green-bay/graffiti-removal",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/dumpster-pad-cleaning-services-in-green-bay-wisconsin",
+    "expectedNew": "/service-areas/green-bay/dumpster-pad-cleaning",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/chewing-gum-removal-in-green-bay-wisconsin",
+    "expectedNew": "/service-areas/green-bay/chewing-gum-removal",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/appleton-wi-pressure-washing",
+    "expectedNew": "/service-areas/appleton/pressure-washing",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/service-areas-window-cleaning-gutter-cleaning-pressure-washing-leaf-cleanups",
+    "expectedNew": "/service-areas",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/professional-power-washing-services-green-bay-wisconsin-valley-window-care",
+    "expectedNew": "/service-areas/green-bay/pressure-washing",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/sidewalk-cleaning-company-in-green-bay-wisconsin",
+    "expectedNew": "/service-areas/green-bay/concrete-cleaning",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/blog/window-cleaning",
+    "expectedNew": "/blog",
+    "actualStatus": 200,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/blog/category-roof-cleaning",
+    "expectedNew": "/blog",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/blog/category-paver-restoration",
+    "expectedNew": "/blog",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/blog/category-gutter-cleaning",
+    "expectedNew": "/blog",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/blog-exterior-home-cleaning-guide",
+    "expectedNew": "/blog/an-experts-guide-to-cleaning-the-exterior-of-your-home",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/smart-lighting-popup-content-draft-only",
+    "expectedNew": "/services/residential-permanent-led-lighting",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/diy-paver-patio-cleaning-solutions-with-household-products",
+    "expectedNew": "/blog/diy-paver-patio-cleaning-solutions-with-household-products",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/what-does-pressure-washing-cost-in-wisconsin",
+    "expectedNew": "/blog/average-cost-for-residential-power-washing",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/who-offers-pressure-washing-services-near-you",
+    "expectedNew": "/blog/average-cost-for-residential-power-washing",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/how-to-restore-and-maintain-your-pavers-a-complete-guide-to-paver-cleaning-and-sealing-cloned",
+    "expectedNew": "/blog/paver-restoration-services-in-green-bay-wisconsin",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/roof-cleaning-prices-near-you",
+    "expectedNew": "/blog/roof-cleaning-prices-near-you",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/how-to-safely-remove-moss-from-roof-shingles",
+    "expectedNew": "/blog/how-to-safely-remove-moss-from-roof-shingles",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/average-cost-for-residential-power-washing",
+    "expectedNew": "/blog/average-cost-for-residential-power-washing",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/pressure-washing-services-near-you",
+    "expectedNew": "/blog/pressure-washing-services-near-you",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/gutter-cleaning-green-bay-home-maintenance",
+    "expectedNew": "/blog/gutter-cleaning-services-in-green-bay-wisconsin",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/green-bay-power-washing-signs",
+    "expectedNew": "/blog/green-bay-power-washing-signs",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/eco-friendly-exterior-cleaning-green-bay",
+    "expectedNew": "/blog/eco-friendly-exterior-cleaning-in-green-bay",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/how-often-should-you-clean-your-roof",
+    "expectedNew": "/blog/how-often-should-you-clean-your-roof",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/the-best-way-to-clean-outside-windows-in-5-steps",
+    "expectedNew": "/blog/the-best-way-to-clean-outside-windows-in-5-steps",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/exterior-house-cleaning-checklist",
+    "expectedNew": "/blog/an-experts-guide-to-cleaning-the-exterior-of-your-home",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/gutter-cleaning-services-in-green-bay-wisconsin",
+    "expectedNew": "/blog/gutter-cleaning-green-bay-home-maintenance",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/roof-cleaning-services-in-green-bay-and-appleton",
+    "expectedNew": "/blog/how-often-should-you-clean-your-roof",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/paver-restoration-services-in-green-bay-wisconsin",
+    "expectedNew": "/service-areas/green-bay/paver-patio-restorations",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/permanent-led-smart-lighting-solutions-in-green-bay-wi",
+    "expectedNew": "/service-areas/green-bay/residential-permanent-led-lighting",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/how-to-safely-decorate-your-roof-for-christmas-diy-tips-for-a-festive-stylish-holiday-home",
+    "expectedNew": "/blog/how-to-safely-decorate-your-roof-for-christmas-diy-tips-for-a-festive-stylish-holiday-home",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/why-tap-water-leaves-window-streaks",
+    "expectedNew": "/blog/why-tap-water-leaves-window-streaks",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/hiring-a-window-cleaner-guide",
+    "expectedNew": "/blog/hiring-window-cleaners-what-you-should-know",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/how-to-measure-windows-for-blinds",
+    "expectedNew": "/blog/how-to-measure-windows-for-blinds",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/professional-window-cleaning-services-in-green-bay-wi",
+    "expectedNew": "/service-areas/green-bay/window-cleaning",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/what-are-gutter-guards-and-do-they-work",
+    "expectedNew": "/blog/what-are-gutter-guards-and-do-they-work",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/when-to-hire-someone-to-clean-your-gutters",
+    "expectedNew": "/blog/when-to-hire-someone-to-clean-your-gutters",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/green-bay-pressure-washing-services",
+    "expectedNew": "/service-areas/green-bay/pressure-washing",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/pressure-washing-a-deck-the-dos-and-donts",
+    "expectedNew": "/blog/pressure-washing-a-deck-the-dos-and-donts",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  },
+  {
+    "expectedOld": "/power-washing-green-bay",
+    "expectedNew": "/service-areas/green-bay/pressure-washing",
+    "actualStatus": 404,
+    "actualLocation": "NONE"
+  }
+]

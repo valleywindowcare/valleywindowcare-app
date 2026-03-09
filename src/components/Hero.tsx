@@ -1,56 +1,51 @@
-'use client';
-
 import { Mail, Phone } from "lucide-react";
-import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
-import SafeHeroImage from "@/components/SafeHeroImage";
-import SuccessState from "./SuccessState";
+import HeroForm from "./HeroForm";
 
 interface HeroProps {
     h1?: React.ReactNode;
     description?: string;
     bgImage?: string;
+    cityName?: string;
+    serviceName?: string;
 }
 
 export default function Hero({
-    bgImage = "/assets/authentic-crew-photo.jpg",
+    bgImage = "/images/portfolio/house-wash-before-after.webp",
     h1,
-    description
+    description,
+    cityName,
+    serviceName
 }: HeroProps) {
-    const [isSubmitted, setIsSubmitted] = useState(false);
-
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-
-        // Capture Form Data Payload
-        const formData = new FormData(e.currentTarget);
-        const data = Object.fromEntries(formData.entries());
-        console.log("Lead Capture Payload:", data);
-
-        // Simulate a network request
-        setIsSubmitted(true);
-    };
 
     const isDefault = !bgImage || bgImage.includes("placeholder");
 
     return (
-        <section className={`!relative !w-full !min-h-screen !flex !flex-col !items-center !justify-center overflow-hidden bg-navy text-white`}>
+        <section className={`!relative !w-full !min-h-screen !flex !flex-col !items-center !justify-center overflow-hidden text-white bg-navy`}>
             {/* Background with optimized Next/Image architecture */}
-            <SafeHeroImage
-                src={bgImage || "/assets/authentic-crew-photo.jpg"}
-                alt="Valley Window Care and Exterior Cleaning"
-                fallbackSrc="/assets/authentic-crew-photo.jpg"
-            />
-            <div className="absolute inset-0 bg-navy/30"></div>
+            <div className="absolute inset-0 z-0">
+                <Image
+                    src={bgImage}
+                    alt="Valley Window Care Exterior Cleaning"
+                    fill
+                    priority={true}
+                    quality={100}
+                    className="object-cover"
+                />
+            </div>
 
-            <div className="container mx-auto px-4 relative z-10 flex flex-col items-center justify-center text-center">
+            {/* Dark Overlay Tint */}
+            <div className="absolute inset-0 bg-slate-900/75 z-10"></div>
+
+            <div className="container mx-auto px-4 relative z-20 flex flex-col items-center justify-center text-center">
                 {/* Top Section: Messaging */}
                 <div className="max-w-4xl mb-12">
                     <h1 className={`text-4xl md:text-5xl lg:text-7xl font-extrabold leading-tight mb-6 tracking-tight drop-shadow-lg mx-auto text-white`}>
                         {h1 || (
                             <>
-                                Valley Window Care <br />
-                                <span className="text-gold text-3xl md:text-4xl lg:text-5xl block mt-2">and Exterior Cleaning</span>
+                                Top-Rated Exterior Cleaning <br />
+                                <span className="text-gold text-3xl md:text-4xl lg:text-5xl block mt-2">& Window Washing in Green Bay, WI</span>
                             </>
                         )}
                     </h1>
@@ -68,7 +63,7 @@ export default function Hero({
                         </div>
 
                         <div className="!flex !flex-row !justify-around !items-center !p-6 !w-full">
-                            <a href="tel:920-609-7085" className="!min-w-0 flex flex-col items-center gap-2 hover:text-gold transition-colors group !text-center" rel="nofollow">
+                            <a href="tel:920-609-7085" className="!min-w-0 flex flex-col items-center gap-2 hover:text-gold transition-colors group !text-center" rel="nofollow" aria-label="Call Us">
                                 <div className="bg-white/10 p-2 sm:p-3 rounded-2xl group-hover:bg-gold/20 transition-colors shrink-0">
                                     <Phone size={24} className="text-gold" />
                                 </div>
@@ -78,7 +73,7 @@ export default function Hero({
                                 </div>
                             </a>
 
-                            <a href="mailto:info@valleywindowcare.com" className="!min-w-0 flex flex-col items-center gap-2 hover:text-gold transition-colors group !text-center overflow-hidden" rel="nofollow">
+                            <a href="mailto:info@valleywindowcare.com" className="!min-w-0 flex flex-col items-center gap-2 hover:text-gold transition-colors group !text-center overflow-hidden" rel="nofollow" aria-label="Email Us">
                                 <div className="bg-white/10 p-2 sm:p-3 rounded-2xl group-hover:bg-gold/20 transition-colors shrink-0">
                                     <Mail size={24} className="text-gold" />
                                 </div>
@@ -91,97 +86,7 @@ export default function Hero({
                     </div>
 
                     {/* Bottom Action Body (Form OR Success State) */}
-                    <div className="w-full bg-transparent relative h-full flex flex-col justify-center">
-                        {isSubmitted ? (
-                            <SuccessState onReset={() => setIsSubmitted(false)} />
-                        ) : (
-                            <div className="p-8 h-full flex flex-col justify-center">
-                                <h3 className="text-2xl font-extrabold mb-6 text-navy !text-center !w-full !block">Request a Free Quote</h3>
-                                <form className="space-y-4" onSubmit={handleSubmit}>
-                                    <div>
-                                        <label className="sr-only" htmlFor="name">Name</label>
-                                        <input
-                                            type="text"
-                                            id="name"
-                                            name="name"
-                                            required
-                                            placeholder="Your Name"
-                                            className="w-full px-5 py-4 rounded-2xl border border-gray-200 bg-white/80 focus:bg-white focus:outline-none focus:ring-2 focus:ring-gold transition-all"
-                                        />
-                                    </div>
-                                    <div className="!flex !flex-row !gap-2 !w-full">
-                                        <div className="flex-1">
-                                            <label className="sr-only" htmlFor="phone">Phone</label>
-                                            <input
-                                                type="tel"
-                                                id="phone"
-                                                name="phone"
-                                                required
-                                                placeholder="Phone"
-                                                className="w-full px-4 py-3 sm:px-5 sm:py-4 rounded-2xl border border-gray-200 bg-white/80 focus:bg-white focus:outline-none focus:ring-2 focus:ring-gold transition-all text-sm sm:text-base"
-                                            />
-                                        </div>
-                                        <div className="flex-1">
-                                            <label className="sr-only" htmlFor="email">Email</label>
-                                            <input
-                                                type="email"
-                                                id="email"
-                                                name="email"
-                                                required
-                                                placeholder="Email"
-                                                className="w-full px-4 py-3 sm:px-5 sm:py-4 rounded-2xl border border-gray-200 bg-white/80 focus:bg-white focus:outline-none focus:ring-2 focus:ring-gold transition-all text-sm sm:text-base"
-                                            />
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <label className="sr-only" htmlFor="projectDetails">Project Details & Service Address</label>
-                                        <textarea
-                                            id="projectDetails"
-                                            name="projectDetails"
-                                            rows={4}
-                                            required
-                                            placeholder="Tell us about your project (e.g., number of windows, roof type) and provide the service address for an accurate quote"
-                                            className="!w-full !mt-4 px-4 py-3 sm:px-5 sm:py-4 rounded-2xl border border-gray-200 bg-white/80 focus:bg-white focus:outline-none focus:ring-2 focus:ring-gold transition-all text-sm sm:text-base resize-y min-h-[100px]"
-                                        />
-                                    </div>
-                                    <div>
-                                        <fieldset>
-                                            <legend className="text-sm font-bold text-navy mb-2">Services Needed</legend>
-                                            <div className="grid grid-cols-2 gap-3 mt-1 text-sm text-gray-700">
-                                                <label className="flex items-center gap-2 cursor-pointer hover:text-gold transition-colors">
-                                                    <input type="checkbox" name="service" value="house-washing" className="accent-gold w-4 h-4 cursor-pointer" /> House Washing
-                                                </label>
-                                                <label className="flex items-center gap-2 cursor-pointer hover:text-gold transition-colors">
-                                                    <input type="checkbox" name="service" value="roof-cleaning" className="accent-gold w-4 h-4 cursor-pointer" /> Roof Cleaning
-                                                </label>
-                                                <label className="flex items-center gap-2 cursor-pointer hover:text-gold transition-colors">
-                                                    <input type="checkbox" name="service" value="window-cleaning" className="accent-gold w-4 h-4 cursor-pointer" /> Window Cleaning
-                                                </label>
-                                                <label className="flex items-center gap-2 cursor-pointer hover:text-gold transition-colors">
-                                                    <input type="checkbox" name="service" value="gutter-cleaning" className="accent-gold w-4 h-4 cursor-pointer" /> Gutter Cleaning
-                                                </label>
-                                                <label className="flex items-center gap-2 cursor-pointer hover:text-gold transition-colors">
-                                                    <input type="checkbox" name="service" value="concrete-cleaning" className="accent-gold w-4 h-4 cursor-pointer" /> Concrete Cleaning
-                                                </label>
-                                                <label className="flex items-center gap-2 cursor-pointer hover:text-gold transition-colors">
-                                                    <input type="checkbox" name="service" value="permanent-led-lighting" className="accent-gold w-4 h-4 cursor-pointer" /> Permanent LED Lighting
-                                                </label>
-                                                <label className="flex items-center gap-2 cursor-pointer hover:text-gold transition-colors col-span-2">
-                                                    <input type="checkbox" name="service" value="commercial-services" className="accent-gold w-4 h-4 cursor-pointer" /> Commercial Services
-                                                </label>
-                                            </div>
-                                        </fieldset>
-                                    </div>
-                                    <button
-                                        type="submit"
-                                        className="w-full bg-gold hover:bg-gold-light text-white font-bold text-lg py-4 rounded-2xl transition-all shadow-md hover:shadow-xl hover:-translate-y-1 mt-2"
-                                    >
-                                        GET QUOTE NOW
-                                    </button>
-                                </form>
-                            </div>
-                        )}
-                    </div>
+                    <HeroForm />
                 </div>
             </div>
         </section >

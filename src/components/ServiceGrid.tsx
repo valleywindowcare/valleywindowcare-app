@@ -1,5 +1,7 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { ChevronRight, Home, Building2 } from 'lucide-react';
+import { serviceContentMap } from '@/data/serviceContent';
 
 export type DynamicGridItem = {
     serviceName: string;
@@ -16,7 +18,8 @@ const formatSlug = (city: string) => city.toLowerCase().replace(/ /g, '-');
 
 // Helper to determine category
 const isCommercial = (name: string) => {
-    const commercialKeywords = ['Commercial', 'Building', 'Dumpster', 'Graffiti', 'HOA', 'Storefront', 'Drive-Thru', 'Parking Lot', 'Awning', 'Gas Station', 'Post Construction'];
+    if (name === "Residential Permanent LED Lighting") return false;
+    const commercialKeywords = ['Commercial', 'Building', 'Dumpster', 'Graffiti', 'HOA', 'Storefront', 'Drive-Thru', 'Parking Lot', 'Awning', 'Gas Station', 'Post Construction', 'Chewing Gum', 'Hood', 'Apartment', 'Permanent LED Lighting'];
     return commercialKeywords.some(keyword => name.includes(keyword));
 };
 
@@ -43,16 +46,16 @@ const DEFAULT_SERVICES = [
     { name: "Premium Drive-Thru Cleaning", slug: "premium-drive-thru-cleaning" },
     { name: "Parking Lot & Garage Cleaning", slug: "parking-lot-and-garage-cleaning" },
     { name: "Chewing Gum Removal", slug: "chewing-gum-removal" },
-    { name: "Professional Awning Cleaning", slug: "professional-awning-cleaning" },
+    { name: "Professional Awning Cleaning", slug: "commercial-awning-cleaning" },
     { name: "Gas Station Cleaning", slug: "gas-station-cleaning" },
     { name: "Post Construction Cleanup", slug: "post-construction-cleanup" },
     { name: "Paver Patio Restorations", slug: "paver-patio-restorations" },
-    { name: "Hood Vent Cleaning", slug: "hood-vent-cleaning" },
-    { name: "Residential Rust Removal", slug: "rust-removal" },
-    { name: "Soft Wash", slug: "soft-washing" },
+    { name: "Commercial Hood Cleaning", slug: "commercial-hood-cleaning" },
+    { name: "Apartment Exterior Cleaning", slug: "apartment-exterior-cleaning" },
+    { name: "Rust Removal", slug: "rust-removal" },
+    { name: "Soft Wash", slug: "soft-wash" },
     { name: "Driveway Cleaning", slug: "driveway-cleaning" },
-    { name: "Solar Panel Cleaning", slug: "solar-panel-cleaning" },
-    { name: "Commercial Awning Cleaning", slug: "professional-awning-cleaning" }
+    { name: "Solar Panel Cleaning", slug: "solar-panel-cleaning" }
 ];
 
 export default function ServiceGrid({ city, gridItems }: ServiceGridProps) {
@@ -82,18 +85,26 @@ export default function ServiceGrid({ city, gridItems }: ServiceGridProps) {
             <div className="p-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                     {items.map((service, idx) => {
-                        const href = city ? `/service-areas/${formatSlug(city)}/${service.serviceSlug}` : `/services/${service.serviceSlug}`;
+                        const localCitySlug = city ? formatSlug(city) : null;
+                        const href = localCitySlug
+                            ? `/service-areas/${localCitySlug}/${service.serviceSlug}`
+                            : `/services/${service.serviceSlug}`;
+
                         return (
                             <Link
                                 key={idx}
                                 href={href}
-                                className="group flex items-center justify-between bg-white border border-gray-100 hover:border-gold p-6 rounded-2xl hover:shadow-xl transition-all duration-300"
+                                className="group relative overflow-hidden bg-navy border-2 border-transparent hover:border-gold rounded-2xl hover:shadow-xl transition-all duration-300 flex flex-col h-64"
                             >
-                                <span className="font-bold text-navy group-hover:text-gold transition-colors text-lg">
-                                    {service.serviceName}
-                                </span>
-                                <div className="bg-slate-50 p-2 rounded-full transform group-hover:scale-110 group-hover:bg-gold/10 transition-all">
-                                    <ChevronRight className="text-gray-400 group-hover:text-gold" size={20} />
+                                <Image src={serviceContentMap[service.serviceSlug]?.image || "/images/portfolio/house-washing.webp"} alt={service.serviceName} fill className="object-cover group-hover:scale-105 transition-transform duration-500 z-0" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/40 to-transparent z-10 transition-opacity duration-300 group-hover:opacity-90"></div>
+                                <div className="relative z-20 flex flex-row items-end justify-between h-full p-6">
+                                    <span className="font-bold text-white group-hover:text-gold transition-colors text-xl">
+                                        {service.serviceName}
+                                    </span>
+                                    <div className="bg-white/10 p-2 rounded-full transform group-hover:scale-110 transition-all">
+                                        <ChevronRight className="text-gold" size={20} />
+                                    </div>
                                 </div>
                             </Link>
                         );

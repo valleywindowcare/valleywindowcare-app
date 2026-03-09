@@ -77,9 +77,18 @@ export default function SEOAuthorityEngine({ serviceSlug, serviceName, cityName 
                         </p>
                     )}
 
+                    {/* DYNAMIC ENTITY CAPSULE INJECTION */}
+                    {content.entityCapsule && (
+                        <div className="text-lg leading-relaxed mb-8 font-bold text-navy">
+                            {content.entityCapsule}
+                        </div>
+                    )}
+
                     <div className="space-y-6 text-lg">
                         {content.problemStatement.map((paragraph, idx) => (
-                            <p key={idx} className="leading-relaxed">{paragraph}</p>
+                            <p key={idx} className="leading-relaxed">
+                                {paragraph}
+                            </p>
                         ))}
                     </div>
                 </section>
@@ -141,6 +150,18 @@ export default function SEOAuthorityEngine({ serviceSlug, serviceName, cityName 
                     </div>
                 </section>
 
+                {/* DYNAMIC PRICING EXPECTATIONS INJECTION */}
+                {content.pricingExpectations && (
+                    <section className="mb-16 bg-navy text-white p-8 md:p-12 rounded-3xl not-prose shadow-lg border border-navy-light">
+                        <h2 className="text-3xl md:text-4xl font-extrabold mb-6 text-gold border-b border-white/20 pb-6">
+                            Pricing Expectations
+                        </h2>
+                        <div className="text-xl text-gray-200 leading-relaxed">
+                            {content.pricingExpectations}
+                        </div>
+                    </section>
+                )}
+
                 {/* Local Proof Section */}
                 <section className="mb-16">
                     <div className="flex items-center gap-3 mb-6">
@@ -152,7 +173,9 @@ export default function SEOAuthorityEngine({ serviceSlug, serviceName, cityName 
 
                     <div className="space-y-6 text-lg bg-slate-50 p-8 rounded-2xl border border-slate-100">
                         {content.localProof.map((paragraph, idx) => (
-                            <p key={idx} className="leading-relaxed">{paragraph}</p>
+                            <p key={idx} className="leading-relaxed">
+                                {paragraph}
+                            </p>
                         ))}
                     </div>
                 </section>

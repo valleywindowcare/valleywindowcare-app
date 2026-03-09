@@ -1,14 +1,13 @@
 'use client';
 
 import { BadgeCheck } from "lucide-react";
-import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-const reviews = [
+const fallbackReviews = [
     {
         reviewer: "Emily Jakl",
         date: "5 months ago",
-        text: "James was great to work with!"
+        text: "James was great to work with! I needed my roof cleaned and he took the time to explain the entire soft washing process. The results are incredible."
     },
     {
         reviewer: "Mark",
@@ -16,19 +15,9 @@ const reviews = [
         text: "James was amazing! He took the time over the phone to educate me on the process. His prices are great and his workmanship even better. I would recommend James if you folks need your house professionally washed!"
     },
     {
-        reviewer: "R Lucy",
-        date: "5 months ago",
-        text: "James and Tyler did a wonderful job. We are so happy with this service. Courteous, detail oriented, and super sweet."
-    },
-    {
         reviewer: "Kirk Ritchie",
         date: "5 months ago",
-        text: "Both windows and exterior were done and they look like new! Very friendly and very professional! Quick work and a job we'll done"
-    },
-    {
-        reviewer: "Barb Hoffman",
-        date: "6 months ago",
-        text: "Tyler & James did an awesome job! They were friendly, fast, & took shoes off when working on interior windows! I’d highly recommend them!"
+        text: "Both windows and exterior were done and they look like new! Very friendly and very professional! Quick work and a job well done."
     },
     {
         reviewer: "Cortney Hakkarinen",
@@ -38,27 +27,35 @@ const reviews = [
     {
         reviewer: "cynthia m",
         date: "6 months ago",
-        text: "James and Tyler pressure washed our vinyl and brick house, and a stone porch and patio last week. They were friendly, efficient and did excellent work. We have an older home that had not been pressure washed for at least 20 years. Everything looks a lot cleaner and newer, particularly the flagstone patio, which they included for free. I was totally surprised to see white stones rather than grey when they were finished :). I highly recommend their services and thank them for their work."
-    },
-    {
-        reviewer: "Jerrod Jarvis",
-        date: "7 months ago",
-        text: "James and Tyler cleaned my windows and a concrete patio for me and did a fantastic job. Very efficient and professional. I would 100% recommend valley window care and exterior cleaning for all your window and exterior home cleaning needs!"
+        text: "James and Tyler pressure washed our vinyl and brick house, and a stone porch and patio last week. They were friendly, efficient and did excellent work. Everything looks a lot cleaner and newer, particularly the flagstone patio. I highly recommend their services!"
     },
     {
         reviewer: "Lux Flowers",
         date: "7 months ago",
-        text: "Honestly, by far the best service. Detailed, fast to respond, and reasonably priced. They handled my soft washing and window cleaning perfectly, and the results were amazing. They were recommended to me by friends, and I will now recommend them to everybody else. You won’t find a better exterior cleaning service in Green Bay Wi"
-    },
-    {
-        reviewer: "Cindy Finney",
-        date: "7 months ago",
-        text: "I’m very happy with the work James and Tyler did washing my windows and pressure washed the house. They were on time, very professional and went above and beyond. I appreciate the explanation of the plan and after they were done pointing out what was done including the extras that were needed. I’ll definitely use Valley Window in the future!"
+        text: "Honestly, by far the best service. Detailed, fast to respond, and reasonably priced. They handled my soft washing and window cleaning perfectly, and the results were amazing."
     }
 ];
 
 export default function ReviewSlider() {
+    const [reviews, setReviews] = useState(fallbackReviews);
     const [currentIndex, setCurrentIndex] = useState(0);
+
+    useEffect(() => {
+        const fetchReviews = async () => {
+            try {
+                const res = await fetch('/api/reviews', { cache: 'no-store' });
+                if (res.ok) {
+                    const data = await res.json();
+                    if (data && data.length >= 3) {
+                        setReviews(data);
+                    }
+                }
+            } catch (err) {
+                console.error("Failed to load reviews:", err);
+            }
+        };
+        fetchReviews();
+    }, []);
 
     const nextReview = () => {
         setCurrentIndex((prevIndex) =>
@@ -95,13 +92,10 @@ export default function ReviewSlider() {
                             <div className="flex flex-col">
                                 <div className="flex text-gold">
                                     {[...Array(5)].map((_, i) => (
-                                        <div key={i} className="relative w-5 h-5 mx-0.5">
-                                            <Image
-                                                src="/star-solid.svg"
-                                                alt="Star"
-                                                fill
-                                                loading="lazy"
-                                            />
+                                        <div key={i} className="relative w-5 h-5 mx-0.5 text-[#FBBC05]">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-full h-full">
+                                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                            </svg>
                                         </div>
                                     ))}
                                 </div>
@@ -165,15 +159,14 @@ export default function ReviewSlider() {
                                                 <p className="text-sm text-gray-500">{review.date}</p>
                                             </div>
                                         </div>
-                                        {/* Google G Logo SVG approximation */}
+                                        {/* Google G Logo SVG */}
                                         <div className="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center relative shadow-sm">
-                                            <Image
-                                                src="/google-g.svg"
-                                                alt="Google Verified Review"
-                                                width={18}
-                                                height={18}
-                                                loading="lazy"
-                                            />
+                                            <svg viewBox="0 0 24 24" width="18" height="18" xmlns="http://www.w3.org/2000/svg" className="bg-transparent p-[1px]">
+                                                <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4" />
+                                                <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853" />
+                                                <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05" />
+                                                <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335" />
+                                            </svg>
                                         </div>
                                     </div>
 
@@ -181,13 +174,10 @@ export default function ReviewSlider() {
                                     <div className="flex items-center gap-3 mb-4">
                                         <div className="flex text-gold">
                                             {[...Array(5)].map((_, i) => (
-                                                <div key={i} className="relative w-4 h-4 mx-px">
-                                                    <Image
-                                                        src="/star-solid.svg"
-                                                        alt="Star"
-                                                        fill
-                                                        loading="lazy"
-                                                    />
+                                                <div key={i} className="relative w-4 h-4 mx-px text-[#FBBC05]">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-full h-full">
+                                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                                    </svg>
                                                 </div>
                                             ))}
                                         </div>

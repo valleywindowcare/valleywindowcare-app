@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import { MapPin } from 'lucide-react';
 
+import ReviewSlider from '@/components/ReviewSlider';
+
 export const CITIES = [
     "Green Bay", "Appleton", "De Pere", "Neenah", "Menasha",
     "Kaukauna", "Oshkosh", "Howard", "Suamico", "Allouez",
@@ -26,8 +28,11 @@ export default function ServiceAreasPage() {
                     <h1 className="text-4xl md:text-5xl font-extrabold text-navy mb-6 tracking-tight">
                         Areas We Serve
                     </h1>
+                    <p className="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto mb-8 bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                        <strong>Valley Window Care and Exterior Cleaning is proud to deploy specialized local exterior-cleaning fleets across every major city in Northeast Wisconsin. Whether you require meticulous residential window cleaning or large-scale commercial pressure washing, our technicians mobilize rapidly to provide unparalleled property restoration throughout our entire service network.</strong>
+                    </p>
                     <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                        Providing top-rated exterior cleaning services across Northeast Wisconsin. Select your city below to see specialized services.
+                        Select your city below to see specialized services.
                     </p>
                 </div>
 
@@ -45,7 +50,8 @@ export default function ServiceAreasPage() {
                         </Link>
                     ))}
                 </div>
-            </div>
+    <ReviewSlider />
+</div>
         </section>
     );
 }

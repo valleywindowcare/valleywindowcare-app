@@ -3,7 +3,7 @@ import Hero from "@/components/Hero";
 import Process from "@/components/Process";
 import dynamic from "next/dynamic";
 const ReviewSlider = dynamic(() => import("@/components/ReviewSlider"));
-import VanillaMap from "@/components/VanillaMap";
+import VanillaMapClient from "@/components/VanillaMapClient";
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
@@ -45,7 +45,7 @@ export default function WindowCleaningPage() {
             <Hero
                 h1={<>Window Cleaning</>}
                 description="Providing premium exterior services across Northeast Wisconsin."
-                bgImage="/site-gallery/authentic-IMG_3952.jpg"
+                bgImage="/images/portfolio/window-cleaning-before-after.JPG.webp"
             />
 
             <article className="container mx-auto px-4 py-16 lg:py-24 max-w-4xl">

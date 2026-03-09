@@ -49,26 +49,21 @@ export default function SuccessState({ onReset }: SuccessStateProps) {
                 <h3 className="text-3xl font-extrabold text-navy mb-4 tracking-tight">Message Received!</h3>
 
                 <p className="text-gray-600 mb-8 max-w-sm leading-relaxed text-lg">
-                    Thanks for reaching out! We've received your request and James or Tyler will be in touch with you shortly.
+                    Thanks for reaching out! We've received your request and our team will be in touch with you shortly.
                 </p>
 
                 {/* Team Trust Element */}
                 <div className="flex items-center gap-4 bg-slate-50 border border-gray-100 p-4 rounded-xl mb-8 shadow-sm">
-                    <div className="flex -space-x-3">
-                        {/* Simulated Avatars since we don't have the exact team photo yet */}
-                        <div className="w-12 h-12 rounded-full border-2 border-white bg-navy flex items-center justify-center text-white font-bold text-lg shadow-sm z-10">J</div>
-                        <div className="w-12 h-12 rounded-full border-2 border-white bg-gold flex items-center justify-center text-white font-bold text-lg shadow-sm z-0">T</div>
-                    </div>
-                    <div className="text-left">
-                        <p className="text-sm font-bold text-navy">James & Tyler</p>
-                        <p className="text-xs text-gray-500">Valley Window Care and Exterior Cleaning Team</p>
+                    <div className="text-center w-full">
+                        <p className="text-sm font-bold text-navy">The Valley Window Care Team</p>
+                        <p className="text-xs text-gray-500">Exterior Cleaning Professionals</p>
                     </div>
                 </div>
 
                 <button
                     onClick={onReset}
                     className="text-navy font-bold hover:text-gold transition-colors text-sm uppercase tracking-wider underline underline-offset-4"
-                >
+                 aria-label="Close">
                     Submit Another Request
                 </button>
             </div>

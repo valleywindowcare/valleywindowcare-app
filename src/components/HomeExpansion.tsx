@@ -42,14 +42,11 @@ export default function HomeExpansion() {
                         <div>
                             <p className="text-gold font-bold tracking-widest uppercase mb-3 text-sm">Our Guarantee</p>
                             <h2 className="text-4xl lg:text-5xl font-extrabold text-navy leading-tight">
-                                Results That Speak For Themselves.
+                                Our 100% Satisfaction Guarantee
                             </h2>
                         </div>
                         <p className="text-gray-600 text-lg leading-relaxed">
-                            When it comes to maintaining your property, trust matters. At <strong className="text-navy">Valley Window Care</strong>, we believe our work should reflect the highest standards of quality and care. Our team is dedicated to providing Northeast Wisconsin homeowners and businesses with transformative exterior cleaning solutions.
-                        </p>
-                        <p className="text-gray-600 text-lg leading-relaxed">
-                            From restoring the curb appeal of aging siding to ensuring your roof is free of destructive organic growth, we tackle every project with precision. We utilize advanced soft washing and professional power washing techniques designed specifically to safely eradicate dirt, grime, moss, and algae without causing structural damage.
+                            If you aren’t absolutely thrilled with the curb appeal of your home, we will come back and make it right. No questions asked. We utilize advanced soft washing and professional power washing techniques designed specifically to safely eradicate dirt, grime, moss, and algae without causing structural damage.
                         </p>
                         <div className="pt-4">
                             <Link href="/contact" className="inline-block bg-gold hover:bg-gold-light text-white font-bold py-4 px-10 rounded-full shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 uppercase tracking-wider text-sm" aria-label="Request a free diagnostic estimate for exterior cleaning">
@@ -108,8 +105,8 @@ export default function HomeExpansion() {
 
                         {/* The Floating Badge */}
                         <div className="absolute -bottom-6 -left-6 sm:bottom-10 sm:-left-10 w-40 h-40 sm:w-56 sm:h-56 bg-gold rounded-full flex flex-col items-center justify-center shadow-2xl p-4 sm:p-6 text-center transform hover:scale-105 transition-transform duration-300 border-8 border-white z-10">
-                            <span className="text-3xl sm:text-5xl font-black text-navy mb-1 sm:mb-2">5+</span>
-                            <span className="text-xs sm:text-sm font-bold text-white uppercase tracking-widest leading-tight">Years of<br />Collective<br />Experience</span>
+                            <span className="text-3xl sm:text-5xl font-black text-navy mb-1 sm:mb-2">100+</span>
+                            <span className="text-xs sm:text-sm font-bold text-white uppercase tracking-widest leading-tight">5-Star<br />Reviews</span>
                         </div>
                     </div>
                 </div>

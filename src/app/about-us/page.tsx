@@ -2,14 +2,35 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Shield, Sparkles, Target, Users, CheckCircle2 } from "lucide-react";
 
+import ReviewSlider from '@/components/ReviewSlider';
+
 export const metadata: Metadata = {
     title: "About Us | Valley Window Care and Exterior Cleaning",
     description: "Learn about Valley Window Care and Exterior Cleaning's story, our team, and our commitment to crystal clear exterior cleaning services in Green Bay.",
 };
 
 export default function AboutUsPage() {
+    const jsonLd = {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Valley Window Care",
+      "image": "https://valleywindowcare.com/images/portfolio/house-wash-before-after.webp",
+      "url": "https://valleywindowcare.com/about-us",
+      "telephone": "(920) 609-7085",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Appleton",
+        "addressRegion": "WI"
+      },
+      "areaServed": ["Appleton", "Green Bay", "Door County"]
+    };
+
     return (
         <main className="min-h-screen bg-slate-50">
+            <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
             {/* Minimalist Hero */}
             <section className="bg-navy pt-32 pb-20 px-4 relative overflow-hidden">
                 <div className="absolute inset-0 bg-blue-900/20 pattern-grid-lg"></div>
@@ -29,14 +50,14 @@ export default function AboutUsPage() {
                         <div className="md:w-1/2 bg-navy p-12 text-white flex flex-col justify-center">
                             <h2 className="text-3xl font-bold mb-6 text-gold">Meet the Team</h2>
                             <p className="text-gray-300 mb-6 leading-relaxed italic">
-                                "As the face of Valley Window Care and Exterior Cleaning, I pride myself on our team's outstanding ability to provide professional services, build relationships with customers, and safely beat expectations on the job."
+                                "As the face of Valley Window Care and Exterior Cleaning, we pride ourselves on our team's outstanding ability to provide professional services, build relationships with customers, and safely beat expectations on the job."
                             </p>
-                            <p className="font-bold text-xl mb-8">– James</p>
+                            <p className="font-bold text-xl mb-8">– The Valley Window Care Team</p>
 
                             <div className="pt-8 border-t border-white/10">
-                                <h3 className="text-xl font-bold mb-3">James & Tyler</h3>
+                                <h3 className="text-xl font-bold mb-3">Our Leadership</h3>
                                 <p className="text-gray-300 text-sm leading-relaxed">
-                                    Our clients recognize James and Tyler as a duo that delivers "wonderful" results. Known for being courteous, detail-oriented, and highly professional on every property.
+                                    Our clients recognize our leadership team as delivering "wonderful" results. Known for being courteous, detail-oriented, and highly professional on every property.
                                 </p>
                             </div>
                         </div>
@@ -74,6 +95,61 @@ export default function AboutUsPage() {
                 </div>
             </section>
 
+            {/* MODULE 1: Our Roots & Expertise */}
+            <section className="py-16 bg-white border-b border-gray-100 relative z-10">
+                <div className="container mx-auto max-w-4xl px-4 text-center">
+                    <h2 className="text-3xl md:text-4xl font-extrabold text-navy mb-8 tracking-tight">Our Roots & Expertise</h2>
+                    <div className="prose md:prose-lg max-w-none text-navy text-left space-y-6">
+                        <p className="leading-relaxed text-lg">
+                            Valley Window Care was founded on fundamental accountability. We physically operate the equipment. We inspect the final results ourselves. You deal directly with the ownership team on every specific project.
+                        </p>
+                        <p className="leading-relaxed text-lg">
+                            We dedicate ourselves to mastering commercial-grade exterior cleaning. We use 40-foot carbon-fiber pure-water poles. We deploy low-pressure soft wash rigs. We manufacture permanent architectural lighting. Our technicians train relentlessly on safe, low-impact chemical applications.
+                        </p>
+                        <p className="leading-relaxed text-lg">
+                            We dispatch our crews daily across Northeast Wisconsin. We maintain high-value properties in <Link href="/service-areas/appleton" className="text-blue-600 font-bold hover:text-gold transition-colors">Appleton</Link>, <Link href="/service-areas/green-bay" className="text-blue-600 font-bold hover:text-gold transition-colors">Green Bay</Link>, and <Link href="/service-areas/door-county" className="text-blue-600 font-bold hover:text-gold transition-colors">Door County</Link>. We understand the heavy local environmental demands. We protect your physical investments from destructive Wisconsin weather.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            {/* MODULE 2: The Valley Window Care Standard */}
+            <section className="py-16 bg-slate-50 relative z-10">
+                <div className="container mx-auto max-w-6xl px-4">
+                    <h2 className="text-3xl md:text-4xl font-extrabold text-navy mb-12 text-center tracking-tight">The Valley Window Care Standard</h2>
+                    <div className="grid md:grid-cols-3 gap-8 text-navy">
+                        {/* Column 1 */}
+                        <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-gold/30 transition-colors">
+                            <Shield className="w-12 h-12 text-gold mb-6" />
+                            <h3 className="text-xl font-bold mb-4">Fully Insured</h3>
+                            <p className="text-lg leading-relaxed text-gray-700">
+                                We carry comprehensive commercial liability insurance. We protect high-value residential properties safely. We secure major commercial storefronts legally. You bear zero physical risk.
+                            </p>
+                        </div>
+                        {/* Column 2 */}
+                        <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-gold/30 transition-colors">
+                            <Users className="w-12 h-12 text-gold mb-6" />
+                            <h3 className="text-xl font-bold mb-4">Owner-Operated</h3>
+                            <p className="text-lg leading-relaxed text-gray-700">
+                                You deal directly with our ownership team. We enforce strict, personal quality control. We eliminate unresponsive middle management. We guarantee absolute project accountability.
+                            </p>
+                        </div>
+                        {/* Column 3 */}
+                        <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-gold/30 transition-colors">
+                            <Sparkles className="w-12 h-12 text-gold mb-6" />
+                            <h3 className="text-xl font-bold mb-4">Premium Equipment</h3>
+                            <p className="text-lg leading-relaxed text-gray-700">
+                                We utilize modern deionized pure-water systems for flawless <Link href="/services/window-cleaning" className="text-blue-600 font-bold hover:text-gold transition-colors">Window Cleaning</Link>. We deploy dedicated low-pressure soft wash rigs. We never damage delicate exterior siding.
+                            </p>
+                        </div>
+                    </div>
+                    {/* Contextual Link */}
+                    <div className="mt-12 text-center text-xl text-gray-700 font-medium">
+                        Ready to elevate your property standards? <Link href="/contact" className="text-gold font-bold hover:text-navy transition-colors underline mt-2 block sm:inline">Contact our ownership team for your exact quote.</Link>
+                    </div>
+                </div>
+            </section>
+
             <section className="py-20 px-4 bg-white relative z-10">
                 <div className="container mx-auto max-w-5xl">
                     <div className="text-center mb-16">
@@ -96,6 +172,9 @@ export default function AboutUsPage() {
                     </div>
                 </div>
             </section>
+
+
+            <ReviewSlider />
 
             {/* CTA */}
             <section className="py-20 px-4 relative z-10 bg-slate-50">

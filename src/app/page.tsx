@@ -1,3 +1,8 @@
+/* 
+ * PHYSICAL CACHE-BUSTING BLOCK
+ * TIMESTAMP: 2026-03-05T20:04:25-06:00
+ * DIRECTIVE: Force Next.js chunk hash invalidation for stale Homepage Hero image
+ */
 import { Metadata } from 'next';
 import Hero from "@/components/Hero";
 import Process from "@/components/Process";
@@ -5,18 +10,11 @@ import ServiceGrid from "@/components/ServiceGrid";
 import dynamic from "next/dynamic";
 const ReviewSlider = dynamic(() => import("@/components/ReviewSlider"));
 import HomeExpansion from "@/components/HomeExpansion";
-
-export async function generateMetadata(): Promise<Metadata> {
-  return {
-    title: "Valley Window Care and Exterior Cleaning",
-    description: "Professional pressure washing and window cleaning in Green Bay.",
-  };
-}
-
+// Metadata inherited from strict server layout.tsx
 export default function Home() {
   return (
     <>
-      <Hero />
+      <Hero bgImage="/images/portfolio/building-washing-services-1.png" />
       <Process />
       <ServiceGrid />
       <ReviewSlider />

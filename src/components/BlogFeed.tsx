@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { Calendar } from 'lucide-react';
 
 interface BlogPost {
@@ -57,26 +56,24 @@ export default function BlogFeed({ blogs }: { blogs: BlogPost[] }) {
                             <Link key={blog.slug} href={`/blog/${blog.slug}`} className="group bg-white rounded-3xl overflow-hidden shadow-soft hover:shadow-card-hover transition-all duration-300 flex flex-col btn-hover-fx">
                                 {blog.image ? (
                                     <div className="w-full h-56 relative overflow-hidden bg-slate-100">
-                                        <Image
-                                            src={blog.image || '/site-gallery/authentic-crew-photo.jpg'}
+                                        <img
+                                            src={blog.image || '/images/portfolio/building-wash-copy.webp'}
                                             alt={`Valley Window Care and Exterior Cleaning - ${blog.category || 'Service Profile'}`}
-                                            fill
                                             loading="lazy"
-                                            quality={75}
-                                            className="object-cover group-hover:scale-105 transition-transform duration-500"
-                                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                            width={600}
+                                            height={400}
+                                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                                         />
                                     </div>
                                 ) : (
                                     <div className="w-full h-56 relative overflow-hidden bg-slate-100">
-                                        <Image
-                                            src="/site-gallery/authentic-crew-photo.jpg"
+                                        <img
+                                            src="/images/portfolio/building-wash-copy.webp"
                                             alt={`Valley Window Care and Exterior Cleaning - ${blog.category || 'Service Profile'}`}
-                                            fill
                                             loading="lazy"
-                                            quality={75}
-                                            className="object-cover group-hover:scale-105 transition-transform duration-500"
-                                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                            width={600}
+                                            height={400}
+                                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                                         />
                                     </div>
                                 )}

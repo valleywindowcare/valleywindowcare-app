@@ -2,13 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 
+import ReviewSlider from '@/components/ReviewSlider';
+
 export const metadata: Metadata = {
     title: "Privacy Policy | Valley Window Care",
     description: "Privacy policy and data collection practices for Valley Window Care and Exterior Cleaning.",
-    robots: {
-        index: false,
-        follow: true,
-    },
 };
 
 export default function PrivacyPolicyPage() {
@@ -110,6 +108,7 @@ export default function PrivacyPolicyPage() {
                     </div>
                 </article>
             </div>
+            <ReviewSlider />
         </main>
     );
 }

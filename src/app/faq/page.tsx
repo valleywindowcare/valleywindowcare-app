@@ -3,7 +3,9 @@ import Link from 'next/link';
 import Hero from '@/components/Hero';
 import FAQAccordion from '@/components/FAQAccordion';
 import { ArrowRight } from 'lucide-react';
-import { faqData } from '@/data/faqs';
+import { faqData } from '@/data/faqData';
+
+import ReviewSlider from '@/components/ReviewSlider';
 
 export const metadata: Metadata = {
     title: 'Frequently Asked Questions | Valley Window Care and Exterior Cleaning',
@@ -11,26 +13,50 @@ export const metadata: Metadata = {
 };
 
 export default function FAQPage() {
+    // 1. Generate the master LD+JSON Schema for Google Rich Snippets
+    const allFaqs = Object.values(faqData).flat();
+    
+    const faqSchema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": allFaqs.map(faq => ({
+            "@type": "Question",
+            "name": faq.question,
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer
+            }
+        }))
+    };
+
     return (
         <main>
+            {/* Inject the global SEO Schema */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+            />
+
             <Hero
                 h1="Frequently Asked Questions"
                 description="Find answers to common questions about roof cleaning, washing techniques, pricing, and our permanent lighting installations."
             />
 
             {/* FAQ Accordion Sections */}
-            <section className="py-20 lg:py-32 bg-white">
-                <div className="container mx-auto px-4 max-w-4xl">
-                    <div className="space-y-16">
-                        {faqData.map((category, idx) => (
-                            <div key={idx} id={category.service.toLowerCase().replace(/[^a-z0-9]+/g, '-')}>
-                                <div className="mb-8 border-b pb-4">
-                                    <h2 className="text-3xl font-bold text-navy">{category.service} FAQs</h2>
-                                </div>
-                                <FAQAccordion faqs={category.faqs} />
-                            </div>
-                        ))}
+            <section className="py-20 lg:py-32 bg-slate-50">
+                <div className="container mx-auto px-4 max-w-5xl">
+                    <div className="text-center mb-16">
+                        <p className="text-gold font-bold tracking-widest text-sm mb-4 uppercase">Knowledge Base</p>
+                        <h2 className="text-4xl md:text-5xl font-extrabold text-navy tracking-tight">Comprehensive Answers</h2>
                     </div>
+                    
+                    {Object.entries(faqData).map(([category, faqs]) => (
+                        <FAQAccordion 
+                            key={category} 
+                            categoryTitle={category} 
+                            faqs={faqs} 
+                        />
+                    ))}
                 </div>
             </section>
 
@@ -90,7 +116,7 @@ export default function FAQPage() {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/services/soft-washing" className="text-gray-600 hover:text-gold transition-colors flex items-center gap-2 group">
+                                    <Link href="/services/soft-washing-company-in-green-bay-wisconsin" className="text-gray-600 hover:text-gold transition-colors flex items-center gap-2 group">
                                         <ArrowRight size={14} className="text-gray-300 group-hover:text-gold transition-colors" /> Soft Washing
                                     </Link>
                                 </li>
@@ -208,6 +234,7 @@ export default function FAQPage() {
                     </div>
                 </div>
             </section>
+            <ReviewSlider />
         </main>
     );
 }

@@ -2,13 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ChevronRight, ShieldCheck } from "lucide-react";
 
+import ReviewSlider from '@/components/ReviewSlider';
+
 export const metadata: Metadata = {
     title: "Service Guarantee | Valley Window Care",
     description: "Our 100% Satisfaction Guarantee. We stand entirely behind the quality of our exterior cleaning services in Wisconsin.",
-    robots: {
-        index: false,
-        follow: true,
-    },
 };
 
 export default function ServiceGuaranteePage() {
@@ -73,6 +71,7 @@ export default function ServiceGuaranteePage() {
                     </div>
                 </article>
             </div>
+            <ReviewSlider />
         </main>
     );
 }

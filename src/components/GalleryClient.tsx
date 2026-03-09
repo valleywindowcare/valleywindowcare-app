@@ -1,11 +1,11 @@
 'use client';
 
 import { useState } from 'react';
-import Image from 'next/image';
 import { X } from 'lucide-react';
 
 type ImageProps = {
     src: string;
+    title: string;
     category: string;
     alt: string;
 };
@@ -47,13 +47,12 @@ export default function GalleryClient({ images }: { images: ImageProps[] }) {
                         onClick={() => setSelectedImage(image.src)}
                     >
                         <div className="relative overflow-hidden">
-                            <Image
+                            <img
                                 src={image.src}
                                 alt={image.alt}
-                                width={600}
-                                height={800}
                                 loading="lazy"
-                                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                width={400}
+                                height={300}
                                 className="w-full h-auto object-cover transform group-hover:scale-110 transition-transform duration-700 ease-in-out"
                             />
                             <div className="absolute inset-0 bg-navy/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
@@ -64,7 +63,7 @@ export default function GalleryClient({ images }: { images: ImageProps[] }) {
                         </div>
                         <div className="p-4 bg-white">
                             <p className="text-xs text-gold font-bold uppercase tracking-wider mb-1">{image.category}</p>
-                            <p className="text-sm text-navy-dark font-medium leading-snug line-clamp-2">{image.alt}</p>
+                            <p className="text-sm text-navy-dark font-medium leading-snug line-clamp-2">{image.title}</p>
                         </div>
                     </div>
                 ))}
@@ -88,11 +87,9 @@ export default function GalleryClient({ images }: { images: ImageProps[] }) {
                         <X size={32} />
                     </button>
                     <div className="relative max-w-5xl w-full max-h-[90vh]">
-                        <Image
+                        <img
                             src={selectedImage}
                             alt="Expanded project view"
-                            width={1200}
-                            height={900}
                             className="w-full h-full object-contain rounded-lg"
                         />
                     </div>
