@@ -108,12 +108,12 @@ type PageProps = {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
     const { service } = await params;
     const formattedName = formatTitle(service);
-    
+
     const isCommercial = commercialServices.includes(service);
 
     const categoryFallbacks: Record<string, string> = {
         "roof-clean": "/images/portfolio/roof-cleaning.webp",
-        "roof-cleaning": "/images/portfolio/roof-cleaning.webp",    
+        "roof-cleaning": "/images/portfolio/roof-cleaning.webp",
         "house-washing": "/images/portfolio/house-wash-before-after.webp",
         "gutter-cleaning": "/images/portfolio/gutter-cleaning.webp",
         "concrete-cleaning": "/images/portfolio/concrete-cleaning.webp",
@@ -127,7 +127,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         "commercial-hood-cleaning": "/images/portfolio/building-washing.webp",
         "commercial-hood-vent": "/images/portfolio/building-washing.webp",
         "commercial-awning": "/images/portfolio/awning-cleaning.webp",
-        "commercial-awning-cleaning": "/images/portfolio/awning-cleaning.webp",    
+        "commercial-awning-cleaning": "/images/portfolio/awning-cleaning.webp",
         "drive-way-cleaning": "/images/portfolio/drive-way-cleaning.webp",
         "driveway-cleaning": "/images/portfolio/drive-way-cleaning.webp",
         "residential-rust-removal": "/images/portfolio/rust-removal-before-after.webp",
@@ -137,16 +137,16 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         "soft-wash": "/images/portfolio/soft-washing.webp"
     };
 
-    
+
 
     const seoTitle = isCommercial
         ? `Commercial ${formattedName} in Green Bay & Northeast WI`
         : `${formattedName} in Green Bay & Northeast WI`;
-        
+
     const seoDescription = isCommercial
         ? `Valley Window Care and Exterior Cleaning provides premium ${formattedName.toLowerCase()} and property maintenance for businesses in Green Bay, Appleton, and surrounding areas.`
         : `Valley Window Care and Exterior Cleaning offers premium ${formattedName.toLowerCase()} for residential properties in Green Bay, Appleton, and surrounding areas.`;
-        
+
     const seoImage = categoryFallbacks[service] || "/images/portfolio/house-washing.webp";
 
     return {
@@ -183,7 +183,7 @@ export default async function ServiceGenericPage({ params }: PageProps) {
         process: ["Free Quote", "Schedule Service", "Enjoy Your Clean Property"]
     };
 
-    
+
     const isCommercial = commercialServices.includes(service);
 
     // BRUTE FORCE LIGHTING OVERRIDE (Resolves Next.js Image shatter)
@@ -200,45 +200,45 @@ export default async function ServiceGenericPage({ params }: PageProps) {
                         Professional <span className="text-gold">{formattedName}</span><br />
                         <span className="text-2xl md:text-3xl mt-2 block">Green Bay & Northeast Wisconsin</span>
                     </h1>
-                     <p className="text-lg md:text-xl text-gray-100 font-semibold leading-relaxed drop-shadow-md pb-8">
+                    <p className="text-lg md:text-xl text-gray-100 font-semibold leading-relaxed drop-shadow-md pb-8">
                         Valley Window Care and Exterior Cleaning provides premium {formattedName.toLowerCase()} services to restore, protect, and enhance your property's value.
                     </p>
                 </div>
 
-                    {/* Bottom Section: Dual-Action Quote Box (Zero-Gap Stack) */}
-                    <div className="!relative !z-10 !w-full !max-w-xl !mx-auto !bg-white !rounded-xl !shadow-2xl !overflow-hidden flex flex-col text-navy-dark min-h-[500px] sm:min-h-[480px]" id="quote-form">
-                        {/* Top Action Header */}
-                        <div className="bg-gradient-to-br from-[#1B365D]/95 to-[#2c538c]/95 text-white w-full border-b border-white/10">
-                            <div className="!flex !flex-col !items-center !justify-center !text-center !w-full pt-4 pb-2">
-                                <h3 className="text-2xl font-bold !text-center !w-full !block">Get In Touch Fast</h3>
-                            </div>
-
-                            <div className="!flex !flex-row !justify-around !items-center !p-6 !w-full">
-                                <a href="tel:920-609-7085" className="!min-w-0 flex flex-col items-center gap-2 hover:text-gold transition-colors group !text-center" rel="nofollow" aria-label="Call Us">
-                                    <div className="bg-white/10 p-2 sm:p-3 rounded-2xl group-hover:bg-gold/20 transition-colors shrink-0">
-                                        <Phone size={24} className="text-gold" />
-                                    </div>
-                                    <div className="flex flex-col items-center !text-center w-full">
-                                        <p className="!text-xs text-gray-300 font-bold mb-1 tracking-wider uppercase !text-center">Call Or Text</p>
-                                        <p className="font-bold !text-xs sm:!text-sm whitespace-nowrap !text-center">(920) 609-7085</p>
-                                    </div>
-                                </a>
-
-                                <a href="mailto:info@valleywindowcare.com" className="!min-w-0 flex flex-col items-center gap-2 hover:text-gold transition-colors group !text-center overflow-hidden" rel="nofollow" aria-label="Email Us">
-                                    <div className="bg-white/10 p-2 sm:p-3 rounded-2xl group-hover:bg-gold/20 transition-colors shrink-0">
-                                        <Mail size={24} className="text-gold" />
-                                    </div>
-                                    <div className="flex flex-col items-center !text-center w-full px-1">
-                                        <p className="!text-xs text-gray-300 font-bold mb-1 tracking-wider uppercase !text-center">Email Us</p>
-                                        <p className="font-bold !text-[10px] sm:!text-xs break-all !text-center w-full">info@valleywindowcare.com</p>
-                                    </div>
-                                </a>
-                            </div>
+                {/* Bottom Section: Dual-Action Quote Box (Zero-Gap Stack) */}
+                <div className="!relative !z-10 !w-full !max-w-xl !mx-auto !bg-white !rounded-xl !shadow-2xl !overflow-hidden flex flex-col text-navy-dark min-h-[500px] sm:min-h-[480px]" id="quote-form">
+                    {/* Top Action Header */}
+                    <div className="bg-gradient-to-br from-[#1B365D]/95 to-[#2c538c]/95 text-white w-full border-b border-white/10">
+                        <div className="!flex !flex-col !items-center !justify-center !text-center !w-full pt-4 pb-2">
+                            <h3 className="text-2xl font-bold !text-center !w-full !block">Get In Touch Fast</h3>
                         </div>
 
-                        {/* Bottom Action Body (Form OR Success State) */}
-                        <HeroForm />
+                        <div className="!flex !flex-row !justify-around !items-center !p-6 !w-full">
+                            <a href="tel:920-609-7085" className="!min-w-0 flex flex-col items-center gap-2 hover:text-gold transition-colors group !text-center" rel="nofollow" aria-label="Call Us">
+                                <div className="bg-white/10 p-2 sm:p-3 rounded-2xl group-hover:bg-gold/20 transition-colors shrink-0">
+                                    <Phone size={24} className="text-gold" />
+                                </div>
+                                <div className="flex flex-col items-center !text-center w-full">
+                                    <p className="!text-xs text-gray-300 font-bold mb-1 tracking-wider uppercase !text-center">Call Or Text</p>
+                                    <p className="font-bold !text-xs sm:!text-sm whitespace-nowrap !text-center">(920) 609-7085</p>
+                                </div>
+                            </a>
+
+                            <a href="mailto:info@valleywindowcare.com" className="!min-w-0 flex flex-col items-center gap-2 hover:text-gold transition-colors group !text-center overflow-hidden" rel="nofollow" aria-label="Email Us">
+                                <div className="bg-white/10 p-2 sm:p-3 rounded-2xl group-hover:bg-gold/20 transition-colors shrink-0">
+                                    <Mail size={24} className="text-gold" />
+                                </div>
+                                <div className="flex flex-col items-center !text-center w-full px-1">
+                                    <p className="!text-xs text-gray-300 font-bold mb-1 tracking-wider uppercase !text-center">Email Us</p>
+                                    <p className="font-bold !text-[10px] sm:!text-xs break-all !text-center w-full">info@valleywindowcare.com</p>
+                                </div>
+                            </a>
+                        </div>
                     </div>
+
+                    {/* Bottom Action Body (Form OR Success State) */}
+                    <HeroForm />
+                </div>
             </section>
             <Process isCommercial={isCommercial} />
             {content && (
@@ -254,12 +254,28 @@ export default async function ServiceGenericPage({ params }: PageProps) {
             {/* Injects 1,000+ words of Semantic Core Content globally per service */}
             <div className="container mx-auto px-4 py-8 mb-12">
                 <SEOAuthorityEngine
-                        serviceSlug={service}
-                        serviceName={formattedName}
-                    />
-                </div>
+                    serviceSlug={service}
+                    serviceName={formattedName}
+                />
+            </div>
 
             {/* DYNAMIC MAP AND NAP INJECTION (INTERACTIVE JS) */}
+            {service === "roof-cleaning" && (
+                <div className="container mx-auto px-4 py-8 mb-12">
+                    <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 max-w-4xl mx-auto">
+                        <h3 className="text-2xl font-bold text-navy mb-4">Local Roof Cleaning Services</h3>
+                        <p className="text-gray-600 mb-6">We provide specialized, soft-wash roof cleaning tailored to the unique environmental conditions of the following Wisconsin communities:</p>
+                        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                            <Link href="/service-areas/green-bay/roof-cleaning" className="text-blue-600 hover:text-gold font-semibold transition-colors flex items-center gap-2">Green Bay Roof Cleaning <span aria-hidden="true">&rarr;</span></Link>
+                            <Link href="/service-areas/neenah/roof-cleaning" className="text-blue-600 hover:text-gold font-semibold transition-colors flex items-center gap-2">Neenah Roof Cleaning <span aria-hidden="true">&rarr;</span></Link>
+                            <Link href="/service-areas/appleton/roof-cleaning" className="text-blue-600 hover:text-gold font-semibold transition-colors flex items-center gap-2">Appleton Roof Cleaning <span aria-hidden="true">&rarr;</span></Link>
+                            <Link href="/service-areas/ashwaubenon/roof-cleaning" className="text-blue-600 hover:text-gold font-semibold transition-colors flex items-center gap-2">Ashwaubenon Roof Cleaning <span aria-hidden="true">&rarr;</span></Link>
+                            <Link href="/service-areas/menasha/roof-cleaning" className="text-blue-600 hover:text-gold font-semibold transition-colors flex items-center gap-2">Menasha Roof Cleaning <span aria-hidden="true">&rarr;</span></Link>
+                            <Link href="/service-areas/kaukauna/roof-cleaning" className="text-blue-600 hover:text-gold font-semibold transition-colors flex items-center gap-2">Kaukauna Roof Cleaning <span aria-hidden="true">&rarr;</span></Link>
+                        </div>
+                    </div>
+                </div>
+            )}
             <div className="bg-slate-50 border-t border-gray-200 relative">
                 {/* JSON-LD Structured Data Schema - Upgraded to 'Service' */}
                 <script

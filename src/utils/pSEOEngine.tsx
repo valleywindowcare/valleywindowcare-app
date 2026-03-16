@@ -84,11 +84,14 @@ const actionVerbs = [
 
 // --- GENERATION ENGINE ---
 
-const GenerateLinks = (city: string, serviceSlug: string, serviceName: string) => {
+const GenerateLinks = (city: string, serviceSlug: string, serviceName: string, isDarkBackground: boolean = false) => {
+    const linkClass = isDarkBackground
+        ? "text-white font-bold hover:text-yellow-400 transition-colors underline decoration-white/50 hover:decoration-yellow-400/50 underline-offset-2"
+        : "text-navy font-bold hover:text-gold transition-colors underline decoration-gold/30 underline-offset-2";
     return {
-        CityHub: <Link href={`/service-areas/${city}`} className="text-navy font-bold hover:text-gold transition-colors underline decoration-gold/30 underline-offset-2">{formatTitle(city)}</Link>,
-        MasterService: <Link href={`/services/${serviceSlug}`} className="text-navy font-bold hover:text-gold transition-colors underline decoration-gold/30 underline-offset-2">{serviceName}</Link>,
-        ContactForm: <Link href="/#quote-form" className="text-navy font-bold hover:text-gold transition-colors underline decoration-gold/30 underline-offset-2">contact us</Link>
+        CityHub: <Link href={`/service-areas/${city}`} className={linkClass}>{formatTitle(city)}</Link>,
+        MasterService: <Link href={`/services/${serviceSlug}`} className={linkClass}>{serviceName}</Link>,
+        ContactForm: <Link href="/#quote-form" className={linkClass}>contact us</Link>
     };
 };
 
@@ -99,10 +102,10 @@ const formatTitle = (slug: string) => {
 /**
  * Dynamically assembles a rich HTML paragraph utilizing different structural components (Context, Problem, Solution, Links).
  */
-export const generatePseoDescription = (citySlug: string, serviceSlug: string, serviceName: string): ReactNode => {
+export const generatePseoDescription = (citySlug: string, serviceSlug: string, serviceName: string, isDarkBackground: boolean = false): ReactNode => {
     const seed = getStringHash(citySlug + serviceSlug);
     const category = categorizeService(serviceSlug);
-    const links = GenerateLinks(citySlug, serviceSlug, serviceName);
+    const links = GenerateLinks(citySlug, serviceSlug, serviceName, isDarkBackground);
 
     // Select assets based on category and seed
     const context = geoModifiers[category][seed % geoModifiers[category].length];

@@ -407,8 +407,8 @@ export const seoContentMap: Record<string, SEOContent> = {
     },
     "permanent-led-lighting": {
         problemStatement: [
-            <span key="1">Your exterior property accumulates biological and environmental contaminants over time.</span>,
-            <span key="2">Professional exterior restoration eliminates these hazards without property damage.</span>,
+            <span key="1">Hanging traditional holiday lights is a dangerous, time-consuming annual chore that exposes you to unnecessary liability and severe weather risks.</span>,
+            <span key="2">Our permanent architectural LED lighting systems provide a stunning, maintenance-free solution seamlessly integrated directly into your fascias and soffits.</span>,
             <span key="3">Wisconsin's severe seasons demand robust property protection protocols. <Link href="/service-areas/green-bay" className="text-gold font-bold hover:underline">Green Bay</Link> and Appleton.</span>
         ],
         processOverview: "Our highly specialized commercial permanent led lighting methodology guarantees deep restoration and absolute property protection.",
@@ -453,8 +453,8 @@ export const seoContentMap: Record<string, SEOContent> = {
     },
     "commercial-pressure-washing": {
         problemStatement: [
-            <span key="1">Your exterior property accumulates biological and environmental contaminants over time.</span>,
-            <span key="2">Professional exterior restoration eliminates these hazards without property damage.</span>,
+            <span key="1">High-traffic commercial properties suffer from extreme buildup of motor oil, chewing gum, carbon exhaust, and unseemly biological growth.</span>,
+            <span key="2">Industrial-grade hot water cleaning and specialized degreasers rapidly obliterate this buildup, protecting your brand's pristine reputation.</span>,
             <span key="3">Wisconsin's severe seasons demand robust property protection protocols. <Link href="/service-areas/green-bay" className="text-gold font-bold hover:underline">Green Bay</Link> and Appleton.</span>
         ],
         processOverview: "Our highly specialized commercial pressure washing methodology guarantees deep restoration and absolute property protection.",
@@ -683,8 +683,8 @@ export const seoContentMap: Record<string, SEOContent> = {
     },
     "paver-patio-restorations": {
         problemStatement: [
-            <span key="1">Your exterior property accumulates biological and environmental contaminants over time.</span>,
-            <span key="2">Professional exterior restoration eliminates these hazards without property damage.</span>,
+            <span key="1">Unsealed paver joints invite aggressive weed growth and water infiltration that destabilizes your patio's entire foundation, causing severe sinking and shifting.</span>,
+            <span key="2">A deep restorative pressure wash combined with robust structural joint stabilization lock sand systems perfectly protects your hardscaping from catastrophic failure.</span>,
             <span key="3">Wisconsin's severe seasons demand robust property protection protocols. <Link href="/service-areas/green-bay" className="text-gold font-bold hover:underline">Green Bay</Link> and Appleton.</span>
         ],
         processOverview: "Our highly specialized paver patio restorations methodology guarantees deep restoration and absolute property protection.",

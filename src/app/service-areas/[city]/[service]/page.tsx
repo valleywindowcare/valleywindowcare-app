@@ -205,7 +205,7 @@ export default async function CityServicePage({ params }: PageProps) {
                         <span className="text-2xl md:text-3xl mt-2 block">{cityName}</span>
                     </h1>
                     <div className="text-lg md:text-xl text-gray-100 font-semibold leading-relaxed drop-shadow-md pb-8">
-                        {generatePseoDescription(city, service, formattedName)}
+                        {generatePseoDescription(city, service, formattedName, true)}
                     </div>
                 </div>
 
@@ -257,9 +257,13 @@ export default async function CityServicePage({ params }: PageProps) {
 
             {/* Injects 1,000+ words of Semantic Core Content globally per service */}
             <div className="container mx-auto px-4 py-8 mb-12">
+                {areaContent?.content && (
+                    <div className="prose prose-lg md:prose-xl text-gray-800 max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-sm mb-12" dangerouslySetInnerHTML={{ __html: areaContent.content }} />
+                )}
                 <SEOAuthorityEngine
                     serviceSlug={service}
                     serviceName={formattedName}
+                    cityName={cityName}
                 />
             </div>
 

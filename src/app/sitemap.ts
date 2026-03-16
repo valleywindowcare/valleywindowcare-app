@@ -5,10 +5,10 @@ import serviceData from '@/data/serviceAreasContent.json';
 // Known services available at /services/[service]
 const validServices = [
     "roof-cleaning", "house-washing", "gutter-cleaning", "concrete-cleaning",
-    "window-cleaning", "christmas-lighting", "pressure-washing", 
+    "window-cleaning", "christmas-lighting", "pressure-washing",
     "residential-permanent-led-lighting", "fence-cleaning", "deck-cleaning",
     "oxidation-removal", "soft-wash", "driveway-cleaning",
-    
+
     // Commercial
     "building-washing", "commercial-concrete-cleaning", "commercial-window-cleaning",
     "commercial-roof-cleaning", "parking-lot-and-garage-cleaning",
@@ -21,20 +21,28 @@ const validServices = [
 ];
 
 // Expanded city service variations based on generated data
+interface ServiceContent {
+    type: string;
+    citySlug: string;
+    serviceSlug: string;
+    [key: string]: any;
+}
+const typedServiceData = serviceData as unknown as ServiceContent[];
+
 const getCityServiceRoutes = () => {
     // In a full implementation we'd read this dynamically or map it correctly
     // We'll map the known base city hubs first
-    const hubs = serviceData.filter((d) => d.type === 'hub').map(d => d.citySlug);
-    
+    const hubs = typedServiceData.filter((d) => d.type === 'hub').map(d => d.citySlug);
+
     // Known explicit city-service routes based on the CSV and common variations
     // This provides a highly accurate subset. For a full matrix, we'd need to parse all folders.
-    const specificRoutes = serviceData.filter(d => d.type === 'service').map(d => `/service-areas/${d.citySlug}/${d.serviceSlug}`);
-    
+    const specificRoutes = typedServiceData.filter(d => d.type === 'service').map(d => `/service-areas/${d.citySlug}/${d.serviceSlug}`);
+
     return { hubs, specificRoutes };
 };
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = 'https://valleywindowcare.com';
+    const baseUrl = 'https://www.valleywindowcare.com';
 
     // Static core routes
     const staticRoutes = [
@@ -75,7 +83,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // Dynamic City Hubs & Specific City Services
     const { hubs, specificRoutes } = getCityServiceRoutes();
-    
+
     const cityHubRoutes = hubs.map((city) => ({
         url: `${baseUrl}/service-areas/${city}`,
         lastModified: new Date(),
@@ -83,12 +91,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 0.9,
     }));
 
-    const cityServiceRoutes = specificRoutes.map((route) => ({
-        url: `${baseUrl}${route}`,
-        lastModified: new Date(),
-        changeFrequency: 'weekly' as const,
-        priority: 0.8,
-    }));
+    const targetCities = ['green-bay', 'neenah', 'appleton', 'ashwaubenon', 'menasha', 'kaukauna'];
+    const targetServices = ['roof-cleaning', 'permanent-led-lighting', 'paver-patio-restorations', 'commercial-pressure-washing'];
+
+    const cityServiceRoutes = specificRoutes.map((route) => {
+        const isTarget = targetCities.some(city => route.includes(`/${city}/`)) && targetServices.some(service => route.endsWith(`/${service}`));
+        return {
+            url: `${baseUrl}${route}`,
+            lastModified: isTarget ? new Date('2026-03-16') : new Date(),
+            changeFrequency: 'weekly' as const,
+            priority: 0.8,
+        };
+    });
 
     return [
         ...staticRoutes,
