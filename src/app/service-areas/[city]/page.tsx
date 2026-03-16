@@ -96,7 +96,7 @@ export default async function CityHubPage({ params }: PageProps) {
     const localContext = cityContextData[content.citySlug as keyof typeof cityContextData];
 
     // Generate a deterministic index (0-2) based on the city slug for the narrative variations
-    const seedHash = content.citySlug.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
+    const seedHash = content.citySlug.split('').reduce((acc: number, char: string) => acc + char.charCodeAt(0), 0);
     const variationIndex = seedHash % 3;
 
     // Fallback safely to generated content if somehow a city is missed in the massive matrix
