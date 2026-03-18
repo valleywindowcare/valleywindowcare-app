@@ -96,7 +96,7 @@ export default function ServiceGrid({ city, gridItems }: ServiceGridProps) {
                                 href={href}
                                 className="group relative overflow-hidden bg-navy border-2 border-transparent hover:border-gold rounded-2xl hover:shadow-xl transition-all duration-300 flex flex-col h-64"
                             >
-                                <Image src={serviceContentMap[service.serviceSlug]?.image || "/images/portfolio/house-washing.webp"} alt={service.serviceName} fill className="object-cover group-hover:scale-105 transition-transform duration-500 z-0" />
+                                <Image src={serviceContentMap[service.serviceSlug]?.image || "/images/portfolio/house-washing.webp"} alt={service.serviceName} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover group-hover:scale-105 transition-transform duration-500 z-0" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/40 to-transparent z-10 transition-opacity duration-300 group-hover:opacity-90"></div>
                                 <div className="relative z-20 flex flex-row items-end justify-between h-full p-6">
                                     <span className="font-bold text-white group-hover:text-gold transition-colors text-xl">

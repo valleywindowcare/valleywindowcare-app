@@ -37,9 +37,9 @@ export default function Header() {
                         <Image
                             src="/valley-window-care-logo-without-background.png"
                             alt="Valley Window Care and Exterior Cleaning logo - Professional exterior cleaning services in Wisconsin"
-                            fill={true}
-                            sizes="(max-width: 768px) 200px, 300px"
-                            className="object-contain object-center xl:object-left"
+                            width={250}
+                            height={92}
+                            className="object-contain object-center xl:object-left w-full h-full"
                             priority={true}
                         />
                     </div>
