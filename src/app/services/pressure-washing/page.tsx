@@ -24,7 +24,9 @@ export default function PressureWashingPage() {
                         alt="Pressure Washing"
                         fill
                         priority={true}
+                        fetchPriority="high"
                         quality={100}
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         className="object-cover"
                     />
                 </div>
@@ -88,7 +90,7 @@ export default function PressureWashingPage() {
             <div className="bg-slate-50 border-t border-gray-200 relative">
                 <VanillaMapClient />
             </div>
-            
+
             <FAQAccordion
                 faqs={faqData["pressure-washing"] || []}
             />

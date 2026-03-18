@@ -46,7 +46,7 @@ export default function PricingGuide() {
                     <div className="bg-slate-50 p-8 rounded-2xl border border-gray-200 hover:border-gold/50 transition-all shadow-sm hover:shadow-lg group">
                         <div className="flex flex-col xl:flex-row xl:items-center justify-between gap-4 mb-5 border-b border-gray-200 pb-5">
                             <h4 className="text-xl font-bold text-navy group-hover:text-gold transition-colors">Standard Gutter Cleaning</h4>
-                            <span className="text-lg font-black text-navy bg-white px-4 py-1.5 rounded-full border border-gray-200 shadow-sm whitespace-nowrap">Starting at $100</span>
+                            <span className="text-lg font-black text-navy bg-white px-4 py-1.5 rounded-full border border-gray-200 shadow-sm whitespace-nowrap">Starting at $150</span>
                         </div>
                         <p className="text-gray-600 flex items-start gap-3 text-base leading-relaxed">
                             <CheckCircle2 size={20} className="text-gold shrink-0 mt-0.5" />
@@ -58,7 +58,7 @@ export default function PricingGuide() {
                     <div className="bg-slate-50 p-8 rounded-2xl border border-gray-200 hover:border-gold/50 transition-all shadow-sm hover:shadow-lg group">
                         <div className="flex flex-col xl:flex-row xl:items-center justify-between gap-4 mb-5 border-b border-gray-200 pb-5">
                             <h4 className="text-xl font-bold text-navy group-hover:text-gold transition-colors">House/Siding Washing</h4>
-                            <span className="text-lg font-black text-navy bg-white px-4 py-1.5 rounded-full border border-gray-200 shadow-sm whitespace-nowrap">Starting at $150</span>
+                            <span className="text-lg font-black text-navy bg-white px-4 py-1.5 rounded-full border border-gray-200 shadow-sm whitespace-nowrap">Starting at $350</span>
                         </div>
                         <p className="text-gray-600 flex items-start gap-3 text-base leading-relaxed">
                             <CheckCircle2 size={20} className="text-gold shrink-0 mt-0.5" />
@@ -70,7 +70,7 @@ export default function PricingGuide() {
                     <div className="bg-slate-50 p-8 rounded-2xl border border-gray-200 hover:border-gold/50 transition-all shadow-sm hover:shadow-lg group">
                         <div className="flex flex-col xl:flex-row xl:items-center justify-between gap-4 mb-5 border-b border-gray-200 pb-5">
                             <h4 className="text-xl font-bold text-navy group-hover:text-gold transition-colors">Full Roof Soft Wash</h4>
-                            <span className="text-lg font-black text-navy bg-white px-4 py-1.5 rounded-full border border-gray-200 shadow-sm whitespace-nowrap">Starting at $300</span>
+                            <span className="text-lg font-black text-navy bg-white px-4 py-1.5 rounded-full border border-gray-200 shadow-sm whitespace-nowrap">Starting at $500</span>
                         </div>
                         <p className="text-gray-600 flex items-start gap-3 text-base leading-relaxed">
                             <CheckCircle2 size={20} className="text-gold shrink-0 mt-0.5" />

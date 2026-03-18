@@ -13,48 +13,48 @@ export const metadata = {
 
 export default function ServicePage() {
     const jsonLd = {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "name": "Residential Soft Washing Services",
-      "provider": {
-        "@type": "LocalBusiness",
-        "name": "Valley Window Care",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Appleton",
-          "addressRegion": "WI"
-        }
-      },
-      "areaServed": ["Appleton", "Green Bay", "Northeast Wisconsin"],
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Residential Soft Washing Services Packages",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Professional Soft Wash"
-            },
-            "priceSpecification": {
-              "@type": "UnitPriceSpecification",
-              "priceCurrency": "USD",
-              "minPrice": "299.00"
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Residential Soft Washing Services",
+        "provider": {
+            "@type": "LocalBusiness",
+            "name": "Valley Window Care",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Appleton",
+                "addressRegion": "WI"
             }
-          }
-        ]
-      }
+        },
+        "areaServed": ["Appleton", "Green Bay", "Northeast Wisconsin"],
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Residential Soft Washing Services Packages",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Professional Soft Wash"
+                    },
+                    "priceSpecification": {
+                        "@type": "UnitPriceSpecification",
+                        "priceCurrency": "USD",
+                        "minPrice": "299.00"
+                    }
+                }
+            ]
+        }
     };
 
     return (
         <main className="w-full overflow-hidden bg-slate-50">
             <script
-              type="application/ld+json"
-              dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
             />
-            
+
             {/* HERO MODULE */}
-            <Hero 
+            <Hero
                 h1={
                     <>
                         <span className="capitalize">Professional Soft Wash</span> <br />
@@ -62,13 +62,13 @@ export default function ServicePage() {
                     </>
                 }
                 description="Professional low-pressure exterior siding cleaning. We safely eradicate algae, mildew, and dirt without high pressure."
-                bgImage="/images/portfolio/soft-washing.webp"  
+                bgImage="/images/portfolio/soft-washing.webp"
             />
 
             {/* GOLD STANDARD ARCHITECTURE CONTAINER */}
             <div className="max-w-4xl mx-auto bg-white text-navy rounded-2xl shadow-sm p-4 sm:p-8 mt-12 mb-20 relative z-10">
                 <article className="prose prose-lg md:prose-xl text-gray-600 max-w-none mb-16">
-                    
+
                     {/* ENTITY CAPSULE */}
                     <section className="mb-16 mt-8">
                         <div className="text-lg leading-relaxed mb-8 font-bold text-navy">
@@ -84,7 +84,7 @@ export default function ServicePage() {
                                 Our Execution Methodology
                             </h2>
                         </div>
-                        
+
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 not-prose">
                             {/* Step 1 */}
                             <div className="bg-white p-8 rounded-2xl shadow-soft border border-gray-100 relative overflow-hidden group hover:border-gold/30 transition-colors">
@@ -97,7 +97,7 @@ export default function ServicePage() {
                                     We tape off electrical outlets securely. We wet down the surrounding landscaping. We protect your delicate foundation plants instantly.
                                 </p>
                             </div>
-                            
+
                             {/* Step 2 */}
                             <div className="bg-white p-8 rounded-2xl shadow-soft border border-gray-100 relative overflow-hidden group hover:border-gold/30 transition-colors">
                                 <div className="text-6xl font-black text-gray-50 absolute -top-4 -right-2 z-0 group-hover:text-gold/5 transition-colors">02</div>
@@ -129,7 +129,7 @@ export default function ServicePage() {
                         <h2 className="text-3xl md:text-4xl font-extrabold mb-6 text-navy border-b border-gray-100 pb-6">
                             Target Surfaces
                         </h2>
-                        
+
                         <div className="space-y-6 mt-10">
                             {/* Type 1 */}
                             <div className="flex gap-4 items-start">
@@ -139,7 +139,7 @@ export default function ServicePage() {
                                     <p className="text-gray-600 leading-relaxed">We clean delicate residential plastic siding. High pressure cracks cold vinyl material. We use chemical cleaning exclusively.</p>
                                 </div>
                             </div>
-                            
+
                             {/* Type 2 */}
                             <div className="flex gap-4 items-start">
                                 <CheckCircle className="text-gold shrink-0 mt-1" size={24} />
@@ -166,10 +166,10 @@ export default function ServicePage() {
                             Pricing Expectations
                         </h2>
                         <div className="text-xl text-gray-200 leading-relaxed">
-                            Residential soft washing starts at $299. The final quote depends on total square footage. Three-story ladder access increases the overall price. We provide exact quotes upfront. Ready to protect your property? <Link href="/contact" className="text-gold font-bold hover:text-white transition-colors underline">Contact our team for a free, no-obligation quote today.</Link>
+                            Residential soft washing starts at $500. The final quote depends on total square footage. Three-story ladder access increases the overall price. We provide exact quotes upfront. Ready to protect your property? <Link href="/contact" className="text-gold font-bold hover:text-white transition-colors underline">Contact our team for a free, no-obligation quote today.</Link>
                         </div>
                     </section>
-                    
+
                     {/* LOCAL SEO & CROSS-LINKING */}
                     <section className="mb-16">
                         <div className="flex items-center gap-3 mb-6">
@@ -179,18 +179,18 @@ export default function ServicePage() {
                             </h2>
                         </div>
                         <div className="space-y-6 text-lg bg-slate-50 p-8 rounded-2xl border border-slate-100">
-                                <p className="leading-relaxed">
+                            <p className="leading-relaxed">
                                 We dispatch commercial route vehicles daily through <Link href="/service-areas/green-bay" className="text-gold font-bold hover:underline">Green Bay</Link> and <Link href="/service-areas/appleton" className="text-gold font-bold hover:underline">Appleton</Link>. Maintaining clean exterior walls permanently boosts physical property value.
                             </p>
                             <p className="leading-relaxed">
-                                Need your roof streaks removed too? We offer professional, high-volume <Link href="/services/roof-cleaning" className="text-gold font-bold hover:underline">Roof Cleaning</Link> alongside our soft wash operations. 
+                                Need your roof streaks removed too? We offer professional, high-volume <Link href="/services/roof-cleaning" className="text-gold font-bold hover:underline">Roof Cleaning</Link> alongside our soft wash operations.
                             </p>
                             <div className="mt-8">
                                 <Link href="/contact" className="inline-flex items-center gap-2 bg-gold text-navy px-8 py-4 rounded-xl font-bold hover:bg-navy hover:text-white transition-colors">
                                     Request Your Custom Quote <ArrowRight size={20} />
                                 </Link>
                             </div>
-                            </div>
+                        </div>
                     </section>
 
                 </article>
@@ -202,8 +202,8 @@ export default function ServicePage() {
             {/* SERVICES GRID */}
             <div className="bg-white border-t border-gray-200">
                 <div className="container mx-auto px-4 max-w-6xl py-16 text-center">
-                     <h2 className="text-3xl md:text-4xl font-extrabold text-navy mb-8 tracking-tight">Explore More Exterior Services</h2>
-                     <ServiceGrid />
+                    <h2 className="text-3xl md:text-4xl font-extrabold text-navy mb-8 tracking-tight">Explore More Exterior Services</h2>
+                    <ServiceGrid />
                 </div>
             </div>
         </main>

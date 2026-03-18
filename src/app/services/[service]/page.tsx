@@ -313,7 +313,7 @@ export default async function ServiceGenericPage({ params }: PageProps) {
                                             "name": formattedName
                                         },
                                         "priceCurrency": "USD",
-                                        "price": "149.00"
+                                        "price": service.includes('gutter') ? "150.00" : service.includes('house') || service.includes('siding') ? "350.00" : service.includes('roof') || service.includes('soft-wash') ? "500.00" : "149.00"
                                     }
                                 ]
                             }

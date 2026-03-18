@@ -30,7 +30,9 @@ export default function Hero({
                     alt="Valley Window Care Exterior Cleaning"
                     fill
                     priority={true}
+                    fetchPriority="high"
                     quality={100}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover"
                 />
             </div>
