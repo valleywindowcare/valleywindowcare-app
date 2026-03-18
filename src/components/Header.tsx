@@ -40,7 +40,6 @@ export default function Header() {
                             width={250}
                             height={92}
                             className="object-contain object-center xl:object-left w-full h-full"
-                            priority={true}
                         />
                     </div>
                 </Link>
