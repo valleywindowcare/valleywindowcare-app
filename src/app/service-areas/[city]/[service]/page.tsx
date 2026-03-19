@@ -255,7 +255,16 @@ export default async function CityServicePage({ params }: PageProps) {
             {content && (
                 <ServiceContent
                     title={`${formattedName} in ${cityName}`}
-                    description={generatePseoDescription(city, service, formattedName)}
+                    description={
+                        <>
+                            {areaContent?.description || generatePseoDescription(city, service, formattedName)}
+                            {areaContent?.localLandmarks && (
+                                <p className="mt-4 font-semibold text-navy">
+                                    Proudly serving local landmarks such as: {areaContent.localLandmarks}.
+                                </p>
+                            )}
+                        </>
+                    }
                     benefits={generatePseoBenefits(city, service, formattedName)}
                     process={generatePseoProcess(city, service, formattedName)}
                     image={bodyImageToUse}
