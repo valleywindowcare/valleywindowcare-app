@@ -31,6 +31,7 @@ import VanillaMapClient from '@/components/VanillaMapClient';
 import serviceData from '@/data/serviceAreasContent.json';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
+import { isRedirectDestination } from '@/utils/redirectProtection';
 
 import { cityContextData } from '@/data/cityData';
 
@@ -52,9 +53,15 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         return { title: 'Service Area Not Found' };
     }
 
+    const distantCities = ['wausau', 'stevens-point', 'wisconsin-rapids', 'marshfield', 'rhinelander', 'marinette', 'peshtigo', 'oconto', 'shawano', 'clintonville', 'new-london', 'waupaca', 'wautoma', 'berlin', 'ripon', 'markesan', 'green-lake', 'princeton', 'montello', 'westfield', 'adams', 'friendship', 'mauston', 'new-lisbon', 'necedah', 'tomah', 'sparta', 'black-river-falls', 'neillsville', 'abbotsford', 'medford', 'merrill', 'tomahawk', 'minocqua', 'woodruff', 'eagle-river', 'three-lakes', 'crandon', 'laona', 'wabeno', 'crivitz', 'wausaukee', 'pembine', 'niagara', 'florence', 'iron-mountain', 'kingsford', 'norway', 'escanaba', 'gladstone', 'manistique', 'munising', 'marquette', 'negaunee', 'ishpeming', 'gwinn', 'ironwood', 'hurley', 'mercer', 'manitowish-waters', 'boulder-junction', 'presque-isle', 'land-o-lakes'];
+
+    const urlPath = `/service-areas/${city}`;
+    const shouldNoindex = distantCities.includes(city) && !isRedirectDestination(urlPath);
+
     return {
         title: content.title,
         description: `Top-rated exterior cleaning services dedicated to properties in ${content.city}, Wisconsin.`,
+        robots: shouldNoindex ? { index: false, follow: true } : { index: true, follow: true },
         alternates: {
             canonical: `https://valleywindowcare.com/service-areas/${content.citySlug}`
         }

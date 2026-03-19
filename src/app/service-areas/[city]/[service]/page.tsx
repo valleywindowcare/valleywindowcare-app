@@ -34,6 +34,7 @@ import HeroForm from '@/components/HeroForm';
 import Image from 'next/image';
 import serviceData from '@/data/serviceAreasContent.json';
 import { generatePseoDescription, generatePseoBenefits, generatePseoProcess } from '@/utils/pSEOEngine';
+import { isRedirectDestination } from '@/utils/redirectProtection';
 
 // Known services mapped from NW Softwash breakdown
 const validServices = [
@@ -152,9 +153,15 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
     const seoImage = categoryFallbacks[service] || "/images/portfolio/house-washing.webp";
 
+    const distantCities = ['wausau', 'stevens-point', 'wisconsin-rapids', 'marshfield', 'rhinelander', 'marinette', 'peshtigo', 'oconto', 'shawano', 'clintonville', 'new-london', 'waupaca', 'wautoma', 'berlin', 'ripon', 'markesan', 'green-lake', 'princeton', 'montello', 'westfield', 'adams', 'friendship', 'mauston', 'new-lisbon', 'necedah', 'tomah', 'sparta', 'black-river-falls', 'neillsville', 'abbotsford', 'medford', 'merrill', 'tomahawk', 'minocqua', 'woodruff', 'eagle-river', 'three-lakes', 'crandon', 'laona', 'wabeno', 'crivitz', 'wausaukee', 'pembine', 'niagara', 'florence', 'iron-mountain', 'kingsford', 'norway', 'escanaba', 'gladstone', 'manistique', 'munising', 'marquette', 'negaunee', 'ishpeming', 'gwinn', 'ironwood', 'hurley', 'mercer', 'manitowish-waters', 'boulder-junction', 'presque-isle', 'land-o-lakes'];
+
+    const urlPath = `/service-areas/${city}/${service}`;
+    const shouldNoindex = distantCities.includes(city) && !isRedirectDestination(urlPath);
+
     return {
         title: seoTitle,
         description: seoDescription,
+        robots: shouldNoindex ? { index: false, follow: true } : { index: true, follow: true },
         alternates: {
             canonical: `https://valleywindowcare.com/service-areas/${city}/${service}`
         },

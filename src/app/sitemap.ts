@@ -104,11 +104,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
         };
     });
 
-    return [
+    const allOtherRoutes = [
         ...staticRoutes,
         ...serviceRoutes,
         ...cityHubRoutes,
         ...cityServiceRoutes,
         ...blogRoutes,
+    ];
+
+    const powerHubUrls = allOtherRoutes.filter(route =>
+        route.url.includes('/green-bay') || route.url.includes('/appleton')
+    );
+    const standardUrls = allOtherRoutes.filter(route =>
+        !route.url.includes('/green-bay') && !route.url.includes('/appleton')
+    );
+
+    return [
+        ...powerHubUrls,
+        ...standardUrls
     ];
 }

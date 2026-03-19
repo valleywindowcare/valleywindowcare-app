@@ -220,12 +220,7 @@ export default function Footer() {
                     <h3 className="text-navy font-bold uppercase tracking-widest text-sm mb-6">Proudly Serving Northeast Wisconsin</h3>
                     <div className="flex flex-wrap justify-center items-center gap-x-4 gap-y-3 text-sm text-gray-600 font-medium">
                         {[
-                            "Green Bay", "Appleton", "De Pere", "Neenah", "Menasha",
-                            "Kaukauna", "Oshkosh", "Howard", "Suamico", "Allouez",
-                            "Ashwaubenon", "Bellevue", "Door County", "Fish Creek",
-                            "Sturgeon Bay", "Shawano", "Manitowoc", "Ledgeview",
-                            "Hobart", "Egg Harbor", "Sister Bay", "Greenville",
-                            "Sherwood", "Combined Locks"
+                            "Green Bay", "Appleton", "De Pere", "Neenah", "Howard"
                         ].map((city, index, array) => (
                             <div key={city} className="flex items-center gap-x-4">
                                 <Link
