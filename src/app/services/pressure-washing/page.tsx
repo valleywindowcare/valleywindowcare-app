@@ -37,9 +37,14 @@ export default function PressureWashingPage() {
                             Professional <span className="text-gold">Pressure Washing</span><br />
                             <span className="text-2xl md:text-3xl mt-4 block">Green Bay & Northeast Wisconsin</span>
                         </h1>
-                        <p className="text-lg md:text-xl text-gray-100 mb-8 font-semibold leading-relaxed drop-shadow-md">
+                        <p className="text-lg md:text-xl text-gray-100 mb-6 font-semibold leading-relaxed drop-shadow-md">
                             Valley Window Care and Exterior Cleaning provides premium pressure washing services to enhance your property's value.
                         </p>
+                        <div className="bg-white/10 p-6 rounded-xl border border-white/20 backdrop-blur-sm text-left mb-8 shadow-lg">
+                            <p className="text-base md:text-lg text-gray-100 leading-relaxed font-medium">
+                                Valley Window Care is a fully licensed and insured exterior cleaning company based in De Pere, Wisconsin. We provide residential soft washing, commercial pressure washing, and roof cleaning services across Green Bay, Appleton, and the Fox Valley. Our proprietary low-pressure system effectively removes Gloeocapsa magma (roof algae), rust, and winter road salt without damaging siding or concrete infrastructure.
+                            </p>
+                        </div>
                     </div>
                     {/* Hero Form Stack */}
                     <div className="!relative !z-10 !w-full !max-w-xl !mx-auto !bg-white !rounded-xl !shadow-2xl !overflow-hidden flex flex-col text-navy-dark min-h-[500px] sm:min-h-[480px]">
