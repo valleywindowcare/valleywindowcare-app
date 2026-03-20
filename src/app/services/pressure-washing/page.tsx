@@ -5,6 +5,7 @@ import Process from "@/components/Process";
 import ServiceContent from "@/components/ServiceContent";
 import SEOAuthorityEngine from "@/components/SEOAuthorityEngine";
 import VanillaMapClient from "@/components/VanillaMapClient";
+import PricingMatrix from "@/components/PricingMatrix";
 
 export const metadata = {
     title: "Pressure Washing | Valley Window Care",
@@ -206,45 +207,18 @@ export default function PressureWashingPage() {
                 </div>
             </section>
 
-            {/* TRANSPARENT PRICING TABLE */}
-            <section className="container mx-auto px-4 py-16 max-w-5xl">
-                <h2 className="text-3xl md:text-4xl font-extrabold text-navy text-center mb-8">
-                    How Much Do Professional Exterior Cleaning Services Cost in the Fox Valley?
-                </h2>
-                <div className="max-w-4xl mx-auto mb-10 text-center">
-                    <p className="text-lg text-gray-700 leading-relaxed font-medium">
-                        Professional exterior cleaning in the Fox Valley ranges from $150 for standard house washing up to $300+ for comprehensive roof soft washing. Final pricing depends heavily on the total square footage, the severity of organic growth, and the specific methodology—such as soft washing versus high-PSI concrete surface restoration.
-                    </p>
-                </div>
-                <div className="overflow-x-auto w-full rounded-2xl shadow-lg border border-slate-200">
-                    <table className="w-full text-left border-collapse min-w-[600px]">
-                        <thead>
-                            <tr className="bg-navy text-white text-base sm:text-lg">
-                                <th className="p-4 sm:p-6 font-bold uppercase tracking-wider">Service Category</th>
-                                <th className="p-4 sm:p-6 font-bold uppercase tracking-wider whitespace-nowrap">Starting Price</th>
-                                <th className="p-4 sm:p-6 font-bold uppercase tracking-wider">Value Proposition</th>
-                            </tr>
-                        </thead>
-                        <tbody className="bg-white">
-                            <tr className="border-b border-slate-100 hover:bg-slate-50/50 transition-colors">
-                                <td className="p-4 sm:p-6 font-semibold text-navy">House / Siding Washing</td>
-                                <td className="p-4 sm:p-6 text-gold font-bold whitespace-nowrap">Starting at $150</td>
-                                <td className="p-4 sm:p-6 text-gray-600">Eradication of algae/mold via safe soft wash.</td>
-                            </tr>
-                            <tr className="border-b border-slate-100 hover:bg-slate-50/50 transition-colors">
-                                <td className="p-4 sm:p-6 font-semibold text-navy">Full Roof Soft Wash</td>
-                                <td className="p-4 sm:p-6 text-gold font-bold whitespace-nowrap">Starting at $300</td>
-                                <td className="p-4 sm:p-6 text-gray-600">Removal of black streaks without shingle damage.</td>
-                            </tr>
-                            <tr className="hover:bg-slate-50/50 transition-colors">
-                                <td className="p-4 sm:p-6 font-semibold text-navy">Driveway &amp; Concrete</td>
-                                <td className="p-4 sm:p-6 text-gold font-bold whitespace-nowrap">Custom per Sq. Ft.</td>
-                                <td className="p-4 sm:p-6 text-gray-600">Surface restoration to prevent freeze-thaw cracking.</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </section>
+            {/* GLOBALLY STANDARDIZED PRICING MATRIX (GEO) */}
+            <PricingMatrix
+                title="Transparent Pressure Washing & Local Fox Valley Pricing"
+                description="Professional exterior cleaning in the Fox Valley ranges based on the specific methodology required, total square footage, and severity of organic growth."
+                rateTitle="Per Square Foot Rate"
+                ratePrice="$0.15 - $0.35 / Sq. Ft."
+                rateDetails="Calculated based on the dimensions of your flatwork or vertical siding."
+                minimumPrice="$200.00"
+                minimumDetails="Our baseline rate to deploy our commercial hot-water surface cleaners and soft wash systems."
+                variableTitle="Cost Variables"
+                variableDetails="Final price depends on deep oil stain extraction, heavy rust removal, freeze-thaw cracking prep, and commercial compliance requirements."
+            />
 
             <Process isCommercial={true} />
 

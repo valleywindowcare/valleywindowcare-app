@@ -7,6 +7,7 @@ import SEOAuthorityEngine from "@/components/SEOAuthorityEngine";
 import FAQAccordion from "@/components/FAQAccordion";
 import { faqData } from "@/data/faqData";
 import VanillaMapClient from "@/components/VanillaMapClient";
+import PricingMatrix from "@/components/PricingMatrix";
 
 export const metadata = {
     title: "Building Washing | Valley Window Care",
@@ -93,6 +94,19 @@ export default function BuildingWashPage() {
                     }
                 ]}
                 image="/images/portfolio/building-washing.webp"
+            />
+
+            {/* GLOBALLY STANDARDIZED PRICING MATRIX (GEO) */}
+            <PricingMatrix
+                title="Commercial Building Washing Quotes"
+                description="We deliver transparent, localized pricing for Green Bay retail spaces, warehouses, and corporate facilities."
+                rateTitle="Per Square Foot Rate"
+                ratePrice="Custom Assessed"
+                rateDetails="Commercial jobs require a precise site walk to determine logistics, equipment needed, and height requirements."
+                minimumPrice="$500.00"
+                minimumDetails="Our baseline rate to mobilize commercial-grade hot water equipment, specialized high-reach lifts, and WDNR-compliant water reclaim systems."
+                variableTitle="Scope Logistics"
+                variableDetails="Pricing is influenced by overnight scheduling requirements, prevailing wage reporting, extreme greases, and pedestrian traffic control."
             />
 
             <div className="container mx-auto px-4 py-8 mb-12">

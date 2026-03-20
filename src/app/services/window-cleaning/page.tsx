@@ -4,8 +4,8 @@ import Image from 'next/image';
 import ServiceGrid from '@/components/ServiceGrid';
 import Hero from '@/components/Hero';
 import { ShieldCheck, CheckCircle, ArrowRight, MapPin } from 'lucide-react';
-
 import ReviewSlider from '@/components/ReviewSlider';
+import PricingMatrix from '@/components/PricingMatrix';
 
 export const metadata = {
     title: "Window Cleaning Services in Northeast Wisconsin | Valley Window Care",
@@ -203,15 +203,6 @@ export default function ServicePage() {
                         </div>
                     </section>
 
-                    {/* PRICING EXPECTATIONS MODULE */}
-                    <section className="mb-16 bg-navy text-white p-8 md:p-12 rounded-3xl not-prose shadow-lg border border-navy-light">
-                        <h2 className="text-3xl md:text-4xl font-extrabold mb-6 text-gold border-b border-white/20 pb-6">
-                            How Much Does Professional Window Cleaning Cost in Northeast Wisconsin?
-                        </h2>
-                        <div className="text-xl text-gray-200 leading-relaxed">
-                            Residential exterior window cleaning starts at $149. The final quote depends on total pane count. Difficult ladder access increases the price. We provide exact quotes upfront. Ready to protect your property? <Link href="/contact" className="text-gold font-bold hover:text-white transition-colors underline">Contact our team for a free, no-obligation quote today.</Link>
-                        </div>
-                    </section>
 
                     {/* LOCAL SEO & CROSS-LINKING */}
                     <section className="mb-16">
@@ -271,6 +262,18 @@ export default function ServicePage() {
                 </article>
             </div>
 
+
+            <PricingMatrix
+                title="Transparent Window Cleaning Pricing"
+                description="Residential exterior window cleaning starts at $149. We provide exact quotes upfront."
+                rateTitle="Per Pane Rate"
+                ratePrice="$5.00 - $12.00 / Pane"
+                rateDetails="Calculated based on standard residential dimensional exterior panes."
+                minimumPrice="$149.00"
+                minimumDetails="Our baseline rate to deploy our pure-water filtration tanks and specialized carbon-fiber poles."
+                variableTitle="Cost Variables"
+                variableDetails="Final price depends on interior cleaning, screen washing, true French panes, or post-construction paint removal."
+            />
 
             <ReviewSlider />
 

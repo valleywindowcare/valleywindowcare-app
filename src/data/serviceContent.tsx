@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-export const serviceContentMap: Record<string, { description: React.ReactNode, benefits: (string | React.ReactNode)[], process: (string | React.ReactNode)[], protectionProtocols?: { title: string, description: string }[], image?: string, faqs?: { question: string, answer: string }[] }> = {
+export const serviceContentMap: Record<string, { description: React.ReactNode, benefits: (string | React.ReactNode)[], process: (string | React.ReactNode)[], protectionProtocols?: { title: string, description: string }[], pricing?: { title: string, description: string, rateTitle: string, ratePrice: string, rateDetails: string, minimumPrice: string, minimumDetails: string, variableTitle: string, variableDetails: string }, image?: string, faqs?: { question: string, answer: string }[] }> = {
     "roof-cleaning": {
         description: (
             <section className="eeat-service-block">
@@ -32,6 +32,17 @@ export const serviceContentMap: Record<string, { description: React.ReactNode, b
                 description: "We never blast your shingles. We apply highly exact, safe soft-wash algaecides from the safety of the ladder or ground to eliminate Gloeocapsa Magma without voiding your warranty."
             }
         ],
+        pricing: {
+            title: "Transparent Roof Soft Washing Pricing",
+            description: "Every roof is unique, but we believe in 100% transparent pricing. Our quotes are calculated based on exact square footage and architectural complexity.",
+            rateTitle: "Per Square Foot Rate",
+            ratePrice: "$0.35 - $0.50 / Sq. Ft.",
+            rateDetails: "Calculated based on the exact dimensions of your roof.",
+            minimumPrice: "$500.00",
+            minimumDetails: "Our baseline rate to deploy our specialized soft washing equipment and trained technicians.",
+            variableTitle: "Cost Variables",
+            variableDetails: "Final price depends on roof steepness (pitch), total size, location logistics, and severity of biological growth (moss/algae)."
+        },
         image: "/images/portfolio/roof-cleaning.webp",
         faqs: [
           {
@@ -78,6 +89,17 @@ export const serviceContentMap: Record<string, { description: React.ReactNode, b
                 description: "Before a single drop of water is sprayed, we meticulously cover, tape, and isolate all exterior electrical outlets, Ring doorbells, and sensitive light fixtures from water intrusion."
             }
         ],
+        pricing: {
+            title: "Transparent House Washing Pricing",
+            description: "House washing quotes are built on total square footage, height of the structure, and current condition of the siding.",
+            rateTitle: "Per Square Foot Rate",
+            ratePrice: "$0.15 - $0.25 / Sq. Ft.",
+            rateDetails: "Calculated based on the total exterior dimensions of your home.",
+            minimumPrice: "$250.00",
+            minimumDetails: "Our baseline rate to deploy our soft washing setup and trained technicians to your property.",
+            variableTitle: "Cost Variables",
+            variableDetails: "Final price depends on total stories, heavy oxidation removal, rust stains, or difficult architectural access."
+        },
         image: "/images/portfolio/building-washing-services-1.png",
         faqs: [
           {
@@ -124,6 +146,17 @@ export const serviceContentMap: Record<string, { description: React.ReactNode, b
                 description: "All pulled debris, sludge, and heavy organic matter is carefully bagged and completely removed from your property. We never fling gutter debris down into your landscaping or walkways."
             }
         ],
+        pricing: {
+            title: "Transparent Gutter Cleaning Pricing",
+            description: "Gutter cleaning quotes are strictly determined by linear footage, height of gutters, and presence of guards.",
+            rateTitle: "Per Linear Foot Rate",
+            ratePrice: "$1.00 - $2.50 / Ln. Ft.",
+            rateDetails: "Calculated based on the exact linear length of your gutter system.",
+            minimumPrice: "$150.00",
+            minimumDetails: "Our baseline rate for bringing specialized ladders, standoffs, and debris removal equipment to your home.",
+            variableTitle: "Cost Variables",
+            variableDetails: "Final price depends on total stories, severely packed downspouts, underground drain flushing, or removing existing failed gutter guards."
+        },
         image: "/images/portfolio/gutter-cleaning.webp",
         faqs: [
           {
