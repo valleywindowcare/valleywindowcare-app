@@ -29,7 +29,7 @@ import FAQAccordion from "@/components/FAQAccordion";
 import { serviceContentMap } from "@/data/serviceContent";
 import VanillaMapClient from "@/components/VanillaMapClient";
 import Link from "next/link";
-import { Mail, Phone } from "lucide-react";
+import { Mail, Phone, ShieldCheck, ArrowRight } from "lucide-react";
 import HeroForm from '@/components/HeroForm';
 import Image from 'next/image';
 
@@ -259,6 +259,53 @@ export default async function ServiceGenericPage({ params }: PageProps) {
                         <p className="text-gray-700 leading-relaxed font-medium text-lg mb-0 text-left">
                             <strong>Looking for dedicated paver restoration, leveling, and polymeric sanding?</strong> We have launched a specialized division just for hardscapes! Visit our sister company, <a href="https://greenbaypavercleaning.com" target="_blank" rel="noopener" className="text-blue-600 font-bold hover:text-gold underline transition-colors">Green Bay Paver Cleaning</a>, for premium sealing and restoration across the Fox Valley.
                         </p>
+                    </div>
+                </section>
+            )}
+
+            {/* TRANSPARENT ROOF PRICING MATRIX INJECTION (GEO) */}
+            {service === 'roof-cleaning' && (
+                <section className="bg-slate-50 py-20 border-t border-gray-100 relative z-10">
+                    <div className="container mx-auto px-4 max-w-6xl">
+                        <div className="text-center mb-16">
+                            <h2 className="text-4xl lg:text-5xl font-extrabold text-navy mb-6 tracking-tight">Transparent Roof Soft Washing Pricing</h2>
+                            <p className="text-xl text-gray-600 max-w-3xl mx-auto font-medium leading-relaxed">Every roof is unique, but we believe in 100% transparent pricing. Our quotes are calculated based on exact square footage and architectural complexity.</p>
+                        </div>
+                        
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                            {/* Card 1 */}
+                            <div className="bg-white rounded-3xl p-8 lg:p-10 shadow-sm border border-gray-100 text-center relative overflow-hidden group hover:shadow-lg transition-all hover:-translate-y-2">
+                                <div className="absolute top-0 left-0 w-full h-2 bg-navy"></div>
+                                <h3 className="text-2xl font-bold text-navy-dark mb-4">Per Square Foot Rate</h3>
+                                <div className="text-4xl font-black text-gold mb-6">$0.35 - $0.50 <span className="text-lg text-gray-400 font-bold block mt-2">/ Sq. Ft.</span></div>
+                                <p className="text-gray-600 font-medium leading-relaxed">Calculated based on the exact dimensions of your roof.</p>
+                            </div>
+
+                            {/* Card 2 */}
+                            <div className="bg-navy rounded-3xl p-8 lg:p-10 shadow-2xl text-center relative overflow-hidden group transform md:-translate-y-4 border border-navy-light">
+                                <div className="absolute top-0 left-0 w-full h-2 bg-gold"></div>
+                                <div className="absolute top-0 right-0 p-6 opacity-10">
+                                    <ShieldCheck size={100} className="text-white" />
+                                </div>
+                                <h3 className="text-2xl font-bold text-white/90 mb-4 relative z-10">Project Minimum</h3>
+                                <div className="text-5xl font-black text-white mb-6 relative z-10">$500.00</div>
+                                <p className="text-gray-300 font-medium relative z-10 leading-relaxed">Our baseline rate to deploy our specialized soft washing equipment and trained technicians.</p>
+                            </div>
+
+                            {/* Card 3 */}
+                            <div className="bg-white rounded-3xl p-8 lg:p-10 shadow-sm border border-gray-100 text-center relative overflow-hidden group hover:shadow-lg transition-all hover:-translate-y-2">
+                                <div className="absolute top-0 left-0 w-full h-2 bg-navy"></div>
+                                <h3 className="text-2xl font-bold text-navy-dark mb-4">Cost Variables</h3>
+                                <div className="text-3xl font-black text-navy mb-6 tracking-tight mt-1">Custom Assessed</div>
+                                <p className="text-gray-600 font-medium leading-relaxed">Final price depends on roof steepness (pitch), total size, location logistics, and severity of biological growth (moss/algae).</p>
+                            </div>
+                        </div>
+
+                        <div className="text-center">
+                            <Link href="/contact" className="inline-flex items-center justify-center gap-3 bg-gold text-navy hover:bg-navy hover:text-white px-10 py-5 rounded-full font-extrabold shadow-xl transition-all hover:-translate-y-1 uppercase tracking-widest text-sm">
+                                Get an Exact Quote <ArrowRight size={22} />
+                            </Link>
+                        </div>
                     </div>
                 </section>
             )}
