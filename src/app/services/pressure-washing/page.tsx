@@ -14,8 +14,68 @@ export const metadata = {
 };
 
 export default function PressureWashingPage() {
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Professional Pressure Washing & Soft Washing",
+        "provider": {
+            "@type": "LocalBusiness",
+            "name": "Valley Window Care and Exterior Cleaning",
+            "telephone": "920-609-7085",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "De Pere",
+                "addressRegion": "WI",
+                "postalCode": "54115",
+                "streetAddress": "4551 Trellis Drive E-2"
+            },
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "5.0",
+                "reviewCount": "100"
+            }
+        },
+        "areaServed": [
+            { "@type": "City", "name": "Green Bay" },
+            { "@type": "City", "name": "Appleton" },
+            { "@type": "City", "name": "Neenah" },
+            { "@type": "City", "name": "De Pere" }
+        ],
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Pressure Washing Services",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Residential House Washing"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Commercial Concrete Cleaning"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Roof Soft Washing"
+                    }
+                }
+            ]
+        }
+    };
+
     return (
         <main className="min-h-screen bg-white">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
             {/* HERO SECTION WITH HARDCODED IMAGE REPAIR */}
             <section className={`!relative !w-full !min-h-screen !flex !flex-col !items-center !justify-center overflow-hidden text-white bg-navy`}>
                 <div className="absolute inset-0 z-0">
