@@ -78,6 +78,68 @@ export default function PressureWashingPage() {
                 </div>
             </section>
 
+            {/* THE SCIENCE OF CLEAN */}
+            <section className="container mx-auto px-4 py-16 max-w-6xl">
+                <h2 className="text-3xl md:text-4xl font-extrabold text-navy text-center mb-12">
+                    The Science of Clean: Soft Washing vs. Power Washing
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                        <h3 className="text-xl font-bold text-navy mb-4">Soft Washing</h3>
+                        <p className="text-gray-600 leading-relaxed font-medium">
+                            Our residential standard. We use ultra-low pressure (similar to a garden hose) combined with custom eco-friendly algaecides to kill Gloeocapsa magma (roof algae) at the root without voiding siding warranties or stripping paint.
+                        </p>
+                    </div>
+                    <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                        <h3 className="text-xl font-bold text-navy mb-4">Standard Pressure Washing</h3>
+                        <p className="text-gray-600 leading-relaxed font-medium">
+                            Utilized for durable residential flatwork like concrete driveways and brick pavers to eliminate slippery organic growth and freeze-thaw hazards.
+                        </p>
+                    </div>
+                    <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                        <h3 className="text-xl font-bold text-navy mb-4">Commercial Power Washing</h3>
+                        <p className="text-gray-600 leading-relaxed font-medium">
+                            Heated, high-PSI cleaning reserved for heavy commercial grease, dumpster pads, and industrial concrete restoration.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            {/* TRANSPARENT PRICING TABLE */}
+            <section className="container mx-auto px-4 py-16 max-w-5xl">
+                <h2 className="text-3xl md:text-4xl font-extrabold text-navy text-center mb-10">
+                    Transparent Fox Valley Pricing
+                </h2>
+                <div className="overflow-x-auto w-full rounded-2xl shadow-lg border border-slate-200">
+                    <table className="w-full text-left border-collapse min-w-[600px]">
+                        <thead>
+                            <tr className="bg-navy text-white text-base sm:text-lg">
+                                <th className="p-4 sm:p-6 font-bold uppercase tracking-wider">Service Category</th>
+                                <th className="p-4 sm:p-6 font-bold uppercase tracking-wider whitespace-nowrap">Starting Price</th>
+                                <th className="p-4 sm:p-6 font-bold uppercase tracking-wider">Value Proposition</th>
+                            </tr>
+                        </thead>
+                        <tbody className="bg-white">
+                            <tr className="border-b border-slate-100 hover:bg-slate-50/50 transition-colors">
+                                <td className="p-4 sm:p-6 font-semibold text-navy">House / Siding Washing</td>
+                                <td className="p-4 sm:p-6 text-gold font-bold whitespace-nowrap">Starting at $150</td>
+                                <td className="p-4 sm:p-6 text-gray-600">Eradication of algae/mold via safe soft wash.</td>
+                            </tr>
+                            <tr className="border-b border-slate-100 hover:bg-slate-50/50 transition-colors">
+                                <td className="p-4 sm:p-6 font-semibold text-navy">Full Roof Soft Wash</td>
+                                <td className="p-4 sm:p-6 text-gold font-bold whitespace-nowrap">Starting at $300</td>
+                                <td className="p-4 sm:p-6 text-gray-600">Removal of black streaks without shingle damage.</td>
+                            </tr>
+                            <tr className="hover:bg-slate-50/50 transition-colors">
+                                <td className="p-4 sm:p-6 font-semibold text-navy">Driveway &amp; Concrete</td>
+                                <td className="p-4 sm:p-6 text-gold font-bold whitespace-nowrap">Custom per Sq. Ft.</td>
+                                <td className="p-4 sm:p-6 text-gray-600">Surface restoration to prevent freeze-thaw cracking.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
             <Process isCommercial={true} />
 
             <ServiceContent
