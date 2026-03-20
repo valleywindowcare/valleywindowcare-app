@@ -281,8 +281,8 @@ export const serviceContentMap: Record<string, { description: React.ReactNode, b
             rateTitle: "Estimated Rate",
             ratePrice: "Custom Assessed",
             rateDetails: "Calculated based on the exact dimensions of your property.",
-            minimumPrice: "$150.00",
-            minimumDetails: "Our baseline rate to deploy specialized equipment and technicians.",
+            minimumPrice: "$2,000.00",
+            minimumDetails: "Our baseline minimum for custom-cut, professionally installed permanent architectural lighting systems.",
             variableTitle: "Cost Variables",
             variableDetails: "Final price depends on total size, location logistics, and severity of cleaning required."
         },
@@ -367,8 +367,8 @@ export const serviceContentMap: Record<string, { description: React.ReactNode, b
             rateTitle: "Estimated Rate",
             ratePrice: "Custom Assessed",
             rateDetails: "Calculated based on the exact dimensions of your property.",
-            minimumPrice: "$150.00",
-            minimumDetails: "Our baseline rate to deploy specialized equipment and technicians.",
+            minimumPrice: "$2,000.00",
+            minimumDetails: "Our baseline minimum for custom-cut, professionally installed permanent architectural lighting systems.",
             variableTitle: "Cost Variables",
             variableDetails: "Final price depends on total size, location logistics, and severity of cleaning required."
         },
@@ -797,8 +797,8 @@ export const serviceContentMap: Record<string, { description: React.ReactNode, b
             rateTitle: "Estimated Rate",
             ratePrice: "Custom Assessed",
             rateDetails: "Calculated based on the exact dimensions of your property.",
-            minimumPrice: "$1,500.00",
-            minimumDetails: "Our baseline rate to deploy specialized equipment and technicians.",
+            minimumPrice: "$2,000.00",
+            minimumDetails: "Our baseline minimum for custom-cut, professionally installed permanent architectural lighting systems.",
             variableTitle: "Cost Variables",
             variableDetails: "Final price depends on total size, location logistics, and severity of cleaning required."
         },
