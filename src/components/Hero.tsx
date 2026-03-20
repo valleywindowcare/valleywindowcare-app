@@ -7,12 +7,14 @@ interface HeroProps {
     h1?: React.ReactNode;
     description?: string;
     bgImage?: string;
+    bgImageAlt?: string;
     cityName?: string;
     serviceName?: string;
 }
 
 export default function Hero({
     bgImage = "/images/portfolio/house-wash-before-after.webp",
+    bgImageAlt = "Valley Window Care Exterior Cleaning",
     h1,
     description,
     cityName,
@@ -27,7 +29,7 @@ export default function Hero({
             <div className="absolute inset-0 z-0">
                 <Image
                     src={bgImage}
-                    alt="Valley Window Care Exterior Cleaning"
+                    alt={bgImageAlt}
                     fill
                     priority={true}
                     fetchPriority="high"
