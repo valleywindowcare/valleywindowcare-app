@@ -122,11 +122,11 @@ export default function Footer() {
                         <h3 className="text-gold font-bold uppercase tracking-widest text-sm mb-6">Get In Touch</h3>
                         <ul className="space-y-4">
                             <li>
-                                <a href="tel:920-609-7085" aria-label="Call Valley Window Care at (920)-609-7085" className="flex items-center gap-3 text-navy font-bold hover:text-gold transition-colors group" rel="nofollow">
+                                <a href="tel:920-609-7085" aria-label="Call Valley Window Care at (920) 609-7085" className="flex items-center gap-3 text-navy font-bold hover:text-gold transition-colors group" rel="nofollow">
                                     <div className="w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center shrink-0 group-hover:bg-gold/20 transition-colors">
                                         <Phone size={14} className="text-navy group-hover:text-gold transition-colors" />
                                     </div>
-                                    (920)-609-7085
+                                    (920) 609-7085
                                 </a>
                             </li>
                             <li>
@@ -142,7 +142,7 @@ export default function Footer() {
                                     <div className="w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center shrink-0">
                                         <MapPin size={14} className="text-navy" />
                                     </div>
-                                    <span className="text-sm leading-tight mt-1.5">4551 Trellis Drive E-2,<br />De Pere, Wisconsin 54115</span>
+                                    <span className="text-sm leading-tight mt-1.5">4551 Trellis Drive E-2,<br />De Pere, WI 54115</span>
                                 </div>
                             </li>
                         </ul>
@@ -223,25 +223,12 @@ export default function Footer() {
                 </div>
             </div>
 
-            {/* Proudly Serving Section (Phase 99 Local SEO Anchors) */}
-            <div className="border-t border-gray-200 py-12 text-center mt-4 bg-white">
-                <div className="container mx-auto px-4 max-w-6xl">
-                    <h3 className="text-navy font-bold uppercase tracking-widest text-sm mb-6">Proudly Serving Northeast Wisconsin</h3>
-                    <div className="flex flex-wrap justify-center items-center gap-x-4 gap-y-3 text-sm text-gray-600 font-medium">
-                        {[
-                            "Green Bay", "Appleton", "Neenah", "Oshkosh", "Shawano", "Door County", "Manitowoc"
-                        ].map((city, index, array) => (
-                            <div key={city} className="flex items-center gap-x-4">
-                                <Link
-                                    href={`/service-areas/${city.toLowerCase().replace(/\s+/g, '-')}`}
-                                    className="hover:text-gold transition-colors whitespace-nowrap"
-                                >
-                                    {city}
-                                </Link>
-                                {index < array.length - 1 && <span className="text-gray-300">|</span>}
-                            </div>
-                        ))}
-                    </div>
+            {/* Proudly Serving Section (Natural Language SEO) */}
+            <div className="border-t border-gray-200 py-8 text-center mt-4 bg-white">
+                <div className="container mx-auto px-4 max-w-4xl">
+                    <p className="text-sm text-gray-500 leading-relaxed max-w-3xl mx-auto">
+                        Proudly providing expert pressure washing, advanced roof soft washing, and environmental surface restoration solutions to residential and commercial properties throughout De Pere, Green Bay, the Fox Valley, and surrounding Northeast Wisconsin communities.
+                    </p>
                 </div>
             </div>
 
