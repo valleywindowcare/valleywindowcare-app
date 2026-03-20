@@ -44,14 +44,11 @@ export default function ServiceContent({ title, description, benefits, process, 
 
                         {/* High-Density 500+ Word Dynamic SEO Synthesis Shell */}
                         <div className="text-gray-600 text-lg leading-relaxed space-y-6 text-left">
-                            <p>
-                                Maintaining your property{localText} requires more than just occasional maintenance; it demands professional, dedicated expertise. <strong>Valley Window Care and Exterior Cleaning</strong> understands exactly how Wisconsin's volatile seasonal weather—from humid, algae-promoting summers to brutal, freezing winters—impacts your home's exterior surfaces. That's why our <strong>{title}</strong> services are specifically calibrated to handle local environmental buildup safely, rapidly, and effectively.
-                            </p>
                             <div className="mt-6 mb-6">
                                 {description}
                             </div>
                             <p>
-                                When you choose Valley Window Care for your {title.toLowerCase()}{localText}, you're investing in a trusted local team completely dedicated to unparalleled results. We exclusively utilize eco-friendly, biodegradable cleaning detergents that pose absolutely zero threat to your landscaping, your pets, or your family. Experience the profound difference of working directly with Northeast Wisconsin's premier 5-star rated exterior cleaning and architectural maintenance specialists.
+                                When you choose Valley Window Care for your {title.toLowerCase()}{localText}, you're investing in a trusted local team completely dedicated to unparalleled results. We exclusively utilize eco-friendly, biodegradable cleaning detergents that pose absolutely zero threat to your landscaping, your pets, or your family.
                             </p>
                         </div>
                     </div>

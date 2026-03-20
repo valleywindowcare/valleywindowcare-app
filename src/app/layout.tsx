@@ -51,63 +51,35 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "HomeAndConstructionBusiness",
-              name: "Valley Window Care",
-              telephone: "+1-920-609-7085",
+              name: "Valley Window Care and Exterior Cleaning",
+              url: "https://www.valleywindowcare.com",
               address: {
                 "@type": "PostalAddress",
                 streetAddress: "4551 Trellis Drive E-2",
                 addressLocality: "De Pere",
                 addressRegion: "WI",
-                postalCode: "54115"
+                postalCode: "54115",
+                addressCountry: "US"
               },
-              areaServed: ["Green Bay", "Appleton", "Oshkosh", "De Pere", "Door County", "Fox Valley"],
-              aggregateRating: {
-                "@type": "AggregateRating",
-                ratingValue: "5.0",
-                reviewCount: "100"
-              },
-              knowsAbout: [
-                "Water purification",
-                "HOA standards",
-                "Paver restoration",
-                "Soft washing physics",
-                "Commercial grease compliance"
+              areaServed: [
+                {"@type": "City", "name": "Green Bay"},
+                {"@type": "City", "name": "Appleton"},
+                {"@type": "City", "name": "Neenah"},
+                {"@type": "City", "name": "Oshkosh"},
+                {"@type": "City", "name": "Shawano"},
+                {"@type": "City", "name": "Door County"},
+                {"@type": "City", "name": "Manitowoc"}
               ],
               hasOfferCatalog: {
                 "@type": "OfferCatalog",
                 name: "Exterior Cleaning Services",
                 itemListElement: [
-                  {
-                    "@type": "Offer",
-                    itemOffered: {
-                      "@type": "Service",
-                      name: "Window Cleaning"
-                    }
-                  },
-                  {
-                    "@type": "Offer",
-                    itemOffered: {
-                      "@type": "Service",
-                      name: "Pressure Washing"
-                    }
-                  },
-                  {
-                    "@type": "Offer",
-                    itemOffered: {
-                      "@type": "Service",
-                      name: "Paver Patio Restorations"
-                    }
-                  },
-                  {
-                    "@type": "Offer",
-                    itemOffered: {
-                      "@type": "Service",
-                      name: "Permanent LED Lighting"
-                    }
-                  }
+                  {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Roof Cleaning"}},
+                  {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Soft Washing"}},
+                  {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Window Cleaning"}}
                 ]
               }
-            })
+            }).replace(/</g, '\\u003c').replace(/'/g, "&apos;")
           }}
         />
       </head>

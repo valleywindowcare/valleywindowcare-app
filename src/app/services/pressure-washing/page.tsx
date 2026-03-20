@@ -83,6 +83,14 @@ export default function PressureWashingPage() {
                 image="/images/portfolio/pressure-washing.webp"
             />
 
+            <section className="container mx-auto px-4 py-8 max-w-4xl">
+                <div className="bg-slate-50 border-l-4 border-gold p-6 md:p-8 rounded-r-xl shadow-sm border-t border-r border-b border-slate-100">
+                    <p className="text-gray-700 leading-relaxed font-medium text-lg mb-0 text-left">
+                        <strong>Looking for dedicated paver restoration, leveling, and polymeric sanding?</strong> We have launched a specialized division just for hardscapes! Visit our sister company, <a href="https://greenbaypavercleaning.com" target="_blank" rel="noopener" className="text-blue-600 font-bold hover:text-gold underline transition-colors">Green Bay Paver Cleaning</a>, for premium sealing and restoration across the Fox Valley.
+                    </p>
+                </div>
+            </section>
+
             <div className="container mx-auto px-4 py-8 mb-12">
                 <SEOAuthorityEngine serviceSlug="pressure-washing" serviceName="Pressure Washing" />
             </div>

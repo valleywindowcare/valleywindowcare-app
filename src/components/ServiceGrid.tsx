@@ -85,10 +85,7 @@ export default function ServiceGrid({ city, gridItems }: ServiceGridProps) {
             <div className="p-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                     {items.map((service, idx) => {
-                        const localCitySlug = city ? formatSlug(city) : null;
-                        const href = localCitySlug
-                            ? `/service-areas/${localCitySlug}/${service.serviceSlug}`
-                            : `/services/${service.serviceSlug}`;
+                        const href = `/services/${service.serviceSlug}`;
 
                         return (
                             <Link

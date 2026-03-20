@@ -252,7 +252,7 @@ export default async function CityHubPage({ params }: PageProps) {
                                 <p className="font-semibold text-gray-700">{vRust.subtitle}</p>
                                 <p className="text-left">{vRust.p1}</p>
                                 <p className="text-left">{vRust.p2.replace('{cityName}', cityName)}</p>
-                                <Link href={`/service-areas/${content.citySlug}/rust-removal`} aria-label="Learn more about rust removal services" className="inline-flex items-center gap-2 font-bold text-navy hover:text-gold transition-colors mt-4 no-underline">
+                                <Link href="/services/rust-removal" aria-label="Learn more about rust removal services" className="inline-flex items-center gap-2 font-bold text-navy hover:text-gold transition-colors mt-4 no-underline">
                                     Learn More <ArrowRight size={16} aria-hidden="true" />
                                 </Link>
                             </div>
@@ -270,7 +270,7 @@ export default async function CityHubPage({ params }: PageProps) {
                                 <p className="font-semibold text-gray-700">{vSoft.subtitle}</p>
                                 <p className="text-left">{vSoft.p1}</p>
                                 <p className="text-left">{vSoft.p2.replace('{cityName}', cityName)}</p>
-                                <Link href={`/service-areas/${content.citySlug}/soft-wash`} aria-label="Learn more about soft washing services" className="inline-flex items-center gap-2 font-bold text-navy hover:text-gold transition-colors mt-4 no-underline">
+                                <Link href="/services/soft-wash" aria-label="Learn more about soft washing services" className="inline-flex items-center gap-2 font-bold text-navy hover:text-gold transition-colors mt-4 no-underline">
                                     Learn More <ArrowRight size={16} aria-hidden="true" />
                                 </Link>
                             </div>
@@ -288,7 +288,7 @@ export default async function CityHubPage({ params }: PageProps) {
                                 <p className="font-semibold text-gray-700">{vDrive.subtitle}</p>
                                 <p className="text-left">{vDrive.p1}</p>
                                 <p className="text-left">{vDrive.p2.replace('{cityName}', cityName)}</p>
-                                <Link href={`/service-areas/${content.citySlug}/driveway-cleaning`} aria-label="Learn more about driveway cleaning services" className="inline-flex items-center gap-2 font-bold text-navy hover:text-gold transition-colors mt-4 no-underline">
+                                <Link href="/services/driveway-cleaning" aria-label="Learn more about driveway cleaning services" className="inline-flex items-center gap-2 font-bold text-navy hover:text-gold transition-colors mt-4 no-underline">
                                     Learn More <ArrowRight size={16} aria-hidden="true" />
                                 </Link>
                             </div>
@@ -306,7 +306,7 @@ export default async function CityHubPage({ params }: PageProps) {
                                 <p className="font-semibold text-gray-700">{vSolar.subtitle}</p>
                                 <p className="text-left">{vSolar.p1}</p>
                                 <p className="text-left">{vSolar.p2.replace('{cityName}', cityName)}</p>
-                                <Link href={`/service-areas/${content.citySlug}/solar-panel-cleaning`} aria-label="Learn more about solar panel cleaning services" className="inline-flex items-center gap-2 font-bold text-navy hover:text-gold transition-colors mt-4 no-underline">
+                                <Link href="/services/solar-panel-cleaning" aria-label="Learn more about solar panel cleaning services" className="inline-flex items-center gap-2 font-bold text-navy hover:text-gold transition-colors mt-4 no-underline">
                                     Learn More <ArrowRight size={16} aria-hidden="true" />
                                 </Link>
                             </div>
@@ -324,7 +324,7 @@ export default async function CityHubPage({ params }: PageProps) {
                                 <p className="font-semibold text-gray-700">{vAwning.subtitle}</p>
                                 <p className="text-left">{vAwning.p1}</p>
                                 <p className="text-left">{vAwning.p2.replace('{cityName}', cityName)}</p>
-                                <Link href={`/service-areas/${content.citySlug}/commercial-awning-cleaning`} aria-label="Learn more about commercial awning cleaning services" className="inline-flex items-center gap-2 font-bold text-navy hover:text-gold transition-colors mt-4 no-underline">
+                                <Link href="/services/commercial-awning-cleaning" aria-label="Learn more about commercial awning cleaning services" className="inline-flex items-center gap-2 font-bold text-navy hover:text-gold transition-colors mt-4 no-underline">
                                     Learn More <ArrowRight size={16} aria-hidden="true" />
                                 </Link>
                             </div>
@@ -391,7 +391,7 @@ export default async function CityHubPage({ params }: PageProps) {
 
             {/* MASSIVE REVIEW SLIDER INJECTION LOGIC */}
             <div className="bg-slate-50 pt-20">
-                <ReviewSlider />
+                <ReviewSlider city={cityName} />
             </div>
         </main>
     );

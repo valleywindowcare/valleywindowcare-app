@@ -22,6 +22,9 @@ export default function Footer() {
                         <p className="text-gray-600 mb-6 text-sm leading-relaxed max-w-sm">
                             Discover why Valley Window Care and Exterior Cleaning is the trusted name in Wisconsin for professional window, roof, and permanent LED lighting services.
                         </p>
+                        <p className="text-gray-600 mb-6 text-sm leading-relaxed max-w-sm border-l-2 border-gold pl-3">
+                            For specialized hardscape restoration, visit our sister company: <a href="https://greenbaypavercleaning.com" target="_blank" rel="noopener" className="text-navy font-bold hover:text-gold transition-colors">Green Bay Paver Cleaning</a>.
+                        </p>
                         <div className="flex items-center gap-4">
                             <a href="https://www.facebook.com/valleywindowcare" target="_blank" rel="noopener noreferrer" aria-label="Visit Valley Window Care on Facebook" className="w-10 h-10 rounded-full bg-navy text-white flex items-center justify-center hover:bg-gold transition-colors hover:scale-110 active:scale-95 duration-200">
                                 <Facebook size={18} />
@@ -226,7 +229,7 @@ export default function Footer() {
                     <h3 className="text-navy font-bold uppercase tracking-widest text-sm mb-6">Proudly Serving Northeast Wisconsin</h3>
                     <div className="flex flex-wrap justify-center items-center gap-x-4 gap-y-3 text-sm text-gray-600 font-medium">
                         {[
-                            "Green Bay", "Appleton", "De Pere", "Neenah", "Howard"
+                            "Green Bay", "Appleton", "Neenah", "Oshkosh", "Shawano", "Door County", "Manitowoc"
                         ].map((city, index, array) => (
                             <div key={city} className="flex items-center gap-x-4">
                                 <Link

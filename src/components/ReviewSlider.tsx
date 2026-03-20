@@ -36,9 +36,21 @@ const fallbackReviews = [
     }
 ];
 
-export default function ReviewSlider() {
+export default function ReviewSlider({ city }: { city?: string }) {
+    // Generate deterministic array offset based off city parameters to eliminate exact-match static footprints across generated matrices
+    const generateArrayOffset = (str: string, max: number) => {
+        if (!str) return 0;
+        let hash = 0;
+        for (let i = 0; i < str.length; i++) {
+            hash = str.charCodeAt(i) + ((hash << 5) - hash);
+        }
+        return Math.abs(hash) % max;
+    };
+
+    const initialOffset = generateArrayOffset(city || "", fallbackReviews.length);
+
     const [reviews, setReviews] = useState(fallbackReviews);
-    const [currentIndex, setCurrentIndex] = useState(0);
+    const [currentIndex, setCurrentIndex] = useState(initialOffset);
 
     useEffect(() => {
         const fetchReviews = async () => {

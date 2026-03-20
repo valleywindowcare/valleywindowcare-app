@@ -137,6 +137,12 @@ export default function ServicePage() {
                                 <div>
                                     <h4 className="text-xl font-bold text-navy-dark mb-2">Fertilizer Stains</h4>
                                     <p className="text-gray-600 leading-relaxed">We remove orange dots from driveways. Iron pellets rust on wet concrete. We dissolve these specific mineral stains safely.</p>
+                                    
+                                    <div className="bg-slate-50 border-l-4 border-gold p-6 mt-6 rounded-r-lg shadow-sm border-t border-r border-b border-slate-100 max-w-2xl">
+                                        <p className="text-gray-700 leading-relaxed font-medium text-sm sm:text-base mb-0">
+                                            <strong>Looking for dedicated paver restoration, leveling, and polymeric sanding?</strong> We have launched a specialized division just for hardscapes! Visit our sister company, <a href="https://greenbaypavercleaning.com" target="_blank" rel="noopener" className="text-blue-600 font-bold hover:text-gold underline transition-colors">Green Bay Paver Cleaning</a>, for premium sealing and restoration across the Fox Valley.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                             
