@@ -140,9 +140,14 @@ export default function PressureWashingPage() {
 
             {/* THE SCIENCE OF CLEAN */}
             <section className="container mx-auto px-4 py-16 max-w-6xl">
-                <h2 className="text-3xl md:text-4xl font-extrabold text-navy text-center mb-12">
-                    The Science of Clean: Soft Washing vs. Power Washing
+                <h2 className="text-3xl md:text-4xl font-extrabold text-navy text-center mb-8">
+                    What is the Scientific Difference Between Soft Washing and Power Washing?
                 </h2>
+                <div className="max-w-4xl mx-auto mb-12 text-center">
+                    <p className="text-lg text-gray-700 leading-relaxed font-medium">
+                        The core difference lies in pressure application and chemical reliance. Soft washing utilizes ultra-low pressure paired with eco-friendly algaecides to safely break down organic matter at the root level, protecting delicate surfaces like vinyl and shingles. Conversely, standard power washing deploys highly pressurized water to physically blast away embedded grime and freeze-thaw hazards from durable flatwork like concrete.
+                    </p>
+                </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
                         <h3 className="text-xl font-bold text-navy mb-4">Soft Washing</h3>
@@ -167,9 +172,14 @@ export default function PressureWashingPage() {
 
             {/* TRANSPARENT PRICING TABLE */}
             <section className="container mx-auto px-4 py-16 max-w-5xl">
-                <h2 className="text-3xl md:text-4xl font-extrabold text-navy text-center mb-10">
-                    Transparent Fox Valley Pricing
+                <h2 className="text-3xl md:text-4xl font-extrabold text-navy text-center mb-8">
+                    How Much Do Professional Exterior Cleaning Services Cost in the Fox Valley?
                 </h2>
+                <div className="max-w-4xl mx-auto mb-10 text-center">
+                    <p className="text-lg text-gray-700 leading-relaxed font-medium">
+                        Professional exterior cleaning in the Fox Valley ranges from $150 for standard house washing up to $300+ for comprehensive roof soft washing. Final pricing depends heavily on the total square footage, the severity of organic growth, and the specific methodology—such as soft washing versus high-PSI concrete surface restoration.
+                    </p>
+                </div>
                 <div className="overflow-x-auto w-full rounded-2xl shadow-lg border border-slate-200">
                     <table className="w-full text-left border-collapse min-w-[600px]">
                         <thead>
@@ -221,6 +231,20 @@ export default function PressureWashingPage() {
             <div className="container mx-auto px-4 py-8 mb-12">
                 <SEOAuthorityEngine serviceSlug="pressure-washing" serviceName="Pressure Washing" />
             </div>
+
+            {/* COMMERCIAL ENVIRONMENTAL COMPLIANCE */}
+            <section className="bg-navy text-white w-full py-16 mt-4 font-sans relative z-10">
+                <div className="container mx-auto px-4 max-w-5xl">
+                    <h2 className="text-3xl md:text-4xl font-extrabold text-gold text-center mb-8">
+                        Commercial Environmental Compliance & Zero-Runoff Protocols
+                    </h2>
+                    <div className="bg-white/10 p-8 md:p-10 rounded-2xl border border-white/20 backdrop-blur-md shadow-2xl">
+                        <p className="text-lg text-gray-100 leading-relaxed font-medium">
+                            For commercial properties in the Fox Valley, environmental liability is a critical concern. Valley Window Care operates in strict compliance with Wisconsin Department of Natural Resources (WDNR) and EPA regulations. We utilize advanced wastewater recovery protocols to ensure that heavy grease, toxic suspended solids, and chemical runoff never enter the Lower Fox River or municipal storm drains. By employing eco-friendly, non-butyl degreasers and professional water reclamation systems, we protect your business from regulatory fines while delivering a pristine clean.
+                        </p>
+                    </div>
+                </div>
+            </section>
 
             <div className="bg-slate-50 border-t border-gray-200 relative">
                 <VanillaMapClient />
