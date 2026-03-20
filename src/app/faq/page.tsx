@@ -209,16 +209,7 @@ export default function FAQPage() {
                                         <ArrowRight size={14} className="text-gray-300 group-hover:text-gold transition-colors" /> Door County, WI
                                     </Link>
                                 </li>
-                                <li>
-                                    <Link href="/service-areas/fish-creek" className="text-gray-600 hover:text-gold transition-colors flex items-center gap-2 group">
-                                        <ArrowRight size={14} className="text-gray-300 group-hover:text-gold transition-colors" /> Fish Creek, WI
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="/service-areas/sturgeon-bay" className="text-gray-600 hover:text-gold transition-colors flex items-center gap-2 group">
-                                        <ArrowRight size={14} className="text-gray-300 group-hover:text-gold transition-colors" /> Sturgeon Bay, WI
-                                    </Link>
-                                </li>
+
                                 <li>
                                     <Link href="/service-areas/shawano" className="text-gray-600 hover:text-gold transition-colors flex items-center gap-2 group">
                                         <ArrowRight size={14} className="text-gray-300 group-hover:text-gold transition-colors" /> Shawano, WI

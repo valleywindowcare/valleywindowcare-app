@@ -182,30 +182,6 @@ export const cityData: CityContent[] = [
         externalName: "Door County Visitor Bureau"
     },
     {
-        id: "fish-creek",
-        cityName: "Fish Creek",
-        focusService: "Storefront & Awning Cleaning",
-        header: "Boutique Exterior Care in Fish Creek",
-        introParagraph: "Nestled directly on the coast, Fish Creek's highly condensed retail corridors and beautiful historic inns deal with immense summer foot traffic and aggressive lake-effect moisture. Keeping physical storefronts and fabric awnings pristine is crucial for capturing local tourist revenue.",
-        middleParagraph: "Fish Creek businesses utilize our specialized Storefront and Awning Cleaning technology. We deploy incredibly gentle surfactants to safely lift deeply embedded dirt, bird droppings, and algae from expensive fabric awnings and delicate historic facades without causing material degradation.",
-        guaranteeParagraph: "We recognize the critical importance of operating seamlessly within Fish Creek's tight village layout, utilizing compact, quiet soft wash systems and eco-safe compounds to minimize noise and environmental footprint.",
-        conclusionParagraph: "Ensure your Fish Creek property stands out to every passing tourist. Our tailored exterior detailing services guarantee your home or business looks flawlessly maintained year-round.",
-        externalLink: "https://visitfishcreek.com/",
-        externalName: "Fish Creek Civic Association"
-    },
-    {
-        id: "sturgeon-bay",
-        cityName: "Sturgeon Bay",
-        focusService: "Industrial & Marine Facade Cleaning",
-        header: "Heavy-Duty Execution in Sturgeon Bay",
-        introParagraph: "As the massive industrial and maritime gateway to the peninsula, Sturgeon Bay features intense commercial zones alongside beautiful residential waterfront properties. The heavy shipping traffic generates a distinct layer of industrial fallout and diesel exhaust soot that coats local architecture.",
-        middleParagraph: "We combat Sturgeon Bay's specific atmospheric conditions with heavy-duty degreasing and industrial-grade soft washing. Our specialized detergents are engineered to electronically break the bond between heavy exhaust carbons and your property’s exterior, safely melting away the grime that standard water simply cannot remove.",
-        guaranteeParagraph: "Protecting the Sturgeon Bay shipping channels means utilizing strict water reclamation or utilizing 100% biodegradable detergents that immediately neutralize upon contact with the soil.",
-        conclusionParagraph: "Whether you operate a sprawling maritime supply warehouse or own a peaceful waterfront home, trust Valley Window Care to provide the heavy-hitting cleaning power required in Sturgeon Bay.",
-        externalLink: "https://sturgeonbaywi.org/",
-        externalName: "City of Sturgeon Bay"
-    },
-    {
         id: "shawano",
         cityName: "Shawano",
         focusService: "Lakefront Property Soft Washing",
@@ -240,30 +216,6 @@ export const cityData: CityContent[] = [
         conclusionParagraph: "Valley Window Care is Northeast Wisconsin's premier choice for luxury exterior restoration. Trust our fully-insured experts to maintain the flawless aesthetic of your Hobart estate.",
         externalLink: "https://www.hobart-wi.org/",
         externalName: "Village of Hobart"
-    },
-    {
-        id: "egg-harbor",
-        cityName: "Egg Harbor",
-        focusService: "Resort & Marina Exterior Washing",
-        header: "Pristine Standards for Egg Harbor",
-        introParagraph: "As one of the crown jewels of the peninsula, Egg Harbor's dense collection of high-end resorts, local marinas, and beautiful bluff-side homes require immaculate presentation. The constant blast of moisture off the bay creates relentless spider web issues and aggressive localized mildew.",
-        middleParagraph: "We execute massive Resort and Marina Exterior Washing packages throughout Egg Harbor. By coupling hot-water concrete extraction for heavy foot-traffic areas with our ultra-gentle soft washing for historic and modern facades, we eradicate biological growth and massive insect debris completely.",
-        guaranteeParagraph: "Operating in Egg Harbor requires strict adherence to environmental standards. We utilize only maximum-biodegradable chemistries that ensure the bay waters and local bluff ecosystems are completely unaffected.",
-        conclusionParagraph: "Command top rental rates and massively boost local tourist foot traffic by ensuring your Egg Harbor property looks absolutely flawless. We are the premier architectural detailers for the peninsula.",
-        externalLink: "https://eggharbordoorcounty.org/",
-        externalName: "Village of Egg Harbor"
-    },
-    {
-        id: "sister-bay",
-        cityName: "Sister Bay",
-        focusService: "Restaurant & Patio Deep Cleaning",
-        header: "Protecting Quality in Sister Bay",
-        introParagraph: "Sister Bay acts as the vibrant culinary and social hub of Northern Door County. Local restaurants with massive outdoor dining patios, marinas, and highly trafficked promenades deal with immense grease, food spills, and heavy foot traffic that completely trashes exterior concrete and decking.",
-        middleParagraph: "Our Restaurant and Patio Deep Cleaning operations are essential for Sister Bay businesses. We deploy 200-degree hot-water extraction units capable of melting away dense grease traps, eradicating sticky spilled beverages, and blasting years of ground-in dirt out of premium outdoor dining areas.",
-        guaranteeParagraph: "We work seamlessly with Sister Bay's rigorous coastal compliance, ensuring our hot water extraction uses eco-safe degreasers that protect the local waterfront and strictly avoid harsh acidic runoff.",
-        conclusionParagraph: "Ensure your Sister Bay establishment or home maintains an absolute 5-star appearance. Valley Window Care delivers the heavy-duty restoration required to outlast the intense tourist season.",
-        externalLink: "https://www.sisterbaywi.gov/",
-        externalName: "Village of Sister Bay"
     },
     {
         id: "greenville",

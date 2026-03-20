@@ -25,7 +25,7 @@ const ReviewSlider = dynamic(() => import("@/components/ReviewSlider"));
 import ServiceContent from "@/components/ServiceContent";
 import SEOAuthorityEngine from "@/components/SEOAuthorityEngine";
 import FAQAccordion from "@/components/FAQAccordion";
-import PricingGuide from "@/components/PricingGuide";
+
 import { serviceContentMap } from "@/data/serviceContent";
 import VanillaMapClient from "@/components/VanillaMapClient";
 import Link from "next/link";
@@ -370,7 +370,7 @@ export default async function CityServicePage({ params }: PageProps) {
                 <VanillaMapClient city={cityName} />
             </div>
 
-            <PricingGuide />
+
 
             {/* Contextual FAQ Injection */}
             {(() => {

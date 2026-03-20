@@ -158,7 +158,7 @@ export default async function CityHubPage({ params }: PageProps) {
                         {content.title}
                     </h1>
                     <p className="text-lg md:text-2xl text-slate-300 font-light mb-10 max-w-3xl mx-auto leading-relaxed">
-                        Expert roof washing, window cleaning, and power washing services engineered specifically for {cityName} weather.
+                        Expert roof washing, window cleaning, and power washing services.
                     </p>
                 </div>
             </section>

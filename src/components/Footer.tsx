@@ -150,6 +150,12 @@ export default function Footer() {
                         <h3 className="text-gold font-bold uppercase tracking-widest text-sm mb-6">Legal & Trust</h3>
                         <ul className="space-y-3 font-semibold text-navy">
                             <li>
+                                <Link href="/pricing" className="hover:text-gold transition-colors inline-block relative group">
+                                    Pricing Guide
+                                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
+                                </Link>
+                            </li>
+                            <li>
                                 <Link href="/faq" className="hover:text-gold transition-colors inline-block relative group">
                                     Frequently Asked Questions
                                     <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>

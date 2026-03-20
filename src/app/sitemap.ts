@@ -30,15 +30,10 @@ interface ServiceContent {
 const typedServiceData = serviceData as unknown as ServiceContent[];
 
 const getCityServiceRoutes = () => {
-    // In a full implementation we'd read this dynamically or map it correctly
-    // We'll map the known base city hubs first
+    // We strictly map the core city hubs to ensure deep authority
     const hubs = typedServiceData.filter((d) => d.type === 'hub').map(d => d.citySlug);
 
-    // Known explicit city-service routes based on the CSV and common variations
-    // This provides a highly accurate subset. For a full matrix, we'd need to parse all folders.
-    const specificRoutes = typedServiceData.filter(d => d.type === 'service').map(d => `/service-areas/${d.citySlug}/${d.serviceSlug}`);
-
-    return { hubs, specificRoutes };
+    return { hubs };
 };
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -52,6 +47,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         '/gallery',
         '/services',
         '/service-areas',
+        '/pricing',
         '/faq',
         '/reviews',
         '/privacy-policy',
@@ -82,7 +78,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }));
 
     // Dynamic City Hubs & Specific City Services
-    const { hubs, specificRoutes } = getCityServiceRoutes();
+    const { hubs } = getCityServiceRoutes();
 
     const cityHubRoutes = hubs.map((city) => ({
         url: `${baseUrl}/service-areas/${city}`,
@@ -91,24 +87,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 0.9,
     }));
 
-    const targetCities = ['green-bay', 'neenah', 'appleton', 'ashwaubenon', 'menasha', 'kaukauna'];
-    const targetServices = ['roof-cleaning', 'permanent-led-lighting', 'paver-patio-restorations', 'commercial-pressure-washing'];
-
-    const cityServiceRoutes = specificRoutes.map((route) => {
-        const isTarget = targetCities.some(city => route.includes(`/${city}/`)) && targetServices.some(service => route.endsWith(`/${service}`));
-        return {
-            url: `${baseUrl}${route}`,
-            lastModified: isTarget ? new Date('2026-03-16') : new Date(),
-            changeFrequency: 'weekly' as const,
-            priority: 0.8,
-        };
-    });
-
     const allOtherRoutes = [
         ...staticRoutes,
         ...serviceRoutes,
         ...cityHubRoutes,
-        ...cityServiceRoutes,
         ...blogRoutes,
     ];
 

@@ -244,13 +244,30 @@ const nextConfig: NextConfig = {
       {
         // Matches /appleton-roof-cleaning -> /service-areas/appleton/roof-cleaning
         source: `/:city-:service${validServicesRegex}`,
-        destination: '/service-areas/:city/:service',
+        destination: '/service-areas/:city',
         permanent: true,
       },
       {
         // Matches /services/roof-cleaning-appleton -> /service-areas/appleton/roof-cleaning
         source: `/services/:service${validServicesRegex}-:city`,
-        destination: '/service-areas/:city/:service',
+        destination: '/service-areas/:city',
+        permanent: true,
+      },
+      {
+        // Collapses the Doorway Page Matrix: redirects all sub-services to their parent city hubs
+        source: '/service-areas/:city/:service',
+        destination: '/service-areas/:city',
+        permanent: true,
+      },
+      {
+        // Phase 2: Door County Consolidation Redirect
+        source: '/service-areas/:city(egg-harbor|sturgeon-bay|fish-creek|sister-bay|ephraim)/:path*',
+        destination: '/service-areas/door-county',
+        permanent: true,
+      },
+      {
+        source: '/service-areas/:city(egg-harbor|sturgeon-bay|fish-creek|sister-bay|ephraim)',
+        destination: '/service-areas/door-county',
         permanent: true,
       }
     ];

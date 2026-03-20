@@ -96,6 +96,7 @@ export default function Header() {
                     <Link href="/about-us" className="hover:text-gold transition-colors uppercase">ABOUT US</Link>
                     <Link href="/gallery" className="hover:text-gold transition-colors uppercase">GALLERY</Link>
                     <Link href="/reviews" className="hover:text-gold transition-colors uppercase">REVIEWS</Link>
+                    <Link href="/pricing" className="hover:text-gold transition-colors uppercase">PRICING</Link>
                     <Link href="/blog" className="hover:text-gold transition-colors text-gold font-black uppercase">EXPERT GUIDES</Link>
                     <Link href="/contact" className="hover:text-gold transition-colors uppercase">CONTACT</Link>
                 </nav>
@@ -186,8 +187,7 @@ export default function Header() {
                                     <Link onClick={() => setIsMobileMenuOpen(false)} href="/service-areas/oshkosh" className="block py-2 hover:text-gold transition-colors">Oshkosh</Link>
                                     <Link onClick={() => setIsMobileMenuOpen(false)} href="/service-areas/de-pere" className="block py-2 hover:text-gold transition-colors">De Pere</Link>
                                     <Link onClick={() => setIsMobileMenuOpen(false)} href="/service-areas/door-county" className="block py-2 hover:text-gold transition-colors">Door County</Link>
-                                    <Link onClick={() => setIsMobileMenuOpen(false)} href="/service-areas/fish-creek" className="block py-2 hover:text-gold transition-colors">Fish Creek</Link>
-                                    <Link onClick={() => setIsMobileMenuOpen(false)} href="/service-areas/sturgeon-bay" className="block py-2 hover:text-gold transition-colors">Sturgeon Bay</Link>
+
                                     <Link onClick={() => setIsMobileMenuOpen(false)} href="/service-areas/shawano" className="block py-2 hover:text-gold transition-colors">Shawano</Link>
                                     <Link onClick={() => setIsMobileMenuOpen(false)} href="/service-areas/manitowoc" className="block py-2 hover:text-gold transition-colors">Manitowoc</Link>
                                     <Link onClick={() => setIsMobileMenuOpen(false)} href="/service-areas" className="block py-2 text-gold hover:text-navy transition-colors flex items-center gap-1 font-bold mt-2">
@@ -200,6 +200,7 @@ export default function Header() {
                         <Link onClick={() => setIsMobileMenuOpen(false)} href="/about-us" className="uppercase py-4 border-b border-gray-100 hover:text-gold transition-colors">ABOUT US</Link>
                         <Link onClick={() => setIsMobileMenuOpen(false)} href="/gallery" className="uppercase py-4 border-b border-gray-100 hover:text-gold transition-colors">GALLERY</Link>
                         <Link onClick={() => setIsMobileMenuOpen(false)} href="/reviews" className="uppercase py-4 border-b border-gray-100 hover:text-gold transition-colors">REVIEWS</Link>
+                        <Link onClick={() => setIsMobileMenuOpen(false)} href="/pricing" className="uppercase py-4 border-b border-gray-100 hover:text-gold transition-colors">PRICING</Link>
                         <Link onClick={() => setIsMobileMenuOpen(false)} href="/blog" className="uppercase py-4 border-b border-gray-100 text-gold font-black transition-colors">EXPERT GUIDES</Link>
                         <Link onClick={() => setIsMobileMenuOpen(false)} href="/contact" className="uppercase py-4 hover:text-gold transition-colors">CONTACT</Link>
 
