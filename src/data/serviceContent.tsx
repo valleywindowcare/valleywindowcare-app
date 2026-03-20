@@ -189,6 +189,17 @@ export const serviceContentMap: Record<string, { description: React.ReactNode, b
             "2. Deep Cleaning Execution: Utilizing specialized proprietary chemical blends and precise water pressure to obliterate stains at a molecular level.",
             "3. Final Quality Check: A rigorous post-wash inspection alongside the property owner to guarantee flawless 100% satisfaction."
         ],
+        pricing: {
+            title: "Transparent Concrete Cleaning Pricing",
+            description: "Every property is unique, but we believe in 100% transparent pricing. Quotes are calculated based on exact square footage and complexity.",
+            rateTitle: "Estimated Rate",
+            ratePrice: "Custom Assessed",
+            rateDetails: "Calculated based on the exact dimensions of your property.",
+            minimumPrice: "$150.00",
+            minimumDetails: "Our baseline rate to deploy specialized equipment and technicians.",
+            variableTitle: "Cost Variables",
+            variableDetails: "Final price depends on total size, location logistics, and severity of cleaning required."
+        },
         image: "/images/portfolio/concrete-cleaning.webp",
         faqs: [
           {
@@ -221,6 +232,17 @@ export const serviceContentMap: Record<string, { description: React.ReactNode, b
             "2. Deep Cleaning Execution: Utilizing specialized proprietary chemical blends and precise water pressure to obliterate stains at a molecular level.",
             "3. Final Quality Check: A rigorous post-wash inspection alongside the property owner to guarantee flawless 100% satisfaction."
         ],
+        pricing: {
+            title: "Transparent Window Cleaning Pricing",
+            description: "Every property is unique, but we believe in 100% transparent pricing. Quotes are calculated based on exact square footage and complexity.",
+            rateTitle: "Estimated Rate",
+            ratePrice: "Custom Assessed",
+            rateDetails: "Calculated based on the exact dimensions of your property.",
+            minimumPrice: "$150.00",
+            minimumDetails: "Our baseline rate to deploy specialized equipment and technicians.",
+            variableTitle: "Cost Variables",
+            variableDetails: "Final price depends on total size, location logistics, and severity of cleaning required."
+        },
         image: "/images/portfolio/window-cleaning.webp",
         faqs: [
           {
@@ -253,6 +275,17 @@ export const serviceContentMap: Record<string, { description: React.ReactNode, b
             "2. Deep Cleaning Execution: Utilizing specialized proprietary chemical blends and precise water pressure to obliterate stains at a molecular level.",
             "3. Final Quality Check: A rigorous post-wash inspection alongside the property owner to guarantee flawless 100% satisfaction."
         ],
+        pricing: {
+            title: "Transparent Christmas Lighting Pricing",
+            description: "Every property is unique, but we believe in 100% transparent pricing. Quotes are calculated based on exact square footage and complexity.",
+            rateTitle: "Estimated Rate",
+            ratePrice: "Custom Assessed",
+            rateDetails: "Calculated based on the exact dimensions of your property.",
+            minimumPrice: "$150.00",
+            minimumDetails: "Our baseline rate to deploy specialized equipment and technicians.",
+            variableTitle: "Cost Variables",
+            variableDetails: "Final price depends on total size, location logistics, and severity of cleaning required."
+        },
         image: "/images/portfolio/forever-lights.webp",
         faqs: [
           {
@@ -285,6 +318,17 @@ export const serviceContentMap: Record<string, { description: React.ReactNode, b
             "2. Deep Cleaning Execution: Utilizing specialized proprietary chemical blends and precise water pressure to obliterate stains at a molecular level.",
             "3. Final Quality Check: A rigorous post-wash inspection alongside the property owner to guarantee flawless 100% satisfaction."
         ],
+        pricing: {
+            title: "Transparent Pressure Washing Pricing",
+            description: "Every property is unique, but we believe in 100% transparent pricing. Quotes are calculated based on exact square footage and complexity.",
+            rateTitle: "Estimated Rate",
+            ratePrice: "Custom Assessed",
+            rateDetails: "Calculated based on the exact dimensions of your property.",
+            minimumPrice: "$150.00",
+            minimumDetails: "Our baseline rate to deploy specialized equipment and technicians.",
+            variableTitle: "Cost Variables",
+            variableDetails: "Final price depends on total size, location logistics, and severity of cleaning required."
+        },
         image: "/images/portfolio/pressure-washing.webp",
         faqs: [
           {
@@ -317,6 +361,17 @@ export const serviceContentMap: Record<string, { description: React.ReactNode, b
             "2. Deep Cleaning Execution: Utilizing specialized proprietary chemical blends and precise water pressure to obliterate stains at a molecular level.",
             "3. Final Quality Check: A rigorous post-wash inspection alongside the property owner to guarantee flawless 100% satisfaction."
         ],
+        pricing: {
+            title: "Transparent Residential Permanent Led Lighting Pricing",
+            description: "Every property is unique, but we believe in 100% transparent pricing. Quotes are calculated based on exact square footage and complexity.",
+            rateTitle: "Estimated Rate",
+            ratePrice: "Custom Assessed",
+            rateDetails: "Calculated based on the exact dimensions of your property.",
+            minimumPrice: "$150.00",
+            minimumDetails: "Our baseline rate to deploy specialized equipment and technicians.",
+            variableTitle: "Cost Variables",
+            variableDetails: "Final price depends on total size, location logistics, and severity of cleaning required."
+        },
         image: "/images/portfolio/permanent-lights.webp",
         faqs: [
           {
@@ -349,6 +404,17 @@ export const serviceContentMap: Record<string, { description: React.ReactNode, b
             "2. Deep Cleaning Execution: Utilizing specialized proprietary chemical blends and precise water pressure to obliterate stains at a molecular level.",
             "3. Final Quality Check: A rigorous post-wash inspection alongside the property owner to guarantee flawless 100% satisfaction."
         ],
+        pricing: {
+            title: "Transparent Fence Cleaning Pricing",
+            description: "Every property is unique, but we believe in 100% transparent pricing. Quotes are calculated based on exact square footage and complexity.",
+            rateTitle: "Estimated Rate",
+            ratePrice: "Custom Assessed",
+            rateDetails: "Calculated based on the exact dimensions of your property.",
+            minimumPrice: "$150.00",
+            minimumDetails: "Our baseline rate to deploy specialized equipment and technicians.",
+            variableTitle: "Cost Variables",
+            variableDetails: "Final price depends on total size, location logistics, and severity of cleaning required."
+        },
         image: "/images/portfolio/fence-cleaning.webp",
         faqs: [
           {
@@ -381,6 +447,17 @@ export const serviceContentMap: Record<string, { description: React.ReactNode, b
             "2. Deep Cleaning Execution: Utilizing specialized proprietary chemical blends and precise water pressure to obliterate stains at a molecular level.",
             "3. Final Quality Check: A rigorous post-wash inspection alongside the property owner to guarantee flawless 100% satisfaction."
         ],
+        pricing: {
+            title: "Transparent Deck Cleaning Pricing",
+            description: "Every property is unique, but we believe in 100% transparent pricing. Quotes are calculated based on exact square footage and complexity.",
+            rateTitle: "Estimated Rate",
+            ratePrice: "Custom Assessed",
+            rateDetails: "Calculated based on the exact dimensions of your property.",
+            minimumPrice: "$150.00",
+            minimumDetails: "Our baseline rate to deploy specialized equipment and technicians.",
+            variableTitle: "Cost Variables",
+            variableDetails: "Final price depends on total size, location logistics, and severity of cleaning required."
+        },
         image: "/images/portfolio/deck-cleaning.webp",
         faqs: [
           {
@@ -413,6 +490,17 @@ export const serviceContentMap: Record<string, { description: React.ReactNode, b
             "2. Deep Cleaning Execution: Utilizing specialized proprietary chemical blends and precise water pressure to obliterate stains at a molecular level.",
             "3. Final Quality Check: A rigorous post-wash inspection alongside the property owner to guarantee flawless 100% satisfaction."
         ],
+        pricing: {
+            title: "Transparent Oxidation Removal Pricing",
+            description: "Every property is unique, but we believe in 100% transparent pricing. Quotes are calculated based on exact square footage and complexity.",
+            rateTitle: "Estimated Rate",
+            ratePrice: "Custom Assessed",
+            rateDetails: "Calculated based on the exact dimensions of your property.",
+            minimumPrice: "$150.00",
+            minimumDetails: "Our baseline rate to deploy specialized equipment and technicians.",
+            variableTitle: "Cost Variables",
+            variableDetails: "Final price depends on total size, location logistics, and severity of cleaning required."
+        },
         image: "/images/portfolio/oxidation-removal.webp",
         faqs: [
           {
@@ -445,6 +533,17 @@ export const serviceContentMap: Record<string, { description: React.ReactNode, b
             "2. Deep Cleaning Execution: Utilizing specialized proprietary chemical blends and precise water pressure to obliterate stains at a molecular level.",
             "3. Final Quality Check: A rigorous post-wash inspection alongside the property owner to guarantee flawless 100% satisfaction."
         ],
+        pricing: {
+            title: "Transparent Soft Wash Pricing",
+            description: "Every property is unique, but we believe in 100% transparent pricing. Quotes are calculated based on exact square footage and complexity.",
+            rateTitle: "Estimated Rate",
+            ratePrice: "Custom Assessed",
+            rateDetails: "Calculated based on the exact dimensions of your property.",
+            minimumPrice: "$150.00",
+            minimumDetails: "Our baseline rate to deploy specialized equipment and technicians.",
+            variableTitle: "Cost Variables",
+            variableDetails: "Final price depends on total size, location logistics, and severity of cleaning required."
+        },
         image: "/images/portfolio/house-wash-before-after.webp",
         faqs: [
           {
@@ -477,6 +576,17 @@ export const serviceContentMap: Record<string, { description: React.ReactNode, b
             "2. Deep Cleaning Execution: Utilizing specialized proprietary chemical blends and precise water pressure to obliterate stains at a molecular level.",
             "3. Final Quality Check: A rigorous post-wash inspection alongside the property owner to guarantee flawless 100% satisfaction."
         ],
+        pricing: {
+            title: "Transparent Driveway Cleaning Pricing",
+            description: "Every property is unique, but we believe in 100% transparent pricing. Quotes are calculated based on exact square footage and complexity.",
+            rateTitle: "Estimated Rate",
+            ratePrice: "Custom Assessed",
+            rateDetails: "Calculated based on the exact dimensions of your property.",
+            minimumPrice: "$150.00",
+            minimumDetails: "Our baseline rate to deploy specialized equipment and technicians.",
+            variableTitle: "Cost Variables",
+            variableDetails: "Final price depends on total size, location logistics, and severity of cleaning required."
+        },
         image: "/images/portfolio/drive-way-cleaning.webp",
         faqs: [
           {
@@ -509,6 +619,17 @@ export const serviceContentMap: Record<string, { description: React.ReactNode, b
             "2. Deep Cleaning Execution: Utilizing specialized proprietary chemical blends and precise water pressure to obliterate stains at a molecular level.",
             "3. Final Quality Check: A rigorous post-wash inspection alongside the property owner to guarantee flawless 100% satisfaction."
         ],
+        pricing: {
+            title: "Transparent Solar Panel Cleaning Pricing",
+            description: "Every property is unique, but we believe in 100% transparent pricing. Quotes are calculated based on exact square footage and complexity.",
+            rateTitle: "Estimated Rate",
+            ratePrice: "Custom Assessed",
+            rateDetails: "Calculated based on the exact dimensions of your property.",
+            minimumPrice: "$150.00",
+            minimumDetails: "Our baseline rate to deploy specialized equipment and technicians.",
+            variableTitle: "Cost Variables",
+            variableDetails: "Final price depends on total size, location logistics, and severity of cleaning required."
+        },
         image: "/images/portfolio/solar-panel-cleaning.webp",
         faqs: [
           {
@@ -541,6 +662,17 @@ export const serviceContentMap: Record<string, { description: React.ReactNode, b
             "2. Deep Cleaning Execution: Utilizing specialized proprietary chemical blends and precise water pressure to obliterate stains at a molecular level.",
             "3. Final Quality Check: A rigorous post-wash inspection alongside the property owner to guarantee flawless 100% satisfaction."
         ],
+        pricing: {
+            title: "Transparent Rust Removal Pricing",
+            description: "Every property is unique, but we believe in 100% transparent pricing. Quotes are calculated based on exact square footage and complexity.",
+            rateTitle: "Estimated Rate",
+            ratePrice: "Custom Assessed",
+            rateDetails: "Calculated based on the exact dimensions of your property.",
+            minimumPrice: "$150.00",
+            minimumDetails: "Our baseline rate to deploy specialized equipment and technicians.",
+            variableTitle: "Cost Variables",
+            variableDetails: "Final price depends on total size, location logistics, and severity of cleaning required."
+        },
         image: "/images/portfolio/rust-removal.webp",
         faqs: [
           {
@@ -573,6 +705,17 @@ export const serviceContentMap: Record<string, { description: React.ReactNode, b
             "2. Deep Cleaning Execution: Utilizing specialized proprietary chemical blends and precise water pressure to obliterate stains at a molecular level.",
             "3. Final Quality Check: A rigorous post-wash inspection alongside the property owner to guarantee flawless 100% satisfaction."
         ],
+        pricing: {
+            title: "Transparent Building Washing Pricing",
+            description: "Every property is unique, but we believe in 100% transparent pricing. Quotes are calculated based on exact square footage and complexity.",
+            rateTitle: "Estimated Rate",
+            ratePrice: "Custom Assessed",
+            rateDetails: "Calculated based on the exact dimensions of your property.",
+            minimumPrice: "$150.00",
+            minimumDetails: "Our baseline rate to deploy specialized equipment and technicians.",
+            variableTitle: "Cost Variables",
+            variableDetails: "Final price depends on total size, location logistics, and severity of cleaning required."
+        },
         image: "/images/portfolio/building-washing.webp",
         faqs: [
           {
@@ -605,6 +748,17 @@ export const serviceContentMap: Record<string, { description: React.ReactNode, b
             "2. Deep Cleaning Execution: Utilizing specialized proprietary chemical blends and precise water pressure to obliterate stains at a molecular level.",
             "3. Final Quality Check: A rigorous post-wash inspection alongside the property owner to guarantee flawless 100% satisfaction."
         ],
+        pricing: {
+            title: "Transparent Dumpster Pad Cleaning Pricing",
+            description: "Every property is unique, but we believe in 100% transparent pricing. Quotes are calculated based on exact square footage and complexity.",
+            rateTitle: "Estimated Rate",
+            ratePrice: "Custom Assessed",
+            rateDetails: "Calculated based on the exact dimensions of your property.",
+            minimumPrice: "$250.00",
+            minimumDetails: "Our baseline rate to deploy specialized equipment and technicians.",
+            variableTitle: "Cost Variables",
+            variableDetails: "Final price depends on total size, location logistics, and severity of cleaning required."
+        },
         image: "/images/portfolio/commerical-pressure-wash.webp",
         faqs: [
           {
@@ -637,6 +791,17 @@ export const serviceContentMap: Record<string, { description: React.ReactNode, b
             "2. Deep Cleaning Execution: Utilizing specialized proprietary chemical blends and precise water pressure to obliterate stains at a molecular level.",
             "3. Final Quality Check: A rigorous post-wash inspection alongside the property owner to guarantee flawless 100% satisfaction."
         ],
+        pricing: {
+            title: "Transparent Permanent Led Lighting Pricing",
+            description: "Every property is unique, but we believe in 100% transparent pricing. Quotes are calculated based on exact square footage and complexity.",
+            rateTitle: "Estimated Rate",
+            ratePrice: "Custom Assessed",
+            rateDetails: "Calculated based on the exact dimensions of your property.",
+            minimumPrice: "$1,500.00",
+            minimumDetails: "Our baseline rate to deploy specialized equipment and technicians.",
+            variableTitle: "Cost Variables",
+            variableDetails: "Final price depends on total size, location logistics, and severity of cleaning required."
+        },
         image: "/images/portfolio/permanent-led-lighting.webp",
         faqs: [
           {
@@ -669,6 +834,17 @@ export const serviceContentMap: Record<string, { description: React.ReactNode, b
             "2. Deep Cleaning Execution: Utilizing specialized proprietary chemical blends and precise water pressure to obliterate stains at a molecular level.",
             "3. Final Quality Check: A rigorous post-wash inspection alongside the property owner to guarantee flawless 100% satisfaction."
         ],
+        pricing: {
+            title: "Transparent Commercial Roof Cleaning Pricing",
+            description: "Every property is unique, but we believe in 100% transparent pricing. Quotes are calculated based on exact square footage and complexity.",
+            rateTitle: "Estimated Rate",
+            ratePrice: "Custom Assessed",
+            rateDetails: "Calculated based on the exact dimensions of your property.",
+            minimumPrice: "$800.00",
+            minimumDetails: "Our baseline rate to deploy specialized equipment and technicians.",
+            variableTitle: "Cost Variables",
+            variableDetails: "Final price depends on total size, location logistics, and severity of cleaning required."
+        },
         image: "/images/portfolio/roof-cleaning-copy.webp",
         faqs: [
           {
@@ -701,6 +877,17 @@ export const serviceContentMap: Record<string, { description: React.ReactNode, b
             "2. Deep Cleaning Execution: Utilizing specialized proprietary chemical blends and precise water pressure to obliterate stains at a molecular level.",
             "3. Final Quality Check: A rigorous post-wash inspection alongside the property owner to guarantee flawless 100% satisfaction."
         ],
+        pricing: {
+            title: "Transparent Commercial Pressure Washing Pricing",
+            description: "Every property is unique, but we believe in 100% transparent pricing. Quotes are calculated based on exact square footage and complexity.",
+            rateTitle: "Estimated Rate",
+            ratePrice: "Custom Assessed",
+            rateDetails: "Calculated based on the exact dimensions of your property.",
+            minimumPrice: "$150.00",
+            minimumDetails: "Our baseline rate to deploy specialized equipment and technicians.",
+            variableTitle: "Cost Variables",
+            variableDetails: "Final price depends on total size, location logistics, and severity of cleaning required."
+        },
         image: "/images/portfolio/commerical-pressure-wash.webp",
         faqs: [
           {
@@ -733,6 +920,17 @@ export const serviceContentMap: Record<string, { description: React.ReactNode, b
             "2. Deep Cleaning Execution: Utilizing specialized proprietary chemical blends and precise water pressure to obliterate stains at a molecular level.",
             "3. Final Quality Check: A rigorous post-wash inspection alongside the property owner to guarantee flawless 100% satisfaction."
         ],
+        pricing: {
+            title: "Transparent Graffiti Removal Pricing",
+            description: "Every property is unique, but we believe in 100% transparent pricing. Quotes are calculated based on exact square footage and complexity.",
+            rateTitle: "Estimated Rate",
+            ratePrice: "Custom Assessed",
+            rateDetails: "Calculated based on the exact dimensions of your property.",
+            minimumPrice: "$150.00",
+            minimumDetails: "Our baseline rate to deploy specialized equipment and technicians.",
+            variableTitle: "Cost Variables",
+            variableDetails: "Final price depends on total size, location logistics, and severity of cleaning required."
+        },
         image: "/images/portfolio/graffiti-removal.jpg.webp",
         faqs: [
           {
@@ -766,6 +964,17 @@ export const serviceContentMap: Record<string, { description: React.ReactNode, b
             "2. Deep Cleaning Execution: Utilizing specialized proprietary chemical blends and precise water pressure to obliterate stains at a molecular level.",
             "3. Final Quality Check: A rigorous post-wash inspection alongside the property owner to guarantee flawless 100% satisfaction."
         ],
+        pricing: {
+            title: "Transparent Hoa Multi Unit Cleaning Pricing",
+            description: "Every property is unique, but we believe in 100% transparent pricing. Quotes are calculated based on exact square footage and complexity.",
+            rateTitle: "Estimated Rate",
+            ratePrice: "Custom Assessed",
+            rateDetails: "Calculated based on the exact dimensions of your property.",
+            minimumPrice: "$1,500.00",
+            minimumDetails: "Our baseline rate to deploy specialized equipment and technicians.",
+            variableTitle: "Cost Variables",
+            variableDetails: "Final price depends on total size, location logistics, and severity of cleaning required."
+        },
         image: "/images/portfolio/commercial-cleaning.webp",
         faqs: [
           {
@@ -798,6 +1007,17 @@ export const serviceContentMap: Record<string, { description: React.ReactNode, b
             "2. Deep Cleaning Execution: Utilizing specialized proprietary chemical blends and precise water pressure to obliterate stains at a molecular level.",
             "3. Final Quality Check: A rigorous post-wash inspection alongside the property owner to guarantee flawless 100% satisfaction."
         ],
+        pricing: {
+            title: "Transparent Storefront Cleaning Pricing",
+            description: "Every property is unique, but we believe in 100% transparent pricing. Quotes are calculated based on exact square footage and complexity.",
+            rateTitle: "Estimated Rate",
+            ratePrice: "Custom Assessed",
+            rateDetails: "Calculated based on the exact dimensions of your property.",
+            minimumPrice: "$150.00",
+            minimumDetails: "Our baseline rate to deploy specialized equipment and technicians.",
+            variableTitle: "Cost Variables",
+            variableDetails: "Final price depends on total size, location logistics, and severity of cleaning required."
+        },
         image: "/images/portfolio/store-front-cleaning.webp",
         faqs: [
           {
@@ -830,6 +1050,17 @@ export const serviceContentMap: Record<string, { description: React.ReactNode, b
             "2. Deep Cleaning Execution: Utilizing specialized proprietary chemical blends and precise water pressure to obliterate stains at a molecular level.",
             "3. Final Quality Check: A rigorous post-wash inspection alongside the property owner to guarantee flawless 100% satisfaction."
         ],
+        pricing: {
+            title: "Transparent Premium Drive Thru Cleaning Pricing",
+            description: "Every property is unique, but we believe in 100% transparent pricing. Quotes are calculated based on exact square footage and complexity.",
+            rateTitle: "Estimated Rate",
+            ratePrice: "Custom Assessed",
+            rateDetails: "Calculated based on the exact dimensions of your property.",
+            minimumPrice: "$150.00",
+            minimumDetails: "Our baseline rate to deploy specialized equipment and technicians.",
+            variableTitle: "Cost Variables",
+            variableDetails: "Final price depends on total size, location logistics, and severity of cleaning required."
+        },
         image: "/images/portfolio/drive-through-cleaning.webp",
         faqs: [
           {
@@ -862,6 +1093,17 @@ export const serviceContentMap: Record<string, { description: React.ReactNode, b
             "2. Deep Cleaning Execution: Utilizing specialized proprietary chemical blends and precise water pressure to obliterate stains at a molecular level.",
             "3. Final Quality Check: A rigorous post-wash inspection alongside the property owner to guarantee flawless 100% satisfaction."
         ],
+        pricing: {
+            title: "Transparent Parking Lot And Garage Cleaning Pricing",
+            description: "Every property is unique, but we believe in 100% transparent pricing. Quotes are calculated based on exact square footage and complexity.",
+            rateTitle: "Estimated Rate",
+            ratePrice: "Custom Assessed",
+            rateDetails: "Calculated based on the exact dimensions of your property.",
+            minimumPrice: "$150.00",
+            minimumDetails: "Our baseline rate to deploy specialized equipment and technicians.",
+            variableTitle: "Cost Variables",
+            variableDetails: "Final price depends on total size, location logistics, and severity of cleaning required."
+        },
         image: "/images/portfolio/garage-cleaning-before-after.webp",
         faqs: [
           {
@@ -894,6 +1136,17 @@ export const serviceContentMap: Record<string, { description: React.ReactNode, b
             "2. Deep Cleaning Execution: Utilizing specialized proprietary chemical blends and precise water pressure to obliterate stains at a molecular level.",
             "3. Final Quality Check: A rigorous post-wash inspection alongside the property owner to guarantee flawless 100% satisfaction."
         ],
+        pricing: {
+            title: "Transparent Chewing Gum Removal Pricing",
+            description: "Every property is unique, but we believe in 100% transparent pricing. Quotes are calculated based on exact square footage and complexity.",
+            rateTitle: "Estimated Rate",
+            ratePrice: "Custom Assessed",
+            rateDetails: "Calculated based on the exact dimensions of your property.",
+            minimumPrice: "$150.00",
+            minimumDetails: "Our baseline rate to deploy specialized equipment and technicians.",
+            variableTitle: "Cost Variables",
+            variableDetails: "Final price depends on total size, location logistics, and severity of cleaning required."
+        },
         image: "/images/portfolio/patio-cleaning.webp",
         faqs: [
           {
@@ -926,6 +1179,17 @@ export const serviceContentMap: Record<string, { description: React.ReactNode, b
             "2. Deep Cleaning Execution: Utilizing specialized proprietary chemical blends and precise water pressure to obliterate stains at a molecular level.",
             "3. Final Quality Check: A rigorous post-wash inspection alongside the property owner to guarantee flawless 100% satisfaction."
         ],
+        pricing: {
+            title: "Transparent Commercial Awning Cleaning Pricing",
+            description: "Every property is unique, but we believe in 100% transparent pricing. Quotes are calculated based on exact square footage and complexity.",
+            rateTitle: "Estimated Rate",
+            ratePrice: "Custom Assessed",
+            rateDetails: "Calculated based on the exact dimensions of your property.",
+            minimumPrice: "$150.00",
+            minimumDetails: "Our baseline rate to deploy specialized equipment and technicians.",
+            variableTitle: "Cost Variables",
+            variableDetails: "Final price depends on total size, location logistics, and severity of cleaning required."
+        },
         image: "/images/portfolio/awning-cleaning.webp",
         faqs: [
           {
@@ -959,6 +1223,17 @@ export const serviceContentMap: Record<string, { description: React.ReactNode, b
             "2. Deep Cleaning Execution: Utilizing specialized proprietary chemical blends and precise water pressure to obliterate stains at a molecular level.",
             "3. Final Quality Check: A rigorous post-wash inspection alongside the property owner to guarantee flawless 100% satisfaction."
         ],
+        pricing: {
+            title: "Transparent Gas Station Cleaning Pricing",
+            description: "Every property is unique, but we believe in 100% transparent pricing. Quotes are calculated based on exact square footage and complexity.",
+            rateTitle: "Estimated Rate",
+            ratePrice: "Custom Assessed",
+            rateDetails: "Calculated based on the exact dimensions of your property.",
+            minimumPrice: "$150.00",
+            minimumDetails: "Our baseline rate to deploy specialized equipment and technicians.",
+            variableTitle: "Cost Variables",
+            variableDetails: "Final price depends on total size, location logistics, and severity of cleaning required."
+        },
         image: "/images/portfolio/oil-stain-removal.webp",
         faqs: [
           {
@@ -991,6 +1266,17 @@ export const serviceContentMap: Record<string, { description: React.ReactNode, b
             "2. Deep Cleaning Execution: Utilizing specialized proprietary chemical blends and precise water pressure to obliterate stains at a molecular level.",
             "3. Final Quality Check: A rigorous post-wash inspection alongside the property owner to guarantee flawless 100% satisfaction."
         ],
+        pricing: {
+            title: "Transparent Post Construction Cleanup Pricing",
+            description: "Every property is unique, but we believe in 100% transparent pricing. Quotes are calculated based on exact square footage and complexity.",
+            rateTitle: "Estimated Rate",
+            ratePrice: "Custom Assessed",
+            rateDetails: "Calculated based on the exact dimensions of your property.",
+            minimumPrice: "$150.00",
+            minimumDetails: "Our baseline rate to deploy specialized equipment and technicians.",
+            variableTitle: "Cost Variables",
+            variableDetails: "Final price depends on total size, location logistics, and severity of cleaning required."
+        },
         image: "/images/portfolio/post-construction-cleaning.webp",
         faqs: [
           {
@@ -1023,6 +1309,17 @@ export const serviceContentMap: Record<string, { description: React.ReactNode, b
             "2. Deep Cleaning Execution: Utilizing specialized proprietary chemical blends and precise water pressure to obliterate stains at a molecular level.",
             "3. Final Quality Check: A rigorous post-wash inspection alongside the property owner to guarantee flawless 100% satisfaction."
         ],
+        pricing: {
+            title: "Transparent Paver Patio Restorations Pricing",
+            description: "Every property is unique, but we believe in 100% transparent pricing. Quotes are calculated based on exact square footage and complexity.",
+            rateTitle: "Estimated Rate",
+            ratePrice: "Custom Assessed",
+            rateDetails: "Calculated based on the exact dimensions of your property.",
+            minimumPrice: "$150.00",
+            minimumDetails: "Our baseline rate to deploy specialized equipment and technicians.",
+            variableTitle: "Cost Variables",
+            variableDetails: "Final price depends on total size, location logistics, and severity of cleaning required."
+        },
         image: "/images/portfolio/paver-restoration.webp",
         faqs: [
           {
@@ -1055,6 +1352,17 @@ export const serviceContentMap: Record<string, { description: React.ReactNode, b
             "2. Deep Cleaning Execution: Utilizing specialized proprietary chemical blends and precise water pressure to obliterate stains at a molecular level.",
             "3. Final Quality Check: A rigorous post-wash inspection alongside the property owner to guarantee flawless 100% satisfaction."
         ],
+        pricing: {
+            title: "Transparent Commercial Hood Cleaning Pricing",
+            description: "Every property is unique, but we believe in 100% transparent pricing. Quotes are calculated based on exact square footage and complexity.",
+            rateTitle: "Estimated Rate",
+            ratePrice: "Custom Assessed",
+            rateDetails: "Calculated based on the exact dimensions of your property.",
+            minimumPrice: "$150.00",
+            minimumDetails: "Our baseline rate to deploy specialized equipment and technicians.",
+            variableTitle: "Cost Variables",
+            variableDetails: "Final price depends on total size, location logistics, and severity of cleaning required."
+        },
         image: "/images/portfolio/hood-vent-cleaning.webp",
         faqs: [
           {
@@ -1088,6 +1396,17 @@ export const serviceContentMap: Record<string, { description: React.ReactNode, b
             "2. Deep Cleaning Execution: Utilizing specialized proprietary chemical blends and precise water pressure to obliterate stains at a molecular level.",
             "3. Final Quality Check: A rigorous post-wash inspection alongside the property owner to guarantee flawless 100% satisfaction."
         ],
+        pricing: {
+            title: "Transparent Apartment Exterior Cleaning Pricing",
+            description: "Every property is unique, but we believe in 100% transparent pricing. Quotes are calculated based on exact square footage and complexity.",
+            rateTitle: "Estimated Rate",
+            ratePrice: "Custom Assessed",
+            rateDetails: "Calculated based on the exact dimensions of your property.",
+            minimumPrice: "$1,000.00",
+            minimumDetails: "Our baseline rate to deploy specialized equipment and technicians.",
+            variableTitle: "Cost Variables",
+            variableDetails: "Final price depends on total size, location logistics, and severity of cleaning required."
+        },
         image: "/images/portfolio/soft-washing.webp",
         faqs: [
           {

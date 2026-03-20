@@ -1,3 +1,5 @@
+import PricingMatrix from '@/components/PricingMatrix';
+import { serviceContentMap } from '@/data/serviceContent';
 import { Mail, Phone } from "lucide-react";
 import Image from "next/image";
 import HeroForm from "@/components/HeroForm";
@@ -88,7 +90,11 @@ export default function ApartmentHOACleaningPage() {
             </div>
 
             <div className="bg-slate-50 border-t border-gray-200 relative">
-                <VanillaMapClient />
+                
+            {serviceContentMap['hoa-multi-unit-cleaning']?.pricing && (
+                <PricingMatrix {...serviceContentMap['hoa-multi-unit-cleaning'].pricing} />
+            )}
+            <VanillaMapClient />
             </div>
 
             <FAQAccordion

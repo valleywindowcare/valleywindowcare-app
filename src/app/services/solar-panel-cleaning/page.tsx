@@ -1,4 +1,6 @@
 import React from 'react';
+import PricingMatrix from '@/components/PricingMatrix';
+import { serviceContentMap } from '@/data/serviceContent';
 import Link from 'next/link';
 import ServiceGrid from '@/components/ServiceGrid';
 import Hero from '@/components/Hero';
@@ -160,15 +162,7 @@ export default function ServicePage() {
                         </div>
                     </section>
 
-                    {/* PRICING EXPECTATIONS MODULE */}
-                    <section className="mb-16 bg-navy text-white p-8 md:p-12 rounded-3xl not-prose shadow-lg border border-navy-light">
-                        <h2 className="text-3xl md:text-4xl font-extrabold mb-6 text-gold border-b border-white/20 pb-6">
-                            Pricing Expectations
-                        </h2>
-                        <div className="text-xl text-gray-200 leading-relaxed">
-                            Residential solar panel cleaning starts at $149. The final quote depends on total panel count. Extremely high roof pitches increase the overall price. We provide exact quotes upfront. Ready to protect your property? <Link href="/contact" className="text-gold font-bold hover:text-white transition-colors underline">Contact our team for a free, no-obligation quote today.</Link>
-                        </div>
-                    </section>
+                    
                     
                     {/* LOCAL SEO & CROSS-LINKING */}
                     <section className="mb-16">
@@ -197,6 +191,10 @@ export default function ServicePage() {
             </div>
 
 
+            
+            {serviceContentMap['solar-panel-cleaning']?.pricing && (
+                <PricingMatrix {...serviceContentMap['solar-panel-cleaning'].pricing} />
+            )}
             <ReviewSlider />
 
             {/* SERVICES GRID */}

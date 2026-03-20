@@ -1,3 +1,5 @@
+import PricingMatrix from '@/components/PricingMatrix';
+import { serviceContentMap } from '@/data/serviceContent';
 import { Mail, Phone } from "lucide-react";
 import Image from "next/image";
 import HeroForm from "@/components/HeroForm";
@@ -134,21 +136,16 @@ export default function PermanentHolidayLightingPage() {
                         </div>
                     </div>
 
-                    <div className="mt-16 bg-navy text-white p-8 md:p-12 rounded-3xl shadow-lg border border-navy-light mb-12">
-                        <h2 className="text-3xl md:text-4xl font-extrabold mb-6 text-gold border-b border-white/20 pb-6">
-                            A Permanent Investment in Your Property
-                        </h2>
-                        <div className="text-xl text-gray-200 leading-relaxed">
-                            <p>
-                                Stop paying recurring seasonal fees for temporary holiday light setups and takedowns. Our Omni Lighting permanent systems are custom-quoted based on the exact linear footage of your roofline and architectural features. This one-time investment not only dramatically increases your nighttime curb appeal and security but pays for itself by eliminating yearly installation costs and maintenance.
-                            </p>
-                        </div>
-                    </div>
+                    
                 </div>
             </section>
 
             <div className="bg-slate-50 border-t border-gray-200 relative">
-                <VanillaMapClient />
+                
+            {serviceContentMap['christmas-lighting']?.pricing && (
+                <PricingMatrix {...serviceContentMap['christmas-lighting'].pricing} />
+            )}
+            <VanillaMapClient />
             </div>
             
             <FAQAccordion
