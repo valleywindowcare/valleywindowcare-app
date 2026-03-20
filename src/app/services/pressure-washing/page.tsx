@@ -4,8 +4,6 @@ import HeroForm from "@/components/HeroForm";
 import Process from "@/components/Process";
 import ServiceContent from "@/components/ServiceContent";
 import SEOAuthorityEngine from "@/components/SEOAuthorityEngine";
-import FAQAccordion from "@/components/FAQAccordion";
-import { faqData } from "@/data/faqData";
 import VanillaMapClient from "@/components/VanillaMapClient";
 
 export const metadata = {
@@ -170,6 +168,44 @@ export default function PressureWashingPage() {
                 </div>
             </section>
 
+            {/* PROPERTY PROTECTION PROTOCOL */}
+            <section className="bg-slate-50 py-16 border-y border-gray-200">
+                <div className="container mx-auto px-4 max-w-6xl">
+                    <h2 className="text-3xl md:text-4xl font-extrabold text-navy text-center mb-12">
+                        Our Strict Property Protection Protocol
+                    </h2>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-gold/50 transition-colors">
+                            <h3 className="text-xl font-bold text-navy mb-4 flex items-center gap-3">
+                                <span className="w-8 h-8 rounded-full bg-gold/20 text-navy-dark flex items-center justify-center text-sm font-black tracking-tighter">01</span>
+                                Pre-Wash Inspection
+                            </h3>
+                            <p className="text-gray-600 leading-relaxed font-medium">
+                                Before any equipment is started, our technicians conduct a comprehensive walkthrough to document existing oxidation, failing window seals, or delicate architectural features.
+                            </p>
+                        </div>
+                        <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-gold/50 transition-colors">
+                            <h3 className="text-xl font-bold text-navy mb-4 flex items-center gap-3">
+                                <span className="w-8 h-8 rounded-full bg-gold/20 text-navy-dark flex items-center justify-center text-sm font-black tracking-tighter">02</span>
+                                Botanical Safeguards
+                            </h3>
+                            <p className="text-gray-600 leading-relaxed font-medium">
+                                Your landscaping is an investment. We thoroughly pre-hydrate and post-hydrate all surrounding plants, grass, and vegetation with fresh water to completely neutralize any cleaning solutions.
+                            </p>
+                        </div>
+                        <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-gold/50 transition-colors">
+                            <h3 className="text-xl font-bold text-navy mb-4 flex items-center gap-3">
+                                <span className="w-8 h-8 rounded-full bg-gold/20 text-navy-dark flex items-center justify-center text-sm font-black tracking-tighter">03</span>
+                                Low-Pressure Guarantee
+                            </h3>
+                            <p className="text-gray-600 leading-relaxed font-medium">
+                                We strictly prohibit the use of destructive high-pressure blasting on delicate surfaces like vinyl siding and asphalt roofs, ensuring your manufacturer warranties remain perfectly intact.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* TRANSPARENT PRICING TABLE */}
             <section className="container mx-auto px-4 py-16 max-w-5xl">
                 <h2 className="text-3xl md:text-4xl font-extrabold text-navy text-center mb-8">
@@ -250,9 +286,32 @@ export default function PressureWashingPage() {
                 <VanillaMapClient />
             </div>
 
-            <FAQAccordion
-                faqs={faqData["pressure-washing"] || []}
-            />
+            {/* BLUF FAQ SECTION */}
+            <section className="container mx-auto px-4 py-16 max-w-4xl">
+                <h2 className="text-3xl md:text-4xl font-extrabold text-navy text-center mb-12">
+                    Frequently Asked Questions
+                </h2>
+                <div className="space-y-6">
+                    <div className="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100">
+                        <h3 className="text-xl font-bold text-navy mb-3">Is soft washing safe for vinyl siding?</h3>
+                        <p className="text-gray-600 leading-relaxed font-medium">
+                            Yes, soft washing is the safest and most effective method for cleaning vinyl siding. Unlike high-pressure washing that can force water behind panels, we use low pressure (under 150 PSI) and eco-friendly detergents to dissolve dirt and algae safely.
+                        </p>
+                    </div>
+                    <div className="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100">
+                        <h3 className="text-xl font-bold text-navy mb-3">Will pressure washing damage my concrete driveway?</h3>
+                        <p className="text-gray-600 leading-relaxed font-medium">
+                            No, professional pressure washing restores concrete and prevents damage. We use calibrated surface cleaners to safely extract deep oil stains and organic growth, preventing the severe freeze-thaw cracking common in Wisconsin winters.
+                        </p>
+                    </div>
+                    <div className="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100">
+                        <h3 className="text-xl font-bold text-navy mb-3">Are your pressure washing chemicals safe for pets?</h3>
+                        <p className="text-gray-600 leading-relaxed font-medium">
+                            Absolutely. Valley Window Care exclusively utilizes 100% biodegradable, non-butyl, and EPA-compliant cleaning solutions that are completely safe for your family, pets, and the local Fox Valley environment.
+                        </p>
+                    </div>
+                </div>
+            </section>
         </main>
     );
 }
