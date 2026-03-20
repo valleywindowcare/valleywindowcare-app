@@ -247,6 +247,7 @@ export default async function ServiceGenericPage({ params }: PageProps) {
                     description={content.description}
                     benefits={content.benefits}
                     process={content.process}
+                    protectionProtocols={content.protectionProtocols}
                     image={bodyImageToUse}
                 />
             )}
@@ -393,7 +394,19 @@ export default async function ServiceGenericPage({ params }: PageProps) {
                             dangerouslySetInnerHTML={{ __html: JSON.stringify(localFaqSchema) }}
                         />
                         <div className="container mx-auto px-4 max-w-4xl">
-                            <FAQAccordion faqs={serviceFaqs} />
+                            <div className="mb-12 text-center">
+                                <h2 className="text-3xl md:text-4xl font-extrabold text-navy mb-4">Frequently Asked Questions</h2>
+                                <p className="text-gray-600 text-lg max-w-2xl mx-auto font-medium">Get factual, direct answers regarding our local {formattedName.toLowerCase()} methodology.</p>
+                            </div>
+                            <div className="space-y-8">
+                                {serviceFaqs.map((faq: { question: string, answer: string }, index: number) => (
+                                    <div key={index} className="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 relative overflow-hidden group hover:border-gold/30 hover:shadow-md transition-all">
+                                        <div className="absolute top-0 left-0 w-2 h-full bg-gold"></div>
+                                        <h3 className="text-xl font-bold text-navy-dark mb-3 pl-4">Q: {faq.question}</h3>
+                                        <p className="text-gray-700 leading-relaxed font-medium pl-4 text-lg">A: {faq.answer}</p>
+                                    </div>
+                                ))}
+                            </div>
                             <div className="text-center mt-12 block">
                                 <Link href="/faq" className="inline-flex font-bold text-navy hover:text-gold transition-colors items-center gap-2">
                                     View All FAQs <span aria-hidden="true">&rarr;</span>

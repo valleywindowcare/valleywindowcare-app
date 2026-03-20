@@ -88,12 +88,39 @@ export default function ServicePage() {
                         </p>
                     </section>
 
+                    {/* STRICT PROPERTY PROTECTION PROTOCOL */}
+                    <section className="mb-16 bg-[#F8FAFC] p-8 md:p-12 rounded-3xl border-t-4 border-gold shadow-sm">
+                        <div className="flex items-center gap-3 mb-8">
+                            <ShieldCheck className="text-gold" size={32} />
+                            <h2 className="text-3xl md:text-4xl font-extrabold text-navy m-0">
+                                Our Strict Property Protection Protocol
+                            </h2>
+                        </div>
+                        <p className="text-lg leading-relaxed mb-8 text-gray-700 font-medium">
+                            We deploy proprietary, zero-damage methods to safeguard your exterior surfaces and interior furnishings.
+                        </p>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 not-prose">
+                            <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                                <h4 className="text-xl font-bold text-navy-dark mb-3">Pure-Water Guarantee</h4>
+                                <p className="text-gray-600 leading-relaxed">We use 100% deionized purified water. This completely eliminates hard mineral spotting on your siding or delicate brickwork when rinsing glass.</p>
+                            </div>
+                            <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                                <h4 className="text-xl font-bold text-navy-dark mb-3">Interior Bootie Protocol</h4>
+                                <p className="text-gray-600 leading-relaxed">When cleaning interior glass panes, our technicians are strictly required to wear clean surgical booties to protect your expensive flooring and carpets.</p>
+                            </div>
+                            <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                                <h4 className="text-xl font-bold text-navy-dark mb-3">Ladder Standoff Mitigation</h4>
+                                <p className="text-gray-600 leading-relaxed">We utilize specialized carbon-fiber poles reaching up to three stories. This permanently eliminates the need for heavy metal ladders crashing against your home.</p>
+                            </div>
+                        </div>
+                    </section>
+
                     {/* METHODOLOGY/PROCESS STEPS */}
                     <section className="mb-16">
                         <div className="flex items-center gap-3 mb-8">
                             <ShieldCheck className="text-gold" size={32} />
                             <h2 className="text-3xl md:text-4xl font-extrabold text-navy m-0">
-                                Our Pure-Water Methodology
+                                What is the Professional Pure-Water Window Cleaning Process in Wisconsin?
                             </h2>
                         </div>
 
@@ -143,7 +170,7 @@ export default function ServicePage() {
                     {/* TYPES WE HANDLE (BENEFITS CONTAINER) */}
                     <section className="mb-16 bg-[#FFFFFF] text-[#1E2B3C] p-8 md:p-12 rounded-3xl not-prose shadow-[0_0_40px_rgba(30,43,60,0.06)] border border-gray-100">
                         <h2 className="text-3xl md:text-4xl font-extrabold mb-6 text-navy border-b border-gray-100 pb-6">
-                            Glass Types We Handle
+                            What Types of Glass Do We Professionally Clean in Green Bay?
                         </h2>
 
                         <div className="space-y-6 mt-10">
@@ -179,7 +206,7 @@ export default function ServicePage() {
                     {/* PRICING EXPECTATIONS MODULE */}
                     <section className="mb-16 bg-navy text-white p-8 md:p-12 rounded-3xl not-prose shadow-lg border border-navy-light">
                         <h2 className="text-3xl md:text-4xl font-extrabold mb-6 text-gold border-b border-white/20 pb-6">
-                            Pricing Expectations
+                            How Much Does Professional Window Cleaning Cost in Northeast Wisconsin?
                         </h2>
                         <div className="text-xl text-gray-200 leading-relaxed">
                             Residential exterior window cleaning starts at $149. The final quote depends on total pane count. Difficult ladder access increases the price. We provide exact quotes upfront. Ready to protect your property? <Link href="/contact" className="text-gold font-bold hover:text-white transition-colors underline">Contact our team for a free, no-obligation quote today.</Link>
@@ -215,6 +242,28 @@ export default function ServicePage() {
                                     fill
                                     className="object-cover"
                                 />
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* BLUF FAQ SECTION */}
+                    <section className="mb-16 mt-16 bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-gray-100">
+                        <div className="text-center mb-10">
+                            <h2 className="text-3xl font-extrabold text-navy mb-4">Frequently Asked Questions</h2>
+                            <p className="text-gray-600 text-lg">Direct, factual answers concerning our local window cleaning methodology.</p>
+                        </div>
+                        <div className="space-y-6 text-left">
+                            <div className="p-6 bg-slate-50 border-l-4 border-gold rounded-r-xl">
+                                <h3 className="text-xl font-bold text-navy mb-2">Q: Do you clean window screens and exterior tracks?</h3>
+                                <p className="text-gray-700 leading-relaxed font-medium">A: Yes. Every exterior window washing service includes complimentary dry-brushing of screens and wiping out of the immediate exterior window tracks.</p>
+                            </div>
+                            <div className="p-6 bg-slate-50 border-l-4 border-gold rounded-r-xl">
+                                <h3 className="text-xl font-bold text-navy mb-2">Q: Does pure-water cleaning really work without soap?</h3>
+                                <p className="text-gray-700 leading-relaxed font-medium">A: Absolutely. By aggressively filtering regular tap water with reverse-osmosis and deionizing resin, the hungry pure water molecules act as a powerful solvent that breaks down dirt naturally, leaving a 100% streak-free finish.</p>
+                            </div>
+                            <div className="p-6 bg-slate-50 border-l-4 border-gold rounded-r-xl">
+                                <h3 className="text-xl font-bold text-navy mb-2">Q: Do you offer commercial window cleaning for Green Bay businesses?</h3>
+                                <p className="text-gray-700 leading-relaxed font-medium">A: Yes. We offer customized commercial route schedules for local storefronts, offices, and multi-story retail locations to ensure your business constantly attracts foot traffic.</p>
                             </div>
                         </div>
                     </section>

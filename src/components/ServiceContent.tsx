@@ -7,12 +7,13 @@ interface ServiceContentProps {
     description: React.ReactNode;
     benefits: (string | React.ReactNode)[];
     process: (string | React.ReactNode)[];
+    protectionProtocols?: { title: string; description: string }[];
     city?: string; // Optional city injection for local SEO
     image?: string; // High-res architectural payload
     imageAlt?: string; // High-density SEO alt
 }
 
-export default function ServiceContent({ title, description, benefits, process, city, image, imageAlt }: ServiceContentProps) {
+export default function ServiceContent({ title, description, benefits, process, protectionProtocols, city, image, imageAlt }: ServiceContentProps) {
     const localText = city ? ` in ${city}, WI` : "";
 
     // Dynamic 'Types We Clean' Synthetic SEO Generation
@@ -71,7 +72,7 @@ export default function ServiceContent({ title, description, benefits, process, 
                             <div className="absolute top-0 right-0 p-8 opacity-5">
                                 <svg width="120" height="120" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
                             </div>
-                            <h3 className="text-2xl font-bold text-navy mb-8 relative z-10">Why Choose Us For {title}?</h3>
+                            <h3 className="text-2xl md:text-3xl font-bold text-navy mb-8 relative z-10">What Makes Our {title} Service The Best in Northeast Wisconsin?</h3>
                             <ul className="space-y-6 relative z-10">
                                 {benefits.map((benefit, index) => {
                                     const isString = typeof benefit === 'string';
@@ -119,6 +120,29 @@ export default function ServiceContent({ title, description, benefits, process, 
                 </div>
             </div>
 
+            {/* NEW PROPERTY PROTECTION PROTOCOL BLOCK */}
+            {protectionProtocols && protectionProtocols.length > 0 && (
+                <div className="bg-white py-20 relative overflow-hidden border-t-8 border-gold z-10 shadow-sm">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
+                        <div className="text-center mb-16">
+                            <h2 className="text-4xl lg:text-5xl font-extrabold text-navy mb-6">Our Strict Property Protection Protocol</h2>
+                            <p className="text-xl text-gray-600 max-w-3xl mx-auto font-medium">We deploy proprietary, zero-damage methods to safeguard your exterior surfaces, sensitive landscaping, and surrounding Wisconsin environment.</p>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            {protectionProtocols.map((protocol, index) => (
+                                <div key={index} className="bg-slate-50 p-8 lg:p-10 rounded-2xl border border-gray-100 hover:border-gold/30 hover:bg-white transition-all shadow-sm group">
+                                    <div className="bg-gold/10 w-16 h-16 rounded-xl flex items-center justify-center mb-6 text-gold group-hover:bg-gold transition-colors group-hover:text-white">
+                                        <CheckCircle2 size={32} />
+                                    </div>
+                                    <h4 className="text-2xl font-bold text-navy-dark mb-4 leading-snug">{protocol.title}</h4>
+                                    <p className="text-gray-600 leading-relaxed text-lg">{protocol.description}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            )}
+
             {/* Methodology & Types We Clean Integration Block */}
             <div className="bg-slate-50 py-20 lg:py-32 border-t border-gray-100">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -127,7 +151,7 @@ export default function ServiceContent({ title, description, benefits, process, 
                         {/* Process Execution Block */}
                         <div>
                             <p className="text-gold font-bold tracking-widest uppercase mb-3 text-sm">Methodology</p>
-                            <h3 className="text-3xl lg:text-4xl font-extrabold text-navy mb-12">Our {title} Process</h3>
+                            <h3 className="text-3xl lg:text-4xl font-extrabold text-navy mb-12">What is the Professional {title} Process in Wisconsin?</h3>
 
                             <div className="space-y-8 relative before:absolute before:inset-0 before:ml-6 before:-translate-x-px before:h-full before:w-1 before:bg-gray-200">
                                 {process.map((step, index) => {

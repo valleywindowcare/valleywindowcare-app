@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-export const serviceContentMap: Record<string, { description: React.ReactNode, benefits: (string | React.ReactNode)[], process: (string | React.ReactNode)[], image?: string, faqs?: { question: string, answer: string }[] }> = {
+export const serviceContentMap: Record<string, { description: React.ReactNode, benefits: (string | React.ReactNode)[], process: (string | React.ReactNode)[], protectionProtocols?: { title: string, description: string }[], image?: string, faqs?: { question: string, answer: string }[] }> = {
     "roof-cleaning": {
         description: (
             <section className="eeat-service-block">
@@ -17,6 +17,20 @@ export const serviceContentMap: Record<string, { description: React.ReactNode, b
             "1. Site Inspection & Prep: We conduct a thorough exterior evaluation and meticulously protect all landscaping and delicate surfaces.",
             "2. Deep Cleaning Execution: Utilizing specialized proprietary chemical blends and precise water pressure to obliterate stains at a molecular level.",
             "3. Final Quality Check: A rigorous post-wash inspection alongside the property owner to guarantee flawless 100% satisfaction."
+        ],
+        protectionProtocols: [
+            {
+                title: "OSHA-Compliant Ladder Standoffs",
+                description: "Our engineered mounting hardware rests directly on the roof structure, completely protecting your aluminum gutters from buckling or taking physical damage under the weight of a ladder."
+            },
+            {
+                title: "Downspout Bagging & Filtration",
+                description: "We physically wrap and bag the ends of your downspouts to catch all heavy chemical runoff and dead algae, preventing toxic accumulation in your soil or garden beds."
+            },
+            {
+                title: "Low-Pressure Assurances",
+                description: "We never blast your shingles. We apply highly exact, safe soft-wash algaecides from the safety of the ladder or ground to eliminate Gloeocapsa Magma without voiding your warranty."
+            }
         ],
         image: "/images/portfolio/roof-cleaning.webp",
         faqs: [
@@ -50,6 +64,20 @@ export const serviceContentMap: Record<string, { description: React.ReactNode, b
             "2. Deep Cleaning Execution: Utilizing specialized proprietary chemical blends and precise water pressure to obliterate stains at a molecular level.",
             "3. Final Quality Check: A rigorous post-wash inspection alongside the property owner to guarantee flawless 100% satisfaction."
         ],
+        protectionProtocols: [
+            {
+                title: "Low-Pressure Precision",
+                description: "We strictly utilize water pressure no stronger than a standard garden hose. This guarantees your vinyl siding, delicate wood, or stucco will never be cracked, dented, or permanently blasted away."
+            },
+            {
+                title: "Botanical Hydration Procedures",
+                description: "To protect your massive landscaping investment, our technicians heavily pre-water and post-hydrate all surrounding foundation plants to completely neutralize any over-spray of our biological cleaning agents."
+            },
+            {
+                title: "Electrical Component Safeguards",
+                description: "Before a single drop of water is sprayed, we meticulously cover, tape, and isolate all exterior electrical outlets, Ring doorbells, and sensitive light fixtures from water intrusion."
+            }
+        ],
         image: "/images/portfolio/building-washing-services-1.png",
         faqs: [
           {
@@ -81,6 +109,20 @@ export const serviceContentMap: Record<string, { description: React.ReactNode, b
             "1. Site Inspection & Prep: We conduct a thorough exterior evaluation and meticulously protect all landscaping and delicate surfaces.",
             "2. Deep Cleaning Execution: Utilizing specialized proprietary chemical blends and precise water pressure to obliterate stains at a molecular level.",
             "3. Final Quality Check: A rigorous post-wash inspection alongside the property owner to guarantee flawless 100% satisfaction."
+        ],
+        protectionProtocols: [
+            {
+                title: "Protective Ladder Arm Standoffs",
+                description: "We utilize protective padded standoff arms that rest the weight of the ladder firmly against the solid roof, ensuring your fragile aluminum gutters are never dented or crushed."
+            },
+            {
+                title: "Complete Downspout Flow Verification",
+                description: "We don't just remove the surface leaves. We guarantee structural safety by aggressively flushing every single downpipe to verify clear water flow, preventing invisible subterranean backups."
+            },
+            {
+                title: "Strict Perimeter Cleanup",
+                description: "All pulled debris, sludge, and heavy organic matter is carefully bagged and completely removed from your property. We never fling gutter debris down into your landscaping or walkways."
+            }
         ],
         image: "/images/portfolio/gutter-cleaning.webp",
         faqs: [

@@ -78,6 +78,20 @@ export default function BuildingWashPage() {
                 description="Valley Window Care and Exterior Cleaning provides premium building washing services."
                 benefits={["Professional Quality", "Fully Insured", "Satisfaction Guaranteed"]}
                 process={["Free Quote", "Schedule Service", "Enjoy Your Clean Building"]}
+                protectionProtocols={[
+                    {
+                        title: "High-Reach Boom Precautions",
+                        description: "When accessing multi-story commercial facilities, we deploy specialized, OSHA-compliant aerial lifts with non-marking tires to prevent damage to expensive corporate hardscapes."
+                    },
+                    {
+                        title: "HVAC & Vent Sealing",
+                        description: "Before washing begins, our technicians thoroughly isolate and tape off all commercial air intakes and ventilation systems to prevent fumes and chemical ingress."
+                    },
+                    {
+                        title: "Pedestrian Traffic Control",
+                        description: "We establish hard physical perimeters and highly visible warnings to guarantee completely safe ingress and egress for your employees and daily customer traffic."
+                    }
+                ]}
                 image="/images/portfolio/building-washing.webp"
             />
 
@@ -89,9 +103,23 @@ export default function BuildingWashPage() {
                 <VanillaMapClient />
             </div>
             
-            <FAQAccordion
-                faqs={faqData["building-washing"] || []}
-            />
+            <section className="py-20 bg-slate-50 border-t border-gray-100">
+                <div className="container mx-auto px-4 max-w-4xl">
+                    <div className="mb-12 text-center">
+                        <h2 className="text-3xl md:text-4xl font-extrabold text-navy mb-4">Frequently Asked Questions</h2>
+                        <p className="text-gray-600 text-lg max-w-2xl mx-auto font-medium">Get factual, direct answers regarding our commercial building washing methodology.</p>
+                    </div>
+                    <div className="space-y-8">
+                        {(faqData["building-washing"] || []).map((faq: { question: string, answer: string }, index: number) => (
+                            <div key={index} className="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 relative overflow-hidden group hover:border-gold/30 hover:shadow-md transition-all">
+                                <div className="absolute top-0 left-0 w-2 h-full bg-gold"></div>
+                                <h3 className="text-xl font-bold text-navy-dark mb-3 pl-4">Q: {faq.question}</h3>
+                                <p className="text-gray-700 leading-relaxed font-medium pl-4 text-lg">A: {faq.answer}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
         </main>
     );
 }
