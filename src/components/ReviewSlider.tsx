@@ -51,6 +51,7 @@ export default function ReviewSlider({ city }: { city?: string }) {
 
     const [reviews, setReviews] = useState(fallbackReviews);
     const [currentIndex, setCurrentIndex] = useState(initialOffset);
+    const [autoPlayKey, setAutoPlayKey] = useState(0);
 
     useEffect(() => {
         const fetchReviews = async () => {
@@ -69,16 +70,27 @@ export default function ReviewSlider({ city }: { city?: string }) {
         fetchReviews();
     }, []);
 
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrentIndex((prevIndex) =>
+                prevIndex + 1 >= reviews.length ? 0 : prevIndex + 1
+            );
+        }, 5000);
+        return () => clearInterval(timer);
+    }, [reviews.length, autoPlayKey]);
+
     const nextReview = () => {
         setCurrentIndex((prevIndex) =>
             prevIndex + 1 >= reviews.length ? 0 : prevIndex + 1
         );
+        setAutoPlayKey(prev => prev + 1);
     };
 
     const prevReview = () => {
         setCurrentIndex((prevIndex) =>
             prevIndex - 1 < 0 ? reviews.length - 1 : prevIndex - 1
         );
+        setAutoPlayKey(prev => prev + 1);
     };
 
     // Get 3 visible reviews for desktop, 1 for mobile (handled via CSS/overflow in a real carousel, but simplified here for exact layout match)
@@ -90,6 +102,15 @@ export default function ReviewSlider({ city }: { city?: string }) {
 
     return (
         <section className="py-24 bg-slate-50 relative overflow-hidden">
+            <style>{`
+                @keyframes sliderFadeIn {
+                    from { opacity: 0; transform: translateX(20px); }
+                    to { opacity: 1; transform: translateX(0); }
+                }
+                .animate-slider-fade {
+                    animation: sliderFadeIn 0.5s ease-out forwards;
+                }
+            `}</style>
             <div className="container mx-auto px-4 max-w-7xl">
                 <div className="flex flex-col lg:flex-row gap-12 lg:gap-8 items-center lg:items-start">
 
@@ -157,7 +178,7 @@ export default function ReviewSlider({ city }: { city?: string }) {
                             {visibleReviews.map((review, idx) => (
                                 <div
                                     key={`${currentIndex}-${idx}`}
-                                    className={`bg-white rounded-3xl p-8 shadow-soft hover:shadow-hover transition-all duration-300 flex flex-col h-full transform ${idx > 0 ? 'hidden md:flex' : 'flex'} ${idx > 1 ? 'md:hidden lg:flex' : ''}`}
+                                    className={`bg-white rounded-3xl p-8 shadow-soft hover:shadow-hover transition-all duration-300 flex flex-col h-full transform animate-slider-fade ${idx > 0 ? 'hidden md:flex' : 'flex'} ${idx > 1 ? 'md:hidden lg:flex' : ''}`}
                                 >
                                     {/* Card Header */}
                                     <div className="flex items-start justify-between mb-6 relative">
