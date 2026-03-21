@@ -270,7 +270,7 @@ export default async function ServiceGenericPage({ params }: PageProps) {
             )}
 
             {/* HIGH-TICKET CRO: Spot-Free Biological Warranty */}
-            {['roof-cleaning', 'house-washing'].includes(service) && (
+            {['roof-cleaning', 'house-washing', 'paver-patio-restorations'].includes(service) && (
                 <section className="container mx-auto px-4 py-8 mb-4">
                     <div className="bg-gradient-to-br from-green-50 to-emerald-50 border-2 border-green-200 p-8 md:p-10 rounded-2xl shadow-sm text-center md:text-left flex flex-col md:flex-row items-center gap-8 max-w-5xl mx-auto transform transition-transform hover:-translate-y-1">
                         <div className="bg-white p-4 rounded-full shadow-md shrink-0">
@@ -278,12 +278,16 @@ export default async function ServiceGenericPage({ params }: PageProps) {
                         </div>
                         <div>
                             <h3 className="text-2xl md:text-3xl font-black text-navy-dark mb-4">
-                                Our {service === 'roof-cleaning' ? '2-Year' : '6-Month'} Spot-Free Biological Warranty
+                                Our {service === 'house-washing' ? '6-Month' : '2-Year'} Spot-Free Biological Warranty
                             </h3>
                             <p className="text-gray-700 leading-relaxed font-medium text-lg">
-                                {service === 'roof-cleaning' ? (
+                                {service === 'roof-cleaning' && (
                                     <>We don't just rinse away the dirt; our specialized soft wash system eradicates Gloeocapsa Magma and algae at the root. We confidently back our full roof treatments with a <strong>2-Year Spot-Free Guarantee</strong>. If the organic growth returns within 2 years, we will re-treat the affected area at no cost to you.</>
-                                ) : (
+                                )}
+                                {service === 'paver-patio-restorations' && (
+                                    <>We don't just rinse your patio; our deep extraction and premium sealing process eradicates organic growth at the root and protects your pavers. We confidently back our full paver restorations with a <strong>2-Year Spot-Free Guarantee</strong>. If deep-rooted algae or moss returns to your treated hardscape within 2 years, we will re-treat the affected area at no cost to you.</>
+                                )}
+                                {service === 'house-washing' && (
                                     <>We don't just rinse away the dirt; our specialized soft wash system eradicates algae and biological growth at the root. We confidently back our house washing treatments with a <strong>6-Month Spot-Free Guarantee</strong>. If the organic growth returns within 6 months, we will re-treat the affected area at no cost to you.</>
                                 )}
                             </p>
