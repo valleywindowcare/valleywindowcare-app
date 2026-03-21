@@ -269,7 +269,7 @@ export default async function ServiceGenericPage({ params }: PageProps) {
                 <PricingMatrix {...content.pricing} />
             )}
 
-            {/* HIGH-TICKET CRO: 2-Year Spot-Free Biological Warranty */}
+            {/* HIGH-TICKET CRO: Spot-Free Biological Warranty */}
             {['roof-cleaning', 'house-washing'].includes(service) && (
                 <section className="container mx-auto px-4 py-8 mb-4">
                     <div className="bg-gradient-to-br from-green-50 to-emerald-50 border-2 border-green-200 p-8 md:p-10 rounded-2xl shadow-sm text-center md:text-left flex flex-col md:flex-row items-center gap-8 max-w-5xl mx-auto transform transition-transform hover:-translate-y-1">
@@ -277,9 +277,15 @@ export default async function ServiceGenericPage({ params }: PageProps) {
                             <ShieldCheck size={64} className="text-green-600" />
                         </div>
                         <div>
-                            <h3 className="text-2xl md:text-3xl font-black text-navy-dark mb-4">Our 2-Year Spot-Free Biological Warranty</h3>
+                            <h3 className="text-2xl md:text-3xl font-black text-navy-dark mb-4">
+                                Our {service === 'roof-cleaning' ? '2-Year' : '6-Month'} Spot-Free Biological Warranty
+                            </h3>
                             <p className="text-gray-700 leading-relaxed font-medium text-lg">
-                                We don't just rinse away the dirt; our specialized soft wash system eradicates Gloeocapsa Magma and algae at the root. We confidently back our full roof and house washing treatments with a <strong>2-Year Spot-Free Guarantee</strong>. If the organic growth returns within 2 years, we will re-treat the affected area at no cost to you.
+                                {service === 'roof-cleaning' ? (
+                                    <>We don't just rinse away the dirt; our specialized soft wash system eradicates Gloeocapsa Magma and algae at the root. We confidently back our full roof treatments with a <strong>2-Year Spot-Free Guarantee</strong>. If the organic growth returns within 2 years, we will re-treat the affected area at no cost to you.</>
+                                ) : (
+                                    <>We don't just rinse away the dirt; our specialized soft wash system eradicates algae and biological growth at the root. We confidently back our house washing treatments with a <strong>6-Month Spot-Free Guarantee</strong>. If the organic growth returns within 6 months, we will re-treat the affected area at no cost to you.</>
+                                )}
                             </p>
                         </div>
                     </div>
