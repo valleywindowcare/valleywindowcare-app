@@ -286,21 +286,6 @@ const nextConfig: NextConfig = {
         source: '/locations/appleton',
         destination: '/service-areas/appleton',
         permanent: true,
-      },
-      {
-        source: '/services/paver-patio-restorations',
-        destination: 'https://www.greenbaypavercleaning.com/',
-        permanent: true,
-      },
-      {
-        source: '/paver-patio-restorations',
-        destination: 'https://www.greenbaypavercleaning.com/',
-        permanent: true,
-      },
-      {
-        source: '/paver-restoration',
-        destination: 'https://www.greenbaypavercleaning.com/',
-        permanent: true,
       }
     ];
 

@@ -1296,43 +1296,43 @@ export const serviceContentMap: Record<string, { description: React.ReactNode, b
     "paver-patio-restorations": {
         description: (
             <section className="eeat-service-block">
-                <p className="mb-4">Restoring the paver patio restorations of your property requires scientifically backed methods. We deploy professional-grade equipment to eliminate specific grime targets safely.</p>
+                <p className="mb-4">Premium Paver Patio Restorations in Northeast Wisconsin requires significantly more than a garden hose. We deploy professional-grade equipment and specialized chemistry to execute deep organic extraction, locking in the finish with polymeric joint re-sanding and breathable UV-resistant sealing.</p>
             </section>
         ),
         benefits: [
-            "Long-Lasting Results: Our process gets surfaces cleaner and keeps them protected longer.",
-            "Enhanced Safety: Eliminates slippery molds and toxic bacterial colonies.",
-            "No Damage Guarantee: We use the exact pressure required—often zero—to protect property integrity."
+            "Complete Weed Eradication: Deep organic extraction pulls massive root systems safely from the joints.",
+            "Structural Integrity: Polymeric joint re-sanding locks bricks tightly in place to prevent dangerous shifting.",
+            "Breathable UV-Resistant Sealing: Protects the patio color profile from severe sun bleaching while allowing vapor escape."
         ],
         process: [
-            "1. Site Inspection & Prep: We conduct a thorough exterior evaluation and meticulously protect all landscaping and delicate surfaces.",
-            "2. Deep Cleaning Execution: Utilizing specialized proprietary chemical blends and precise water pressure to obliterate stains at a molecular level.",
-            "3. Final Quality Check: A rigorous post-wash inspection alongside the property owner to guarantee flawless 100% satisfaction."
+            "1. Deep Organic Extraction: Utilizing high-volume rotary surface cleaners and targeted descalers to rip out embedded moss and grime.",
+            "2. Polymeric Sanding: Sweeping in structural binding sand and hydraulically compacting it to stabilize the entire footprint.",
+            "3. UV-Protective Sealing: Applying a deep-penetrating breathable sealant to solidify the joints and enhance the paver tone."
         ],
         pricing: {
-            title: "Transparent Paver Patio Restorations Pricing",
-            description: "Every property is unique, but we believe in 100% transparent pricing. Quotes are calculated based on exact square footage and complexity.",
+            title: "Transparent Paver Restoration Pricing",
+            description: "Hardscape restoration requires massive water volume and highly specialized structural sand. Quotes are calculated based on exact square footage and joint degradation.",
             rateTitle: "Estimated Rate",
             ratePrice: "Custom Assessed",
-            rateDetails: "Calculated based on the exact dimensions of your property.",
-            minimumPrice: "$150.00",
-            minimumDetails: "Our baseline rate to deploy specialized equipment and technicians.",
+            rateDetails: "Calculated meticulously based on exact property dimensions and sinkage severity.",
+            minimumPrice: "$500.00",
+            minimumDetails: "Our baseline rate for deep organic extraction and polymeric joint re-sanding.",
             variableTitle: "Cost Variables",
-            variableDetails: "Final price depends on total size, location logistics, and severity of cleaning required."
+            variableDetails: "Final price depends on total size, sealing choice (wet look vs natural), and necessary brick leveling."
         },
         image: "/images/portfolio/paver-restoration.webp",
         faqs: [
           {
-                    "question": "What are the benefits of professional paver patio restorations in Northeast Wisconsin?",
-                    "answer": "Professional paver patio restorations drastically enhances your property's curb appeal, removes harmful contaminants, and protects your exterior investments from the harsh Wisconsin weather."
+                    "question": "Why do I need polymeric sand for my Green Bay paver patio?",
+                    "answer": "Standard sand washes away quickly in the rain and allows aggressive weeds to instantly take root. Polymeric sand contains high-strength binding agents that lock the bricks together, preventing both shifting and future organic growth."
           },
           {
-                    "question": "How much does paver patio restorations cost in the Green Bay area?",
-                    "answer": "Pricing for paver patio restorations varies based on the size and scope of the project. Valley Window Care offers free, no-obligation quotes customized to your exact needs."
+                    "question": "How much does a Paver Patio Restoration cost?",
+                    "answer": "Our professional, multi-stage restoration packages begin with a strict project minimum of $500.00 due to the high costs of commercial sealants and polymeric sand. We provide free, exact-to-the-penny estimations."
           },
           {
-                    "question": "Are your technicians insured for paver patio restorations services?",
-                    "answer": "Yes, Valley Window Care and Exterior Cleaning is fully licensed, insured, and trained to perform high-quality paver patio restorations safely."
+                    "question": "Will your sealant make my paver patio extremely slippery?",
+                    "answer": "No. We utilize specialized breathable, penetrating sealers that offer immense UV protection without forming a dangerous, high-gloss film on the surface like cheap acrylics do."
           }
         ]
     },
