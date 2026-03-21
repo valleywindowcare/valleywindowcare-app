@@ -30,7 +30,7 @@ import PricingMatrix from "@/components/PricingMatrix";
 import { serviceContentMap } from "@/data/serviceContent";
 import VanillaMapClient from "@/components/VanillaMapClient";
 import Link from "next/link";
-import { Mail, Phone } from "lucide-react";
+import { Mail, Phone, ShieldCheck, CreditCard } from "lucide-react";
 import HeroForm from '@/components/HeroForm';
 import Image from 'next/image';
 
@@ -267,6 +267,43 @@ export default async function ServiceGenericPage({ params }: PageProps) {
             {/* GLOBALLY STANDARDIZED PRICING MATRIX (GEO) */}
             {content.pricing && (
                 <PricingMatrix {...content.pricing} />
+            )}
+
+            {/* HIGH-TICKET CRO: 2-Year Spot-Free Biological Warranty */}
+            {['roof-cleaning', 'house-washing'].includes(service) && (
+                <section className="container mx-auto px-4 py-8 mb-4">
+                    <div className="bg-gradient-to-br from-green-50 to-emerald-50 border-2 border-green-200 p-8 md:p-10 rounded-2xl shadow-sm text-center md:text-left flex flex-col md:flex-row items-center gap-8 max-w-5xl mx-auto transform transition-transform hover:-translate-y-1">
+                        <div className="bg-white p-4 rounded-full shadow-md shrink-0">
+                            <ShieldCheck size={64} className="text-green-600" />
+                        </div>
+                        <div>
+                            <h3 className="text-2xl md:text-3xl font-black text-navy-dark mb-4">Our 2-Year Spot-Free Biological Warranty</h3>
+                            <p className="text-gray-700 leading-relaxed font-medium text-lg">
+                                We don't just rinse away the dirt; our specialized soft wash system eradicates Gloeocapsa Magma and algae at the root. We confidently back our full roof and house washing treatments with a <strong>2-Year Spot-Free Guarantee</strong>. If the organic growth returns within 2 years, we will re-treat the affected area at no cost to you.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+            )}
+
+            {/* HIGH-TICKET CRO: Flexible Financing */}
+            {['residential-permanent-led-lighting', 'permanent-holiday-lighting', 'permanent-led-lighting', 'roof-cleaning'].includes(service) && (
+                <section className="container mx-auto px-4 py-8 mb-4">
+                    <div className="bg-gradient-to-br from-navy to-navy-dark border border-navy-light text-white p-8 md:p-10 rounded-2xl shadow-xl text-center md:text-left flex flex-col md:flex-row items-center gap-8 max-w-5xl mx-auto relative overflow-hidden">
+                        <div className="absolute top-0 right-0 p-8 opacity-10 pointer-events-none">
+                            <CreditCard size={150} />
+                        </div>
+                        <div className="bg-white/10 backdrop-blur-sm p-4 rounded-full shrink-0 relative z-10">
+                            <CreditCard size={64} className="text-gold" />
+                        </div>
+                        <div className="relative z-10">
+                            <h3 className="text-2xl md:text-3xl font-black text-white mb-4">Flexible Financing Available</h3>
+                            <p className="text-gray-200 leading-relaxed font-medium text-lg">
+                                Don't let budget constraints delay protecting and upgrading your property. We offer flexible, frictionless consumer financing options to turn your high-ticket exterior restoration or permanent lighting project into affordable, predictable monthly payments. Ask about our financing partners during your free estimate!
+                            </p>
+                        </div>
+                    </div>
+                </section>
             )}
 
             {/* Injects 1,000+ words of Semantic Core Content globally per service */}
