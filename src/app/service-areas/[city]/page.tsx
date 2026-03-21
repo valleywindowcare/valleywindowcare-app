@@ -395,14 +395,14 @@ export default async function CityHubPage({ params }: PageProps) {
                         </div>
                     </div>
 
-                    {/* 100% Satisfaction Guarantee from Owner James Voss */}
+                    {/* 100% Satisfaction Guarantee from the Valley Window Care team */}
                     <div className="mt-8 flex items-center justify-center gap-4 p-6 bg-slate-50 rounded-2xl border border-gray-100">
                         <div className="bg-green-100 p-3 rounded-full shrink-0">
                             <ShieldCheck className="text-green-600" size={28} />
                         </div>
                         <div>
                             <h4 className="text-lg font-bold text-navy">100% Satisfaction Guarantee</h4>
-                            <p className="text-gray-600 text-sm">Personally backed by owner James Voss.</p>
+                            <p className="text-gray-600 text-sm">Backed by the Valley Window Care team.</p>
                         </div>
                     </div>
                 </div>

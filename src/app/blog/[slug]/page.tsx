@@ -143,10 +143,10 @@ export default async function BlogPostTemplate({ params }: Props) {
                     </div>
                     <div className="text-center sm:text-left">
                         <h3 className="text-xl font-bold text-navy mb-2">
-                            {post.authorName || 'Written by James Voss'}
+                            {post.authorName || 'Written by The Valley Window Care Team'}
                         </h3>
                         <p className="text-slate-600 mb-4 leading-relaxed">
-                            {post.authorBio || 'James Voss is the Owner and Operator of Valley Window Care, bringing years of hands-on exterior cleaning and permanent lighting expertise to Northeast Wisconsin. Fully insured and committed to unparalleled quality, James specializes in protecting and elevating high-value properties.'}
+                            {post.authorBio || 'The Valley Window Care team brings years of hands-on exterior cleaning and permanent lighting expertise to Northeast Wisconsin. Fully insured and committed to unparalleled quality, our experts specialize in protecting and elevating high-value properties.'}
                         </p>
                         <Link href="/about-us" className="text-gold font-bold hover:text-navy transition-colors underline underline-offset-4">
                             Learn More About Us
@@ -186,7 +186,7 @@ export default async function BlogPostTemplate({ params }: Props) {
                     "image": `https://valleywindowcare.com${post.imagePath}`,
                     "author": {
                         "@type": "Person",
-                        "name": post.authorName || "James Voss",
+                        "name": post.authorName || "The Valley Window Care Team",
                         "url": "https://valleywindowcare.com/about-us"
                     },
                     "publisher": {

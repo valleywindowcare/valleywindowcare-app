@@ -104,7 +104,7 @@ Exterior detailing for decks, driveways, and patios
 Because our biodegradable detergents actively eliminate mold, algae, and bacterial root systems, the clean results frequently last 3 to 4 times longer than traditional high-pressure blasting.
 
 **3. Are your technicians insured?**
-Absolutely. James Voss and every operator carry comprehensive premium liability coverage, ensuring 100% peace of mind while we are restoring your property.
+Absolutely. Our leadership and every operator carry comprehensive premium liability coverage, ensuring 100% peace of mind while we are restoring your property.
 
 **Ready to transform your home? Call [(920) 609-7085](tel:920-609-7085).**
 
@@ -113,4 +113,4 @@ Absolutely. James Voss and every operator carry comprehensive premium liability 
 
 > *Committed to excellence, our operators comply with the safety protocols established by [PWNA.[org](https://www.pwna.org).*
 
-*By James Voss – Valley Window Care and Exterior Cleaning*
+*By The Valley Window Care Team*

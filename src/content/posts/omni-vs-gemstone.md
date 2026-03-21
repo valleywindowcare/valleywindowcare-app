@@ -30,4 +30,4 @@ If you want the absolute highest-grade architectural lighting for subtle, beauti
 
 > *Committed to exterior excellence, we follow the strict compliance and safety guidelines set forth by the [PWNA.org](https://www.pwna.org).*
 
-*By James Voss – Valley Window Care and Exterior Cleaning*
+*By The Valley Window Care Team*

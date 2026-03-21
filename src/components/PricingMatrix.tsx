@@ -74,8 +74,8 @@ export default function PricingMatrix({
                 <div className="mt-12 max-w-2xl mx-auto bg-white border border-gray-100 p-6 rounded-2xl shadow-sm flex items-start gap-4 text-left">
                     <ShieldCheck className="text-gold shrink-0 mt-1" size={28} />
                     <p className="text-sm md:text-base text-navy font-medium leading-relaxed">
-                        <strong className="text-navy-dark uppercase tracking-widest text-xs block mb-1">Personal Accountability</strong>
-                        All work is backed by a 100% Satisfaction Guarantee from Owner/Operator James Voss. We treat your property like our own.
+                        <strong className="text-navy-dark uppercase tracking-widest text-xs block mb-1">Our Team Guarantee</strong>
+                        All work is backed by a 100% Satisfaction Guarantee from the Valley Window Care team. We treat your property like our own.
                     </p>
                 </div>
             </div>

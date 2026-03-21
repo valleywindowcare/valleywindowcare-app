@@ -79,7 +79,7 @@ Instantly. During the application process, the chemical comprehensively breaks d
 
 ---
 
-*About the Author: James Voss is the Owner and Operator of Valley Window Care, bringing years of hands-on exterior cleaning and permanent lighting expertise to Northeast Wisconsin. Fully insured and committed to unparalleled quality, James specializes in protecting and elevating high-value properties and Door County STRs.* 
+*About the Author: The Valley Window Care team brings years of hands-on exterior cleaning and permanent lighting expertise to Northeast Wisconsin. Fully insured and committed to unparalleled quality, our experts specialize in protecting and elevating high-value properties and Door County STRs.* 
 
 <!-- 
 📸 Image Recommendations:
@@ -89,7 +89,7 @@ Instantly. During the application process, the chemical comprehensively breaks d
 `,
     imagePath: "/images/portfolio/roof-cleaning-copy-2.webp",
     category: "Roof Cleaning",
-    authorName: "James Voss",
+    authorName: "The Valley Window Care Team",
     authorBio: "Owner and Operator of Valley Window Care specializing in biological exterior remediation."
   },
   {
@@ -139,7 +139,7 @@ Because the specialized detergents actually kill the algae spores at the root le
 
 ---
 
-*About the Author: James Voss is the Owner and Operator of Valley Window Care, bringing years of hands-on exterior cleaning and permanent lighting expertise to Northeast Wisconsin. Fully insured and committed to unparalleled quality, James specializes in protecting and elevating high-value properties and Door County STRs.* 
+*About the Author: The Valley Window Care team brings years of hands-on exterior cleaning and permanent lighting expertise to Northeast Wisconsin. Fully insured and committed to unparalleled quality, our experts specialize in protecting and elevating high-value properties and Door County STRs.* 
 
 <!-- 
 📸 Image Recommendations:
@@ -149,7 +149,7 @@ Because the specialized detergents actually kill the algae spores at the root le
 `,
     imagePath: "/images/portfolio/house-washing.webp",
     category: "Soft Washing",
-    authorName: "James Voss",
+    authorName: "The Valley Window Care Team",
     authorBio: "Owner and Operator of Valley Window Care specializing in biological exterior remediation."
   },
   {
@@ -196,7 +196,7 @@ Yes. To avoid disrupting drive-thru traffic and causing major logistical shut-do
 
 ---
 
-*About the Author: James Voss is the Owner and Operator of Valley Window Care, bringing years of hands-on exterior cleaning and permanent lighting expertise to Northeast Wisconsin. Fully insured and committed to unparalleled quality, James specializes in protecting and elevating high-value properties and Door County STRs.* 
+*About the Author: The Valley Window Care team brings years of hands-on exterior cleaning and permanent lighting expertise to Northeast Wisconsin. Fully insured and committed to unparalleled quality, our experts specialize in protecting and elevating high-value properties and Door County STRs.* 
 
 <!-- 
 📸 Image Recommendations:
@@ -206,7 +206,7 @@ Yes. To avoid disrupting drive-thru traffic and causing major logistical shut-do
 `,
     imagePath: "/images/portfolio/drive-through-cleaning.webp",
     category: "Commercial Services",
-    authorName: "James Voss",
+    authorName: "The Valley Window Care Team",
     authorBio: "Owner and Operator of Valley Window Care specializing in biological exterior remediation."
   },
   {
@@ -278,7 +278,7 @@ The water-fed pole is incredible at removing seasonal dirt, salt, and pollen. Ho
 
 ---
 
-*About the Author: James Voss is the Owner and Operator of Valley Window Care, bringing years of hands-on exterior cleaning and permanent lighting expertise to Northeast Wisconsin. Fully insured and committed to unparalleled quality, James specializes in protecting and elevating high-value properties and Door County STRs.* 
+*About the Author: The Valley Window Care team brings years of hands-on exterior cleaning and permanent lighting expertise to Northeast Wisconsin. Fully insured and committed to unparalleled quality, our experts specialize in protecting and elevating high-value properties and Door County STRs.* 
 
 <br/>
 <br/>
@@ -353,7 +353,7 @@ A purified water-fed pole is the industry standard for our [residential window c
 
 ---
 
-*About the Author: James Voss is the Owner and Operator of Valley Window Care, bringing years of hands-on exterior cleaning and permanent lighting expertise to Northeast Wisconsin. Fully insured and committed to unparalleled quality, James specializes in protecting and elevating high-value properties and Door County STRs.* 
+*About the Author: The Valley Window Care team brings years of hands-on exterior cleaning and permanent lighting expertise to Northeast Wisconsin. Fully insured and committed to unparalleled quality, our experts specialize in protecting and elevating high-value properties and Door County STRs.* 
 
 <br/>
 <br/>

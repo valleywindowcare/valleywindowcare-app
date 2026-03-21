@@ -84,7 +84,7 @@ export default function ServicePage() {
                                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
                         </div>
                         <p className="leading-relaxed text-lg">
-                            We clean local residential homes. We wash regional commercial storefronts. James Voss owns the company. He physically operates the equipment on every job site. You receive direct contractor accountability. Ladder falls cause permanent physical injuries. We eliminate DIY safety risks. We carry authorized commercial liability insurance. We protect your physical property.
+                            We clean local residential homes. We wash regional commercial storefronts. Our leadership team manages the company. Our experts physically operate the equipment on every job site. You receive direct contractor accountability. Ladder falls cause permanent physical injuries. We eliminate DIY safety risks. We carry authorized commercial liability insurance. We protect your physical property.
                         </p>
                     </section>
 

@@ -56,7 +56,7 @@ Let us handle the dirty work while you enjoy the peace of mind that your gutters
 Because our biodegradable detergents actively eliminate mold, algae, and bacterial root systems, the clean results frequently last 3 to 4 times longer than traditional high-pressure blasting.
 
 **3. Are your technicians insured?**
-Absolutely. James Voss and every operator carry comprehensive premium liability coverage, ensuring 100% peace of mind while we are restoring your property.
+Absolutely. Our leadership and every operator carry comprehensive premium liability coverage, ensuring 100% peace of mind while we are restoring your property.
 
 **Ready to transform your home? Call [(920) 609-7085](tel:920-609-7085).**
 
@@ -72,4 +72,4 @@ Absolutely. James Voss and every operator carry comprehensive premium liability 
 | **Grime/Stain Severity** | Medium | Heavy algae or rust stains may require specialized chemical treatments. |
 | **Accessibility** | Low-Medium | Multi-story homes or steep roof pitches require additional safety rigging. |
 
-*By James Voss – Valley Window Care and Exterior Cleaning*
+*By The Valley Window Care Team*
