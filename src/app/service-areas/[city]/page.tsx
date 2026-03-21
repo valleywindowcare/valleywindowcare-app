@@ -24,7 +24,8 @@ function getDeterministicHero(seed: string): string {
 import Link from 'next/link';
 import Image from 'next/image';
 import SafeHeroImage from '@/components/SafeHeroImage';
-import { ChevronRight, ShieldCheck, MapPin, ArrowRight, Phone, CheckCircle2 } from 'lucide-react';
+import { ChevronRight, ShieldCheck, MapPin, ArrowRight, Phone, CheckCircle2, CreditCard } from 'lucide-react';
+import PricingMatrix from '@/components/PricingMatrix';
 import ReviewSlider from '@/components/ReviewSlider';
 import ServiceGrid from '@/components/ServiceGrid';
 import VanillaMapClient from '@/components/VanillaMapClient';
@@ -358,6 +359,53 @@ export default async function CityHubPage({ params }: PageProps) {
             {/* SERVICES GRID (6-Grid Bottom Injection Hook) */}
             <div className="bg-slate-50 border-t border-gray-200">
                 <ServiceGrid city={cityName} />
+            </div>
+
+            {/* REGIONAL HUB CRO COMPONENTS */}
+            <div className="bg-white py-16 border-t border-gray-100">
+                <div className="container mx-auto px-4 max-w-4xl">
+                    <PricingMatrix 
+                        title={`${cityName} Property Maintenance`}
+                        description={`Secure professional, reliable exterior cleaning for your ${cityName} property.`}
+                        rateTitle="Standard Rate"
+                        ratePrice="$150.00"
+                        rateDetails="Minimum baseline per visit"
+                        minimumPrice="$150.00"
+                        minimumDetails="Depending on travel distance and complexity"
+                        variableTitle="Comprehensive Projects"
+                        variableHeading="Custom Assessed"
+                        variableDetails="Multi-service treatments, commercial building washing, and high-liability projects require an on-site evaluation."
+                    />
+
+                    {/* Flexible Financing Available */}
+                    <div className="mt-12 bg-gradient-to-r from-slate-900 to-navy p-1 rounded-2xl shadow-xl">
+                        <div className="bg-white p-8 rounded-xl flex flex-col md:flex-row items-center gap-6 justify-between">
+                            <div className="flex items-center gap-4">
+                                <div className="bg-slate-50 p-4 rounded-full">
+                                    <CreditCard size={32} className="text-navy" />
+                                </div>
+                                <div>
+                                    <h3 className="text-2xl font-bold text-navy mb-1">Flexible Financing Available</h3>
+                                    <p className="text-gray-600">Break your massive {cityName} restoration project down into manageable monthly payments.</p>
+                                </div>
+                            </div>
+                            <Link href="/contact" className="bg-gold hover:bg-gold-light text-navy px-8 py-4 rounded-xl font-bold transition-colors whitespace-nowrap text-lg text-center w-full md:w-auto shadow-md block">
+                                Apply Now
+                            </Link>
+                        </div>
+                    </div>
+
+                    {/* 100% Satisfaction Guarantee from Owner James Voss */}
+                    <div className="mt-8 flex items-center justify-center gap-4 p-6 bg-slate-50 rounded-2xl border border-gray-100">
+                        <div className="bg-green-100 p-3 rounded-full shrink-0">
+                            <ShieldCheck className="text-green-600" size={28} />
+                        </div>
+                        <div>
+                            <h4 className="text-lg font-bold text-navy">100% Satisfaction Guarantee</h4>
+                            <p className="text-gray-600 text-sm">Personally backed by owner James Voss.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             {/* DYNAMIC MAP AND NAP INJECTION (INTERACTIVE JS) */}
