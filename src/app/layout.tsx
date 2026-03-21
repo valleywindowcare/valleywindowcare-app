@@ -52,32 +52,34 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "HomeAndConstructionBusiness",
               name: "Valley Window Care and Exterior Cleaning",
-              url: "https://www.valleywindowcare.com",
+              telephone: "+1-920-609-7085",
               address: {
                 "@type": "PostalAddress",
                 streetAddress: "4551 Trellis Drive E-2",
                 addressLocality: "De Pere",
                 addressRegion: "WI",
-                postalCode: "54115",
-                addressCountry: "US"
+                postalCode: "54115"
               },
               areaServed: [
-                {"@type": "City", "name": "Green Bay"},
-                {"@type": "City", "name": "Appleton"},
-                {"@type": "City", "name": "Neenah"},
-                {"@type": "City", "name": "Oshkosh"},
-                {"@type": "City", "name": "Shawano"},
-                {"@type": "City", "name": "Door County"},
-                {"@type": "City", "name": "Manitowoc"}
+                "Green Bay",
+                "Appleton",
+                "De Pere",
+                "Neenah",
+                "Fox Valley"
               ],
               hasOfferCatalog: {
                 "@type": "OfferCatalog",
                 name: "Exterior Cleaning Services",
                 itemListElement: [
-                  {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Roof Cleaning"}},
-                  {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Soft Washing"}},
-                  {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Window Cleaning"}}
+                  { "@type": "Offer", itemOffered: { "@type": "Service", name: "Pressure Washing" } },
+                  { "@type": "Offer", itemOffered: { "@type": "Service", name: "Roof Soft Washing" } },
+                  { "@type": "Offer", itemOffered: { "@type": "Service", name: "Window Cleaning" } }
                 ]
+              },
+              aggregateRating: {
+                "@type": "AggregateRating",
+                ratingValue: "5.0",
+                reviewCount: "100"
               }
             }).replace(/</g, '\\u003c').replace(/'/g, "&apos;")
           }}
