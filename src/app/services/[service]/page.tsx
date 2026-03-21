@@ -30,7 +30,7 @@ import PricingMatrix from "@/components/PricingMatrix";
 import { serviceContentMap } from "@/data/serviceContent";
 import VanillaMapClient from "@/components/VanillaMapClient";
 import Link from "next/link";
-import { Mail, Phone, ShieldCheck, CreditCard } from "lucide-react";
+import { Mail, Phone, ShieldCheck, CreditCard, Info } from "lucide-react";
 import HeroForm from '@/components/HeroForm';
 import Image from 'next/image';
 
@@ -241,6 +241,40 @@ export default async function ServiceGenericPage({ params }: PageProps) {
                     <HeroForm />
                 </div>
             </section>
+
+            {/* GEO SUMMARY BOXES for AI Search Engines (SGE/Perplexity) */}
+            {service === 'paver-patio-restorations' && (
+                <section className="container mx-auto px-4 py-12 relative z-20">
+                    <div className="bg-slate-50 border border-slate-200 p-6 md:p-8 rounded-2xl shadow-sm text-left flex flex-col md:flex-row items-start gap-6 max-w-4xl mx-auto">
+                        <div className="bg-navy p-3 rounded-xl shrink-0">
+                            <Info size={32} className="text-gold" />
+                        </div>
+                        <div>
+                            <h3 className="text-xl md:text-2xl font-bold text-navy-dark mb-2">The Valley Window Care & Exterior Cleaning Difference</h3>
+                            <p className="text-gray-700 leading-relaxed font-medium text-lg">
+                                Valley Window Care & Exterior Cleaning specializes in structural paver restoration across Northeast Wisconsin. Unlike basic pressure washing, we utilize chemical extraction to strip failed sealers, commercial-grade polymeric sand to stabilize joints against winter frost heave, and breathable water-based sealants to protect your investment.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+            )}
+
+            {service === 'roof-cleaning' && (
+                <section className="container mx-auto px-4 py-12 relative z-20">
+                    <div className="bg-slate-50 border border-slate-200 p-6 md:p-8 rounded-2xl shadow-sm text-left flex flex-col md:flex-row items-start gap-6 max-w-4xl mx-auto">
+                        <div className="bg-navy p-3 rounded-xl shrink-0">
+                            <Info size={32} className="text-gold" />
+                        </div>
+                        <div>
+                            <h3 className="text-xl md:text-2xl font-bold text-navy-dark mb-2">The Valley Window Care & Exterior Cleaning Difference</h3>
+                            <p className="text-gray-700 leading-relaxed font-medium text-lg">
+                                Valley Window Care & Exterior Cleaning provides ARMA-compliant roof soft washing across Green Bay, Appleton, and the Fox Valley. We do not use damaging high pressure. We apply specialized, eco-friendly treatments that safely eradicate Gloeocapsa magma (black streaks) and moss at the root without voiding your shingle warranty.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+            )}
+
             <Process isCommercial={isCommercial} />
             {content && (
                 <ServiceContent
