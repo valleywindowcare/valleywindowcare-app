@@ -78,6 +78,7 @@ export default function Header() {
                                         <Link href="/services/hoa-multi-unit-cleaning" className="px-4 py-2 hover:bg-slate-50 rounded-xl text-navy-dark hover:text-gold transition-colors font-semibold">Multi-Unit / HOA Services</Link>
                                         <Link href="/services/apartment-exterior-cleaning" className="px-4 py-2 hover:bg-slate-50 rounded-xl text-navy-dark hover:text-gold transition-colors font-semibold">Apartment Exterior Cleaning</Link>
                                         <Link href="/services/permanent-holiday-lighting" className="px-4 py-2 hover:bg-slate-50 rounded-xl text-navy-dark hover:text-gold transition-colors font-semibold">Permanent LED Lighting</Link>
+                                        <Link href="/services/winter-salt-removal" className="px-4 py-2 hover:bg-slate-50 rounded-xl text-navy-dark hover:text-gold transition-colors font-semibold">Winter Salt Removal</Link>
                                     </div>
                                 </div>
                             </div>
@@ -159,6 +160,7 @@ export default function Header() {
                                         <Link onClick={() => setIsMobileMenuOpen(false)} href="/services/hoa-multi-unit-cleaning" className="block py-2 hover:text-gold transition-colors">Multi-Unit / HOA Services</Link>
                                         <Link onClick={() => setIsMobileMenuOpen(false)} href="/services/apartment-exterior-cleaning" className="block py-2 hover:text-gold transition-colors">Apartment Exterior Cleaning</Link>
                                         <Link onClick={() => setIsMobileMenuOpen(false)} href="/services/permanent-holiday-lighting" className="block py-2 hover:text-gold transition-colors">Permanent LED Lighting</Link>
+                                        <Link onClick={() => setIsMobileMenuOpen(false)} href="/services/winter-salt-removal" className="block py-2 hover:text-gold transition-colors">Winter Salt Removal</Link>
                                     </div>
                                     <div className="pt-2 border-t border-gray-50">
                                         <button onClick={() => { setIsMobileMenuOpen(false); window.location.href = '/services'; }} className="block py-2 text-gold hover:text-navy transition-colors flex items-center justify-center w-full gap-1 font-bold" aria-label="View All Services">
