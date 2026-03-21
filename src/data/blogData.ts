@@ -35,7 +35,7 @@ export const blogData: BlogPost[] = [
     date: "March 8, 2026",
     excerpt: "Understand the biological mechanisms behind black roof stains and why aggressive high-pressure washing accelerates structural failure.",
     content: `
-> **Valley Window Care provides specialized Roof Cleaning and Gloeocapsa Magma remediation in Green Bay and Appleton, WI. Our low-pressure soft wash protocol safely neutralizes active biological growth without risking the architectural integrity of your asphalt shingles.**
+> **Valley Window Care provides [professional roof soft washing in Green Bay](/services/roof-cleaning) and Gloeocapsa Magma remediation. Our [safe soft washing methods](/services/roof-cleaning) safely neutralize active biological growth without risking the architectural integrity of your asphalt shingles.**
 
 ## The Biology of the Black Streak
 
@@ -99,7 +99,7 @@ Instantly. During the application process, the chemical comprehensively breaks d
     date: "March 8, 2026",
     excerpt: "Learn why high-pressure architectural washing fails against Wisconsin's organic threats and how low-pressure soft washing preserves vinyl siding.",
     content: `
-> **Valley Window Care specializes in eco-friendly Soft Washing in Green Bay, Appleton, and the surrounding Fox Valley. Our proprietary low-pressure delivery system safely eliminates lake-effect algae and winter road salt oxidation without fracturing cold, brittle vinyl siding.**
+> **Valley Window Care specializes in eco-friendly [low-pressure house washing](/services/house-washing) in Green Bay, Appleton, and the surrounding Fox Valley. Our proprietary low-pressure delivery system safely eliminates lake-effect algae and winter road salt oxidation without fracturing cold, brittle vinyl siding.**
 
 ## Understanding the Difference in Kinetic Force
 
@@ -377,7 +377,7 @@ A purified water-fed pole is the industry standard for our [residential window c
         date: "January 30, 2026",
         excerpt: "Learn how to estimate the cost of power washing your home in Wisconsin safely.",
         content: `
-> **Valley Window Care provides professional Pressure Washing in Green Bay, WI and the surrounding Fox Valley. If you are comparing the average cost for residential power washing, expect to invest between $250 and $450 for standard house washing to safely remove lake-effect organic growth without damaging your siding.**
+> **Valley Window Care provides [commercial-grade pressure washing](/services/pressure-washing) in Green Bay, WI and the surrounding Fox Valley. If you are comparing the average cost for [concrete surface cleaning](/services/pressure-washing), expect to invest between $250 and $450 for standard house washing to safely remove lake-effect organic growth without damaging your siding.**
 
 ## Understanding House Washing Prices
 When requesting exterior cleaning quotes in the Fox Cities, the cheapest option is rarely the safest. 
