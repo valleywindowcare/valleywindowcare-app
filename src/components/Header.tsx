@@ -1,6 +1,6 @@
 "use client"
 import Link from "next/link";
-import { Phone, Mail, Menu, ChevronDown, X, ChevronRight } from "lucide-react";
+import { Phone, Mail, Menu, ChevronDown, X, ChevronRight, MessageSquare } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
@@ -206,12 +206,15 @@ export default function Header() {
                         <Link onClick={() => setIsMobileMenuOpen(false)} href="/blog" className="uppercase py-4 border-b border-gray-100 text-gold font-black transition-colors">EXPERT GUIDES</Link>
                         <Link onClick={() => setIsMobileMenuOpen(false)} href="/contact" className="uppercase py-4 hover:text-gold transition-colors">CONTACT</Link>
 
-                        <div className="mt-8 mb-4">
-                            <div className="flex justify-center mb-3">
+                        <div className="mt-8 mb-4 px-4 flex flex-col gap-3">
+                            <div className="flex justify-center mb-1">
                                 <span className="text-[10px] font-black uppercase tracking-widest text-green-600 bg-green-50 px-2 py-0.5 rounded border border-green-100">
                                     Fully Licensed & Insured
                                 </span>
                             </div>
+                            <a href="sms:9206097085" className="flex items-center justify-center gap-2 w-full text-center bg-navy hover:bg-navy-light text-white px-6 py-4 rounded-xl font-bold shadow-md transition-colors">
+                                <MessageSquare size={20} /> Text Us for a Fast Quote
+                            </a>
                             <Link onClick={() => setIsMobileMenuOpen(false)} href="/contact" className="block w-full text-center bg-gold hover:bg-gold-light text-white px-6 py-4 rounded-xl font-bold shadow-md transition-colors">
                                 GET A FREE QUOTE
                             </Link>

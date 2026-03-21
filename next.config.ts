@@ -276,6 +276,31 @@ const nextConfig: NextConfig = {
         source: '/service-areas/:city(egg-harbor|sturgeon-bay|fish-creek|sister-bay|ephraim)',
         destination: '/service-areas/door-county',
         permanent: true,
+      },
+      {
+        source: '/appleton',
+        destination: '/service-areas/appleton',
+        permanent: true,
+      },
+      {
+        source: '/locations/appleton',
+        destination: '/service-areas/appleton',
+        permanent: true,
+      },
+      {
+        source: '/services/paver-patio-restorations',
+        destination: 'https://www.greenbaypavercleaning.com/',
+        permanent: true,
+      },
+      {
+        source: '/paver-patio-restorations',
+        destination: 'https://www.greenbaypavercleaning.com/',
+        permanent: true,
+      },
+      {
+        source: '/paver-restoration',
+        destination: 'https://www.greenbaypavercleaning.com/',
+        permanent: true,
       }
     ];
 
