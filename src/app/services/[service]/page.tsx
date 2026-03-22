@@ -359,40 +359,38 @@ export default async function ServiceGenericPage({ params }: PageProps) {
             </div>
 
             {/* DYNAMIC MAP AND NAP INJECTION (INTERACTIVE JS) */}
-            {service === "roof-cleaning" && (
-                <div className="container mx-auto px-4 py-8 mb-12">
-                    <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 max-w-4xl mx-auto">
-                        <h3 className="text-2xl font-bold text-navy mb-4">Local Roof Cleaning Services</h3>
-                        <p className="text-gray-600 mb-6">We provide specialized, soft-wash roof cleaning tailored to the unique environmental conditions of the following Wisconsin communities:</p>
-                        
-                        {/* Alphabetized Canonical Routing Grid */}
-                        <div className="grid grid-cols-2 lg:grid-cols-3 gap-y-3 gap-x-2 md:gap-x-6 border-t border-gray-100 pt-6">
-                            {[
-                                { name: "Allouez", url: "/service-areas/green-bay" },
-                                { name: "Appleton", url: "/service-areas/appleton" },
-                                { name: "Ashwaubenon", url: "/service-areas/green-bay" },
-                                { name: "Bellevue", url: "/service-areas/green-bay" },
-                                { name: "De Pere", url: "/service-areas/green-bay" },
-                                { name: "Fish Creek", url: "/service-areas/door-county" },
-                                { name: "Green Bay", url: "/service-areas/green-bay" },
-                                { name: "Howard", url: "/service-areas/green-bay" },
-                                { name: "Kaukauna", url: "/service-areas/appleton" },
-                                { name: "Menasha", url: "/service-areas/appleton" },
-                                { name: "Neenah", url: "/service-areas/neenah" },
-                                { name: "Oshkosh", url: "/service-areas/oshkosh" },
-                                { name: "Shawano", url: "/service-areas/shawano" },
-                                { name: "Sturgeon Bay", url: "/service-areas/door-county" },
-                                { name: "Suamico", url: "/service-areas/green-bay" }
-                            ].map((loc, idx) => (
-                                <Link key={idx} href={loc.url} className="text-blue-600 hover:text-gold font-semibold transition-all flex items-center justify-between group p-3 hover:bg-slate-50/80 rounded-xl border border-transparent hover:border-gray-100 shadow-sm hover:shadow-md">
-                                    <span className="truncate pr-2">{loc.name} Roof Cleaning</span>
-                                    <span aria-hidden="true" className="opacity-0 group-hover:opacity-100 transition-all transform -translate-x-2 group-hover:translate-x-0 text-gold">&rarr;</span>
-                                </Link>
-                            ))}
-                        </div>
+            <div className="container mx-auto px-4 py-8 mb-12">
+                <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 max-w-4xl mx-auto">
+                    <h3 className="text-2xl font-bold text-navy mb-4 capitalize">Local {service.replace(/-/g, ' ')} Services</h3>
+                    <p className="text-gray-600 mb-6">We provide specialized, professional exterior cleaning securely tailored to the unique environmental conditions of the following Wisconsin communities:</p>
+                    
+                    {/* Alphabetized Canonical Routing Grid */}
+                    <div className="grid grid-cols-2 lg:grid-cols-3 gap-y-3 gap-x-2 md:gap-x-6 border-t border-gray-100 pt-6">
+                        {[
+                            { name: "Allouez", url: "/service-areas/green-bay" },
+                            { name: "Appleton", url: "/service-areas/appleton" },
+                            { name: "Ashwaubenon", url: "/service-areas/green-bay" },
+                            { name: "Bellevue", url: "/service-areas/green-bay" },
+                            { name: "De Pere", url: "/service-areas/green-bay" },
+                            { name: "Fish Creek", url: "/service-areas/door-county" },
+                            { name: "Green Bay", url: "/service-areas/green-bay" },
+                            { name: "Howard", url: "/service-areas/green-bay" },
+                            { name: "Kaukauna", url: "/service-areas/appleton" },
+                            { name: "Menasha", url: "/service-areas/appleton" },
+                            { name: "Neenah", url: "/service-areas/neenah" },
+                            { name: "Oshkosh", url: "/service-areas/oshkosh" },
+                            { name: "Shawano", url: "/service-areas/shawano" },
+                            { name: "Sturgeon Bay", url: "/service-areas/door-county" },
+                            { name: "Suamico", url: "/service-areas/green-bay" }
+                        ].map((loc, idx) => (
+                            <Link key={idx} href={`${loc.url}/${service}`} className="text-blue-600 hover:text-gold font-semibold transition-all flex items-center justify-between group p-3 hover:bg-slate-50/80 rounded-xl border border-transparent hover:border-gray-100 shadow-sm hover:shadow-md">
+                                <span className="truncate pr-2 capitalize">{loc.name} {service.replace(/-/g, ' ')}</span>
+                                <span aria-hidden="true" className="opacity-0 group-hover:opacity-100 transition-all transform -translate-x-2 group-hover:translate-x-0 text-gold">&rarr;</span>
+                            </Link>
+                        ))}
                     </div>
                 </div>
-            )}
+            </div>
             <div className="bg-slate-50 border-t border-gray-200 relative">
                 {/* JSON-LD Structured Data Schema - Upgraded to 'Service' */}
                 <script
