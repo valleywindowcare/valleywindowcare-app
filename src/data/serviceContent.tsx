@@ -348,29 +348,43 @@ export const serviceContentMap: Record<string, { description: React.ReactNode, b
     "residential-permanent-led-lighting": {
         description: (
             <section className="eeat-service-block">
-                <p className="mb-4">Restoring the residential permanent led lighting of your property requires scientifically backed methods. We deploy professional-grade equipment to eliminate specific grime targets safely.</p>
+                <p className="mb-4">Transform your home's exterior with our premium permanent LED lighting solutions. Our architectural lighting systems are custom-cut to seamlessly integrate into your roofline, remaining virtually invisible by day while providing stunning, customizable lighting by night. Whether you want to showcase your home's architectural features, celebrate a holiday, or enhance security, our app-controlled permanent lights offer 16 million colors and exact diode control. Say goodbye to the annual dangerous hassle of hanging traditional string lights and protect your property with a permanent, year-round lighting investment.</p>
             </section>
         ),
         benefits: [
-            "Long-Lasting Results: Our process gets surfaces cleaner and keeps them protected longer.",
-            "Enhanced Safety: Eliminates slippery molds and toxic bacterial colonies.",
-            "No Damage Guarantee: We use the exact pressure required—often zero—to protect property integrity."
+            "Never Hang Lights Again: Completely eliminate the dangerous annual chore of climbing slippery winter ladders.",
+            "Complete Customization: Control 16 million color combinations, animations, and chasing effects directly from your smartphone.",
+            "Invisible By Day: Custom color-matched tracks hide the system cleanly under your soffit, preserving your home's architectural curb appeal."
         ],
         process: [
-            "1. Site Inspection & Prep: We conduct a thorough exterior evaluation and meticulously protect all landscaping and delicate surfaces.",
-            "2. Deep Cleaning Execution: Utilizing specialized proprietary chemical blends and precise water pressure to obliterate stains at a molecular level.",
-            "3. Final Quality Check: A rigorous post-wash inspection alongside the property owner to guarantee flawless 100% satisfaction."
+            "1. Architectural Design Consultation: We evaluate your roofline, discuss zone control options, and color-match the aluminum tracks to your soffit and fascia.",
+            "2. Precision Track Installation: Our trained technicians safely mount weather-sealed, custom-cut LED tracks directly beneath your roofline hiding all exterior wiring.",
+            "3. System Configuration & Training: We securely bridge your new lighting controller to your home Wi-Fi and provide full hands-on training for the smart home app."
+        ],
+        protectionProtocols: [
+            {
+                title: "IP68 Weatherproof Reliability",
+                description: "Our heavy-duty permanent lighting diodes are fully IP68 waterproof rated, guaranteed to withstand freezing Wisconsin winters, heavy ice dams, and torrential summer downpours without failing."
+            },
+            {
+                title: "Dedicated Low-Voltage Architecture",
+                description: "The entire system runs on highly efficient, ultra-safe low-voltage power, dramatically reducing energy consumption compared to traditional incandescent holiday lights while totally eliminating fire risks."
+            },
+            {
+                title: "Color-Matched Extruded Aluminum",
+                description: "We don't just stick lights to your house. Every diode is securely housed in premium extruded aluminum tracks painted to perfectly match your existing trim, keeping HOA boards perfectly happy."
+            }
         ],
         pricing: {
-            title: "Transparent Residential Permanent Led Lighting Pricing",
-            description: "Every property is unique, but we believe in 100% transparent pricing. Quotes are calculated based on exact square footage and complexity.",
+            title: "Transparent Permanent Lighting Pricing",
+            description: "Permanent lighting quotes are strictly determined by total linear footage, roofline accessibility, and power controller requirements.",
             rateTitle: "Estimated Rate",
             ratePrice: "Custom Assessed",
-            rateDetails: "Calculated based on the exact dimensions of your property.",
+            rateDetails: "Calculated based on the exact linear dimensions of your roofline.",
             minimumPrice: "$2,000.00",
             minimumDetails: "Our baseline minimum for custom-cut, professionally installed permanent architectural lighting systems.",
             variableTitle: "Cost Variables",
-            variableDetails: "Final price depends on total size, location logistics, and severity of cleaning required."
+            variableDetails: "Final price depends on total linear feet, steep pitch logistics, high-angle roofline accessibility, and overall severity of installation complexity."
         },
         image: "/images/portfolio/permanent-lights.webp",
         faqs: [
