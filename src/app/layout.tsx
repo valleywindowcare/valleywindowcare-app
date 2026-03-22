@@ -5,7 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import MobileActionBar from "@/components/MobileActionBar";
 import MobileFooter from "@/components/MobileFooter";
-import { GoogleTagManager } from '@next/third-parties/google';
+import { GoogleTagManager, GoogleAnalytics } from '@next/third-parties/google';
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -92,6 +92,9 @@ export default function RootLayout({
         <Analytics />
         {process.env.NEXT_PUBLIC_GA_ID && (
           <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GA_ID} />
+        )}
+        {process.env.NEXT_PUBLIC_GOOGLE_ADS_ID && (
+          <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ADS_ID} />
         )}
         {process.env.NEXT_PUBLIC_META_PIXEL_ID && (
           <Script

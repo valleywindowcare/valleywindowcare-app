@@ -105,6 +105,8 @@ export default function HeroForm() {
                    currency: "USD",
                    value: 350.00
                  });
+                 // Fire Explicit Google Ads Lead Conversion
+                 window.gtag("event", "ads_conversion_Form_1");
             }
         } catch (error) {
             console.error("CRITICAL FORM CRASH:", error);
