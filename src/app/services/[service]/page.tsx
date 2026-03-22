@@ -364,13 +364,31 @@ export default async function ServiceGenericPage({ params }: PageProps) {
                     <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 max-w-4xl mx-auto">
                         <h3 className="text-2xl font-bold text-navy mb-4">Local Roof Cleaning Services</h3>
                         <p className="text-gray-600 mb-6">We provide specialized, soft-wash roof cleaning tailored to the unique environmental conditions of the following Wisconsin communities:</p>
+                        
+                        {/* Green Bay Hub Routing */}
+                        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6">
+                            <Link href="/service-areas/green-bay" className="text-blue-600 hover:text-gold font-semibold transition-colors flex items-center gap-2">Green Bay Roof Cleaning <span aria-hidden="true">&rarr;</span></Link>
+                            <Link href="/service-areas/green-bay" className="text-blue-600 hover:text-gold font-semibold transition-colors flex items-center gap-2">Ashwaubenon Roof Cleaning <span aria-hidden="true">&rarr;</span></Link>
+                            <Link href="/service-areas/green-bay" className="text-blue-600 hover:text-gold font-semibold transition-colors flex items-center gap-2">De Pere Roof Cleaning <span aria-hidden="true">&rarr;</span></Link>
+                            <Link href="/service-areas/green-bay" className="text-blue-600 hover:text-gold font-semibold transition-colors flex items-center gap-2">Howard Roof Cleaning <span aria-hidden="true">&rarr;</span></Link>
+                            <Link href="/service-areas/green-bay" className="text-blue-600 hover:text-gold font-semibold transition-colors flex items-center gap-2">Bellevue Roof Cleaning <span aria-hidden="true">&rarr;</span></Link>
+                            <Link href="/service-areas/green-bay" className="text-blue-600 hover:text-gold font-semibold transition-colors flex items-center gap-2">Suamico Roof Cleaning <span aria-hidden="true">&rarr;</span></Link>
+                            <Link href="/service-areas/green-bay" className="text-blue-600 hover:text-gold font-semibold transition-colors flex items-center gap-2">Allouez Roof Cleaning <span aria-hidden="true">&rarr;</span></Link>
+                        </div>
+
+                        {/* Appleton Hub Routing */}
+                        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6">
+                            <Link href="/service-areas/appleton" className="text-blue-600 hover:text-gold font-semibold transition-colors flex items-center gap-2">Appleton Roof Cleaning <span aria-hidden="true">&rarr;</span></Link>
+                            <Link href="/service-areas/appleton" className="text-blue-600 hover:text-gold font-semibold transition-colors flex items-center gap-2">Neenah Roof Cleaning <span aria-hidden="true">&rarr;</span></Link>
+                            <Link href="/service-areas/appleton" className="text-blue-600 hover:text-gold font-semibold transition-colors flex items-center gap-2">Menasha Roof Cleaning <span aria-hidden="true">&rarr;</span></Link>
+                            <Link href="/service-areas/appleton" className="text-blue-600 hover:text-gold font-semibold transition-colors flex items-center gap-2">Kaukauna Roof Cleaning <span aria-hidden="true">&rarr;</span></Link>
+                            <Link href="/service-areas/appleton" className="text-blue-600 hover:text-gold font-semibold transition-colors flex items-center gap-2">Oshkosh Roof Cleaning <span aria-hidden="true">&rarr;</span></Link>
+                        </div>
+
+                        {/* Door County Hub Routing */}
                         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                            <Link href="/service-areas/green-bay/roof-cleaning" className="text-blue-600 hover:text-gold font-semibold transition-colors flex items-center gap-2">Green Bay Roof Cleaning <span aria-hidden="true">&rarr;</span></Link>
-                            <Link href="/service-areas/neenah/roof-cleaning" className="text-blue-600 hover:text-gold font-semibold transition-colors flex items-center gap-2">Neenah Roof Cleaning <span aria-hidden="true">&rarr;</span></Link>
-                            <Link href="/service-areas/appleton/roof-cleaning" className="text-blue-600 hover:text-gold font-semibold transition-colors flex items-center gap-2">Appleton Roof Cleaning <span aria-hidden="true">&rarr;</span></Link>
-                            <Link href="/service-areas/ashwaubenon/roof-cleaning" className="text-blue-600 hover:text-gold font-semibold transition-colors flex items-center gap-2">Ashwaubenon Roof Cleaning <span aria-hidden="true">&rarr;</span></Link>
-                            <Link href="/service-areas/menasha/roof-cleaning" className="text-blue-600 hover:text-gold font-semibold transition-colors flex items-center gap-2">Menasha Roof Cleaning <span aria-hidden="true">&rarr;</span></Link>
-                            <Link href="/service-areas/kaukauna/roof-cleaning" className="text-blue-600 hover:text-gold font-semibold transition-colors flex items-center gap-2">Kaukauna Roof Cleaning <span aria-hidden="true">&rarr;</span></Link>
+                            <Link href="/service-areas/door-county" className="text-blue-600 hover:text-gold font-semibold transition-colors flex items-center gap-2">Sturgeon Bay Roof Cleaning <span aria-hidden="true">&rarr;</span></Link>
+                            <Link href="/service-areas/door-county" className="text-blue-600 hover:text-gold font-semibold transition-colors flex items-center gap-2">Fish Creek Roof Cleaning <span aria-hidden="true">&rarr;</span></Link>
                         </div>
                     </div>
                 </div>
