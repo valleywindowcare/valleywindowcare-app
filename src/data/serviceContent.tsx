@@ -152,7 +152,7 @@ export const serviceContentMap: Record<string, { description: React.ReactNode, b
             rateTitle: "Per Linear Foot Rate",
             ratePrice: "$1.00 - $2.50 / Ln. Ft.",
             rateDetails: "Calculated based on the exact linear length of your gutter system.",
-            minimumPrice: "$150.00",
+            minimumPrice: "$350.00",
             minimumDetails: "Our baseline rate for bringing specialized ladders, standoffs, and debris removal equipment to your home.",
             variableTitle: "Cost Variables",
             variableDetails: "Final price depends on total stories, severely packed downspouts, underground drain flushing, or removing existing failed gutter guards."
@@ -195,7 +195,7 @@ export const serviceContentMap: Record<string, { description: React.ReactNode, b
             rateTitle: "Estimated Rate",
             ratePrice: "Custom Assessed",
             rateDetails: "Calculated based on the exact dimensions of your property.",
-            minimumPrice: "$150.00",
+            minimumPrice: "$350.00",
             minimumDetails: "Our baseline rate to deploy specialized equipment and technicians.",
             variableTitle: "Cost Variables",
             variableDetails: "Final price depends on total size, location logistics, and severity of cleaning required."
@@ -238,7 +238,7 @@ export const serviceContentMap: Record<string, { description: React.ReactNode, b
             rateTitle: "Estimated Rate",
             ratePrice: "Custom Assessed",
             rateDetails: "Calculated based on the exact dimensions of your property.",
-            minimumPrice: "$150.00",
+            minimumPrice: "$350.00",
             minimumDetails: "Our baseline rate to deploy specialized equipment and technicians.",
             variableTitle: "Cost Variables",
             variableDetails: "Final price depends on total size, location logistics, and severity of cleaning required."
@@ -324,7 +324,7 @@ export const serviceContentMap: Record<string, { description: React.ReactNode, b
             rateTitle: "Estimated Rate",
             ratePrice: "Custom Assessed",
             rateDetails: "Calculated based on the exact dimensions of your property.",
-            minimumPrice: "$150.00",
+            minimumPrice: "$350.00",
             minimumDetails: "Our baseline rate to deploy specialized equipment and technicians.",
             variableTitle: "Cost Variables",
             variableDetails: "Final price depends on total size, location logistics, and severity of cleaning required."
@@ -410,7 +410,7 @@ export const serviceContentMap: Record<string, { description: React.ReactNode, b
             rateTitle: "Estimated Rate",
             ratePrice: "Custom Assessed",
             rateDetails: "Calculated based on the exact dimensions of your property.",
-            minimumPrice: "$150.00",
+            minimumPrice: "$350.00",
             minimumDetails: "Our baseline rate to deploy specialized equipment and technicians.",
             variableTitle: "Cost Variables",
             variableDetails: "Final price depends on total size, location logistics, and severity of cleaning required."
@@ -453,7 +453,7 @@ export const serviceContentMap: Record<string, { description: React.ReactNode, b
             rateTitle: "Estimated Rate",
             ratePrice: "Custom Assessed",
             rateDetails: "Calculated based on the exact dimensions of your property.",
-            minimumPrice: "$150.00",
+            minimumPrice: "$350.00",
             minimumDetails: "Our baseline rate to deploy specialized equipment and technicians.",
             variableTitle: "Cost Variables",
             variableDetails: "Final price depends on total size, location logistics, and severity of cleaning required."
@@ -539,7 +539,7 @@ export const serviceContentMap: Record<string, { description: React.ReactNode, b
             rateTitle: "Estimated Rate",
             ratePrice: "Custom Assessed",
             rateDetails: "Calculated based on the exact dimensions of your property.",
-            minimumPrice: "$150.00",
+            minimumPrice: "$350.00",
             minimumDetails: "Our baseline rate to deploy specialized equipment and technicians.",
             variableTitle: "Cost Variables",
             variableDetails: "Final price depends on total size, location logistics, and severity of cleaning required."
@@ -582,7 +582,7 @@ export const serviceContentMap: Record<string, { description: React.ReactNode, b
             rateTitle: "Estimated Rate",
             ratePrice: "Custom Assessed",
             rateDetails: "Calculated based on the exact dimensions of your property.",
-            minimumPrice: "$150.00",
+            minimumPrice: "$350.00",
             minimumDetails: "Our baseline rate to deploy specialized equipment and technicians.",
             variableTitle: "Cost Variables",
             variableDetails: "Final price depends on total size, location logistics, and severity of cleaning required."
@@ -625,7 +625,7 @@ export const serviceContentMap: Record<string, { description: React.ReactNode, b
             rateTitle: "Estimated Rate",
             ratePrice: "Custom Assessed",
             rateDetails: "Calculated based on the exact dimensions of your property.",
-            minimumPrice: "$150.00",
+            minimumPrice: "$350.00",
             minimumDetails: "Our baseline rate to deploy specialized equipment and technicians.",
             variableTitle: "Cost Variables",
             variableDetails: "Final price depends on total size, location logistics, and severity of cleaning required."
@@ -668,7 +668,7 @@ export const serviceContentMap: Record<string, { description: React.ReactNode, b
             rateTitle: "Estimated Rate",
             ratePrice: "Custom Assessed",
             rateDetails: "Calculated based on the exact dimensions of your property.",
-            minimumPrice: "$150.00",
+            minimumPrice: "$350.00",
             minimumDetails: "Our baseline rate to deploy specialized equipment and technicians.",
             variableTitle: "Cost Variables",
             variableDetails: "Final price depends on total size, location logistics, and severity of cleaning required."
@@ -711,7 +711,7 @@ export const serviceContentMap: Record<string, { description: React.ReactNode, b
             rateTitle: "Estimated Rate",
             ratePrice: "Custom Assessed",
             rateDetails: "Calculated based on the exact dimensions of your property.",
-            minimumPrice: "$150.00",
+            minimumPrice: "$350.00",
             minimumDetails: "Our baseline rate to deploy specialized equipment and technicians.",
             variableTitle: "Cost Variables",
             variableDetails: "Final price depends on total size, location logistics, and severity of cleaning required."
@@ -883,7 +883,7 @@ export const serviceContentMap: Record<string, { description: React.ReactNode, b
             rateTitle: "Estimated Rate",
             ratePrice: "Custom Assessed",
             rateDetails: "Calculated based on the exact dimensions of your property.",
-            minimumPrice: "$150.00",
+            minimumPrice: "$350.00",
             minimumDetails: "Our baseline rate to deploy specialized equipment and technicians.",
             variableTitle: "Cost Variables",
             variableDetails: "Final price depends on total size, location logistics, and severity of cleaning required."
@@ -926,7 +926,7 @@ export const serviceContentMap: Record<string, { description: React.ReactNode, b
             rateTitle: "Estimated Rate",
             ratePrice: "Custom Assessed",
             rateDetails: "Calculated based on the exact dimensions of your property.",
-            minimumPrice: "$150.00",
+            minimumPrice: "$350.00",
             minimumDetails: "Our baseline rate to deploy specialized equipment and technicians.",
             variableTitle: "Cost Variables",
             variableDetails: "Final price depends on total size, location logistics, and severity of cleaning required."
@@ -1013,7 +1013,7 @@ export const serviceContentMap: Record<string, { description: React.ReactNode, b
             rateTitle: "Estimated Rate",
             ratePrice: "Custom Assessed",
             rateDetails: "Calculated based on the exact dimensions of your property.",
-            minimumPrice: "$150.00",
+            minimumPrice: "$350.00",
             minimumDetails: "Our baseline rate to deploy specialized equipment and technicians.",
             variableTitle: "Cost Variables",
             variableDetails: "Final price depends on total size, location logistics, and severity of cleaning required."
@@ -1056,7 +1056,7 @@ export const serviceContentMap: Record<string, { description: React.ReactNode, b
             rateTitle: "Estimated Rate",
             ratePrice: "Custom Assessed",
             rateDetails: "Calculated based on the exact dimensions of your property.",
-            minimumPrice: "$150.00",
+            minimumPrice: "$350.00",
             minimumDetails: "Our baseline rate to deploy specialized equipment and technicians.",
             variableTitle: "Cost Variables",
             variableDetails: "Final price depends on total size, location logistics, and severity of cleaning required."
@@ -1099,7 +1099,7 @@ export const serviceContentMap: Record<string, { description: React.ReactNode, b
             rateTitle: "Estimated Rate",
             ratePrice: "Custom Assessed",
             rateDetails: "Calculated based on the exact dimensions of your property.",
-            minimumPrice: "$150.00",
+            minimumPrice: "$350.00",
             minimumDetails: "Our baseline rate to deploy specialized equipment and technicians.",
             variableTitle: "Cost Variables",
             variableDetails: "Final price depends on total size, location logistics, and severity of cleaning required."
@@ -1142,7 +1142,7 @@ export const serviceContentMap: Record<string, { description: React.ReactNode, b
             rateTitle: "Estimated Rate",
             ratePrice: "Custom Assessed",
             rateDetails: "Calculated based on the exact dimensions of your property.",
-            minimumPrice: "$150.00",
+            minimumPrice: "$350.00",
             minimumDetails: "Our baseline rate to deploy specialized equipment and technicians.",
             variableTitle: "Cost Variables",
             variableDetails: "Final price depends on total size, location logistics, and severity of cleaning required."
@@ -1185,7 +1185,7 @@ export const serviceContentMap: Record<string, { description: React.ReactNode, b
             rateTitle: "Estimated Rate",
             ratePrice: "Custom Assessed",
             rateDetails: "Calculated based on the exact dimensions of your property.",
-            minimumPrice: "$150.00",
+            minimumPrice: "$350.00",
             minimumDetails: "Our baseline rate to deploy specialized equipment and technicians.",
             variableTitle: "Cost Variables",
             variableDetails: "Final price depends on total size, location logistics, and severity of cleaning required."
@@ -1229,7 +1229,7 @@ export const serviceContentMap: Record<string, { description: React.ReactNode, b
             rateTitle: "Estimated Rate",
             ratePrice: "Custom Assessed",
             rateDetails: "Calculated based on the exact dimensions of your property.",
-            minimumPrice: "$150.00",
+            minimumPrice: "$350.00",
             minimumDetails: "Our baseline rate to deploy specialized equipment and technicians.",
             variableTitle: "Cost Variables",
             variableDetails: "Final price depends on total size, location logistics, and severity of cleaning required."
@@ -1358,7 +1358,7 @@ export const serviceContentMap: Record<string, { description: React.ReactNode, b
             rateTitle: "Estimated Rate",
             ratePrice: "Custom Assessed",
             rateDetails: "Calculated based on the exact dimensions of your property.",
-            minimumPrice: "$150.00",
+            minimumPrice: "$350.00",
             minimumDetails: "Our baseline rate to deploy specialized equipment and technicians.",
             variableTitle: "Cost Variables",
             variableDetails: "Final price depends on total size, location logistics, and severity of cleaning required."

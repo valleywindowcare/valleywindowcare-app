@@ -368,9 +368,9 @@ export default async function CityHubPage({ params }: PageProps) {
                         title={`${cityName} Property Maintenance`}
                         description={`Secure professional, reliable exterior cleaning for your ${cityName} property.`}
                         rateTitle="Standard Rate"
-                        ratePrice="$150.00"
+                        ratePrice="$350.00"
                         rateDetails="Minimum baseline per visit"
-                        minimumPrice="$150.00"
+                        minimumPrice="$350.00"
                         minimumDetails="Depending on travel distance and complexity"
                         variableTitle="Comprehensive Projects"
                         variableHeading="Custom Assessed"
