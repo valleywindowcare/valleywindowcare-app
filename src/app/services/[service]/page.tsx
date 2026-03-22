@@ -365,30 +365,30 @@ export default async function ServiceGenericPage({ params }: PageProps) {
                         <h3 className="text-2xl font-bold text-navy mb-4">Local Roof Cleaning Services</h3>
                         <p className="text-gray-600 mb-6">We provide specialized, soft-wash roof cleaning tailored to the unique environmental conditions of the following Wisconsin communities:</p>
                         
-                        {/* Green Bay Hub Routing */}
-                        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6">
-                            <Link href="/service-areas/green-bay" className="text-blue-600 hover:text-gold font-semibold transition-colors flex items-center gap-2">Green Bay Roof Cleaning <span aria-hidden="true">&rarr;</span></Link>
-                            <Link href="/service-areas/green-bay" className="text-blue-600 hover:text-gold font-semibold transition-colors flex items-center gap-2">Ashwaubenon Roof Cleaning <span aria-hidden="true">&rarr;</span></Link>
-                            <Link href="/service-areas/green-bay" className="text-blue-600 hover:text-gold font-semibold transition-colors flex items-center gap-2">De Pere Roof Cleaning <span aria-hidden="true">&rarr;</span></Link>
-                            <Link href="/service-areas/green-bay" className="text-blue-600 hover:text-gold font-semibold transition-colors flex items-center gap-2">Howard Roof Cleaning <span aria-hidden="true">&rarr;</span></Link>
-                            <Link href="/service-areas/green-bay" className="text-blue-600 hover:text-gold font-semibold transition-colors flex items-center gap-2">Bellevue Roof Cleaning <span aria-hidden="true">&rarr;</span></Link>
-                            <Link href="/service-areas/green-bay" className="text-blue-600 hover:text-gold font-semibold transition-colors flex items-center gap-2">Suamico Roof Cleaning <span aria-hidden="true">&rarr;</span></Link>
-                            <Link href="/service-areas/green-bay" className="text-blue-600 hover:text-gold font-semibold transition-colors flex items-center gap-2">Allouez Roof Cleaning <span aria-hidden="true">&rarr;</span></Link>
-                        </div>
-
-                        {/* Appleton Hub Routing */}
-                        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6">
-                            <Link href="/service-areas/appleton" className="text-blue-600 hover:text-gold font-semibold transition-colors flex items-center gap-2">Appleton Roof Cleaning <span aria-hidden="true">&rarr;</span></Link>
-                            <Link href="/service-areas/appleton" className="text-blue-600 hover:text-gold font-semibold transition-colors flex items-center gap-2">Neenah Roof Cleaning <span aria-hidden="true">&rarr;</span></Link>
-                            <Link href="/service-areas/appleton" className="text-blue-600 hover:text-gold font-semibold transition-colors flex items-center gap-2">Menasha Roof Cleaning <span aria-hidden="true">&rarr;</span></Link>
-                            <Link href="/service-areas/appleton" className="text-blue-600 hover:text-gold font-semibold transition-colors flex items-center gap-2">Kaukauna Roof Cleaning <span aria-hidden="true">&rarr;</span></Link>
-                            <Link href="/service-areas/appleton" className="text-blue-600 hover:text-gold font-semibold transition-colors flex items-center gap-2">Oshkosh Roof Cleaning <span aria-hidden="true">&rarr;</span></Link>
-                        </div>
-
-                        {/* Door County Hub Routing */}
-                        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                            <Link href="/service-areas/door-county" className="text-blue-600 hover:text-gold font-semibold transition-colors flex items-center gap-2">Sturgeon Bay Roof Cleaning <span aria-hidden="true">&rarr;</span></Link>
-                            <Link href="/service-areas/door-county" className="text-blue-600 hover:text-gold font-semibold transition-colors flex items-center gap-2">Fish Creek Roof Cleaning <span aria-hidden="true">&rarr;</span></Link>
+                        {/* Alphabetized Canonical Routing Grid */}
+                        <div className="grid grid-cols-2 lg:grid-cols-3 gap-y-3 gap-x-2 md:gap-x-6 border-t border-gray-100 pt-6">
+                            {[
+                                { name: "Allouez", url: "/service-areas/green-bay" },
+                                { name: "Appleton", url: "/service-areas/appleton" },
+                                { name: "Ashwaubenon", url: "/service-areas/green-bay" },
+                                { name: "Bellevue", url: "/service-areas/green-bay" },
+                                { name: "De Pere", url: "/service-areas/green-bay" },
+                                { name: "Fish Creek", url: "/service-areas/door-county" },
+                                { name: "Green Bay", url: "/service-areas/green-bay" },
+                                { name: "Howard", url: "/service-areas/green-bay" },
+                                { name: "Kaukauna", url: "/service-areas/appleton" },
+                                { name: "Menasha", url: "/service-areas/appleton" },
+                                { name: "Neenah", url: "/service-areas/neenah" },
+                                { name: "Oshkosh", url: "/service-areas/oshkosh" },
+                                { name: "Shawano", url: "/service-areas/shawano" },
+                                { name: "Sturgeon Bay", url: "/service-areas/door-county" },
+                                { name: "Suamico", url: "/service-areas/green-bay" }
+                            ].map((loc, idx) => (
+                                <Link key={idx} href={loc.url} className="text-blue-600 hover:text-gold font-semibold transition-all flex items-center justify-between group p-3 hover:bg-slate-50/80 rounded-xl border border-transparent hover:border-gray-100 shadow-sm hover:shadow-md">
+                                    <span className="truncate pr-2">{loc.name} Roof Cleaning</span>
+                                    <span aria-hidden="true" className="opacity-0 group-hover:opacity-100 transition-all transform -translate-x-2 group-hover:translate-x-0 text-gold">&rarr;</span>
+                                </Link>
+                            ))}
                         </div>
                     </div>
                 </div>
