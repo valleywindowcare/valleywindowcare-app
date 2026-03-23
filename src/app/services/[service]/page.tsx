@@ -195,7 +195,7 @@ export default async function ServiceGenericPage({ params }: PageProps) {
     return (
         <>
             <section className="relative w-full min-h-[500px] flex flex-col items-center justify-center py-20 bg-slate-900 overflow-hidden">
-                <img src={heroImageToUse || "/images/portfolio/house-washing.webp"} alt="Service Background" className="absolute inset-0 w-full h-full object-cover z-0 opacity-50" />
+                <Image src={heroImageToUse || "/images/portfolio/house-washing.webp"} alt="Service Background" fill priority={true} sizes="100vw" className="object-cover z-0 opacity-50" />
                 <div className="relative z-10 w-full max-w-5xl mx-auto px-4 text-center">
                     <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold leading-tight mb-4 tracking-tight drop-shadow-lg text-white">
                         Professional <span className="text-gold">{formattedName}</span><br />
