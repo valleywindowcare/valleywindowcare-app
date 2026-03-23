@@ -39,6 +39,8 @@ export default function Header() {
                             alt="Valley Window Care and Exterior Cleaning logo - Professional exterior cleaning services in Wisconsin"
                             width={250}
                             height={92}
+                            priority={true}
+                            quality={60}
                             className="object-contain object-center xl:object-left w-full h-full"
                         />
                     </div>

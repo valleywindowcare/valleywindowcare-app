@@ -33,7 +33,7 @@ export default function Hero({
                     fill
                     priority={true}
                     fetchPriority="high"
-                    quality={75}
+                    quality={60}
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover"
                 />
