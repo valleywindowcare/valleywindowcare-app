@@ -921,6 +921,9 @@ export const serviceContentMap: Record<string, { description: React.ReactNode, b
     "graffiti-removal": {
         description: (
             <section className="eeat-service-block">
+                <h3 className="text-2xl font-bold text-red-600 mb-3 flex items-center gap-2">
+                    <span className="animate-pulse">🚨</span> Emergency Service
+                </h3>
                 <p className="mb-4">Professional Graffiti Removal demands an immediate, rapid response to protect your commercial property value. The key to eliminating vandalism without destroying the underlying masonry, brick, or siding is specific chemical engineering. Blasting dry spray paint with sheer cold-water pressure will permanently 'blow out' fragile mortar joints and etch the brick faces. Instead, we manually apply specialized biodegradable paint-strippers tailored entirely to the contaminated surface material. Combined with hot-water 200° thermal rinsing, the aerosol pigment literally melts completely off the wall with zero permanent 'ghosting'.</p>
             </section>
         ),

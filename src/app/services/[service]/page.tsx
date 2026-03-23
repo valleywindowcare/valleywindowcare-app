@@ -144,7 +144,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         ? `Commercial ${formattedName} in Green Bay & Northeast WI`
         : `${formattedName} in Green Bay & Northeast WI`;
 
-    const seoDescription = isCommercial
+    const seoDescription = service === 'roof-cleaning'
+        ? "Expert Roof Cleaning in Green Bay & Appleton. Remove black streaks and moss safely with our soft-wash system. Licensed and insured."
+        : isCommercial
         ? `Valley Window Care and Exterior Cleaning provides premium ${formattedName.toLowerCase()} and property maintenance for businesses in Green Bay, Appleton, and surrounding areas.`
         : `Valley Window Care and Exterior Cleaning offers premium ${formattedName.toLowerCase()} for residential properties in Green Bay, Appleton, and surrounding areas.`;
 

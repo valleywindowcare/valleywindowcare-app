@@ -31,10 +31,10 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: "Valley Window Care | Premium Exterior Cleaning in Green Bay, WI",
+    default: "Valley Window Care & Exterior Cleaning | #1 Green Bay Window & Roof Cleaners",
     template: "%s | Valley Window Care",
   },
-  description: "Northeast Wisconsin's 5-star rated exterior cleaning and architectural maintenance specialists. Serving De Pere, Green Bay, and Appleton.",
+  description: "Green Bay’s top-rated window and roof cleaning. Get an instant quote for professional house washing, gutter cleaning, and paver restoration. Call (920) 609-7085 today!",
 };
 
 export default function RootLayout({
