@@ -1343,7 +1343,7 @@ export const serviceContentMap: Record<string, { pageH1?: string, description: R
             variableTitle: "Cost Variables",
             variableDetails: "Final price depends on total size, sealing choice (wet look vs natural), and necessary brick leveling."
         },
-        image: "/images/portfolio/paver-restoration.webp",
+        image: "/images/paver-washing.webp",
         faqs: [
           {
                     "question": "Why do I need polymeric sand for my Green Bay paver patio?",
