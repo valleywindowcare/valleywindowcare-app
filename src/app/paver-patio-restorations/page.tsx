@@ -24,9 +24,9 @@ export default function ServicePage() {
                         <span className="text-gold text-2xl md:text-3xl mt-4 block">Green Bay & Northeast Wisconsin</span>
                     </>
                 }
-                description="Valley Window Care and Exterior Cleaning provides premium paver restoration services to enhance your property's value."
-                bgImage="/images/portfolio/Paver-sealing-green-bay.JPG"  
-                bgImageAlt="Professional paver patio cleaning and sealing in De Pere, Wisconsin"
+                description="Valley Window Care & Exterior Cleaning provides premium paver restoration services to enhance your property's value."
+                bgImage="/images/portfolio/paver-restoration.webp"  
+                bgImageAlt="Professional paver patio cleaning and joint sanding in De Pere, Wisconsin"
             />
 
             <Process isCommercial={false} />
@@ -36,8 +36,8 @@ export default function ServicePage() {
                 description="Our paver restoration process safely cleans, perfectly re-sands, and chemically seals your investment to protect against harsh Wisconsin weather and freeze-thaw cycles."
                 benefits={["Professional Quality", "Fully Insured", "Satisfaction Guaranteed"]}
                 process={["Free Estimate", "Schedule Wash", "Enjoy Your Property"]}
-                image="/images/portfolio/paver-cleaning-before-after.JPG"
-                imageAlt="Before and after paver restoration results"
+                image="/images/portfolio/paver-sealing.webp"
+                imageAlt="Finished paver sealing and restoration results by Valley Window Care & Exterior Cleaning"
             />
 
             <div className="bg-slate-50 border-t border-gray-200 relative mt-16">
