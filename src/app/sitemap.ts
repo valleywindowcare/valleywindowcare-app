@@ -24,7 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 0.8,
         },
         {
-            url: `${baseUrl}/diy-vs-professional-pressure-washing`,
+            url: `${baseUrl}/expert-guides/diy-vs-professional-pressure-washing`,
             lastModified: new Date(),
             changeFrequency: 'monthly',
             priority: 0.8,
