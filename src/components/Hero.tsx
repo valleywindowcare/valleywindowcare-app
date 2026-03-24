@@ -14,7 +14,7 @@ interface HeroProps {
 
 export default function Hero({
     bgImage = "/images/portfolio/house-wash-before-after.webp",
-    bgImageAlt = "Valley Window Care Exterior Cleaning",
+    bgImageAlt = "Valley Window Care & Exterior Cleaning",
     h1,
     description,
     cityName,
@@ -54,7 +54,7 @@ export default function Hero({
                         )}
                     </h1>
                     <p className="text-lg md:text-xl text-gray-100 mb-8 font-semibold leading-relaxed drop-shadow-md">
-                        {description || "Enhance your property's appeal with expert exterior cleaning services in Green Bay from Valley Window Care and Exterior Cleaning."}
+                        {description || "Enhance your property's appeal with expert exterior cleaning services in Green Bay from Valley Window Care & Exterior Cleaning."}
                     </p>
                 </div>
 

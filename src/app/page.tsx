@@ -16,7 +16,10 @@ import Link from 'next/link';
 export default function Home() {
   return (
     <>
-      <Hero bgImage="/images/portfolio/building-washing-services-1.png" />
+      <Hero 
+        bgImage="/images/portfolio/building-washing-services-2.webp" 
+        bgImageAlt="Valley Window Care & Exterior Cleaning performing commercial soft-washing on a hotel exterior using a boom lift in Green Bay, WI"
+      />
       <Process />
       <ServiceGrid />
       <ReviewSlider />
