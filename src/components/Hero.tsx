@@ -24,7 +24,7 @@ export default function Hero({
     const isDefault = !bgImage || bgImage.includes("placeholder");
 
     return (
-        <section className={`!relative !w-full !min-h-screen !flex !flex-col !items-center !justify-center overflow-hidden text-white bg-navy`}>
+        <section className={`!relative !w-full !min-h-screen !flex !flex-col !items-center !justify-center overflow-hidden text-white bg-navy pb-24 lg:pb-32`}>
             {/* Background with optimized Next/Image architecture */}
             <div className="absolute inset-0 z-0">
                 <Image
