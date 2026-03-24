@@ -34,11 +34,10 @@ export default function PermanentHolidayLightingPage() {
                 <div className="container mx-auto px-4 relative z-20 flex flex-col items-center justify-center text-center">
                     <div className="max-w-4xl mb-12">
                         <h1 className={`text-4xl md:text-5xl lg:text-7xl font-extrabold leading-tight mb-6 tracking-tight drop-shadow-lg mx-auto text-white`}>
-                            Professional <span className="text-gold">Permanent Holiday Lighting</span><br />
-                            <span className="text-2xl md:text-3xl mt-4 block">Green Bay & Northeast Wisconsin</span>
+                            <span className="text-gold">Professional Permanent Holiday</span> <br className="hidden md:block" />& Architectural Lighting
                         </h1>
                         <p className="text-lg md:text-xl text-gray-100 mb-8 font-semibold leading-relaxed drop-shadow-md">
-                            Valley Window Care and Exterior Cleaning provides premium permanent holiday lighting services to enhance your property's value.
+                            Powered by Omni — The Industry’s Most Durable & Versatile Smart Lighting System.
                         </p>
                     </div>
                     {/* Hero Form Stack */}
@@ -77,60 +76,62 @@ export default function PermanentHolidayLightingPage() {
             <section className="bg-slate-50 w-full py-16 lg:py-24 border-t border-gray-100">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="mb-16 max-w-4xl mx-auto text-center bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-gray-100">
+                        <div className="flex justify-center mb-8 bg-[#1B365D] p-6 rounded-2xl max-w-sm mx-auto shadow-md">
+                            <Image src="/images/portfolio/Omni Certified Installer Logo (1).png" alt="Powered By Omni" width={250} height={100} className="object-contain" />
+                        </div>
                         <div className="text-gray-600 text-lg md:text-xl leading-relaxed space-y-6 text-left font-medium">
                             <p>
-                                Maintaining your property’s curb appeal doesn't stop when the sun goes down. At Valley Window Care, we believe your home or business deserves to shine year-round. Our premium permanent LED lighting services are specifically calibrated to withstand brutal Wisconsin winters while beautifully illuminating your property's exterior architecture.
+                                Say goodbye to ladders and tangled strands forever. At Valley Window Care & Exterior Cleaning, we are proud to be an authorized installer of Omni Permanent Lighting. Designed to be virtually invisible by day and spectacular by night, our track-based LED system provides elegant architectural lighting and vibrant holiday displays year-round.
                             </p>
-                            <p>
-                                We are proud to partner with Omni Lighting, the industry leader in high-performance permanent track lighting. By utilizing Omni Lighting's state-of-the-art RGBW technology, we deliver unmatched brightness, color accuracy, and durability. Our proprietary, color-matched aluminum tracks are custom-cut on-site to blend seamlessly into your existing soffit and fascia, hiding the wires and hardware completely from view during the day.
-                            </p>
-                            <p>
-                                Forget the annual hassle and danger of climbing icy ladders to hang temporary string lights. With our Omni Lighting systems, you have a 100% permanent solution. Whether you want classic warm white for nightly architectural security, vibrant green and gold for Packers game days, or dynamic animated patterns for Christmas and Halloween, complete control is always right at your fingertips.
-                            </p>
+                            <div className="mt-8 text-center pt-6">
+                                <a href="https://omnilighting.com" target="_blank" rel="noopener noreferrer" className="inline-block bg-navy text-white font-bold py-4 px-8 rounded-xl shadow-lg hover:bg-gold hover:text-navy transition-colors">
+                                    Learn more about the Omni System at OmniLighting.com &rarr;
+                                </a>
+                            </div>
                         </div>
                     </div>
 
                     <div className="mt-12">
                         <div className="text-center mb-16">
                             <h2 className="text-3xl lg:text-4xl font-extrabold text-navy">
-                                Next-Generation Lighting Features
+                                Why We Choose Omni for Wisconsin Homes:
                             </h2>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                             <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-gold/50 transition-colors group">
                                 <h4 className="text-2xl font-black text-navy mb-4 flex items-center gap-4">
                                     <span className="w-10 h-10 rounded-full bg-navy text-white flex items-center justify-center text-lg shadow-inner group-hover:bg-gold transition-colors">1</span>
-                                    Invisible Daytime Profile
+                                    Invisible Track Design
                                 </h4>
                                 <p className="text-gray-600 leading-relaxed text-lg">
-                                    Custom color-matched tracks that blend seamlessly into your home's soffit and trim, practically invisible during the day.
+                                    Omni’s patented tracks are color-matched to your home’s soffit and fascia, ensuring the system is hidden from view during the daylight hours.
                                 </p>
                             </div>
                             <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-gold/50 transition-colors group">
                                 <h4 className="text-2xl font-black text-navy mb-4 flex items-center gap-4">
                                     <span className="w-10 h-10 rounded-full bg-navy text-white flex items-center justify-center text-lg shadow-inner group-hover:bg-gold transition-colors">2</span>
-                                    Smart App Control
+                                    True Warm White + Millions of Colors
                                 </h4>
                                 <p className="text-gray-600 leading-relaxed text-lg">
-                                    Fully customizable colors, patterns, and timers controlled directly from your smartphone from anywhere in the world.
+                                    Unlike cheap RGB alternatives, Omni features a dedicated 'Warm White' chip for sophisticated evening accents, plus millions of color combinations for every holiday and event.
                                 </p>
                             </div>
                             <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-gold/50 transition-colors group">
                                 <h4 className="text-2xl font-black text-navy mb-4 flex items-center gap-4">
                                     <span className="w-10 h-10 rounded-full bg-navy text-white flex items-center justify-center text-lg shadow-inner group-hover:bg-gold transition-colors">3</span>
-                                    Safety & Convenience
+                                    Engineered for the Fox Valley
                                 </h4>
                                 <p className="text-gray-600 leading-relaxed text-lg">
-                                    Never climb a dangerous ladder again. Enjoy effortless year-round lighting for every holiday, architectural accent, or Packers game day.
+                                    Built to withstand sub-zero temperatures, heavy ice, and UV exposure, Omni systems are rated for decades of maintenance-free performance.
                                 </p>
                             </div>
                             <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-gold/50 transition-colors group">
                                 <h4 className="text-2xl font-black text-navy mb-4 flex items-center gap-4">
                                     <span className="w-10 h-10 rounded-full bg-navy text-white flex items-center justify-center text-lg shadow-inner group-hover:bg-gold transition-colors">4</span>
-                                    Durability & Security
+                                    Smart App Control
                                 </h4>
                                 <p className="text-gray-600 leading-relaxed text-lg">
-                                    Weather-proof, energy-efficient LED technology rated for extreme Wisconsin winters, brightening dark areas around your property at night for added peace of mind.
+                                    Control your entire home from your phone. Set custom schedules, choose from hundreds of pre-set patterns, or create your own unique light show with the Omni app.
                                 </p>
                             </div>
                         </div>
