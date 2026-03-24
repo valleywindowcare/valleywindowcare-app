@@ -4,10 +4,12 @@ import React, { useState } from "react";
 import Link from 'next/link';
 
 export default function ValueCalculator() {
-  const [service, setService] = useState<"gutter" | "house" | "roof">("house");
+  const [service, setService] = useState<"gutter" | "house" | "roof" | "concrete" | "paver">("house");
   const [houseSqft, setHouseSqft] = useState<number>(2000);
   const [roofSqft, setRoofSqft] = useState<number>(2500);
   const [gutterFt, setGutterFt] = useState<number>(150);
+  const [concreteSqft, setConcreteSqft] = useState<number>(1000);
+  const [paverSqft, setPaverSqft] = useState<number>(500);
 
   const calculateCost = () => {
     if (service === "gutter") {
@@ -15,6 +17,12 @@ export default function ValueCalculator() {
     }
     if (service === "roof") {
       return Math.max(500, Math.round(roofSqft * 0.40));
+    }
+    if (service === "concrete") {
+      return Math.max(250, Math.round(concreteSqft * 0.40));
+    }
+    if (service === "paver") {
+      return Math.max(500, Math.round(paverSqft * 3.00));
     }
     // House washing: Start at $350 or ~$0.20 per sq ft
     const calculated = houseSqft * 0.20;
@@ -56,6 +64,18 @@ export default function ValueCalculator() {
                 className={`w-full py-3 px-4 rounded-xl font-bold transition-all border-2 text-left ${service === "gutter" ? "border-gold bg-gold/10 text-navy" : "border-gray-200 text-gray-500 hover:border-gold/50"}`}
               >
                 Gutter Cleaning
+              </button>
+              <button
+                onClick={() => setService("concrete")}
+                className={`w-full py-3 px-4 rounded-xl font-bold transition-all border-2 text-left ${service === "concrete" ? "border-gold bg-gold/10 text-navy" : "border-gray-200 text-gray-500 hover:border-gold/50"}`}
+              >
+                Professional Concrete Cleaning
+              </button>
+              <button
+                onClick={() => setService("paver")}
+                className={`w-full py-3 px-4 rounded-xl font-bold transition-all border-2 text-left ${service === "paver" ? "border-gold bg-gold/10 text-navy" : "border-gray-200 text-gray-500 hover:border-gold/50"}`}
+              >
+                Paver Patio Restoration & Sealing
               </button>
             </div>
           </div>
@@ -122,6 +142,48 @@ export default function ValueCalculator() {
               </div>
             </div>
           )}
+
+          {service === "concrete" && (
+            <div>
+              <label className="block text-sm font-semibold text-gray-700 mb-2">
+                Estimated Area: {concreteSqft.toLocaleString()} sq ft
+              </label>
+              <input
+                type="range"
+                min="500"
+                max="5000"
+                step="100"
+                value={concreteSqft}
+                onChange={(e) => setConcreteSqft(Number(e.target.value))}
+                className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-gold"
+              />
+              <div className="flex justify-between text-xs text-gray-500 mt-2 font-medium">
+                <span>500 sqft</span>
+                <span>5,000+ sqft</span>
+              </div>
+            </div>
+          )}
+
+          {service === "paver" && (
+            <div>
+              <label className="block text-sm font-semibold text-gray-700 mb-2">
+                Estimated Patio Size: {paverSqft.toLocaleString()} sq ft
+              </label>
+              <input
+                type="range"
+                min="100"
+                max="2000"
+                step="50"
+                value={paverSqft}
+                onChange={(e) => setPaverSqft(Number(e.target.value))}
+                className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-gold"
+              />
+              <div className="flex justify-between text-xs text-gray-500 mt-2 font-medium">
+                <span>100 sqft</span>
+                <span>2,000+ sqft</span>
+              </div>
+            </div>
+          )}
         </div>
 
         {/* Output */}
@@ -130,12 +192,16 @@ export default function ValueCalculator() {
           <div className="text-6xl font-extrabold text-navy mb-4">
             ${calculateCost()}
           </div>
-          <p className="text-sm text-gray-500 mb-8 max-w-xs">
+          <p className="text-sm text-gray-500 mb-6 max-w-xs leading-relaxed">
             {service === "house" 
               ? "Base rate is $350 or ~$0.20 per square foot for premium soft washing." 
               : service === "roof" 
               ? "Base rate is $500 or ~$0.40 per square foot for a zero-damage roof soft wash." 
-              : "Base rate is $150 or ~$1.50 per linear foot for full interior gutter debris removal."}
+              : service === "gutter"
+              ? "Base rate is $150 or ~$1.50 per linear foot for full interior gutter debris removal."
+              : service === "concrete"
+              ? "Base rate is $250 or ~$0.40 per square foot for professional surface degreasing and brightening."
+              : "Base rate is $500 or ~$3.00 per square foot. Includes deep cleaning, polymeric sand refilling, and premium sealant application."}
           </p>
           <Link 
             href="/contact" 
@@ -143,6 +209,16 @@ export default function ValueCalculator() {
           >
             Get Exact Quote
           </Link>
+          {service === "paver" && (
+            <Link href="/paver-patio-restorations" className="mt-6 text-sm text-gold hover:text-navy underline font-bold transition-colors">
+              Explore the Paver Restoration Gallery →
+            </Link>
+          )}
+          {service !== "paver" && (
+            <Link href="/pricing" className="mt-6 text-sm text-gold hover:text-navy underline font-bold transition-colors">
+              View the full 2026 Price Guide →
+            </Link>
+          )}
         </div>
       </div>
     </section>
