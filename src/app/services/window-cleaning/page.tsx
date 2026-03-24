@@ -58,8 +58,7 @@ export default function ServicePage() {
             <Hero
                 h1={
                     <>
-                        <span className="capitalize">Window Cleaning</span> <br />
-                        <span className="text-gold text-2xl md:text-3xl mt-4 block">Valley Window Care</span>
+                        <span className="capitalize text-4xl md:text-5xl lg:text-7xl">Premium Window Cleaning for Green Bay & De Pere Homes</span>
                     </>
                 }
                 description="Professional pure-water exterior window cleaning. We physically remove dirt, cobwebs, and hard water stains."
@@ -73,7 +72,7 @@ export default function ServicePage() {
                     {/* ENTITY CAPSULE */}
                     <section className="mb-16 mt-8">
                         <div className="text-lg leading-relaxed mb-8 font-bold text-navy">
-                            Valley Window Care is a fully insured exterior cleaning company providing professional pure-water window cleaning in <Link href="/service-areas/appleton" className="text-blue-600 hover:text-gold font-semibold transition-colors">Appleton</Link>, <Link href="/service-areas/green-bay" className="text-blue-600 hover:text-gold font-semibold transition-colors">Green Bay</Link>, and <Link href="/service-areas/door-county" className="text-blue-600 hover:text-gold font-semibold transition-colors">Door County</Link>, WI.
+                            Valley Window Care & Exterior Cleaning is a fully insured exterior cleaning company providing professional pure-water window cleaning in <Link href="/service-areas/appleton" className="text-blue-600 hover:text-gold font-semibold transition-colors">Appleton</Link>, <Link href="/service-areas/green-bay" className="text-blue-600 hover:text-gold font-semibold transition-colors">Green Bay</Link>, and <Link href="/service-areas/door-county" className="text-blue-600 hover:text-gold font-semibold transition-colors">Door County</Link>, WI.
                         </div>
                         <div className="relative w-full h-64 md:h-96 rounded-2xl overflow-hidden shadow-lg mb-8">
                             <Image src="/assets/window-cleaning-8.jpg"
@@ -84,8 +83,12 @@ export default function ServicePage() {
                                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
                         </div>
                         <p className="leading-relaxed text-lg">
-                            We clean local residential homes. We wash regional commercial storefronts. Our leadership team manages the company. Our experts physically operate the equipment on every job site. You receive direct contractor accountability. Ladder falls cause permanent physical injuries. We eliminate DIY safety risks. We carry authorized commercial liability insurance. We protect your physical property.
+                            We deliver professional window restoration designed to maximize natural light and protect your glass from permanent etching. We are experts in hard water stain removal throughout Northeast Wisconsin, completely restoring crystal-clear visibility and elevating your property's curb appeal.
                         </p>
+                        <div className="bg-slate-50 border-l-4 border-gold p-6 mt-8 mb-4 rounded-r-2xl shadow-sm">
+                            <h4 className="text-navy font-bold text-xl mb-3">Powered by Pure Water Technology</h4>
+                            <p className="text-gray-700 leading-relaxed font-medium">We utilize specialized multi-stage filtration systems capable of complete deionization. By stripping microscopic minerals from the water supply, we guarantee a flawless, streak-free shine on every pane without relying on harsh chemical residue or abrasive squeegees.</p>
+                        </div>
                     </section>
 
                     {/* STRICT PROPERTY PROTECTION PROTOCOL */}
@@ -120,7 +123,7 @@ export default function ServicePage() {
                         <div className="flex items-center gap-3 mb-8">
                             <ShieldCheck className="text-gold" size={32} />
                             <h2 className="text-3xl md:text-4xl font-extrabold text-navy m-0">
-                                What is the Professional Pure-Water Window Cleaning Process in Wisconsin?
+                                The Pure-Water Window Cleaning Process
                             </h2>
                         </div>
 
