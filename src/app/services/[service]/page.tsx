@@ -383,13 +383,13 @@ export default async function ServiceGenericPage({ params }: PageProps) {
                             { name: "Howard", url: "/service-areas/green-bay" },
                             { name: "Kaukauna", url: "/service-areas/appleton" },
                             { name: "Menasha", url: "/service-areas/appleton" },
-                            { name: "Neenah", url: "/service-areas/neenah" },
+                            { name: "Neenah", url: "/service-areas/appleton" },
                             { name: "Oshkosh", url: "/service-areas/oshkosh" },
-                            { name: "Shawano", url: "/service-areas/shawano" },
+                            { name: "Shawano", url: "/service-areas" },
                             { name: "Sturgeon Bay", url: "/service-areas/door-county" },
                             { name: "Suamico", url: "/service-areas/green-bay" }
                         ].map((loc, idx) => (
-                            <Link key={idx} href={`${loc.url}/${service}`} className="text-blue-600 hover:text-gold font-semibold transition-all flex items-center justify-between group p-3 hover:bg-slate-50/80 rounded-xl border border-transparent hover:border-gray-100 shadow-sm hover:shadow-md">
+                            <Link key={idx} href={loc.url} className="text-blue-600 hover:text-gold font-semibold transition-all flex items-center justify-between group p-3 hover:bg-slate-50/80 rounded-xl border border-transparent hover:border-gray-100 shadow-sm hover:shadow-md">
                                 <span className="truncate pr-2 capitalize">{loc.name} {service.replace(/-/g, ' ')}</span>
                                 <span aria-hidden="true" className="opacity-0 group-hover:opacity-100 transition-all transform -translate-x-2 group-hover:translate-x-0 text-gold">&rarr;</span>
                             </Link>
