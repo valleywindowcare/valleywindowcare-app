@@ -385,7 +385,7 @@ export default async function ServiceGenericPage({ params }: PageProps) {
                             { name: "Menasha", url: "/service-areas/appleton" },
                             { name: "Neenah", url: "/service-areas/appleton" },
                             { name: "Oshkosh", url: "/service-areas/oshkosh" },
-                            { name: "Shawano", url: "/service-areas" },
+                            { name: "Shawano", url: "/service-areas/shawano" },
                             { name: "Sturgeon Bay", url: "/service-areas/door-county" },
                             { name: "Suamico", url: "/service-areas/green-bay" }
                         ].map((loc, idx) => (
@@ -407,11 +407,11 @@ export default async function ServiceGenericPage({ params }: PageProps) {
                             "@type": "Service",
                             "name": formattedName,
                             "serviceType": formattedName,
-                            "description": `Valley Window Care and Exterior Cleaning provides premium ${formattedName.toLowerCase()} and property maintenance for homes and businesses in Northeast Wisconsin.`,
+                            "description": `Valley Window Care & Exterior Cleaning provides premium ${formattedName.toLowerCase()} and property maintenance for homes and businesses in Northeast Wisconsin.`,
                             "image": `https://valleywindowcare.com${bodyImageToUse}`,
                             "provider": {
                                 "@type": "LocalBusiness",
-                                "name": "Valley Window Care and Exterior Cleaning",
+                                "name": "Valley Window Care & Exterior Cleaning",
                                 "image": "https://valleywindowcare.com/images/portfolio/house-wash-before-after.webp",
                                 "telephone": "(920) 609-7085",
                                 "url": `https://valleywindowcare.com/services/${service}`
