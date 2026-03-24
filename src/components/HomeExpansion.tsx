@@ -13,8 +13,8 @@ export default function HomeExpansion() {
                     <div className="flex flex-col gap-6 w-full lg:w-11/12">
                         <div className="relative w-full h-64 sm:h-80 md:h-[400px] rounded-2xl overflow-hidden shadow-2xl group">
                             <Image
-                                src="/assets/Roof-Cleaning-in-green-bay.png"
-                                alt="Professional roof washing operations"
+                                src="/images/portfolio/building-washing-services-2.webp"
+                                alt="Valley Window Care & Exterior Cleaning commercial building washing results"
                                 fill
                                 loading="lazy"
                                 quality={75}
@@ -25,7 +25,7 @@ export default function HomeExpansion() {
                         </div>
                         <div className="relative w-full h-64 sm:h-80 md:h-[400px] rounded-2xl overflow-hidden shadow-2xl group lg:ml-12">
                             <Image
-                                src="/assets/window-cleaning-8.jpg"
+                                src="/images/portfolio/window-cleaning.webp"
                                 alt="Precision window cleaning services"
                                 fill
                                 loading="lazy"
@@ -63,7 +63,7 @@ export default function HomeExpansion() {
                         <div>
                             <p className="text-gold font-bold tracking-widest uppercase mb-3 text-sm">Who We Are</p>
                             <h2 className="text-4xl lg:text-5xl font-extrabold text-navy leading-tight">
-                                Valley Window Care serving your Exterior Cleaning needs in Northeast Wisconsin since 2020.
+                                Valley Window Care & Exterior Cleaning serving your Exterior Cleaning needs in Northeast Wisconsin since 2020.
                             </h2>
                         </div>
 

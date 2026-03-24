@@ -17,8 +17,8 @@ export default function Home() {
   return (
     <>
       <Hero 
-        bgImage="/images/portfolio/building-washing-services-2.webp" 
-        bgImageAlt="Valley Window Care & Exterior Cleaning performing commercial soft-washing on a hotel exterior using a boom lift in Green Bay, WI"
+        bgImage="/images/portfolio/store-front-cleaning.webp" 
+        bgImageAlt="Professional commercial storefront cleaning services by Valley Window Care & Exterior Cleaning in Green Bay, WI"
       />
       <Process />
       <ServiceGrid />
