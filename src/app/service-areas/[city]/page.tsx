@@ -59,9 +59,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     const urlPath = `/service-areas/${city}`;
     const shouldNoindex = distantCities.includes(city) && !isRedirectDestination(urlPath);
 
+    const targetHubs = ['green-bay', 'appleton', 'neenah'];
+    const seoDescription = targetHubs.includes(city) 
+        ? `Professional pressure washing company serving ${content.city}—Get your instant cost estimate today.`
+        : `Top-rated exterior cleaning services dedicated to properties in ${content.city}, Wisconsin.`;
+
     return {
         title: content.title,
-        description: `Top-rated exterior cleaning services dedicated to properties in ${content.city}, Wisconsin.`,
+        description: seoDescription,
         robots: shouldNoindex ? { index: false, follow: true } : { index: true, follow: true },
         alternates: {
             canonical: `https://valleywindowcare.com/service-areas/${content.citySlug}`
@@ -178,6 +183,13 @@ export default async function CityHubPage({ params }: PageProps) {
             {/* MAIN CONTENT BLOCK */}
             <section className="py-20 lg:py-32 bg-white">
                 <div className="container mx-auto px-4 max-w-4xl">
+                    {/* DYNAMIC EXACT-MATCH 'NEAR ME' H2 INJECTION */}
+                    {['green-bay', 'appleton', 'neenah'].includes(content.citySlug) && (
+                        <h2 className="text-3xl md:text-4xl font-extrabold text-navy mb-8 tracking-tight">
+                            Top-Rated Pressure Washing Service Near You in {cityName}
+                        </h2>
+                    )}
+
                     {/* DYNAMIC ENTITY CAPSULE INJECTION */}
                     <div className="text-lg leading-relaxed mb-8 font-bold text-navy">
                         Valley Window Care is a fully insured exterior cleaning company providing professional, low-pressure roof washing, window cleaning, and power washing in <Link href="/service-areas/appleton" className="text-blue-600 hover:text-gold font-semibold transition-colors">Appleton</Link>, <Link href="/service-areas/green-bay" className="text-blue-600 hover:text-gold font-semibold transition-colors">Green Bay</Link>, and <Link href="/service-areas/door-county" className="text-blue-600 hover:text-gold font-semibold transition-colors">Door County</Link>, WI.

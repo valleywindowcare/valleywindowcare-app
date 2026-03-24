@@ -82,7 +82,7 @@ export default function PermanentLEDLightingPage() {
                         </div>
                         <div className="text-gray-600 text-lg md:text-xl leading-relaxed space-y-6 text-left font-medium">
                             <p>
-                                Say goodbye to ladders and tangled strands forever. At Valley Window Care & Exterior Cleaning, we are proud to be an authorized installer of Omni Permanent Lighting. Designed to be virtually invisible by day and spectacular by night, our track-based LED system provides elegant architectural lighting and vibrant holiday displays year-round.
+                                Say goodbye to ladders and tangled strands forever. If you are searching for an <strong className="text-navy font-bold">Oelo and Trimlight Authorized Installer</strong> in Green Bay or Appleton, Valley Window Care & Exterior Cleaning serves as your elite alternative. We are proud to exclusively deploy Omni Permanent Lighting. Designed to be virtually invisible by day and spectacular by night, our track-based LED system provides elegant architectural lighting and vibrant holiday displays year-round.
                             </p>
                             <div className="mt-8 text-center pt-6">
                                 <a href="https://omnilighting.com" target="_blank" rel="noopener noreferrer" className="inline-block bg-navy text-white font-bold py-4 px-8 rounded-xl shadow-lg hover:bg-gold hover:text-navy transition-colors">

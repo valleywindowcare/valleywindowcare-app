@@ -44,6 +44,45 @@ export default function ServicePage() {
                 <VanillaMapClient />
             </div>
 
+            {/* 5-STEP RESTORATION PROCESS HOOK */}
+            <section className="bg-white py-16 border-t border-gray-100">
+                <div className="container mx-auto px-4 max-w-6xl">
+                    <div className="text-center mb-12">
+                        <h2 className="text-3xl md:text-4xl font-extrabold text-navy mb-4">Our 5-Step Paver Restoration & Sealing Process</h2>
+                        <p className="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
+                            We don't just blast your patio with water. We engineer a complete structural and cosmetic restoration.
+                        </p>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
+                        <div className="bg-slate-50 p-6 rounded-2xl shadow-sm border border-gray-200 text-center hover:border-gold/30 transition-colors">
+                            <div className="w-12 h-12 rounded-full bg-navy text-white font-black flex items-center justify-center mx-auto mb-4 text-xl">1</div>
+                            <h3 className="font-bold text-navy mb-2">Pre-Treatment</h3>
+                            <p className="text-sm text-gray-600">Algaecides melt embedded organic growth and black mold.</p>
+                        </div>
+                        <div className="bg-slate-50 p-6 rounded-2xl shadow-sm border border-gray-200 text-center hover:border-gold/30 transition-colors">
+                            <div className="w-12 h-12 rounded-full bg-navy text-white font-black flex items-center justify-center mx-auto mb-4 text-xl">2</div>
+                            <h3 className="font-bold text-navy mb-2">Deep Extraction</h3>
+                            <p className="text-sm text-gray-600">Surface cleaners extract old failing sand and deep-set oil stains.</p>
+                        </div>
+                        <div className="bg-slate-50 p-6 rounded-2xl shadow-sm border border-gray-200 text-center hover:border-gold/30 transition-colors">
+                            <div className="w-12 h-12 rounded-full bg-navy text-white font-black flex items-center justify-center mx-auto mb-4 text-xl">3</div>
+                            <h3 className="font-bold text-navy mb-2">Polymeric Sanding</h3>
+                            <p className="text-sm text-gray-600">High-grade sand binds joints to eliminate shifting and weed growth.</p>
+                        </div>
+                        <div className="bg-slate-50 p-6 rounded-2xl shadow-sm border border-gray-200 text-center hover:border-gold/30 transition-colors">
+                            <div className="w-12 h-12 rounded-full bg-navy text-white font-black flex items-center justify-center mx-auto mb-4 text-xl">4</div>
+                            <h3 className="font-bold text-navy mb-2">Compaction</h3>
+                            <p className="text-sm text-gray-600">Vibratory compaction ensures the sand settles completely to the base.</p>
+                        </div>
+                        <div className="bg-slate-50 p-6 rounded-2xl shadow-sm border border-gray-200 text-center hover:border-gold/30 transition-colors">
+                            <div className="w-12 h-12 rounded-full bg-navy text-white font-black flex items-center justify-center mx-auto mb-4 text-xl">5</div>
+                            <h3 className="font-bold text-navy mb-2">Active Sealing</h3>
+                            <p className="text-sm text-gray-600">Premium film-forming sealers lock in the color and protect against UV rays.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <ReviewSlider />
 
             {/* SEO LONG-TAIL INJECTION */}

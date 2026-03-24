@@ -7,11 +7,30 @@ export default function PricingGuide() {
             <div className="container mx-auto px-4 max-w-5xl">
                 <div className="text-center mb-12">
                     <h2 className="text-3xl md:text-4xl font-extrabold text-navy mb-4 tracking-tight">
-                        Transparent Pricing Guide
+                        2026 Pressure Washing & Exterior Cleaning Cost Guide for the Fox Valley
                     </h2>
-                    <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-                        We believe in upfront, honest pricing. Explore our baseline starting rates for core exterior cleaning operations.
+                    <p className="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
+                        We believe in upfront, authoritative pricing. Whether you are actively searching for "cost per square foot" benchmarks or exact flat-rate packages, these 2026 baseline estimates deliver the exact starting costs for our professional operations.
                     </p>
+                </div>
+
+                {/* SEO: Cost Per Sq Ft vs Flat Rate Comparison Hook */}
+                <div className="bg-white border rounded-2xl border-gray-200 p-8 shadow-sm mb-12">
+                     <h3 className="text-2xl font-bold text-navy mb-6">Pricing Methodology: Flat Rate vs. Cost Per Square Foot</h3>
+                     <div className="grid md:grid-cols-2 gap-8">
+                         <div>
+                             <h4 className="text-lg font-bold text-gray-800 mb-2 border-b border-gray-100 pb-2">Cost Per Square Foot</h4>
+                             <p className="text-gray-600 leading-relaxed mb-4">
+                                 Calculating pressure washing cost per square foot is typically reserved for massive commercial projects, sprawling warehouse footprints, or extensive concrete flatwork. Because exact surface areas vary wildly, commercial square footage rates allow us to scale our WDNR-compliant water recapture rigs and massive hot-water trailers efficiently based on exact geometry.
+                             </p>
+                         </div>
+                         <div>
+                             <h4 className="text-lg font-bold text-gray-800 mb-2 border-b border-gray-100 pb-2">Standard Flat Rate</h4>
+                             <p className="text-gray-600 leading-relaxed">
+                                 For standard residential exterior cleaning, Valley Window Care exclusively utilizes transparent flat-rate pricing. This completely guarantees you will never be surprised by hidden fees or padded hours. A $350 House Wash quote remains $350, ensuring maximum trust and absolute predictability for Northeast Wisconsin homeowners.
+                             </p>
+                         </div>
+                     </div>
                 </div>
 
                 {/* Minimum Project Price Banner */}
@@ -23,7 +42,7 @@ export default function PricingGuide() {
                     <div className="relative z-10">
                         <h3 className="text-xl font-bold text-white mb-1 tracking-wide">Minimum Project Price: $350 per visit for one-time services.</h3>
                         <p className="text-slate-300 text-base">
-                            We highly recommend <strong className="text-gold font-semibold">bundling services</strong> (e.g., House Washing + Window Cleaning) to maximize your value!
+                            We highly recommend <strong className="text-gold font-semibold">bundling services</strong> (e.g., Roof Wash + Exterior Windows) to maximize your value!
                         </p>
                     </div>
                 </div>
@@ -74,9 +93,20 @@ export default function PricingGuide() {
                         </div>
                         <p className="text-gray-600 flex items-start gap-3 text-base leading-relaxed">
                             <CheckCircle2 size={20} className="text-gold shrink-0 mt-0.5" />
-                            Extends shingle life by 5-10 years.
+                            Extends shingle life by 5-10 years safely.
                         </p>
                     </div>
+                </div>
+
+                {/* SEO: The Vinyl Siding Authority Hook */}
+                <div className="bg-slate-50 border border-gray-200 p-8 rounded-2xl shadow-inner mb-12">
+                    <h3 className="text-2xl font-bold text-navy mb-4">The Danger of Pressure Washing Vinyl Siding</h3>
+                    <p className="text-gray-600 leading-relaxed mb-4">
+                        A massive volume of homeowners search for "pressure washing vinyl siding" without realizing that high mechanical pressure instantly drives water directly behind the siding panels, stripping UV insulation layers and breeding hidden toxic mold inside the wall cavity. 
+                    </p>
+                    <p className="text-gray-600 leading-relaxed">
+                        Instead of tearing apart your home's envelope with archaic 4,000 PSI wands, Valley Window Care exclusively utilizes low-pressure <strong className="text-navy font-bold">Soft Washing</strong>. Our commercial algaecides chemically melt away heavy green algae, black mold, and oxidation at the exact pressure of a standard garden hose—restoring your vinyl to a zero-damage, factory finish.
+                    </p>
                 </div>
 
                 {/* Disclaimer */}

@@ -8,8 +8,8 @@ import VanillaMapClient from "@/components/VanillaMapClient";
 import PricingMatrix from "@/components/PricingMatrix";
 
 export const metadata = {
-    title: "Pressure Washing | Valley Window Care",
-    description: "Professional Pressure Washing services in Green Bay. Custom cleaning and safe execution.",
+    title: "Professional Pressure Washing Company | Green Bay & Fox Valley",
+    description: "Northeast Wisconsin's 5-star professional pressure washing company. Residential house washing, concrete, and commercial soft wash experts.",
 };
 
 export default function PressureWashingPage() {
@@ -93,7 +93,7 @@ export default function PressureWashingPage() {
                 <div className="container mx-auto px-4 relative z-20 flex flex-col items-center justify-center text-center">
                     <div className="max-w-4xl mb-12">
                         <h1 className={`text-4xl md:text-5xl lg:text-7xl font-extrabold leading-tight mb-6 tracking-tight drop-shadow-lg mx-auto text-white`}>
-                            Professional <span className="text-gold">Pressure Washing</span><br />
+                            Professional <span className="text-gold">Pressure Washing Company</span><br />
                             <span className="text-2xl md:text-3xl mt-4 block">Green Bay & Northeast Wisconsin</span>
                         </h1>
                         <p className="text-lg md:text-xl text-gray-100 mb-6 font-semibold leading-relaxed drop-shadow-md">
@@ -221,6 +221,32 @@ export default function PressureWashingPage() {
             />
 
             <Process isCommercial={true} />
+
+            {/* COMMERCIAL AUTHORITY EXPANSION PAYLOAD */}
+            <section className="bg-slate-50 py-16 border-t border-gray-100">
+                <div className="container mx-auto px-4 max-w-5xl">
+                    <div className="text-center mb-12">
+                        <h2 className="text-3xl md:text-4xl font-extrabold text-navy mb-4">Dedicated Commercial Maintenance</h2>
+                        <p className="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
+                            As a leading Professional Pressure Washing Company in Wisconsin, we deploy massive hot-water trailer rigs specifically engineered to handle high-liability commercial accounts.
+                        </p>
+                    </div>
+                    <div className="grid md:grid-cols-2 gap-8">
+                        <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-gold/30 transition-colors">
+                            <h3 className="text-xl font-bold text-navy mb-3">Dumpster Pad Cleaning</h3>
+                            <p className="text-gray-600 leading-relaxed">
+                                Restaurant and retail dumpster pads are notorious for breeding severe bacteria, extremely dangerous slip hazards, and foul odors. Our 200°F steam-cleaning system emulsifies heavily set-in grease and bio-hazards, completely restoring sanitary conditions while adhering to strict environmental wastewater runoff protocols.
+                            </p>
+                        </div>
+                        <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-gold/30 transition-colors">
+                            <h3 className="text-xl font-bold text-navy mb-3">Storefront Washing & Concrete</h3>
+                            <p className="text-gray-600 leading-relaxed">
+                                Your building's facade and entryways directly impact customer perception. We provide massive-scale storefront washing, removing deeply embedded chewing gum, atmospheric soot, and rust stains from high-traffic commercial concrete without disrupting your daily business operations.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             <ServiceContent
                 title="Pressure Washing"
