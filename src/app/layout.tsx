@@ -32,7 +32,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: {
     default: "Valley Window Care & Exterior Cleaning | #1 Green Bay Window & Roof Cleaners",
-    template: "%s | Valley Window Care",
+    template: "%s | Valley Window Care & Exterior Cleaning",
   },
   description: "Green Bay’s top-rated window and roof cleaning. Get an instant quote for professional house washing, gutter cleaning, and paver restoration. Call (920) 609-7085 today!",
 };
@@ -51,7 +51,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "HomeAndConstructionBusiness",
-              name: "Valley Window Care and Exterior Cleaning",
+              name: "Valley Window Care & Exterior Cleaning",
               telephone: "+1-920-609-7085",
               address: {
                 "@type": "PostalAddress",

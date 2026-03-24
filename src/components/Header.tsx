@@ -109,11 +109,11 @@ export default function Header() {
                         <span className="text-[10px] font-black uppercase tracking-widest text-green-600 bg-green-50 px-2 py-0.5 rounded border border-green-100 mb-1">
                             Fully Licensed & Insured
                         </span>
-                        <a href="tel:920-609-7085" className="flex items-center gap-2 text-navy font-bold hover:text-gold transition-colors max-w-full overflow-hidden" rel="nofollow" aria-label="Call Valley Window Care">
+                        <a href="tel:920-609-7085" className="flex items-center gap-2 text-navy font-bold hover:text-gold transition-colors max-w-full overflow-hidden" rel="nofollow" aria-label="Call Valley Window Care & Exterior Cleaning">
                             <Phone size={16} className="text-gold shrink-0" />
                             <span className="text-base break-words leading-tight">(920) 609-7085</span>
                         </a>
-                        <a href="mailto:info@valleywindowcare.com" className="flex items-center gap-2 text-navy font-medium hover:text-gold transition-colors max-w-full overflow-hidden" rel="nofollow" aria-label="Email Valley Window Care">
+                        <a href="mailto:info@valleywindowcare.com" className="flex items-center gap-2 text-navy font-medium hover:text-gold transition-colors max-w-full overflow-hidden" rel="nofollow" aria-label="Email Valley Window Care & Exterior Cleaning">
                             <Mail size={16} className="text-gold shrink-0" />
                             <span className="text-sm break-words leading-tight">info@valleywindowcare.com</span>
                         </a>

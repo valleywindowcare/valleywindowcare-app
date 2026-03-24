@@ -5,7 +5,7 @@ import { Shield, Sparkles, Target, Users, CheckCircle2 } from "lucide-react";
 import ReviewSlider from '@/components/ReviewSlider';
 
 export const metadata: Metadata = {
-    title: "About Us | Valley Window Care and Exterior Cleaning",
+    title: "About Us | Valley Window Care & Exterior Cleaning",
     description: "Learn about Valley Window Care and Exterior Cleaning's story, our team, and our commitment to crystal clear exterior cleaning services in Green Bay.",
 };
 
@@ -13,7 +13,7 @@ export default function AboutUsPage() {
     const jsonLd = {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
-      "name": "Valley Window Care",
+      "name": "Valley Window Care & Exterior Cleaning",
       "image": "https://valleywindowcare.com/images/portfolio/house-wash-before-after.webp",
       "url": "https://valleywindowcare.com/about-us",
       "telephone": "(920) 609-7085",
@@ -101,7 +101,7 @@ export default function AboutUsPage() {
                     <h2 className="text-3xl md:text-4xl font-extrabold text-navy mb-8 tracking-tight">Our Roots & Expertise</h2>
                     <div className="prose md:prose-lg max-w-none text-navy text-left space-y-6">
                         <p className="leading-relaxed text-lg">
-                            Valley Window Care was founded on fundamental accountability. We physically operate the equipment. We inspect the final results ourselves. You deal directly with the ownership team on every specific project.
+                            Valley Window Care & Exterior Cleaning was founded on fundamental accountability. We physically operate the equipment. We inspect the final results ourselves. You deal directly with the ownership team on every specific project.
                         </p>
                         <p className="leading-relaxed text-lg">
                             We dedicate ourselves to mastering commercial-grade exterior cleaning. We use 40-foot carbon-fiber pure-water poles. We deploy low-pressure soft wash rigs. We manufacture permanent architectural lighting. Our technicians train relentlessly on safe, low-impact chemical applications.
