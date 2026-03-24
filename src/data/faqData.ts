@@ -74,6 +74,14 @@ export const faqData: FaqCategoryMap = {
         {
             question: "Do I need to seal my paver patio?",
             answer: "Yes, sealing is highly recommended to protect your investment. A professional-grade, breathable sealant protects the brick coloring from harsh UV fading, repels oil/grill stains, simplifies routine maintenance, and fortifies the polymeric sand joints against harsh Wisconsin winters."
+        },
+        {
+            question: "How long does paver sealing last?",
+            answer: "When applied by professionals using commercial-grade sealants, a high-quality paver seal in the Fox Valley will protect your patio from UV fading and harsh winters for 3 to 5 years before requiring a re-application."
+        },
+        {
+            question: "How much does paver restoration cost in Wisconsin?",
+            answer: "Professional paver restoration in Wisconsin typically starts at $500, though exact pricing depends on the total square footage, degree of severe weed overgrowth, and the specific type of premium sealer selected. We provide exact, free written estimates."
         }
     ],
     "rust-removal": [
@@ -126,6 +134,10 @@ export const faqData: FaqCategoryMap = {
         {
             question: "Are the lighting tracks noticeable during the day?",
             answer: "No. We utilize color-matched aluminum tracks that blend perfectly with your existing soffit and fascia. Once installed, the system acts as a distinct, seamless architectural molding profile that is virtually undetectable until illuminated."
+        },
+        {
+            question: "Are permanent Christmas lights worth it?",
+            answer: "Yes. Starting at around $500 for baseline installations, permanent LED lighting completely eliminates the annual recurring cost of hiring installers, removes the massive physical risk of climbing freezing ladders, and provides you with elegant year-round architectural accent lighting."
         }
     ],
     "apartment-exterior-cleaning": [

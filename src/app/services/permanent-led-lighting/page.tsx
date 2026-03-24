@@ -12,8 +12,8 @@ import { faqData } from "@/data/faqData";
 import VanillaMapClient from "@/components/VanillaMapClient";
 
 export const metadata = {
-    title: "Permanent LED Lighting | Valley Window Care",
-    description: "Professional permanent LED lighting installation for homes and businesses in Green Bay and Appleton.",
+    title: "Permanent LED Lighting | Starting at $500 | Get a Fast Quote",
+    description: "Custom year-round LED track lighting installations. Local Fox Valley Experts. 100% Satisfaction Guarantee.",
 };
 
 export default function PermanentLEDLightingPage() {
@@ -139,6 +139,32 @@ export default function PermanentLEDLightingPage() {
                     </div>
 
                     
+                </div>
+            </section>
+
+            {/* SEO LONG-TAIL INJECTION */}
+            <section className="bg-white py-16 border-t border-gray-100">
+                <div className="container mx-auto px-4 max-w-5xl">
+                    <div className="grid md:grid-cols-3 gap-8 text-left">
+                        <div className="bg-slate-50 p-8 rounded-2xl shadow-sm border border-gray-100">
+                            <h3 className="text-xl font-extrabold text-navy mb-4">Year-Round Accent Lighting</h3>
+                            <p className="text-gray-600 leading-relaxed">
+                                Never climb a ladder in December again. Our systems seamlessly transition from elegant, warm-white security and architectural highlighting into vibrant holiday displays. The invisible track ensures your property looks immaculate 365 days a year.
+                            </p>
+                        </div>
+                        <div className="bg-slate-50 p-8 rounded-2xl shadow-sm border border-gray-100">
+                            <h3 className="text-xl font-extrabold text-navy mb-4">Oelo Lighting Green Bay Alternatives</h3>
+                            <p className="text-gray-600 leading-relaxed">
+                                As elite architectural lighting professionals in Northeast Wisconsin, we supply superior solutions that consistently outperform older Oelo lighting systems. We provide advanced durability and smarter color matrices engineered explicitly for brutal local weather conditions.
+                            </p>
+                        </div>
+                        <div className="bg-slate-50 p-8 rounded-2xl shadow-sm border border-gray-100">
+                            <h3 className="text-xl font-extrabold text-navy mb-4">App-Controlled Trimlight Installers</h3>
+                            <p className="text-gray-600 leading-relaxed">
+                                Looking for local app-controlled Trimlight installers? Our Omni platform offers an even more robust cloud-based matrix. Manage independent diode zones, create custom animations, and schedule calendar events directly from your smartphone, from anywhere in the world.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </section>
 
