@@ -5,14 +5,20 @@ import Link from 'next/link';
 
 export default function ValueCalculator() {
   const [service, setService] = useState<"gutter" | "house" | "roof">("house");
-  const [sqft, setSqft] = useState<number>(2000);
+  const [houseSqft, setHouseSqft] = useState<number>(2000);
+  const [roofSqft, setRoofSqft] = useState<number>(2500);
+  const [gutterFt, setGutterFt] = useState<number>(150);
 
   const calculateCost = () => {
-    if (service === "gutter") return 150;
-    if (service === "roof") return 500;
+    if (service === "gutter") {
+      return Math.max(150, Math.round(gutterFt * 1.50));
+    }
+    if (service === "roof") {
+      return Math.max(500, Math.round(roofSqft * 0.40));
+    }
     // House washing: Start at $350 or ~$0.20 per sq ft
-    const calculated = sqft * 0.20;
-    return calculated > 350 ? Math.round(calculated) : 350;
+    const calculated = houseSqft * 0.20;
+    return Math.max(350, Math.round(calculated));
   };
 
   return (
@@ -43,13 +49,13 @@ export default function ValueCalculator() {
                 onClick={() => setService("roof")}
                 className={`w-full py-3 px-4 rounded-xl font-bold transition-all border-2 text-left ${service === "roof" ? "border-gold bg-gold/10 text-navy" : "border-gray-200 text-gray-500 hover:border-gold/50"}`}
               >
-                Full Roof Soft Washing (Flat Rate)
+                Full Roof Soft Washing
               </button>
               <button
                 onClick={() => setService("gutter")}
                 className={`w-full py-3 px-4 rounded-xl font-bold transition-all border-2 text-left ${service === "gutter" ? "border-gold bg-gold/10 text-navy" : "border-gray-200 text-gray-500 hover:border-gold/50"}`}
               >
-                Gutter Cleaning (Flat Rate)
+                Gutter Cleaning
               </button>
             </div>
           </div>
@@ -57,20 +63,62 @@ export default function ValueCalculator() {
           {service === "house" && (
             <div>
               <label className="block text-sm font-semibold text-gray-700 mb-2">
-                Estimated Home Size: {sqft.toLocaleString()} sq ft
+                Estimated Home Size: {houseSqft.toLocaleString()} sq ft
               </label>
               <input
                 type="range"
                 min="1000"
                 max="6000"
                 step="100"
-                value={sqft}
-                onChange={(e) => setSqft(Number(e.target.value))}
+                value={houseSqft}
+                onChange={(e) => setHouseSqft(Number(e.target.value))}
                 className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-gold"
               />
               <div className="flex justify-between text-xs text-gray-500 mt-2 font-medium">
                 <span>1,000 sqft</span>
                 <span>6,000+ sqft</span>
+              </div>
+            </div>
+          )}
+
+          {service === "roof" && (
+            <div>
+              <label className="block text-sm font-semibold text-gray-700 mb-2">
+                Estimated Roof Size: {roofSqft.toLocaleString()} sq ft
+              </label>
+              <input
+                type="range"
+                min="1000"
+                max="6000"
+                step="100"
+                value={roofSqft}
+                onChange={(e) => setRoofSqft(Number(e.target.value))}
+                className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-gold"
+              />
+              <div className="flex justify-between text-xs text-gray-500 mt-2 font-medium">
+                <span>1,000 sqft</span>
+                <span>6,000+ sqft</span>
+              </div>
+            </div>
+          )}
+
+          {service === "gutter" && (
+            <div>
+              <label className="block text-sm font-semibold text-gray-700 mb-2">
+                Estimated Gutter Length: {gutterFt.toLocaleString()} linear ft
+              </label>
+              <input
+                type="range"
+                min="50"
+                max="500"
+                step="10"
+                value={gutterFt}
+                onChange={(e) => setGutterFt(Number(e.target.value))}
+                className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-gold"
+              />
+              <div className="flex justify-between text-xs text-gray-500 mt-2 font-medium">
+                <span>50 ft</span>
+                <span>500+ ft</span>
               </div>
             </div>
           )}
@@ -86,8 +134,8 @@ export default function ValueCalculator() {
             {service === "house" 
               ? "Base rate is $350 or ~$0.20 per square foot for premium soft washing." 
               : service === "roof" 
-              ? "Standard base rate for a comprehensive, zero-damage roof soft wash." 
-              : "Standard base rate for full interior gutter debris removal and downspout flushing."}
+              ? "Base rate is $500 or ~$0.40 per square foot for a zero-damage roof soft wash." 
+              : "Base rate is $150 or ~$1.50 per linear foot for full interior gutter debris removal."}
           </p>
           <Link 
             href="/contact" 
