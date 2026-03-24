@@ -1,6 +1,6 @@
 'use client';
 
-import { Phone, FileText } from "lucide-react";
+import { Phone, FileText, Calculator } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -30,19 +30,29 @@ export default function MobileFooter() {
                 {/* Call Now Button (Navy) */}
                 <a
                     href="tel:920-609-7085"
-                    className="flex-1 bg-navy hover:bg-navy-dark text-white font-bold py-4 px-2 flex flex-col items-center justify-center gap-1 transition-colors btn-hover-fx relative overflow-hidden group rounded-l-2xl max-w-full"
-                 rel="nofollow">
-                    <Phone size={20} className="group-active:scale-95 transition-transform" />
-                    <span className="text-base break-words leading-tight text-center">(920) 609-7085</span>
+                    className="flex-1 bg-navy hover:bg-navy-dark text-white font-bold py-3 flex flex-col items-center justify-center gap-1 transition-colors relative overflow-hidden group rounded-l-none border-r border-white/10"
+                    rel="nofollow">
+                    <Phone size={18} className="text-gold group-active:scale-95 transition-transform" />
+                    <span className="text-[10px] sm:text-xs tracking-wider font-bold">CALL</span>
                 </a>
 
-                {/* Get Quote Button (Gold) */}
+                {/* Instant Price Button (Gold) */}
+                <Link
+                    href="/pricing"
+                    className="flex-grow flex-[1.5] bg-gold hover:bg-yellow-400 text-navy font-extrabold py-3 flex flex-col items-center justify-center gap-1 transition-colors shadow-inner"
+                    aria-label="Calculate instant price estimate"
+                >
+                    <Calculator size={20} className="text-navy" />
+                    <span className="text-[12px] sm:text-sm tracking-wide">INSTANT PRICE</span>
+                </Link>
+
+                {/* Get Quote Button (Navy) */}
                 <Link
                     href="/contact"
-                    className="flex-1 bg-gold hover:bg-gold-light text-white font-bold py-4 px-2 flex items-center justify-center gap-2 transition-colors btn-hover-fx rounded-r-2xl"
+                    className="flex-1 bg-navy hover:bg-navy-dark text-white font-bold py-3 flex flex-col items-center justify-center gap-1 transition-colors rounded-r-none border-l border-white/10"
                 >
-                    <FileText size={24} className="mb-1" />
-                    <span className="text-sm font-bold tracking-wider">GET QUOTE</span>
+                    <FileText size={18} className="text-gold" />
+                    <span className="text-[10px] sm:text-xs tracking-wider font-bold">QUOTE</span>
                 </Link>
 
             </div>
