@@ -30,7 +30,7 @@ import PricingMatrix from "@/components/PricingMatrix";
 import { serviceContentMap } from "@/data/serviceContent";
 import VanillaMapClient from "@/components/VanillaMapClient";
 import Link from "next/link";
-import { Mail, Phone, ShieldCheck, CreditCard, Info } from "lucide-react";
+import { Mail, Phone, ShieldCheck, CreditCard, Info, Calculator } from "lucide-react";
 import HeroForm from '@/components/HeroForm';
 import Image from 'next/image';
 
@@ -397,6 +397,50 @@ export default async function ServiceGenericPage({ params }: PageProps) {
                     </div>
                 </div>
             </div>
+
+            {/* Contextual CRO Pricing Calculator Injections */}
+            {service === 'paver-patio-restorations' && (
+                <section className="container mx-auto px-4 py-6 flex justify-center mt-2 mb-8">
+                    <div className="bg-white border-l-4 border-gold p-6 md:p-8 rounded-r-xl shadow-md border-t border-r border-b border-gray-100 max-w-4xl w-full flex flex-col sm:flex-row items-center justify-between gap-6 hover:shadow-lg transition-shadow">
+                        <p className="text-gray-800 leading-relaxed font-semibold text-lg mb-0 text-left">
+                            <strong className="text-navy-dark">Wondering about the cost?</strong> Our <strong>$3/sqft</strong> restoration includes deep cleaning and polymeric sand.
+                        </p>
+                        <Link href="/pricing" className="shrink-0 bg-gold text-navy font-extrabold px-6 py-3 rounded-full hover:bg-navy hover:text-white transition-colors shadow-md transform hover:-translate-y-0.5 uppercase tracking-wide text-sm whitespace-nowrap">
+                            Use Our Calculator &rarr;
+                        </Link>
+                    </div>
+                </section>
+            )}
+
+            {service === 'roof-cleaning' && (
+                <section className="container mx-auto px-4 py-6 flex justify-center mt-2 mb-8">
+                    <div className="bg-white border-l-4 border-gold p-6 md:p-8 rounded-r-xl shadow-md border-t border-r border-b border-gray-100 max-w-4xl w-full flex flex-col sm:flex-row items-center justify-between gap-6 hover:shadow-lg transition-shadow">
+                        <p className="text-gray-800 leading-relaxed font-semibold text-lg mb-0 text-left">
+                            <strong className="text-navy-dark">Curious about pricing?</strong> Get an instant estimate for our <strong>$500 professional soft wash</strong>.
+                        </p>
+                        <Link href="/pricing" className="shrink-0 bg-gold text-navy font-extrabold px-6 py-3 rounded-full hover:bg-navy hover:text-white transition-colors shadow-md transform hover:-translate-y-0.5 uppercase tracking-wide text-sm whitespace-nowrap">
+                            Calculate Cost &rarr;
+                        </Link>
+                    </div>
+                </section>
+            )}
+
+            {/* General Sitewide CTA if not specifically intercepted */}
+            {service !== 'paver-patio-restorations' && service !== 'roof-cleaning' && (
+                <section className="container mx-auto px-4 py-8 flex justify-center mb-10">
+                    <div className="bg-gradient-to-r from-navy to-[#264b7d] p-8 md:p-10 rounded-3xl shadow-xl max-w-5xl w-full flex flex-col text-center items-center justify-center relative overflow-hidden group">
+                        <div className="absolute top-0 right-0 p-8 opacity-10 pointer-events-none transform group-hover:scale-110 transition-transform duration-500">
+                           <Calculator size={150} className="text-white" />
+                        </div>
+                        <h3 className="text-3xl md:text-5xl font-extrabold text-white mb-4 relative z-10 tracking-tight">Calculate Your Instant Price</h3>
+                        <p className="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl mx-auto font-medium relative z-10">Wondering what your project might cost? Use our interactive value estimator to find out instantly.</p>
+                        <Link href="/pricing" className="relative z-10 bg-gold text-navy font-extrabold md:text-lg px-8 py-4 rounded-full shadow-lg hover:bg-white hover:text-navy transition-all transform hover:-translate-y-1 inline-flex items-center gap-2">
+                           Get Estimate <Calculator size={22} />
+                        </Link>
+                    </div>
+                </section>
+            )}
+
             <div className="bg-slate-50 border-t border-gray-200 relative">
                 {/* JSON-LD Structured Data Schema - Upgraded to 'Service' */}
                 <script

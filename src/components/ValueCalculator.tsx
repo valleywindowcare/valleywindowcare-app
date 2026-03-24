@@ -30,7 +30,26 @@ export default function ValueCalculator() {
   };
 
   return (
-    <section className="bg-white py-12 px-6 rounded-3xl shadow-xl border border-gray-100 my-12 max-w-4xl mx-auto">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "Property Exterior Restoration Value Calculator",
+            "operatingSystem": "All",
+            "applicationCategory": "BusinessApplication",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            },
+            "description": "Calculate exact professional soft washing and restoration costs in Wisconsin."
+          })
+        }}
+      />
+      <section className="bg-white py-12 px-6 rounded-3xl shadow-xl border border-gray-100 my-12 max-w-4xl mx-auto">
       <div className="text-center mb-10">
         <h2 className="text-3xl md:text-4xl font-extrabold text-navy mb-4 tracking-tight">
           Pressure washing cost per square foot in Wisconsin
@@ -222,5 +241,6 @@ export default function ValueCalculator() {
         </div>
       </div>
     </section>
+    </>
   );
 }
