@@ -6,6 +6,7 @@ import ServiceContent from "@/components/ServiceContent";
 import SEOAuthorityEngine from "@/components/SEOAuthorityEngine";
 import VanillaMapClient from "@/components/VanillaMapClient";
 import PricingMatrix from "@/components/PricingMatrix";
+import ValueCalculator from "@/components/ValueCalculator";
 
 export const metadata = {
     title: "Professional Pressure Washing Company | Green Bay & Fox Valley",
@@ -206,6 +207,11 @@ export default function PressureWashingPage() {
                     </div>
                 </div>
             </section>
+
+            {/* ESTIMATED PROJECT BASE // VALUE CALCULATOR */}
+            <div className="container mx-auto px-4 max-w-6xl">
+                <ValueCalculator />
+            </div>
 
             {/* GLOBALLY STANDARDIZED PRICING MATRIX (GEO) */}
             <PricingMatrix

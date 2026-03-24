@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Hero from '@/components/Hero';
 import PricingGuide from '@/components/PricingGuide';
+import ValueCalculator from '@/components/ValueCalculator';
 
 export const metadata: Metadata = {
     title: 'Exterior Cleaning Pricing in Northeast Wisconsin | Valley Window Care',
@@ -17,6 +18,7 @@ export default function PricingPage() {
                 h1="Exterior Cleaning Pricing in Northeast Wisconsin"
                 description="We believe in upfront, honest pricing. These baseline estimates help you understand the starting costs for our professional services before scheduling your free, exact quote."
             />
+            <ValueCalculator />
             <PricingGuide />
         </main>
     );

@@ -109,4 +109,40 @@ export const cityData: CityContent[] = [
     
     
     
+    {
+        id: "sturgeon-bay",
+        cityName: "Sturgeon Bay",
+        focusService: "Peninsula Soft Washing",
+        header: "Meticulous Care in Sturgeon Bay",
+        introParagraph: "As the gateway to the peninsula, Sturgeon Bay endures immediate coastal weather. We provide top-tier soft washing that protects historical and modern investments alike.",
+        middleParagraph: "Our low-pressure systems actively dissolve Gloeocapsa magma and thick green algae, preventing moisture rot in your delicate wood and vinyl siding.",
+        guaranteeParagraph: "Our eco-friendly solutions are completely safe for the localized watershed.",
+        conclusionParagraph: "We proudly serve the region as a primary extension of our central <a href='/service-areas/door-county' className='underline font-bold text-navy hover:text-gold'>Door County Hub</a>. Contact us today for guaranteed results.",
+        externalLink: "https://www.sturgeonbaywi.org/",
+        externalName: "City of Sturgeon Bay"
+    },
+    {
+        id: "egg-harbor",
+        cityName: "Egg Harbor",
+        focusService: "Resort & Estate Cleaning",
+        header: "Protecting Egg Harbor Real Estate",
+        introParagraph: "The serene lakeside environment of Egg Harbor also brings intense insect hatches and heavy humidity, acting as a breeding ground for thick cobwebs and green algae.",
+        middleParagraph: "By utilizing specialized commercial-grade soft washing, we melt away organic buildup without ever deploying destructive high-pressure machinery.",
+        guaranteeParagraph: "Every treatment applied is 100% biodegradable to protect local tourism and wildlife.",
+        conclusionParagraph: "For comprehensive peninsula coverage, we ensure all our Egg Harbor services coordinate tightly with our central <a href='/service-areas/door-county' className='underline font-bold text-navy hover:text-gold'>Door County Hub</a> operations.",
+        externalLink: "https://www.eggharborwi.com/",
+        externalName: "Village of Egg Harbor"
+    },
+    {
+        id: "fish-creek",
+        cityName: "Fish Creek",
+        focusService: "Coastal Property Restoration",
+        header: "Expert Washing in Fish Creek",
+        introParagraph: "Fish Creek properties represent significant investments that require cautious, expert exterior maintenance to survive the brutal off-season winter elements.",
+        middleParagraph: "We focus on low-impact, high-yield cleaning that eradicates black streaks from roofs and lifts heavy organic soiling from wrap-around decking.",
+        guaranteeParagraph: "We prioritize the safety of the delicate local ecosystem, deploying zero-runoff protocols.",
+        conclusionParagraph: "Rely on the undisputed local experts. Fish Creek residents can find our full service array consolidated within our <a href='/service-areas/door-county' className='underline font-bold text-navy hover:text-gold'>Door County Hub</a>.",
+        externalLink: "https://visitfishcreek.com/",
+        externalName: "Fish Creek Information"
+    }
     ];

@@ -350,4 +350,86 @@ export const cityContextData = {
       "p1": "Ultraviolet light baking road grime into your commercial awnings breaks down the weatherproofing, shortening the lifespan of the critical fabric.",
       "p2": "Our low-PSI washing techniques lift the dirt out of the textile fibers gracefully, instantly boosting the curb appeal of your commercial property."
     }
-  },};
+  },
+  "sturgeon-bay": {
+    "rustRemoval": {
+      "subtitle": "Maritime Rust Mitigation",
+      "p1": "Proximity to the shipyards and heavy maritime air brings a distinct layer of severe oxidation and metallic fallout to coastal homes.",
+      "p2": "We apply rapid-acting neutralizing acids that strip the iron stains away without damaging marine-grade paint."
+    },
+    "softWash": {
+      "subtitle": "Coastal Algae Extermination",
+      "p1": "The high humidity coming directly off the bay coats homes in an aggressive layer of green algae and mildew overnight.",
+      "p2": "Our low-pressure soft wash process specifically targets these biological blooms, sanitizing your siding deeply."
+    },
+    "driveway": {
+      "subtitle": "Winter Slurry Extraction",
+      "p1": "Constant salting during the brutal Sturgeon Bay winters forces caustic chemicals deep into the concrete's pores.",
+      "p2": "We deploy high-volume surface cleaners to forcefully extract this embedded salt, saving your flatwork from spalling."
+    },
+    "solar": {
+      "subtitle": "Photovoltaic Optimization",
+      "p1": "Heavy coastal gull populations and localized fog leave thick residue that drastically reduces solar efficiency.",
+      "p2": "Our pure water filtration systems safely dissolve these tough organic spots, boosting panel output immediately."
+    },
+    "awning": {
+      "subtitle": "Maritime Canopy Restoration",
+      "p1": "Harsh maritime winds pack salt spray and abrasive sand straight into the weave of downtown commercial awnings.",
+      "p2": "Our customized textile cleaning flushes this grit away, dramatically improving your storefront's overall presentation."
+    }
+  },
+  "egg-harbor": {
+    "rustRemoval": {
+      "subtitle": "Estate Hard Water Eradication",
+      "p1": "Luxury estates relying on advanced irrigation systems frequently suffer from aggressive hard-water iron deposition on stonework.",
+      "p2": "We employ specialized rust-conversion gels that lift the orange hue right off the stone without heavy abrasion."
+    },
+    "softWash": {
+      "subtitle": "Estate Soft Washing",
+      "p1": "Beautiful wooded lots surrounding the harbor create damp, shaded microclimates perfect for aggressive moss and lichen.",
+      "p2": "Our soft wash technology dissolves these rigid organics at the root without stripping the finish off delicate architectural details."
+    },
+    "driveway": {
+      "subtitle": "Limestone Paver Renewal",
+      "p1": "Heavy summer tourist traffic leaves oily tire marks and organic spills embedded across expansive driveway layouts.",
+      "p2": "We perform meticulous surface cleaning designed to lift petro-chemicals without altering the texture of custom flatwork."
+    },
+    "solar": {
+      "subtitle": "Canopy Clearance",
+      "p1": "Thick tree canopies drop massive amounts of sap and pollen over high-end rooftop solar arrays, severely limiting UV absorption.",
+      "p2": "Our spot-free deionized washing system perfectly cleans the glass without harsh chemicals or scratching."
+    },
+    "awning": {
+      "subtitle": "Resort Canvas Sanitization",
+      "p1": "Resort awnings are susceptible to deep mold growth when closing operations for the harsh winter months.",
+      "p2": "We perform highly targeted chemical extractions that pull the mold out of the fabric weave, preserving the vibrant color."
+    }
+  },
+  "fish-creek": {
+    "rustRemoval": {
+      "subtitle": "Peninsula Oxidation Fix",
+      "p1": "Coastal dampness dramatically accelerates the oxidation of exterior hardware, bleeding rust stains straight down your siding.",
+      "p2": "We utilize powerful, localized rust-removal compounds that safely eliminate these unsightly streaks in minutes."
+    },
+    "softWash": {
+      "subtitle": "Cedar and Stucco Revitalization",
+      "p1": "Fish Creek's classic cedar shake and textured stucco are exceptionally vulnerable to hidden mold that causes structural rot.",
+      "p2": "We strictly utilize low-pressure, high-volume chemical washing to melt away the hazard while preserving the fragile materials."
+    },
+    "driveway": {
+      "subtitle": "Cobblestone and Concrete Purge",
+      "p1": "Years of accumulated dirt, seasonal tree dropping, and heavy vehicle traffic creates a dense layer of embedded grime on historical pathways.",
+      "p2": "Our commercial flatwork systems operate precisely to lift this grime out entirely without blowing out protective polymeric sands."
+    },
+    "solar": {
+      "subtitle": "Pine Pitch Extraction",
+      "p1": "The dense native pine populations regularly deposit extremely sticky pitch and needles directly onto solar surfaces.",
+      "p2": "We utilize specialized natural solvents and pure-water rinses to completely remove the pitch and restore total transparency."
+    },
+    "awning": {
+      "subtitle": "Boutique Fabric Whitening",
+      "p1": "High-end Fish Creek boutiques rely to bright, welcoming awnings, but atmospheric soot and shoreline humidity dulls the fabric rapidly.",
+      "p2": "Our deep-clean fabric restoration protocols gently extract the soot, dramatically reviving the brand presentation of your boutique."
+    }
+  }
+};
