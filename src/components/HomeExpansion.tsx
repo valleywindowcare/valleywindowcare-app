@@ -25,8 +25,8 @@ export default function HomeExpansion() {
                         </div>
                         <div className="relative w-full h-64 sm:h-80 md:h-[400px] rounded-2xl overflow-hidden shadow-2xl group lg:ml-12">
                             <Image
-                                src="/images/portfolio/window-cleaning.webp"
-                                alt="Precision window cleaning services"
+                                src="/images/portfolio/building-washing.webp"
+                                alt="Commercial building exterior cleaning and maintenance by Valley Window Care & Exterior Cleaning in the Fox Valley"
                                 fill
                                 loading="lazy"
                                 quality={75}
