@@ -25,7 +25,7 @@ export default function ServicePage() {
                     </>
                 }
                 description="Valley Window Care & Exterior Cleaning provides premium paver restoration services to enhance your property's value."
-                bgImage="/images/paver-washing.webp?v=2"  
+                bgImage="/images/paver-washing-fixed.webp"  
                 bgImageAlt="Professional paver washing and restoration services in De Pere and Green Bay, WI"
             />
 
