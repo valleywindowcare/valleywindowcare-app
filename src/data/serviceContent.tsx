@@ -217,15 +217,20 @@ export const serviceContentMap: Record<string, { pageH1?: string, description: R
         ]
     },
     "window-cleaning": {
+        pageH1: "Premium Window Cleaning for Green Bay & De Pere Homes",
         description: (
             <section className="eeat-service-block">
-                <p className="mb-4">Our professional window and exterior cleaning services restore the pristine look of your property using scientifically backed, eco-friendly methods. We utilize specialized pure-water systems and 100% biodegradable cleaning solutions designed to break down tough environmental dirt and hard water stains without harming your landscaping or local Northeast Wisconsin waterways. These environmentally safe agents guarantee minimal ecological impact, ensuring a flawless, streak-free shine while keeping your family, pets, and surrounding vegetation completely safe. We are experts in hard water stain removal for windows throughout Northeast Wisconsin, restoring crystal-clear visibility. We are experts in hard water stain removal for windows throughout Northeast Wisconsin, restoring crystal-clear visibility. We are experts in hard water stain removal for windows throughout Northeast Wisconsin, restoring crystal-clear visibility.</p>
+                <p className="mb-4">Valley Window Care & Exterior Cleaning delivers professional window restoration designed to maximize natural light and protect your glass from permanent etching. We are experts in hard water stain removal for windows throughout Northeast Wisconsin, completely restoring crystal-clear visibility and elevating your property's curb appeal without the use of high-pressure risks.</p>
+                <div className="bg-slate-50 border-l-4 border-gold p-4 mt-6 mb-4 rounded-r-lg shadow-sm">
+                    <h4 className="text-navy font-bold text-lg mb-2">Powered by Pure Water Technology</h4>
+                    <p className="text-gray-700">We utilize specialized multi-stage filtration systems capable of complete deionization. By stripping microscopic minerals from the water supply, we guarantee a flawless, streak-free shine on every pane without relying on harsh chemical residue or abrasive squeegees.</p>
+                </div>
             </section>
         ),
         benefits: [
-            "Long-Lasting Results: Our process gets surfaces cleaner and keeps them protected longer.",
-            "Enhanced Safety: Eliminates slippery molds and toxic bacterial colonies.",
-            "No Damage Guarantee: We use the exact pressure required—often zero—to protect property integrity."
+            "Pure Water Technology: Guaranteed 100% streak-free finish through multi-stage mineral extraction.",
+            "Long-Lasting Results: Our specialized process gets glass cleaner and keeps surfaces protected significantly longer.",
+            "Complete Frame Restoration: We meticulously clean exterior tracks, frames, and sills as a standard operating procedure."
         ],
         process: [
             "1. Site Inspection & Prep: We conduct a thorough exterior evaluation and meticulously protect all landscaping and delicate surfaces.",
