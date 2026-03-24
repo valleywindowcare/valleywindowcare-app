@@ -76,6 +76,9 @@ export default function ResidentialPermanentLEDLightingPage() {
             <section className="bg-slate-50 w-full py-16 lg:py-24 border-t border-gray-100">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="mb-16 max-w-4xl mx-auto text-center bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-gray-100">
+                        <div className="flex justify-center mb-8 bg-[#1B365D] p-6 rounded-2xl max-w-sm mx-auto shadow-md">
+                            <Image src="/images/portfolio/Omni Certified Installer Logo (1).png" alt="Powered By Omni" width={250} height={100} className="object-contain" />
+                        </div>
                         <div className="text-gray-600 text-lg md:text-xl leading-relaxed space-y-6 text-left font-medium">
                             <p>
                                 Say goodbye to ladders and tangled strands forever. At Valley Window Care & Exterior Cleaning, we are proud to be an authorized installer of Omni Permanent Lighting. Designed to be virtually invisible by day and spectacular by night, our track-based LED system provides elegant architectural lighting and vibrant holiday displays year-round.
