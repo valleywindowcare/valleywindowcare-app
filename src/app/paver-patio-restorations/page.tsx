@@ -25,8 +25,8 @@ export default function ServicePage() {
                     </>
                 }
                 description="Valley Window Care and Exterior Cleaning provides premium paver restoration services to enhance your property's value."
-                bgImage="/images/portfolio/paver-sealing.webp"  
-                bgImageAlt="Professional Paver Sealing and Restoration in Appleton, WI"
+                bgImage="/images/portfolio/Paver-sealing-green-bay.JPG"  
+                bgImageAlt="Professional paver patio cleaning and sealing in De Pere, Wisconsin"
             />
 
             <Process isCommercial={false} />
@@ -36,8 +36,8 @@ export default function ServicePage() {
                 description="Our paver restoration process safely cleans, perfectly re-sands, and chemically seals your investment to protect against harsh Wisconsin weather and freeze-thaw cycles."
                 benefits={["Professional Quality", "Fully Insured", "Satisfaction Guaranteed"]}
                 process={["Free Estimate", "Schedule Wash", "Enjoy Your Property"]}
-                image="/images/portfolio/paver-restoration.webp"
-                imageAlt="Professional Paver Sealing and Restoration in Appleton, WI"
+                image="/images/portfolio/paver-cleaning-before-after.JPG"
+                imageAlt="Before and after paver restoration results"
             />
 
             <div className="bg-slate-50 border-t border-gray-200 relative mt-16">
