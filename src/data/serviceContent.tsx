@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-export const serviceContentMap: Record<string, { description: React.ReactNode, benefits: (string | React.ReactNode)[], process: (string | React.ReactNode)[], protectionProtocols?: { title: string, description: string }[], pricing?: { title: string, description: string, rateTitle: string, ratePrice: string, rateDetails: string, minimumPrice: string, minimumDetails: string, variableTitle: string, variableDetails: string }, image?: string, faqs?: { question: string, answer: string }[] }> = {
+export const serviceContentMap: Record<string, { pageH1?: string, description: React.ReactNode, benefits: (string | React.ReactNode)[], process: (string | React.ReactNode)[], protectionProtocols?: { title: string, description: string }[], pricing?: { title: string, description: string, rateTitle: string, ratePrice: string, rateDetails: string, minimumPrice: string, minimumDetails: string, variableTitle: string, variableDetails: string }, image?: string, faqs?: { question: string, answer: string }[] }> = {
     "roof-cleaning": {
         description: (
             <section className="eeat-service-block">
@@ -704,9 +704,10 @@ export const serviceContentMap: Record<string, { description: React.ReactNode, b
         ]
     },
     "building-washing": {
+        pageH1: "Professional Building Washing for Oshkosh & Fox Valley Businesses",
         description: (
             <section className="eeat-service-block">
-                <p className="mb-4">Restoring the building washing We specialize in comprehensive industrial building washing Oshkosh and Fox Valley businesses trust to maintain professional curb appeal. We specialize in comprehensive industrial building washing Oshkosh and Fox Valley businesses trust to maintain professional curb appeal. We specialize in comprehensive industrial building washing Oshkosh and Fox Valley businesses trust to maintain professional curb appeal. We specialize in comprehensive industrial building washing Oshkosh and Fox Valley businesses trust to maintain professional curb appeal. of your property requires scientifically backed methods. We deploy professional-grade equipment to eliminate specific grime targets safely.</p>
+                <p className="mb-4">We specialize in comprehensive industrial building washing that Oshkosh and Fox Valley businesses trust to maintain professional curb appeal. Restoring the physical exterior of your property requires scientifically backed methods, and we deploy professional-grade equipment to eliminate specific grime targets safely and efficiently.</p>
             </section>
         ),
         benefits: [

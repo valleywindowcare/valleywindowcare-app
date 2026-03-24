@@ -200,8 +200,12 @@ export default async function ServiceGenericPage({ params }: PageProps) {
                 <Image src={heroImageToUse || "/images/portfolio/house-washing.webp"} alt="Service Background" fill priority={true} sizes="100vw" className="object-cover z-0 opacity-50" />
                 <div className="relative z-10 w-full max-w-5xl mx-auto px-4 text-center">
                     <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold leading-tight mb-4 tracking-tight drop-shadow-lg text-white">
-                        Professional <span className="text-gold">{formattedName}</span><br />
-                        <span className="text-2xl md:text-3xl mt-2 block">Green Bay & Northeast Wisconsin</span>
+                        {content?.pageH1 ? content.pageH1 : (
+                            <>
+                                Professional <span className="text-gold">{formattedName}</span><br />
+                                <span className="text-2xl md:text-3xl mt-2 block">Green Bay & Northeast Wisconsin</span>
+                            </>
+                        )}
                     </h1>
                     <p className="text-lg md:text-xl text-gray-100 font-semibold leading-relaxed drop-shadow-md pb-8">
                         Valley Window Care and Exterior Cleaning provides premium {formattedName.toLowerCase()} services to restore, protect, and enhance your property's value.
