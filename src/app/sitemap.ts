@@ -23,6 +23,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
             changeFrequency: 'monthly',
             priority: 0.8,
         },
+        {
+            url: `${baseUrl}/diy-vs-professional-pressure-washing`,
+            lastModified: new Date(),
+            changeFrequency: 'monthly',
+            priority: 0.8,
+        },
+        {
+            url: `${baseUrl}/service-areas/wisconsin-coverage`,
+            lastModified: new Date(),
+            changeFrequency: 'monthly',
+            priority: 0.8,
+        },
+        {
+            url: `${baseUrl}/careers`,
+            lastModified: new Date(),
+            changeFrequency: 'monthly',
+            priority: 0.6,
+        },
     ];
 
     // High-Ticket Services
@@ -44,7 +62,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
         "building-washing",
         "permanent-led-lighting",
         "commercial-roof-cleaning",
-        "winter-salt-removal"
+        "winter-salt-removal",
+        "rust-and-oxidation-removal"
     ];
 
     const serviceRoutes: MetadataRoute.Sitemap = validServices.map((service) => ({
