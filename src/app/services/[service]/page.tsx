@@ -398,16 +398,16 @@ export default async function ServiceGenericPage({ params }: PageProps) {
                 </div>
             </div>
 
-            {/* Contextual CRO Pricing Calculator Injections */}
+            {/* Contextual CRO Pricing Calculator Injections (SATELLITE BRIDGE OVERRIDE) */}
             {service === 'paver-patio-restorations' && (
                 <section className="container mx-auto px-4 py-6 flex justify-center mt-2 mb-8">
                     <div className="bg-white border-l-4 border-gold p-6 md:p-8 rounded-r-xl shadow-md border-t border-r border-b border-gray-100 max-w-4xl w-full flex flex-col sm:flex-row items-center justify-between gap-6 hover:shadow-lg transition-shadow">
                         <p className="text-gray-800 leading-relaxed font-semibold text-lg mb-0 text-left">
                             <strong className="text-navy-dark">Wondering about the cost?</strong> Our <strong>$3/sqft</strong> restoration includes deep cleaning and polymeric sand.
                         </p>
-                        <Link href="/pricing" className="shrink-0 bg-gold text-navy font-extrabold px-6 py-3 rounded-full hover:bg-navy hover:text-white transition-colors shadow-md transform hover:-translate-y-0.5 uppercase tracking-wide text-sm whitespace-nowrap">
-                            Use Our Calculator &rarr;
-                        </Link>
+                        <a href="https://greenbaypavercleaning.com" target="_blank" rel="noopener" className="shrink-0 bg-gold text-navy font-extrabold px-6 py-3 rounded-full hover:bg-navy hover:text-white transition-colors shadow-md transform hover:-translate-y-0.5 uppercase tracking-wide text-sm text-center">
+                            Visit our specialized Green Bay division for an instant $3/sqft quote &rarr;
+                        </a>
                     </div>
                 </section>
             )}

@@ -242,6 +242,30 @@ const nextConfig: NextConfig = {
     // Dynamic Regex Redirects tracking legacy Flat SEO URLs using Path-to-Regexp syntax
     const dynamicRegexRedirects = [
       {
+        // Alias Fallback: Power Washing -> Pressure Washing
+        source: '/:city-power-washing',
+        destination: '/services/pressure-washing',
+        permanent: true,
+      },
+      {
+        // Alias Fallback: Soft Washing -> Soft Wash
+        source: '/:city-soft-washing',
+        destination: '/services/soft-wash',
+        permanent: true,
+      },
+      {
+        // Hub Alias: Power Washing -> Pressure Washing
+        source: '/service-areas/:city/power-washing',
+        destination: '/services/pressure-washing',
+        permanent: true,
+      },
+      {
+        // Hub Alias: Soft Washing -> Soft Wash
+        source: '/service-areas/:city/soft-washing',
+        destination: '/services/soft-wash',
+        permanent: true,
+      },
+      {
         // Matches /appleton-roof-cleaning -> /services/roof-cleaning
         source: `/:city-:service${validServicesRegex}`,
         destination: '/services/:service',
