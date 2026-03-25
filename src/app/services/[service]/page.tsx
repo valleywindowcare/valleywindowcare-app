@@ -293,12 +293,12 @@ export default async function ServiceGenericPage({ params }: PageProps) {
                 />
             )}
 
-            {/* Contextual Backlink for Concrete / Paver services */}
-            {['concrete-cleaning', 'pressure-washing', 'driveway-cleaning'].includes(service) && (
+            {/* Contextual Backlink for Concrete / Paver services (SATELLITE BRIDGE) */}
+            {['concrete-cleaning', 'pressure-washing', 'driveway-cleaning', 'paver-patio-restorations'].includes(service) && (
                 <section className="container mx-auto px-4 py-4 flex justify-center mt-4 mb-4">
                     <div className="bg-slate-50 border-l-4 border-gold p-6 md:p-8 rounded-r-xl shadow-sm border-t border-r border-b border-slate-100 max-w-4xl w-full">
                         <p className="text-gray-700 leading-relaxed font-medium text-lg mb-0 text-left">
-                            <strong>Looking for dedicated paver restoration, leveling, and polymeric sanding?</strong> We have launched a specialized division just for hardscapes! Visit our sister company, <a href="https://greenbaypavercleaning.com" target="_blank" rel="noopener" className="text-blue-600 font-bold hover:text-gold underline transition-colors">Green Bay Paver Cleaning</a>, for premium sealing and restoration across the Fox Valley.
+                            <strong>Looking for dedicated paver restoration, leveling, and polymeric sanding?</strong> We have launched a specialized division just for hardscapes! Call our specialists directly at <strong className="text-navy font-bold">(920) 528-5732</strong> or visit our sister company, <a href="https://greenbaypavercleaning.com" target="_blank" rel="noopener" className="text-blue-600 font-bold hover:text-gold underline transition-colors">Green Bay Paver Cleaning</a>, for premium sealing and restoration across the Fox Valley.
                         </p>
                     </div>
                 </section>

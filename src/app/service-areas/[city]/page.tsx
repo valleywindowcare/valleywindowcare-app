@@ -171,12 +171,34 @@ export default async function CityHubPage({ params }: PageProps) {
 
             {/* BREADCRUMBS */}
             <div className="bg-white border-b border-gray-100">
-                <div className="container mx-auto px-4 max-w-7xl py-4 flex items-center text-sm font-semibold text-gray-400 gap-2 uppercase tracking-wider">
-                    <Link href="/" className="hover:text-gold transition-colors">Home</Link>
-                    <ChevronRight size={14} />
-                    <Link href="/service-areas" className="hover:text-gold transition-colors">Service Areas</Link>
-                    <ChevronRight size={14} />
-                    <span className="text-navy">{cityName}</span>
+                <div className="container mx-auto px-4 max-w-7xl py-4 flex flex-col md:flex-row items-center justify-between text-sm font-semibold text-gray-400 uppercase tracking-wider gap-4">
+                    <div className="flex items-center gap-2">
+                        <Link href="/" className="hover:text-gold transition-colors">Home</Link>
+                        <ChevronRight size={14} />
+                        <Link href="/service-areas" className="hover:text-gold transition-colors">Service Areas</Link>
+                        <ChevronRight size={14} />
+                        <span className="text-navy">{cityName}</span>
+                    </div>
+                </div>
+            </div>
+
+            {/* QUICK SERVICE MENU INJECTION */}
+            <div className="bg-slate-50 border-b border-gray-200 py-6">
+                <div className="container mx-auto px-4 max-w-7xl">
+                    <div className="flex flex-col md:flex-row items-center gap-4">
+                        <span className="text-navy font-bold flex items-center gap-2 shrink-0">
+                            <span className="bg-gold w-2 h-2 rounded-full"></span> 
+                            {cityName} Service Menu:
+                        </span>
+                        <div className="flex flex-wrap items-center gap-3">
+                            <Link href="/services/roof-cleaning" className="bg-white border border-gray-200 hover:border-gold hover:text-gold text-navy px-4 py-2 rounded-full text-sm font-bold transition-all shadow-sm shrink-0">Roof Cleaning</Link>
+                            <Link href="/services/house-washing" className="bg-white border border-gray-200 hover:border-gold hover:text-gold text-navy px-4 py-2 rounded-full text-sm font-bold transition-all shadow-sm shrink-0">House Washing</Link>
+                            <Link href="/services/window-cleaning" className="bg-white border border-gray-200 hover:border-gold hover:text-gold text-navy px-4 py-2 rounded-full text-sm font-bold transition-all shadow-sm shrink-0">Window Cleaning</Link>
+                            <Link href="/services/gutter-cleaning" className="bg-white border border-gray-200 hover:border-gold hover:text-gold text-navy px-4 py-2 rounded-full text-sm font-bold transition-all shadow-sm shrink-0">Gutter Cleaning</Link>
+                            <Link href="/services/pressure-washing" className="bg-white border border-gray-200 hover:border-gold hover:text-gold text-navy px-4 py-2 rounded-full text-sm font-bold transition-all shadow-sm shrink-0">Pressure Washing</Link>
+                            <Link href="/services/paver-patio-restorations" className="bg-white border border-gray-200 hover:border-gold hover:text-gold text-navy px-4 py-2 rounded-full text-sm font-bold transition-all shadow-sm shrink-0">Paver Restoration</Link>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -203,6 +225,19 @@ export default async function CityHubPage({ params }: PageProps) {
                                     {p}
                                 </p>
                             ))}
+                        </div>
+                    )}
+
+                    {/* DYNAMIC LANDMARK SATURATION INJECTION (NEENAH POWER HUB) */}
+                    {content.citySlug === 'neenah' && (
+                        <div className="mb-10 p-8 bg-blue-50/50 border-l-4 border-navy rounded-r-2xl shadow-sm">
+                            <h3 className="text-2xl font-bold text-navy mb-4 flex items-center gap-2">
+                                <MapPin className="text-gold" />
+                                Protecting Neenah's Local Landmarks
+                            </h3>
+                            <p className="text-lg text-slate-700 leading-relaxed font-medium">
+                                Valley Window Care and Exterior Cleaning is incredibly proud to serve the entire Neenah community. We protect and safely maintain historical, residential, and commercial properties surrounding iconic local landmarks like <strong className="text-navy font-extrabold">Doty Island</strong>, Riverside Park, and the beautiful <strong className="text-navy font-extrabold">Kimberly Point Lighthouse</strong>. Whether you live near the shores of Lake Winnebago or closer to Shattuck Park, our specialized exterior cleaning ensures that the natural charm of Neenah's neighborhoods is preserved year-round.
+                            </p>
                         </div>
                     )}
 

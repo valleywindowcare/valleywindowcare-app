@@ -242,15 +242,21 @@ const nextConfig: NextConfig = {
     // Dynamic Regex Redirects tracking legacy Flat SEO URLs using Path-to-Regexp syntax
     const dynamicRegexRedirects = [
       {
-        // Matches /appleton-roof-cleaning -> /service-areas/appleton/roof-cleaning
+        // Matches /appleton-roof-cleaning -> /services/roof-cleaning
         source: `/:city-:service${validServicesRegex}`,
-        destination: '/service-areas/:city',
+        destination: '/services/:service',
         permanent: true,
       },
       {
-        // Matches /services/roof-cleaning-appleton -> /service-areas/appleton/roof-cleaning
+        // Matches /services/roof-cleaning-appleton -> /services/roof-cleaning
         source: `/services/:service${validServicesRegex}-:city`,
-        destination: '/service-areas/:city',
+        destination: '/services/:service',
+        permanent: true,
+      },
+      {
+        // Matches /service-areas/neenah/roof-cleaning -> /services/roof-cleaning
+        source: `/service-areas/:city/:service${validServicesRegex}`,
+        destination: '/services/:service',
         permanent: true,
       },
 
