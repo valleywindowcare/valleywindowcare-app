@@ -228,7 +228,7 @@ export default async function CityHubPage({ params }: PageProps) {
                         </div>
                     )}
 
-                    {/* DYNAMIC LANDMARK SATURATION INJECTION (NEENAH POWER HUB) */}
+            {/* DYNAMIC LANDMARK SATURATION INJECTION (NEENAH POWER HUB) */}
                     {content.citySlug === 'neenah' && (
                         <div className="mb-10 p-8 bg-blue-50/50 border-l-4 border-navy rounded-r-2xl shadow-sm">
                             <h3 className="text-2xl font-bold text-navy mb-4 flex items-center gap-2">
@@ -236,7 +236,7 @@ export default async function CityHubPage({ params }: PageProps) {
                                 Protecting Neenah's Local Landmarks
                             </h3>
                             <p className="text-lg text-slate-700 leading-relaxed font-medium">
-                                Valley Window Care and Exterior Cleaning is incredibly proud to serve the entire Neenah community. We protect and safely maintain historical, residential, and commercial properties surrounding iconic local landmarks like <strong className="text-navy font-extrabold">Doty Island</strong>, Riverside Park, and the beautiful <strong className="text-navy font-extrabold">Kimberly Point Lighthouse</strong>. Whether you live near the shores of Lake Winnebago or closer to Shattuck Park, our specialized exterior cleaning ensures that the natural charm of Neenah's neighborhoods is preserved year-round.
+                                We proudly serve all of Neenah, from the historic properties on Doty Island to the areas surrounding the Kimberly Point Lighthouse.
                             </p>
                         </div>
                     )}
