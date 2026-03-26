@@ -64,8 +64,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         ? `Professional pressure washing company serving ${content.city}—Get your instant cost estimate today.`
         : `Top-rated exterior cleaning services dedicated to properties in ${content.city}, Wisconsin.`;
 
+    const generatedTitle = `Elite Exterior Restoration & Pressure Washing in ${content.city}`;
+
     return {
-        title: content.title,
+        title: generatedTitle,
         description: seoDescription,
         robots: shouldNoindex ? { index: false, follow: true } : { index: true, follow: true },
         alternates: {
@@ -145,6 +147,19 @@ export default async function CityHubPage({ params }: PageProps) {
     const vSolar = localContext?.solar || fallbackSolar;
     const vAwning = localContext?.awning || fallbackAwning;
 
+    // Local Geo-Context Mapping Engine
+    const countyMap: Record<string, string> = {
+        "green-bay": "Brown", "wrightstown": "Brown", "de-pere": "Brown", 
+        "appleton": "Outagamie", "kaukauna": "Outagamie", "little-chute": "Outagamie", "kimberly": "Outagamie",
+        "neenah": "Winnebago", "oshkosh": "Winnebago", "menasha": "Winnebago",
+        "door-county": "Door", "sturgeon-bay": "Door", "egg-harbor": "Door", "fish-creek": "Door", "sister-bay": "Door",
+        "shawano": "Shawano",
+        "manitowoc": "Manitowoc", "two-rivers": "Manitowoc",
+        "algoma": "Kewaunee", "kewaunee": "Kewaunee"
+    };
+
+    const targetCounty = countyMap[content.citySlug] || "Wisconsin";
+
     return (
         <main className="w-full overflow-hidden bg-slate-50">
             {/* HERO SECTION */}
@@ -161,7 +176,7 @@ export default async function CityHubPage({ params }: PageProps) {
                         Serving {cityName}, WI
                     </div>
                     <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 tracking-tight leading-tight">
-                        {content.title}
+                        Elite Exterior Restoration & Pressure Washing in {cityName}
                     </h1>
                     <p className="text-lg md:text-2xl text-slate-300 font-light mb-10 max-w-3xl mx-auto leading-relaxed">
                         Expert roof washing, window cleaning, and power washing services.
@@ -212,9 +227,9 @@ export default async function CityHubPage({ params }: PageProps) {
                         </h2>
                     )}
 
-                    {/* DYNAMIC ENTITY CAPSULE INJECTION */}
+                    {/* DYNAMIC ENTITY CAPSULE INJECTION with Internal Pillar Links */}
                     <div className="text-lg leading-relaxed mb-8 font-bold text-navy">
-                        Valley Window Care is a fully insured exterior cleaning company providing professional, low-pressure roof washing, window cleaning, and power washing in <Link href="/service-areas/appleton" className="text-blue-600 hover:text-gold font-semibold transition-colors">Appleton</Link>, <Link href="/service-areas/green-bay" className="text-blue-600 hover:text-gold font-semibold transition-colors">Green Bay</Link>, and <Link href="/service-areas/door-county" className="text-blue-600 hover:text-gold font-semibold transition-colors">Door County</Link>, WI.
+                        Valley Window Care is a fully insured exterior cleaning company providing professional, low-pressure roof washing, window cleaning, and high-ticket <Link href="/services/paver-patio-restorations" className="text-blue-600 hover:text-gold font-semibold transition-colors underline decoration-blue-200 underline-offset-4">expert paver restoration</Link> in <Link href="/service-areas/appleton" className="text-blue-600 hover:text-gold font-semibold transition-colors">Appleton</Link>, <Link href="/service-areas/green-bay" className="text-blue-600 hover:text-gold font-semibold transition-colors">Green Bay</Link>, and <Link href="/service-areas/door-county" className="text-blue-600 hover:text-gold font-semibold transition-colors">Door County</Link>, WI. We specialize in delicate <Link href="/services/roof-cleaning" className="text-blue-600 hover:text-gold font-semibold transition-colors underline decoration-blue-200 underline-offset-4">soft-wash roof treatments</Link> that destroy organic material without extreme water pressure.
                     </div>
 
                     {/* ENFORCED ARRAY MAPPING FOR BESPOKE INTRODUCTIONS */}
@@ -266,14 +281,14 @@ export default async function CityHubPage({ params }: PageProps) {
             </section>
 
             {/* DYNAMIC PRICING EXPECTATIONS INJECTION */}
-            <section className="py-16 bg-navy text-white border-t border-navy-light relative overflow-hidden">
+            <section className="py-16 bg-gradient-to-br from-[#0b2341] via-[#1a365d] to-[#2c5282] text-white border-t border-navy-light relative overflow-hidden">
                 <div className="container mx-auto px-4 max-w-4xl relative z-10">
-                    <div className="bg-white/5 backdrop-blur-sm p-8 md:p-12 rounded-3xl border border-white/10 shadow-xl">
-                        <h2 className="text-3xl md:text-4xl font-extrabold mb-6 text-gold border-b border-white/20 pb-6">
+                    <div className="bg-white/10 backdrop-blur-xl p-8 md:p-12 rounded-[32px] border border-white/20 shadow-[0_20px_50px_rgba(0,0,0,0.3)]">
+                        <h2 className="text-3xl md:text-4xl font-black mb-6 text-gold border-b border-white/20 pb-6 tracking-tight">
                             {cityName} Pricing Expectations
                         </h2>
-                        <div className="text-xl text-gray-200 leading-relaxed">
-                            Professional exterior cleaning prices vary based on total square footage, building height, and the severity of the organic buildup. We provide exact, transparent quotes before any work begins on your {cityName} property. <Link href="/contact" className="text-gold font-bold hover:text-white transition-colors underline">Request your free quote today.</Link>
+                        <div className="text-xl text-gray-200 leading-relaxed font-medium">
+                            Professional exterior cleaning prices vary based on total square footage, building height, and the severity of the organic buildup. We provide exact, transparent quotes before any work begins on your {cityName} property. <Link href="/contact" className="text-gold font-bold hover:text-white transition-colors underline decoration-gold/50 underline-offset-4 tracking-wide">Request your free quote today.</Link>
                         </div>
                     </div>
                 </div>
@@ -289,90 +304,90 @@ export default async function CityHubPage({ params }: PageProps) {
 
                     <div className="space-y-16">
                         {/* Service 1 */}
-                        <section className="flex flex-col md:flex-row gap-8 items-center bg-white p-8 rounded-3xl shadow-sm border border-gray-100">
-                            <div className="w-full md:w-1/2 relative h-[300px] rounded-2xl overflow-hidden shrink-0">
-                                <Image src={'/images/portfolio/rust-removal-before-after.webp'} alt={`Rust Removal in ${cityName}`} fill className="object-cover" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" priority={true} />
+                        <section className="flex flex-col md:flex-row gap-8 items-center bg-white/70 backdrop-blur-xl p-8 rounded-[32px] shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-white/40 transition-transform duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(11,35,65,0.15)]">
+                            <div className="w-full md:w-1/2 relative h-[300px] rounded-2xl overflow-hidden shrink-0 shadow-inner">
+                                <Image src={'/images/portfolio/rust-removal-before-after.webp'} alt={`Professional rust removal and mineral extraction in ${cityName}, ${targetCounty} County`} fill className="object-cover" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" priority={true} />
                             </div>
                             <div className="w-full md:w-1/2 prose prose-slate lg:prose-xl max-w-none">
                                 <Link href="/services/residential-rust-removal" className="no-underline hover:text-gold transition-colors">
-                                    <h3 className="text-3xl font-bold text-navy mt-0 text-left">Rust Removal</h3>
+                                    <h3 className="text-3xl font-black tracking-tight text-navy mt-0 text-left">Rust Removal</h3>
                                 </Link>
                                 <p className="font-semibold text-gray-700">{vRust.subtitle}</p>
                                 <p className="text-left">{vRust.p1}</p>
                                 <p className="text-left">{vRust.p2.replace('{cityName}', cityName)}</p>
-                                <Link href="/services/rust-removal" aria-label="Learn more about rust removal services" className="inline-flex items-center gap-2 font-bold text-navy hover:text-gold transition-colors mt-4 no-underline">
+                                <Link href="/services/rust-removal" aria-label={`Learn more about rust removal in ${targetCounty} County`} className="inline-flex items-center gap-2 font-bold text-navy hover:text-gold transition-colors mt-4 no-underline">
                                     Learn More <ArrowRight size={16} aria-hidden="true" />
                                 </Link>
                             </div>
                         </section>
 
                         {/* Service 2 */}
-                        <section className="flex flex-col md:flex-row-reverse gap-8 items-center bg-white p-8 rounded-3xl shadow-sm border border-gray-100">
-                            <div className="w-full md:w-1/2 relative h-[300px] rounded-2xl overflow-hidden shrink-0">
-                                <Image src={'/images/portfolio/soft-washing.webp'} alt={`Soft Wash in ${cityName}`} fill className="object-cover" />
+                        <section className="flex flex-col md:flex-row-reverse gap-8 items-center bg-white/70 backdrop-blur-xl p-8 rounded-[32px] shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-white/40 transition-transform duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(11,35,65,0.15)]">
+                            <div className="w-full md:w-1/2 relative h-[300px] rounded-2xl overflow-hidden shrink-0 shadow-inner">
+                                <Image src={'/images/portfolio/soft-washing.webp'} alt={`Safe low-pressure soft wash exterior cleaning in ${cityName}, ${targetCounty} County`} fill className="object-cover" />
                             </div>
                             <div className="w-full md:w-1/2 prose prose-slate lg:prose-xl max-w-none">
                                 <Link href="/services/soft-wash" className="no-underline hover:text-gold transition-colors">
-                                    <h3 className="text-3xl font-bold text-navy mt-0 text-left">Professional Soft Wash</h3>
+                                    <h3 className="text-3xl font-black tracking-tight text-navy mt-0 text-left">Professional Soft Wash</h3>
                                 </Link>
                                 <p className="font-semibold text-gray-700">{vSoft.subtitle}</p>
                                 <p className="text-left">{vSoft.p1}</p>
                                 <p className="text-left">{vSoft.p2.replace('{cityName}', cityName)}</p>
-                                <Link href="/services/soft-wash" aria-label="Learn more about soft washing services" className="inline-flex items-center gap-2 font-bold text-navy hover:text-gold transition-colors mt-4 no-underline">
+                                <Link href="/services/soft-wash" aria-label={`Learn more about soft washing in ${targetCounty} County`} className="inline-flex items-center gap-2 font-bold text-navy hover:text-gold transition-colors mt-4 no-underline">
                                     Learn More <ArrowRight size={16} aria-hidden="true" />
                                 </Link>
                             </div>
                         </section>
 
                         {/* Service 3 */}
-                        <section className="flex flex-col md:flex-row gap-8 items-center bg-white p-8 rounded-3xl shadow-sm border border-gray-100">
-                            <div className="w-full md:w-1/2 relative h-[300px] rounded-2xl overflow-hidden shrink-0">
-                                <Image src={'/images/portfolio/drive-way-cleaning.webp'} alt={`Driveway Cleaning in ${cityName}`} fill className="object-cover" />
+                        <section className="flex flex-col md:flex-row gap-8 items-center bg-white/70 backdrop-blur-xl p-8 rounded-[32px] shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-white/40 transition-transform duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(11,35,65,0.15)]">
+                            <div className="w-full md:w-1/2 relative h-[300px] rounded-2xl overflow-hidden shrink-0 shadow-inner">
+                                <Image src={'/images/portfolio/drive-way-cleaning.webp'} alt={`Concrete driveway power washing and flatwork restoration in ${cityName}, ${targetCounty} County`} fill className="object-cover" />
                             </div>
                             <div className="w-full md:w-1/2 prose prose-slate lg:prose-xl max-w-none">
                                 <Link href="/services/driveway-cleaning" className="no-underline hover:text-gold transition-colors">
-                                    <h3 className="text-3xl font-bold text-navy mt-0 text-left">Driveway Cleaning</h3>
+                                    <h3 className="text-3xl font-black tracking-tight text-navy mt-0 text-left">Driveway Cleaning</h3>
                                 </Link>
                                 <p className="font-semibold text-gray-700">{vDrive.subtitle}</p>
                                 <p className="text-left">{vDrive.p1}</p>
                                 <p className="text-left">{vDrive.p2.replace('{cityName}', cityName)}</p>
-                                <Link href="/services/driveway-cleaning" aria-label="Learn more about driveway cleaning services" className="inline-flex items-center gap-2 font-bold text-navy hover:text-gold transition-colors mt-4 no-underline">
+                                <Link href="/services/driveway-cleaning" aria-label={`Learn more about driveway cleaning in ${targetCounty} County`} className="inline-flex items-center gap-2 font-bold text-navy hover:text-gold transition-colors mt-4 no-underline">
                                     Learn More <ArrowRight size={16} aria-hidden="true" />
                                 </Link>
                             </div>
                         </section>
 
                         {/* Service 4 */}
-                        <section className="flex flex-col md:flex-row-reverse gap-8 items-center bg-white p-8 rounded-3xl shadow-sm border border-gray-100">
-                            <div className="w-full md:w-1/2 relative h-[300px] rounded-2xl overflow-hidden shrink-0">
-                                <Image src={'/images/portfolio/solar-panel-cleaning.webp'} alt={`Solar Panel Cleaning in ${cityName}`} fill className="object-cover" />
+                        <section className="flex flex-col md:flex-row-reverse gap-8 items-center bg-white/70 backdrop-blur-xl p-8 rounded-[32px] shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-white/40 transition-transform duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(11,35,65,0.15)]">
+                            <div className="w-full md:w-1/2 relative h-[300px] rounded-2xl overflow-hidden shrink-0 shadow-inner">
+                                <Image src={'/images/portfolio/solar-panel-cleaning.webp'} alt={`Rooftop solar panel washing and efficiency optimization in ${cityName}, ${targetCounty} County`} fill className="object-cover" />
                             </div>
                             <div className="w-full md:w-1/2 prose prose-slate lg:prose-xl max-w-none">
                                 <Link href="/services/solar-panel-cleaning" className="no-underline hover:text-gold transition-colors">
-                                    <h3 className="text-3xl font-bold text-navy mt-0 text-left">Solar Panel Cleaning</h3>
+                                    <h3 className="text-3xl font-black tracking-tight text-navy mt-0 text-left">Solar Panel Cleaning</h3>
                                 </Link>
                                 <p className="font-semibold text-gray-700">{vSolar.subtitle}</p>
                                 <p className="text-left">{vSolar.p1}</p>
                                 <p className="text-left">{vSolar.p2.replace('{cityName}', cityName)}</p>
-                                <Link href="/services/solar-panel-cleaning" aria-label="Learn more about solar panel cleaning services" className="inline-flex items-center gap-2 font-bold text-navy hover:text-gold transition-colors mt-4 no-underline">
+                                <Link href="/services/solar-panel-cleaning" aria-label={`Learn more about solar panel cleaning in ${targetCounty} County`} className="inline-flex items-center gap-2 font-bold text-navy hover:text-gold transition-colors mt-4 no-underline">
                                     Learn More <ArrowRight size={16} aria-hidden="true" />
                                 </Link>
                             </div>
                         </section>
 
                         {/* Service 5 */}
-                        <section className="flex flex-col md:flex-row gap-8 items-center bg-white p-8 rounded-3xl shadow-sm border border-gray-100">
-                            <div className="w-full md:w-1/2 relative h-[300px] rounded-2xl overflow-hidden shrink-0">
-                                <Image src={'/images/portfolio/store-front-cleaning.webp'} alt={`Commercial Awning Cleaning in ${cityName}`} fill className="object-cover" />
+                        <section className="flex flex-col md:flex-row gap-8 items-center bg-white/70 backdrop-blur-xl p-8 rounded-[32px] shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-white/40 transition-transform duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(11,35,65,0.15)]">
+                            <div className="w-full md:w-1/2 relative h-[300px] rounded-2xl overflow-hidden shrink-0 shadow-inner">
+                                <Image src={'/images/portfolio/store-front-cleaning.webp'} alt={`Commercial storefront and canvas awning exterior washing in ${cityName}, ${targetCounty} County`} fill className="object-cover" />
                             </div>
                             <div className="w-full md:w-1/2 prose prose-slate lg:prose-xl max-w-none">
                                 <Link href="/services/commercial-awning-cleaning" className="no-underline hover:text-gold transition-colors">
-                                    <h3 className="text-3xl font-bold text-navy mt-0 text-left">Commercial Awning Cleaning</h3>
+                                    <h3 className="text-3xl font-black tracking-tight text-navy mt-0 text-left">Commercial Awning Cleaning</h3>
                                 </Link>
                                 <p className="font-semibold text-gray-700">{vAwning.subtitle}</p>
                                 <p className="text-left">{vAwning.p1}</p>
                                 <p className="text-left">{vAwning.p2.replace('{cityName}', cityName)}</p>
-                                <Link href="/services/commercial-awning-cleaning" aria-label="Learn more about commercial awning cleaning services" className="inline-flex items-center gap-2 font-bold text-navy hover:text-gold transition-colors mt-4 no-underline">
+                                <Link href="/services/commercial-awning-cleaning" aria-label={`Learn more about commercial awning cleaning in ${targetCounty} County`} className="inline-flex items-center gap-2 font-bold text-navy hover:text-gold transition-colors mt-4 no-underline">
                                     Learn More <ArrowRight size={16} aria-hidden="true" />
                                 </Link>
                             </div>
