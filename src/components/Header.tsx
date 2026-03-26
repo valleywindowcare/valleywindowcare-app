@@ -31,20 +31,20 @@ export default function Header() {
             <div className="container mx-auto max-w-7xl px-5 sm:px-6 lg:px-8 flex items-center justify-between min-h-[64px] md:min-h-[80px] py-2 md:py-3 lg:py-5">
 
                 {/* Logo Section (Left Aligned) */}
-                <Link href="/" aria-label="Home" className="shrink hover:opacity-90 transition-opacity z-50 py-1 flex items-center gap-2 xl:gap-4 mr-4 xl:mr-10 relative min-w-0">
-                    <div className="relative h-12 w-40 sm:h-14 sm:w-48 lg:h-16 lg:w-52 xl:h-20 xl:w-60 min-w-[150px] max-h-[80px] shrink-0">
+                <Link href="/" aria-label="Home" className="shrink-0 max-w-[280px] max-h-[60px] hover:opacity-90 transition-opacity z-40 py-1 flex items-center gap-2 xl:gap-4 relative min-w-0">
+                    <div className="relative h-10 w-36 sm:h-12 sm:w-40 lg:h-12 lg:w-48 xl:h-14 xl:w-56 min-w-[140px] max-h-[60px] shrink-0">
                         <Image
                             src="/valley-window-care-logo-without-background.png"
                             alt="Valley Exterior Restoration Logo"
                             fill
                             className="object-contain object-left"
-                            sizes="(max-width: 640px) 160px, (max-width: 1280px) 192px, 256px"
+                            sizes="(max-width: 640px) 140px, (max-width: 1280px) 192px, 224px"
                             priority
                         />
                     </div>
-                    <div className="hidden 2xl:flex flex-col pt-2 shrink-0">
-                        <span className="text-navy font-black text-xl leading-none uppercase tracking-tight">Valley Exterior</span>
-                        <span className="text-gold font-bold text-[11px] mt-0.5 leading-none uppercase tracking-widest text-left">Restoration</span>
+                    <div className="hidden 2xl:flex flex-col pt-1 shrink-0">
+                        <span className="text-navy font-black text-lg leading-none uppercase tracking-tight">Valley Exterior</span>
+                        <span className="text-gold font-bold text-[10px] mt-0.5 leading-none uppercase tracking-widest text-left">Restoration</span>
                     </div>
                 </Link>
 
@@ -69,10 +69,10 @@ export default function Header() {
                 </div>
 
                 {/* Desktop Nav (Visible at 1024px+) */}
-                <nav className="hidden lg:flex gap-x-2 xl:gap-x-4 2xl:gap-x-6 items-center text-[12px] xl:text-[13px] font-bold text-navy-dark tracking-tight pl-2 xl:pl-4 shrink">
+                <nav className="hidden lg:flex z-50 gap-x-2 xl:gap-x-4 2xl:gap-x-6 items-center text-[12px] xl:text-[13px] font-bold text-navy-dark tracking-tight ml-10 shrink whitespace-nowrap">
                     {/* Services Mega Menu */}
-                    <div className="relative group py-8 cursor-pointer">
-                        <div className="hover:text-gold transition-colors flex items-center gap-1 uppercase">
+                    <div className="relative group py-8 cursor-pointer shrink-0">
+                        <div className="hover:text-gold transition-colors flex items-center gap-1 uppercase whitespace-nowrap">
                             Services <ChevronDown size={14} className="text-gray-400 group-hover:text-gold transition-colors" />
                         </div>
 
@@ -116,12 +116,12 @@ export default function Header() {
                         </div>
                     </div>
                     {/* Core Highest Return Services - Restored to Primary Header */}
-                    <Link href="/services/roof-cleaning" className="hover:text-gold transition-colors uppercase whitespace-nowrap">ROOF CLEANING</Link>
-                    <Link href="/services/paver-patio-restorations" className="hover:text-gold transition-colors uppercase whitespace-nowrap">PAVER SEALING</Link>
-                    <Link href="/services/house-washing" className="hover:text-gold transition-colors uppercase whitespace-nowrap">HOUSE WASHING</Link>
-                    <Link href="/services/pressure-washing" className="hover:text-gold transition-colors uppercase whitespace-nowrap">PRESSURE WASHING</Link>
+                    <Link href="/services/roof-cleaning" className="hover:text-gold transition-colors uppercase whitespace-nowrap shrink-0">ROOF CLEANING</Link>
+                    <Link href="/services/paver-patio-restorations" className="hover:text-gold transition-colors uppercase whitespace-nowrap shrink-0">PAVER SEALING</Link>
+                    <Link href="/services/house-washing" className="hover:text-gold transition-colors uppercase whitespace-nowrap shrink-0">HOUSE WASHING</Link>
+                    <Link href="/services/pressure-washing" className="hover:text-gold transition-colors uppercase whitespace-nowrap shrink-0">PRESSURE WASHING</Link>
 
-                    <Link href="/contact" className="hover:text-gold transition-colors uppercase ml-2">CONTACT</Link>
+                    <Link href="/contact" className="hover:text-gold transition-colors uppercase ml-2 whitespace-nowrap shrink-0">CONTACT</Link>
                 </nav>
 
                 {/* Call to Action Desktop */}
