@@ -1,7 +1,9 @@
+"use client";
 import { Mail, Phone } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import HeroForm from "./HeroForm";
+import { motion } from "framer-motion";
 
 interface HeroProps {
     h1?: React.ReactNode;
@@ -25,22 +27,11 @@ export default function Hero({
 
     return (
         <section className={`!relative !w-full !min-h-screen !flex !flex-col !items-center !justify-center overflow-hidden text-white bg-navy pb-24 lg:pb-32`}>
-            {/* Background with optimized Next/Image architecture */}
-            <div className="absolute inset-0 z-0">
-                <Image
-                    src={bgImage}
-                    alt={bgImageAlt}
-                    fill
-                    priority={true}
-                    fetchPriority="high"
-                    quality={75}
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    className="object-cover"
-                />
-            </div>
+            {/* Liquid Brand Gradient Background */}
+            <div className="absolute inset-0 z-0 bg-gradient-to-br from-[#0b2341] via-[#1a365d] to-[#2c5282] animate-[pulse_10s_ease-in-out_infinite]"></div>
 
-            {/* Dark Overlay Tint */}
-            <div className="absolute inset-0 bg-slate-900/75 z-10"></div>
+            {/* Soft Ambient Overlay */}
+            <div className="absolute inset-0 bg-black/20 z-10 backdrop-blur-[2px]"></div>
 
             <div className="container mx-auto px-4 relative z-20 flex flex-col items-center justify-center text-center">
                 {/* Top Section: Messaging */}
@@ -59,9 +50,15 @@ export default function Hero({
                 </div>
 
                 {/* Bottom Section: Dual-Action Quote Box (Zero-Gap Stack) */}
-                <div className="!relative !z-10 !w-full !max-w-xl !mx-auto !bg-white !rounded-xl !shadow-2xl !overflow-hidden flex flex-col text-navy-dark min-h-[500px] sm:min-h-[480px]" id="quote-form">
+                <motion.div 
+                    initial={{ opacity: 0, y: 40 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ type: "spring", stiffness: 100, damping: 20 }}
+                    className="!relative !z-10 !w-full !max-w-xl !mx-auto bg-white/80 backdrop-blur-2xl !rounded-[32px] shadow-[0_20px_50px_rgba(0,0,0,0.3)] border border-white/20 !overflow-hidden flex flex-col text-navy-dark min-h-[500px] sm:min-h-[480px]" 
+                    id="quote-form"
+                >
                     {/* Top Action Header */}
-                    <div className="bg-gradient-to-br from-[#1B365D]/95 to-[#2c538c]/95 text-white w-full border-b border-white/10">
+                    <div className="bg-gradient-to-br from-[#1B365D]/90 to-[#2c538c]/90 text-white w-full border-b border-white/10 backdrop-blur-md">
                         <div className="!flex !flex-col !items-center !justify-center !text-center !w-full pt-4 pb-2">
                             <h3 className="text-2xl font-bold !text-center !w-full !block">Get In Touch Fast</h3>
                         </div>
@@ -91,7 +88,7 @@ export default function Hero({
 
                     {/* Bottom Action Body (Form OR Success State) */}
                     <HeroForm />
-                </div>
+                </motion.div>
             </div>
         </section >
     );

@@ -1,7 +1,9 @@
+"use client";
 import Link from 'next/link';
 import Image from 'next/image';
 import { ChevronRight, Home, Building2 } from 'lucide-react';
 import { serviceContentMap } from '@/data/serviceContent';
+import { motion } from 'framer-motion';
 
 export type DynamicGridItem = {
     serviceName: string;
@@ -74,36 +76,42 @@ export default function ServiceGrid({ city, gridItems }: ServiceGridProps) {
         : "We provide top-rated residential and commercial cleaning services across Green Bay, Appleton, Door County, and Oshkosh.";
 
     const renderList = (items: DynamicGridItem[], icon: React.ReactNode, title: string) => (
-        <div className="bg-white rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-gray-100 overflow-hidden mb-12">
-            <div className="bg-slate-50 border-b border-gray-100 p-8 flex items-center gap-4">
-                <div className="bg-navy p-3 rounded-xl text-white">
+        <div className="bg-white/60 backdrop-blur-2xl rounded-[32px] shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-white/40 overflow-hidden mb-12">
+            <div className="bg-white/40 border-b border-white/40 p-8 flex items-center gap-4">
+                <div className="bg-gradient-to-br from-navy to-navy-dark p-3 rounded-2xl shadow-md text-white">
                     {icon}
                 </div>
-                <h3 className="text-2xl font-bold text-navy">{title}</h3>
+                <h3 className="text-2xl font-black tracking-tight text-navy">{title}</h3>
             </div>
 
-            <div className="p-6">
+            <div className="p-8">
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                     {items.map((service, idx) => {
                         const href = `/services/${service.serviceSlug}`;
 
                         return (
-                            <Link
+                            <motion.div
                                 key={idx}
-                                href={href}
-                                className="group relative overflow-hidden bg-navy border-2 border-transparent hover:border-gold rounded-2xl hover:shadow-xl transition-all duration-300 flex flex-col h-64"
+                                whileHover={{ scale: 1.03, y: -5 }}
+                                transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                                className="h-64"
                             >
-                                <Image src={serviceContentMap[service.serviceSlug]?.image || "/images/portfolio/house-washing.webp"} alt={service.serviceName} fill quality={75} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" loading="lazy" className="object-cover group-hover:scale-105 transition-transform duration-500 z-0" />
-                                <div className="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/40 to-transparent z-10 transition-opacity duration-300 group-hover:opacity-90"></div>
-                                <div className="relative z-20 flex flex-row items-end justify-between h-full p-6">
-                                    <span className="font-bold text-white group-hover:text-gold transition-colors text-xl">
-                                        {service.serviceName}
-                                    </span>
-                                    <div className="bg-white/10 p-2 rounded-full transform group-hover:scale-110 transition-all">
-                                        <ChevronRight className="text-gold" size={20} />
+                                <Link
+                                    href={href}
+                                    className="group relative overflow-hidden bg-navy border border-white/20 rounded-[32px] shadow-[0_8px_30px_rgb(0,0,0,0.12)] flex flex-col h-full w-full"
+                                >
+                                    <Image src={serviceContentMap[service.serviceSlug]?.image || "/images/portfolio/house-washing.webp"} alt={service.serviceName} fill quality={75} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" loading="lazy" className="object-cover group-hover:scale-110 transition-transform duration-700 ease-out z-0" />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-[#0b2341]/95 via-[#0b2341]/40 to-transparent z-10 transition-opacity duration-300 group-hover:opacity-80"></div>
+                                    <div className="relative z-20 flex flex-row items-end justify-between h-full p-6">
+                                        <span className="font-extrabold tracking-tight text-white group-hover:text-gold transition-colors text-xl leading-tight drop-shadow-md">
+                                            {service.serviceName}
+                                        </span>
+                                        <div className="bg-white/20 backdrop-blur-md shadow-inner p-3 rounded-full transform group-hover:scale-110 group-hover:bg-white/30 transition-all">
+                                            <ChevronRight className="text-white" size={20} />
+                                        </div>
                                     </div>
-                                </div>
-                            </Link>
+                                </Link>
+                            </motion.div>
                         );
                     })}
                 </div>
