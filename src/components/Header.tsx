@@ -10,8 +10,8 @@ export default function Header() {
     const isTransparent = pathname === '/contact';
 
     const headerClasses = isTransparent
-        ? "absolute top-0 z-50 bg-white/60 backdrop-blur-md border-b border-white/20 shadow-sm w-full h-auto py-2 md:py-3"
-        : "sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm w-full h-auto py-2 md:py-3";
+        ? "absolute top-0 z-50 bg-white/60 backdrop-blur-md border-b border-white/20 shadow-sm w-full h-auto"
+        : "sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm w-full h-auto";
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isServicesOpen, setIsServicesOpen] = useState(false);
     const [isServiceAreasOpen, setIsServiceAreasOpen] = useState(false);
@@ -27,11 +27,11 @@ export default function Header() {
             </div>
 
             {/* Row 2: Main Layout */}
-            <div className="container mx-auto px-4 flex items-center justify-between min-h-[64px] md:min-h-[80px]">
+            <div className="container mx-auto max-w-7xl px-5 sm:px-6 lg:px-8 flex items-center justify-between min-h-[64px] md:min-h-[80px] py-1 md:py-2">
 
                 {/* Logo Section (Left Aligned) */}
-                <Link href="/" aria-label="Home" className="flex-shrink flex-shrink-0 hover:opacity-90 transition-opacity z-50 py-1 flex items-center gap-3 mr-auto relative min-w-0">
-                    <div className="relative h-12 w-40 sm:h-14 sm:w-48 lg:h-16 lg:w-56 xl:h-20 xl:w-64 shrink">
+                <Link href="/" aria-label="Home" className="shrink hover:opacity-90 transition-opacity z-50 py-1 flex items-center gap-2 xl:gap-3 mr-auto relative min-w-0">
+                    <div className="relative h-12 w-40 sm:h-14 sm:w-48 lg:h-16 lg:w-52 xl:h-20 xl:w-60 min-w-[150px]">
                         <Image
                             src="/valley-window-care-logo-without-background.png"
                             alt="Valley Exterior Restoration Logo"
@@ -41,7 +41,7 @@ export default function Header() {
                             priority
                         />
                     </div>
-                    <div className="hidden 2xl:flex flex-col pt-2">
+                    <div className="hidden 2xl:flex flex-col pt-2 shrink-0">
                         <span className="text-navy font-black text-xl leading-none uppercase tracking-tight">Valley Exterior</span>
                         <span className="text-gold font-bold text-[11px] mt-0.5 leading-none uppercase tracking-widest text-left">Restoration</span>
                     </div>
@@ -68,7 +68,7 @@ export default function Header() {
                 </div>
 
                 {/* Desktop Nav (Visible at 1024px+) */}
-                <nav className="hidden lg:flex gap-x-3 xl:gap-x-5 2xl:gap-x-8 items-center text-[12px] xl:text-sm font-bold text-navy-dark tracking-tight pl-4 xl:pl-8">
+                <nav className="hidden lg:flex gap-x-2 xl:gap-x-4 2xl:gap-x-6 items-center text-[12px] xl:text-[13px] font-bold text-navy-dark tracking-tight pl-2 xl:pl-4 shrink">
                     {/* Services Mega Menu */}
                     <div className="relative group py-8 cursor-pointer">
                         <div className="hover:text-gold transition-colors flex items-center gap-1 uppercase">
@@ -124,14 +124,14 @@ export default function Header() {
                 </nav>
 
                 {/* Call to Action Desktop */}
-                <div className="hidden lg:flex items-center gap-3 xl:gap-6 ml-4 xl:ml-auto shrink-0">
+                <div className="hidden lg:flex items-center gap-2 xl:gap-4 ml-auto shrink-0 pr-1">
                     <a href="tel:920-609-7085" className="flex items-center gap-2 text-navy font-bold hover:text-gold transition-colors shrink-0" rel="nofollow" aria-label="Call Valley Window Care & Exterior Cleaning">
-                        <span className="hidden xl:inline text-lg break-words leading-tight tracking-tight">(920) 609-7085</span>
+                        <span className="hidden xl:inline text-base xl:text-lg break-words leading-tight tracking-tight">(920) 609-7085</span>
                         <Phone size={22} className="text-gold shrink-0 xl:hidden" aria-label="Phone Icon" />
                         <Phone size={18} className="hidden xl:block text-gold shrink-0" />
                     </a>
                     
-                    <Link href="/contact" className="bg-gold hover:bg-gold-light text-navy-dark px-5 py-2 xl:px-6 xl:py-2.5 rounded-full font-black btn-hover-fx shadow-md whitespace-nowrap text-[13px] xl:text-[15px] shrink-0 uppercase tracking-widest" aria-label="Request a free property exterior cleaning quote">
+                    <Link href="/contact" className="bg-gold hover:bg-gold-light text-navy-dark px-4 py-2 xl:px-6 xl:py-2.5 rounded-full font-black btn-hover-fx shadow-md whitespace-nowrap text-[12px] xl:text-[14px] shrink-0 uppercase tracking-widest" aria-label="Request a free property exterior cleaning quote">
                         GET A QUOTE
                     </Link>
                 </div>
