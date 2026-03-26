@@ -120,13 +120,13 @@ export default function Header() {
                     <Link href="/services/house-washing" className="hover:text-gold transition-colors uppercase whitespace-nowrap shrink-0">HOUSE WASHING</Link>
                     <Link href="/services/pressure-washing" className="hover:text-gold transition-colors uppercase whitespace-nowrap shrink-0">PRESSURE WASHING</Link>
 
-                    <Link href="/contact" className="hover:text-gold transition-colors uppercase ml-2 whitespace-nowrap shrink-0">CONTACT</Link>
+                    <Link href="/contact" className="hover:text-gold transition-colors uppercase mr-4 xl:mr-8 whitespace-nowrap shrink-0">CONTACT</Link>
                 </nav>
 
                 {/* Call to Action Desktop */}
                 <div className="hidden lg:flex items-center ml-auto shrink-0 pr-1">
                     <a href="tel:920-609-7085" className="flex items-center gap-2 text-navy font-bold hover:text-gold transition-colors shrink-0 mr-4 xl:mr-6" rel="nofollow" aria-label="Call Valley Window Care & Exterior Cleaning">
-                        <span className="hidden xl:inline text-base xl:text-lg break-words leading-tight tracking-tight">(920) 609-7085</span>
+                        <span className="hidden xl:inline font-black text-navy-dark text-lg xl:text-xl break-words leading-tight tracking-tight">(920) 609-7085</span>
                         <Phone size={22} className="text-gold shrink-0 xl:hidden" aria-label="Phone Icon" />
                         <Phone size={18} className="hidden xl:block text-gold shrink-0" />
                     </a>
