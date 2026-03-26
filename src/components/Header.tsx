@@ -32,15 +32,19 @@ export default function Header() {
                 <div className="h-14 md:h-20 w-0 xl:hidden"></div>
 
                 {/* Logo Section */}
-                <Link href="/" aria-label="Home" className="flex-shrink-0 hover:opacity-90 transition-opacity z-50 py-1 absolute left-1/2 -translate-x-1/2 xl:relative xl:left-auto xl:translate-x-0">
+                <Link href="/" aria-label="Home" className="flex-shrink-0 hover:opacity-90 transition-opacity z-50 py-1 absolute left-1/2 -translate-x-1/2 xl:relative xl:left-auto xl:translate-x-0 flex items-center gap-3">
                     <div className="relative h-14 md:h-20 w-48 md:w-64">
                         <Image
                             src="/valley-window-care-logo-without-background.png"
-                            alt="Valley Window Care and Exterior Cleaning logo - Professional exterior cleaning services in Wisconsin"
+                            alt="Valley Exterior Restoration Logo"
                             width={250}
                             height={92}
                             className="object-contain object-center xl:object-left w-full h-full"
                         />
+                    </div>
+                    <div className="hidden 2xl:flex flex-col pt-2">
+                        <span className="text-navy font-black text-xl leading-none uppercase tracking-tight">Valley Exterior</span>
+                        <span className="text-gold font-bold text-[11px] mt-0.5 leading-none uppercase tracking-widest text-left">Restoration</span>
                     </div>
                 </Link>
 
@@ -61,7 +65,6 @@ export default function Header() {
                                     <div className="flex flex-col gap-1">
                                         <Link href="/services/roof-cleaning" className="px-4 py-2 hover:bg-slate-50 rounded-xl text-navy-dark hover:text-gold transition-colors font-semibold">Roof Cleaning</Link>
                                         <Link href="/services/house-washing" className="px-4 py-2 hover:bg-slate-50 rounded-xl text-navy-dark hover:text-gold transition-colors font-semibold">House Washing</Link>
-                                        <Link href="/services/window-cleaning" className="px-4 py-2 hover:bg-slate-50 rounded-xl text-navy-dark hover:text-gold transition-colors font-semibold">Window Cleaning</Link>
                                         <Link href="/services/pressure-washing" className="px-4 py-2 hover:bg-slate-50 rounded-xl text-navy-dark hover:text-gold transition-colors font-semibold">Pressure Washing</Link>
                                         <Link href="/services/paver-patio-restorations" className="px-4 py-2 hover:bg-slate-50 rounded-xl text-navy-dark hover:text-gold transition-colors font-semibold">Paver Patio Restorations</Link>
                                         <Link href="/services/residential-permanent-led-lighting" className="px-4 py-2 hover:bg-slate-50 rounded-xl text-navy-dark hover:text-gold transition-colors font-semibold">Permanent LED Lighting</Link>
@@ -92,6 +95,10 @@ export default function Header() {
                             </div>
                         </div>
                     </div>
+
+                    <Link href="/services/roof-cleaning" className="hover:text-gold transition-colors uppercase hidden xl:block">ROOF CLEANING</Link>
+                    <Link href="/services/paver-patio-restorations" className="hover:text-gold transition-colors uppercase hidden xl:block">PAVER SEALING</Link>
+                    <Link href="/services/house-washing" className="hover:text-gold transition-colors uppercase hidden xl:block">HOUSE WASHING</Link>
 
                     <Link href="/service-areas" className="hover:text-gold transition-colors uppercase">SERVICE AREAS</Link>
 
@@ -147,7 +154,6 @@ export default function Header() {
                                         <h4 className="text-gold text-xs tracking-widest uppercase mb-2">Residential</h4>
                                         <Link onClick={() => setIsMobileMenuOpen(false)} href="/services/roof-cleaning" className="block py-2 hover:text-gold transition-colors">Roof Cleaning</Link>
                                         <Link onClick={() => setIsMobileMenuOpen(false)} href="/services/house-washing" className="block py-2 hover:text-gold transition-colors">House Washing</Link>
-                                        <Link onClick={() => setIsMobileMenuOpen(false)} href="/services/window-cleaning" className="block py-2 hover:text-gold transition-colors">Window Cleaning</Link>
                                         <Link onClick={() => setIsMobileMenuOpen(false)} href="/services/pressure-washing" className="block py-2 hover:text-gold transition-colors">Pressure Washing</Link>
                                         <Link onClick={() => setIsMobileMenuOpen(false)} href="/services/paver-patio-restorations" className="block py-2 hover:text-gold transition-colors">Paver Patio Restorations</Link>
                                         <Link onClick={() => setIsMobileMenuOpen(false)} href="/services/residential-permanent-led-lighting" className="block py-2 hover:text-gold transition-colors">Permanent LED Lighting</Link>

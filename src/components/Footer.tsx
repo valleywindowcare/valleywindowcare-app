@@ -9,18 +9,18 @@ export default function Footer() {
             <div className="container mx-auto px-4 py-16">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12">
 
-                    {/* Column 1: Brand & Bio */}
                     <div className="flex flex-col items-center md:items-start text-center md:text-left">
-                        <div className="relative h-14 w-56 mb-6">
+                        <div className="relative h-14 w-56 mb-4">
                             <Image
                                 src="/valley-window-care-logo-without-background.png"
-                                alt="Expert exterior cleaning and window washing in Green Bay and the Fox Valley"
+                                alt="Valley Exterior Restoration serving Green Bay and the Fox Valley"
                                 fill
                                 className="object-contain object-center md:object-left"
                             />
                         </div>
+                        <h2 className="text-navy font-black text-2xl uppercase tracking-tighter mb-2">Valley Exterior Restoration</h2>
                         <p className="text-gray-600 mb-6 text-sm leading-relaxed max-w-sm">
-                            Discover why Valley Window Care and Exterior Cleaning is the trusted name in Wisconsin for professional window, roof, and permanent LED lighting services.
+                            Discover why Valley Exterior Restoration is the trusted name in Wisconsin for professional pressure washing, soft-washing, and paver sealing services.
                         </p>
                         <div className="flex items-center gap-4">
                             <a href="https://www.facebook.com/valleywindowcare" target="_blank" rel="noopener noreferrer" aria-label="Visit Valley Window Care & Exterior Cleaning on Facebook" className="w-10 h-10 rounded-full bg-navy text-white flex items-center justify-center hover:bg-gold transition-colors hover:scale-110 active:scale-95 duration-200">

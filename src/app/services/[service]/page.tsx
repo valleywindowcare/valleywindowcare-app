@@ -203,12 +203,17 @@ export default async function ServiceGenericPage({ params }: PageProps) {
                         {content?.pageH1 ? content.pageH1 : (
                             <>
                                 Professional <span className="text-gold">{formattedName}</span><br />
-                                <span className="text-2xl md:text-3xl mt-2 block">Green Bay & Northeast Wisconsin</span>
+                                <span className="text-2xl md:text-3xl mt-2 block">
+                                    {service === 'paver-patio-restorations' ? "Premium $1,500+ Restoration (Sand, Seal, Restore)" : 
+                                     ['roof-cleaning', 'house-washing'].includes(service) ? "Safe Soft-Wash Technology & Property Protection" : 
+                                     "Green Bay & Northeast Wisconsin"}
+                                </span>
                             </>
                         )}
                     </h1>
                     <p className="text-lg md:text-xl text-gray-100 font-semibold leading-relaxed drop-shadow-md pb-8">
-                        Valley Window Care and Exterior Cleaning provides premium {formattedName.toLowerCase()} services to restore, protect, and enhance your property's value.
+                        {['roof-cleaning', 'house-washing'].includes(service) ? `Valley Exterior Restoration deploys professional soft-wash ${formattedName.toLowerCase()} systems to restore, protect, and enhance your property's value without the risks of high pressure.` :
+                         `Valley Exterior Restoration provides premium ${formattedName.toLowerCase()} services to restore, protect, and enhance your property's value.`}
                     </p>
                 </div>
 

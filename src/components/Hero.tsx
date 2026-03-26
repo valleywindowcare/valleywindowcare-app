@@ -48,13 +48,13 @@ export default function Hero({
                     <h1 className={`text-4xl md:text-5xl lg:text-7xl font-extrabold leading-tight mb-6 tracking-tight drop-shadow-lg mx-auto text-white`}>
                         {h1 || (
                             <>
-                                Top-Rated Exterior Cleaning <br />
-                                <span className="text-gold text-3xl md:text-4xl lg:text-5xl block mt-2">& Window Washing in Green Bay, WI</span>
+                                Northeast Wisconsin’s Elite <br />
+                                <span className="text-gold text-3xl md:text-4xl lg:text-5xl block mt-2">Exterior Restoration Specialists</span>
                             </>
                         )}
                     </h1>
-                    <p className="text-lg md:text-xl text-gray-100 mb-8 font-semibold leading-relaxed drop-shadow-md">
-                        {description || "Enhance your property's appeal with expert exterior cleaning services in Green Bay from Valley Window Care & Exterior Cleaning."}
+                    <p className="text-lg md:text-xl text-gray-100 mb-8 font-semibold leading-relaxed drop-shadow-md max-w-3xl mx-auto">
+                        {description || "Green Bay’s Premier Exterior Restoration & Soft-Wash Specialists."}
                     </p>
                 </div>
 

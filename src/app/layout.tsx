@@ -30,10 +30,10 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: "Valley Window Care & Exterior Cleaning | #1 Green Bay Window & Roof Cleaners",
-    template: "%s | Valley Window Care & Exterior Cleaning",
+    default: "Pressure Washing & Roof Cleaning Green Bay | Valley Exterior Restoration",
+    template: "%s | Valley Exterior Restoration",
   },
-  description: "Green Bay’s top-rated window and roof cleaning. Get an instant quote for professional house washing, gutter cleaning, and paver restoration. Call (920) 609-7085 today!",
+  description: "Northeast Wisconsin's elite exterior restoration specialists. Get an instant quote for high-end pressure washing, paver sealing, and safe soft-wash roof restoration. Call (920) 609-7085 today!",
 };
 
 export default function RootLayout({
@@ -50,7 +50,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "HomeAndConstructionBusiness",
-              name: "Valley Window Care & Exterior Cleaning",
+              name: "Valley Exterior Restoration",
               telephone: "+1-920-609-7085",
               address: {
                 "@type": "PostalAddress",
@@ -68,11 +68,11 @@ export default function RootLayout({
               ],
               hasOfferCatalog: {
                 "@type": "OfferCatalog",
-                name: "Exterior Cleaning Services",
+                name: "Exterior Restoration Services",
                 itemListElement: [
-                  { "@type": "Offer", itemOffered: { "@type": "Service", name: "Pressure Washing" } },
-                  { "@type": "Offer", itemOffered: { "@type": "Service", name: "Roof Soft Washing" } },
-                  { "@type": "Offer", itemOffered: { "@type": "Service", name: "Window Cleaning" } }
+                  { "@type": "Offer", itemOffered: { "@type": "Service", name: "Premium Pressure Washing" } },
+                  { "@type": "Offer", itemOffered: { "@type": "Service", name: "Safe Soft-Wash Roof Restoration" } },
+                  { "@type": "Offer", itemOffered: { "@type": "Service", name: "Paver Restoration & Sealing" } }
                 ]
               },
               aggregateRating: {
