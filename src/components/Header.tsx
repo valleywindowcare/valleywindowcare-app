@@ -19,19 +19,22 @@ export default function Header() {
     return (
         <header className={headerClasses}>
             {/* Row 1: Utility Top-Bar (Hidden on Mobile) */}
-            <div className="hidden lg:flex w-full bg-navy text-white border-b border-navy-light py-2 px-4 lg:px-8 xl:px-16 justify-end items-center gap-6 text-[10px] xl:text-xs font-bold tracking-wider uppercase">
-                <Link href="/about-us" className="hover:text-gold transition-colors items-center flex h-full">Our Company</Link>
-                <Link href="/service-areas" className="hover:text-gold transition-colors items-center flex h-full text-gold">Service Areas</Link>
-                <Link href="/gallery" className="hover:text-gold transition-colors items-center flex h-full">Gallery</Link>
-                <Link href="/pricing" className="hover:text-gold transition-colors items-center flex h-full">Pricing</Link>
-                <Link href="/blog" className="hover:text-gold transition-colors items-center flex h-full">Expert Guides</Link>
+            <div className="hidden lg:flex w-full bg-navy text-white border-b border-navy-light py-2 px-4 lg:px-8 xl:px-16 items-center text-[10px] xl:text-xs tracking-wider uppercase">
+                <div className="mr-auto font-black text-gold tracking-widest pl-1 lg:text-[12px] xl:text-[14px]">Valley Exterior Restoration</div>
+                <div className="flex justify-end items-center gap-6 font-bold">
+                    <Link href="/about-us" className="hover:text-gold transition-colors items-center flex h-full">Our Company</Link>
+                    <Link href="/service-areas" className="hover:text-gold transition-colors items-center flex h-full text-gold">Service Areas</Link>
+                    <Link href="/gallery" className="hover:text-gold transition-colors items-center flex h-full">Gallery</Link>
+                    <Link href="/pricing" className="hover:text-gold transition-colors items-center flex h-full">Pricing</Link>
+                    <Link href="/blog" className="hover:text-gold transition-colors items-center flex h-full">Expert Guides</Link>
+                </div>
             </div>
 
             {/* Row 2: Main Layout */}
             <div className="container mx-auto max-w-7xl px-5 sm:px-6 lg:px-8 flex items-center justify-between min-h-[64px] md:min-h-[80px] py-2 md:py-3 lg:py-5">
 
                 {/* Logo Section (Left Aligned) */}
-                <Link href="/" aria-label="Home" className="shrink-0 max-w-[280px] max-h-[60px] hover:opacity-90 transition-opacity z-40 py-1 flex items-center gap-4 xl:gap-8 relative min-w-0">
+                <Link href="/" aria-label="Home" className="shrink-0 max-w-[280px] max-h-[60px] hover:opacity-90 transition-opacity z-40 py-1 flex items-center relative">
                     <div className="relative h-10 w-36 sm:h-12 sm:w-40 lg:h-12 lg:w-48 xl:h-14 xl:w-56 min-w-[140px] max-h-[60px] shrink-0">
                         <Image
                             src="/valley-window-care-logo-without-background.png"
@@ -41,10 +44,6 @@ export default function Header() {
                             sizes="(max-width: 640px) 140px, (max-width: 1280px) 192px, 224px"
                             priority
                         />
-                    </div>
-                    <div className="hidden 2xl:flex flex-col pt-1 shrink-0">
-                        <span className="text-navy font-black text-lg leading-none uppercase tracking-tight">Valley Exterior</span>
-                        <span className="text-gold font-bold text-[10px] mt-0.5 leading-none uppercase tracking-widest text-left">Restoration</span>
                     </div>
                 </Link>
 
@@ -68,8 +67,8 @@ export default function Header() {
                     </button>
                 </div>
 
-                {/* Desktop Nav (Visible at 1024px+) */}
-                <nav className="hidden lg:flex z-50 gap-x-2 xl:gap-x-4 2xl:gap-x-6 items-center text-[12px] xl:text-[13px] font-bold text-navy-dark tracking-tight ml-10 xl:ml-14 shrink whitespace-nowrap">
+                {/* Desktop Nav (Centered Tri-Column) */}
+                <nav className="hidden lg:flex z-50 gap-x-5 items-center text-[12px] xl:text-[13px] font-bold text-navy-dark tracking-tight shrink whitespace-nowrap mx-auto">
                     {/* Services Mega Menu */}
                     <div className="relative group py-8 cursor-pointer shrink-0">
                         <div className="hover:text-gold transition-colors flex items-center gap-1 uppercase whitespace-nowrap">
