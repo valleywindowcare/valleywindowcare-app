@@ -19,19 +19,20 @@ export default function Header() {
     return (
         <header className={headerClasses}>
             {/* Row 1: Utility Top-Bar (Hidden on Mobile) */}
-            <div className="hidden lg:flex w-full bg-navy text-white border-b border-navy-light py-1.5 px-4 lg:px-8 xl:px-16 justify-end items-center gap-6 text-[10px] xl:text-xs font-bold tracking-wider uppercase">
-                <Link href="/about-us" className="hover:text-gold transition-colors">Our Company</Link>
-                <Link href="/gallery" className="hover:text-gold transition-colors">Gallery</Link>
-                <Link href="/pricing" className="hover:text-gold transition-colors">Pricing</Link>
-                <Link href="/blog" className="hover:text-gold transition-colors">Expert Guides</Link>
+            <div className="hidden lg:flex w-full bg-navy text-white border-b border-navy-light py-2 px-4 lg:px-8 xl:px-16 justify-end items-center gap-6 text-[10px] xl:text-xs font-bold tracking-wider uppercase">
+                <Link href="/about-us" className="hover:text-gold transition-colors items-center flex h-full">Our Company</Link>
+                <Link href="/service-areas" className="hover:text-gold transition-colors items-center flex h-full text-gold">Service Areas</Link>
+                <Link href="/gallery" className="hover:text-gold transition-colors items-center flex h-full">Gallery</Link>
+                <Link href="/pricing" className="hover:text-gold transition-colors items-center flex h-full">Pricing</Link>
+                <Link href="/blog" className="hover:text-gold transition-colors items-center flex h-full">Expert Guides</Link>
             </div>
 
             {/* Row 2: Main Layout */}
-            <div className="container mx-auto max-w-7xl px-5 sm:px-6 lg:px-8 flex items-center justify-between min-h-[64px] md:min-h-[80px] py-1 md:py-2">
+            <div className="container mx-auto max-w-7xl px-5 sm:px-6 lg:px-8 flex items-center justify-between min-h-[64px] md:min-h-[80px] py-2 md:py-3 lg:py-5">
 
                 {/* Logo Section (Left Aligned) */}
-                <Link href="/" aria-label="Home" className="shrink hover:opacity-90 transition-opacity z-50 py-1 flex items-center gap-2 xl:gap-3 mr-auto relative min-w-0">
-                    <div className="relative h-12 w-40 sm:h-14 sm:w-48 lg:h-16 lg:w-52 xl:h-20 xl:w-60 min-w-[150px]">
+                <Link href="/" aria-label="Home" className="shrink hover:opacity-90 transition-opacity z-50 py-1 flex items-center gap-2 xl:gap-4 mr-4 xl:mr-10 relative min-w-0">
+                    <div className="relative h-12 w-40 sm:h-14 sm:w-48 lg:h-16 lg:w-52 xl:h-20 xl:w-60 min-w-[150px] max-h-[80px] shrink-0">
                         <Image
                             src="/valley-window-care-logo-without-background.png"
                             alt="Valley Exterior Restoration Logo"
@@ -183,32 +184,13 @@ export default function Header() {
                             )}
                         </div>
 
-                        {/* About Us Accordion Toggle */}
-                        <div className="border-b border-gray-100">
-                            <button
-                                className="w-full flex items-center justify-between py-4 uppercase text-left transition-colors hover:text-gold"
-                                onClick={() => setIsAboutUsOpen(!isAboutUsOpen)}
-                            >
-                                About Us
-                                <ChevronDown
-                                    size={20}
-                                    className={`transition-transform duration-300 ${isAboutUsOpen ? 'rotate-180 text-gold' : 'text-gray-400'}`}
-                                />
-                            </button>
-
-                            {isAboutUsOpen && (
-                                <div className="pl-4 pb-4 space-y-2">
-                                    <Link onClick={() => setIsMobileMenuOpen(false)} href="/about-us" className="block py-2 hover:text-gold transition-colors">Our Company</Link>
-                                    <Link onClick={() => setIsMobileMenuOpen(false)} href="/service-areas" className="block py-2 hover:text-gold transition-colors">Service Areas</Link>
-                                    <Link onClick={() => setIsMobileMenuOpen(false)} href="/gallery" className="block py-2 hover:text-gold transition-colors">Gallery</Link>
-                                    <Link onClick={() => setIsMobileMenuOpen(false)} href="/reviews" className="block py-2 hover:text-gold transition-colors">Reviews</Link>
-                                </div>
-                            )}
-                        </div>
-
+                        {/* Top-Level Secondary Mobile Links */}
+                        <Link onClick={() => setIsMobileMenuOpen(false)} href="/service-areas" className="uppercase py-4 border-b border-gray-100 font-black text-navy-dark hover:text-gold transition-colors">SERVICE AREAS</Link>
+                        <Link onClick={() => setIsMobileMenuOpen(false)} href="/gallery" className="uppercase py-4 border-b border-gray-100 hover:text-gold transition-colors">GALLERY</Link>
                         <Link onClick={() => setIsMobileMenuOpen(false)} href="/pricing" className="uppercase py-4 border-b border-gray-100 hover:text-gold transition-colors">PRICING</Link>
                         <Link onClick={() => setIsMobileMenuOpen(false)} href="/blog" className="uppercase py-4 border-b border-gray-100 text-gold font-black transition-colors">EXPERT GUIDES</Link>
-                        <Link onClick={() => setIsMobileMenuOpen(false)} href="/contact" className="uppercase py-4 hover:text-gold transition-colors">CONTACT</Link>
+                        <Link onClick={() => setIsMobileMenuOpen(false)} href="/contact" className="uppercase py-4 border-b border-gray-100 hover:text-gold transition-colors">CONTACT</Link>
+
 
                         <div className="mt-8 mb-4 px-4 flex flex-col gap-3">
                             <div className="flex justify-center mb-1">
