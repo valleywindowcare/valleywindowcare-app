@@ -18,6 +18,15 @@ export default function Header() {
     const [isAboutUsOpen, setIsAboutUsOpen] = useState(false);
     return (
         <header className={headerClasses}>
+            {/* Row 1: Utility Top-Bar (Hidden on Mobile) */}
+            <div className="hidden lg:flex w-full bg-navy text-white border-b border-navy-light py-1.5 px-4 lg:px-8 xl:px-16 justify-end items-center gap-6 text-[10px] xl:text-xs font-bold tracking-wider uppercase">
+                <Link href="/about-us" className="hover:text-gold transition-colors">Our Company</Link>
+                <Link href="/gallery" className="hover:text-gold transition-colors">Gallery</Link>
+                <Link href="/pricing" className="hover:text-gold transition-colors">Pricing</Link>
+                <Link href="/blog" className="hover:text-gold transition-colors">Expert Guides</Link>
+            </div>
+
+            {/* Row 2: Main Layout */}
             <div className="container mx-auto px-4 flex items-center justify-between min-h-[64px] md:min-h-[80px]">
 
                 {/* Logo Section (Left Aligned) */}
@@ -59,7 +68,7 @@ export default function Header() {
                 </div>
 
                 {/* Desktop Nav (Visible at 1024px+) */}
-                <nav className="hidden lg:flex gap-x-4 xl:gap-x-6 2xl:gap-x-8 items-center text-sm lg:text-[13px] xl:text-base font-bold text-navy-dark tracking-wide pl-4 xl:pl-8">
+                <nav className="hidden lg:flex gap-x-3 xl:gap-x-5 2xl:gap-x-8 items-center text-[12px] xl:text-sm font-bold text-navy-dark tracking-tight pl-4 xl:pl-8">
                     {/* Services Mega Menu */}
                     <div className="relative group py-8 cursor-pointer">
                         <div className="hover:text-gold transition-colors flex items-center gap-1 uppercase">
@@ -105,43 +114,24 @@ export default function Header() {
                             </div>
                         </div>
                     </div>
+                    {/* Core Highest Return Services - Restored to Primary Header */}
+                    <Link href="/services/roof-cleaning" className="hover:text-gold transition-colors uppercase whitespace-nowrap">ROOF CLEANING</Link>
+                    <Link href="/services/paver-patio-restorations" className="hover:text-gold transition-colors uppercase whitespace-nowrap">PAVER SEALING</Link>
+                    <Link href="/services/house-washing" className="hover:text-gold transition-colors uppercase whitespace-nowrap">HOUSE WASHING</Link>
+                    <Link href="/services/pressure-washing" className="hover:text-gold transition-colors uppercase whitespace-nowrap">PRESSURE WASHING</Link>
 
-                    {/* About Us Dropdown Container */}
-                    <div className="relative group py-8 cursor-pointer">
-                        <div className="hover:text-gold transition-colors flex items-center gap-1 uppercase">
-                            About Us <ChevronDown size={14} className="text-gray-400 group-hover:text-gold transition-colors" />
-                        </div>
-                        <div className="absolute top-[80px] -left-8 w-[240px] bg-white shadow-2xl border border-gray-100 rounded-3xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-4 group-hover:translate-y-0 flex flex-col z-50 overflow-hidden">
-                            <div className="flex flex-col p-4 gap-2">
-                                <Link href="/about-us" className="px-4 py-2 hover:bg-slate-50 rounded-xl text-navy-dark hover:text-gold transition-colors font-semibold">Our Company</Link>
-                                <Link href="/service-areas" className="px-4 py-2 hover:bg-slate-50 rounded-xl text-navy-dark hover:text-gold transition-colors font-semibold">Service Areas</Link>
-                                <Link href="/gallery" className="px-4 py-2 hover:bg-slate-50 rounded-xl text-navy-dark hover:text-gold transition-colors font-semibold">Gallery</Link>
-                                <Link href="/reviews" className="px-4 py-2 hover:bg-slate-50 rounded-xl text-navy-dark hover:text-gold transition-colors font-semibold">Reviews</Link>
-                            </div>
-                        </div>
-                    </div>
-                    <Link href="/pricing" className="hover:text-gold transition-colors uppercase">PRICING</Link>
-                    <Link href="/blog" className="hover:text-gold transition-colors text-gold font-black uppercase">EXPERT GUIDES</Link>
-                    <Link href="/contact" className="hover:text-gold transition-colors uppercase">CONTACT</Link>
+                    <Link href="/contact" className="hover:text-gold transition-colors uppercase ml-2">CONTACT</Link>
                 </nav>
 
                 {/* Call to Action Desktop */}
-                <div className="hidden lg:flex items-center gap-3 xl:gap-4 ml-4 xl:ml-6 shrink-0">
-                    <div className="flex flex-col items-end gap-1 mr-1 max-w-full">
-                        <span className="hidden xl:block text-[10px] font-black uppercase tracking-widest text-green-600 bg-green-50 px-2 py-0.5 rounded border border-green-100 mb-1 shrink-0">
-                            Fully Licensed & Insured
-                        </span>
-                        <a href="tel:920-609-7085" className="flex items-center gap-2 text-navy font-bold hover:text-gold transition-colors shrink-0" rel="nofollow" aria-label="Call Valley Window Care & Exterior Cleaning">
-                            <span className="hidden xl:inline text-base break-words leading-tight">(920) 609-7085</span>
-                            <Phone size={18} className="text-gold shrink-0 xl:hidden" aria-label="Phone Icon" />
-                            <Phone size={16} className="hidden xl:block text-gold shrink-0" />
-                        </a>
-                        <a href="mailto:info@valleywindowcare.com" className="hidden xl:flex items-center gap-2 text-navy font-medium hover:text-gold transition-colors max-w-full overflow-hidden shrink-0" rel="nofollow" aria-label="Email Valley Window Care & Exterior Cleaning">
-                            <Mail size={16} className="text-gold shrink-0" />
-                            <span className="text-sm break-words leading-tight">info@valleywindowcare.com</span>
-                        </a>
-                    </div>
-                    <Link href="/contact" className="bg-gold hover:bg-gold-light text-white px-5 py-2 xl:px-6 xl:py-2.5 rounded-full font-bold btn-hover-fx shadow-md whitespace-nowrap text-[13px] xl:text-base shrink-0" aria-label="Request a free property exterior cleaning quote">
+                <div className="hidden lg:flex items-center gap-3 xl:gap-6 ml-4 xl:ml-auto shrink-0">
+                    <a href="tel:920-609-7085" className="flex items-center gap-2 text-navy font-bold hover:text-gold transition-colors shrink-0" rel="nofollow" aria-label="Call Valley Window Care & Exterior Cleaning">
+                        <span className="hidden xl:inline text-lg break-words leading-tight tracking-tight">(920) 609-7085</span>
+                        <Phone size={22} className="text-gold shrink-0 xl:hidden" aria-label="Phone Icon" />
+                        <Phone size={18} className="hidden xl:block text-gold shrink-0" />
+                    </a>
+                    
+                    <Link href="/contact" className="bg-gold hover:bg-gold-light text-navy-dark px-5 py-2 xl:px-6 xl:py-2.5 rounded-full font-black btn-hover-fx shadow-md whitespace-nowrap text-[13px] xl:text-[15px] shrink-0 uppercase tracking-widest" aria-label="Request a free property exterior cleaning quote">
                         GET A QUOTE
                     </Link>
                 </div>
