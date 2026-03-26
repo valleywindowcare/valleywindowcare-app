@@ -15,6 +15,7 @@ export default function Header() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isServicesOpen, setIsServicesOpen] = useState(false);
     const [isServiceAreasOpen, setIsServiceAreasOpen] = useState(false);
+    const [isAboutUsOpen, setIsAboutUsOpen] = useState(false);
     return (
         <header className={headerClasses}>
             <div className="container mx-auto px-4 flex items-center justify-between min-h-[56px] md:min-h-[80px]">
@@ -99,12 +100,22 @@ export default function Header() {
                     <Link href="/services/roof-cleaning" className="hover:text-gold transition-colors uppercase hidden xl:block">ROOF CLEANING</Link>
                     <Link href="/services/paver-patio-restorations" className="hover:text-gold transition-colors uppercase hidden xl:block">PAVER SEALING</Link>
                     <Link href="/services/house-washing" className="hover:text-gold transition-colors uppercase hidden xl:block">HOUSE WASHING</Link>
+                    <Link href="/services/pressure-washing" className="hover:text-gold transition-colors uppercase hidden xl:block">PRESSURE WASHING</Link>
 
-                    <Link href="/service-areas" className="hover:text-gold transition-colors uppercase">SERVICE AREAS</Link>
-
-                    <Link href="/about-us" className="hover:text-gold transition-colors uppercase">ABOUT US</Link>
-                    <Link href="/gallery" className="hover:text-gold transition-colors uppercase">GALLERY</Link>
-                    <Link href="/reviews" className="hover:text-gold transition-colors uppercase">REVIEWS</Link>
+                    {/* About Us Dropdown Container */}
+                    <div className="relative group py-8 cursor-pointer">
+                        <div className="hover:text-gold transition-colors flex items-center gap-1 uppercase">
+                            About Us <ChevronDown size={14} className="text-gray-400 group-hover:text-gold transition-colors" />
+                        </div>
+                        <div className="absolute top-[80px] -left-8 w-[240px] bg-white shadow-2xl border border-gray-100 rounded-3xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-4 group-hover:translate-y-0 flex flex-col z-50 overflow-hidden">
+                            <div className="flex flex-col p-4 gap-2">
+                                <Link href="/about-us" className="px-4 py-2 hover:bg-slate-50 rounded-xl text-navy-dark hover:text-gold transition-colors font-semibold">Our Company</Link>
+                                <Link href="/service-areas" className="px-4 py-2 hover:bg-slate-50 rounded-xl text-navy-dark hover:text-gold transition-colors font-semibold">Service Areas</Link>
+                                <Link href="/gallery" className="px-4 py-2 hover:bg-slate-50 rounded-xl text-navy-dark hover:text-gold transition-colors font-semibold">Gallery</Link>
+                                <Link href="/reviews" className="px-4 py-2 hover:bg-slate-50 rounded-xl text-navy-dark hover:text-gold transition-colors font-semibold">Reviews</Link>
+                            </div>
+                        </div>
+                    </div>
                     <Link href="/pricing" className="hover:text-gold transition-colors uppercase">PRICING</Link>
                     <Link href="/blog" className="hover:text-gold transition-colors text-gold font-black uppercase">EXPERT GUIDES</Link>
                     <Link href="/contact" className="hover:text-gold transition-colors uppercase">CONTACT</Link>
@@ -177,39 +188,29 @@ export default function Header() {
                             )}
                         </div>
 
-                        {/* Service Areas Accordion Toggle */}
+                        {/* About Us Accordion Toggle */}
                         <div className="border-b border-gray-100">
                             <button
                                 className="w-full flex items-center justify-between py-4 uppercase text-left transition-colors hover:text-gold"
-                                onClick={() => setIsServiceAreasOpen(!isServiceAreasOpen)}
+                                onClick={() => setIsAboutUsOpen(!isAboutUsOpen)}
                             >
-                                Service Areas
+                                About Us
                                 <ChevronDown
                                     size={20}
-                                    className={`transition-transform duration-300 ${isServiceAreasOpen ? 'rotate-180 text-gold' : 'text-gray-400'}`}
+                                    className={`transition-transform duration-300 ${isAboutUsOpen ? 'rotate-180 text-gold' : 'text-gray-400'}`}
                                 />
                             </button>
 
-                            {isServiceAreasOpen && (
+                            {isAboutUsOpen && (
                                 <div className="pl-4 pb-4 space-y-2">
-                                    <Link onClick={() => setIsMobileMenuOpen(false)} href="/service-areas/green-bay" className="block py-2 hover:text-gold transition-colors">Green Bay</Link>
-                                    <Link onClick={() => setIsMobileMenuOpen(false)} href="/service-areas/appleton" className="block py-2 hover:text-gold transition-colors">Appleton</Link>
-                                    <Link onClick={() => setIsMobileMenuOpen(false)} href="/service-areas/oshkosh" className="block py-2 hover:text-gold transition-colors">Oshkosh</Link>
-                                    <Link onClick={() => setIsMobileMenuOpen(false)} href="/service-areas/de-pere" className="block py-2 hover:text-gold transition-colors">De Pere</Link>
-                                    <Link onClick={() => setIsMobileMenuOpen(false)} href="/service-areas/door-county" className="block py-2 hover:text-gold transition-colors">Door County</Link>
-
-                                    <Link onClick={() => setIsMobileMenuOpen(false)} href="/service-areas/shawano" className="block py-2 hover:text-gold transition-colors">Shawano</Link>
-                                    <Link onClick={() => setIsMobileMenuOpen(false)} href="/service-areas/manitowoc" className="block py-2 hover:text-gold transition-colors">Manitowoc</Link>
-                                    <Link onClick={() => setIsMobileMenuOpen(false)} href="/service-areas" className="block py-2 text-gold hover:text-navy transition-colors flex items-center gap-1 font-bold mt-2">
-                                        View All Areas <ChevronRight size={16} />
-                                    </Link>
+                                    <Link onClick={() => setIsMobileMenuOpen(false)} href="/about-us" className="block py-2 hover:text-gold transition-colors">Our Company</Link>
+                                    <Link onClick={() => setIsMobileMenuOpen(false)} href="/service-areas" className="block py-2 hover:text-gold transition-colors">Service Areas</Link>
+                                    <Link onClick={() => setIsMobileMenuOpen(false)} href="/gallery" className="block py-2 hover:text-gold transition-colors">Gallery</Link>
+                                    <Link onClick={() => setIsMobileMenuOpen(false)} href="/reviews" className="block py-2 hover:text-gold transition-colors">Reviews</Link>
                                 </div>
                             )}
                         </div>
 
-                        <Link onClick={() => setIsMobileMenuOpen(false)} href="/about-us" className="uppercase py-4 border-b border-gray-100 hover:text-gold transition-colors">ABOUT US</Link>
-                        <Link onClick={() => setIsMobileMenuOpen(false)} href="/gallery" className="uppercase py-4 border-b border-gray-100 hover:text-gold transition-colors">GALLERY</Link>
-                        <Link onClick={() => setIsMobileMenuOpen(false)} href="/reviews" className="uppercase py-4 border-b border-gray-100 hover:text-gold transition-colors">REVIEWS</Link>
                         <Link onClick={() => setIsMobileMenuOpen(false)} href="/pricing" className="uppercase py-4 border-b border-gray-100 hover:text-gold transition-colors">PRICING</Link>
                         <Link onClick={() => setIsMobileMenuOpen(false)} href="/blog" className="uppercase py-4 border-b border-gray-100 text-gold font-black transition-colors">EXPERT GUIDES</Link>
                         <Link onClick={() => setIsMobileMenuOpen(false)} href="/contact" className="uppercase py-4 hover:text-gold transition-colors">CONTACT</Link>
