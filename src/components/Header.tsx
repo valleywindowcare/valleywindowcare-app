@@ -18,29 +18,18 @@ export default function Header() {
     const [isAboutUsOpen, setIsAboutUsOpen] = useState(false);
     return (
         <header className={headerClasses}>
-            <div className="container mx-auto px-4 flex items-center justify-between min-h-[56px] md:min-h-[80px]">
+            <div className="container mx-auto px-4 flex items-center justify-between min-h-[64px] md:min-h-[80px]">
 
-                {/* Mobile Menu Toggle (Right on mobile, Hidden on desktop) */}
-                <button
-                    className="xl:hidden text-navy p-2 hover:bg-slate-50 rounded-lg transition-colors z-50 absolute right-4 top-1/2 -translate-y-1/2"
-                    onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                    aria-label="Toggle menu"
-                >
-                    {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
-                </button>
-
-                {/* Mobile Spacer (Props up the h-auto header when Logo drops absolute) */}
-                <div className="h-14 md:h-20 w-0 xl:hidden"></div>
-
-                {/* Logo Section */}
-                <Link href="/" aria-label="Home" className="flex-shrink-0 hover:opacity-90 transition-opacity z-50 py-1 absolute left-1/2 -translate-x-1/2 xl:relative xl:left-auto xl:translate-x-0 flex items-center gap-3">
-                    <div className="relative h-14 md:h-20 w-48 md:w-64">
+                {/* Logo Section (Left Aligned) */}
+                <Link href="/" aria-label="Home" className="flex-shrink-0 hover:opacity-90 transition-opacity z-50 py-1 flex items-center gap-3 mr-auto relative">
+                    <div className="relative h-12 w-40 sm:h-14 sm:w-48 xl:h-20 xl:w-64">
                         <Image
                             src="/valley-window-care-logo-without-background.png"
                             alt="Valley Exterior Restoration Logo"
-                            width={250}
-                            height={92}
-                            className="object-contain object-center xl:object-left w-full h-full"
+                            fill
+                            className="object-contain object-left"
+                            sizes="(max-width: 640px) 160px, (max-width: 1280px) 192px, 256px"
+                            priority
                         />
                     </div>
                     <div className="hidden 2xl:flex flex-col pt-2">
@@ -48,6 +37,26 @@ export default function Header() {
                         <span className="text-gold font-bold text-[11px] mt-0.5 leading-none uppercase tracking-widest text-left">Restoration</span>
                     </div>
                 </Link>
+
+                {/* Mobile Persistent Contact Bar + Hamburger (Right Aligned) */}
+                <div className="flex xl:hidden items-center gap-2 z-50 ml-auto flex-shrink-0">
+                    {/* Min 48x48 Touch Target Map */}
+                    <a href="tel:920-609-7085" className="w-12 h-12 flex items-center justify-center bg-slate-50 hover:bg-gold hover:text-white text-navy rounded-full transition-colors shadow-sm" aria-label="Call Us Directly">
+                        <Phone size={20} className="fill-current" />
+                    </a>
+                    
+                    <Link href="/contact" className="h-10 px-3 sm:px-5 sm:h-12 flex items-center justify-center bg-gold hover:bg-gold-light text-white font-bold rounded-lg shadow-sm text-[12px] sm:text-sm uppercase tracking-wider transition-colors whitespace-nowrap">
+                        Quote
+                    </Link>
+                    
+                    <button
+                        className="w-12 h-12 flex items-center justify-center bg-slate-50 hover:bg-slate-100 text-navy rounded-lg transition-colors shadow-sm"
+                        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                        aria-label="Toggle menu dropdown"
+                    >
+                        {isMobileMenuOpen ? <X size={26} /> : <Menu size={26} />}
+                    </button>
+                </div>
 
                 {/* Desktop Nav */}
                 <nav className="hidden xl:flex gap-x-4 2xl:gap-x-8 items-center text-sm lg:text-base font-bold text-navy-dark tracking-wide pl-8 lg:pl-16">
