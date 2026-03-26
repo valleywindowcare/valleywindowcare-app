@@ -31,7 +31,7 @@ export default function Header() {
             <div className="container mx-auto max-w-7xl px-5 sm:px-6 lg:px-8 flex items-center justify-between min-h-[64px] md:min-h-[80px] py-2 md:py-3 lg:py-5">
 
                 {/* Logo Section (Left Aligned) */}
-                <Link href="/" aria-label="Home" className="shrink-0 max-w-[280px] max-h-[60px] hover:opacity-90 transition-opacity z-40 py-1 flex items-center gap-2 xl:gap-4 relative min-w-0">
+                <Link href="/" aria-label="Home" className="shrink-0 max-w-[280px] max-h-[60px] hover:opacity-90 transition-opacity z-40 py-1 flex items-center gap-4 xl:gap-8 relative min-w-0">
                     <div className="relative h-10 w-36 sm:h-12 sm:w-40 lg:h-12 lg:w-48 xl:h-14 xl:w-56 min-w-[140px] max-h-[60px] shrink-0">
                         <Image
                             src="/valley-window-care-logo-without-background.png"
@@ -69,7 +69,7 @@ export default function Header() {
                 </div>
 
                 {/* Desktop Nav (Visible at 1024px+) */}
-                <nav className="hidden lg:flex z-50 gap-x-2 xl:gap-x-4 2xl:gap-x-6 items-center text-[12px] xl:text-[13px] font-bold text-navy-dark tracking-tight ml-10 shrink whitespace-nowrap">
+                <nav className="hidden lg:flex z-50 gap-x-2 xl:gap-x-4 2xl:gap-x-6 items-center text-[12px] xl:text-[13px] font-bold text-navy-dark tracking-tight ml-10 xl:ml-14 shrink whitespace-nowrap">
                     {/* Services Mega Menu */}
                     <div className="relative group py-8 cursor-pointer shrink-0">
                         <div className="hover:text-gold transition-colors flex items-center gap-1 uppercase whitespace-nowrap">
@@ -77,7 +77,7 @@ export default function Header() {
                         </div>
 
                         {/* Dropdown Container */}
-                        <div className="absolute top-[80px] -left-24 w-[600px] bg-white shadow-2xl border border-gray-100 rounded-3xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-4 group-hover:translate-y-0 flex flex-col z-50 overflow-hidden">
+                        <div className="absolute top-[80px] left-0 w-[600px] bg-white shadow-2xl border border-gray-100 rounded-3xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-4 group-hover:translate-y-0 flex flex-col z-[60] overflow-hidden">
                             <div className="flex p-6">
                                 {/* Residential Column */}
                                 <div className="flex-1 pr-6 border-r border-gray-100">
@@ -125,8 +125,8 @@ export default function Header() {
                 </nav>
 
                 {/* Call to Action Desktop */}
-                <div className="hidden lg:flex items-center gap-2 xl:gap-4 ml-auto shrink-0 pr-1">
-                    <a href="tel:920-609-7085" className="flex items-center gap-2 text-navy font-bold hover:text-gold transition-colors shrink-0" rel="nofollow" aria-label="Call Valley Window Care & Exterior Cleaning">
+                <div className="hidden lg:flex items-center ml-auto shrink-0 pr-1">
+                    <a href="tel:920-609-7085" className="flex items-center gap-2 text-navy font-bold hover:text-gold transition-colors shrink-0 mr-4 xl:mr-6" rel="nofollow" aria-label="Call Valley Window Care & Exterior Cleaning">
                         <span className="hidden xl:inline text-base xl:text-lg break-words leading-tight tracking-tight">(920) 609-7085</span>
                         <Phone size={22} className="text-gold shrink-0 xl:hidden" aria-label="Phone Icon" />
                         <Phone size={18} className="hidden xl:block text-gold shrink-0" />
