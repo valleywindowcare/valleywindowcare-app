@@ -8,6 +8,7 @@ declare global {
   interface Window {
     gtag: any;
     fbq: any;
+    dataLayer: any[];
   }
 }
 
@@ -100,14 +101,15 @@ export default function HeroForm() {
                 window.fbq("track", "Lead", {}, { eventID: generatedEventId });
             }
             
-            // Fire Google Analytics Conversion Event AFTER confirmation
-            if (typeof window !== "undefined" && window.gtag) {
-                 window.gtag("event", "generate_lead", {
-                   currency: "USD",
-                   value: 350.00
+            // GTM DataLayer Intercept Configuration
+            if (typeof window !== "undefined") {
+                 window.dataLayer = window.dataLayer || [];
+                 window.dataLayer.push({
+                     event: "generate_lead",
+                     currency: "USD",
+                     value: 350.00
                  });
-                 // Fire Explicit Google Ads Lead Conversion
-                 window.gtag("event", "ads_conversion_Form_1");
+                 window.dataLayer.push({ event: "ads_conversion_Form_1" });
             }
         } catch (error) {
             console.error("CRITICAL FORM CRASH:", error);
