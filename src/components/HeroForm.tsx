@@ -107,7 +107,11 @@ export default function HeroForm() {
                  window.dataLayer.push({
                      event: "generate_lead",
                      currency: "USD",
-                     value: 350.00
+                     value: 350.00,
+                     email: safeEmail,
+                     phone: safePhone,
+                     firstName: safeName.split(' ')[0] || safeName,
+                     services: safeServices
                  });
                  window.dataLayer.push({ event: "ads_conversion_Form_1" });
             }
