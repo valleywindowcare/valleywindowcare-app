@@ -61,6 +61,9 @@ function getCsvRedirects() {
 const validServicesRegex = `(roof-cleaning|house-washing|gutter-cleaning|concrete-cleaning|window-cleaning|christmas-lighting|pressure-washing|residential-permanent-led-lighting|fence-cleaning|deck-cleaning|oxidation-removal|soft-wash|driveway-cleaning|solar-panel-cleaning|rust-removal|building-washing|dumpster-pad-cleaning|permanent-led-lighting|commercial-roof-cleaning|commercial-pressure-washing|graffiti-removal|hoa-multi-unit-cleaning|storefront-cleaning|premium-drive-thru-cleaning|parking-lot-and-garage-cleaning|chewing-gum-removal|commercial-awning-cleaning|gas-station-cleaning|post-construction-cleanup|paver-patio-restorations|commercial-hood-cleaning|apartment-exterior-cleaning|winter-salt-removal)`;
 
 const legacyToNestedMap: Record<string, string> = {
+  "/service-areas/green-bay/roof-cleaning": "/services/roof-cleaning",
+  "/leaf-cleanups": "/services/house-washing",
+  "/led-smart-lighting-solutions-green-bay-wi": "/services/permanent-led-lighting",
   "/window-cleaning": "/services/window-cleaning",
   "/pressure-washing": "/services/pressure-washing",
   "/roof-cleaning": "/services/roof-cleaning",
