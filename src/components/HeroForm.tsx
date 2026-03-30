@@ -30,6 +30,7 @@ export default function HeroForm() {
         const safePhone = formData.get("phone")?.toString().trim() || "Not Provided";
         const safeEmail = formData.get("email")?.toString().trim() || "";
         const safeSqFt = formData.get("squareFootage")?.toString().trim() || "Not Provided";
+        const safeZip = formData.get("zip")?.toString().trim() || "";
         const safeDetails = formData.get("projectDetails")?.toString().trim() || "No details provided.";
         const safeServices = selectedServices || "No specific services selected";
 
@@ -55,6 +56,7 @@ export default function HeroForm() {
                 email: safeEmail,
                 phone: safePhone,
                 square_footage: safeSqFt,
+                zip_code: safeZip,
                 message: safeDetails,
                 services: safeServices
             };
@@ -111,6 +113,9 @@ export default function HeroForm() {
                      email: safeEmail,
                      phone: safePhone,
                      firstName: safeName.split(' ')[0] || safeName,
+                     lastName: safeName.includes(' ') ? safeName.substring(safeName.indexOf(' ') + 1) : '',
+                     country: 'US',
+                     postalCode: safeZip,
                      services: safeServices
                  });
                  window.dataLayer.push({ event: "ads_conversion_Form_1" });
@@ -172,16 +177,31 @@ export default function HeroForm() {
                                 />
                             </div>
                         </div>
-                        <div>
-                            <label className="sr-only" htmlFor="squareFootage">Approximate Square Footage</label>
-                            <input
-                                type="text"
-                                id="squareFootage"
-                                name="squareFootage"
-                                aria-label="Approximate Square Footage"
-                                placeholder="Approx. Sq Ft or Number of Windows"
-                                className="w-full px-4 py-3 sm:px-5 sm:py-4 rounded-[28px] border border-gray-200 bg-white/50 backdrop-blur-sm focus:bg-white/90 focus:outline-none focus:ring-2 focus:ring-navy transition-all text-sm sm:text-base mt-2 shadow-inner"
-                            />
+                        <div className="!flex !flex-row !gap-2 !w-full mt-2">
+                            <div className="flex-1">
+                                <label className="sr-only" htmlFor="squareFootage">Approximate Square Footage</label>
+                                <input
+                                    type="text"
+                                    id="squareFootage"
+                                    name="squareFootage"
+                                    aria-label="Approximate Square Footage"
+                                    placeholder="Approx. Sq Ft"
+                                    className="w-full px-4 py-3 sm:px-5 sm:py-4 rounded-[28px] border border-gray-200 bg-white/50 backdrop-blur-sm focus:bg-white/90 focus:outline-none focus:ring-2 focus:ring-navy transition-all text-sm sm:text-base shadow-inner"
+                                />
+                            </div>
+                            <div className="flex-1">
+                                <label className="sr-only" htmlFor="zip">Zip Code</label>
+                                <input
+                                    type="text"
+                                    id="zip"
+                                    name="zip"
+                                    required
+                                    aria-label="Zip Code"
+                                    autoComplete="postal-code"
+                                    placeholder="Zip Code"
+                                    className="w-full px-4 py-3 sm:px-5 sm:py-4 rounded-[28px] border border-gray-200 bg-white/50 backdrop-blur-sm focus:bg-white/90 focus:outline-none focus:ring-2 focus:ring-navy transition-all text-sm sm:text-base shadow-inner"
+                                />
+                            </div>
                         </div>
                         <div>
                             <label className="sr-only" htmlFor="projectDetails">Project Details & Service Address</label>
