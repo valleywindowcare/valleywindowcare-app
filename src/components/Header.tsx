@@ -7,11 +7,7 @@ import { usePathname } from "next/navigation";
 
 export default function Header() {
     const pathname = usePathname();
-    const isTransparent = pathname === '/contact';
-
-    const headerClasses = isTransparent
-        ? "absolute top-0 z-50 bg-white/40 backdrop-blur-xl border-b border-white/20 shadow-sm w-full h-auto transition-all duration-300"
-        : "sticky top-0 z-50 bg-white/70 backdrop-blur-xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] w-full h-auto transition-all duration-300";
+    const headerClasses = "sticky top-0 z-50 bg-white/70 backdrop-blur-[10px] shadow-sm w-full h-auto transition-all duration-300";
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isServicesOpen, setIsServicesOpen] = useState(false);
     const [isServiceAreasOpen, setIsServiceAreasOpen] = useState(false);
