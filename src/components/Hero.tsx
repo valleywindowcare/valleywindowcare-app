@@ -27,11 +27,21 @@ export default function Hero({
 
     return (
         <section className={`!relative !w-full !min-h-screen !flex !flex-col !items-center !justify-center overflow-hidden text-white bg-navy pb-24 lg:pb-32`}>
-            {/* Liquid Brand Gradient Background */}
-            <div className="absolute inset-0 z-0 bg-gradient-to-br from-[#0b2341] via-[#1a365d] to-[#2c5282] animate-[pulse_10s_ease-in-out_infinite]"></div>
+            {/* Background Image */}
+            {bgImage && !bgImage.includes("placeholder") && (
+                <div className="absolute inset-0 z-0">
+                    <Image
+                        src={bgImage}
+                        alt={bgImageAlt}
+                        fill
+                        className="object-cover object-center"
+                        priority
+                    />
+                </div>
+            )}
 
-            {/* Soft Ambient Overlay */}
-            <div className="absolute inset-0 bg-black/20 z-10 backdrop-blur-[2px]"></div>
+            {/* Dark Semi-Transparent Overlay */}
+            <div className="absolute inset-0 bg-black/60 z-10"></div>
 
             <div className="container mx-auto px-4 relative z-20 flex flex-col items-center justify-center text-center">
                 {/* Top Section: Messaging */}
