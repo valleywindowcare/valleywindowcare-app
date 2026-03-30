@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
     return (
-        <main className="min-h-screen bg-slate-50 pt-8 md:pt-12 pb-20">
+        <main className="min-h-screen bg-slate-50 pb-20">
             <Hero h1="Contact Our Team" description="We're ready to provide crystal clear service for your property. Fill out the form to get started." />
 
             <div className="container mx-auto max-w-6xl px-4 mt-20 relative z-20">
