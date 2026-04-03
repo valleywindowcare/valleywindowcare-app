@@ -1,5 +1,5 @@
 "use client";
-import { Mail, Phone } from "lucide-react";
+import { Mail, Phone, ChevronDown } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import HeroForm from "./HeroForm";
@@ -12,6 +12,7 @@ interface HeroProps {
     bgImageAlt?: string;
     cityName?: string;
     serviceName?: string;
+    showScrollArrow?: boolean;
 }
 
 export default function Hero({
@@ -20,7 +21,8 @@ export default function Hero({
     h1,
     description,
     cityName,
-    serviceName
+    serviceName,
+    showScrollArrow = false
 }: HeroProps) {
 
     const isDefault = !bgImage || bgImage.includes("placeholder");
@@ -100,6 +102,24 @@ export default function Hero({
                     <HeroForm />
                 </motion.div>
             </div>
+
+            {/* Bouncing Scroll Down Arrow */}
+            {showScrollArrow && (
+                <motion.div 
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 1, duration: 1 }}
+                    className="absolute bottom-6 sm:bottom-10 z-30 flex flex-col items-center justify-center w-full"
+                >
+                    <span className="text-white/90 text-[10px] sm:text-xs font-black tracking-widest uppercase mb-1 sm:mb-2 drop-shadow-md">Scroll For Pricing</span>
+                    <motion.div
+                        animate={{ y: [0, 10, 0] }}
+                        transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
+                    >
+                        <ChevronDown size={32} className="text-gold drop-shadow-lg" />
+                    </motion.div>
+                </motion.div>
+            )}
         </section >
     );
 }

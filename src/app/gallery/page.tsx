@@ -68,8 +68,9 @@ export default function GalleryPage() {
     return (
         <main className="bg-slate-50 min-h-screen pb-20">
             <Hero
-                h1="Our Work Gallery"
+                h1="Our Latest Restoration Projects"
                 description="Browse our portfolio of professional exterior cleaning and permanent lighting projects across Northeast Wisconsin."
+                showScrollArrow={true}
             />
             {/* Fully Type-Safe Semantic Mapping Inject */}
             <GalleryClient images={DYNAMIC_PORTFOLIO_MAPPING} />

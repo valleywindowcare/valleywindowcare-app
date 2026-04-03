@@ -15,10 +15,13 @@ export default function PricingPage() {
     return (
         <main className="w-full bg-slate-50">
             <Hero
-                h1="Exterior Cleaning Pricing in Northeast Wisconsin"
+                h1="Instant Northeast Wisconsin Pricing"
                 description="We believe in upfront, honest pricing. These baseline estimates help you understand the starting costs for our professional services before scheduling your free, exact quote."
+                showScrollArrow={true}
             />
-            <ValueCalculator />
+            <div id="calculator-hub">
+                <ValueCalculator />
+            </div>
             <PricingGuide />
         </main>
     );

@@ -21,7 +21,7 @@ export default function Header() {
                     <Link href="/about-us" className="hover:text-gold transition-colors items-center flex h-full">Our Company</Link>
                     <Link href="/service-areas" className="hover:text-gold transition-colors items-center flex h-full text-gold">Service Areas</Link>
                     <Link href="/gallery" className="hover:text-gold transition-colors items-center flex h-full">Gallery</Link>
-                    <Link href="/pricing" className="hover:text-gold transition-colors items-center flex h-full">Pricing</Link>
+                    <Link href="/pricing#calculator-hub" className="hover:text-gold transition-colors items-center flex h-full">Pricing</Link>
                     <Link href="/blog" className="hover:text-gold transition-colors items-center flex h-full">Expert Guides</Link>
                 </div>
             </div>
@@ -182,7 +182,7 @@ export default function Header() {
                         {/* Top-Level Secondary Mobile Links */}
                         <Link onClick={() => setIsMobileMenuOpen(false)} href="/service-areas" className="uppercase py-4 border-b border-gray-100 font-black text-navy-dark hover:text-gold transition-colors">SERVICE AREAS</Link>
                         <Link onClick={() => setIsMobileMenuOpen(false)} href="/gallery" className="uppercase py-4 border-b border-gray-100 hover:text-gold transition-colors">GALLERY</Link>
-                        <Link onClick={() => setIsMobileMenuOpen(false)} href="/pricing" className="uppercase py-4 border-b border-gray-100 hover:text-gold transition-colors">PRICING</Link>
+                        <Link onClick={() => setIsMobileMenuOpen(false)} href="/pricing#calculator-hub" className="uppercase py-4 border-b border-gray-100 hover:text-gold transition-colors">PRICING</Link>
                         <Link onClick={() => setIsMobileMenuOpen(false)} href="/blog" className="uppercase py-4 border-b border-gray-100 text-gold font-black transition-colors">EXPERT GUIDES</Link>
                         <Link onClick={() => setIsMobileMenuOpen(false)} href="/contact" className="uppercase py-4 border-b border-gray-100 hover:text-gold transition-colors">CONTACT</Link>
 
