@@ -55,6 +55,7 @@ export default function FAQPage() {
                             key={category} 
                             categoryTitle={category} 
                             faqs={faqs} 
+                            disableSchema
                         />
                     ))}
                 </div>

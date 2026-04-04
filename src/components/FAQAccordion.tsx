@@ -11,9 +11,10 @@ interface FAQ {
 interface FAQAccordionProps {
   faqs: FAQ[];
   categoryTitle?: string;
+  disableSchema?: boolean;
 }
 
-export default function FAQAccordion({ faqs, categoryTitle }: FAQAccordionProps) {
+export default function FAQAccordion({ faqs, categoryTitle, disableSchema = false }: FAQAccordionProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   if (!faqs || faqs.length === 0) return null;
@@ -61,23 +62,25 @@ export default function FAQAccordion({ faqs, categoryTitle }: FAQAccordionProps)
           );
         })}
       </div>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": faqs.map((faq) => ({
-              "@type": "Question",
-              "name": faq.question,
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": faq.answer
-              }
-            }))
-          })
-        }}
-      />
+      {!disableSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": faqs.map((faq) => ({
+                "@type": "Question",
+                "name": faq.question,
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": faq.answer
+                }
+              }))
+            })
+          }}
+        />
+      )}
     </div>
   );
 }
