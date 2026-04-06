@@ -293,25 +293,26 @@ export default function ValueCalculator() {
                   {step === 3 && (
                      <motion.div key="step3" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="w-full h-full flex flex-col justify-center text-center space-y-5">
                        <div>
-                          <p className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-1">Guaranteed Base Cost</p>
+                          <p className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-1">Your Estimate</p>
                           <div className="text-6xl sm:text-7xl font-black text-navy tracking-tighter">
                             ${estimate}
                           </div>
-                          <p className="text-xs text-gray-500 mt-2 font-medium">({region} demand weight applied)</p>
                        </div>
                        
-                       <div className="space-y-3 pt-4 w-full">
-                          <a href="tel:9205285732" className="w-full bg-gold text-navy border-2 border-gold font-black text-[15px] sm:text-base py-4 px-2 rounded-xl flex justify-center items-center gap-2 hover:bg-transparent transition-all shadow-md active:scale-95">
-                             <Phone size={20} /> Tap to Claim 10% Discount
-                          </a>
-                          <a href={`sms:9205285732?body=Hi Valley Window Care, I just got a quote for ${getServiceNameStr()} at $${estimate}. I want to claim my 10% discount!`} className="w-full bg-navy text-white font-black text-[15px] sm:text-base py-4 px-2 rounded-xl flex justify-center items-center gap-2 hover:bg-navy-dark transition-all shadow-md active:scale-95">
-                             <MessageSquare size={20} /> Text This Estimate
+                       <div className="space-y-4 pt-2 w-full">
+                          <div className="bg-gold/10 border border-gold p-4 rounded-xl text-center">
+                             <p className="text-sm font-bold text-gray-700 mb-1">Your Exclusive Discount Code:</p>
+                             <div className="text-2xl font-black text-navy tracking-widest mb-1">VALLEY10</div>
+                             <p className="text-sm text-gray-600">Save 10% when you book — just mention this code when you call or text.</p>
+                          </div>
+                          <a href="tel:920-609-7085" className="w-full bg-navy text-white font-black text-[15px] sm:text-base py-4 px-2 rounded-xl flex justify-center items-center gap-2 hover:bg-navy-dark transition-all shadow-md active:scale-95">
+                             <Phone size={20} /> Call or Text to Book &rarr; (920) 609-7085
                           </a>
                        </div>
 
                        <div className="mt-4 p-3 bg-white rounded-lg border border-gray-200">
                           <p className="text-[10px] sm:text-xs text-gray-500 leading-snug">
-                             <strong>Liability Disclaimer:</strong> Final pricing is subject to on-site inspection for factors like hard water or heavy organic growth.
+                             This is a baseline estimate. Final pricing is confirmed after we assess exact square footage, building height, and site conditions.
                           </p>
                        </div>
                      </motion.div>
