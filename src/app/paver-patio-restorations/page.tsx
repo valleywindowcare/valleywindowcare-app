@@ -22,6 +22,7 @@ export default function ServicePage() {
                     <>
                         <span className="capitalize">Paver Patio Restorations</span> <br />
                         <span className="text-gold text-2xl md:text-3xl mt-4 block">Green Bay & Northeast Wisconsin</span>
+                        <span className="text-white text-xl md:text-2xl mt-4 block font-semibold drop-shadow-md">Starting at $3.00 per sq ft</span>
                     </>
                 }
                 description="Valley Window Care & Exterior Cleaning provides premium paver restoration services to enhance your property's value."
