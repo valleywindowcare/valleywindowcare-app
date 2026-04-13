@@ -204,7 +204,7 @@ export default async function ServiceGenericPage({ params }: PageProps) {
                             <>
                                 Professional <span className="text-gold">{formattedName}</span><br />
                                 <span className="text-2xl md:text-3xl mt-2 block">
-                                    {service === 'paver-patio-restorations' ? "Premium $1,500+ Restoration (Sand, Seal, Restore)" : 
+                                    {service === 'paver-patio-restorations' ? "Starting at $3.00 per sq ft" : 
                                      ['roof-cleaning', 'house-washing'].includes(service) ? "Safe Soft-Wash Technology & Property Protection" : 
                                      "Green Bay & Northeast Wisconsin"}
                                 </span>
