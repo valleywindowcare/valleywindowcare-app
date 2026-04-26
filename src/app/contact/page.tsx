@@ -35,7 +35,7 @@ export default function ContactPage() {
                             <MapPin size={28} />
                         </div>
                         <h3 className="text-xl font-bold text-navy mb-2">Location</h3>
-                        <p className="text-gray-600 font-medium">4551 Trellis Drive E-2<br />De Pere, WI 54115</p>
+                        <p className="text-gray-600 font-medium">462 S Good Hope Rd<br />De Pere, WI 54115</p>
                     </div>
                 </div>
             </div>

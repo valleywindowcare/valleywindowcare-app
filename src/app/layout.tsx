@@ -64,7 +64,7 @@ export default function RootLayout({
               telephone: "+1-920-609-7085",
               address: {
                 "@type": "PostalAddress",
-                streetAddress: "4551 Trellis Drive E-2",
+                streetAddress: "462 S Good Hope Rd",
                 addressLocality: "De Pere",
                 addressRegion: "WI",
                 postalCode: "54115"

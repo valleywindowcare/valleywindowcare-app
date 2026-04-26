@@ -72,7 +72,7 @@ export default function TermsAndConditionsPage() {
                         <ul className="space-y-1">
                             <li><strong>Email:</strong> James@ValleyWindowCare.com</li>
                             <li><strong>Phone:</strong> (920) 609-7085</li>
-                            <li><strong>Address:</strong> 4551 Trellis Drive E-2, De Pere, Wisconsin 54115</li>
+                            <li><strong>Address:</strong> 462 S Good Hope Rd, De Pere, Wisconsin 54115</li>
                         </ul>
                     </div>
                 </article>

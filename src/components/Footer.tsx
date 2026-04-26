@@ -145,7 +145,7 @@ export default function Footer() {
                                     <div className="w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center shrink-0">
                                         <MapPin size={14} className="text-navy" />
                                     </div>
-                                    <span className="text-sm leading-tight mt-1.5">4551 Trellis Drive E-2,<br />De Pere, WI 54115</span>
+                                    <span className="text-sm leading-tight mt-1.5">462 S Good Hope Rd,<br />De Pere, WI 54115</span>
                                 </div>
                             </li>
                         </ul>

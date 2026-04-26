@@ -27,7 +27,7 @@ export default function PressureWashingPage() {
                 "addressLocality": "De Pere",
                 "addressRegion": "WI",
                 "postalCode": "54115",
-                "streetAddress": "4551 Trellis Drive E-2"
+                "streetAddress": "462 S Good Hope Rd"
             },
             "aggregateRating": {
                 "@type": "AggregateRating",
