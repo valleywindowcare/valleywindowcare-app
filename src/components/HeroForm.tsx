@@ -133,8 +133,8 @@ export default function HeroForm() {
             {isSubmitted ? (
                 <SuccessState onReset={() => setIsSubmitted(false)} />
             ) : (
-                <div className="p-8 h-full flex flex-col justify-center">
-                    <h3 className="text-2xl font-extrabold mb-6 text-navy !text-center !w-full !block">Request a Free Quote</h3>
+                <div className="p-4 sm:p-8 h-full flex flex-col justify-center">
+                    <h3 className="text-xl sm:text-2xl font-extrabold mb-4 sm:mb-6 text-navy !text-center !w-full !block">Request a Free Quote</h3>
                     <form className="space-y-4" onSubmit={handleSubmit}>
                         <div>
                             <label className="sr-only" htmlFor="name">Name</label>
@@ -146,7 +146,7 @@ export default function HeroForm() {
                                 aria-label="Name"
                                 autoComplete="name"
                                 placeholder="Your Name"
-                                className="w-full px-5 py-4 rounded-[28px] border border-gray-200 bg-white/50 backdrop-blur-sm focus:bg-white/90 focus:outline-none focus:ring-2 focus:ring-navy transition-all shadow-inner"
+                                className="w-full px-4 py-2 sm:px-5 sm:py-4 rounded-xl sm:rounded-[28px] border border-gray-200 bg-white/50 backdrop-blur-sm focus:bg-white/90 focus:outline-none focus:ring-2 focus:ring-navy transition-all text-sm sm:text-base shadow-inner"
                             />
                         </div>
                         <div className="!flex !flex-row !gap-2 !w-full">
@@ -160,7 +160,7 @@ export default function HeroForm() {
                                     aria-label="Phone"
                                     autoComplete="tel"
                                     placeholder="Phone"
-                                    className="w-full px-4 py-3 sm:px-5 sm:py-4 rounded-[28px] border border-gray-200 bg-white/50 backdrop-blur-sm focus:bg-white/90 focus:outline-none focus:ring-2 focus:ring-navy transition-all text-sm sm:text-base shadow-inner"
+                                    className="w-full px-4 py-2 sm:px-5 sm:py-4 rounded-xl sm:rounded-[28px] border border-gray-200 bg-white/50 backdrop-blur-sm focus:bg-white/90 focus:outline-none focus:ring-2 focus:ring-navy transition-all text-sm sm:text-base shadow-inner"
                                 />
                             </div>
                             <div className="flex-1">
@@ -173,7 +173,7 @@ export default function HeroForm() {
                                     aria-label="Email"
                                     autoComplete="email"
                                     placeholder="Email"
-                                    className="w-full px-4 py-3 sm:px-5 sm:py-4 rounded-[28px] border border-gray-200 bg-white/50 backdrop-blur-sm focus:bg-white/90 focus:outline-none focus:ring-2 focus:ring-navy transition-all text-sm sm:text-base shadow-inner"
+                                    className="w-full px-4 py-2 sm:px-5 sm:py-4 rounded-xl sm:rounded-[28px] border border-gray-200 bg-white/50 backdrop-blur-sm focus:bg-white/90 focus:outline-none focus:ring-2 focus:ring-navy transition-all text-sm sm:text-base shadow-inner"
                                 />
                             </div>
                         </div>
@@ -186,7 +186,7 @@ export default function HeroForm() {
                                     name="squareFootage"
                                     aria-label="Approximate Square Footage"
                                     placeholder="Approx. Sq Ft"
-                                    className="w-full px-4 py-3 sm:px-5 sm:py-4 rounded-[28px] border border-gray-200 bg-white/50 backdrop-blur-sm focus:bg-white/90 focus:outline-none focus:ring-2 focus:ring-navy transition-all text-sm sm:text-base shadow-inner"
+                                    className="w-full px-4 py-2 sm:px-5 sm:py-4 rounded-xl sm:rounded-[28px] border border-gray-200 bg-white/50 backdrop-blur-sm focus:bg-white/90 focus:outline-none focus:ring-2 focus:ring-navy transition-all text-sm sm:text-base shadow-inner"
                                 />
                             </div>
                             <div className="flex-1">
@@ -199,7 +199,7 @@ export default function HeroForm() {
                                     aria-label="Zip Code"
                                     autoComplete="postal-code"
                                     placeholder="Zip Code"
-                                    className="w-full px-4 py-3 sm:px-5 sm:py-4 rounded-[28px] border border-gray-200 bg-white/50 backdrop-blur-sm focus:bg-white/90 focus:outline-none focus:ring-2 focus:ring-navy transition-all text-sm sm:text-base shadow-inner"
+                                    className="w-full px-4 py-2 sm:px-5 sm:py-4 rounded-xl sm:rounded-[28px] border border-gray-200 bg-white/50 backdrop-blur-sm focus:bg-white/90 focus:outline-none focus:ring-2 focus:ring-navy transition-all text-sm sm:text-base shadow-inner"
                                 />
                             </div>
                         </div>
@@ -212,7 +212,7 @@ export default function HeroForm() {
                                 required
                                 aria-label="Project Details"
                                 placeholder="Tell us about your project (e.g., number of windows, roof type) and provide the service address for an accurate quote"
-                                className="!w-full !mt-4 px-4 py-3 sm:px-5 sm:py-4 rounded-[28px] border border-gray-200 bg-white/50 backdrop-blur-sm focus:bg-white/90 focus:outline-none focus:ring-2 focus:ring-navy transition-all text-sm sm:text-base resize-y min-h-[100px] shadow-inner"
+                                className="!w-full !mt-2 sm:!mt-4 px-4 py-2 sm:px-5 sm:py-4 rounded-xl sm:rounded-[28px] border border-gray-200 bg-white/50 backdrop-blur-sm focus:bg-white/90 focus:outline-none focus:ring-2 focus:ring-navy transition-all text-sm sm:text-base resize-y min-h-[60px] sm:min-h-[100px] shadow-inner"
                             />
                         </div>
                         <div>
@@ -252,7 +252,7 @@ export default function HeroForm() {
                             transition={{ type: "spring", stiffness: 400, damping: 10 }}
                             type="submit"
                             disabled={isLoading}
-                            className={`w-full text-white font-black tracking-widest text-lg py-5 rounded-[32px] transition-colors shadow-[0_8px_30px_rgb(0,0,0,0.12)] mt-5 ${
+                            className={`w-full text-white font-black tracking-widest text-base sm:text-lg py-3 sm:py-5 rounded-xl sm:rounded-[32px] transition-colors shadow-[0_8px_30px_rgb(0,0,0,0.12)] mt-3 sm:mt-5 ${
                                 isLoading ? "bg-gray-400 cursor-not-allowed" : "bg-gradient-to-r from-navy to-navy-dark hover:shadow-[0_20px_40px_rgba(11,35,65,0.4)]"
                             }`}
                         >
