@@ -212,9 +212,24 @@ export default async function ServiceGenericPage({ params }: PageProps) {
                         )}
                     </h1>
                     <p className="text-lg md:text-xl text-gray-100 font-semibold leading-relaxed drop-shadow-md pb-8">
-                        {['roof-cleaning', 'house-washing'].includes(service) ? `Valley Exterior Restoration deploys professional soft-wash ${formattedName.toLowerCase()} systems to restore, protect, and enhance your property's value without the risks of high pressure.` :
+                        {service === 'house-washing' ? "Safe Soft-Wash Technology & Property Protection for Your Home's Siding." :
+                         ['roof-cleaning'].includes(service) ? `Valley Exterior Restoration deploys professional soft-wash ${formattedName.toLowerCase()} systems to restore, protect, and enhance your property's value without the risks of high pressure.` :
                          `Valley Exterior Restoration provides premium ${formattedName.toLowerCase()} services to restore, protect, and enhance your property's value.`}
                     </p>
+                    
+                    {service === 'house-washing' && (
+                        <div className="trust-badge-row" style={{ display: "flex", gap: "20px", justifyContent: "center", margin: "20px 0", flexWrap: "wrap" }}>
+                          <div className="badge-item text-white" style={{ display: "flex", alignItems: "center", gap: "8px", fontWeight: "bold" }}>
+                            <span className="icon">⭐</span> ★★★★★ 4.9 Rated (150+ Google Reviews)
+                          </div>
+                          <div className="badge-item text-white" style={{ display: "flex", alignItems: "center", gap: "8px", fontWeight: "bold" }}>
+                            <span className="icon">🛡️</span> Licensed, Bonded & Insured
+                          </div>
+                          <div className="badge-item text-white" style={{ display: "flex", alignItems: "center", gap: "8px", fontWeight: "bold" }}>
+                            <span className="icon">✅</span> 100% Satisfaction Guarantee
+                          </div>
+                        </div>
+                    )}
                 </div>
 
                 {/* Bottom Section: Dual-Action Quote Box (Zero-Gap Stack) */}
@@ -535,7 +550,7 @@ export default async function ServiceGenericPage({ params }: PageProps) {
                 const localFaqSchema = {
                     "@context": "https://schema.org",
                     "@type": "FAQPage",
-                    "mainEntity": serviceFaqs.map(faq => ({
+                    "mainEntity": serviceFaqs.map((faq: { question: string; answer: string; }) => ({
                         "@type": "Question",
                         "name": faq.question,
                         "acceptedAnswer": {
@@ -545,12 +560,66 @@ export default async function ServiceGenericPage({ params }: PageProps) {
                     }))
                 };
 
+                const exactHouseWashingSchema = `{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is soft washing, and how does it protect my siding?",
+      "allowedAnswer": {
+        "@type": "Answer",
+        "text": "Soft washing utilizes specialized, eco-friendly cleaning solutions applied at low pressure to kill mold, mildew, and algae at the root. Unlike high-pressure blasting, it safely cleans vinyl, stucco, and brick without causing property damage."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between pressure washing and soft washing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pressure washing uses extreme force to blast dirt away, which can easily crack vinyl siding or tear window screens. Soft washing uses a gentle, low-pressure water stream—similar to a garden hose—allowing our specialized cleaners to safely dissolve dirt and organic growth."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does house washing cost in the Green Bay & Appleton area?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The investment depends on the square footage and total stories of your home. We offer completely free, no-obligation instant quotes tailored exactly to your property."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are your house washing cleaning solutions safe for my plants and pets?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, 100%. We thoroughly pre-wet and post-rinse all surrounding landscaping and use biodegradable, eco-friendly solutions designed to keep your family, pets, and plants completely safe."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How often should I have my home's exterior professionally washed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We highly recommend an annual exterior house cleaning every spring or summer to prevent green algae and dark mold streaks from permanently staining and degrading your siding."
+      }
+    }
+  ]
+}`;
+
                 return (
                     <section className="py-20 bg-slate-50 border-t border-gray-100">
-                        <script
-                            type="application/ld+json"
-                            dangerouslySetInnerHTML={{ __html: JSON.stringify(localFaqSchema) }}
-                        />
+                        {service === 'house-washing' ? (
+                            <script
+                                type="application/ld+json"
+                                dangerouslySetInnerHTML={{ __html: exactHouseWashingSchema }}
+                            />
+                        ) : (
+                            <script
+                                type="application/ld+json"
+                                dangerouslySetInnerHTML={{ __html: JSON.stringify(localFaqSchema) }}
+                            />
+                        )}
                         <div className="container mx-auto px-4 max-w-4xl">
                             <div className="mb-12 text-center">
                                 <h2 className="text-3xl md:text-4xl font-extrabold text-navy mb-4">Frequently Asked Questions</h2>

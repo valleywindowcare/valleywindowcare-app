@@ -60,19 +60,23 @@ export const serviceContentMap: Record<string, { pageH1?: string, description: R
         ]
     },
     "house-washing": {
+        pageH1: "Professional House Washing in Green Bay & Appleton, WI",
         description: (
             <section className="eeat-service-block">
-                <p className="mb-4">Restoring the house washing of your property requires scientifically backed methods. We deploy professional-grade equipment to eliminate specific grime targets safely.</p>
+                <h2 className="text-2xl font-bold text-navy mb-4">Professional Exterior House Cleaning</h2>
+                <p className="mb-4">Restoring the exterior of your property requires scientifically backed soft washing methods. We deploy professional-grade equipment to eliminate algae, mold, mildew, and stubborn dirt safely.</p>
+                <h3 className="text-xl font-bold text-navy mb-4 mt-6">Specialized Vinyl Siding Cleaning</h3>
+                <p className="mb-4">Our low-pressure soft wash rinsing technique ensures your vinyl siding cleaning eliminates deep stains without causing permanent damage like heavy pressure washing often does.</p>
             </section>
         ),
         benefits: [
-            "Long-Lasting Results: Our process gets surfaces cleaner and keeps them protected longer.",
-            "Enhanced Safety: Eliminates slippery molds and toxic bacterial colonies.",
+            "Long-Lasting Results: Our soft washing process gets surfaces cleaner and keeps them protected longer.",
+            "Enhanced Safety: Eliminates slippery algae, mold, mildew, and stubborn dirt.",
             "No Damage Guarantee: We use the exact pressure required—often zero—to protect property integrity."
         ],
         process: [
             "1. Site Inspection & Prep: We conduct a thorough exterior evaluation and meticulously protect all landscaping and delicate surfaces.",
-            "2. Deep Cleaning Execution: Utilizing specialized proprietary chemical blends and precise water pressure to obliterate stains at a molecular level.",
+            "2. Deep Cleaning Execution: Utilizing specialized proprietary chemical blends and soft washing to obliterate stains at a root level.",
             "3. Final Quality Check: A rigorous post-wash inspection alongside the property owner to guarantee flawless 100% satisfaction."
         ],
         protectionProtocols: [
@@ -102,18 +106,26 @@ export const serviceContentMap: Record<string, { pageH1?: string, description: R
         },
         image: "/images/portfolio/building-washing-services-1.png",
         faqs: [
-          {
-                    "question": "What is the difference between pressure washing and soft washing for home siding?",
-                    "answer": "Pressure washing uses high-velocity water that can dent siding and strip paint. Soft washing relies on eco-friendly detergents to kill mold and mildew at low pressure, ensuring zero damage to your home."
-          },
-          {
-                    "question": "Does your house washing service remove green algae from vinyl siding?",
-                    "answer": "Yes! Our soft wash solution specifically targets and eliminates organic growth like green algae, mold, and mildew down to the root."
-          },
-          {
-                    "question": "How frequently should homes in Northeast Wisconsin be washed?",
-                    "answer": "We recommend a comprehensive house wash every 12 to 18 months to protect your siding from long-term staining and organic degradation."
-          }
+            {
+                "question": "What is soft washing, and how does it protect my siding?",
+                "answer": "Soft washing utilizes specialized, eco-friendly cleaning solutions applied at low pressure to kill mold, mildew, and algae at the root. Unlike high-pressure blasting, it safely cleans vinyl, stucco, and brick without causing property damage."
+            },
+            {
+                "question": "What is the difference between pressure washing and soft washing?",
+                "answer": "Pressure washing uses extreme force to blast dirt away, which can easily crack vinyl siding or tear window screens. Soft washing uses a gentle, low-pressure water stream—similar to a garden hose—allowing our specialized cleaners to safely dissolve dirt and organic growth."
+            },
+            {
+                "question": "How much does house washing cost in the Green Bay & Appleton area?",
+                "answer": "The investment depends on the square footage and total stories of your home. We offer completely free, no-obligation instant quotes tailored exactly to your property."
+            },
+            {
+                "question": "Are your house washing cleaning solutions safe for my plants and pets?",
+                "answer": "Yes, 100%. We thoroughly pre-wet and post-rinse all surrounding landscaping and use biodegradable, eco-friendly solutions designed to keep your family, pets, and plants completely safe."
+            },
+            {
+                "question": "How often should I have my home's exterior professionally washed?",
+                "answer": "We highly recommend an annual exterior house cleaning every spring or summer to prevent green algae and dark mold streaks from permanently staining and degrading your siding."
+            }
         ]
     },
     "gutter-cleaning": {

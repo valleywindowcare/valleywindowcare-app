@@ -39,7 +39,7 @@ export const seoContentMap: Record<string, SEOContent> = {
     },
     "house-washing": {
         problemStatement: [
-            <span key="1">Your exterior property accumulates biological and environmental contaminants over time.</span>,
+            <span key="1">Your exterior property accumulates algae, mold, mildew, and stubborn dirt over time.</span>,
             <span key="2">Professional exterior restoration eliminates these hazards without property damage.</span>,
             <span key="3">Wisconsin's severe seasons demand robust property protection protocols. <Link href="/service-areas/green-bay" className="text-gold font-bold hover:underline">Green Bay</Link> and Appleton.</span>
         ],
