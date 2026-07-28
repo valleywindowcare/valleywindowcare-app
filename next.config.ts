@@ -328,7 +328,37 @@ const nextConfig: NextConfig = {
     const staticSources = new Set(staticRedirects.map(r => r.source));
     const finalCsvRedirects = csvRedirects.filter(r => !staticSources.has(r.source));
 
-    return [...staticRedirects, ...dynamicRegexRedirects, ...finalCsvRedirects];
+    const domainRedirects = [
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host' as const,
+            value: 'valleywindowcare.com',
+          },
+        ],
+        destination: 'https://valleyexteriorpros.com/:path*',
+        permanent: true,
+      },
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host' as const,
+            value: 'www.valleywindowcare.com',
+          },
+        ],
+        destination: 'https://valleyexteriorpros.com/:path*',
+        permanent: true,
+      },
+    ];
+
+    return [
+      ...domainRedirects,
+      ...staticRedirects,
+      ...dynamicRegexRedirects,
+      ...finalCsvRedirects,
+    ];
   },
 };
 
