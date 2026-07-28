@@ -3,8 +3,8 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-    title: 'Wisconsin Service Area Coverage | Valley Window Care',
-    description: 'Comprehensive service area directory for Northeast Wisconsin. Valley Window Care serves Green Bay, Appleton, Door County, and surrounding satellite communities.',
+    title: 'Wisconsin Service Area Coverage | Valley Property Services',
+    description: 'Comprehensive service area directory for Northeast Wisconsin. Valley Property Services serves Green Bay, Appleton, Door County, and surrounding satellite communities.',
 };
 
 export default function WisconsinCoverageMatrix() {

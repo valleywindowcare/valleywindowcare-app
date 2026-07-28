@@ -15,7 +15,7 @@ export const CITIES = [
 const generateSlug = (city: string) => city.toLowerCase().replace(/ /g, '-');
 
 export const metadata = {
-    title: "Service Areas | Valley Window Care and Exterior Cleaning",
+    title: "Service Areas | Valley Property Services",
     description: "View our full coverage area across Northeast Wisconsin including Green Bay, Appleton, and Oshkosh."
 };
 
@@ -29,7 +29,7 @@ export default function ServiceAreasPage() {
                         Areas We Serve
                     </h1>
                     <p className="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto mb-8 bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                        <strong>Valley Window Care and Exterior Cleaning is proud to deploy specialized local exterior-cleaning fleets across every major city in Northeast Wisconsin. Whether you require meticulous residential window cleaning or large-scale commercial pressure washing, our technicians mobilize rapidly to provide unparalleled property restoration throughout our entire service network.</strong>
+                        <strong>Valley Property Services is proud to deploy specialized local exterior-cleaning fleets across every major city in Northeast Wisconsin. Whether you require meticulous residential window cleaning or large-scale commercial pressure washing, our technicians mobilize rapidly to provide unparalleled property restoration throughout our entire service network.</strong>
                     </p>
                     <p className="text-xl text-gray-600 max-w-2xl mx-auto">
                         Select your city below to see specialized services.

@@ -55,7 +55,7 @@ export default function SuccessState({ onReset }: SuccessStateProps) {
                 {/* Team Trust Element */}
                 <div className="flex items-center gap-4 bg-slate-50 border border-gray-100 p-4 rounded-xl mb-8 shadow-sm">
                     <div className="text-center w-full">
-                        <p className="text-sm font-bold text-navy">The Valley Window Care Team</p>
+                        <p className="text-sm font-bold text-navy">The Valley Property Services Team</p>
                         <p className="text-xs text-gray-500">Exterior Cleaning Professionals</p>
                     </div>
                 </div>

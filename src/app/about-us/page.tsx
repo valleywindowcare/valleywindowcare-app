@@ -5,15 +5,15 @@ import { Shield, Sparkles, Target, Users, CheckCircle2 } from "lucide-react";
 import ReviewSlider from '@/components/ReviewSlider';
 
 export const metadata: Metadata = {
-    title: "About Us | Valley Window Care & Exterior Cleaning",
-    description: "Learn about Valley Window Care and Exterior Cleaning's story, our team, and our commitment to crystal clear exterior cleaning services in Green Bay.",
+    title: "About Us | Valley Property Services",
+    description: "Learn about Valley Property Services's story, our team, and our commitment to crystal clear exterior cleaning services in Green Bay.",
 };
 
 export default function AboutUsPage() {
     const jsonLd = {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
-      "name": "Valley Window Care & Exterior Cleaning",
+      "name": "Valley Property Services",
       "image": "https://valleywindowcare.com/images/portfolio/house-wash-before-after.webp",
       "url": "https://valleywindowcare.com/about-us",
       "telephone": "(920) 609-7085",
@@ -50,9 +50,9 @@ export default function AboutUsPage() {
                         <div className="md:w-1/2 bg-navy p-12 text-white flex flex-col justify-center">
                             <h2 className="text-3xl font-bold mb-6 text-gold">Meet the Team</h2>
                             <p className="text-gray-300 mb-6 leading-relaxed italic">
-                                "As the face of Valley Window Care and Exterior Cleaning, we pride ourselves on our team's outstanding ability to provide professional services, build relationships with customers, and safely beat expectations on the job."
+                                "As the face of Valley Property Services, we pride ourselves on our team's outstanding ability to provide professional services, build relationships with customers, and safely beat expectations on the job."
                             </p>
-                            <p className="font-bold text-xl mb-8">– The Valley Window Care Team</p>
+                            <p className="font-bold text-xl mb-8">– The Valley Property Services Team</p>
 
                             <div className="pt-8 border-t border-white/10">
                                 <h3 className="text-xl font-bold mb-3">Our Leadership</h3>
@@ -101,7 +101,7 @@ export default function AboutUsPage() {
                     <h2 className="text-3xl md:text-4xl font-extrabold text-navy mb-8 tracking-tight">Our Roots & Expertise</h2>
                     <div className="prose md:prose-lg max-w-none text-navy text-left space-y-6">
                         <p className="leading-relaxed text-lg">
-                            Valley Window Care & Exterior Cleaning was founded on fundamental accountability. We physically operate the equipment. We inspect the final results ourselves. You deal directly with the ownership team on every specific project.
+                            Valley Property Services was founded on fundamental accountability. We physically operate the equipment. We inspect the final results ourselves. You deal directly with the ownership team on every specific project.
                         </p>
                         <p className="leading-relaxed text-lg">
                             We dedicate ourselves to mastering commercial-grade exterior cleaning. We use 40-foot carbon-fiber pure-water poles. We deploy low-pressure soft wash rigs. We manufacture permanent architectural lighting. Our technicians train relentlessly on safe, low-impact chemical applications.
@@ -113,10 +113,10 @@ export default function AboutUsPage() {
                 </div>
             </section>
 
-            {/* MODULE 2: The Valley Window Care Standard */}
+            {/* MODULE 2: The Valley Property Services Standard */}
             <section className="py-16 bg-slate-50 relative z-10">
                 <div className="container mx-auto max-w-6xl px-4">
-                    <h2 className="text-3xl md:text-4xl font-extrabold text-navy mb-12 text-center tracking-tight">The Valley Window Care Standard</h2>
+                    <h2 className="text-3xl md:text-4xl font-extrabold text-navy mb-12 text-center tracking-tight">The Valley Property Services Standard</h2>
                     <div className="grid md:grid-cols-3 gap-8 text-navy">
                         {/* Column 1 */}
                         <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-gold/30 transition-colors">

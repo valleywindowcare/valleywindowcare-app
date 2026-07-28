@@ -9,7 +9,7 @@ export const faqData: FaqCategoryMap = {
     general: [
         {
             question: "Are you fully insured and licensed?",
-            answer: "Yes, Valley Window Care and Exterior Cleaning carries comprehensive commercial liability insurance and worker’s compensation. We provide certificates of insurance (COI) upon request before beginning any residential or commercial project."
+            answer: "Yes, Valley Property Services carries comprehensive commercial liability insurance and worker’s compensation. We provide certificates of insurance (COI) upon request before beginning any residential or commercial project."
         },
         {
             question: "Do you offer free estimates?",
@@ -115,7 +115,7 @@ export const faqData: FaqCategoryMap = {
     "christmas-lighting": [
         {
             question: "Do you install Christmas lights that I already own?",
-            answer: "No, Valley Window Care provides a full-service, all-inclusive program. We supply all the commercial-grade LED materials, custom-cut the C9 tracks to perfectly fit your roofline, deeply install the system, maintain it throughout the season, and carefully take it down and store it in January."
+            answer: "No, Valley Property Services provides a full-service, all-inclusive program. We supply all the commercial-grade LED materials, custom-cut the C9 tracks to perfectly fit your roofline, deeply install the system, maintain it throughout the season, and carefully take it down and store it in January."
         },
         {
             question: "What happens if a bulb goes out?",
@@ -143,7 +143,7 @@ export const faqData: FaqCategoryMap = {
     "apartment-exterior-cleaning": [
         {
             question: "How do you manage tenant safety during a massive apartment washing project?",
-            answer: "Tenant safety and site security are our highest priorities. Valley Window Care coordinates directly with property managers to distribute precise, sector-by-sector scheduling notices. We clearly cordon off active zones, manage operational hoses strictly, and utilize low-pressure soft washing techniques that present zero physical danger to surrounding pedestrian traffic."
+            answer: "Tenant safety and site security are our highest priorities. Valley Property Services coordinates directly with property managers to distribute precise, sector-by-sector scheduling notices. We clearly cordon off active zones, manage operational hoses strictly, and utilize low-pressure soft washing techniques that present zero physical danger to surrounding pedestrian traffic."
         },
         {
             question: "Will your washing processes strip the paint off our multi-unit complex?",

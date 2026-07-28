@@ -2,7 +2,7 @@ import React from "react";
 import GlobalCalculator from "@/components/GlobalCalculator";
 
 export const metadata = {
-  title: "Get a Custom Quote | Valley Window Care",
+  title: "Get a Custom Quote | Valley Property Services",
   description: "Use our custom quote engine to get an immediate, algorithmically generated estimate for our exterior restoration services.",
 };
 

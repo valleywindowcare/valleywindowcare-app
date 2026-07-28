@@ -8,7 +8,7 @@ import { faqData } from '@/data/faqData';
 import ReviewSlider from '@/components/ReviewSlider';
 
 export const metadata: Metadata = {
-    title: 'Frequently Asked Questions | Valley Window Care and Exterior Cleaning',
+    title: 'Frequently Asked Questions | Valley Property Services',
     description: 'Find answers to the most common questions about our exterior cleaning and permanent lighting services in Northeast Wisconsin.',
 };
 

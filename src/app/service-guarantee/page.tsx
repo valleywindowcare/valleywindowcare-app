@@ -5,7 +5,7 @@ import { ChevronRight, ShieldCheck } from "lucide-react";
 import ReviewSlider from '@/components/ReviewSlider';
 
 export const metadata: Metadata = {
-    title: "Service Guarantee | Valley Window Care",
+    title: "Service Guarantee | Valley Property Services",
     description: "Our 100% Satisfaction Guarantee. We stand entirely behind the quality of our exterior cleaning services in Wisconsin.",
 };
 
@@ -34,7 +34,7 @@ export default function ServiceGuaranteePage() {
 
                     <div>
                         <h2 className="text-3xl font-bold text-navy mb-6">Our 100% Satisfaction Commitment</h2>
-                        <p className="text-lg text-gray-700 leading-relaxed mb-6">At Valley Window Care and Exterior Cleaning, we measure our success entirely by your satisfaction. We handle your property with the same precision, respect, and attention to detail as if it were our own.</p>
+                        <p className="text-lg text-gray-700 leading-relaxed mb-6">At Valley Property Services, we measure our success entirely by your satisfaction. We handle your property with the same precision, respect, and attention to detail as if it were our own.</p>
 
                         <div className="bg-slate-50 p-8 rounded-2xl border border-gray-100 mt-8 text-left">
                             <h3 className="text-xl font-bold text-navy mb-4">How Our Guarantee Works</h3>

@@ -64,7 +64,7 @@ export default function VanillaMap({ city }: { city?: string }) {
                 new AdvancedMarkerElement({
                     map: map,
                     position: { lat: 44.5192, lng: -88.0198 },
-                    title: "Valley Window Care"
+                    title: "Valley Property Services"
                 });
 
                 function applyFallbackCenter() {
@@ -200,7 +200,7 @@ export default function VanillaMap({ city }: { city?: string }) {
                             </p>
                         </div>
                         <div className="space-y-4 bg-white/5 p-6 rounded-2xl border border-white/10">
-                            <p className="font-bold text-lg text-gold">Valley Window Care and Exterior Cleaning</p>
+                            <p className="font-bold text-lg text-gold">Valley Property Services</p>
                             <p className="font-bold text-lg text-white">Serving {city || 'Northeast'}, WI</p>
                             <a href="tel:920-609-7085" className="font-bold text-xl inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg transition-colors w-full justify-center">
                                 <Phone size={20} /> (920) 609-7085

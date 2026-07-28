@@ -65,7 +65,7 @@ export default function GlobalCalculator() {
 
         const web3Payload = {
             access_key: "c8727880-065b-4c99-9190-7f4a13170752", 
-            subject: `🚨 LEAD TRAP ESTIMATE: ${safeName} - Valley Window Care`,
+            subject: `🚨 LEAD TRAP ESTIMATE: ${safeName} - Valley Property Services`,
             from_name: "Global Quote Calculator",
             name: safeName,
             email: safeEmail,

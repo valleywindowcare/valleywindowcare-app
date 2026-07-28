@@ -158,7 +158,7 @@ async function run() {
                 "slug": `professional-${srvKey}`,
                 "excerpt": `Discover the importance of professional ${srvKey.split('-').join(' ')} for your property.`,
                 "content": "<p>Using high-fidelity specialized approaches, our dedicated team safely transforms your residential exterior.</p>",
-                "author": "Valley Window Care",
+                "author": "Valley Property Services",
                 "date": "2026-03-01",
                 "category": srvKey.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' '),
                 "image": imageMap[srvKey] && imageMap[srvKey].length > 0 ? imageMap[srvKey][0] : `/gallery/${mappedFolder}/${filePrefix}-wisconsin.webp`,

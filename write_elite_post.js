@@ -5,9 +5,9 @@ const date = "March 4, 2026";
 const category = "Soft Washing";
 
 const eliteContent = `
-**Valley Window Care provides specialized soft-washing and algae removal for vinyl siding in Green Bay, Appleton, and Door County. Using low-pressure, eco-friendly solutions, this method safely removes lake-effect green algae without voiding siding warranties or damaging landscaping.**
+**Valley Property Services provides specialized soft-washing and algae removal for vinyl siding in Green Bay, Appleton, and Door County. Using low-pressure, eco-friendly solutions, this method safely removes lake-effect green algae without voiding siding warranties or damaging landscaping.**
 
-If you live in Northeast Wisconsin, you know the toll the environment takes on your home's exterior. From winter road salt film blowing off the highways to the heavy lake-effect humidity of spring, vinyl siding is constantly under attack. Valley Window Care and Exterior Cleaning provides Soft Washing in the Fox Cities, WI, to safely neutralize these organic threats. Unlike dangerous high-pressure tactics, our method guarantees a pristine clean without risking your investment.
+If you live in Northeast Wisconsin, you know the toll the environment takes on your home's exterior. From winter road salt film blowing off the highways to the heavy lake-effect humidity of spring, vinyl siding is constantly under attack. Valley Property Services provides Soft Washing in the Fox Cities, WI, to safely neutralize these organic threats. Unlike dangerous high-pressure tactics, our method guarantees a pristine clean without risking your investment.
 
 ## Why High-Pressure Washing Destroys Vinyl Siding
 
@@ -56,14 +56,14 @@ A purified water-fed pole is the industry standard for our [residential window c
 
 ---
 
-*About the Author: James Voss is the Owner and Operator of Valley Window Care, bringing years of hands-on exterior cleaning and permanent lighting expertise to Northeast Wisconsin. Fully insured and committed to unparalleled quality, James specializes in protecting and elevating high-value properties and Door County STRs.* 
+*About the Author: James Voss is the Owner and Operator of Valley Property Services, bringing years of hands-on exterior cleaning and permanent lighting expertise to Northeast Wisconsin. Fully insured and committed to unparalleled quality, James specializes in protecting and elevating high-value properties and Door County STRs.* 
 
 <br/>
 <br/>
 
 **📸 Image Recommendations:**
 - *File Name:* \`soft-washing-vinyl-siding-appleton-wi.webp\`
-- *Alt Text:* "Valley Window Care technician performing a low-pressure soft wash exterior house cleaning to safely remove algae from vinyl siding on a residential home in Appleton, Wisconsin."
+- *Alt Text:* "Valley Property Services technician performing a low-pressure soft wash exterior house cleaning to safely remove algae from vinyl siding on a residential home in Appleton, Wisconsin."
 
 - *File Name:* \`low-pressure-house-washing-green-bay.webp\`
 - *Alt Text:* "A clean, freshly soft-washed residential home exterior in Green Bay, WI, demonstrating the safe removal of winter oxidation and road salt."

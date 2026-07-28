@@ -58,7 +58,7 @@ for (const [slug, name] of Object.entries(services)) {
     overrides += `
 // OVERRIDE: ${name}
 seoContentMap['${slug}'].entityCapsule = (
-    <>Valley Window Care is a fully insured exterior cleaning company providing professional, low-pressure ${name} in <Link href="/service-areas/appleton" className="text-blue-600 hover:text-gold font-semibold transition-colors">Appleton</Link>, <Link href="/service-areas/green-bay" className="text-blue-600 hover:text-gold font-semibold transition-colors">Green Bay</Link>, and <Link href="/service-areas/door-county" className="text-blue-600 hover:text-gold font-semibold transition-colors">Door County</Link>, WI.</>
+    <>Valley Property Services is a fully insured exterior cleaning company providing professional, low-pressure ${name} in <Link href="/service-areas/appleton" className="text-blue-600 hover:text-gold font-semibold transition-colors">Appleton</Link>, <Link href="/service-areas/green-bay" className="text-blue-600 hover:text-gold font-semibold transition-colors">Green Bay</Link>, and <Link href="/service-areas/door-county" className="text-blue-600 hover:text-gold font-semibold transition-colors">Door County</Link>, WI.</>
 );
 seoContentMap['${slug}'].pricingExpectations = (
     <>Professional ${name} prices vary based on total square footage, building height, and the severity of the organic buildup. We provide exact, transparent quotes before any work begins. <Link href="/contact" className="text-gold font-bold hover:text-white transition-colors underline">Request your free quote today.</Link></>

@@ -23,13 +23,13 @@ export default function Footer() {
                             Discover why Valley Exterior Restoration is the trusted name in Wisconsin for professional pressure washing, soft-washing, and paver sealing services.
                         </p>
                         <div className="flex items-center gap-4">
-                            <a href="https://www.facebook.com/valleywindowcare" target="_blank" rel="noopener noreferrer" aria-label="Visit Valley Window Care & Exterior Cleaning on Facebook" className="w-10 h-10 rounded-full bg-navy text-white flex items-center justify-center hover:bg-gold transition-colors hover:scale-110 active:scale-95 duration-200">
+                            <a href="https://www.facebook.com/valleywindowcare" target="_blank" rel="noopener noreferrer" aria-label="Visit Valley Property Services on Facebook" className="w-10 h-10 rounded-full bg-navy text-white flex items-center justify-center hover:bg-gold transition-colors hover:scale-110 active:scale-95 duration-200">
                                 <Facebook size={18} />
                             </a>
-                            <a href="https://www.instagram.com/valleywindowcare" target="_blank" rel="noopener noreferrer" aria-label="Visit Valley Window Care & Exterior Cleaning on Instagram" className="w-10 h-10 rounded-full bg-navy text-white flex items-center justify-center hover:bg-gold transition-colors hover:scale-110 active:scale-95 duration-200">
+                            <a href="https://www.instagram.com/valleywindowcare" target="_blank" rel="noopener noreferrer" aria-label="Visit Valley Property Services on Instagram" className="w-10 h-10 rounded-full bg-navy text-white flex items-center justify-center hover:bg-gold transition-colors hover:scale-110 active:scale-95 duration-200">
                                 <Instagram size={18} />
                             </a>
-                            <a href="https://www.youtube.com/@valleywindowcare" target="_blank" rel="noopener noreferrer" aria-label="Visit Valley Window Care & Exterior Cleaning on YouTube" className="w-10 h-10 rounded-full bg-navy text-white flex items-center justify-center hover:bg-gold transition-colors hover:scale-110 active:scale-95 duration-200">
+                            <a href="https://www.youtube.com/@valleywindowcare" target="_blank" rel="noopener noreferrer" aria-label="Visit Valley Property Services on YouTube" className="w-10 h-10 rounded-full bg-navy text-white flex items-center justify-center hover:bg-gold transition-colors hover:scale-110 active:scale-95 duration-200">
                                 <Youtube size={18} />
                             </a>
                         </div>
@@ -125,7 +125,7 @@ export default function Footer() {
                         <h3 className="text-gold font-bold uppercase tracking-widest text-sm mb-6">Get In Touch</h3>
                         <ul className="space-y-4">
                             <li>
-                                <a href="tel:920-609-7085" aria-label="Call Valley Window Care & Exterior Cleaning at (920) 609-7085" className="flex items-center gap-3 text-navy font-bold hover:text-gold transition-colors group" rel="nofollow">
+                                <a href="tel:920-609-7085" aria-label="Call Valley Property Services at (920) 609-7085" className="flex items-center gap-3 text-navy font-bold hover:text-gold transition-colors group" rel="nofollow">
                                     <div className="w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center shrink-0 group-hover:bg-gold/20 transition-colors">
                                         <Phone size={14} className="text-navy group-hover:text-gold transition-colors" />
                                     </div>
@@ -203,22 +203,22 @@ export default function Footer() {
                         <h3 className="text-gold font-bold uppercase tracking-widest text-sm mb-6">Recent Work</h3>
                         <div className="grid grid-cols-2 gap-2 w-full max-w-[240px]">
                             <Link href="/services/commercial-hood-cleaning" aria-label="View Commercial Hood Cleaning" className="relative aspect-square rounded-lg overflow-hidden group block">
-                                <FooterGalleryImage src="/images/portfolio/commercial-cleaning.webp" alt="Commercial Hood Cleaning Results - Valley Window Care" />
+                                <FooterGalleryImage src="/images/portfolio/commercial-cleaning.webp" alt="Commercial Hood Cleaning Results - Valley Property Services" />
                             </Link>
                             <Link href="/services/roof-cleaning" aria-label="View Roof Cleaning" className="relative aspect-square rounded-lg overflow-hidden group block">
-                                <FooterGalleryImage src="/images/portfolio/roof-cleaning.webp" alt="Roof Cleaning Results - Valley Window Care" />
+                                <FooterGalleryImage src="/images/portfolio/roof-cleaning.webp" alt="Roof Cleaning Results - Valley Property Services" />
                             </Link>
                             <Link href="/services/window-cleaning" aria-label="View Window Cleaning" className="relative aspect-square rounded-lg overflow-hidden group block">
-                                <FooterGalleryImage src="/images/portfolio/window-cleaning.webp" alt="Window Cleaning Results - Valley Window Care" />
+                                <FooterGalleryImage src="/images/portfolio/window-cleaning.webp" alt="Window Cleaning Results - Valley Property Services" />
                             </Link>
                             <Link href="/services/house-washing" aria-label="View House Washing" className="relative aspect-square rounded-lg overflow-hidden group block">
-                                <FooterGalleryImage src="/images/portfolio/house-washing.webp" alt="House Washing Results - Valley Window Care" />
+                                <FooterGalleryImage src="/images/portfolio/house-washing.webp" alt="House Washing Results - Valley Property Services" />
                             </Link>
                             <Link href="/services/commercial-exterior-cleaning" aria-label="View Commercial Pressure Washing" className="relative aspect-square rounded-lg overflow-hidden group block">
-                                <FooterGalleryImage src="/images/portfolio/pressure-washing.webp" alt="Pressure Washing Results - Valley Window Care" />
+                                <FooterGalleryImage src="/images/portfolio/pressure-washing.webp" alt="Pressure Washing Results - Valley Property Services" />
                             </Link>
                             <Link href="/services/permanent-holiday-lighting" aria-label="View Permanent LED Lighting" className="relative aspect-square rounded-lg overflow-hidden group block">
-                                <FooterGalleryImage src="/images/portfolio/permanent-lighting.webp" alt="Permanent LED Lighting Results - Valley Window Care" />
+                                <FooterGalleryImage src="/images/portfolio/permanent-lighting.webp" alt="Permanent LED Lighting Results - Valley Property Services" />
                             </Link>
                         </div>
                     </div>
@@ -239,7 +239,7 @@ export default function Footer() {
             <div className="bg-navy py-6 border-t border-navy-dark">
                 <div className="container mx-auto px-4 text-center">
                     <p className="text-gray-400 text-sm">
-                        &copy; {new Date().getFullYear()} Valley Window Care & Exterior Cleaning. All rights reserved.
+                        &copy; {new Date().getFullYear()} Valley Property Services. All rights reserved.
                     </p>
                 </div>
             </div>

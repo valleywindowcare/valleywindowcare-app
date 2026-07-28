@@ -3,7 +3,7 @@ import Link from 'next/link';
 import ReviewSlider from '@/components/ReviewSlider';
 
 export const metadata = {
-    title: "blog | Valley Window Care",
+    title: "blog | Valley Property Services",
     description: "Professional exterior cleaning services in Northeast Wisconsin."
 };
 
@@ -16,7 +16,7 @@ export default function GeneratedPage() {
                         blog
                     </h1>
                     <p className="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto mb-8 bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                        <strong>Valley Window Care and Exterior Cleaning delivers premium maintenance and restoration solutions across Northeast Wisconsin. We utilize advanced soft washing and precision pressure washing techniques to safely eradicate organic growth and environmental staining, permanently revitalizing your property.</strong>
+                        <strong>Valley Property Services delivers premium maintenance and restoration solutions across Northeast Wisconsin. We utilize advanced soft washing and precision pressure washing techniques to safely eradicate organic growth and environmental staining, permanently revitalizing your property.</strong>
                     </p>
                     <div className="mt-8 max-w-3xl mx-auto text-left text-gray-600 text-lg">
                         <p>

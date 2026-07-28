@@ -4,7 +4,7 @@ import ReviewSlider from '@/components/ReviewSlider';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: "Project Gallery | Valley Window Care and Exterior Cleaning",
+    title: "Project Gallery | Valley Property Services",
     description: "Browse our portfolio of professional exterior cleaning, window washing, roof cleaning, and permanent lighting projects across Northeast Wisconsin."
 };
 
@@ -42,7 +42,7 @@ const DYNAMIC_PORTFOLIO_MAPPING = [
     { src: "/images/portfolio/rust-removal-before-after.webp", title: "Residential Rust Removal", category: "House Washing", alt: "Before and after rust stain removal on siding" },
     { src: "/images/portfolio/soft-washing.webp", title: "Gentle Exterior Soft Washing", category: "House Washing", alt: "Gentle low pressure soft washing" },
     { src: "/images/portfolio/store-front-cleaning.webp", title: "Storefront Concrete Cleaning", category: "Commercial", alt: "Commercial storefront concrete cleaning" },
-    { src: "/images/portfolio/valley-window-care-truck.webp", title: "Valley Window Care Equipment", category: "House Washing", alt: "Fully equipped Valley Window Care truck" },
+    { src: "/images/portfolio/valley-window-care-truck.webp", title: "Valley Property Services Equipment", category: "House Washing", alt: "Fully equipped Valley Property Services truck" },
     { src: "/images/portfolio/window-cleaning-before-after.jpg.webp", title: "Residential Window Cleaning", category: "Window Cleaning", alt: "Before and after streak-free window cleaning" },
 
     { src: "/images/portfolio/commercial-cleaning.webp", title: "Commercial Exterior Cleaning", category: "Commercial", alt: "Commercial exterior soft washing and cleaning" },

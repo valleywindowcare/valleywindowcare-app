@@ -5,7 +5,7 @@ import { Star, BadgeCheck, MessageCircleHeart } from 'lucide-react';
 import ReviewSlider from '@/components/ReviewSlider';
 
 export const metadata = {
-    title: 'Customer Reviews & Testimonials | Valley Window Care',
+    title: 'Customer Reviews & Testimonials | Valley Property Services',
     description: 'Read what our customers in Northeast Wisconsin say about our window cleaning, roof washing, and exterior cleaning services. 100+ 5-star Google Reviews.',
     alternates: {
         canonical: 'https://valleywindowcare.com/reviews'
@@ -51,7 +51,7 @@ const reviews = [
     {
         reviewer: "Jerrod Jarvis",
         date: "7 months ago",
-        text: "James and Tyler cleaned my windows and a concrete patio for me and did a fantastic job. Very efficient and professional. I would 100% recommend valley window care and exterior cleaning for all your window and exterior home cleaning needs!"
+        text: "James and Tyler cleaned my windows and a concrete patio for me and did a fantastic job. Very efficient and professional. I would 100% recommend Valley Property Services for all your window and exterior home cleaning needs!"
     },
     {
         reviewer: "Lux Flowers",
@@ -66,7 +66,7 @@ const reviews = [
     {
         reviewer: "Samantha",
         date: "8 months ago",
-        text: "Valley Window Care did a fantastic job on our home. They were responsive to our quote request and got us on the schedule quickly. Our house looks brand new!"
+        text: "Valley Property Services did a fantastic job on our home. They were responsive to our quote request and got us on the schedule quickly. Our house looks brand new!"
     },
     {
         reviewer: "Thomas K.",

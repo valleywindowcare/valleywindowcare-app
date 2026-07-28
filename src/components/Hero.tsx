@@ -17,7 +17,7 @@ interface HeroProps {
 
 export default function Hero({
     bgImage = "/images/portfolio/house-wash-before-after.webp",
-    bgImageAlt = "Valley Window Care & Exterior Cleaning",
+    bgImageAlt = "Valley Property Services",
     h1,
     description,
     cityName,

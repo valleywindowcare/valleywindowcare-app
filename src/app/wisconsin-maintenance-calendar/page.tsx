@@ -5,7 +5,7 @@ import { Calendar, Droplets, Sun, Snowflake, Leaf } from 'lucide-react';
 import HeroForm from '@/components/HeroForm';
 
 export const metadata: Metadata = {
-    title: 'Wisconsin Exterior Maintenance Calendar | Valley Window Care',
+    title: 'Wisconsin Exterior Maintenance Calendar | Valley Property Services',
     description: 'A month-by-month guide to safeguarding your Northeast Wisconsin home from algae, winter road salt, and structural decay. Know exactly when to schedule pressure washing.',
     alternates: {
         canonical: 'https://valleywindowcare.com/wisconsin-maintenance-calendar'

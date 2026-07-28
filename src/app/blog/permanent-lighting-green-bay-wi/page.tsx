@@ -13,8 +13,8 @@ import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 
 export const metadata: Metadata = {
-    title: "Permanent Lighting Green Bay Wi | Valley Window Care and Exterior Cleaning",
-    description: "Valley Window Care and Exterior Cleaning provides premium exterior services including Permanent Lighting Green Bay Wi in Northeast Wisconsin.",
+    title: "Permanent Lighting Green Bay Wi | Valley Property Services",
+    description: "Valley Property Services provides premium exterior services including Permanent Lighting Green Bay Wi in Northeast Wisconsin.",
     alternates: {
         canonical: "https://valleywindowcare.com/blog/permanent-lighting-green-bay-wi"
     }

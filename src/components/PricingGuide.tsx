@@ -27,7 +27,7 @@ export default function PricingGuide() {
                          <div>
                              <h4 className="text-lg font-bold text-gray-800 mb-2 border-b border-gray-100 pb-2">Standard Flat Rate</h4>
                              <p className="text-gray-600 leading-relaxed">
-                                 For standard residential exterior cleaning, Valley Window Care exclusively utilizes transparent flat-rate pricing. This completely guarantees you will never be surprised by hidden fees or padded hours. A $350 House Wash quote remains $350, ensuring maximum trust and absolute predictability for Northeast Wisconsin homeowners.
+                                 For standard residential exterior cleaning, Valley Property Services exclusively utilizes transparent flat-rate pricing. This completely guarantees you will never be surprised by hidden fees or padded hours. A $350 House Wash quote remains $350, ensuring maximum trust and absolute predictability for Northeast Wisconsin homeowners.
                              </p>
                          </div>
                      </div>
@@ -105,7 +105,7 @@ export default function PricingGuide() {
                         A massive volume of homeowners search for "pressure washing vinyl siding" without realizing that high mechanical pressure instantly drives water directly behind the siding panels, stripping UV insulation layers and breeding hidden toxic mold inside the wall cavity. 
                     </p>
                     <p className="text-gray-600 leading-relaxed">
-                        Instead of tearing apart your home's envelope with archaic 4,000 PSI wands, Valley Window Care exclusively utilizes low-pressure <strong className="text-navy font-bold">Soft Washing</strong>. Our commercial algaecides chemically melt away heavy green algae, black mold, and oxidation at the exact pressure of a standard garden hose—restoring your vinyl to a zero-damage, factory finish.
+                        Instead of tearing apart your home's envelope with archaic 4,000 PSI wands, Valley Property Services exclusively utilizes low-pressure <strong className="text-navy font-bold">Soft Washing</strong>. Our commercial algaecides chemically melt away heavy green algae, black mold, and oxidation at the exact pressure of a standard garden hose—restoring your vinyl to a zero-damage, factory finish.
                     </p>
                 </div>
 

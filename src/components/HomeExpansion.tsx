@@ -14,7 +14,7 @@ export default function HomeExpansion() {
                         <div className="relative w-full h-64 sm:h-80 md:h-[400px] rounded-2xl overflow-hidden shadow-2xl group">
                             <Image
                                 src="/images/portfolio/building-washing-services-2.webp"
-                                alt="Valley Window Care & Exterior Cleaning commercial building washing results"
+                                alt="Valley Property Services commercial building washing results"
                                 fill
                                 loading="lazy"
                                 quality={75}
@@ -26,7 +26,7 @@ export default function HomeExpansion() {
                         <div className="relative w-full h-64 sm:h-80 md:h-[400px] rounded-2xl overflow-hidden shadow-2xl group lg:ml-12">
                             <Image
                                 src="/images/portfolio/building-washing.webp"
-                                alt="Commercial building exterior cleaning and maintenance by Valley Window Care & Exterior Cleaning in the Fox Valley"
+                                alt="Commercial building exterior cleaning and maintenance by Valley Property Services in the Fox Valley"
                                 fill
                                 loading="lazy"
                                 quality={75}
@@ -63,7 +63,7 @@ export default function HomeExpansion() {
                         <div>
                             <p className="text-gold font-bold tracking-widest uppercase mb-3 text-sm">Who We Are</p>
                             <h2 className="text-4xl lg:text-5xl font-extrabold text-navy leading-tight">
-                                Valley Window Care & Exterior Cleaning serving your Exterior Cleaning needs in Northeast Wisconsin since 2020.
+                                Valley Property Services serving your Exterior Cleaning needs in Northeast Wisconsin since 2020.
                             </h2>
                         </div>
 
@@ -95,7 +95,7 @@ export default function HomeExpansion() {
                     <div className="relative w-full aspect-square lg:aspect-auto lg:h-[700px] rounded-3xl overflow-hidden shadow-2xl order-1 lg:order-2">
                         <Image
                             src="/assets/House-washing-company-in-suamico-wi-1-scaled.jpg"
-                            alt="Valley Window Care crew serving Northeast Wisconsin"
+                            alt="Valley Property Services crew serving Northeast Wisconsin"
                             fill
                             loading="lazy"
                             quality={75}

@@ -28,14 +28,14 @@ filesToUpdate.forEach(file => {
     
     let content = fs.readFileSync(filePath, 'utf8');
     
-    // Replace "Valley Window Care" ONLY IF it is not already followed by "and Exterior Cleaning" or "And Exterior Cleaning"
+    // Replace "Valley Property Services" ONLY IF it is not already followed by "and Exterior Cleaning" or "And Exterior Cleaning"
     // Using a negative lookahead
-    const regex = /Valley Window Care(?!\s+(and|And)\s+Exterior\s+Cleaning)/g;
+    const regex = /Valley Property Services(?!\s+(and|And)\s+Exterior\s+Cleaning)/g;
     
     const matches = content.match(regex);
     if (matches) {
         totalReplacements += matches.length;
-        content = content.replace(regex, 'Valley Window Care and Exterior Cleaning');
+        content = content.replace(regex, 'Valley Property Services');
         fs.writeFileSync(filePath, content, 'utf8');
         console.log(`Updated ${matches.length} instances in ${file}`);
     }

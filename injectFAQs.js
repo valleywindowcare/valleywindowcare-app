@@ -12,7 +12,7 @@ if (content.includes('faqs: [')) {
 const faqsByService = {
   "roof-cleaning": [
     { question: "Is soft washing safe for my asphalt shingle roof in Wisconsin?", answer: "Yes, our low-pressure soft washing system is the recommended manufacturer method for cleaning asphalt roofs without stripping the granules or causing water damage." },
-    { question: "How long does a typical roof cleaning treatment last in Green Bay?", answer: "A professional soft wash treatment from Valley Window Care typically keeps algae, moss, and lichen at bay for 2 to 4 years, depending on tree coverage and property shading." },
+    { question: "How long does a typical roof cleaning treatment last in Green Bay?", answer: "A professional soft wash treatment from Valley Property Services typically keeps algae, moss, and lichen at bay for 2 to 4 years, depending on tree coverage and property shading." },
     { question: "Will the cleaning solution harm my landscaping?", answer: "No, we take extensive precautions to pre-wet and neutralize all surrounding vegetation before, during, and after our roof washing service." }
   ],
   "house-washing": [
@@ -26,7 +26,7 @@ const faqsByService = {
     { question: "Do you clean drive-thrus after business hours?", answer: "Absolutely. We offer flexible, after-hours scheduling to ensure our cleaning operations never interfere with your customer traffic." }
   ],
   "window-cleaning": [
-    { question: "Does Valley Window Care offer after-hours commercial window cleaning?", answer: "Yes, we providing flexible scheduling including after-hours and early morning commercial window cleaning to prevent any disruption to your business." },
+    { question: "Does Valley Property Services offer after-hours commercial window cleaning?", answer: "Yes, we providing flexible scheduling including after-hours and early morning commercial window cleaning to prevent any disruption to your business." },
     { question: "Do you clean both the inside and outside of the windows?", answer: "Yes! We offer comprehensive interior and exterior window cleaning, including wiping down frames, ledges, and tracks for a streak-free shine." },
     { question: "How do you reach high windows safely?", answer: "Our team utilizes water-fed pole systems and pure water technology to safely and effectively clean windows up to three stories high from the ground." }
   ],
@@ -51,8 +51,8 @@ const genericFallback = (key) => {
   const name = key.replace(/-/g, ' ');
   return [
     { question: `What are the benefits of professional ${name} in Northeast Wisconsin?`, answer: `Professional ${name} drastically enhances your property's curb appeal, removes harmful contaminants, and protects your exterior investments from the harsh Wisconsin weather.` },
-    { question: `How much does ${name} cost in the Green Bay area?`, answer: `Pricing for ${name} varies based on the size and scope of the project. Valley Window Care offers free, no-obligation quotes customized to your exact needs.` },
-    { question: `Are your technicians insured for ${name} services?`, answer: `Yes, Valley Window Care and Exterior Cleaning is fully licensed, insured, and trained to perform high-quality ${name} safely.` }
+    { question: `How much does ${name} cost in the Green Bay area?`, answer: `Pricing for ${name} varies based on the size and scope of the project. Valley Property Services offers free, no-obligation quotes customized to your exact needs.` },
+    { question: `Are your technicians insured for ${name} services?`, answer: `Yes, Valley Property Services is fully licensed, insured, and trained to perform high-quality ${name} safely.` }
   ];
 };
 

@@ -88,7 +88,7 @@ function generateLegacyContent(title) {
     return `
     <div class="prose prose-lg text-gray-800 max-w-none">
         <p class="mb-4 bg-gray-50 border-l-4 border-gold p-4 italic">
-            This article explores the professional insights regarding <strong>${title}</strong>, detailing safe and effective strategies utilized by top-tier property maintenance experts. At Valley Window Care, we strictly adhere to manufacturer guidelines to protect your property safely.
+            This article explores the professional insights regarding <strong>${title}</strong>, detailing safe and effective strategies utilized by top-tier property maintenance experts. At Valley Property Services, we strictly adhere to manufacturer guidelines to protect your property safely.
         </p>
         <p class="mb-4">
             Midwestern environments subject exterior property surfaces to extreme cyclical stress spanning sub-zero temperatures directly through intense summer humidity. These aggressive fluctuations rapidly accelerate organic deterioration on roofing structures, concrete driveways, and delicate window glass dynamically. Understanding the precise chemical breakdown processes is critical for maintaining absolute curb appeal while simultaneously avoiding disastrous DIY mistakes. High-pressure washing without targeted biodegradable chemistry routinely destroys delicate siding and nullifies manufacturer warranty timelines.

@@ -147,8 +147,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     const seoDescription = service === 'roof-cleaning'
         ? "Expert Roof Cleaning in Green Bay & Appleton. Remove black streaks and moss safely with our soft-wash system. Licensed and insured."
         : isCommercial
-        ? `Valley Window Care and Exterior Cleaning provides premium ${formattedName.toLowerCase()} and property maintenance for businesses in Green Bay, Appleton, and surrounding areas.`
-        : `Valley Window Care and Exterior Cleaning offers premium ${formattedName.toLowerCase()} for residential properties in Green Bay, Appleton, and surrounding areas.`;
+        ? `Valley Property Services provides premium ${formattedName.toLowerCase()} and property maintenance for businesses in Green Bay, Appleton, and surrounding areas.`
+        : `Valley Property Services offers premium ${formattedName.toLowerCase()} for residential properties in Green Bay, Appleton, and surrounding areas.`;
 
     const seoImage = categoryFallbacks[service] || "/images/portfolio/house-washing.webp";
 
@@ -162,7 +162,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
             title: seoTitle,
             description: seoDescription,
             url: `https://valleywindowcare.com/services/${service}`,
-            siteName: 'Valley Window Care',
+            siteName: 'Valley Property Services',
             images: [
                 {
                     url: `https://valleywindowcare.com${seoImage}`,
@@ -181,7 +181,7 @@ export default async function ServiceGenericPage({ params }: PageProps) {
     const formattedName = formatTitle(service);
 
     const content = serviceContentMap[service] || {
-        description: `Valley Window Care and Exterior Cleaning provides premium ${formattedName.toLowerCase()} services.`,
+        description: `Valley Property Services provides premium ${formattedName.toLowerCase()} services.`,
         benefits: ["Professional Quality", "Fully Insured", "Satisfaction Guaranteed"],
         process: ["Free Quote", "Schedule Service", "Enjoy Your Clean Property"]
     };
@@ -276,9 +276,9 @@ export default async function ServiceGenericPage({ params }: PageProps) {
                             <Info size={32} className="text-gold" />
                         </div>
                         <div>
-                            <h3 className="text-xl md:text-2xl font-bold text-navy-dark mb-2">The Valley Window Care & Exterior Cleaning Difference</h3>
+                            <h3 className="text-xl md:text-2xl font-bold text-navy-dark mb-2">The Valley Property Services Difference</h3>
                             <p className="text-gray-700 leading-relaxed font-medium text-lg">
-                                Valley Window Care & Exterior Cleaning specializes in structural paver restoration across Northeast Wisconsin. Unlike basic pressure washing, we utilize chemical extraction to strip failed sealers, commercial-grade polymeric sand to stabilize joints against winter frost heave, and breathable water-based sealants to protect your investment.
+                                Valley Property Services specializes in structural paver restoration across Northeast Wisconsin. Unlike basic pressure washing, we utilize chemical extraction to strip failed sealers, commercial-grade polymeric sand to stabilize joints against winter frost heave, and breathable water-based sealants to protect your investment.
                             </p>
                         </div>
                     </div>
@@ -292,9 +292,9 @@ export default async function ServiceGenericPage({ params }: PageProps) {
                             <Info size={32} className="text-gold" />
                         </div>
                         <div>
-                            <h3 className="text-xl md:text-2xl font-bold text-navy-dark mb-2">The Valley Window Care & Exterior Cleaning Difference</h3>
+                            <h3 className="text-xl md:text-2xl font-bold text-navy-dark mb-2">The Valley Property Services Difference</h3>
                             <p className="text-gray-700 leading-relaxed font-medium text-lg">
-                                Valley Window Care & Exterior Cleaning provides ARMA-compliant roof soft washing across Green Bay, Appleton, and the Fox Valley. We do not use damaging high pressure. We apply specialized, eco-friendly treatments that safely eradicate Gloeocapsa magma (black streaks) and moss at the root without voiding your shingle warranty.
+                                Valley Property Services provides ARMA-compliant roof soft washing across Green Bay, Appleton, and the Fox Valley. We do not use damaging high pressure. We apply specialized, eco-friendly treatments that safely eradicate Gloeocapsa magma (black streaks) and moss at the root without voiding your shingle warranty.
                             </p>
                         </div>
                     </div>
@@ -471,11 +471,11 @@ export default async function ServiceGenericPage({ params }: PageProps) {
                             "@type": "Service",
                             "name": formattedName,
                             "serviceType": formattedName,
-                            "description": `Valley Window Care & Exterior Cleaning provides premium ${formattedName.toLowerCase()} and property maintenance for homes and businesses in Northeast Wisconsin.`,
+                            "description": `Valley Property Services provides premium ${formattedName.toLowerCase()} and property maintenance for homes and businesses in Northeast Wisconsin.`,
                             "image": `https://valleywindowcare.com${bodyImageToUse}`,
                             "provider": {
                                 "@type": "LocalBusiness",
-                                "name": "Valley Window Care & Exterior Cleaning",
+                                "name": "Valley Property Services",
                                 "image": "https://valleywindowcare.com/images/portfolio/house-wash-before-after.webp",
                                 "telephone": "(920) 609-7085",
                                 "url": `https://valleywindowcare.com/services/${service}`

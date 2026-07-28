@@ -6,7 +6,7 @@ import ValueCalculator from '@/components/ValueCalculator';
 import HeroForm from '@/components/HeroForm';
 
 export const metadata: Metadata = {
-    title: 'Rust & Oxidation Removal in Wisconsin | Valley Window Care',
+    title: 'Rust & Oxidation Removal in Wisconsin | Valley Property Services',
     description: 'Expert rust repairs, irrigation stain remediation, and vinyl siding cleaning for Green Bay, Appleton, and the surrounding Fox Valley.',
 };
 

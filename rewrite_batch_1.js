@@ -18,7 +18,7 @@ function updatePost(slug, newContent) {
 }
 
 const posts = {
-    "average-cost-for-residential-power-washing": `> **Valley Window Care provides professional Pressure Washing in Green Bay, WI and the surrounding Fox Valley. If you are comparing the average cost for residential power washing, expect to invest between $250 and $450 for standard house washing to safely remove lake-effect organic growth without damaging your siding.**
+    "average-cost-for-residential-power-washing": `> **Valley Property Services provides professional Pressure Washing in Green Bay, WI and the surrounding Fox Valley. If you are comparing the average cost for residential power washing, expect to invest between $250 and $450 for standard house washing to safely remove lake-effect organic growth without damaging your siding.**
 
 ## Understanding House Washing Prices
 When requesting exterior cleaning quotes in the Fox Cities, the cheapest option is rarely the safest. 
@@ -33,7 +33,7 @@ Our harsh Wisconsin climate forces salt, algae, and **hard water oxidation** dee
 ## The Technical Comparison
 There is a massive difference between an amateur with a hardware store pressure washer and a legitimate exterior structural cleaner.
 
-| Feature | Valley Window Care Standard | Competitor / DIY Risk |
+| Feature | Valley Property Services Standard | Competitor / DIY Risk |
 | :--- | :--- | :--- |
 | **Siding Safety** | Guaranteed safe Soft Washing (<100 PSI) | High-Pressure Washing (1,500+ PSI; highly destructive) |
 | **Cleaning Agent** | Eco-friendly, biodegradable algaecide | Pure water force or harsh, unregulated chemicals |
@@ -49,10 +49,10 @@ Yes, concrete is one of the few exterior surfaces that can safely withstand high
 <!-- 
 📸 Image Recommendations:
 File: average-cost-residential-power-washing-appleton-wi.webp
-Alt Text: "Valley Window Care technician safely performing residential power washing and soft washing on a home exterior in Appleton, Wisconsin."
+Alt Text: "Valley Property Services technician safely performing residential power washing and soft washing on a home exterior in Appleton, Wisconsin."
 -->`,
 
-    "an-experts-guide-to-cleaning-the-exterior-of-your-home": `> **Valley Window Care provides comprehensive Soft Washing and exterior cleaning in Door County, WI. Protecting your real estate investment requires safely removing freeze-thaw contaminants, lake-effect algae, and architectural oxidation through professional low-pressure washing methods.**
+    "an-experts-guide-to-cleaning-the-exterior-of-your-home": `> **Valley Property Services provides comprehensive Soft Washing and exterior cleaning in Door County, WI. Protecting your real estate investment requires safely removing freeze-thaw contaminants, lake-effect algae, and architectural oxidation through professional low-pressure washing methods.**
 
 ## The Essential Exterior Cleaning Guide
 A clean exterior makes a powerful first impression and physically protects your property from long-term material degradation.
@@ -67,7 +67,7 @@ With heavy pollen, dirt, and **lake-effect mildew** constantly attacking Northea
 ## The Technical Comparison
 Understanding the difference between routine maintenance and professional restoration dictates your property value.
 
-| Feature | Valley Window Care Standard | Competitor / DIY Risk |
+| Feature | Valley Property Services Standard | Competitor / DIY Risk |
 | :--- | :--- | :--- |
 | **Siding Treatment** | Professional Soft Washing (Zero damage risk) | High-Pressure Blasting (Voids siding warranties) |
 | **Window Clarity** | Purified Deionized Water (Spot-free finish) | Tap water and dish soap (Leaves hard water stains) |
@@ -83,10 +83,10 @@ For ultimate material protection, we recommend soft washing your siding every 1-
 <!-- 
 📸 Image Recommendations:
 File: experts-guide-exterior-house-cleaning-green-bay.webp
-Alt Text: "A beautifully restored residential home exterior in Green Bay after a professional soft washing and window cleaning service by Valley Window Care."
+Alt Text: "A beautifully restored residential home exterior in Green Bay after a professional soft washing and window cleaning service by Valley Property Services."
 -->`,
 
-    "diy-paver-patio-cleaning-solutions-with-household-products": `> **Valley Window Care provides professional Paver & Concrete Care in Appleton, WI. While minor spills can be treated with DIY household products, safely restoring deeply stained, winter-damaged concrete and patio pavers requires commercial-grade surface cleaners and professional sealing.**
+    "diy-paver-patio-cleaning-solutions-with-household-products": `> **Valley Property Services provides professional Paver & Concrete Care in Appleton, WI. While minor spills can be treated with DIY household products, safely restoring deeply stained, winter-damaged concrete and patio pavers requires commercial-grade surface cleaners and professional sealing.**
 
 ## Understanding DIY Paver Cleaning
 Outdoor patios and concrete pathways are central to enjoying the short but beautiful Northeast Wisconsin summers. 
@@ -101,7 +101,7 @@ Unfortunately, standard household cleaners often fail against the aggressive fre
 ## The Technical Comparison
 Depending on the severity of the oxidation and staining, household chemicals are rarely a match for professional restoration.
 
-| Feature | Valley Window Care Standard | Competitor / DIY Risk |
+| Feature | Valley Property Services Standard | Competitor / DIY Risk |
 | :--- | :--- | :--- |
 | **Stain Lifting** | Commercial-grade heated surface cleaners | Hand-scrubbing with weak household soap |
 | **Rust & Salt Removal** | Specialized chemical rust neutralizers | Leaving salt to physically crack the concrete |
@@ -117,10 +117,10 @@ Hard water oxidation, rust, and winter salt film cannot be scrubbed away with ho
 <!-- 
 📸 Image Recommendations:
 File: diy-paver-patio-cleaning-appleton-wisconsin.webp
-Alt Text: "Valley Window Care professional performing deep hard-surface concrete cleaning to remove winter salt and stains on a residential patio in Appleton, WI."
+Alt Text: "Valley Property Services professional performing deep hard-surface concrete cleaning to remove winter salt and stains on a residential patio in Appleton, WI."
 -->`,
 
-    "how-to-restore-and-maintain-your-pavers-a-complete-guide-to-paver-cleaning-and-sealing-cloned": `> **Valley Window Care provides premium Paver Sealing and Driveway Cleaning in Green Bay, WI. To properly restore and maintain your expensive patio pavers against harsh Wisconsin winters, you must professionally remove all organic growth and apply a deep-penetrating siloxane sealant.**
+    "how-to-restore-and-maintain-your-pavers-a-complete-guide-to-paver-cleaning-and-sealing-cloned": `> **Valley Property Services provides premium Paver Sealing and Driveway Cleaning in Green Bay, WI. To properly restore and maintain your expensive patio pavers against harsh Wisconsin winters, you must professionally remove all organic growth and apply a deep-penetrating siloxane sealant.**
 
 ## The True Cost of Unsealed Pavers
 Installing brick pavers or stamped concrete is a major landscaping investment that drastically increases your property's curb appeal. 
@@ -135,7 +135,7 @@ However, leaving these highly porous stones exposed to Fox Valley freeze-thaw cy
 ## The Technical Comparison
 If you want your patio to survive the winter intact, professional sealant application is non-negotiable.
 
-| Feature | Valley Window Care Standard | Competitor / DIY Risk |
+| Feature | Valley Property Services Standard | Competitor / DIY Risk |
 | :--- | :--- | :--- |
 | **Cleaning Power** | Hot-water commercial pressure extraction | Hardware store cold-water wands (causes striping) |
 | **Weed Prevention** | Fresh polymeric sand locked in with sealant | Ignoring joints, resulting in massive weed rot |
@@ -151,7 +151,7 @@ No. Once we pack the joints with premium polymeric sand and lock it down with ou
 <!-- 
 📸 Image Recommendations:
 File: professional-paver-restoration-sealing-green-bay.webp
-Alt Text: "A stunning, newly sealed brick paver driveway repelling water perfectly after a professional cleaning by Valley Window Care in Green Bay, Wisconsin."
+Alt Text: "A stunning, newly sealed brick paver driveway repelling water perfectly after a professional cleaning by Valley Property Services in Green Bay, Wisconsin."
 -->`
 };
 

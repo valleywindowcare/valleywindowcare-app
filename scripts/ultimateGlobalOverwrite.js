@@ -130,7 +130,7 @@ for (const city of CITIES) {
             slug: generateSlug(title),
             date: new Date(Date.now() - Math.random() * 10000000000).toISOString().split('T')[0],
             category: t.cat,
-            excerpt: `Valley Window Care: Your ${city} experts for professional ${t.cat.toLowerCase()}.`,
+            excerpt: `Valley Property Services: Your ${city} experts for professional ${t.cat.toLowerCase()}.`,
             author: { name: "James", role: "Exterior Cleaning Expert" },
             _serviceSlug: t.slug,
             _targetCity: city.toLowerCase().replace(/ /g, '-'),
@@ -155,7 +155,7 @@ function getUltimateFirewallContent(blog) {
     const cat = blog.category.toLowerCase();
     const city = blog._cityReal;
     const serviceLink = `<a href="/services/${blog._serviceSlug}" class="font-extrabold underline text-gold">professional ${blog.category.toLowerCase()}</a>`;
-    const cta = `<div class="mt-10 p-6 bg-navy text-white rounded-lg shadow-xl text-center"><h3 class="text-3xl font-black mb-4">Secure Your Property Today</h3><p class="mb-4 text-lg">Do not allow amateur maintenance to ruin your curb appeal.</p><a href="tel:920-609-7085" class="inline-block px-8 py-4 bg-gold text-navy font-black text-2xl rounded-lg hover:bg-white hover:text-navy transition-colors">Call Valley Window Care at 920-609-7085</a></div>`;
+    const cta = `<div class="mt-10 p-6 bg-navy text-white rounded-lg shadow-xl text-center"><h3 class="text-3xl font-black mb-4">Secure Your Property Today</h3><p class="mb-4 text-lg">Do not allow amateur maintenance to ruin your curb appeal.</p><a href="tel:920-609-7085" class="inline-block px-8 py-4 bg-gold text-navy font-black text-2xl rounded-lg hover:bg-white hover:text-navy transition-colors">Call Valley Property Services at 920-609-7085</a></div>`;
     const externalLinkBlock = `<div class="my-6 p-4 border-l-4 border-gray-300 bg-gray-50 italic text-gray-700">In accordance with authoritative industry recommendations set by the ${getExternalLink(blog.category)}, we enforce absolute safety and longevity protocols across every single project.</div>`;
 
     let html = ``;
@@ -166,7 +166,7 @@ function getUltimateFirewallContent(blog) {
         <div class="prose prose-lg text-gray-800 max-w-none">
             <h2 class="text-3xl font-bold mb-6 text-navy">Transforming ${city} Architecture Systematically</h2>
             <p class="mb-4">
-                Deploying temporary string lighting inherently exposes property owners to massive physical liabilities while subjecting exterior trims to severe, cyclical damage. At Valley Window Care, we deploy cutting edge Permanent Holiday Lights systematically eliminating the dangerous, icy ladder climbs historically associated with Wisconsin winterizing efforts. Hanging conventional string lights requires immense repetitive physical labor, precarious ladder usage on frozen driveways, and navigating dangerous wind chills only to result in burnt-out bulbs halfway through the festive season. 
+                Deploying temporary string lighting inherently exposes property owners to massive physical liabilities while subjecting exterior trims to severe, cyclical damage. At Valley Property Services, we deploy cutting edge Permanent Holiday Lights systematically eliminating the dangerous, icy ladder climbs historically associated with Wisconsin winterizing efforts. Hanging conventional string lights requires immense repetitive physical labor, precarious ladder usage on frozen driveways, and navigating dangerous wind chills only to result in burnt-out bulbs halfway through the festive season. 
             </p>
             <p class="mb-4">
                 By transitioning to our permanent infrastructure, residential and commercial clients across ${city} instantly secure a highly refined, premium architectural aesthetic that remains elegantly invisible exactly during the harsh daylight hours. Instead of dedicating your limited weekends to fighting tangled cords in sub-zero temperatures, you empower absolute technological control over localized property lighting seamlessly through a centralized smart-phone application. This dramatic shift completely redefines how Wisconsin properties optimize both security and celebratory illumination.
@@ -210,7 +210,7 @@ function getUltimateFirewallContent(blog) {
             </p>
             <h2 class="text-3xl font-bold mt-8 mb-6 text-navy">Long-Term Asset Protection Guaranteed</h2>
             <p class="mb-4">
-                Your property is your most valuable financial investment. Rather than engaging in chaotic, destructive DIY washing campaigns that instantly dissolve manufacturer warranties, partner with established professionals deploying strictly approved industry methods natively designed for absolute structural safety. Schedule a complete diagnostic and execute our pristine ${serviceLink} to secure absolute peace of mind and breathtaking aesthetic restoration reliably. Trust Valley Window Care precisely to execute rigorous safety standards identically mitigating hazardous biological liabilities while instantly elevating surrounding neighborhood market valuations beautifully.
+                Your property is your most valuable financial investment. Rather than engaging in chaotic, destructive DIY washing campaigns that instantly dissolve manufacturer warranties, partner with established professionals deploying strictly approved industry methods natively designed for absolute structural safety. Schedule a complete diagnostic and execute our pristine ${serviceLink} to secure absolute peace of mind and breathtaking aesthetic restoration reliably. Trust Valley Property Services precisely to execute rigorous safety standards identically mitigating hazardous biological liabilities while instantly elevating surrounding neighborhood market valuations beautifully.
             </p>
             ${cta}
         </div>`;
@@ -302,7 +302,7 @@ async function processUltimateRes() {
                 }
 
                 if (!sourceImage || !fs.existsSync(sourceImage)) {
-                    // Priority 3: Ultimate Fallback (Valley Window Care Logo)
+                    // Priority 3: Ultimate Fallback (Valley Property Services Logo)
                     isAI = false;
                     isFallback = true;
                     sourceImage = LOGO_PATH;

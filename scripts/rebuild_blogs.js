@@ -11,7 +11,7 @@ const CONTACT_FORM_HTML = `
         
         <div class="bg-navy rounded-3xl p-10 text-center shadow-md relative overflow-hidden mt-12">
             <h3 class="text-3xl font-extrabold text-white mb-6 relative z-10 w-full text-center">Ready to Transform Your Home?</h3>
-            <p class="text-gray-300 text-lg mb-8 relative z-10 w-full text-center">Contact Valley Window Care for a professional, stress-free estimate.</p>
+            <p class="text-gray-300 text-lg mb-8 relative z-10 w-full text-center">Contact Valley Property Services for a professional, stress-free estimate.</p>
             <div class="flex flex-col md:flex-row justify-around items-center w-full max-w-xl mx-auto bg-white/10 rounded-xl p-6 relative z-10 gap-6 md:gap-0">
                 <a href="tel:920-609-7085" class="flex flex-col items-center gap-2 hover:text-gold transition-colors group text-center w-full md:w-1/2">
                     <div class="bg-white/20 p-3 rounded-2xl group-hover:bg-gold/30 transition-colors">

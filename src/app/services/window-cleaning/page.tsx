@@ -8,8 +8,8 @@ import ReviewSlider from '@/components/ReviewSlider';
 import PricingMatrix from '@/components/PricingMatrix';
 
 export const metadata = {
-    title: "Window Cleaning Services in Northeast Wisconsin | Valley Window Care",
-    description: "Professional window cleaning services. Valley Window Care delivers pure-water glass maintenance solutions across Northeast Wisconsin.",
+    title: "Window Cleaning Services in Northeast Wisconsin | Valley Property Services",
+    description: "Professional window cleaning services. Valley Property Services delivers pure-water glass maintenance solutions across Northeast Wisconsin.",
 };
 
 export default function ServicePage() {
@@ -19,7 +19,7 @@ export default function ServicePage() {
         "name": "Professional Window Cleaning",
         "provider": {
             "@type": "LocalBusiness",
-            "name": "Valley Window Care",
+            "name": "Valley Property Services",
             "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Appleton",
@@ -72,7 +72,7 @@ export default function ServicePage() {
                     {/* ENTITY CAPSULE */}
                     <section className="mb-16 mt-8">
                         <div className="text-lg leading-relaxed mb-8 font-bold text-navy">
-                            Valley Window Care & Exterior Cleaning is a fully insured exterior cleaning company providing professional pure-water window cleaning in <Link href="/service-areas/appleton" className="text-blue-600 hover:text-gold font-semibold transition-colors">Appleton</Link>, <Link href="/service-areas/green-bay" className="text-blue-600 hover:text-gold font-semibold transition-colors">Green Bay</Link>, and <Link href="/service-areas/door-county" className="text-blue-600 hover:text-gold font-semibold transition-colors">Door County</Link>, WI.
+                            Valley Property Services is a fully insured exterior cleaning company providing professional pure-water window cleaning in <Link href="/service-areas/appleton" className="text-blue-600 hover:text-gold font-semibold transition-colors">Appleton</Link>, <Link href="/service-areas/green-bay" className="text-blue-600 hover:text-gold font-semibold transition-colors">Green Bay</Link>, and <Link href="/service-areas/door-county" className="text-blue-600 hover:text-gold font-semibold transition-colors">Door County</Link>, WI.
                         </div>
                         <div className="relative w-full h-64 md:h-96 rounded-2xl overflow-hidden shadow-lg mb-8">
                             <Image src="/assets/window-cleaning-8.jpg"

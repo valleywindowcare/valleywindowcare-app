@@ -86,7 +86,7 @@ export default function BlogFilterGrid({ initialPosts }: BlogFilterGridProps) {
                             <div className="relative w-full h-56 bg-slate-200 overflow-hidden">
                                 <Image
                                     src={post.imagePath}
-                                    alt={`${post.title} - Valley Window Care`}
+                                    alt={`${post.title} - Valley Property Services`}
                                     fill
                                     style={{ objectFit: 'cover' }}
                                     className="group-hover:scale-105 transition-transform duration-500 ease-in-out"

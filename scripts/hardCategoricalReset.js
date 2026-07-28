@@ -118,7 +118,7 @@ for (const city of CITIES) {
             slug: generateSlug(title),
             date: new Date(Date.now() - Math.random() * 10000000000).toISOString().split('T')[0],
             category: t.cat,
-            excerpt: `${title}. Read Valley Window Care's expert guidance specific to property owners in ${city}.`,
+            excerpt: `${title}. Read Valley Property Services's expert guidance specific to property owners in ${city}.`,
             author: { name: "James", role: "Exterior Cleaning Expert" },
             _serviceSlug: t.slug,
             _targetCity: city.toLowerCase().replace(/ /g, '-'),
@@ -136,7 +136,7 @@ function getStrictContent(blog) {
     const cat = blog.category.toLowerCase();
     const city = blog._cityReal;
     const serviceLink = `<a href="/services/${blog._serviceSlug}" class="font-bold underline text-gold">professional ${blog.category.toLowerCase()}</a>`;
-    const cta = `<div class="mt-8 font-black text-2xl text-navy">Call Valley Window Care at 920-609-7085</div>`;
+    const cta = `<div class="mt-8 font-black text-2xl text-navy">Call Valley Property Services at 920-609-7085</div>`;
 
     let html = ``;
 

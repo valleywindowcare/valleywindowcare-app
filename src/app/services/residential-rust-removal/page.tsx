@@ -9,7 +9,7 @@ import { ShieldCheck, CheckCircle, ArrowRight, MapPin } from 'lucide-react';
 import ReviewSlider from '@/components/ReviewSlider';
 
 export const metadata = {
-    title: "Residential Rust Removal | Valley Window Care",
+    title: "Residential Rust Removal | Valley Property Services",
     description: "Professional battery acid and fertilizer rust removal. We safely extract deep orange stains from exterior concrete.",
 };
 
@@ -20,7 +20,7 @@ export default function ServicePage() {
       "name": "Residential Rust Removal Services",
       "provider": {
         "@type": "LocalBusiness",
-        "name": "Valley Window Care",
+        "name": "Valley Property Services",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Appleton",
@@ -60,7 +60,7 @@ export default function ServicePage() {
                 h1={
                     <>
                         <span className="capitalize">Residential Rust Removal</span> <br />
-                        <span className="text-gold text-2xl md:text-3xl mt-4 block">Valley Window Care</span>
+                        <span className="text-gold text-2xl md:text-3xl mt-4 block">Valley Property Services</span>
                     </>
                 }
                 description="Professional battery acid and fertilizer rust removal. We safely extract deep orange stains from exterior concrete."
@@ -74,7 +74,7 @@ export default function ServicePage() {
                     {/* ENTITY CAPSULE */}
                     <section className="mb-16 mt-8">
                         <div className="text-lg leading-relaxed mb-8 font-bold text-navy">
-                            Valley Window Care is a fully insured exterior cleaning company providing professional residential rust removal in <Link href="/service-areas/appleton" className="text-blue-600 hover:text-gold font-semibold transition-colors">Appleton</Link>, <Link href="/service-areas/green-bay" className="text-blue-600 hover:text-gold font-semibold transition-colors">Green Bay</Link>, and <Link href="/service-areas/door-county" className="text-blue-600 hover:text-gold font-semibold transition-colors">Door County</Link>, WI.
+                            Valley Property Services is a fully insured exterior cleaning company providing professional residential rust removal in <Link href="/service-areas/appleton" className="text-blue-600 hover:text-gold font-semibold transition-colors">Appleton</Link>, <Link href="/service-areas/green-bay" className="text-blue-600 hover:text-gold font-semibold transition-colors">Green Bay</Link>, and <Link href="/service-areas/door-county" className="text-blue-600 hover:text-gold font-semibold transition-colors">Door County</Link>, WI.
                         </div>
                     </section>
 

@@ -3,6 +3,8 @@
 import { useState } from "react";
 import SuccessState from "./SuccessState";
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
+import { trackLeadConversion } from "@/lib/gtag";
 
 declare global {
   interface Window {
@@ -13,6 +15,7 @@ declare global {
 }
 
 export default function HeroForm() {
+    const router = useRouter();
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
 
@@ -50,7 +53,7 @@ export default function HeroForm() {
             // 1. Fire Web3Forms directly from the browser to bypass Cloudflare Bot Management on Vercel IPs
             const web3Payload = {
                 access_key: "c8727880-065b-4c99-9190-7f4a13170752", 
-                subject: `🚨 NEW WEBSITE LEAD: ${safeName} - Valley Window Care`,
+                subject: `🚨 NEW WEBSITE LEAD: ${safeName} - Valley Property Services`,
                 from_name: "Website Quote Form",
                 name: safeName,
                 email: safeEmail,
@@ -95,9 +98,6 @@ export default function HeroForm() {
                 body: JSON.stringify(submissionData),
             }).catch(e => console.error("Non-fatal CAPI proxy error:", e));
             
-            // Trigger 100% Success completion
-            setIsSubmitted(true); 
-            
             // Fire Meta Pixel 'Lead' Event AFTER confirmation (with Deduplication ID)
             if (typeof window !== "undefined" && window.fbq) {
                 window.fbq("track", "Lead", {}, { eventID: generatedEventId });
@@ -120,6 +120,12 @@ export default function HeroForm() {
                  });
                  window.dataLayer.push({ event: "ads_conversion_Form_1" });
             }
+
+            // Immediately explicitly fire the trackLeadConversion helper
+            trackLeadConversion();
+
+            // Redirect to success page to ensure GTM pageview triggers fire reliably
+            router.push('/quote/success');
         } catch (error) {
             console.error("CRITICAL FORM CRASH:", error);
             alert("Submission failed. Please check your connection or call us.");
@@ -130,137 +136,133 @@ export default function HeroForm() {
 
     return (
         <div className="w-full bg-transparent relative h-full flex flex-col justify-center">
-            {isSubmitted ? (
-                <SuccessState onReset={() => setIsSubmitted(false)} />
-            ) : (
-                <div className="p-4 sm:p-8 h-full flex flex-col justify-center">
-                    <h3 className="text-xl sm:text-2xl font-extrabold mb-4 sm:mb-6 text-navy !text-center !w-full !block">Request a Free Quote</h3>
-                    <form className="space-y-4" onSubmit={handleSubmit}>
-                        <div>
-                            <label className="sr-only" htmlFor="name">Name</label>
+            <div className="p-4 sm:p-8 h-full flex flex-col justify-center">
+                <h3 className="text-xl sm:text-2xl font-extrabold mb-4 sm:mb-6 text-navy !text-center !w-full !block">Request a Free Quote</h3>
+                <form className="space-y-4" onSubmit={handleSubmit}>
+                    <div>
+                        <label className="sr-only" htmlFor="name">Name</label>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            required
+                            aria-label="Name"
+                            autoComplete="name"
+                            placeholder="Your Name"
+                            className="w-full px-4 py-2 sm:px-5 sm:py-4 rounded-xl sm:rounded-[28px] border border-gray-200 bg-white/50 backdrop-blur-sm focus:bg-white/90 focus:outline-none focus:ring-2 focus:ring-navy transition-all text-sm sm:text-base shadow-inner"
+                        />
+                    </div>
+                    <div className="!flex !flex-row !gap-2 !w-full">
+                        <div className="flex-1">
+                            <label className="sr-only" htmlFor="phone">Phone</label>
                             <input
-                                type="text"
-                                id="name"
-                                name="name"
+                                type="tel"
+                                id="phone"
+                                name="phone"
                                 required
-                                aria-label="Name"
-                                autoComplete="name"
-                                placeholder="Your Name"
+                                aria-label="Phone"
+                                autoComplete="tel"
+                                placeholder="Phone"
                                 className="w-full px-4 py-2 sm:px-5 sm:py-4 rounded-xl sm:rounded-[28px] border border-gray-200 bg-white/50 backdrop-blur-sm focus:bg-white/90 focus:outline-none focus:ring-2 focus:ring-navy transition-all text-sm sm:text-base shadow-inner"
                             />
                         </div>
-                        <div className="!flex !flex-row !gap-2 !w-full">
-                            <div className="flex-1">
-                                <label className="sr-only" htmlFor="phone">Phone</label>
-                                <input
-                                    type="tel"
-                                    id="phone"
-                                    name="phone"
-                                    required
-                                    aria-label="Phone"
-                                    autoComplete="tel"
-                                    placeholder="Phone"
-                                    className="w-full px-4 py-2 sm:px-5 sm:py-4 rounded-xl sm:rounded-[28px] border border-gray-200 bg-white/50 backdrop-blur-sm focus:bg-white/90 focus:outline-none focus:ring-2 focus:ring-navy transition-all text-sm sm:text-base shadow-inner"
-                                />
-                            </div>
-                            <div className="flex-1">
-                                <label className="sr-only" htmlFor="email">Email</label>
-                                <input
-                                    type="email"
-                                    id="email"
-                                    name="email"
-                                    required
-                                    aria-label="Email"
-                                    autoComplete="email"
-                                    placeholder="Email"
-                                    className="w-full px-4 py-2 sm:px-5 sm:py-4 rounded-xl sm:rounded-[28px] border border-gray-200 bg-white/50 backdrop-blur-sm focus:bg-white/90 focus:outline-none focus:ring-2 focus:ring-navy transition-all text-sm sm:text-base shadow-inner"
-                                />
-                            </div>
-                        </div>
-                        <div className="!flex !flex-row !gap-2 !w-full mt-2">
-                            <div className="flex-1">
-                                <label className="sr-only" htmlFor="squareFootage">Approximate Square Footage</label>
-                                <input
-                                    type="text"
-                                    id="squareFootage"
-                                    name="squareFootage"
-                                    aria-label="Approximate Square Footage"
-                                    placeholder="Approx. Sq Ft"
-                                    className="w-full px-4 py-2 sm:px-5 sm:py-4 rounded-xl sm:rounded-[28px] border border-gray-200 bg-white/50 backdrop-blur-sm focus:bg-white/90 focus:outline-none focus:ring-2 focus:ring-navy transition-all text-sm sm:text-base shadow-inner"
-                                />
-                            </div>
-                            <div className="flex-1">
-                                <label className="sr-only" htmlFor="zip">Zip Code</label>
-                                <input
-                                    type="text"
-                                    id="zip"
-                                    name="zip"
-                                    required
-                                    aria-label="Zip Code"
-                                    autoComplete="postal-code"
-                                    placeholder="Zip Code"
-                                    className="w-full px-4 py-2 sm:px-5 sm:py-4 rounded-xl sm:rounded-[28px] border border-gray-200 bg-white/50 backdrop-blur-sm focus:bg-white/90 focus:outline-none focus:ring-2 focus:ring-navy transition-all text-sm sm:text-base shadow-inner"
-                                />
-                            </div>
-                        </div>
-                        <div>
-                            <label className="sr-only" htmlFor="projectDetails">Project Details & Service Address</label>
-                            <textarea
-                                id="projectDetails"
-                                name="projectDetails"
-                                rows={4}
+                        <div className="flex-1">
+                            <label className="sr-only" htmlFor="email">Email</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
                                 required
-                                aria-label="Project Details"
-                                placeholder="Tell us about your project (e.g., number of windows, roof type) and provide the service address for an accurate quote"
-                                className="!w-full !mt-2 sm:!mt-4 px-4 py-2 sm:px-5 sm:py-4 rounded-xl sm:rounded-[28px] border border-gray-200 bg-white/50 backdrop-blur-sm focus:bg-white/90 focus:outline-none focus:ring-2 focus:ring-navy transition-all text-sm sm:text-base resize-y min-h-[60px] sm:min-h-[100px] shadow-inner"
+                                aria-label="Email"
+                                autoComplete="email"
+                                placeholder="Email"
+                                className="w-full px-4 py-2 sm:px-5 sm:py-4 rounded-xl sm:rounded-[28px] border border-gray-200 bg-white/50 backdrop-blur-sm focus:bg-white/90 focus:outline-none focus:ring-2 focus:ring-navy transition-all text-sm sm:text-base shadow-inner"
                             />
                         </div>
-                        <div>
-                            <fieldset>
-                                <legend className="text-sm font-bold text-navy mb-2">Services Needed</legend>
-                                <div className="grid grid-cols-2 gap-3 mt-1 text-sm text-gray-700">
-                                    <label htmlFor="chk-house-washing" className="flex items-center gap-2 cursor-pointer hover:text-gold transition-colors">
-                                        <input id="chk-house-washing" aria-label="House Washing" type="checkbox" name="service" value="house-washing" className="accent-gold w-4 h-4 cursor-pointer" /> House Washing
-                                    </label>
-                                    <label htmlFor="chk-roof-cleaning" className="flex items-center gap-2 cursor-pointer hover:text-gold transition-colors">
-                                        <input id="chk-roof-cleaning" aria-label="Roof Cleaning" type="checkbox" name="service" value="roof-cleaning" className="accent-gold w-4 h-4 cursor-pointer" /> Roof Cleaning
-                                    </label>
-                                    <label htmlFor="chk-window-cleaning" className="flex items-center gap-2 cursor-pointer hover:text-gold transition-colors">
-                                        <input id="chk-window-cleaning" aria-label="Window Cleaning" type="checkbox" name="service" value="window-cleaning" className="accent-gold w-4 h-4 cursor-pointer" /> Window Cleaning
-                                    </label>
-                                    <label htmlFor="chk-gutter-cleaning" className="flex items-center gap-2 cursor-pointer hover:text-gold transition-colors">
-                                        <input id="chk-gutter-cleaning" aria-label="Gutter Cleaning" type="checkbox" name="service" value="gutter-cleaning" className="accent-gold w-4 h-4 cursor-pointer" /> Gutter Cleaning
-                                    </label>
-                                    <label htmlFor="chk-concrete-cleaning" className="flex items-center gap-2 cursor-pointer hover:text-gold transition-colors">
-                                        <input id="chk-concrete-cleaning" aria-label="Concrete Cleaning" type="checkbox" name="service" value="concrete-cleaning" className="accent-gold w-4 h-4 cursor-pointer" /> Concrete Cleaning
-                                    </label>
-                                    <label htmlFor="chk-permanent-led" className="flex items-center gap-2 cursor-pointer hover:text-gold transition-colors">
-                                        <input id="chk-permanent-led" aria-label="Permanent LED Lighting" type="checkbox" name="service" value="permanent-led-lighting" className="accent-gold w-4 h-4 cursor-pointer" /> Permanent LED Lighting
-                                    </label>
-                                    <label htmlFor="chk-commercial" className="flex items-center gap-2 cursor-pointer hover:text-gold transition-colors">
-                                        <input id="chk-commercial" aria-label="Commercial Services" type="checkbox" name="service" value="commercial-services" className="accent-gold w-4 h-4 cursor-pointer" /> Commercial Services
-                                    </label>
-                                    <label htmlFor="chk-paver-patio-restorations" className="flex items-center gap-2 cursor-pointer hover:text-gold transition-colors">
-                                        <input id="chk-paver-patio-restorations" aria-label="Paver Patio Restorations" type="checkbox" name="service" value="paver-patio-restorations" className="accent-gold w-4 h-4 cursor-pointer" /> Paver Patio Restorations
-                                    </label>
-                                </div>
-                            </fieldset>
+                    </div>
+                    <div className="!flex !flex-row !gap-2 !w-full mt-2">
+                        <div className="flex-1">
+                            <label className="sr-only" htmlFor="squareFootage">Approximate Square Footage</label>
+                            <input
+                                type="text"
+                                id="squareFootage"
+                                name="squareFootage"
+                                aria-label="Approximate Square Footage"
+                                placeholder="Approx. Sq Ft"
+                                className="w-full px-4 py-2 sm:px-5 sm:py-4 rounded-xl sm:rounded-[28px] border border-gray-200 bg-white/50 backdrop-blur-sm focus:bg-white/90 focus:outline-none focus:ring-2 focus:ring-navy transition-all text-sm sm:text-base shadow-inner"
+                            />
                         </div>
-                        <motion.button
-                            whileHover={{ scale: isLoading ? 1 : 1.05 }}
-                            whileTap={{ scale: isLoading ? 1 : 0.95 }}
-                            transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                            type="submit"
-                            disabled={isLoading}
-                            className={`w-full text-white font-black tracking-widest text-base sm:text-lg py-3 sm:py-5 rounded-xl sm:rounded-[32px] transition-colors shadow-[0_8px_30px_rgb(0,0,0,0.12)] mt-3 sm:mt-5 ${
-                                isLoading ? "bg-gray-400 cursor-not-allowed" : "bg-gradient-to-r from-navy to-navy-dark hover:shadow-[0_20px_40px_rgba(11,35,65,0.4)]"
-                            }`}
-                        >
-                            {isLoading ? "SENDING..." : "GET QUOTE NOW"}
-                        </motion.button>
-                    </form>
-                </div>
-            )}
+                        <div className="flex-1">
+                            <label className="sr-only" htmlFor="zip">Zip Code</label>
+                            <input
+                                type="text"
+                                id="zip"
+                                name="zip"
+                                required
+                                aria-label="Zip Code"
+                                autoComplete="postal-code"
+                                placeholder="Zip Code"
+                                className="w-full px-4 py-2 sm:px-5 sm:py-4 rounded-xl sm:rounded-[28px] border border-gray-200 bg-white/50 backdrop-blur-sm focus:bg-white/90 focus:outline-none focus:ring-2 focus:ring-navy transition-all text-sm sm:text-base shadow-inner"
+                            />
+                        </div>
+                    </div>
+                    <div>
+                        <label className="sr-only" htmlFor="projectDetails">Project Details & Service Address</label>
+                        <textarea
+                            id="projectDetails"
+                            name="projectDetails"
+                            rows={4}
+                            required
+                            aria-label="Project Details"
+                            placeholder="Tell us about your project (e.g., number of windows, roof type) and provide the service address for an accurate quote"
+                            className="!w-full !mt-2 sm:!mt-4 px-4 py-2 sm:px-5 sm:py-4 rounded-xl sm:rounded-[28px] border border-gray-200 bg-white/50 backdrop-blur-sm focus:bg-white/90 focus:outline-none focus:ring-2 focus:ring-navy transition-all text-sm sm:text-base resize-y min-h-[60px] sm:min-h-[100px] shadow-inner"
+                        />
+                    </div>
+                    <div>
+                        <fieldset>
+                            <legend className="text-sm font-bold text-navy mb-2">Services Needed</legend>
+                            <div className="grid grid-cols-2 gap-3 mt-1 text-sm text-gray-700">
+                                <label htmlFor="chk-house-washing" className="flex items-center gap-2 cursor-pointer hover:text-gold transition-colors">
+                                    <input id="chk-house-washing" aria-label="House Washing" type="checkbox" name="service" value="house-washing" className="accent-gold w-4 h-4 cursor-pointer" /> House Washing
+                                </label>
+                                <label htmlFor="chk-roof-cleaning" className="flex items-center gap-2 cursor-pointer hover:text-gold transition-colors">
+                                    <input id="chk-roof-cleaning" aria-label="Roof Cleaning" type="checkbox" name="service" value="roof-cleaning" className="accent-gold w-4 h-4 cursor-pointer" /> Roof Cleaning
+                                </label>
+                                <label htmlFor="chk-window-cleaning" className="flex items-center gap-2 cursor-pointer hover:text-gold transition-colors">
+                                    <input id="chk-window-cleaning" aria-label="Window Cleaning" type="checkbox" name="service" value="window-cleaning" className="accent-gold w-4 h-4 cursor-pointer" /> Window Cleaning
+                                </label>
+                                <label htmlFor="chk-gutter-cleaning" className="flex items-center gap-2 cursor-pointer hover:text-gold transition-colors">
+                                    <input id="chk-gutter-cleaning" aria-label="Gutter Cleaning" type="checkbox" name="service" value="gutter-cleaning" className="accent-gold w-4 h-4 cursor-pointer" /> Gutter Cleaning
+                                </label>
+                                <label htmlFor="chk-concrete-cleaning" className="flex items-center gap-2 cursor-pointer hover:text-gold transition-colors">
+                                    <input id="chk-concrete-cleaning" aria-label="Concrete Cleaning" type="checkbox" name="service" value="concrete-cleaning" className="accent-gold w-4 h-4 cursor-pointer" /> Concrete Cleaning
+                                </label>
+                                <label htmlFor="chk-permanent-led" className="flex items-center gap-2 cursor-pointer hover:text-gold transition-colors">
+                                    <input id="chk-permanent-led" aria-label="Permanent LED Lighting" type="checkbox" name="service" value="permanent-led-lighting" className="accent-gold w-4 h-4 cursor-pointer" /> Permanent LED Lighting
+                                </label>
+                                <label htmlFor="chk-commercial" className="flex items-center gap-2 cursor-pointer hover:text-gold transition-colors">
+                                    <input id="chk-commercial" aria-label="Commercial Services" type="checkbox" name="service" value="commercial-services" className="accent-gold w-4 h-4 cursor-pointer" /> Commercial Services
+                                </label>
+                                <label htmlFor="chk-paver-patio-restorations" className="flex items-center gap-2 cursor-pointer hover:text-gold transition-colors">
+                                    <input id="chk-paver-patio-restorations" aria-label="Paver Patio Restorations" type="checkbox" name="service" value="paver-patio-restorations" className="accent-gold w-4 h-4 cursor-pointer" /> Paver Patio Restorations
+                                </label>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <motion.button
+                        whileHover={{ scale: isLoading ? 1 : 1.05 }}
+                        whileTap={{ scale: isLoading ? 1 : 0.95 }}
+                        transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                        type="submit"
+                        disabled={isLoading}
+                        className={`w-full text-white font-black tracking-widest text-base sm:text-lg py-3 sm:py-5 rounded-xl sm:rounded-[32px] transition-colors shadow-[0_8px_30px_rgb(0,0,0,0.12)] mt-3 sm:mt-5 ${
+                            isLoading ? "bg-gray-400 cursor-not-allowed" : "bg-gradient-to-r from-navy to-navy-dark hover:shadow-[0_20px_40px_rgba(11,35,65,0.4)]"
+                        }`}
+                    >
+                        {isLoading ? "SENDING..." : "GET QUOTE NOW"}
+                    </motion.button>
+                </form>
+            </div>
         </div>
     );
 }

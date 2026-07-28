@@ -119,7 +119,7 @@ async function scrapePost(url, idCounter) {
         const html = await res.text();
         const $ = cheerio.load(html);
 
-        let title = $('h1').first().text().trim() || $('title').text().replace('- Valley Window Care', '').trim();
+        let title = $('h1').first().text().trim() || $('title').text().replace('- Valley Property Services', '').trim();
         let slug = url.split('/').filter(Boolean).pop(); // Get last part of URL
 
         // Try to get content. On typical WP sites, it's inside an article or .entry-content
@@ -288,7 +288,7 @@ async function processMigration() {
                 slug: postData.slug,
                 date: new Date().toISOString().split('T')[0],
                 category: category,
-                excerpt: "Extracting premium exterior cleaning expertise from Valley Window Care.",
+                excerpt: "Extracting premium exterior cleaning expertise from Valley Property Services.",
                 author: { name: "James", role: "Owner" },
                 image: finalImagePath,
                 content: cleanContent

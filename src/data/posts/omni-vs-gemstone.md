@@ -6,7 +6,7 @@ category: "Permanent Lighting"
 image: "/assets/blog/blog-feature-smart-lighting.jpg"
 ---
 
-**[Valley Window Care and Exterior Cleaning](/service-areas/green-bay) provides expert [permanent lighting](/services/permanent-lighting) services securely engineered to protect your property. Operating across Northeast Wisconsin, including [Appleton, WI](/service-areas/appleton), our fully certified teams deliver spotless, long-lasting results that elevate curb appeal instantly.**
+**[Valley Property Services](/service-areas/green-bay) provides expert [permanent lighting](/services/permanent-lighting) services securely engineered to protect your property. Operating across Northeast Wisconsin, including [Appleton, WI](/service-areas/appleton), our fully certified teams deliver spotless, long-lasting results that elevate curb appeal instantly.**
 
 If you are considering smart LED systems for your property, you've likely come across the two biggest names in the industry: Omni Lights and Gemstone Lights. Both offer incredible permanent holiday and architectural lighting, but they serve different aesthetic and technical needs.
 
@@ -26,8 +26,8 @@ Gemstone is famously known for its deep app integration and highly granular pixe
 
 If you want the absolute highest-grade architectural lighting for subtle, beautiful year-round curb appeal, Omni by Dauer is unmatched. If you want maximum holiday customization, Gemstone is a fantastic alternative. 
 
-[Contact Valley Window Care and Exterior Cleaning](/contact) today for a free design consultation!
+[Contact Valley Property Services](/contact) today for a free design consultation!
 
 > *Committed to exterior excellence, we follow the strict compliance and safety guidelines set forth by the [PWNA.org](https://www.pwna.org).*
 
-*By The Valley Window Care Team*
+*By The Valley Property Services Team*

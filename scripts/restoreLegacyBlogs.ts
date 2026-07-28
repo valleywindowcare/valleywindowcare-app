@@ -90,7 +90,7 @@ async function executeBlogRestoration() {
             const regex = /<img[^>]*src="https?:\/\/valleywindowcare\.com\/wp-content\/uploads\/[^"]+"[^>]*>/g;
             modifiedBlog.content = modifiedBlog.content.replace(regex, () => {
                 repairedImagesCount++;
-                return `<img src="${modifiedBlog.image}" alt="Valley Window Care Team Restoration" class="object-cover rounded-xl" />`;
+                return `<img src="${modifiedBlog.image}" alt="Valley Property Services Team Restoration" class="object-cover rounded-xl" />`;
             });
         }
 

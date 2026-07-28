@@ -5,8 +5,8 @@ import { ChevronRight } from "lucide-react";
 import ReviewSlider from '@/components/ReviewSlider';
 
 export const metadata: Metadata = {
-    title: "Privacy Policy | Valley Window Care",
-    description: "Privacy policy and data collection practices for Valley Window Care and Exterior Cleaning.",
+    title: "Privacy Policy | Valley Property Services",
+    description: "Privacy policy and data collection practices for Valley Property Services.",
 };
 
 export default function PrivacyPolicyPage() {
@@ -27,7 +27,7 @@ export default function PrivacyPolicyPage() {
                 <article className="bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-gray-100 text-navy-dark leading-relaxed space-y-8">
                     <div>
                         <p className="text-gray-500 font-semibold mb-6">Last updated: October 2, 2025</p>
-                        <p>Thank you for choosing Valley Window Care (“we,” “us,” “our”). We respect your privacy, and this Privacy Policy explains what information we collect, how we use it, and your rights regarding that information when you visit or use our website at https://valleywindowcare.com (the “Site”).</p>
+                        <p>Thank you for choosing Valley Property Services (“we,” “us,” “our”). We respect your privacy, and this Privacy Policy explains what information we collect, how we use it, and your rights regarding that information when you visit or use our website at https://valleywindowcare.com (the “Site”).</p>
                     </div>
 
                     <div>
@@ -99,7 +99,7 @@ export default function PrivacyPolicyPage() {
                     <div>
                         <h2 className="text-2xl font-bold text-navy mb-4">12. Contact Us</h2>
                         <p className="mb-4">If you have questions about this Privacy Policy, contact us at:</p>
-                        <p className="font-semibold">Valley Window Care</p>
+                        <p className="font-semibold">Valley Property Services</p>
                         <ul className="space-y-1">
                             <li><strong>Email:</strong> James@ValleyWindowCare.com</li>
                             <li><strong>Phone:</strong> (920) 609-7085</li>

@@ -174,7 +174,7 @@ cityHubs.forEach(hub => {
     </div>
 `,
             category: missing.category,
-            altText: `${missing.serviceName} in ${hub.city}, WI - Valley Window Care`,
+            altText: `${missing.serviceName} in ${hub.city}, WI - Valley Property Services`,
             headerImage: missing.headerImage,
             introParagraphs: missing.introParagraphs,
             faqs: missing.faqs,

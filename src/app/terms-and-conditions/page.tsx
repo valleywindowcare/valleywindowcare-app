@@ -5,8 +5,8 @@ import { ChevronRight } from "lucide-react";
 import ReviewSlider from '@/components/ReviewSlider';
 
 export const metadata: Metadata = {
-    title: "Terms and Conditions | Valley Window Care",
-    description: "Terms and conditions for usage of Valley Window Care and Exterior Cleaning services.",
+    title: "Terms and Conditions | Valley Property Services",
+    description: "Terms and conditions for usage of Valley Property Services services.",
 };
 
 export default function TermsAndConditionsPage() {
@@ -27,7 +27,7 @@ export default function TermsAndConditionsPage() {
                 <article className="bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-gray-100 text-navy-dark leading-relaxed space-y-8">
                     <div>
                         <p className="text-gray-500 font-semibold mb-6">Last updated: {new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</p>
-                        <p>These terms and conditions outline the rules and regulations for the use of Valley Window Care and Exterior Cleaning's Website and Professional Services. By accessing this website and booking our services, we assume you accept these terms and conditions.</p>
+                        <p>These terms and conditions outline the rules and regulations for the use of Valley Property Services's Website and Professional Services. By accessing this website and booking our services, we assume you accept these terms and conditions.</p>
                     </div>
 
                     <div>
@@ -42,7 +42,7 @@ export default function TermsAndConditionsPage() {
 
                     <div>
                         <h2 className="text-2xl font-bold text-navy mb-4">3. Property Preparation</h2>
-                        <p>Customers are required to ensure all windows are fully closed, delicate items are securely moved away from the exterior, and external power sources are accessible if necessary. Valley Window Care is not liable for water intrusion due to faulty or open weather stripping and window seals.</p>
+                        <p>Customers are required to ensure all windows are fully closed, delicate items are securely moved away from the exterior, and external power sources are accessible if necessary. Valley Property Services is not liable for water intrusion due to faulty or open weather stripping and window seals.</p>
                     </div>
 
                     <div>
@@ -52,12 +52,12 @@ export default function TermsAndConditionsPage() {
 
                     <div>
                         <h2 className="text-2xl font-bold text-navy mb-4">5. Liability & Damage</h2>
-                        <p>Valley Window Care is fully insured. While we take the utmost care in executing our services, we are not responsible for pre-existing damage, localized flaking paint, or degraded surfaces that may be revealed or exacerbated during standard cleaning processes.</p>
+                        <p>Valley Property Services is fully insured. While we take the utmost care in executing our services, we are not responsible for pre-existing damage, localized flaking paint, or degraded surfaces that may be revealed or exacerbated during standard cleaning processes.</p>
                     </div>
 
                     <div>
                         <h2 className="text-2xl font-bold text-navy mb-4">6. Intellectual Property</h2>
-                        <p>Unless otherwise stated, Valley Window Care owns the intellectual property rights for all material on this website, including photographs of completed jobs. You may not republish, sell, or reproduce content from this site without explicit permission.</p>
+                        <p>Unless otherwise stated, Valley Property Services owns the intellectual property rights for all material on this website, including photographs of completed jobs. You may not republish, sell, or reproduce content from this site without explicit permission.</p>
                     </div>
 
                     <div>
@@ -68,7 +68,7 @@ export default function TermsAndConditionsPage() {
                     <div>
                         <h2 className="text-2xl font-bold text-navy mb-4">8. Contact Information</h2>
                         <p className="mb-4">For any inquiries regarding these terms, please contact us directly:</p>
-                        <p className="font-semibold">Valley Window Care</p>
+                        <p className="font-semibold">Valley Property Services</p>
                         <ul className="space-y-1">
                             <li><strong>Email:</strong> James@ValleyWindowCare.com</li>
                             <li><strong>Phone:</strong> (920) 609-7085</li>

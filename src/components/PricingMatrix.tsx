@@ -75,7 +75,7 @@ export default function PricingMatrix({
                     <ShieldCheck className="text-gold shrink-0 mt-1" size={28} />
                     <p className="text-sm md:text-base text-navy font-medium leading-relaxed">
                         <strong className="text-navy-dark uppercase tracking-widest text-xs block mb-1">Our Team Guarantee</strong>
-                        All work is backed by a 100% Satisfaction Guarantee from the Valley Window Care team. We treat your property like our own.
+                        All work is backed by a 100% Satisfaction Guarantee from the Valley Property Services team. We treat your property like our own.
                     </p>
                 </div>
             </div>

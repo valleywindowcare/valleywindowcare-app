@@ -58,7 +58,7 @@ export default function BlogFeed({ blogs }: { blogs: BlogPost[] }) {
                                     <div className="w-full h-56 relative overflow-hidden bg-slate-100">
                                         <img
                                             src={blog.image || '/images/portfolio/building-wash-copy.webp'}
-                                            alt={`Valley Window Care and Exterior Cleaning - ${blog.category || 'Service Profile'}`}
+                                            alt={`Valley Property Services - ${blog.category || 'Service Profile'}`}
                                             loading="lazy"
                                             width={600}
                                             height={400}
@@ -69,7 +69,7 @@ export default function BlogFeed({ blogs }: { blogs: BlogPost[] }) {
                                     <div className="w-full h-56 relative overflow-hidden bg-slate-100">
                                         <img
                                             src="/images/portfolio/building-wash-copy.webp"
-                                            alt={`Valley Window Care and Exterior Cleaning - ${blog.category || 'Service Profile'}`}
+                                            alt={`Valley Property Services - ${blog.category || 'Service Profile'}`}
                                             loading="lazy"
                                             width={600}
                                             height={400}

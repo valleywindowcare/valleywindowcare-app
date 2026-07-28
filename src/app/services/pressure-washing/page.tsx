@@ -20,7 +20,7 @@ export default function PressureWashingPage() {
         "name": "Professional Pressure Washing & Soft Washing",
         "provider": {
             "@type": "LocalBusiness",
-            "name": "Valley Window Care and Exterior Cleaning",
+            "name": "Valley Property Services",
             "telephone": "920-609-7085",
             "address": {
                 "@type": "PostalAddress",
@@ -98,11 +98,11 @@ export default function PressureWashingPage() {
                             <span className="text-2xl md:text-3xl mt-4 block">Green Bay & Northeast Wisconsin</span>
                         </h1>
                         <p className="text-lg md:text-xl text-gray-100 mb-6 font-semibold leading-relaxed drop-shadow-md">
-                            Valley Window Care and Exterior Cleaning provides premium pressure washing services to enhance your property's value.
+                            Valley Property Services provides premium pressure washing services to enhance your property's value.
                         </p>
                         <div className="bg-white/10 p-6 rounded-xl border border-white/20 backdrop-blur-sm text-left mb-8 shadow-lg">
                             <p className="text-base md:text-lg text-gray-100 leading-relaxed font-medium">
-                                Valley Window Care is a fully licensed and insured exterior cleaning company based in De Pere, Wisconsin. We provide residential soft washing, commercial pressure washing, and roof cleaning services across Green Bay, Appleton, and the Fox Valley. Our proprietary low-pressure system effectively removes Gloeocapsa magma (roof algae), rust, and winter road salt without damaging siding or concrete infrastructure.
+                                Valley Property Services is a fully licensed and insured exterior cleaning company based in De Pere, Wisconsin. We provide residential soft washing, commercial pressure washing, and roof cleaning services across Green Bay, Appleton, and the Fox Valley. Our proprietary low-pressure system effectively removes Gloeocapsa magma (roof algae), rust, and winter road salt without damaging siding or concrete infrastructure.
                             </p>
                         </div>
                     </div>
@@ -256,7 +256,7 @@ export default function PressureWashingPage() {
 
             <ServiceContent
                 title="Pressure Washing"
-                description="Valley Window Care and Exterior Cleaning provides premium pressure washing services."
+                description="Valley Property Services provides premium pressure washing services."
                 benefits={["Professional Quality", "Fully Insured", "Satisfaction Guaranteed"]}
                 process={["Free Quote", "Schedule Service", "Enjoy Your Clean Property"]}
                 image="/images/portfolio/pressure-washing.webp"
@@ -282,7 +282,7 @@ export default function PressureWashingPage() {
                     </h2>
                     <div className="bg-white/10 p-8 md:p-10 rounded-2xl border border-white/20 backdrop-blur-md shadow-2xl">
                         <p className="text-lg text-gray-100 leading-relaxed font-medium">
-                            For commercial properties in the Fox Valley, environmental liability is a critical concern. Valley Window Care operates in strict compliance with Wisconsin Department of Natural Resources (WDNR) and EPA regulations. We utilize advanced wastewater recovery protocols to ensure that heavy grease, toxic suspended solids, and chemical runoff never enter the Lower Fox River or municipal storm drains. By employing eco-friendly, non-butyl degreasers and professional water reclamation systems, we protect your business from regulatory fines while delivering a pristine clean.
+                            For commercial properties in the Fox Valley, environmental liability is a critical concern. Valley Property Services operates in strict compliance with Wisconsin Department of Natural Resources (WDNR) and EPA regulations. We utilize advanced wastewater recovery protocols to ensure that heavy grease, toxic suspended solids, and chemical runoff never enter the Lower Fox River or municipal storm drains. By employing eco-friendly, non-butyl degreasers and professional water reclamation systems, we protect your business from regulatory fines while delivering a pristine clean.
                         </p>
                     </div>
                 </div>
@@ -313,7 +313,7 @@ export default function PressureWashingPage() {
                     <div className="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100">
                         <h3 className="text-xl font-bold text-navy mb-3">Are your pressure washing chemicals safe for pets?</h3>
                         <p className="text-gray-600 leading-relaxed font-medium">
-                            Absolutely. Valley Window Care exclusively utilizes 100% biodegradable, non-butyl, and EPA-compliant cleaning solutions that are completely safe for your family, pets, and the local Fox Valley environment.
+                            Absolutely. Valley Property Services exclusively utilizes 100% biodegradable, non-butyl, and EPA-compliant cleaning solutions that are completely safe for your family, pets, and the local Fox Valley environment.
                         </p>
                     </div>
                 </div>

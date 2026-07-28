@@ -6,7 +6,7 @@ import PricingMatrix from '@/components/PricingMatrix';
 import ReviewSlider from '@/components/ReviewSlider';
 
 export const metadata = {
-    title: 'Commercial Winter Salt Removal Services | Valley Window Care',
+    title: 'Commercial Winter Salt Removal Services | Valley Property Services',
     description: 'Protect your commercial concrete from costly spalling and slip-and-fall liability. We use specialized chemical neutralizers to eliminate harsh road salts and magnesium chlorides.',
 };
 

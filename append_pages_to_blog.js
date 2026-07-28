@@ -80,7 +80,7 @@ wpPosts.forEach(post => {
     excerpt: 'Read the full guide on ${title.replace(/'/g, "\\'")}.',
     date: '${formattedDate}',
     category: '${category}',
-    author: 'Valley Window Care',
+    author: 'Valley Property Services',
     slug: '${slug}',
     readTime: '5 min read',
     content: \`${content}\`

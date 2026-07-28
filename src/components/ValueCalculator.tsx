@@ -98,7 +98,7 @@ export default function ValueCalculator() {
 
         const web3Payload = {
             access_key: "c8727880-065b-4c99-9190-7f4a13170752", 
-            subject: `🚨 PRICING GUIDE LEAD: ${safeName} - Valley Window Care`,
+            subject: `🚨 PRICING GUIDE LEAD: ${safeName} - Valley Property Services`,
             from_name: "Pricing Engine Trap",
             name: safeName,
             email: safeEmail,

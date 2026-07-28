@@ -25,9 +25,9 @@ export default function ServicePage() {
                         <span className="text-white text-xl md:text-2xl mt-4 block font-semibold drop-shadow-md">Starting at $3.00 per sq ft</span>
                     </>
                 }
-                description="Valley Window Care & Exterior Cleaning provides premium paver restoration services to enhance your property's value."
+                description="Valley Property Services provides premium paver restoration services to enhance your property's value."
                 bgImage="/images/paver-restoration-v1.webp"  
-                bgImageAlt="Valley Window Care & Exterior Cleaning expert paver patio restoration and cleaning in De Pere, WI"
+                bgImageAlt="Valley Property Services expert paver patio restoration and cleaning in De Pere, WI"
             />
 
             <Process isCommercial={false} />
@@ -38,7 +38,7 @@ export default function ServicePage() {
                 benefits={["Professional Quality", "Fully Insured", "Satisfaction Guaranteed"]}
                 process={["Free Estimate", "Schedule Wash", "Enjoy Your Property"]}
                 image="/images/portfolio/paver-sealing.webp"
-                imageAlt="Finished paver sealing and restoration results by Valley Window Care & Exterior Cleaning"
+                imageAlt="Finished paver sealing and restoration results by Valley Property Services"
             />
 
             <div className="bg-slate-50 border-t border-gray-200 relative mt-16">
@@ -105,7 +105,7 @@ export default function ServicePage() {
                         <div>
                             <h2 className="text-3xl font-extrabold text-navy mb-4">#1 Rated Paver Sealing Near Me</h2>
                             <p className="text-gray-600 leading-relaxed text-lg">
-                                If you are searching for "paver sealing near me" across the Fox Valley or Green Bay area, you need a team that understands local environmental demands. Valley Window Care & Exterior Cleaning exclusively utilizes breathable, solvent-based or premium water-based sealers that protect against UV degradation and winter road salts, ensuring 100% satisfaction guaranteed.
+                                If you are searching for "paver sealing near me" across the Fox Valley or Green Bay area, you need a team that understands local environmental demands. Valley Property Services exclusively utilizes breathable, solvent-based or premium water-based sealers that protect against UV degradation and winter road salts, ensuring 100% satisfaction guaranteed.
                             </p>
                         </div>
                     </div>

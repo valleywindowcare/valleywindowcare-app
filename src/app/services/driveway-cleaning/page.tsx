@@ -9,7 +9,7 @@ import { ShieldCheck, CheckCircle, ArrowRight, MapPin } from 'lucide-react';
 import ReviewSlider from '@/components/ReviewSlider';
 
 export const metadata = {
-    title: "Driveway Cleaning | Valley Window Care",
+    title: "Driveway Cleaning | Valley Property Services",
     description: "Professional concrete and asphalt surface cleaning. We physically remove oil stains, tire marks, and organic buildup.",
 };
 
@@ -20,7 +20,7 @@ export default function ServicePage() {
       "name": "Residential Driveway Cleaning",
       "provider": {
         "@type": "LocalBusiness",
-        "name": "Valley Window Care",
+        "name": "Valley Property Services",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Appleton",
@@ -60,7 +60,7 @@ export default function ServicePage() {
                 h1={
                     <>
                         <span className="capitalize">Driveway Cleaning</span> <br />
-                        <span className="text-gold text-2xl md:text-3xl mt-4 block">Valley Window Care</span>
+                        <span className="text-gold text-2xl md:text-3xl mt-4 block">Valley Property Services</span>
                     </>
                 }
                 description="Professional concrete and asphalt surface cleaning. We physically remove oil stains, tire marks, and organic buildup."
@@ -74,7 +74,7 @@ export default function ServicePage() {
                     {/* ENTITY CAPSULE */}
                     <section className="mb-16 mt-8">
                         <div className="text-lg leading-relaxed mb-8 font-bold text-navy">
-                            Valley Window Care is a fully insured exterior cleaning company providing professional driveway cleaning in <Link href="/service-areas/appleton" className="text-blue-600 hover:text-gold font-semibold transition-colors">Appleton</Link>, <Link href="/service-areas/green-bay" className="text-blue-600 hover:text-gold font-semibold transition-colors">Green Bay</Link>, and <Link href="/service-areas/door-county" className="text-blue-600 hover:text-gold font-semibold transition-colors">Door County</Link>, WI.
+                            Valley Property Services is a fully insured exterior cleaning company providing professional driveway cleaning in <Link href="/service-areas/appleton" className="text-blue-600 hover:text-gold font-semibold transition-colors">Appleton</Link>, <Link href="/service-areas/green-bay" className="text-blue-600 hover:text-gold font-semibold transition-colors">Green Bay</Link>, and <Link href="/service-areas/door-county" className="text-blue-600 hover:text-gold font-semibold transition-colors">Door County</Link>, WI.
                         </div>
                     </section>
 

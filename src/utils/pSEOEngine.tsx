@@ -195,7 +195,7 @@ export const generatePseoProcess = (citySlug: string, serviceSlug: string, servi
 
     const processPrefixes = [
         `Our local ${formatTitle(citySlug)} crew`,
-        `The Valley Window Care team`,
+        `The Valley Property Services team`,
         `Our specialized technicians`
     ];
     const prefix = processPrefixes[seed % processPrefixes.length];

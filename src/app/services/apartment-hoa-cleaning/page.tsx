@@ -11,7 +11,7 @@ import { faqData } from "@/data/faqData";
 import VanillaMapClient from "@/components/VanillaMapClient";
 
 export const metadata = {
-    title: "Apartment & HOA Cleaning | Valley Window Care",
+    title: "Apartment & HOA Cleaning | Valley Property Services",
     description: "Professional multi-unit exterior cleaning for apartments and HOAs in Green Bay.",
 };
 
@@ -40,7 +40,7 @@ export default function ApartmentHOACleaningPage() {
                             <span className="text-2xl md:text-3xl mt-4 block">Green Bay & Northeast Wisconsin</span>
                         </h1>
                         <p className="text-lg md:text-xl text-gray-100 mb-8 font-semibold leading-relaxed drop-shadow-md">
-                            Valley Window Care and Exterior Cleaning provides premium multi-unit exterior cleaning services.
+                            Valley Property Services provides premium multi-unit exterior cleaning services.
                         </p>
                     </div>
                     {/* Hero Form Stack */}
@@ -79,7 +79,7 @@ export default function ApartmentHOACleaningPage() {
 
             <ServiceContent
                 title="Apartment and HOA Cleaning"
-                description="Valley Window Care and Exterior Cleaning provides premium multi unit facility cleaning."
+                description="Valley Property Services provides premium multi unit facility cleaning."
                 benefits={["Professional Quality", "Fully Insured", "Satisfaction Guaranteed"]}
                 process={["Free Quote", "Schedule Service", "Enjoy Your Clean Property"]}
                 image="/images/portfolio/building-washing.webp"

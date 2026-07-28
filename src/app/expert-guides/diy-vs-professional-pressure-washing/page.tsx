@@ -5,7 +5,7 @@ import { AlertTriangle, CheckCircle, Droplets, Shield } from 'lucide-react';
 import ValueCalculator from '@/components/ValueCalculator';
 
 export const metadata: Metadata = {
-    title: 'DIY vs Professional Pressure Washing | Valley Window Care',
+    title: 'DIY vs Professional Pressure Washing | Valley Property Services',
     description: 'Expert advice on why professional soft washing systems outclass destructive retail pressure washers. Calculate your exact Wisconsin property restoration costs online.',
 };
 
@@ -59,7 +59,7 @@ export default function DiyVsPro() {
                             <h2 className="text-3xl font-bold text-navy">The Pro Standard</h2>
                         </div>
                         <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                            Professional exterior restoration completely abandons destructive high-pressure techniques when cleaning delicate siding or roofing. Valley Window Care relies on state-of-the-art Soft Wash architecture, ensuring an immaculate result without compromising the structural integrity of your investment.
+                            Professional exterior restoration completely abandons destructive high-pressure techniques when cleaning delicate siding or roofing. Valley Property Services relies on state-of-the-art Soft Wash architecture, ensuring an immaculate result without compromising the structural integrity of your investment.
                         </p>
                         <ul className="space-y-4">
                             <li className="flex gap-3 text-gray-600 font-medium">

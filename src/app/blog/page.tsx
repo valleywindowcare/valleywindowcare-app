@@ -9,7 +9,7 @@ import BlogFilterGrid from '@/components/BlogFilterGrid';
 import ReviewSlider from '@/components/ReviewSlider';
 
 export const metadata = {
-    title: 'Exterior Cleaning Insights & Tips | Valley Window Care Blog',
+    title: 'Exterior Cleaning Insights & Tips | Valley Property Services Blog',
     description: 'Read expert advice on roof cleaning, commercial pressure washing, and permanent lighting solutions across Northeast Wisconsin.',
 };
 
@@ -21,7 +21,7 @@ export default function BlogIndexPage() {
                 <SafeHeroImage
                     src="/images/portfolio/building-wash-copy.webp"
                     fallbackSrc="/images/portfolio/building-wash-copy.webp"
-                    alt="Valley Window Care Team - Exterior Cleaning Experts"
+                    alt="Valley Property Services Team - Exterior Cleaning Experts"
                 />
                 
                 {/* Dark Overlay */}

@@ -17,7 +17,7 @@ const blogs = [
       
       <h2>The Science of Pure Water Deionization</h2>
       <p>According to the <a href="https://dnr.wisconsin.gov/topic/DrinkingWater" rel="external nofollow" target="_blank">Wisconsin Department of Natural Resources</a>, our regional aquifers are inherently rich in dissolved solids. The only way to combat hard water is by neutralizing the water itself before it ever touches your glass.</p>
-      <p>At Valley Window Care, we utilize advanced Pure Water Technology. We feed regular tap water through a multi-stage deionization filtration system, stripping 100% of the Total Dissolved Solids (TDS) out of the stream. When this purified water is applied to your windows using carbon-fiber, water-fed poles, it acts like a microscopic magnet, absorbing the dirt and baked-on minerals.</p>
+      <p>At Valley Property Services, we utilize advanced Pure Water Technology. We feed regular tap water through a multi-stage deionization filtration system, stripping 100% of the Total Dissolved Solids (TDS) out of the stream. When this purified water is applied to your windows using carbon-fiber, water-fed poles, it acts like a microscopic magnet, absorbing the dirt and baked-on minerals.</p>
       <p>Because the water is perfectly pure, it dries naturally without leaving a single spot or streak behind.</p>
       
       <div class="blog-cta-injection"></div>

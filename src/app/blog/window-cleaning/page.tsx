@@ -13,8 +13,8 @@ import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 
 export const metadata: Metadata = {
-    title: "Window Cleaning | Valley Window Care and Exterior Cleaning",
-    description: "Valley Window Care and Exterior Cleaning provides premium exterior services including Window Cleaning in Northeast Wisconsin.",
+    title: "Window Cleaning | Valley Property Services",
+    description: "Valley Property Services provides premium exterior services including Window Cleaning in Northeast Wisconsin.",
     alternates: {
         canonical: "https://valleywindowcare.com/blog/window-cleaning"
     }

@@ -10,7 +10,7 @@ import VanillaMapClient from "@/components/VanillaMapClient";
 import PricingMatrix from "@/components/PricingMatrix";
 
 export const metadata = {
-    title: "Professional Pressure Washing Company & Building Washing | Valley Window Care",
+    title: "Professional Pressure Washing Company & Building Washing | Valley Property Services",
     description: "Northeast Wisconsin's most trusted commercial pressure washing company. Dumpster pads, storefronts, and massive concrete restoration.",
 };
 
@@ -37,7 +37,7 @@ export default function BuildingWashPage() {
                             <span className="text-2xl md:text-3xl mt-4 block">& Building Washing in Northeast Wisconsin</span>
                         </h1>
                         <p className="text-lg md:text-xl text-gray-100 mb-8 font-semibold leading-relaxed drop-shadow-md">
-                            Valley Window Care and Exterior Cleaning provides premium building washing services to enhance your property's value.
+                            Valley Property Services provides premium building washing services to enhance your property's value.
                         </p>
                     </div>
                     {/* Hero Form Stack */}
@@ -102,7 +102,7 @@ export default function BuildingWashPage() {
 
             <ServiceContent
                 title="Building Washing"
-                description="Valley Window Care and Exterior Cleaning provides premium building washing services."
+                description="Valley Property Services provides premium building washing services."
                 benefits={["Professional Quality", "Fully Insured", "Satisfaction Guaranteed"]}
                 process={["Free Quote", "Schedule Service", "Enjoy Your Clean Building"]}
                 protectionProtocols={[

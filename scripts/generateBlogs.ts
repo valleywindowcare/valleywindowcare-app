@@ -89,7 +89,7 @@ function generateArticleContent(title: string, index: number): string {
         <p>By scheduling annual interventions ranging from complete <strong><a href="/blog/window-cleaning">pure water window cleaning</a></strong> to full roof restoration, you reset the clock on these materials. You don't just restore the <span class="font-bold">curb appeal</span>; you completely halt the biological decay of the materials.</p>
 
         <div class="my-12 p-8 bg-slate-50 border-l-4 border-gold rounded-r-2xl shadow-sm italic text-gray-700">
-            "Professional exterior cleaning isn't just about making the house look nice for a barbecue; it's about actively defending the most expensive investment you own against the inevitable decay of harsh Wisconsin seasons." - <strong>Valley Window Care</strong>
+            "Professional exterior cleaning isn't just about making the house look nice for a barbecue; it's about actively defending the most expensive investment you own against the inevitable decay of harsh Wisconsin seasons." - <strong>Valley Property Services</strong>
         </div>
 
         <p>When you're ready to drastically improve your home's aesthetics and structural defenses, you need a highly specialized team that completely understands the specific environmental demands of <strong>${primaryCity}</strong>.</p>

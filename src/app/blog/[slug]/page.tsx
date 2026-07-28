@@ -29,12 +29,12 @@ export async function generateMetadata({ params }: Props) {
 
     if (!post) {
         return {
-            title: 'Post Not Found | Valley Window Care',
+            title: 'Post Not Found | Valley Property Services',
         };
     }
 
     return {
-        title: `${post.title} | Valley Window Care`,
+        title: `${post.title} | Valley Property Services`,
         description: post.excerpt,
     };
 }
@@ -137,16 +137,16 @@ export default async function BlogPostTemplate({ params }: Props) {
                 <div className="mt-16 sm:mt-24 pt-10 border-t border-slate-200 flex flex-col sm:flex-row items-center sm:items-start gap-6 bg-slate-50 rounded-2xl p-8 border border-slate-100 shadow-sm">
                     <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden flex-shrink-0 border-4 border-white shadow-md">
                         <img src="/images/portfolio/building-wash-copy.webp" 
-                            alt="Valley Window Care Team"
+                            alt="Valley Property Services Team"
                             className="w-full h-full object-cover"
                         />
                     </div>
                     <div className="text-center sm:text-left">
                         <h3 className="text-xl font-bold text-navy mb-2">
-                            {post.authorName || 'Written by The Valley Window Care Team'}
+                            {post.authorName || 'Written by The Valley Property Services Team'}
                         </h3>
                         <p className="text-slate-600 mb-4 leading-relaxed">
-                            {post.authorBio || 'The Valley Window Care team brings years of hands-on exterior cleaning and permanent lighting expertise to Northeast Wisconsin. Fully insured and committed to unparalleled quality, our experts specialize in protecting and elevating high-value properties.'}
+                            {post.authorBio || 'The Valley Property Services team brings years of hands-on exterior cleaning and permanent lighting expertise to Northeast Wisconsin. Fully insured and committed to unparalleled quality, our experts specialize in protecting and elevating high-value properties.'}
                         </p>
                         <Link href="/about-us" className="text-gold font-bold hover:text-navy transition-colors underline underline-offset-4">
                             Learn More About Us
@@ -186,12 +186,12 @@ export default async function BlogPostTemplate({ params }: Props) {
                     "image": `https://valleywindowcare.com${post.imagePath}`,
                     "author": {
                         "@type": "Person",
-                        "name": post.authorName || "The Valley Window Care Team",
+                        "name": post.authorName || "The Valley Property Services Team",
                         "url": "https://valleywindowcare.com/about-us"
                     },
                     "publisher": {
                         "@type": "Organization",
-                        "name": "Valley Window Care",
+                        "name": "Valley Property Services",
                         "logo": {
                             "@type": "ImageObject",
                             "url": "https://valleywindowcare.com/valley-window-care-logo-without-background.png"

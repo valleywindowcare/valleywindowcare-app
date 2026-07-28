@@ -121,7 +121,7 @@ export default function Header() {
 
                 {/* Call to Action Desktop */}
                 <div className="hidden lg:flex items-center ml-auto shrink-0 pr-1">
-                    <a href="tel:920-609-7085" className="flex items-center gap-2 text-navy font-bold hover:text-gold transition-colors shrink-0 mr-4 xl:mr-6" rel="nofollow" aria-label="Call Valley Window Care & Exterior Cleaning">
+                    <a href="tel:920-609-7085" className="flex items-center gap-2 text-navy font-bold hover:text-gold transition-colors shrink-0 mr-4 xl:mr-6" rel="nofollow" aria-label="Call Valley Property Services">
                         <span className="hidden xl:inline font-black text-navy-dark text-lg xl:text-xl break-words leading-tight tracking-tight">(920) 609-7085</span>
                         <Phone size={22} className="text-gold shrink-0 xl:hidden" aria-label="Phone Icon" />
                         <Phone size={18} className="hidden xl:block text-gold shrink-0" />

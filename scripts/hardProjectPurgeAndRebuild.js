@@ -87,8 +87,8 @@ for (const city of CITIES) {
             slug: generateSlug(title),
             date: new Date(Date.now() - Math.random() * 10000000000).toISOString().split('T')[0],
             category: legacy.category,
-            excerpt: `Professional insights from Valley Window Care and Exterior Cleaning proudly serving ${city}.`,
-            content: `Detailed guide regarding ${legacy.title}. Call Valley Window Care at 920-609-7085 for professional exterior cleaning near you.`,
+            excerpt: `Professional insights from Valley Property Services proudly serving ${city}.`,
+            content: `Detailed guide regarding ${legacy.title}. Call Valley Property Services at 920-609-7085 for professional exterior cleaning near you.`,
             author: { name: "James", role: "Exterior Cleaning Expert" },
             _serviceSlug: legacy.serviceSlug,
             _targetCity: city.toLowerCase().replace(/ /g, '-')
@@ -106,8 +106,8 @@ for (const city of CITIES) {
             slug: generateSlug(title),
             date: new Date(Date.now() - Math.random() * 10000000000).toISOString().split('T')[0],
             category: topic.category,
-            excerpt: `${title}. Protect your property value instantly with Valley Window Care.`,
-            content: `${title}. Valley Window Care serves ${city} with premium exterior cleaning. Call 920-609-7085 for an estimate!`,
+            excerpt: `${title}. Protect your property value instantly with Valley Property Services.`,
+            content: `${title}. Valley Property Services serves ${city} with premium exterior cleaning. Call 920-609-7085 for an estimate!`,
             author: { name: "James", role: "Exterior Cleaning Expert" },
             _serviceSlug: topic.serviceSlug,
             _targetCity: city.toLowerCase().replace(/ /g, '-')

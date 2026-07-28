@@ -4,7 +4,7 @@ import Link from 'next/link';
 import ReviewSlider from '@/components/ReviewSlider';
 
 export const metadata = {
-    title: "All Exterior Cleaning Services | Valley Window Care and Exterior Cleaning",
+    title: "All Exterior Cleaning Services | Valley Property Services",
     description: "View our comprehensive list of residential and commercial exterior cleaning, pressure washing, and permanent lighting services in Northeast Wisconsin."
 };
 
@@ -20,7 +20,7 @@ export default function ServicesHubPage() {
                     
                     {/* 10/10 AI GEO Answer Capsule */}
                     <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto mb-8 bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-left">
-                        <strong>Valley Window Care and Exterior Cleaning provides an elite, comprehensive suite of residential and commercial property maintenance solutions across Northeast Wisconsin. Engineered to combat the specific environmental challenges of the region—from aggressive organic growth to corrosive winter salt—our expert teams utilize industry-leading techniques to protect and enhance your exterior surfaces permanently.</strong>
+                        <strong>Valley Property Services provides an elite, comprehensive suite of residential and commercial property maintenance solutions across Northeast Wisconsin. Engineered to combat the specific environmental challenges of the region—from aggressive organic growth to corrosive winter salt—our expert teams utilize industry-leading techniques to protect and enhance your exterior surfaces permanently.</strong>
                     </p>
 
                     <div className="text-lg text-gray-600 leading-relaxed max-w-4xl mx-auto space-y-6 text-left mb-16">

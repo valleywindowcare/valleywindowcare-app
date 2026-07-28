@@ -107,6 +107,26 @@ export default function RootLayout({
         </noscript>
         <SpeedInsights />
         <Analytics />
+        {process.env.NEXT_PUBLIC_GADS_ID && (
+          <>
+            <Script
+              strategy="afterInteractive"
+              src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GADS_ID}`}
+            />
+            <Script
+              id="google-ads-init"
+              strategy="afterInteractive"
+              dangerouslySetInnerHTML={{
+                __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', '${process.env.NEXT_PUBLIC_GADS_ID}');
+                `,
+              }}
+            />
+          </>
+        )}
         {process.env.NEXT_PUBLIC_META_PIXEL_ID && (
           <Script
             id="fb-pixel"

@@ -11,7 +11,7 @@ import { faqData } from "@/data/faqData";
 import VanillaMapClient from "@/components/VanillaMapClient";
 
 export const metadata = {
-    title: "Christmas Lighting Installation | Valley Window Care",
+    title: "Christmas Lighting Installation | Valley Property Services",
     description: "Professional Christmas and holiday lighting installation in Green Bay. Custom designs and safe installation.",
 };
 
@@ -38,7 +38,7 @@ export default function ChristmasLightingPage() {
                             <span className="text-2xl md:text-3xl mt-4 block">Green Bay & Northeast Wisconsin</span>
                         </h1>
                         <p className="text-lg md:text-xl text-gray-100 mb-8 font-semibold leading-relaxed drop-shadow-md">
-                            Valley Window Care and Exterior Cleaning provides premium christmas lighting services to enhance your property's value.
+                            Valley Property Services provides premium christmas lighting services to enhance your property's value.
                         </p>
                     </div>
                     {/* Hero Form Stack */}
@@ -79,7 +79,7 @@ export default function ChristmasLightingPage() {
                     <div className="mb-16 max-w-4xl mx-auto text-center bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-gray-100">
                         <div className="text-gray-600 text-lg md:text-xl leading-relaxed space-y-6 text-left font-medium">
                             <p>
-                                Maintaining your property’s curb appeal doesn't stop when the sun goes down. At Valley Window Care, we believe your home or business deserves to shine year-round. Our premium permanent LED lighting services are specifically calibrated to withstand brutal Wisconsin winters while beautifully illuminating your property's exterior architecture.
+                                Maintaining your property’s curb appeal doesn't stop when the sun goes down. At Valley Property Services, we believe your home or business deserves to shine year-round. Our premium permanent LED lighting services are specifically calibrated to withstand brutal Wisconsin winters while beautifully illuminating your property's exterior architecture.
                             </p>
                             <p>
                                 We are proud to partner with Omni Lighting, the industry leader in high-performance permanent track lighting. By utilizing Omni Lighting's state-of-the-art RGBW technology, we deliver unmatched brightness, color accuracy, and durability. Our proprietary, color-matched aluminum tracks are custom-cut on-site to blend seamlessly into your existing soffit and fascia, hiding the wires and hardware completely from view during the day.

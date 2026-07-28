@@ -109,7 +109,7 @@ async function executeUniversalImageRepair() {
                 }
 
                 // Inject Standardized Global Alt Tag
-                const altString = `alt="Valley Window Care and Exterior Cleaning - ${activeCategory} Service Profile"`;
+                const altString = `alt="Valley Property Services - ${activeCategory} Service Profile"`;
                 if (safeImg.includes('alt=')) {
                     safeImg = safeImg.replace(/alt="[^"]*"/i, altString);
                 } else {

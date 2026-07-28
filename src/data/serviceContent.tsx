@@ -51,7 +51,7 @@ export const serviceContentMap: Record<string, { pageH1?: string, description: R
           },
           {
                     "question": "How long does a typical roof cleaning treatment last in Green Bay?",
-                    "answer": "A professional soft wash treatment from Valley Window Care typically keeps algae, moss, and lichen at bay for 2 to 4 years, depending on tree coverage and property shading."
+                    "answer": "A professional soft wash treatment from Valley Property Services typically keeps algae, moss, and lichen at bay for 2 to 4 years, depending on tree coverage and property shading."
           },
           {
                     "question": "Will the cleaning solution harm my landscaping?",
@@ -220,11 +220,11 @@ export const serviceContentMap: Record<string, { pageH1?: string, description: R
           },
           {
                     "question": "How much does concrete cleaning cost in the Green Bay area?",
-                    "answer": "Pricing for concrete cleaning varies based on the size and scope of the project. Valley Window Care offers free, no-obligation quotes customized to your exact needs."
+                    "answer": "Pricing for concrete cleaning varies based on the size and scope of the project. Valley Property Services offers free, no-obligation quotes customized to your exact needs."
           },
           {
                     "question": "Are your technicians insured for concrete cleaning services?",
-                    "answer": "Yes, Valley Window Care and Exterior Cleaning is fully licensed, insured, and trained to perform high-quality concrete cleaning safely."
+                    "answer": "Yes, Valley Property Services is fully licensed, insured, and trained to perform high-quality concrete cleaning safely."
           }
         ]
     },
@@ -232,7 +232,7 @@ export const serviceContentMap: Record<string, { pageH1?: string, description: R
         pageH1: "Premium Window Cleaning for Green Bay & De Pere Homes",
         description: (
             <section className="eeat-service-block">
-                <p className="mb-4">Valley Window Care & Exterior Cleaning delivers professional window restoration designed to maximize natural light and protect your glass from permanent etching. We are experts in hard water stain removal for windows throughout Northeast Wisconsin, completely restoring crystal-clear visibility and elevating your property's curb appeal without the use of high-pressure risks.</p>
+                <p className="mb-4">Valley Property Services delivers professional window restoration designed to maximize natural light and protect your glass from permanent etching. We are experts in hard water stain removal for windows throughout Northeast Wisconsin, completely restoring crystal-clear visibility and elevating your property's curb appeal without the use of high-pressure risks.</p>
                 <div className="bg-slate-50 border-l-4 border-gold p-4 mt-6 mb-4 rounded-r-lg shadow-sm">
                     <h4 className="text-navy font-bold text-lg mb-2">Powered by Pure Water Technology</h4>
                     <p className="text-gray-700">We utilize specialized multi-stage filtration systems capable of complete deionization. By stripping microscopic minerals from the water supply, we guarantee a flawless, streak-free shine on every pane without relying on harsh chemical residue or abrasive squeegees.</p>
@@ -263,7 +263,7 @@ export const serviceContentMap: Record<string, { pageH1?: string, description: R
         image: "/images/portfolio/window-cleaning.webp",
         faqs: [
           {
-                    "question": "Does Valley Window Care offer after-hours commercial window cleaning?",
+                    "question": "Does Valley Property Services offer after-hours commercial window cleaning?",
                     "answer": "Yes, we providing flexible scheduling including after-hours and early morning commercial window cleaning to prevent any disruption to your business."
           },
           {
@@ -311,11 +311,11 @@ export const serviceContentMap: Record<string, { pageH1?: string, description: R
           },
           {
                     "question": "How much does christmas lighting cost in the Green Bay area?",
-                    "answer": "Pricing for christmas lighting varies based on the size and scope of the project. Valley Window Care offers free, no-obligation quotes customized to your exact needs."
+                    "answer": "Pricing for christmas lighting varies based on the size and scope of the project. Valley Property Services offers free, no-obligation quotes customized to your exact needs."
           },
           {
                     "question": "Are your technicians insured for christmas lighting services?",
-                    "answer": "Yes, Valley Window Care and Exterior Cleaning is fully licensed, insured, and trained to perform high-quality christmas lighting safely."
+                    "answer": "Yes, Valley Property Services is fully licensed, insured, and trained to perform high-quality christmas lighting safely."
           }
         ]
     },
@@ -354,11 +354,11 @@ export const serviceContentMap: Record<string, { pageH1?: string, description: R
           },
           {
                     "question": "How much does pressure washing cost in the Green Bay area?",
-                    "answer": "Pricing for pressure washing varies based on the size and scope of the project. Valley Window Care offers free, no-obligation quotes customized to your exact needs."
+                    "answer": "Pricing for pressure washing varies based on the size and scope of the project. Valley Property Services offers free, no-obligation quotes customized to your exact needs."
           },
           {
                     "question": "Are your technicians insured for pressure washing services?",
-                    "answer": "Yes, Valley Window Care and Exterior Cleaning is fully licensed, insured, and trained to perform high-quality pressure washing safely."
+                    "answer": "Yes, Valley Property Services is fully licensed, insured, and trained to perform high-quality pressure washing safely."
           }
         ]
     },
@@ -411,11 +411,11 @@ export const serviceContentMap: Record<string, { pageH1?: string, description: R
           },
           {
                     "question": "How much does residential permanent led lighting cost in the Green Bay area?",
-                    "answer": "Pricing for residential permanent led lighting varies based on the size and scope of the project. Valley Window Care offers free, no-obligation quotes customized to your exact needs."
+                    "answer": "Pricing for residential permanent led lighting varies based on the size and scope of the project. Valley Property Services offers free, no-obligation quotes customized to your exact needs."
           },
           {
                     "question": "Are your technicians insured for residential permanent led lighting services?",
-                    "answer": "Yes, Valley Window Care and Exterior Cleaning is fully licensed, insured, and trained to perform high-quality residential permanent led lighting safely."
+                    "answer": "Yes, Valley Property Services is fully licensed, insured, and trained to perform high-quality residential permanent led lighting safely."
           }
         ]
     },
@@ -497,11 +497,11 @@ export const serviceContentMap: Record<string, { pageH1?: string, description: R
           },
           {
                     "question": "How much does deck cleaning cost in the Green Bay area?",
-                    "answer": "Pricing for deck cleaning varies based on the size and scope of the project. Valley Window Care offers free, no-obligation quotes customized to your exact needs."
+                    "answer": "Pricing for deck cleaning varies based on the size and scope of the project. Valley Property Services offers free, no-obligation quotes customized to your exact needs."
           },
           {
                     "question": "Are your technicians insured for deck cleaning services?",
-                    "answer": "Yes, Valley Window Care and Exterior Cleaning is fully licensed, insured, and trained to perform high-quality deck cleaning safely."
+                    "answer": "Yes, Valley Property Services is fully licensed, insured, and trained to perform high-quality deck cleaning safely."
           }
         ]
     },
@@ -540,11 +540,11 @@ export const serviceContentMap: Record<string, { pageH1?: string, description: R
           },
           {
                     "question": "How much does oxidation removal cost in the Green Bay area?",
-                    "answer": "Pricing for oxidation removal varies based on the size and scope of the project. Valley Window Care offers free, no-obligation quotes customized to your exact needs."
+                    "answer": "Pricing for oxidation removal varies based on the size and scope of the project. Valley Property Services offers free, no-obligation quotes customized to your exact needs."
           },
           {
                     "question": "Are your technicians insured for oxidation removal services?",
-                    "answer": "Yes, Valley Window Care and Exterior Cleaning is fully licensed, insured, and trained to perform high-quality oxidation removal safely."
+                    "answer": "Yes, Valley Property Services is fully licensed, insured, and trained to perform high-quality oxidation removal safely."
           }
         ]
     },
@@ -583,11 +583,11 @@ export const serviceContentMap: Record<string, { pageH1?: string, description: R
           },
           {
                     "question": "How much does soft wash cost in the Green Bay area?",
-                    "answer": "Pricing for soft wash varies based on the size and scope of the project. Valley Window Care offers free, no-obligation quotes customized to your exact needs."
+                    "answer": "Pricing for soft wash varies based on the size and scope of the project. Valley Property Services offers free, no-obligation quotes customized to your exact needs."
           },
           {
                     "question": "Are your technicians insured for soft wash services?",
-                    "answer": "Yes, Valley Window Care and Exterior Cleaning is fully licensed, insured, and trained to perform high-quality soft wash safely."
+                    "answer": "Yes, Valley Property Services is fully licensed, insured, and trained to perform high-quality soft wash safely."
           }
         ]
     },
@@ -626,11 +626,11 @@ export const serviceContentMap: Record<string, { pageH1?: string, description: R
           },
           {
                     "question": "How much does driveway cleaning cost in the Green Bay area?",
-                    "answer": "Pricing for driveway cleaning varies based on the size and scope of the project. Valley Window Care offers free, no-obligation quotes customized to your exact needs."
+                    "answer": "Pricing for driveway cleaning varies based on the size and scope of the project. Valley Property Services offers free, no-obligation quotes customized to your exact needs."
           },
           {
                     "question": "Are your technicians insured for driveway cleaning services?",
-                    "answer": "Yes, Valley Window Care and Exterior Cleaning is fully licensed, insured, and trained to perform high-quality driveway cleaning safely."
+                    "answer": "Yes, Valley Property Services is fully licensed, insured, and trained to perform high-quality driveway cleaning safely."
           }
         ]
     },
@@ -669,11 +669,11 @@ export const serviceContentMap: Record<string, { pageH1?: string, description: R
           },
           {
                     "question": "How much does solar panel cleaning cost in the Green Bay area?",
-                    "answer": "Pricing for solar panel cleaning varies based on the size and scope of the project. Valley Window Care offers free, no-obligation quotes customized to your exact needs."
+                    "answer": "Pricing for solar panel cleaning varies based on the size and scope of the project. Valley Property Services offers free, no-obligation quotes customized to your exact needs."
           },
           {
                     "question": "Are your technicians insured for solar panel cleaning services?",
-                    "answer": "Yes, Valley Window Care and Exterior Cleaning is fully licensed, insured, and trained to perform high-quality solar panel cleaning safely."
+                    "answer": "Yes, Valley Property Services is fully licensed, insured, and trained to perform high-quality solar panel cleaning safely."
           }
         ]
     },
@@ -712,11 +712,11 @@ export const serviceContentMap: Record<string, { pageH1?: string, description: R
           },
           {
                     "question": "How much does rust removal cost in the Green Bay area?",
-                    "answer": "Pricing for rust removal varies based on the size and scope of the project. Valley Window Care offers free, no-obligation quotes customized to your exact needs."
+                    "answer": "Pricing for rust removal varies based on the size and scope of the project. Valley Property Services offers free, no-obligation quotes customized to your exact needs."
           },
           {
                     "question": "Are your technicians insured for rust removal services?",
-                    "answer": "Yes, Valley Window Care and Exterior Cleaning is fully licensed, insured, and trained to perform high-quality rust removal safely."
+                    "answer": "Yes, Valley Property Services is fully licensed, insured, and trained to perform high-quality rust removal safely."
           }
         ]
     },
@@ -756,11 +756,11 @@ export const serviceContentMap: Record<string, { pageH1?: string, description: R
           },
           {
                     "question": "How much does building washing cost in the Green Bay area?",
-                    "answer": "Pricing for building washing varies based on the size and scope of the project. Valley Window Care offers free, no-obligation quotes customized to your exact needs."
+                    "answer": "Pricing for building washing varies based on the size and scope of the project. Valley Property Services offers free, no-obligation quotes customized to your exact needs."
           },
           {
                     "question": "Are your technicians insured for building washing services?",
-                    "answer": "Yes, Valley Window Care and Exterior Cleaning is fully licensed, insured, and trained to perform high-quality building washing safely."
+                    "answer": "Yes, Valley Property Services is fully licensed, insured, and trained to perform high-quality building washing safely."
           }
         ]
     },
@@ -842,11 +842,11 @@ export const serviceContentMap: Record<string, { pageH1?: string, description: R
           },
           {
                     "question": "How much does permanent led lighting cost in the Green Bay area?",
-                    "answer": "Pricing for permanent led lighting varies based on the size and scope of the project. Valley Window Care offers free, no-obligation quotes customized to your exact needs."
+                    "answer": "Pricing for permanent led lighting varies based on the size and scope of the project. Valley Property Services offers free, no-obligation quotes customized to your exact needs."
           },
           {
                     "question": "Are your technicians insured for permanent led lighting services?",
-                    "answer": "Yes, Valley Window Care and Exterior Cleaning is fully licensed, insured, and trained to perform high-quality permanent led lighting safely."
+                    "answer": "Yes, Valley Property Services is fully licensed, insured, and trained to perform high-quality permanent led lighting safely."
           }
         ]
     },
@@ -885,11 +885,11 @@ export const serviceContentMap: Record<string, { pageH1?: string, description: R
           },
           {
                     "question": "How much does commercial roof cleaning cost in the Green Bay area?",
-                    "answer": "Pricing for commercial roof cleaning varies based on the size and scope of the project. Valley Window Care offers free, no-obligation quotes customized to your exact needs."
+                    "answer": "Pricing for commercial roof cleaning varies based on the size and scope of the project. Valley Property Services offers free, no-obligation quotes customized to your exact needs."
           },
           {
                     "question": "Are your technicians insured for commercial roof cleaning services?",
-                    "answer": "Yes, Valley Window Care and Exterior Cleaning is fully licensed, insured, and trained to perform high-quality commercial roof cleaning safely."
+                    "answer": "Yes, Valley Property Services is fully licensed, insured, and trained to perform high-quality commercial roof cleaning safely."
           }
         ]
     },
@@ -928,11 +928,11 @@ export const serviceContentMap: Record<string, { pageH1?: string, description: R
           },
           {
                     "question": "How much does commercial pressure washing cost in the Green Bay area?",
-                    "answer": "Pricing for commercial pressure washing varies based on the size and scope of the project. Valley Window Care offers free, no-obligation quotes customized to your exact needs."
+                    "answer": "Pricing for commercial pressure washing varies based on the size and scope of the project. Valley Property Services offers free, no-obligation quotes customized to your exact needs."
           },
           {
                     "question": "Are your technicians insured for commercial pressure washing services?",
-                    "answer": "Yes, Valley Window Care and Exterior Cleaning is fully licensed, insured, and trained to perform high-quality commercial pressure washing safely."
+                    "answer": "Yes, Valley Property Services is fully licensed, insured, and trained to perform high-quality commercial pressure washing safely."
           }
         ]
     },
@@ -974,11 +974,11 @@ export const serviceContentMap: Record<string, { pageH1?: string, description: R
           },
           {
                     "question": "How much does graffiti removal cost in the Green Bay area?",
-                    "answer": "Pricing for graffiti removal varies based on the size and scope of the project. Valley Window Care offers free, no-obligation quotes customized to your exact needs."
+                    "answer": "Pricing for graffiti removal varies based on the size and scope of the project. Valley Property Services offers free, no-obligation quotes customized to your exact needs."
           },
           {
                     "question": "Are your technicians insured for graffiti removal services?",
-                    "answer": "Yes, Valley Window Care and Exterior Cleaning is fully licensed, insured, and trained to perform high-quality graffiti removal safely."
+                    "answer": "Yes, Valley Property Services is fully licensed, insured, and trained to perform high-quality graffiti removal safely."
           }
         ]
     },
@@ -1018,11 +1018,11 @@ export const serviceContentMap: Record<string, { pageH1?: string, description: R
           },
           {
                     "question": "How much does hoa multi unit cleaning cost in the Green Bay area?",
-                    "answer": "Pricing for hoa multi unit cleaning varies based on the size and scope of the project. Valley Window Care offers free, no-obligation quotes customized to your exact needs."
+                    "answer": "Pricing for hoa multi unit cleaning varies based on the size and scope of the project. Valley Property Services offers free, no-obligation quotes customized to your exact needs."
           },
           {
                     "question": "Are your technicians insured for hoa multi unit cleaning services?",
-                    "answer": "Yes, Valley Window Care and Exterior Cleaning is fully licensed, insured, and trained to perform high-quality hoa multi unit cleaning safely."
+                    "answer": "Yes, Valley Property Services is fully licensed, insured, and trained to perform high-quality hoa multi unit cleaning safely."
           }
         ]
     },
@@ -1061,11 +1061,11 @@ export const serviceContentMap: Record<string, { pageH1?: string, description: R
           },
           {
                     "question": "How much does storefront cleaning cost in the Green Bay area?",
-                    "answer": "Pricing for storefront cleaning varies based on the size and scope of the project. Valley Window Care offers free, no-obligation quotes customized to your exact needs."
+                    "answer": "Pricing for storefront cleaning varies based on the size and scope of the project. Valley Property Services offers free, no-obligation quotes customized to your exact needs."
           },
           {
                     "question": "Are your technicians insured for storefront cleaning services?",
-                    "answer": "Yes, Valley Window Care and Exterior Cleaning is fully licensed, insured, and trained to perform high-quality storefront cleaning safely."
+                    "answer": "Yes, Valley Property Services is fully licensed, insured, and trained to perform high-quality storefront cleaning safely."
           }
         ]
     },
@@ -1147,11 +1147,11 @@ export const serviceContentMap: Record<string, { pageH1?: string, description: R
           },
           {
                     "question": "How much does parking lot and garage cleaning cost in the Green Bay area?",
-                    "answer": "Pricing for parking lot and garage cleaning varies based on the size and scope of the project. Valley Window Care offers free, no-obligation quotes customized to your exact needs."
+                    "answer": "Pricing for parking lot and garage cleaning varies based on the size and scope of the project. Valley Property Services offers free, no-obligation quotes customized to your exact needs."
           },
           {
                     "question": "Are your technicians insured for parking lot and garage cleaning services?",
-                    "answer": "Yes, Valley Window Care and Exterior Cleaning is fully licensed, insured, and trained to perform high-quality parking lot and garage cleaning safely."
+                    "answer": "Yes, Valley Property Services is fully licensed, insured, and trained to perform high-quality parking lot and garage cleaning safely."
           }
         ]
     },
@@ -1190,11 +1190,11 @@ export const serviceContentMap: Record<string, { pageH1?: string, description: R
           },
           {
                     "question": "How much does chewing gum removal cost in the Green Bay area?",
-                    "answer": "Pricing for chewing gum removal varies based on the size and scope of the project. Valley Window Care offers free, no-obligation quotes customized to your exact needs."
+                    "answer": "Pricing for chewing gum removal varies based on the size and scope of the project. Valley Property Services offers free, no-obligation quotes customized to your exact needs."
           },
           {
                     "question": "Are your technicians insured for chewing gum removal services?",
-                    "answer": "Yes, Valley Window Care and Exterior Cleaning is fully licensed, insured, and trained to perform high-quality chewing gum removal safely."
+                    "answer": "Yes, Valley Property Services is fully licensed, insured, and trained to perform high-quality chewing gum removal safely."
           }
         ]
     },
@@ -1233,11 +1233,11 @@ export const serviceContentMap: Record<string, { pageH1?: string, description: R
           },
           {
                     "question": "How much does commercial awning cleaning cost in the Green Bay area?",
-                    "answer": "Pricing for commercial awning cleaning varies based on the size and scope of the project. Valley Window Care offers free, no-obligation quotes customized to your exact needs."
+                    "answer": "Pricing for commercial awning cleaning varies based on the size and scope of the project. Valley Property Services offers free, no-obligation quotes customized to your exact needs."
           },
           {
                     "question": "Are your technicians insured for commercial awning cleaning services?",
-                    "answer": "Yes, Valley Window Care and Exterior Cleaning is fully licensed, insured, and trained to perform high-quality commercial awning cleaning safely."
+                    "answer": "Yes, Valley Property Services is fully licensed, insured, and trained to perform high-quality commercial awning cleaning safely."
           }
         ]
     },
@@ -1277,11 +1277,11 @@ export const serviceContentMap: Record<string, { pageH1?: string, description: R
           },
           {
                     "question": "How much does gas station cleaning cost in the Green Bay area?",
-                    "answer": "Pricing for gas station cleaning varies based on the size and scope of the project. Valley Window Care offers free, no-obligation quotes customized to your exact needs."
+                    "answer": "Pricing for gas station cleaning varies based on the size and scope of the project. Valley Property Services offers free, no-obligation quotes customized to your exact needs."
           },
           {
                     "question": "Are your technicians insured for gas station cleaning services?",
-                    "answer": "Yes, Valley Window Care and Exterior Cleaning is fully licensed, insured, and trained to perform high-quality gas station cleaning safely."
+                    "answer": "Yes, Valley Property Services is fully licensed, insured, and trained to perform high-quality gas station cleaning safely."
           }
         ]
     },
@@ -1320,11 +1320,11 @@ export const serviceContentMap: Record<string, { pageH1?: string, description: R
           },
           {
                     "question": "How much does post construction cleanup cost in the Green Bay area?",
-                    "answer": "Pricing for post construction cleanup varies based on the size and scope of the project. Valley Window Care offers free, no-obligation quotes customized to your exact needs."
+                    "answer": "Pricing for post construction cleanup varies based on the size and scope of the project. Valley Property Services offers free, no-obligation quotes customized to your exact needs."
           },
           {
                     "question": "Are your technicians insured for post construction cleanup services?",
-                    "answer": "Yes, Valley Window Care and Exterior Cleaning is fully licensed, insured, and trained to perform high-quality post construction cleanup safely."
+                    "answer": "Yes, Valley Property Services is fully licensed, insured, and trained to perform high-quality post construction cleanup safely."
           }
         ]
     },
@@ -1406,11 +1406,11 @@ export const serviceContentMap: Record<string, { pageH1?: string, description: R
           },
           {
                     "question": "How much does commercial hood cleaning cost in the Green Bay area?",
-                    "answer": "Pricing for commercial hood cleaning varies based on the size and scope of the project. Valley Window Care offers free, no-obligation quotes customized to your exact needs."
+                    "answer": "Pricing for commercial hood cleaning varies based on the size and scope of the project. Valley Property Services offers free, no-obligation quotes customized to your exact needs."
           },
           {
                     "question": "Are your technicians insured for commercial hood cleaning services?",
-                    "answer": "Yes, Valley Window Care and Exterior Cleaning is fully licensed, insured, and trained to perform high-quality commercial hood cleaning safely."
+                    "answer": "Yes, Valley Property Services is fully licensed, insured, and trained to perform high-quality commercial hood cleaning safely."
           }
         ]
     },
@@ -1450,11 +1450,11 @@ export const serviceContentMap: Record<string, { pageH1?: string, description: R
           },
           {
                     "question": "How much does apartment exterior cleaning cost in the Green Bay area?",
-                    "answer": "Pricing for apartment exterior cleaning varies based on the size and scope of the project. Valley Window Care offers free, no-obligation quotes customized to your exact needs."
+                    "answer": "Pricing for apartment exterior cleaning varies based on the size and scope of the project. Valley Property Services offers free, no-obligation quotes customized to your exact needs."
           },
           {
                     "question": "Are your technicians insured for apartment exterior cleaning services?",
-                    "answer": "Yes, Valley Window Care and Exterior Cleaning is fully licensed, insured, and trained to perform high-quality apartment exterior cleaning safely."
+                    "answer": "Yes, Valley Property Services is fully licensed, insured, and trained to perform high-quality apartment exterior cleaning safely."
           }
         ]
     },

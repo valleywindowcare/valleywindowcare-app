@@ -50,7 +50,7 @@ export default function ServiceContent({ title, description, benefits, process, 
                                 {description}
                             </div>
                             <p>
-                                When you choose Valley Window Care for your {title.toLowerCase()}{localText}, you're investing in a trusted local team completely dedicated to unparalleled results. We exclusively utilize eco-friendly, biodegradable cleaning detergents that pose absolutely zero threat to your landscaping, your pets, or your family.
+                                When you choose Valley Property Services for your {title.toLowerCase()}{localText}, you're investing in a trusted local team completely dedicated to unparalleled results. We exclusively utilize eco-friendly, biodegradable cleaning detergents that pose absolutely zero threat to your landscaping, your pets, or your family.
                             </p>
                         </div>
                     </div>

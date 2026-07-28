@@ -103,8 +103,8 @@ for (const legacy of LEGACY_TOPICS) {
         slug: generateSlug(legacy.title),
         date: new Date(Date.now() - Math.random() * 10000000000).toISOString().split('T')[0],
         category: legacy.category,
-        excerpt: `Professional insights on ${legacy.title.toLowerCase()}. Learn the best practices and recommendations from Valley Window Care and Exterior Cleaning.`,
-        content: `Detailed guide regarding ${legacy.title}. Call Valley Window Care at 920-609-7085 for professional exterior cleaning near you.`,
+        excerpt: `Professional insights on ${legacy.title.toLowerCase()}. Learn the best practices and recommendations from Valley Property Services.`,
+        content: `Detailed guide regarding ${legacy.title}. Call Valley Property Services at 920-609-7085 for professional exterior cleaning near you.`,
         author: { name: "James", role: "Exterior Cleaning Expert" },
         _serviceSlug: legacy.serviceSlug,
         _targetCity: "northeast-wisconsin"
@@ -122,7 +122,7 @@ for (const city of CITIES) {
             date: new Date(Date.now() - Math.random() * 10000000000).toISOString().split('T')[0],
             category: topic.category,
             excerpt: `Learn everything you need to know about ${topic.category.toLowerCase()} in ${city}. Boost your property value instantly.`,
-            content: `${title}. Valley Window Care serves ${city} with premium exterior cleaning. Call 920-609-7085 for an estimate!`,
+            content: `${title}. Valley Property Services serves ${city} with premium exterior cleaning. Call 920-609-7085 for an estimate!`,
             author: { name: "James", role: "Exterior Cleaning Expert" },
             _serviceSlug: topic.serviceSlug,
             _targetCity: city.toLowerCase().replace(/ /g, '-')

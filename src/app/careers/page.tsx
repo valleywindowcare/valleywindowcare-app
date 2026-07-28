@@ -5,7 +5,7 @@ import { ChevronRight, Briefcase, GraduationCap, DollarSign } from 'lucide-react
 import HeroForm from '@/components/HeroForm';
 
 export const metadata: Metadata = {
-    title: 'Pressure Washing Jobs in Wisconsin | Careers at Valley Window Care',
+    title: 'Pressure Washing Jobs in Wisconsin | Careers at Valley Property Services',
     description: 'Join the premier exterior maintenance team in the Fox Valley. Seeking highly-motivated individuals for pressure washing jobs and field operations.',
 };
 
@@ -25,7 +25,7 @@ export default function Careers() {
 
             <section className="py-20 px-4 max-w-5xl mx-auto">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl font-extrabold text-navy mb-4">Why Work For Valley Window Care?</h2>
+                    <h2 className="text-3xl font-extrabold text-navy mb-4">Why Work For Valley Property Services?</h2>
                     <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
                         We don't just wash homes; we are highly-trained exterior restoration professionals. If you are looking for an active, engaging, and high-paying pressure washing job in Wisconsin that isn't chained to a desk, we want you on our rigs.
                     </p>

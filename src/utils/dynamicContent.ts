@@ -52,8 +52,8 @@ export function generateLocalDescription(city: string, serviceTitle: string, bas
     const assurance = localAssurances[(seed + 2) % localAssurances.length].replace('{city}', city);
 
     let baseText = extractText(baseDescription);
-    // Strip any leading generic "Valley Window Care provides..." if present so we can rebuild it
-    baseText = baseText.replace(/^(Valley Window Care|We) (provides|offers) (premium |professional )?(.*?)(\. |\.?$)/i, '');
+    // Strip any leading generic "Valley Property Services provides..." if present so we can rebuild it
+    baseText = baseText.replace(/^(Valley Property Services|We) (provides|offers) (premium |professional )?(.*?)(\. |\.?$)/i, '');
 
     // Construct a natural paragraph
     const constructions = [

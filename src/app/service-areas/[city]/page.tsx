@@ -229,7 +229,7 @@ export default async function CityHubPage({ params }: PageProps) {
 
                     {/* DYNAMIC ENTITY CAPSULE INJECTION with Internal Pillar Links */}
                     <div className="text-lg leading-relaxed mb-8 font-bold text-navy">
-                        Valley Window Care is a fully insured exterior cleaning company providing professional, low-pressure roof washing, window cleaning, and high-ticket <Link href="/services/paver-patio-restorations" className="text-blue-600 hover:text-gold font-semibold transition-colors underline decoration-blue-200 underline-offset-4">expert paver restoration</Link> in <Link href="/service-areas/appleton" className="text-blue-600 hover:text-gold font-semibold transition-colors">Appleton</Link>, <Link href="/service-areas/green-bay" className="text-blue-600 hover:text-gold font-semibold transition-colors">Green Bay</Link>, and <Link href="/service-areas/door-county" className="text-blue-600 hover:text-gold font-semibold transition-colors">Door County</Link>, WI. We specialize in delicate <Link href="/services/roof-cleaning" className="text-blue-600 hover:text-gold font-semibold transition-colors underline decoration-blue-200 underline-offset-4">soft-wash roof treatments</Link> that destroy organic material without extreme water pressure.
+                        Valley Property Services is a fully insured exterior cleaning company providing professional, low-pressure roof washing, window cleaning, and high-ticket <Link href="/services/paver-patio-restorations" className="text-blue-600 hover:text-gold font-semibold transition-colors underline decoration-blue-200 underline-offset-4">expert paver restoration</Link> in <Link href="/service-areas/appleton" className="text-blue-600 hover:text-gold font-semibold transition-colors">Appleton</Link>, <Link href="/service-areas/green-bay" className="text-blue-600 hover:text-gold font-semibold transition-colors">Green Bay</Link>, and <Link href="/service-areas/door-county" className="text-blue-600 hover:text-gold font-semibold transition-colors">Door County</Link>, WI. We specialize in delicate <Link href="/services/roof-cleaning" className="text-blue-600 hover:text-gold font-semibold transition-colors underline decoration-blue-200 underline-offset-4">soft-wash roof treatments</Link> that destroy organic material without extreme water pressure.
                     </div>
 
                     {/* ENFORCED ARRAY MAPPING FOR BESPOKE INTRODUCTIONS */}
@@ -457,14 +457,14 @@ export default async function CityHubPage({ params }: PageProps) {
                         </div>
                     </div>
 
-                    {/* 100% Satisfaction Guarantee from the Valley Window Care team */}
+                    {/* 100% Satisfaction Guarantee from the Valley Property Services team */}
                     <div className="mt-8 flex items-center justify-center gap-4 p-6 bg-slate-50 rounded-2xl border border-gray-100">
                         <div className="bg-green-100 p-3 rounded-full shrink-0">
                             <ShieldCheck className="text-green-600" size={28} />
                         </div>
                         <div>
                             <h4 className="text-lg font-bold text-navy">100% Satisfaction Guarantee</h4>
-                            <p className="text-gray-600 text-sm">Backed by the Valley Window Care team.</p>
+                            <p className="text-gray-600 text-sm">Backed by the Valley Property Services team.</p>
                         </div>
                     </div>
                 </div>
@@ -479,7 +479,7 @@ export default async function CityHubPage({ params }: PageProps) {
                         __html: JSON.stringify({
                             "@context": "https://schema.org",
                             "@type": "LocalBusiness",
-                            "name": "Valley Window Care and Exterior Cleaning",
+                            "name": "Valley Property Services",
                             "image": "https://valleywindowcare.com/images/portfolio/building-wash-copy.webp",
                             "areaServed": {
                                 "@type": "City",
