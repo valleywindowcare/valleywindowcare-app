@@ -30,13 +30,13 @@ export default function Header() {
             <div className="container mx-auto max-w-7xl px-5 sm:px-6 lg:px-8 flex items-center justify-between min-h-[64px] md:min-h-[80px] py-2 md:py-3 lg:py-5">
 
                 {/* Logo Section (Left Aligned) */}
-                <Link href="/" aria-label="Home" className="shrink-0 hover:opacity-90 transition-opacity z-40 py-1 flex items-center relative min-h-[60px] md:min-h-[80px]">
+                <Link href="/" aria-label="Home" className="shrink-0 hover:opacity-90 transition-opacity z-40 py-1 flex items-center relative">
                     <Image
                         src={pathname?.includes('lighting') ? "/Blue%20Version%20copy/VPS%20Permanent%20Lighting/PNG/VPS%20Permanent%20Lighting.png" : "/Blue%20Version%20copy/VPS%20Exterior%20Cleaning/PNG/VPS%20Exterior%20Cleaning.png"}
                         alt="Valley Property Services Logo"
-                        width={300}
-                        height={90}
-                        className="object-contain object-left w-[180px] sm:w-[220px] md:w-[260px] lg:w-[300px] h-auto scale-[1.15] sm:scale-125 origin-left transform"
+                        width={280}
+                        height={80}
+                        className="object-contain object-left w-auto max-h-9 md:max-h-12"
                         priority
                     />
                 </Link>
