@@ -51,7 +51,7 @@ export default function RootLayout({
              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-             })(window,document,'script','dataLayer','GTM-PKHVCB3X');`,
+             })(window,document,'script','dataLayer','GTM-MC25G2RK');`,
           }}
         />
         <script
@@ -97,14 +97,16 @@ export default function RootLayout({
       <body
         className={`${outfit.variable} ${inter.variable} font-inter tracking-wide leading-relaxed antialiased min-h-screen flex flex-col relative pb-16 md:pb-0 bg-slate-50 text-[#353738]`}
       >
+        {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe 
-            src="https://www.googletagmanager.com/ns.html?id=GTM-PKHVCB3X"
+            src="https://www.googletagmanager.com/ns.html?id=GTM-MC25G2RK"
             height="0" 
             width="0" 
             style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
+        {/* End Google Tag Manager (noscript) */}
         <SpeedInsights />
         <Analytics />
         {process.env.NEXT_PUBLIC_GADS_ID && (
