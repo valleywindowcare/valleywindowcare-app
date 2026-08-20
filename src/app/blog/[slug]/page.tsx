@@ -194,7 +194,7 @@ export default async function BlogPostTemplate({ params }: Props) {
                         "name": "Valley Property Services",
                         "logo": {
                             "@type": "ImageObject",
-                            "url": "https://valleywindowcare.com/valley-window-care-logo-without-background.png"
+                            "url": "https://valleywindowcare.com/Blue%20Version%20copy/VPS%20Exterior%20Cleaning/PNG/VPS%20Exterior%20Cleaning.png"
                         }
                     },
                     "datePublished": post.date,

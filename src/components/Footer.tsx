@@ -12,8 +12,8 @@ export default function Footer() {
                     <div className="flex flex-col items-center md:items-start text-center md:text-left">
                         <div className="relative h-14 w-56 mb-4">
                             <Image
-                                src="/valley-window-care-logo-without-background.png"
-                                alt="Valley Exterior Restoration serving Green Bay and the Fox Valley"
+                                src="/Blue%20Version%20copy/VPS%20Exterior%20Cleaning/PNG/VPS%20Exterior%20Cleaning.png"
+                                alt="Valley Property Services serving Green Bay and the Fox Valley"
                                 fill
                                 className="object-contain object-center md:object-left"
                             />
