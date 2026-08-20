@@ -30,15 +30,17 @@ export default function Header() {
             <div className="container mx-auto max-w-7xl px-5 sm:px-6 lg:px-8 flex items-center justify-between min-h-[64px] md:min-h-[80px] py-2 md:py-3 lg:py-5">
 
                 {/* Logo Section (Left Aligned) */}
-                <Link href="/" aria-label="Home" className="shrink-0 hover:opacity-90 transition-opacity z-40 py-1 flex items-center relative">
-                    <Image
-                        src={pathname?.includes('lighting') ? "/Blue%20Version%20copy/VPS%20Permanent%20Lighting/PNG/VPS%20Permanent%20Lighting.png" : "/Blue%20Version%20copy/VPS%20Exterior%20Cleaning/PNG/VPS%20Exterior%20Cleaning.png"}
-                        alt="Valley Property Services Logo"
-                        width={280}
-                        height={80}
-                        className="object-contain object-left w-auto max-h-9 md:max-h-12"
-                        priority
-                    />
+                <Link href="/" aria-label="Home" className="shrink-0 max-w-[280px] max-h-[60px] hover:opacity-90 transition-opacity z-40 py-1 flex items-center relative">
+                    <div className="relative h-10 w-36 sm:h-12 sm:w-40 lg:h-12 lg:w-48 xl:h-14 xl:w-56 min-w-[140px] max-h-[60px] shrink-0">
+                        <Image
+                            src={pathname?.includes('lighting') ? "/Blue%20Version%20copy/VPS%20Permanent%20Lighting/PNG/VPS%20Permanent%20Lighting.png" : "/Blue%20Version%20copy/VPS%20Exterior%20Cleaning/PNG/VPS%20Exterior%20Cleaning.png"}
+                            alt="Valley Property Services Logo"
+                            fill
+                            className="object-contain object-left"
+                            sizes="(max-width: 640px) 140px, (max-width: 1280px) 192px, 224px"
+                            priority
+                        />
+                    </div>
                 </Link>
 
                 {/* Mobile Persistent Contact Bar + Hamburger (Right Aligned - Hidden at 1024px) */}
