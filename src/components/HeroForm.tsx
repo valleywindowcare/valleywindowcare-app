@@ -10,6 +10,7 @@ declare global {
   interface Window {
     gtag: any;
     fbq: any;
+    oaiq: any;
     dataLayer: any[];
   }
 }
@@ -101,6 +102,15 @@ export default function HeroForm() {
             // Fire Meta Pixel 'Lead' Event AFTER confirmation (with Deduplication ID)
             if (typeof window !== "undefined" && window.fbq) {
                 window.fbq("track", "Lead", {}, { eventID: generatedEventId });
+            }
+
+            // Fire OpenAI Conversion Event
+            if (typeof window !== "undefined" && window.oaiq) {
+                window.oaiq("measure", "registration_completed", {
+                    type: "customer_action",
+                    amount: 0,
+                    currency: "USD"
+                });
             }
             
             // GTM DataLayer Intercept Configuration

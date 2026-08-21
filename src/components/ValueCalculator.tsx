@@ -125,6 +125,14 @@ export default function ValueCalculator() {
             if (typeof window !== "undefined" && window.fbq) {
                 window.fbq("track", "Lead", {}, { eventID: generatedEventId });
             }
+
+            if (typeof window !== "undefined" && window.oaiq) {
+                window.oaiq("measure", "registration_completed", {
+                    type: "customer_action",
+                    amount: 0,
+                    currency: "USD"
+                });
+            }
         }
     } catch (error) {
         console.error("Form error:", error);

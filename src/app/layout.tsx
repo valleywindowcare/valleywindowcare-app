@@ -44,6 +44,13 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <Script
+          id="openai-pixel"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+             __html: `!function(w,d,s,u){if(w.oaiq)return;var q=function(){q.q.push(arguments)};q.q=[];w.oaiq=q;var j=d.createElement(s);j.async=1;j.src=u;var f=d.getElementsByTagName(s)[0];f.parentNode.insertBefore(j,f)}(window,document,"script","https://bzrcdn.openai.com/sdk/oaiq.min.js");oaiq("init",{pixelId:"UEmYjhDavsEzcQmQozCHgV",debug:true});`
+          }}
+        />
+        <Script
           id="google-tag-manager"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
