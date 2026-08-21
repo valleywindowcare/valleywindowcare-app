@@ -13,6 +13,21 @@ import HomeExpansion from "@/components/HomeExpansion";
 import Link from 'next/link';
 
 // Metadata inherited from strict server layout.tsx
+export const metadata: Metadata = {
+  title: {
+    absolute: "Valley Property Services | Exterior Restoration & Pressure Washing | De Pere, WI",
+  },
+  description: "Valley Property Services specializes in premium exterior restoration and pressure washing in De Pere and Green Bay, WI. We offer safe soft-wash roof cleaning, expert paver sealing, window cleaning, and hot-water pressure washing to preserve and beautify your property.",
+  openGraph: {
+    title: "Valley Property Services | Exterior Restoration & Pressure Washing | De Pere, WI",
+    description: "Northeast Wisconsin's elite exterior restoration specialists. Get a fast quote for safe soft washing, high-end pressure washing, paver sealing, and professional window cleaning.",
+    url: "https://www.valleywindowcare.com",
+    siteName: "Valley Property Services",
+    locale: "en_US",
+    type: "website",
+  },
+};
+
 export default function Home() {
   return (
     <>

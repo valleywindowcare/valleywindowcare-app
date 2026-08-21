@@ -33,6 +33,14 @@ export const metadata: Metadata = {
     template: "%s | Valley Property Services",
   },
   description: "Northeast Wisconsin's elite exterior restoration specialists. Get an instant quote for high-end pressure washing, paver sealing, and safe soft-wash roof restoration. Call (920) 609-7085 today!",
+  openGraph: {
+    title: "Valley Property Services | Exterior Restoration & Pressure Washing | De Pere, WI",
+    description: "Valley Property Services specializes in premium exterior restoration, soft wash roof cleaning, pressure washing, paver sealing, and window cleaning across De Pere, Green Bay, and the Fox Valley.",
+    url: "https://www.valleywindowcare.com",
+    siteName: "Valley Property Services",
+    locale: "en_US",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -67,37 +75,61 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "HomeAndConstructionBusiness",
-              name: "Valley Property Services",
-              telephone: "+1-920-609-7085",
-              address: {
+              "name": "Valley Property Services",
+              "legalName": "Valley Property Services",
+              "url": "https://www.valleywindowcare.com",
+              "telephone": "+1-920-609-7085",
+              "address": {
                 "@type": "PostalAddress",
-                streetAddress: "462 S Good Hope Rd",
-                addressLocality: "De Pere",
-                addressRegion: "WI",
-                postalCode: "54115"
+                "streetAddress": "462 S Good Hope Rd",
+                "addressLocality": "De Pere",
+                "addressRegion": "WI",
+                "postalCode": "54115"
               },
-              areaServed: [
-                "Green Bay",
-                "Appleton",
-                "De Pere",
-                "Neenah",
-                "Fox Valley"
+              "geo": {
+                "@type": "GeoCoordinates",
+                "addressCountry": "US"
+              },
+              "areaServed": ["De Pere", "Green Bay", "Fox Valley"],
+              "knowsAbout": [
+                "Pressure Washing",
+                "Soft-Wash Roof Cleaning",
+                "Paver Sealing",
+                "Window Cleaning"
               ],
-              hasOfferCatalog: {
+              "hasOfferCatalog": {
                 "@type": "OfferCatalog",
-                name: "Exterior Restoration Services",
-                itemListElement: [
-                  { "@type": "Offer", itemOffered: { "@type": "Service", name: "Premium Pressure Washing" } },
-                  { "@type": "Offer", itemOffered: { "@type": "Service", name: "Safe Soft-Wash Roof Restoration" } },
-                  { "@type": "Offer", itemOffered: { "@type": "Service", name: "Paver Restoration & Sealing" } }
+                "name": "Exterior Restoration Services",
+                "itemListElement": [
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Premium Pressure Washing"
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Safe Soft-Wash Roof Restoration"
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Paver Restoration & Sealing"
+                    }
+                  }
                 ]
               },
-              aggregateRating: {
+              "aggregateRating": {
                 "@type": "AggregateRating",
-                ratingValue: "5.0",
-                reviewCount: "100"
+                "ratingValue": "5.0",
+                "reviewCount": "100"
               }
-            }).replace(/</g, '\\u003c').replace(/'/g, "&apos;")
+            }).replace(/</g, '\\u003c')
           }}
         />
       </head>
