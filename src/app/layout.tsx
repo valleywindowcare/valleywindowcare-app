@@ -29,8 +29,8 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: "Pressure Washing & Roof Cleaning Green Bay | Valley Exterior Restoration",
-    template: "%s | Valley Exterior Restoration",
+    default: "Pressure Washing & Roof Cleaning Green Bay | Valley Property Services",
+    template: "%s | Valley Property Services",
   },
   description: "Northeast Wisconsin's elite exterior restoration specialists. Get an instant quote for high-end pressure washing, paver sealing, and safe soft-wash roof restoration. Call (920) 609-7085 today!",
 };
@@ -67,7 +67,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "HomeAndConstructionBusiness",
-              name: "Valley Exterior Restoration",
+              name: "Valley Property Services",
               telephone: "+1-920-609-7085",
               address: {
                 "@type": "PostalAddress",

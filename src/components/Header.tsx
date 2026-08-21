@@ -16,7 +16,7 @@ export default function Header() {
         <header className={headerClasses}>
             {/* Row 1: Utility Top-Bar (Hidden on Mobile) */}
             <div className="hidden lg:flex w-full bg-navy text-white border-b border-navy-light py-2 px-4 lg:px-8 xl:px-16 items-center text-[10px] xl:text-xs tracking-wider uppercase">
-                <div className="mr-auto font-black text-gold tracking-widest pl-1 lg:text-[12px] xl:text-[14px]">Valley Exterior Restoration</div>
+                <div className="mr-auto font-black text-gold tracking-widest pl-1 lg:text-[12px] xl:text-[14px]">Valley Property Services</div>
                 <div className="flex justify-end items-center gap-6 font-bold">
                     <Link href="/about-us" className="hover:text-gold transition-colors items-center flex h-full">Our Company</Link>
                     <Link href="/service-areas" className="hover:text-gold transition-colors items-center flex h-full text-gold">Service Areas</Link>

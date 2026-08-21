@@ -61,7 +61,7 @@ const reviews = [
     {
         reviewer: "Cindy Finney",
         date: "7 months ago",
-        text: "I’m very happy with the work James and Tyler did washing my windows and pressure washed the house. They were on time, very professional and went above and beyond. I appreciate the explanation of the plan and after they were done pointing out what was done including the extras that were needed. I’ll definitely use Valley Window in the future!"
+        text: "I’m very happy with the work James and Tyler did washing my windows and pressure washed the house. They were on time, very professional and went above and beyond. I appreciate the explanation of the plan and after they were done pointing out what was done including the extras that were needed. I’ll definitely use Valley Property Services in the future!"
     },
     {
         reviewer: "Samantha",

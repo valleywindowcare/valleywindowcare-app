@@ -18,9 +18,9 @@ export default function Footer() {
                                 className="object-contain object-center md:object-left"
                             />
                         </div>
-                        <h2 className="text-navy font-black text-2xl uppercase tracking-tighter mb-2">Valley Exterior Restoration</h2>
+                        <h2 className="text-navy font-black text-2xl uppercase tracking-tighter mb-2">Valley Property Services</h2>
                         <p className="text-gray-600 mb-6 text-sm leading-relaxed max-w-sm">
-                            Discover why Valley Exterior Restoration is the trusted name in Wisconsin for professional pressure washing, soft-washing, and paver sealing services.
+                            Discover why Valley Property Services is the trusted name in Wisconsin for professional pressure washing, soft-washing, and paver sealing services.
                         </p>
                         <div className="flex items-center gap-4">
                             <a href="https://www.facebook.com/valleywindowcare" target="_blank" rel="noopener noreferrer" aria-label="Visit Valley Property Services on Facebook" className="w-10 h-10 rounded-full bg-navy text-white flex items-center justify-center hover:bg-gold transition-colors hover:scale-110 active:scale-95 duration-200">

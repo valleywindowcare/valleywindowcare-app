@@ -213,8 +213,8 @@ export default async function ServiceGenericPage({ params }: PageProps) {
                     </h1>
                     <p className="text-lg md:text-xl text-gray-100 font-semibold leading-relaxed drop-shadow-md pb-8">
                         {service === 'house-washing' ? "Safe Soft-Wash Technology & Property Protection for Your Home's Siding." :
-                         ['roof-cleaning'].includes(service) ? `Valley Exterior Restoration deploys professional soft-wash ${formattedName.toLowerCase()} systems to restore, protect, and enhance your property's value without the risks of high pressure.` :
-                         `Valley Exterior Restoration provides premium ${formattedName.toLowerCase()} services to restore, protect, and enhance your property's value.`}
+                         ['roof-cleaning'].includes(service) ? `Valley Property Services deploys professional soft-wash ${formattedName.toLowerCase()} systems to restore, protect, and enhance your property's value without the risks of high pressure.` :
+                         `Valley Property Services provides premium ${formattedName.toLowerCase()} services to restore, protect, and enhance your property's value.`}
                     </p>
                     
                     {service === 'house-washing' && (
