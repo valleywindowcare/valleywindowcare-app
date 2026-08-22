@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { Calendar } from 'lucide-react';
+import Image from 'next/image';
 
 interface BlogPost {
     slug: string;
@@ -56,7 +57,7 @@ export default function BlogFeed({ blogs }: { blogs: BlogPost[] }) {
                             <Link key={blog.slug} href={`/blog/${blog.slug}`} className="group bg-white rounded-3xl overflow-hidden shadow-soft hover:shadow-card-hover transition-all duration-300 flex flex-col btn-hover-fx">
                                 {blog.image ? (
                                     <div className="w-full h-56 relative overflow-hidden bg-slate-100">
-                                        <img
+                                        <Image
                                             src={blog.image || '/images/portfolio/building-wash-copy.webp'}
                                             alt={`Valley Property Services - ${blog.category || 'Service Profile'}`}
                                             loading="lazy"
@@ -67,7 +68,7 @@ export default function BlogFeed({ blogs }: { blogs: BlogPost[] }) {
                                     </div>
                                 ) : (
                                     <div className="w-full h-56 relative overflow-hidden bg-slate-100">
-                                        <img
+                                        <Image
                                             src="/images/portfolio/building-wash-copy.webp"
                                             alt={`Valley Property Services - ${blog.category || 'Service Profile'}`}
                                             loading="lazy"

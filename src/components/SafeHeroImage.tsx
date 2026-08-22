@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+import { useState, useEffect } from "react";
 
 interface SafeHeroImageProps {
     src: string;
@@ -8,16 +10,23 @@ interface SafeHeroImageProps {
 }
 
 export default function SafeHeroImage({ src, alt, fallbackSrc }: SafeHeroImageProps) {
+    const [imgSrc, setImgSrc] = useState(src);
+
+    useEffect(() => {
+        setImgSrc(src);
+    }, [src]);
+
     return (
         <div className="absolute inset-0 z-0">
-            <img
-                src={src}
+            <Image
+                src={imgSrc}
                 alt={alt}
-                fetchPriority="high"
-                className="w-full h-full object-cover"
-                onError={(e) => {
-                    e.currentTarget.src = fallbackSrc;
-                    e.currentTarget.srcset = "";
+                fill
+                priority
+                sizes="100vw"
+                className="object-cover"
+                onError={() => {
+                    setImgSrc(fallbackSrc);
                 }}
             />
             <div className="absolute inset-0 bg-navy/80 mix-blend-multiply"></div>

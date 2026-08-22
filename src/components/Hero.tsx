@@ -13,6 +13,7 @@ interface HeroProps {
     cityName?: string;
     serviceName?: string;
     showScrollArrow?: boolean;
+    showTrustBadges?: boolean;
 }
 
 export default function Hero({
@@ -22,7 +23,8 @@ export default function Hero({
     description,
     cityName,
     serviceName,
-    showScrollArrow = false
+    showScrollArrow = false,
+    showTrustBadges = false
 }: HeroProps) {
 
     const isDefault = !bgImage || bgImage.includes("placeholder");
@@ -59,6 +61,19 @@ export default function Hero({
                     <p className="text-base sm:text-lg md:text-xl text-gray-100 mb-6 sm:mb-8 font-semibold leading-relaxed drop-shadow-md max-w-3xl mx-auto">
                         {description || "Green Bay’s Premier Exterior Restoration Specialists. We deliver safe, high-end soft washing and pressure washing to protect and renew your property."}
                     </p>
+                    {showTrustBadges && (
+                        <div className="mt-6 flex flex-wrap justify-center gap-4 text-xs sm:text-sm font-bold text-white relative z-10">
+                          <div className="flex items-center gap-2 bg-white/15 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 shadow-md">
+                            <span className="text-gold">★</span> 5.0 Rated (100+ Reviews)
+                          </div>
+                          <div className="flex items-center gap-2 bg-white/15 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 shadow-md">
+                            <span className="text-gold">🛡️</span> Zero Structural Damage Guarantee
+                          </div>
+                          <div className="flex items-center gap-2 bg-white/15 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 shadow-md">
+                            <span className="text-gold">✅</span> 100% Satisfaction Guarantee
+                          </div>
+                        </div>
+                    )}
                 </div>
 
                 {/* Bottom Section: Dual-Action Quote Box (Zero-Gap Stack) */}

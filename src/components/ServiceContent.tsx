@@ -57,7 +57,14 @@ export default function ServiceContent({ title, description, benefits, process, 
 
                     {/* Massive Action Image Interrogator */}
                     <div className="relative w-full h-80 sm:h-96 lg:h-[600px] rounded-3xl overflow-hidden shadow-2xl lg:mt-24 group">
-                        <img src={image || "/images/portfolio/house-washing.webp"} alt={imageAlt || "Service Image"} fetchPriority="high" className="absolute inset-0 w-full h-full object-cover z-0 group-hover:scale-105 transition-transform duration-1000" />
+                        <Image
+                            src={image || "/images/portfolio/house-washing.webp"}
+                            alt={imageAlt || "Service Image"}
+                            fill
+                            loading="lazy"
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
+                            className="object-cover z-0 group-hover:scale-105 transition-transform duration-1000"
+                        />
                         <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/20 to-transparent"></div>
                         <div className="absolute bottom-6 sm:bottom-12 left-6 sm:left-12 right-6 sm:right-12 text-white">
                             <p className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-2 tracking-tight">{title} Excellence</p>

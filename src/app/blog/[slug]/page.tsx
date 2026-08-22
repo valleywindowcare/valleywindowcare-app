@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { ChevronRight, Home, ArrowLeft } from 'lucide-react';
@@ -136,9 +137,12 @@ export default async function BlogPostTemplate({ params }: Props) {
                 {/* Author Block */}
                 <div className="mt-16 sm:mt-24 pt-10 border-t border-slate-200 flex flex-col sm:flex-row items-center sm:items-start gap-6 bg-slate-50 rounded-2xl p-8 border border-slate-100 shadow-sm">
                     <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden flex-shrink-0 border-4 border-white shadow-md">
-                        <img src="/images/portfolio/building-wash-copy.webp" 
+                        <Image src="/images/portfolio/building-wash-copy.webp" 
                             alt="Valley Property Services Team"
-                            className="w-full h-full object-cover"
+                            fill
+                            loading="lazy"
+                            className="object-cover"
+                            sizes="(max-width: 768px) 80px, 96px"
                         />
                     </div>
                     <div className="text-center sm:text-left">

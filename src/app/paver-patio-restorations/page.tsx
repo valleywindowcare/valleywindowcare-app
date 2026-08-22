@@ -4,6 +4,7 @@ import Process from '@/components/Process';
 import ServiceContent from '@/components/ServiceContent';
 import ServiceGrid from '@/components/ServiceGrid';
 import ReviewSlider from '@/components/ReviewSlider';
+import BeforeAfterSlider from '@/components/BeforeAfterSlider';
 import VanillaMapClient from "@/components/VanillaMapClient";
 import FAQAccordion from "@/components/FAQAccordion";
 import FAQSchema from "@/components/FAQSchema";
@@ -82,6 +83,20 @@ export default function ServicePage() {
                             <p className="text-sm text-gray-600">Premium film-forming sealers lock in the color and protect against UV rays.</p>
                         </div>
                     </div>
+                </div>
+            </section>
+
+            {/* INTERACTIVE BEFORE & AFTER SLIDER */}
+            <section className="bg-slate-50 py-16 border-t border-gray-100">
+                <div className="container mx-auto px-4 max-w-4xl text-center">
+                    <h2 className="text-3xl md:text-4xl font-extrabold text-navy mb-4">See The Restored Results</h2>
+                    <p className="text-gray-600 text-lg max-w-xl mx-auto mb-10 leading-relaxed">
+                        Drag the slider below to see the difference between weed-infested joints and our professionally sealed and re-sanded finish.
+                    </p>
+                    <BeforeAfterSlider 
+                        combinedImage="/images/portfolio/paver-cleaning-before-after.jpg.webp"
+                        alt="Paver Patio Restoration and Cleaning"
+                    />
                 </div>
             </section>
 

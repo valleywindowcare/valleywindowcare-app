@@ -64,7 +64,8 @@ export default function ServicePage() {
                     </>
                 }
                 description="Professional concrete and asphalt surface cleaning. We physically remove oil stains, tire marks, and organic buildup."
-                bgImage="/images/portfolio/commercial-cleaning.webp"  
+                bgImage="/images/portfolio/commercial-cleaning.webp"
+                showTrustBadges={true}
             />
 
             {/* GOLD STANDARD ARCHITECTURE CONTAINER */}

@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { X } from 'lucide-react';
+import Image from 'next/image';
 
 type ImageProps = {
     src: string;
@@ -47,7 +48,7 @@ export default function GalleryClient({ images }: { images: ImageProps[] }) {
                         onClick={() => setSelectedImage(image.src)}
                     >
                         <div className="relative overflow-hidden">
-                            <img
+                            <Image
                                 src={image.src}
                                 alt={image.alt}
                                 loading="lazy"
@@ -86,11 +87,13 @@ export default function GalleryClient({ images }: { images: ImageProps[] }) {
                     >
                         <X size={32} />
                     </button>
-                    <div className="relative max-w-5xl w-full max-h-[90vh]">
-                        <img
+                    <div className="relative max-w-5xl w-full h-[80vh]">
+                        <Image
                             src={selectedImage}
                             alt="Expanded project view"
-                            className="w-full h-full object-contain rounded-lg"
+                            fill
+                            className="object-contain rounded-lg"
+                            sizes="(max-width: 1200px) 100vw, 1200px"
                         />
                     </div>
                 </div>

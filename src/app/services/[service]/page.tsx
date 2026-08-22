@@ -23,6 +23,7 @@ import Process from "@/components/Process";
 import dynamic from "next/dynamic";
 const ReviewSlider = dynamic(() => import("@/components/ReviewSlider"));
 import ServiceContent from "@/components/ServiceContent";
+import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 import SEOAuthorityEngine from "@/components/SEOAuthorityEngine";
 import FAQSchema from "@/components/FAQSchema";
 import PricingMatrix from "@/components/PricingMatrix";
@@ -214,16 +215,16 @@ export default async function ServiceGenericPage({ params }: PageProps) {
                          `Valley Property Services provides premium ${formattedName.toLowerCase()} services to restore, protect, and enhance your property's value.`}
                     </p>
                     
-                    {service === 'house-washing' && (
-                        <div className="trust-badge-row" style={{ display: "flex", gap: "20px", justifyContent: "center", margin: "20px 0", flexWrap: "wrap" }}>
-                          <div className="badge-item text-white" style={{ display: "flex", alignItems: "center", gap: "8px", fontWeight: "bold" }}>
-                            <span className="icon">⭐</span> ★★★★★ 4.9 Rated (150+ Google Reviews)
+                    {['house-washing', 'roof-cleaning'].includes(service) && (
+                        <div className="trust-badge-row mt-6 flex flex-wrap justify-center gap-6 text-sm md:text-base font-bold text-white relative z-10">
+                          <div className="flex items-center gap-2 bg-white/15 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 shadow-md">
+                            <span className="text-gold">★</span> 5.0 Rated (100+ Reviews)
                           </div>
-                          <div className="badge-item text-white" style={{ display: "flex", alignItems: "center", gap: "8px", fontWeight: "bold" }}>
-                            <span className="icon">🛡️</span> Licensed, Bonded & Insured
+                          <div className="flex items-center gap-2 bg-white/15 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 shadow-md">
+                            <span className="text-gold">🛡️</span> Zero Structural Damage Guarantee
                           </div>
-                          <div className="badge-item text-white" style={{ display: "flex", alignItems: "center", gap: "8px", fontWeight: "bold" }}>
-                            <span className="icon">✅</span> 100% Satisfaction Guarantee
+                          <div className="flex items-center gap-2 bg-white/15 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 shadow-md">
+                            <span className="text-gold">✅</span> 100% Satisfaction Guarantee
                           </div>
                         </div>
                     )}
@@ -308,6 +309,22 @@ export default async function ServiceGenericPage({ params }: PageProps) {
                     protectionProtocols={content.protectionProtocols}
                     image={bodyImageToUse}
                 />
+            )}
+
+            {/* INTERACTIVE BEFORE & AFTER SLIDER */}
+            {service === 'roof-cleaning' && (
+                <section className="bg-slate-50 py-16 border-t border-b border-gray-100">
+                    <div className="container mx-auto px-4 max-w-4xl text-center">
+                        <h2 className="text-3xl md:text-4xl font-extrabold text-navy mb-4">See the Restoration Results</h2>
+                        <p className="text-gray-600 text-lg max-w-xl mx-auto mb-10 leading-relaxed">
+                            Drag the slider below to see the difference our safe, low-pressure soft wash treatment makes in completely eradicating black mold streaks.
+                        </p>
+                        <BeforeAfterSlider 
+                            combinedImage="/images/portfolio/roof-cleaning-before-after.jpg.webp"
+                            alt="Asphalt Shingle Roof Soft Wash Cleaning"
+                        />
+                    </div>
+                </section>
             )}
 
             {/* Contextual Backlink for Concrete / Paver services (SATELLITE BRIDGE) */}
