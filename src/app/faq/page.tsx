@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import Hero from '@/components/Hero';
 import FAQAccordion from '@/components/FAQAccordion';
+import FAQSchema from '@/components/FAQSchema';
 import { ArrowRight } from 'lucide-react';
 import { faqData } from '@/data/faqData';
 
@@ -16,26 +17,10 @@ export default function FAQPage() {
     // 1. Generate the master LD+JSON Schema for Google Rich Snippets
     const allFaqs = Object.values(faqData).flat();
     
-    const faqSchema = {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": allFaqs.map(faq => ({
-            "@type": "Question",
-            "name": faq.question,
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": faq.answer
-            }
-        }))
-    };
-
     return (
         <main>
             {/* Inject the global SEO Schema */}
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-            />
+            <FAQSchema faqs={allFaqs} />
 
             <Hero
                 h1="Frequently Asked Questions"
@@ -55,7 +40,6 @@ export default function FAQPage() {
                             key={category} 
                             categoryTitle={category} 
                             faqs={faqs} 
-                            disableSchema
                         />
                     ))}
                 </div>

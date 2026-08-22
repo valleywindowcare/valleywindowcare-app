@@ -7,6 +7,7 @@ import SEOAuthorityEngine from "@/components/SEOAuthorityEngine";
 import VanillaMapClient from "@/components/VanillaMapClient";
 import PricingMatrix from "@/components/PricingMatrix";
 import ValueCalculator from "@/components/ValueCalculator";
+import FAQSchema from "@/components/FAQSchema";
 
 export const metadata = {
     title: "Professional Pressure Washing Company | Green Bay & Fox Valley",
@@ -294,6 +295,20 @@ export default function PressureWashingPage() {
 
             {/* BLUF FAQ SECTION */}
             <section className="container mx-auto px-4 py-16 max-w-4xl">
+                <FAQSchema faqs={[
+                    {
+                        question: "Is soft washing safe for vinyl siding?",
+                        answer: "Yes, soft washing is the safest and most effective method for cleaning vinyl siding. Unlike high-pressure washing that can force water behind panels, we use low pressure (under 150 PSI) and eco-friendly detergents to dissolve dirt and algae safely."
+                    },
+                    {
+                        question: "Will pressure washing damage my concrete driveway?",
+                        answer: "No, professional pressure washing restores concrete and prevents damage. We use calibrated surface cleaners to safely extract deep oil stains and organic growth, preventing the severe freeze-thaw cracking common in Wisconsin winters."
+                    },
+                    {
+                        question: "Are your pressure washing chemicals safe for pets?",
+                        answer: "Absolutely. Valley Property Services exclusively utilizes 100% biodegradable, non-butyl, and EPA-compliant cleaning solutions that are completely safe for your family, pets, and the local Fox Valley environment."
+                    }
+                ]} />
                 <h2 className="text-3xl md:text-4xl font-extrabold text-navy text-center mb-12">
                     Frequently Asked Questions
                 </h2>

@@ -4,8 +4,37 @@ import Link from 'next/link';
 export const serviceContentMap: Record<string, { pageH1?: string, description: React.ReactNode, benefits: (string | React.ReactNode)[], process: (string | React.ReactNode)[], protectionProtocols?: { title: string, description: string }[], pricing?: { title: string, description: string, rateTitle: string, ratePrice: string, rateDetails: string, minimumPrice: string, minimumDetails: string, variableTitle: string, variableDetails: string }, image?: string, faqs?: { question: string, answer: string }[] }> = {
     "roof-cleaning": {
         description: (
-            <section className="eeat-service-block">
-                <p className="mb-4">Professional Roof Cleaning utilizes a specialized low-pressure soft washing methodology to safely eliminate destructive biological growth. The black stains streaking down your roof are not environmental dirt; they are an active cyanobacteria known as Gloeocapsa Magma. This organism thrives particularly on North-facing Wisconsin roofs, feeding heavily on the crushed limestone filler to establish deep moss root systems. Typical high-pressure power washing instantly destroys the physical integrity of a roof by blasting away the UV-protective granules. Instead, our eco-friendly roof soft wash system guarantees maximum lifespan preservation. We apply proprietary biodegradable algaecides to completely neutralize spores and fungus without voiding your shingle warranty, fully protecting your structural investment.</p>
+            <section className="eeat-service-block space-y-8">
+                <p className="text-lg leading-relaxed text-gray-700 font-medium">
+                    Professional Roof Cleaning utilizes a specialized low-pressure soft washing methodology to safely eliminate destructive biological growth and protect your home's structural integrity. We strictly adhere to low-pressure techniques to protect your roof shingles from damage.
+                </p>
+
+                {/* Educational Deep-Dive Section */}
+                <div className="bg-slate-50 border-l-4 border-gold p-6 md:p-8 rounded-r-2xl shadow-sm border border-slate-100 max-w-4xl mx-auto my-12">
+                    <h3 className="text-2xl font-extrabold text-navy mb-6">
+                        Understanding Black Streaks on Your Roof: Gloeocapsa Magma Deep-Dive
+                    </h3>
+                    <div className="space-y-6">
+                        <div>
+                            <h4 className="text-lg font-bold text-navy-dark mb-2">The Cause: What is eating your shingles?</h4>
+                            <p className="text-gray-600 leading-relaxed">
+                                Those ugly black streaks on your roof are not soot, dirt, or mold. They are an active, living cyanobacteria known as <strong>Gloeocapsa magma</strong>. Thriving on damp, shaded North-facing Wisconsin roofs, this organism actively feeds on the crushed limestone filler inside asphalt shingles. As it spreads, it forms a dark, protective sheath that absorbs UV rays and holds moisture against your roof, leading to premature rot, granule loss, and structural shingle decay.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 className="text-lg font-bold text-navy-dark mb-2">The Risk: Why pressure washing is dangerous</h4>
+                            <p className="text-gray-600 leading-relaxed">
+                                Many homeowners mistakenly try to blast these streaks away using high-pressure power washing. This is a severe mistake. Standard high-pressure water streams strip away the protective mineral granules that shield shingles from the sun, instantly aging your roof by years. Furthermore, using high pressure on shingles voids almost all manufacturer warranties (including GAF and Owens Corning) and creates micro-tears that lead to leaks.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 className="text-lg font-bold text-navy-dark mb-2">The Solution: Manufacturer-Approved Soft Washing</h4>
+                            <p className="text-gray-600 leading-relaxed">
+                                Valley Property Services utilizes a strictly low-pressure soft-wash chemical treatment that is fully approved by the Asphalt Roofing Manufacturers Association (ARMA). We apply eco-friendly, biodegradable algaecides at low pressure (similar to a garden hose) to kill Gloeocapsa magma, moss, and lichen at the root. This safe chemical neutralization completely cleans the stains, restores shingle health, and maintains your warranty without causing any structural damage.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </section>
         ),
         benefits: [
@@ -15,7 +44,7 @@ export const serviceContentMap: Record<string, { pageH1?: string, description: R
         ],
         process: [
             "1. Site Inspection & Prep: We conduct a thorough exterior evaluation and meticulously protect all landscaping and delicate surfaces.",
-            "2. Deep Cleaning Execution: Utilizing specialized proprietary chemical blends and precise water pressure to obliterate stains at a molecular level.",
+            "2. Soft Wash Chemical Application: Applying biodegradable algaecides using low-pressure delivery systems to kill Gloeocapsa magma at the root.",
             "3. Final Quality Check: A rigorous post-wash inspection alongside the property owner to guarantee flawless 100% satisfaction."
         ],
         protectionProtocols: [
@@ -62,22 +91,26 @@ export const serviceContentMap: Record<string, { pageH1?: string, description: R
     "house-washing": {
         pageH1: "Professional House Washing in Green Bay & Appleton, WI",
         description: (
-            <section className="eeat-service-block">
+            <section className="eeat-service-block space-y-6">
                 <h2 className="text-2xl font-bold text-navy mb-4">Professional Exterior House Cleaning</h2>
-                <p className="mb-4">Restoring the exterior of your property requires scientifically backed soft washing methods. We deploy professional-grade equipment to eliminate algae, mold, mildew, and stubborn dirt safely.</p>
+                <p className="mb-4">
+                    Restoring the exterior of your property requires scientifically backed soft washing methods. We deploy professional-grade, low-pressure delivery systems and eco-friendly biodegradable algaecides to safely eliminate algae, mold, mildew, and stubborn dirt without causing any structural damage.
+                </p>
                 <h3 className="text-xl font-bold text-navy mb-4 mt-6">Specialized Vinyl Siding Cleaning</h3>
-                <p className="mb-4">Our low-pressure soft wash rinsing technique ensures your vinyl siding cleaning eliminates deep stains without causing permanent damage like heavy pressure washing often does.</p>
+                <p className="mb-4">
+                    Our low-pressure soft wash rinsing technique ensures your vinyl siding cleaning eliminates deep biological stains and dirt at the root. Unlike heavy pressure washing which cracks siding and blows past weather seals, our soft washing process guarantees zero structural damage to your siding, window screens, and delicate trims.
+                </p>
             </section>
         ),
         benefits: [
-            "Long-Lasting Results: Our soft washing process gets surfaces cleaner and keeps them protected longer.",
-            "Enhanced Safety: Eliminates slippery algae, mold, mildew, and stubborn dirt.",
-            "No Damage Guarantee: We use the exact pressure required—often zero—to protect property integrity."
+            "Low-Pressure Delivery Systems: Safe, gentle water streams prevent physical damage, wood gouging, or vinyl cracking.",
+            "Eco-Friendly Biodegradable Algaecides: Eco-friendly chemical detergents neutralize organic spores without harming plants or landscaping.",
+            "Zero Structural Damage: Eliminates the risks associated with high pressure, protecting your home's envelope integrity."
         ],
         process: [
-            "1. Site Inspection & Prep: We conduct a thorough exterior evaluation and meticulously protect all landscaping and delicate surfaces.",
-            "2. Deep Cleaning Execution: Utilizing specialized proprietary chemical blends and soft washing to obliterate stains at a root level.",
-            "3. Final Quality Check: A rigorous post-wash inspection alongside the property owner to guarantee flawless 100% satisfaction."
+            "1. Site Inspection & Prep: We protect all outdoor outlets, delicate trims, and pre-hydrate surrounding plants.",
+            "2. Soft Wash Chemical Application: Applying biodegradable algaecides using low-pressure delivery systems to kill mold and algae.",
+            "3. Gentle Siding Rinse: A high-volume, low-pressure rinse that sweeps away all organic matter without structural damage."
         ],
         protectionProtocols: [
             {
@@ -593,19 +626,25 @@ export const serviceContentMap: Record<string, { pageH1?: string, description: R
     },
     "driveway-cleaning": {
         description: (
-            <section className="eeat-service-block">
-                <p className="mb-4">Concrete and Driveway Cleaning requires vastly more than a direct pressure washing wand, which permanently etches zebra-stripes into the porous cream layer. We restore residential and commercial flatwork using heavy-duty, large-diameter rotary surface cleaners. By aggressively pre-treating deep oil spots and rust stains, then utilizing a uniform high-pressure spin, we lift years of embedded environmental grime evenly. This instantly restores your property's curb appeal and completely eliminates the extremely dangerous, slippery black algae that causes severe property injuries.</p>
+            <section className="eeat-service-block space-y-6">
+                <p className="text-lg leading-relaxed text-gray-700 font-medium">
+                    Driveway and flatwork cleaning requires heavy-duty pressure washing and power washing technology to restore dirty concrete. We restore residential and commercial flatwork using heavy-duty, large-diameter rotary surface cleaner attachments, hot-water oil stain extraction, and targeted alkaline detergent treatments.
+                </p>
+                <p className="text-gray-600 leading-relaxed">
+                    Unlike standard high-pressure wands that permanently etch zebra-stripes into the porous cement cream layer, our professional power washing attachments distribute pressure evenly to guarantee zero zebra-striping. This process lifts years of embedded oil, tire marks, and black organic growth safely and uniformly.
+                </p>
             </section>
         ),
         benefits: [
-            "Uniform Zebra-Free Finish: Industrial rotary spinners clean thousands of square feet perfectly evenly.",
-            "Eliminates Slip & Fall Danger: Kills the slimy black organic growth that thrives on shaded damp concrete.",
-            "Aggressive Oil lifting: Specialized surfactants pull heavy transmission and automotive oils from deep inside the matrix."
+            "Zero Zebra-Striping: Professional rotary surface cleaner attachments distribute pressure evenly for a flawless finish.",
+            "Hot-Water Extraction: Melts and lifts transmission oils, grease, and automotive fluids from deep inside the concrete matrix.",
+            "Alkaline Treatment: Eco-friendly alkaline detergents break down stubborn organic stains and biological growth at a molecular level.",
+            "Enhanced Curb Appeal: Restores concrete to its bright, clean appearance while eliminating slip-and-fall safety hazards."
         ],
         process: [
-            "1. Site Inspection & Prep: We conduct a thorough exterior evaluation and meticulously protect all landscaping and delicate surfaces.",
-            "2. Deep Cleaning Execution: Utilizing specialized proprietary chemical blends and precise water pressure to obliterate stains at a molecular level.",
-            "3. Final Quality Check: A rigorous post-wash inspection alongside the property owner to guarantee flawless 100% satisfaction."
+            "1. Alkaline Pre-Wash: We pre-treat the entire surface with specialized alkaline detergents to break down oil spots and organic buildup.",
+            "2. Power Washing Agitation: Utilizing hot-water pressure washing and industrial surface cleaner attachments to lift grime evenly without zebra-striping.",
+            "3. High-Volume Rinse & Check: We execute a high-volume rinse to sweep away all suspended dirt, followed by a final quality inspection."
         ],
         pricing: {
             title: "Transparent Driveway Cleaning Pricing",
@@ -1330,19 +1369,26 @@ export const serviceContentMap: Record<string, { pageH1?: string, description: R
     },
     "paver-patio-restorations": {
         description: (
-            <section className="eeat-service-block">
-                <p className="mb-4">Premium Paver Patio Restorations in Northeast Wisconsin requires significantly more than a garden hose. We deploy professional-grade equipment and specialized chemistry to execute deep organic extraction, locking in the finish with polymeric joint re-sanding and breathable UV-resistant sealing.</p>
+            <section className="eeat-service-block space-y-6">
+                <p className="text-lg leading-relaxed text-gray-700 font-medium">
+                    Premium Paver Patio Restorations in Northeast Wisconsin requires high-performance power washing and professional joint restoration. We deploy advanced pressure washing systems and specialized chemistry to execute deep organic extraction, locking in the finish with polymeric joint re-sanding and breathable UV-resistant sealing.
+                </p>
+                <p className="text-gray-600 leading-relaxed">
+                    By utilizing professional surface cleaner attachments rather than raw pressure wands, we guarantee zero zebra-striping on your stone surfaces. Our hot-water oil stain extraction and alkaline detergent treatments pull grease and grime out of the paver matrix, restoring original color profiles before sealing.
+                </p>
             </section>
         ),
         benefits: [
-            "Complete Weed Eradication: Deep organic extraction pulls massive root systems safely from the joints.",
+            "Complete Weed Eradication: High-volume pressure washing and targeted alkaline detergents extract organic growth down to the root.",
+            "Zero Zebra-Striping: Meticulous power washing using professional rotary surface cleaner attachments ensures a flawless, uniform finish.",
             "Structural Integrity: Polymeric joint re-sanding locks bricks tightly in place to prevent dangerous shifting.",
             "Breathable UV-Resistant Sealing: Protects the patio color profile from severe sun bleaching while allowing vapor escape."
         ],
         process: [
-            "1. Deep Organic Extraction: Utilizing high-volume rotary surface cleaners and targeted descalers to rip out embedded moss and grime.",
-            "2. Polymeric Sanding: Sweeping in structural binding sand and hydraulically compacting it to stabilize the entire footprint.",
-            "3. UV-Protective Sealing: Applying a deep-penetrating breathable sealant to solidify the joints and enhance the paver tone."
+            "1. Alkaline Pre-Treatment: We apply specialized alkaline detergent treatments to emulsify surface oils, grease, and biological growth.",
+            "2. Deep Pressure Washing Extraction: Utilizing hot-water power washing and rotary surface cleaner attachments to rip out old sand, moss, and grime without zebra-striping.",
+            "3. Polymeric Sanding: Sweeping in structural binding sand and compacting it to stabilize the entire footprint.",
+            "4. UV-Protective Sealing: Applying a deep-penetrating breathable sealant to solidify the joints and enhance the paver tone."
         ],
         pricing: {
             title: "Transparent Paver Restoration Pricing",

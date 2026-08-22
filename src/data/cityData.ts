@@ -1,5 +1,32 @@
 // THIS FILE IS 100% GENERATED WITH BESPOKE HARDCODED STRINGS. NO STRING INTERPOLATION.
 export const cityContextData = {
+  "de-pere": {
+    "rustRemoval": {
+      "subtitle": "Historic Masonry & Cladding Restoration",
+      "p1": "Properties along Broadway and near St. Norbert College face aesthetic weathering on historic masonry and siding from moisture off the Fox River. High-mineral water run-off leaves unsightly orange rust streaks.",
+      "p2": "We use specialized chemical rust neutralizers to lift deep mineral staining safely from brick, vinyl, and stone without abrasive damage to historic facades."
+    },
+    "softWash": {
+      "subtitle": "Low-Pressure Fox River Corridor Siding Sanitization",
+      "p1": "High humidity from the Fox River corridor creates a perfect breeding ground for thick green algae and mold on residential siding, especially on shaded properties near Voyageur Park.",
+      "p2": "Our low-pressure soft washing system applies eco-friendly biodegradable algaecides to completely neutralize biological growth at the root without structural damage."
+    },
+    "driveway": {
+      "subtitle": "Broadway Flatwork & Freeze-Thaw Protection",
+      "p1": "Severe Wisconsin winter freeze-thaw cycles trap moisture and road salt inside porous driveway concrete, leading to spalling, cracking, and structural deterioration.",
+      "p2": "We deploy heavy-duty rotary surface cleaners and hot-water power washing to extract corrosive salts and tire stains, safeguarding the concrete integrity."
+    },
+    "solar": {
+      "subtitle": "Photovoltaic Efficiency Cleansing",
+      "p1": "Airborne pollen from local river vegetation and dust settles on solar arrays, forming a persistent layer that severely limits solar energy output.",
+      "p2": "We wash solar panels using 100% deionized pure water and soft brushes, ensuring spot-free drying and maximum electrical efficiency."
+    },
+    "awning": {
+      "subtitle": "Commercial Canopy & Fabric Washing",
+      "p1": "Commercial storefronts along the Broadway district face weathering and dirt buildup on their fabric entry awnings from street traffic and river moisture.",
+      "p2": "Our low-pressure fabric cleaning safely extracts soot, mildew, and pollutants without ripping seams or washing away water-resistant coatings."
+    }
+  },
   "green-bay": {
     "rustRemoval": {
       "subtitle": "Iron Deposit Removal",

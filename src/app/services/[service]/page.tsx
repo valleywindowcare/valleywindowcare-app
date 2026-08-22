@@ -24,7 +24,7 @@ import dynamic from "next/dynamic";
 const ReviewSlider = dynamic(() => import("@/components/ReviewSlider"));
 import ServiceContent from "@/components/ServiceContent";
 import SEOAuthorityEngine from "@/components/SEOAuthorityEngine";
-import FAQAccordion from "@/components/FAQAccordion";
+import FAQSchema from "@/components/FAQSchema";
 import PricingMatrix from "@/components/PricingMatrix";
 
 import { serviceContentMap } from "@/data/serviceContent";
@@ -606,17 +606,7 @@ export default async function ServiceGenericPage({ params }: PageProps) {
 
                 return (
                     <section className="py-20 bg-slate-50 border-t border-gray-100">
-                        {service === 'house-washing' ? (
-                            <script
-                                type="application/ld+json"
-                                dangerouslySetInnerHTML={{ __html: exactHouseWashingSchema }}
-                            />
-                        ) : (
-                            <script
-                                type="application/ld+json"
-                                dangerouslySetInnerHTML={{ __html: JSON.stringify(localFaqSchema) }}
-                            />
-                        )}
+                        <FAQSchema faqs={serviceFaqs} />
                         <div className="container mx-auto px-4 max-w-4xl">
                             <div className="mb-12 text-center">
                                 <h2 className="text-3xl md:text-4xl font-extrabold text-navy mb-4">Frequently Asked Questions</h2>

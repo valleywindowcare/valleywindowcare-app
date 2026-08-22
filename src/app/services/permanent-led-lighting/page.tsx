@@ -8,6 +8,7 @@ import Process from "@/components/Process";
 import ServiceContent from "@/components/ServiceContent";
 import SEOAuthorityEngine from "@/components/SEOAuthorityEngine";
 import FAQAccordion from "@/components/FAQAccordion";
+import FAQSchema from "@/components/FAQSchema";
 import { faqData } from "@/data/faqData";
 import VanillaMapClient from "@/components/VanillaMapClient";
 
@@ -199,6 +200,9 @@ export default function PermanentLEDLightingPage() {
             </div>
             
             <FAQAccordion
+                faqs={faqData["permanent-led-lighting"] || faqData["christmas-lighting"] || []}
+            />
+            <FAQSchema
                 faqs={faqData["permanent-led-lighting"] || faqData["christmas-lighting"] || []}
             />
         </main>

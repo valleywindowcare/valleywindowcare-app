@@ -59,12 +59,24 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     const urlPath = `/service-areas/${city}`;
     const shouldNoindex = distantCities.includes(city) && !isRedirectDestination(urlPath);
 
-    const targetHubs = ['green-bay', 'appleton', 'neenah'];
-    const seoDescription = targetHubs.includes(city) 
-        ? `Professional pressure washing company serving ${content.city}—Get your instant cost estimate today.`
-        : `Top-rated exterior cleaning services dedicated to properties in ${content.city}, Wisconsin.`;
+    const uniqueMeta: Record<string, { title: string, description: string }> = {
+        "de-pere": {
+            title: "Professional Exterior Cleaning & Power Washing in De Pere, WI",
+            description: "Get expert roof soft washing and pressure washing in De Pere, WI. Safe chemical cleaning for historic Broadway masonry, St. Norbert College area, and riverfront properties."
+        },
+        "green-bay": {
+            title: "Elite Pressure Washing & Roof Cleaning in Green Bay, WI",
+            description: "Top-rated power washing and soft wash roof cleaning serving Green Bay, WI. Safe cleaning near Lambeau Field, Astor Park, and Heritage Hill."
+        },
+        "appleton": {
+            title: "Premier Exterior Restoration & Permanent LED Lighting in Appleton, WI",
+            description: "Expert exterior cleaning, roof restoration, and permanent LED lighting in Appleton, WI. Daily dispatch along the I-41 corridor across the Fox River Valley."
+        }
+    };
 
-    const generatedTitle = `Elite Exterior Restoration & Pressure Washing in ${content.city}`;
+    const metaMatch = uniqueMeta[city];
+    const generatedTitle = metaMatch ? metaMatch.title : `Elite Exterior Restoration & Pressure Washing in ${content.city}`;
+    const seoDescription = metaMatch ? metaMatch.description : `Top-rated exterior cleaning services dedicated to properties in ${content.city}, Wisconsin.`;
 
     return {
         title: generatedTitle,
@@ -157,6 +169,13 @@ export default async function CityHubPage({ params }: PageProps) {
 
     const targetCounty = countyMap[content.citySlug] || "Wisconsin";
 
+    const localizedAlts: Record<string, string> = {
+        "de-pere": "soft-wash-roof-cleaning-de-pere-wi.webp",
+        "green-bay": "power-washing-driveway-green-bay-wi.webp",
+        "appleton": "house-washing-and-permanent-led-lighting-appleton-wi.webp"
+    };
+    const heroAlt = localizedAlts[content.citySlug] || `${content.category || 'Professional Exterior Cleaning'} in ${cityName || 'Green Bay'}, WI`;
+
     return (
         <main className="w-full overflow-hidden bg-slate-50">
             {/* HERO SECTION */}
@@ -164,7 +183,7 @@ export default async function CityHubPage({ params }: PageProps) {
                 <SafeHeroImage
                     src={safeImage}
                     fallbackSrc={categoryFallbacks[(content.category || "House Washing") as keyof typeof categoryFallbacks] || getDeterministicHero(city)}
-                    alt={`${content.category || 'Professional Exterior Cleaning'} in ${cityName || 'Green Bay, WI'}`}
+                    alt={heroAlt}
                 />
 
                 <div className="relative z-10 container mx-auto px-4 max-w-5xl text-center mt-16 sm:mt-0">

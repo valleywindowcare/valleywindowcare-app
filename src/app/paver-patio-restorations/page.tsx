@@ -6,6 +6,7 @@ import ServiceGrid from '@/components/ServiceGrid';
 import ReviewSlider from '@/components/ReviewSlider';
 import VanillaMapClient from "@/components/VanillaMapClient";
 import FAQAccordion from "@/components/FAQAccordion";
+import FAQSchema from "@/components/FAQSchema";
 import { faqData } from "@/data/faqData";
 
 export const metadata = {
@@ -121,6 +122,9 @@ export default function ServicePage() {
             </div>
 
             <FAQAccordion
+                faqs={faqData["paver-patio-restorations"] || []}
+            />
+            <FAQSchema
                 faqs={faqData["paver-patio-restorations"] || []}
             />
         </main>

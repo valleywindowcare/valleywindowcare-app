@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { ArrowRight, ShieldCheck, CheckCircle2, AlertTriangle, Snowflake, Beaker } from 'lucide-react';
 import PricingMatrix from '@/components/PricingMatrix';
 import ReviewSlider from '@/components/ReviewSlider';
+import FAQSchema from '@/components/FAQSchema';
 
 export const metadata = {
     title: 'Commercial Winter Salt Removal Services | Valley Property Services',
@@ -150,6 +151,20 @@ export default function WinterSaltRemovalPage() {
 
             {/* BLUF FAQS */}
             <section className="py-24 bg-white border-t border-gray-100">
+                <FAQSchema faqs={[
+                    {
+                        question: "Why can't we just wash the salt away with warm water in the spring?",
+                        answer: "Warm water only dissolves salt temporarily and physically drives the caustic brine deeper into your porous concrete. When the temperatures eventually drop again at night, that deeply embedded moisture refreezes and expands, fracturing your slab from the inside out. We strictly use specialized descaling chemicals to permanently neutralize the chlorides at the surface level."
+                    },
+                    {
+                        question: "Is the chemical neutralizer safe for the landscaping near our entryway?",
+                        answer: "Yes. The specialized compounds we utilize solely target and react with volatile calcium and magnesium chlorides. They are biodegradable and infinitely safer for your surrounding highly sensitive ornamental commercial plantings than allowing the toxic municipal road salt to continually leach into the soil."
+                    },
+                    {
+                        question: "Does this service actually help prevent slip-and-fall accidents?",
+                        answer: "Absolutely. Modern liquid de-icers naturally leave a greasy, highly slick film on cold concrete that standard rain cannot effectively wash away. Our extraction protocol chemically dissolves this film, restoring the natural, friction-heavy traction of the bare concrete and critically protecting your customers and staff."
+                    }
+                ]} />
                 <div className="container mx-auto px-4 max-w-4xl">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl md:text-4xl font-extrabold text-navy mb-4 tracking-tight">Bottom Line Up Front (BLUF)</h2>

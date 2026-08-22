@@ -74,7 +74,7 @@ export default function ServicePage() {
                     {/* ENTITY CAPSULE */}
                     <section className="mb-16 mt-8">
                         <div className="text-lg leading-relaxed mb-8 font-bold text-navy">
-                            Valley Property Services is a fully insured exterior cleaning company providing professional driveway cleaning in <Link href="/service-areas/appleton" className="text-blue-600 hover:text-gold font-semibold transition-colors">Appleton</Link>, <Link href="/service-areas/green-bay" className="text-blue-600 hover:text-gold font-semibold transition-colors">Green Bay</Link>, and <Link href="/service-areas/door-county" className="text-blue-600 hover:text-gold font-semibold transition-colors">Door County</Link>, WI.
+                            Valley Property Services is a fully insured exterior cleaning company providing professional pressure washing and power washing services for driveways in <Link href="/service-areas/appleton" className="text-blue-600 hover:text-gold font-semibold transition-colors">Appleton</Link>, <Link href="/service-areas/green-bay" className="text-blue-600 hover:text-gold font-semibold transition-colors">Green Bay</Link>, and <Link href="/service-areas/door-county" className="text-blue-600 hover:text-gold font-semibold transition-colors">Door County</Link>, WI.
                         </div>
                     </section>
 
@@ -83,7 +83,7 @@ export default function ServicePage() {
                         <div className="flex items-center gap-3 mb-8">
                             <ShieldCheck className="text-gold" size={32} />
                             <h2 className="text-3xl md:text-4xl font-extrabold text-navy m-0">
-                                Our Execution Methodology
+                                Our Pressure Washing Methodology
                             </h2>
                         </div>
                         
@@ -93,10 +93,10 @@ export default function ServicePage() {
                                 <div className="text-6xl font-black text-gray-50 absolute -top-4 -right-2 z-0 group-hover:text-gold/5 transition-colors">01</div>
                                 <h4 className="text-xl font-bold text-navy mb-4 relative z-10 flex items-center gap-2">
                                     <span className="w-8 h-8 rounded-full bg-gold/20 text-navy flex items-center justify-center text-sm">1</span>
-                                    Surface Pre-Treatment
+                                    Alkaline detergent Pre-Treatment
                                 </h4>
                                 <p className="text-gray-600 relative z-10 leading-relaxed">
-                                    We sweep the driveway completely. We apply specialized alkaline detergents. We break down the heavy oil stains.
+                                    We sweep the driveway completely, then apply targeted alkaline detergent treatments. This molecularly breaks down heavy oil stains and organic buildup prior to washing.
                                 </p>
                             </div>
                             
@@ -108,7 +108,7 @@ export default function ServicePage() {
                                     Surface Cleaner Agitation
                                 </h4>
                                 <p className="text-gray-600 relative z-10 leading-relaxed">
-                                    We deploy professional surface cleaner attachments. We utilize uniform high pressure. We strip the embedded dirt evenly. We eliminate standard wand zebra stripes.
+                                    We deploy professional surface cleaner attachments utilizing uniform high pressure. This strips away embedded dirt evenly, completely eliminating standard wand zebra-striping.
                                 </p>
                             </div>
 
@@ -117,10 +117,10 @@ export default function ServicePage() {
                                 <div className="text-6xl font-black text-gray-50 absolute -top-4 -right-2 z-0 group-hover:text-gold/5 transition-colors">03</div>
                                 <h4 className="text-xl font-bold text-navy mb-4 relative z-10 flex items-center gap-2">
                                     <span className="w-8 h-8 rounded-full bg-gold/20 text-navy flex items-center justify-center text-sm">3</span>
-                                    High-Volume Rinse
+                                    Hot-Water Extraction & Rinse
                                 </h4>
                                 <p className="text-gray-600 relative z-10 leading-relaxed">
-                                    We rinse the concrete pad clean. We blast away the detached grime. We restore the bright cement finish safely.
+                                    We execute hot-water oil stain extraction and a high-volume rinse, completely clearing all emulsified grease and restoring a bright, pristine concrete finish.
                                 </p>
                             </div>
                         </div>
@@ -129,7 +129,7 @@ export default function ServicePage() {
                     {/* TYPES WE HANDLE (BENEFITS CONTAINER) */}
                     <section className="mb-16 bg-[#FFFFFF] text-[#1E2B3C] p-8 md:p-12 rounded-3xl not-prose shadow-[0_0_40px_rgba(30,43,60,0.06)] border border-gray-100">
                         <h2 className="text-3xl md:text-4xl font-extrabold mb-6 text-navy border-b border-gray-100 pb-6">
-                            Target Surfaces
+                            Target Surfaces & Power Washing Methods
                         </h2>
                         
                         <div className="space-y-6 mt-10">
@@ -137,8 +137,8 @@ export default function ServicePage() {
                             <div className="flex gap-4 items-start">
                                 <CheckCircle className="text-gold shrink-0 mt-1" size={24} />
                                 <div>
-                                    <h4 className="text-xl font-bold text-navy-dark mb-2">Concrete Pads</h4>
-                                    <p className="text-gray-600 leading-relaxed">We pressure wash standard cement driveways. We cut through heavy organic growth. We restore the bright white appearance.</p>
+                                    <h4 className="text-xl font-bold text-navy-dark mb-2">Concrete Pads & Driveways</h4>
+                                    <p className="text-gray-600 leading-relaxed">We provide heavy power washing for standard concrete driveways. Using professional surface cleaner attachments, we extract deep organic soils and grease, ensuring a uniform clean with zero zebra-striping.</p>
                                 </div>
                             </div>
                             

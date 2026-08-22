@@ -79,26 +79,39 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "HomeAndConstructionBusiness",
               "name": "Valley Property Services",
+              "alternateName": ["Valley Exterior Pros", "Valley Exterior Restoration"],
               "legalName": "Valley Property Services",
               "url": "https://www.valleyexteriorpros.com",
               "telephone": "+1-920-609-7085",
+              "email": "info@valleyexteriorpros.com",
+              "priceRange": "$$",
               "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "462 S Good Hope Rd",
                 "addressLocality": "De Pere",
                 "addressRegion": "WI",
-                "postalCode": "54115"
+                "postalCode": "54115",
+                "addressCountry": "US"
               },
               "geo": {
                 "@type": "GeoCoordinates",
-                "addressCountry": "US"
+                "latitude": 44.4287,
+                "longitude": -88.0289
               },
-              "areaServed": ["De Pere", "Green Bay", "Fox Valley"],
+              "areaServed": [
+                {"@type": "City", "name": "De Pere"},
+                {"@type": "City", "name": "Green Bay"},
+                {"@type": "City", "name": "Appleton"},
+                {"@type": "City", "name": "Neenah"},
+                {"@type": "City", "name": "Fox Valley"}
+              ],
               "knowsAbout": [
                 "Pressure Washing",
                 "Soft-Wash Roof Cleaning",
                 "Paver Sealing",
-                "Window Cleaning"
+                "Window Cleaning",
+                "Commercial Hood Cleaning",
+                "Permanent LED Lighting"
               ],
               "hasOfferCatalog": {
                 "@type": "OfferCatalog",
@@ -123,6 +136,20 @@ export default function RootLayout({
                     "itemOffered": {
                       "@type": "Service",
                       "name": "Paver Restoration & Sealing"
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Commercial Hood Cleaning"
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Permanent LED Lighting Installation"
                     }
                   }
                 ]

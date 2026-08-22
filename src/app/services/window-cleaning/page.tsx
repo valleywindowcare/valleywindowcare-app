@@ -6,6 +6,7 @@ import Hero from '@/components/Hero';
 import { ShieldCheck, CheckCircle, ArrowRight, MapPin } from 'lucide-react';
 import ReviewSlider from '@/components/ReviewSlider';
 import PricingMatrix from '@/components/PricingMatrix';
+import FAQSchema from '@/components/FAQSchema';
 
 export const metadata = {
     title: "Window Cleaning Services in Northeast Wisconsin | Valley Property Services",
@@ -242,6 +243,20 @@ export default function ServicePage() {
 
                     {/* BLUF FAQ SECTION */}
                     <section className="mb-16 mt-16 bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-gray-100">
+                        <FAQSchema faqs={[
+                            {
+                                question: "Do you clean window screens and exterior tracks?",
+                                answer: "Yes. Every exterior window washing service includes complimentary dry-brushing of screens and wiping out of the immediate exterior window tracks."
+                            },
+                            {
+                                question: "Does pure-water cleaning really work without soap?",
+                                answer: "Absolutely. By aggressively filtering regular tap water with reverse-osmosis and deionizing resin, the hungry pure water molecules act as a powerful solvent that breaks down dirt naturally, leaving a 100% streak-free finish."
+                            },
+                            {
+                                question: "Do you offer commercial window cleaning for Green Bay businesses?",
+                                answer: "Yes. We offer customized commercial route schedules for local storefronts, offices, and multi-story retail locations to ensure your business constantly attracts foot traffic."
+                            }
+                        ]} />
                         <div className="text-center mb-10">
                             <h2 className="text-3xl font-extrabold text-navy mb-4">Frequently Asked Questions</h2>
                             <p className="text-gray-600 text-lg">Direct, factual answers concerning our local window cleaning methodology.</p>

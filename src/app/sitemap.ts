@@ -37,9 +37,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 0.9,
     }));
 
-    // Location Hubs (8)
+    // Location Hubs (9)
     const validLocations = [
-        "appleton", "green-bay", "door-county", "neenah", "oshkosh",
+        "appleton", "green-bay", "de-pere", "door-county", "neenah", "oshkosh",
         "shawano", "manitowoc", "marinette"
     ];
 

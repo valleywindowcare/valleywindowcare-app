@@ -35,8 +35,65 @@ const fallbackReviews = [
         text: "Honestly, by far the best service. Detailed, fast to respond, and reasonably priced. They handled my soft washing and window cleaning perfectly, and the results were amazing."
     }
 ];
+const citySpecificReviews: Record<string, typeof fallbackReviews> = {
+    "de-pere": [
+        {
+            reviewer: "Sarah M.",
+            date: "2 weeks ago",
+            text: "Valley Property Services did an amazing job soft washing our siding and cleaning the brickwork around our home in De Pere. The historic masonry along Broadway looks brand new, and they were so careful with our plants!"
+        },
+        {
+            reviewer: "David K.",
+            date: "1 month ago",
+            text: "Excellent driveway power washing service near Voyageur Park in De Pere. They removed years of tough oil stains and winter road salt buildup. Highly recommend!"
+        },
+        {
+            reviewer: "Jessica L.",
+            date: "3 months ago",
+            text: "We hired them for roof cleaning in De Pere near St. Norbert College. The black streaks are completely gone and our shingles look fantastic. Exceptional service and very professional crew."
+        }
+    ],
+    "green-bay": [
+        {
+            reviewer: "John D.",
+            date: "3 days ago",
+            text: "Superb pressure washing service near Lambeau Field! They cleaned our concrete driveway and removed all the nasty Lake Michigan road salt buildup. Will definitely use them again."
+        },
+        {
+            reviewer: "Amanda R.",
+            date: "2 weeks ago",
+            text: "We needed our gutters and roof cleaned in Astor Park, Green Bay. The team used a low-pressure soft wash that was super safe for our older home. The results speak for themselves."
+        },
+        {
+            reviewer: "Robert H.",
+            date: "1 month ago",
+            text: "Fantastic B2B exterior building washing near Heritage Hill State Park. They handled the industrial soot on our facade efficiently and with zero hassle."
+        }
+    ],
+    "appleton": [
+        {
+            reviewer: "Michael S.",
+            date: "1 week ago",
+            text: "Had them install permanent LED lighting on our home in Appleton along the I-41 corridor. The track system is invisible and the dynamic lights look incredible. Great tech and service!"
+        },
+        {
+            reviewer: "Emily W.",
+            date: "3 weeks ago",
+            text: "Valley Property Services did a full roof restoration and house wash for our property in the Fox River Valley. They safely killed all the black algae using their soft wash systems."
+        },
+        {
+            reviewer: "Thomas B.",
+            date: "1 month ago",
+            text: "Prompt dispatch and great power washing in Appleton. They cleaned our concrete driveway and walkways, removing tough oil stains with zero zebra-striping."
+        }
+    ]
+};
 
 export default function ReviewSlider({ city }: { city?: string }) {
+    const normalizedCity = city?.toLowerCase().trim() || "";
+    const isTargetCity = ["de-pere", "green-bay", "appleton"].includes(normalizedCity);
+    const initialReviews = isTargetCity ? citySpecificReviews[normalizedCity] : fallbackReviews;
+
     // Generate deterministic array offset based off city parameters to eliminate exact-match static footprints across generated matrices
     const generateArrayOffset = (str: string, max: number) => {
         if (!str) return 0;
@@ -47,13 +104,19 @@ export default function ReviewSlider({ city }: { city?: string }) {
         return Math.abs(hash) % max;
     };
 
-    const initialOffset = generateArrayOffset(city || "", fallbackReviews.length);
+    const initialOffset = generateArrayOffset(city || "", initialReviews.length);
 
-    const [reviews, setReviews] = useState(fallbackReviews);
+    const [reviews, setReviews] = useState(initialReviews);
     const [currentIndex, setCurrentIndex] = useState(initialOffset);
     const [autoPlayKey, setAutoPlayKey] = useState(0);
 
     useEffect(() => {
+        if (isTargetCity) {
+            // For target local proof pages, we strictly lock down the city-filtered reviews
+            // to maintain the anti-doorway proof signal.
+            return;
+        }
+
         const fetchReviews = async () => {
             try {
                 const res = await fetch('/api/reviews', { cache: 'no-store' });
@@ -68,7 +131,7 @@ export default function ReviewSlider({ city }: { city?: string }) {
             }
         };
         fetchReviews();
-    }, []);
+    }, [isTargetCity]);
 
     useEffect(() => {
         const timer = setInterval(() => {

@@ -7,6 +7,7 @@ import Process from "@/components/Process";
 import ServiceContent from "@/components/ServiceContent";
 import SEOAuthorityEngine from "@/components/SEOAuthorityEngine";
 import FAQAccordion from "@/components/FAQAccordion";
+import FAQSchema from "@/components/FAQSchema";
 import { faqData } from "@/data/faqData";
 import VanillaMapClient from "@/components/VanillaMapClient";
 
@@ -98,6 +99,9 @@ export default function ApartmentHOACleaningPage() {
             </div>
 
             <FAQAccordion
+                faqs={faqData["apartment-exterior-cleaning"] || faqData["hoa-multi-unit-cleaning"] || []}
+            />
+            <FAQSchema
                 faqs={faqData["apartment-exterior-cleaning"] || faqData["hoa-multi-unit-cleaning"] || []}
             />
         </main>
