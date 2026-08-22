@@ -28,7 +28,7 @@ export default function BeforeAfterSlider({
                         style={{ maxWidth: "none" }}
                     />
                 </div>
-                <div className="absolute bottom-4 right-4 bg-navy/80 backdrop-blur-sm text-white px-3 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider z-10">
+                <div className="absolute bottom-4 right-4 bg-navy text-white px-3 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider z-10">
                     After
                 </div>
             </div>

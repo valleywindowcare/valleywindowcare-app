@@ -220,7 +220,7 @@ export default async function GeoServiceIntersectionPage({ params }: PageProps) 
         />
 
         <div className="relative z-10 container mx-auto px-4 max-w-5xl text-center mt-16 sm:mt-0">
-          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 text-white px-4 md:px-6 py-2 rounded-full mb-6 text-sm font-semibold tracking-widest uppercase">
+          <div className="inline-flex items-center gap-2 bg-white/90 border border-white/20 text-white px-4 md:px-6 py-2 rounded-full mb-6 text-sm font-semibold tracking-widest uppercase">
             <MapPin size={16} className="text-gold" />
             {pageContent.cityName}, WI
           </div>

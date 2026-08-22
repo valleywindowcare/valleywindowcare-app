@@ -95,7 +95,7 @@ export default function ServiceGrid({ city, gridItems }: ServiceGridProps) {
         const visibleItems = (isMobile && !isExpanded) ? items.slice(0, 6) : items;
 
         return (
-            <div className="bg-white/60 backdrop-blur-2xl rounded-[32px] shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-white/40 overflow-hidden mb-12">
+            <div className="bg-white/95 rounded-[32px] shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-white/40 overflow-hidden mb-12">
                 <div className="bg-white/40 border-b border-white/40 p-6 md:p-8 flex items-center gap-4">
                     <div className="bg-gradient-to-br from-navy to-navy-dark p-3 rounded-2xl shadow-md text-white">
                         {icon}
@@ -109,7 +109,7 @@ export default function ServiceGrid({ city, gridItems }: ServiceGridProps) {
                             const href = `/services/${service.serviceSlug}`;
 
                             return (
-                                <motion.div
+                                <motion.div viewport={{ once: true }}
                                     key={idx}
                                     whileHover={{ scale: 1.03, y: -5 }}
                                     transition={{ type: "spring", stiffness: 300, damping: 20 }}
@@ -133,7 +133,7 @@ export default function ServiceGrid({ city, gridItems }: ServiceGridProps) {
                                             <span className="font-extrabold tracking-tight text-white group-hover:text-gold transition-colors text-xs sm:text-sm md:text-xl leading-tight drop-shadow-md">
                                                 {service.serviceName}
                                             </span>
-                                            <div className="bg-white/20 backdrop-blur-md shadow-inner p-1 md:p-3 rounded-full transform group-hover:scale-110 group-hover:bg-white/30 transition-all shrink-0">
+                                            <div className="bg-white/90 shadow-inner p-1 md:p-3 rounded-full transform group-hover:scale-110 group-hover:bg-white/30 transition-all shrink-0">
                                                 <ChevronRight className="text-white w-4 h-4 md:w-5 md:h-5" />
                                             </div>
                                         </div>

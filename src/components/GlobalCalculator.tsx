@@ -135,7 +135,7 @@ export default function GlobalCalculator() {
         <AnimatePresence mode="wait">
           {/* STEP 1: SCOPE */}
           {step === 1 && (
-            <motion.div
+            <motion.div viewport={{ once: true }}
               key="step1"
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -201,7 +201,7 @@ export default function GlobalCalculator() {
 
           {/* STEP 2: THE TRAP */}
           {step === 2 && (
-            <motion.div
+            <motion.div viewport={{ once: true }}
               key="step2"
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -255,7 +255,7 @@ export default function GlobalCalculator() {
 
           {/* STEP 3: THE CLOSE */}
           {step === 3 && (
-            <motion.div
+            <motion.div viewport={{ once: true }}
               key="step3"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}

@@ -95,7 +95,7 @@ export default function BlogFilterGrid({ initialPosts }: BlogFilterGridProps) {
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                                 
                                 {/* Category Badge Floating */}
-                                <div className="absolute top-4 right-4 bg-white/95 backdrop-blur-sm text-navy font-black text-xs px-3 py-1.5 rounded-full shadow-lg border border-white/40 uppercase tracking-widest z-10">
+                                <div className="absolute top-4 right-4 bg-white text-navy font-black text-xs px-3 py-1.5 rounded-full shadow-lg border border-white/40 uppercase tracking-widest z-10">
                                     {post.category}
                                 </div>
                             </div>

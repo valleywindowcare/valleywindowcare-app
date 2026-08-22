@@ -79,7 +79,7 @@ export default function GalleryClient({ images }: { images: ImageProps[] }) {
 
             {/* Lightbox Modal */}
             {selectedImage && (
-                <div className="fixed inset-0 z-[100] bg-black/90 backdrop-blur-sm flex items-center justify-center p-4">
+                <div className="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center p-4">
                     <button
                         onClick={() => setSelectedImage(null)}
                         className="absolute top-6 right-6 text-white hover:text-gold transition-colors p-2 bg-white/10 rounded-full hover:bg-white/20"

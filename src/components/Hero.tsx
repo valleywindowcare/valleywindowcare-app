@@ -63,13 +63,13 @@ export default function Hero({
                     </p>
                     {showTrustBadges && (
                         <div className="mt-6 flex flex-wrap justify-center gap-4 text-xs sm:text-sm font-bold text-white relative z-10">
-                          <div className="flex items-center gap-2 bg-white/15 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 shadow-md">
+                          <div className="flex items-center gap-2 bg-white/90 px-4 py-2 rounded-full border border-white/20 shadow-md">
                             <span className="text-gold">🛡️</span> Licensed &amp; Insured
                           </div>
-                          <div className="flex items-center gap-2 bg-white/15 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 shadow-md">
+                          <div className="flex items-center gap-2 bg-white/90 px-4 py-2 rounded-full border border-white/20 shadow-md">
                             <span className="text-gold">✅</span> 100% Satisfaction Guarantee
                           </div>
-                          <div className="flex items-center gap-2 bg-white/15 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 shadow-md">
+                          <div className="flex items-center gap-2 bg-white/90 px-4 py-2 rounded-full border border-white/20 shadow-md">
                             <span className="text-gold">🛡️</span> Zero Damage Guarantee
                           </div>
                         </div>
@@ -77,15 +77,15 @@ export default function Hero({
                 </div>
 
                 {/* Bottom Section: Dual-Action Quote Box (Zero-Gap Stack) */}
-                <motion.div 
+                <motion.div viewport={{ once: true }} 
                     initial={{ opacity: 0, y: 40 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ type: "spring", stiffness: 100, damping: 20 }}
-                    className="!relative !z-10 !w-full !max-w-xl !mx-auto bg-white/80 backdrop-blur-2xl !rounded-2xl sm:!rounded-[32px] shadow-[0_20px_50px_rgba(0,0,0,0.3)] border border-white/20 !overflow-hidden flex flex-col text-navy-dark sm:min-h-[480px]" 
+                    className="!relative !z-10 !w-full !max-w-xl !mx-auto bg-white/95 !rounded-2xl sm:!rounded-[32px] shadow-[0_20px_50px_rgba(0,0,0,0.3)] border border-white/20 !overflow-hidden flex flex-col text-navy-dark sm:min-h-[480px]" 
                     id="quote-form"
                 >
                     {/* Top Action Header */}
-                    <div className="bg-gradient-to-br from-[#1B365D]/90 to-[#2c538c]/90 text-white w-full border-b border-white/10 backdrop-blur-md">
+                    <div className="bg-gradient-to-br from-[#1B365D]/90 to-[#2c538c]/90 text-white w-full border-b border-white/10 ">
                         <div className="!flex !flex-col !items-center !justify-center !text-center !w-full pt-3 sm:pt-4 pb-1 sm:pb-2">
                             <h3 className="text-lg sm:text-2xl font-bold !text-center !w-full !block">Get In Touch Fast</h3>
                         </div>
@@ -120,14 +120,14 @@ export default function Hero({
 
             {/* Bouncing Scroll Down Arrow */}
             {showScrollArrow && (
-                <motion.div 
+                <motion.div viewport={{ once: true }} 
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 1, duration: 1 }}
                     className="absolute bottom-6 sm:bottom-10 z-30 flex flex-col items-center justify-center w-full"
                 >
                     <span className="text-white/90 text-[10px] sm:text-xs font-black tracking-widest uppercase mb-1 sm:mb-2 drop-shadow-md">Scroll For Pricing</span>
-                    <motion.div
+                    <motion.div viewport={{ once: true }}
                         animate={{ y: [0, 10, 0] }}
                         transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
                     >

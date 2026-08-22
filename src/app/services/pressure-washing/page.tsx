@@ -102,17 +102,17 @@ export default function PressureWashingPage() {
                             Valley Property Services provides premium pressure washing services to enhance your property's value.
                         </p>
                         <div className="mb-6 flex flex-wrap justify-center gap-4 text-xs sm:text-sm font-bold text-white relative z-10">
-                          <div className="flex items-center gap-2 bg-white/15 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 shadow-md">
+                          <div className="flex items-center gap-2 bg-white/90 px-4 py-2 rounded-full border border-white/20 shadow-md">
                             <span className="text-gold">🛡️</span> Licensed &amp; Insured
                           </div>
-                          <div className="flex items-center gap-2 bg-white/15 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 shadow-md">
+                          <div className="flex items-center gap-2 bg-white/90 px-4 py-2 rounded-full border border-white/20 shadow-md">
                             <span className="text-gold">✅</span> 100% Satisfaction Guarantee
                           </div>
-                          <div className="flex items-center gap-2 bg-white/15 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 shadow-md">
+                          <div className="flex items-center gap-2 bg-white/90 px-4 py-2 rounded-full border border-white/20 shadow-md">
                             <span className="text-gold">🛡️</span> Zero Damage Guarantee
                           </div>
                         </div>
-                        <div className="bg-white/10 p-6 rounded-xl border border-white/20 backdrop-blur-sm text-left mb-8 shadow-lg">
+                        <div className="bg-navy p-6 rounded-xl border border-white/20 text-left mb-8 shadow-lg">
                             <p className="text-base md:text-lg text-gray-100 leading-relaxed font-medium">
                                 Valley Property Services is a fully licensed and insured exterior cleaning company based in De Pere, Wisconsin. We provide residential soft washing, commercial pressure washing, and roof cleaning services across Green Bay, Appleton, and the Fox Valley. Our proprietary low-pressure system effectively removes Gloeocapsa magma (roof algae), rust, and winter road salt without damaging siding or concrete infrastructure.
                             </p>
@@ -292,7 +292,7 @@ export default function PressureWashingPage() {
                     <h2 className="text-3xl md:text-4xl font-extrabold text-gold text-center mb-8">
                         Commercial Environmental Compliance & Zero-Runoff Protocols
                     </h2>
-                    <div className="bg-white/10 p-8 md:p-10 rounded-2xl border border-white/20 backdrop-blur-md shadow-2xl">
+                    <div className="bg-navy p-8 md:p-10 rounded-2xl border border-white/20 shadow-2xl">
                         <p className="text-lg text-gray-100 leading-relaxed font-medium">
                             For commercial properties in the Fox Valley, environmental liability is a critical concern. Valley Property Services operates in strict compliance with Wisconsin Department of Natural Resources (WDNR) and EPA regulations. We utilize advanced wastewater recovery protocols to ensure that heavy grease, toxic suspended solids, and chemical runoff never enter the Lower Fox River or municipal storm drains. By employing eco-friendly, non-butyl degreasers and professional water reclamation systems, we protect your business from regulatory fines while delivering a pristine clean.
                         </p>

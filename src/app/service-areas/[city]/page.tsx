@@ -187,7 +187,7 @@ export default async function CityHubPage({ params }: PageProps) {
                 />
 
                 <div className="relative z-10 container mx-auto px-4 max-w-5xl text-center mt-16 sm:mt-0">
-                    <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 text-white px-4 md:px-6 py-2 rounded-full mb-6 text-sm font-semibold tracking-widest uppercase">
+                    <div className="inline-flex items-center gap-2 bg-white/90 border border-white/20 text-white px-4 md:px-6 py-2 rounded-full mb-6 text-sm font-semibold tracking-widest uppercase">
                         <MapPin size={16} className="text-gold" />
                         Serving {cityName}, WI
                     </div>
@@ -299,7 +299,7 @@ export default async function CityHubPage({ params }: PageProps) {
             {/* DYNAMIC PRICING EXPECTATIONS INJECTION */}
             <section className="py-16 bg-gradient-to-br from-[#0b2341] via-[#1a365d] to-[#2c5282] text-white border-t border-navy-light relative overflow-hidden">
                 <div className="container mx-auto px-4 max-w-4xl relative z-10">
-                    <div className="bg-white/10 backdrop-blur-xl p-8 md:p-12 rounded-[32px] border border-white/20 shadow-[0_20px_50px_rgba(0,0,0,0.3)]">
+                    <div className="bg-white/95 p-8 md:p-12 rounded-[32px] border border-white/20 shadow-[0_20px_50px_rgba(0,0,0,0.3)]">
                         <h2 className="text-3xl md:text-4xl font-black mb-6 text-gold border-b border-white/20 pb-6 tracking-tight">
                             {cityName} Pricing Expectations
                         </h2>
@@ -320,7 +320,7 @@ export default async function CityHubPage({ params }: PageProps) {
 
                     <div className="space-y-16">
                         {/* Service 1 */}
-                        <section className="flex flex-col md:flex-row gap-8 items-center bg-white/70 backdrop-blur-xl p-8 rounded-[32px] shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-white/40 transition-transform duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(11,35,65,0.15)]">
+                        <section className="flex flex-col md:flex-row gap-8 items-center bg-white/95 p-8 rounded-[32px] shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-white/40 transition-transform duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(11,35,65,0.15)]">
                             <div className="w-full md:w-1/2 relative h-[300px] rounded-2xl overflow-hidden shrink-0 shadow-inner">
                                 <Image src={'/images/portfolio/rust-removal-before-after.webp'} alt={`Professional rust removal and mineral extraction in ${cityName}, ${targetCounty} County`} fill className="object-cover" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" loading="lazy" />
                             </div>
@@ -338,7 +338,7 @@ export default async function CityHubPage({ params }: PageProps) {
                         </section>
 
                         {/* Service 2 */}
-                        <section className="flex flex-col md:flex-row-reverse gap-8 items-center bg-white/70 backdrop-blur-xl p-8 rounded-[32px] shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-white/40 transition-transform duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(11,35,65,0.15)]">
+                        <section className="flex flex-col md:flex-row-reverse gap-8 items-center bg-white/95 p-8 rounded-[32px] shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-white/40 transition-transform duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(11,35,65,0.15)]">
                             <div className="w-full md:w-1/2 relative h-[300px] rounded-2xl overflow-hidden shrink-0 shadow-inner">
                                 <Image src={'/images/portfolio/soft-washing.webp'} alt={`Safe low-pressure soft wash exterior cleaning in ${cityName}, ${targetCounty} County`} fill className="object-cover" />
                             </div>
@@ -356,7 +356,7 @@ export default async function CityHubPage({ params }: PageProps) {
                         </section>
 
                         {/* Service 3 */}
-                        <section className="flex flex-col md:flex-row gap-8 items-center bg-white/70 backdrop-blur-xl p-8 rounded-[32px] shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-white/40 transition-transform duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(11,35,65,0.15)]">
+                        <section className="flex flex-col md:flex-row gap-8 items-center bg-white/95 p-8 rounded-[32px] shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-white/40 transition-transform duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(11,35,65,0.15)]">
                             <div className="w-full md:w-1/2 relative h-[300px] rounded-2xl overflow-hidden shrink-0 shadow-inner">
                                 <Image src={'/images/portfolio/drive-way-cleaning.webp'} alt={`Concrete driveway power washing and flatwork restoration in ${cityName}, ${targetCounty} County`} fill className="object-cover" />
                             </div>
@@ -374,7 +374,7 @@ export default async function CityHubPage({ params }: PageProps) {
                         </section>
 
                         {/* Service 4 */}
-                        <section className="flex flex-col md:flex-row-reverse gap-8 items-center bg-white/70 backdrop-blur-xl p-8 rounded-[32px] shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-white/40 transition-transform duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(11,35,65,0.15)]">
+                        <section className="flex flex-col md:flex-row-reverse gap-8 items-center bg-white/95 p-8 rounded-[32px] shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-white/40 transition-transform duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(11,35,65,0.15)]">
                             <div className="w-full md:w-1/2 relative h-[300px] rounded-2xl overflow-hidden shrink-0 shadow-inner">
                                 <Image src={'/images/portfolio/solar-panel-cleaning.webp'} alt={`Rooftop solar panel washing and efficiency optimization in ${cityName}, ${targetCounty} County`} fill className="object-cover" />
                             </div>
@@ -392,7 +392,7 @@ export default async function CityHubPage({ params }: PageProps) {
                         </section>
 
                         {/* Service 5 */}
-                        <section className="flex flex-col md:flex-row gap-8 items-center bg-white/70 backdrop-blur-xl p-8 rounded-[32px] shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-white/40 transition-transform duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(11,35,65,0.15)]">
+                        <section className="flex flex-col md:flex-row gap-8 items-center bg-white/95 p-8 rounded-[32px] shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-white/40 transition-transform duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(11,35,65,0.15)]">
                             <div className="w-full md:w-1/2 relative h-[300px] rounded-2xl overflow-hidden shrink-0 shadow-inner">
                                 <Image src={'/images/portfolio/store-front-cleaning.webp'} alt={`Commercial storefront and canvas awning exterior washing in ${cityName}, ${targetCounty} County`} fill className="object-cover" />
                             </div>

@@ -281,7 +281,7 @@ export default function ValueCalculator() {
                <AnimatePresence mode="wait">
                   {/* STEP 1: PENDING CALCULATION */}
                   {step === 1 && (
-                     <motion.div key="step1" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="w-full h-full flex flex-col justify-center items-center space-y-6">
+                     <motion.div viewport={{ once: true }} key="step1" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="w-full h-full flex flex-col justify-center items-center space-y-6">
                         <div className="w-20 h-20 bg-gray-200 rounded-full flex items-center justify-center mb-4">
                            <span className="text-4xl text-gray-400">?</span>
                         </div>
@@ -295,7 +295,7 @@ export default function ValueCalculator() {
 
                   {/* STEP 2: LEAD TRAP */}
                   {step === 2 && (
-                     <motion.div key="step2" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} className="w-full">
+                     <motion.div viewport={{ once: true }} key="step2" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.05 }} className="w-full">
                         <h3 className="text-xl font-extrabold text-navy mb-2">Almost there!</h3>
                         <p className="text-sm text-gray-600 mb-6">Enter your details so we know where to send this guaranteed quote.</p>
                         <form onSubmit={handleStep2Submit} className="space-y-4">
@@ -311,7 +311,7 @@ export default function ValueCalculator() {
 
                   {/* STEP 3: THE CLOSE */}
                   {step === 3 && (
-                     <motion.div key="step3" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="w-full h-full flex flex-col justify-center text-center space-y-5">
+                     <motion.div viewport={{ once: true }} key="step3" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="w-full h-full flex flex-col justify-center text-center space-y-5">
                        <div>
                           <p className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-1">Your Estimated Range</p>
                           <div className="text-5xl sm:text-6xl font-black text-navy tracking-tighter">

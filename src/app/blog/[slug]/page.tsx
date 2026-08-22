@@ -68,7 +68,7 @@ export default async function BlogPostTemplate({ params }: Props) {
                         <div className="inline-block bg-gold text-navy font-black px-4 py-1.5 rounded-full text-xs sm:text-sm tracking-widest uppercase shadow-lg border border-gold/20">
                             {post.category}
                         </div>
-                        <div className="inline-block bg-navy/40 backdrop-blur-md text-white font-medium px-4 py-1.5 rounded-full text-xs sm:text-sm tracking-widest uppercase border border-white/20 shadow-sm">
+                        <div className="inline-block bg-navy/90 text-white font-medium px-4 py-1.5 rounded-full text-xs sm:text-sm tracking-widest uppercase border border-white/20 shadow-sm">
                             {post.date}
                         </div>
                     </div>

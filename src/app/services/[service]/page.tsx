@@ -216,13 +216,13 @@ export default async function ServiceGenericPage({ params }: PageProps) {
                     </p>
                     
                     <div className="trust-badge-row mt-6 flex flex-wrap justify-center gap-4 text-xs sm:text-sm font-bold text-white relative z-10">
-                      <div className="flex items-center gap-2 bg-white/15 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 shadow-md">
+                      <div className="flex items-center gap-2 bg-white/90 px-4 py-2 rounded-full border border-white/20 shadow-md">
                         <span className="text-gold">🛡️</span> Licensed &amp; Insured
                       </div>
-                      <div className="flex items-center gap-2 bg-white/15 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 shadow-md">
+                      <div className="flex items-center gap-2 bg-white/90 px-4 py-2 rounded-full border border-white/20 shadow-md">
                         <span className="text-gold">✅</span> 100% Satisfaction Guarantee
                       </div>
-                      <div className="flex items-center gap-2 bg-white/15 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 shadow-md">
+                      <div className="flex items-center gap-2 bg-white/90 px-4 py-2 rounded-full border border-white/20 shadow-md">
                         <span className="text-gold">🛡️</span> Zero Damage Guarantee
                       </div>
                     </div>
@@ -375,7 +375,7 @@ export default async function ServiceGenericPage({ params }: PageProps) {
                         <div className="absolute top-0 right-0 p-8 opacity-10 pointer-events-none">
                             <CreditCard size={150} />
                         </div>
-                        <div className="bg-white/10 backdrop-blur-sm p-4 rounded-full shrink-0 relative z-10">
+                        <div className="bg-white/90 p-4 rounded-full shrink-0 relative z-10">
                             <CreditCard size={64} className="text-gold" />
                         </div>
                         <div className="relative z-10">

@@ -42,13 +42,13 @@ export default function ChristmasLightingPage() {
                             Valley Property Services provides premium christmas lighting services to enhance your property's value.
                         </p>
                         <div className="mb-8 flex flex-wrap justify-center gap-4 text-xs sm:text-sm font-bold text-white relative z-10">
-                          <div className="flex items-center gap-2 bg-white/15 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 shadow-md">
+                          <div className="flex items-center gap-2 bg-white/90 px-4 py-2 rounded-full border border-white/20 shadow-md">
                             <span className="text-gold">🛡️</span> Licensed &amp; Insured
                           </div>
-                          <div className="flex items-center gap-2 bg-white/15 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 shadow-md">
+                          <div className="flex items-center gap-2 bg-white/90 px-4 py-2 rounded-full border border-white/20 shadow-md">
                             <span className="text-gold">✅</span> 100% Satisfaction Guarantee
                           </div>
-                          <div className="flex items-center gap-2 bg-white/15 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 shadow-md">
+                          <div className="flex items-center gap-2 bg-white/90 px-4 py-2 rounded-full border border-white/20 shadow-md">
                             <span className="text-gold">🛡️</span> Zero Damage Guarantee
                           </div>
                         </div>

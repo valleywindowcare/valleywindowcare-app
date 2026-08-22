@@ -25,7 +25,7 @@ export default function MobileFooter() {
 
     return (
         <div className="fixed bottom-0 w-full z-50 md:hidden pb-safe">
-            <div className="bg-white/90 backdrop-blur-md shadow-[0_-10px_40px_-10px_rgba(0,0,0,0.1)] border-t border-gray-100 flex h-20 items-stretch">
+            <div className="bg-white shadow-[0_-10px_40px_-10px_rgba(0,0,0,0.1)] border-t border-gray-100 flex h-20 items-stretch">
 
                 {/* Call Now Button (Navy) */}
                 <a
