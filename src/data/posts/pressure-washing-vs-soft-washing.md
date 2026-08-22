@@ -121,7 +121,7 @@ Still not sure? Don’t worry—our experts are happy to assess your property an
 ### Proudly Serving Green Bay & Appleton, WI
 
 We take pride in delivering high-quality exterior cleaning solutions to our neighbors in **Green Bay**, **Appleton**, and surrounding Wisconsin communities. Whether you need a quick refresh or a full-property overhaul, Valley Property Services is here to help.
-📞 **[Contact us today** for a free estimate and let us bring your home or business exterior back to life—with care, precision, and professionalism.
+📞 **[Contact us today](/contact)** for a free estimate and let us bring your home or business exterior back to life—with care, precision, and professionalism.
 
 
 

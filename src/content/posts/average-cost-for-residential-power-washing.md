@@ -169,8 +169,7 @@ Ashwaubenon
 
 Surrounding Northeast Wisconsin areas
 
-📞 **Call or Text:** 📧 **Email:** info@valleywindowcare.com🌐 **Website:** [V[alley Window Care and Exterior Cleaning Services](/services/pressure-washing)[ 
-Get honest pricing](https://valleyexteriorpros.com/contact/), professional service, and results you can trust.
+📞 **Call or Text: (920) 609-7085** | 📧 **Email:** info@valleywindowcare.com | 🌐 **Website:** [Valley Window Care and Exterior Cleaning Services](/services/pressure-washing)Get honest pricing](https://valleyexteriorpros.com/contact/), professional service, and results you can trust.
 
 
 

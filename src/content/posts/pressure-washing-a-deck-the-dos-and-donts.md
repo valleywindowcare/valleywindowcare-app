@@ -86,7 +86,7 @@ Fences
 Patios and outdoor furniture
 
 At **Valley Property Services**, Valley Property Services specialize in safe, effective pressure washing throughout **Green Bay and Appleton, WI**. Whether you’re prepping your deck for a new stain or just want to refresh your space after winter, our team is here to help.
-📞 **[Contact us today** for a free estimate or to schedule your seasonal pressure washing service. Let us help you protect your investment—and enjoy your deck all season long.
+📞 **[Contact us today](/contact)** for a free estimate or to schedule your seasonal pressure washing service. Let us help you protect your investment—and enjoy your deck all season long.
 
 
 

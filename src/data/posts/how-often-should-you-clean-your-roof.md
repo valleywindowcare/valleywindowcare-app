@@ -99,7 +99,7 @@ We provide professional roof cleaning services for homes and businesses througho
 ### 🏡 Keep Your Roof Clean—The Right Way
 
 When it’s time to clean your roof, don’t take unnecessary risks or settle for guesswork. Let the experts at Valley Property Services handle it with care.
-📞 **[Contact us today** for a free estimate or to schedule your seasonal Pressure Washing service. Let us help you protect your investment—and enjoy your deck all season long.
+📞 **[Contact us today](/contact)** for a free estimate or to schedule your seasonal Pressure Washing service. Let us help you protect your investment—and enjoy your deck all season long.
 
 
 

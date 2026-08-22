@@ -117,7 +117,7 @@ We also offer **pressure washing, Roof Cleaning, gutter cleaning, and paver rest
 ### Don’t Risk the Ladder—Let Us Help!
 
 If your windows are due for a deep clean, we’re here to help. Save yourself the time, risk, and hassle with professional window cleaning that leaves your glass gleaming.
-📞 **[Contact us today** for a free estimate or to schedule your seasonal Pressure Washing service. Let us help you protect your investment—and enjoy your deck all season long.
+📞 **[Contact us today](/contact)** for a free estimate or to schedule your seasonal Pressure Washing service. Let us help you protect your investment—and enjoy your deck all season long.
 
 
 

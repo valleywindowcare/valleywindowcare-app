@@ -176,7 +176,7 @@ Electrical safety and power load management
 Takedown and cleanup after the season
 
 🎄 Let us take care of the hard work while you enjoy the holidays stress-free.
-📞 **[Contact us today for a free quote** and schedule your holiday lighting service!
+📞 **[Contact us today for a free quote](/contact)** and schedule your holiday lighting service!
 
 
 

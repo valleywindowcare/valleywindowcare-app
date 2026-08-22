@@ -125,7 +125,7 @@ We serve **Green Bay, Appleton, and surrounding communities**, delivering reliab
 ## Ready to Make Your Home Shine?
 
 Take the guesswork out of exterior cleaning. Whether you&#8217;re looking for a full home refresh or just need help with one or two problem areas, we’re here to help.
-📞 **[Contact us today** for a free estimate or to schedule your seasonal pressure washing service. Let us help you protect your investment—and enjoy your deck all season long.
+📞 **[Contact us today](/contact)** for a free estimate or to schedule your seasonal pressure washing service. Let us help you protect your investment—and enjoy your deck all season long.
 
 
 
