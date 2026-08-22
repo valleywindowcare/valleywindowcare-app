@@ -58,5 +58,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 0.7,
     }));
 
-    return [...coreRoutes, ...serviceRoutes, ...locationRoutes, ...blogRoutes];
+    // Child Geo-Service Intersection Routes (4)
+    const childGeoServiceRoutes: MetadataRoute.Sitemap = [
+        { url: `${baseUrl}/service-areas/green-bay/pressure-washing`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.85 },
+        { url: `${baseUrl}/service-areas/green-bay/roof-cleaning`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.85 },
+        { url: `${baseUrl}/service-areas/appleton/pressure-washing`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.85 },
+        { url: `${baseUrl}/service-areas/appleton/house-washing`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.85 },
+    ];
+
+    return [...coreRoutes, ...serviceRoutes, ...locationRoutes, ...blogRoutes, ...childGeoServiceRoutes];
 }
