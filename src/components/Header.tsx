@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 
 export default function Header() {
     const pathname = usePathname();
-    const headerClasses = "sticky top-0 z-50 bg-white/95 shadow-sm w-full h-auto transition-all duration-300";
+    const headerClasses = "relative lg:sticky lg:top-0 z-50 bg-white/95 shadow-sm w-full h-auto transition-all duration-300";
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isServicesOpen, setIsServicesOpen] = useState(false);
     const [isServiceAreasOpen, setIsServiceAreasOpen] = useState(false);

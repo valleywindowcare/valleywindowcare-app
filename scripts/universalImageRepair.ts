@@ -17,7 +17,7 @@ interface BlogPost {
 // 1. Core High-Res Asset Mapping
 const ASSET_LIBRARY = {
     'Roof & Exterior Cleaning': [
-        '/gallery/Roof-Cleaning-in-green-bay.png',
+        '/gallery/Roof-Cleaning-in-green-bay.webp',
         '/gallery/Commercial-power-washing-company-scaled.jpg',
         '/gallery/Soft-washing-company-in-green-bay-wi-1-scaled.jpg',
         '/gallery/Roof_Cleaning_Company_in_Appleton-scaled.jpg',

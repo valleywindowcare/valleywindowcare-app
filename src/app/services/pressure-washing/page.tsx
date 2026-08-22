@@ -81,7 +81,7 @@ export default function PressureWashingPage() {
             <section className={`!relative !w-full !min-h-screen !flex !flex-col !items-center !justify-center overflow-hidden text-white bg-navy`}>
                 <div className="absolute inset-0 z-0">
                     <Image
-                        src="/images/portfolio/building-washing-services-1.png"
+                        src="/images/portfolio/building-washing-services-1.webp"
                         alt="Pressure Washing"
                         fill
                         priority={true}

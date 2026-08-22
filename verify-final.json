@@ -798,7 +798,7 @@
             "entity": "valleywindowcare.com"
           },
           {
-            "url": "https://www.valleywindowcare.com/_next/image?url=%2Fimages%2Fportfolio%2Fbuilding-washing-services-1.png&w=750&q=75",
+            "url": "https://www.valleywindowcare.com/_next/image?url=%2Fimages%2Fportfolio%2Fbuilding-washing-services-1.webp&w=750&q=75",
             "sessionTargetType": "page",
             "protocol": "h2",
             "rendererStartTime": 523.6459999084473,
@@ -3832,7 +3832,7 @@
                 "width": 326,
                 "height": 252
               },
-              "snippet": "<img alt=\"House Washing\" loading=\"lazy\" decoding=\"async\" data-nimg=\"fill\" class=\"object-cover group-hover:scale-105 transition-transform duration-500 z-0\" style=\"position: absolute; height: 100%; width: 100%; inset: 0px;\" sizes=\"(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw\" srcset=\"/_next/image?url=%2Fimages%2Fportfolio%2Fbuilding-washing-services-1.png&amp;w…\" src=\"https://www.valleywindowcare.com/_next/image?url=%2Fimages%2Fportfolio%2Fb…\">",
+              "snippet": "<img alt=\"House Washing\" loading=\"lazy\" decoding=\"async\" data-nimg=\"fill\" class=\"object-cover group-hover:scale-105 transition-transform duration-500 z-0\" style=\"position: absolute; height: 100%; width: 100%; inset: 0px;\" sizes=\"(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw\" srcset=\"/_next/image?url=%2Fimages%2Fportfolio%2Fbuilding-washing-services-1.webp&amp;w…\" src=\"https://www.valleywindowcare.com/_next/image?url=%2Fimages%2Fportfolio%2Fb…\">",
               "nodeLabel": "House Washing",
               "explanation": "Fix all of the following:\n  Element contains <img> element with alt text that duplicates existing text"
             }
@@ -4893,7 +4893,7 @@
             "totalBytes": 71311
           },
           {
-            "url": "https://www.valleywindowcare.com/_next/image?url=%2Fimages%2Fportfolio%2Fbuilding-washing-services-1.png&w=750&q=75",
+            "url": "https://www.valleywindowcare.com/_next/image?url=%2Fimages%2Fportfolio%2Fbuilding-washing-services-1.webp&w=750&q=75",
             "totalBytes": 52968
           },
           {
@@ -5746,10 +5746,10 @@
                 "width": 412,
                 "height": 1322
               },
-              "snippet": "<img alt=\"Valley Property Services Exterior Cleaning\" fetchpriority=\"high\" decoding=\"async\" data-nimg=\"fill\" class=\"object-cover\" style=\"position: absolute; height: 100%; width: 100%; inset: 0px;\" sizes=\"(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw\" srcset=\"/_next/image?url=%2Fimages%2Fportfolio%2Fbuilding-washing-services-1.png&amp;w…\" src=\"https://www.valleywindowcare.com/_next/image?url=%2Fimages%2Fportfolio%2Fb…\">",
+              "snippet": "<img alt=\"Valley Property Services Exterior Cleaning\" fetchpriority=\"high\" decoding=\"async\" data-nimg=\"fill\" class=\"object-cover\" style=\"position: absolute; height: 100%; width: 100%; inset: 0px;\" sizes=\"(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw\" srcset=\"/_next/image?url=%2Fimages%2Fportfolio%2Fbuilding-washing-services-1.webp&amp;w…\" src=\"https://www.valleywindowcare.com/_next/image?url=%2Fimages%2Fportfolio%2Fb…\">",
               "nodeLabel": "Valley Property Services Exterior Cleaning"
             },
-            "url": "https://www.valleywindowcare.com/_next/image?url=%2Fimages%2Fportfolio%2Fbuilding-washing-services-1.png&w=750&q=75",
+            "url": "https://www.valleywindowcare.com/_next/image?url=%2Fimages%2Fportfolio%2Fbuilding-washing-services-1.webp&w=750&q=75",
             "totalBytes": 52653,
             "wastedBytes": 43405,
             "subItems": {
@@ -5900,7 +5900,7 @@
               "width": 412,
               "height": 1322
             },
-            "snippet": "<img alt=\"Valley Property Services Exterior Cleaning\" fetchpriority=\"high\" decoding=\"async\" data-nimg=\"fill\" class=\"object-cover\" style=\"position: absolute; height: 100%; width: 100%; inset: 0px;\" sizes=\"(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw\" srcset=\"/_next/image?url=%2Fimages%2Fportfolio%2Fbuilding-washing-services-1.png&amp;w…\" src=\"https://www.valleywindowcare.com/_next/image?url=%2Fimages%2Fportfolio%2Fb…\">",
+            "snippet": "<img alt=\"Valley Property Services Exterior Cleaning\" fetchpriority=\"high\" decoding=\"async\" data-nimg=\"fill\" class=\"object-cover\" style=\"position: absolute; height: 100%; width: 100%; inset: 0px;\" sizes=\"(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw\" srcset=\"/_next/image?url=%2Fimages%2Fportfolio%2Fbuilding-washing-services-1.webp&amp;w…\" src=\"https://www.valleywindowcare.com/_next/image?url=%2Fimages%2Fportfolio%2Fb…\">",
             "nodeLabel": "Valley Property Services Exterior Cleaning"
           }
         ]
@@ -5949,7 +5949,7 @@
               "width": 412,
               "height": 1322
             },
-            "snippet": "<img alt=\"Valley Property Services Exterior Cleaning\" fetchpriority=\"high\" decoding=\"async\" data-nimg=\"fill\" class=\"object-cover\" style=\"position: absolute; height: 100%; width: 100%; inset: 0px;\" sizes=\"(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw\" srcset=\"/_next/image?url=%2Fimages%2Fportfolio%2Fbuilding-washing-services-1.png&amp;w…\" src=\"https://www.valleywindowcare.com/_next/image?url=%2Fimages%2Fportfolio%2Fb…\">",
+            "snippet": "<img alt=\"Valley Property Services Exterior Cleaning\" fetchpriority=\"high\" decoding=\"async\" data-nimg=\"fill\" class=\"object-cover\" style=\"position: absolute; height: 100%; width: 100%; inset: 0px;\" sizes=\"(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw\" srcset=\"/_next/image?url=%2Fimages%2Fportfolio%2Fbuilding-washing-services-1.webp&amp;w…\" src=\"https://www.valleywindowcare.com/_next/image?url=%2Fimages%2Fportfolio%2Fb…\">",
             "nodeLabel": "Valley Property Services Exterior Cleaning"
           }
         ]

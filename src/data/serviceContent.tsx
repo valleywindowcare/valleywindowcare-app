@@ -137,7 +137,7 @@ export const serviceContentMap: Record<string, { pageH1?: string, description: R
             variableTitle: "Cost Variables",
             variableDetails: "Final price depends on total stories, heavy oxidation removal, rust stains, or difficult architectural access."
         },
-        image: "/images/portfolio/building-washing-services-1.png",
+        image: "/images/portfolio/building-washing-services-1.webp",
         faqs: [
             {
                 "question": "What is soft washing, and how does it protect my siding?",
