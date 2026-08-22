@@ -11,9 +11,11 @@ interface SafeHeroImageProps {
 
 export default function SafeHeroImage({ src, alt, fallbackSrc }: SafeHeroImageProps) {
     const [imgSrc, setImgSrc] = useState(src);
+    const [hasFallbackAttempted, setHasFallbackAttempted] = useState(false);
 
     useEffect(() => {
         setImgSrc(src);
+        setHasFallbackAttempted(false);
     }, [src]);
 
     return (
@@ -26,7 +28,10 @@ export default function SafeHeroImage({ src, alt, fallbackSrc }: SafeHeroImagePr
                 sizes="100vw"
                 className="object-cover object-center"
                 onError={() => {
-                    setImgSrc(fallbackSrc);
+                    if (!hasFallbackAttempted) {
+                        setImgSrc(fallbackSrc);
+                        setHasFallbackAttempted(true);
+                    }
                 }}
             />
             <div className="absolute inset-0 bg-navy/80 mix-blend-multiply"></div>
