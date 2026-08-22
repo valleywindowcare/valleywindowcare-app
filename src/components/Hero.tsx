@@ -63,13 +63,13 @@ export default function Hero({
                     </p>
                     {showTrustBadges && (
                         <div className="mt-6 flex flex-wrap justify-center gap-4 text-xs sm:text-sm font-bold text-white relative z-10">
-                          <div className="flex items-center gap-2 bg-white/90 px-4 py-2 rounded-full border border-white/20 shadow-md">
+                          <div className="bg-slate-900/90 text-white border border-slate-700/60 px-3.5 py-1.5 rounded-full shadow-md font-semibold text-xs md:text-sm flex items-center gap-2">
                             <span className="text-gold">🛡️</span> Licensed &amp; Insured
                           </div>
-                          <div className="flex items-center gap-2 bg-white/90 px-4 py-2 rounded-full border border-white/20 shadow-md">
+                          <div className="bg-slate-900/90 text-white border border-slate-700/60 px-3.5 py-1.5 rounded-full shadow-md font-semibold text-xs md:text-sm flex items-center gap-2">
                             <span className="text-gold">✅</span> 100% Satisfaction Guarantee
                           </div>
-                          <div className="flex items-center gap-2 bg-white/90 px-4 py-2 rounded-full border border-white/20 shadow-md">
+                          <div className="bg-slate-900/90 text-white border border-slate-700/60 px-3.5 py-1.5 rounded-full shadow-md font-semibold text-xs md:text-sm flex items-center gap-2">
                             <span className="text-gold">🛡️</span> Zero Damage Guarantee
                           </div>
                         </div>

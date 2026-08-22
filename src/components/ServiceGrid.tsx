@@ -128,13 +128,13 @@ export default function ServiceGrid({ city, gridItems }: ServiceGridProps) {
                                             loading="lazy" 
                                             className="object-cover group-hover:scale-110 transition-transform duration-700 ease-out z-0" 
                                         />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-[#0b2341]/95 via-[#0b2341]/40 to-transparent z-10 transition-opacity duration-300 group-hover:opacity-80"></div>
+                                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/40 to-transparent z-10 transition-opacity duration-300 group-hover:opacity-80"></div>
                                         <div className="relative z-20 flex flex-row items-end justify-between h-full p-4 md:p-6">
-                                            <span className="font-extrabold tracking-tight text-white group-hover:text-gold transition-colors text-xs sm:text-sm md:text-xl leading-tight drop-shadow-md">
+                                            <span className="font-bold text-white group-hover:text-gold transition-colors text-base md:text-lg drop-shadow-md leading-tight">
                                                 {service.serviceName}
                                             </span>
-                                            <div className="bg-white/90 shadow-inner p-1 md:p-3 rounded-full transform group-hover:scale-110 group-hover:bg-white/30 transition-all shrink-0">
-                                                <ChevronRight className="text-white w-4 h-4 md:w-5 md:h-5" />
+                                            <div className="bg-amber-500 text-slate-950 w-9 h-9 md:w-12 md:h-12 rounded-full flex items-center justify-center shadow-md group-hover:bg-amber-400 transition-all shrink-0">
+                                                <ChevronRight className="text-slate-950 w-5 h-5 md:w-6 md:h-6" />
                                             </div>
                                         </div>
                                     </Link>
