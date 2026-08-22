@@ -70,7 +70,7 @@ High pressure may look faster—but it causes irreversible damage.
 
 ### 2. Chemical Knowledge &[ Proper Ratios
 
-Roof cleaning](https://valleywindowcare.com/roof-cleaning-company-in-green-bay-wisconsin/) chemicals must be:
+Roof cleaning](https://valleyexteriorpros.com/roof-cleaning-company-in-green-bay-wisconsin/) chemicals must be:
 
 Strong enough to neutralize organic growth
 
@@ -169,7 +169,7 @@ These conditions accelerate algae and moss growth, making **routine soft washing
 ## Get a Real Roof Cleaning Price—Not a Guess
 
 Online pricing ranges are estimates. The only accurate way to determine roof cleaning cost is a **professional inspection** that considers your roof’s condition, not just square footage.
-📞 **Call **🌐 **www.valleywindowcare.com**📍 Serving Green Bay, Appleton & Northeast Wisconsin
+📞 **Call **🌐 **www.valleyexteriorpros.com**📍 Serving Green Bay, Appleton & Northeast Wisconsin
 **Your roof is an asset. Treat it like one.**
 
 

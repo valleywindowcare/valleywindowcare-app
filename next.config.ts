@@ -233,6 +233,14 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "valleywindowcare.com",
       },
+      {
+        protocol: "https",
+        hostname: "valleyexteriorpros.com",
+      },
+      {
+        protocol: "https",
+        hostname: "www.valleyexteriorpros.com",
+      },
     ],
   },
   async redirects() {
@@ -337,7 +345,7 @@ const nextConfig: NextConfig = {
             value: 'valleywindowcare.com',
           },
         ],
-        destination: 'https://valleyexteriorpros.com/:path*',
+        destination: 'https://www.valleyexteriorpros.com/:path*',
         permanent: true,
       },
       {
@@ -348,7 +356,7 @@ const nextConfig: NextConfig = {
             value: 'www.valleywindowcare.com',
           },
         ],
-        destination: 'https://valleyexteriorpros.com/:path*',
+        destination: 'https://www.valleyexteriorpros.com/:path*',
         permanent: true,
       },
     ];

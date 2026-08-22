@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { blogData } from '@/data/blogData';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = 'https://valleywindowcare.com';
+    const baseUrl = 'https://www.valleyexteriorpros.com';
 
     // Core Pages (8)
     const coreRoutes: MetadataRoute.Sitemap = [

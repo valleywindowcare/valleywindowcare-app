@@ -15,9 +15,6 @@ import { ChevronRight } from "lucide-react";
 export const metadata: Metadata = {
     title: "Permanent Lighting Green Bay Wi | Valley Property Services",
     description: "Valley Property Services provides premium exterior services including Permanent Lighting Green Bay Wi in Northeast Wisconsin.",
-    alternates: {
-        canonical: "https://valleywindowcare.com/blog/permanent-lighting-green-bay-wi"
-    }
 };
 
 export default function PermanentLightingGreenBayWiPage() {

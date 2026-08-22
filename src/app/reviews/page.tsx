@@ -7,9 +7,6 @@ import ReviewSlider from '@/components/ReviewSlider';
 export const metadata = {
     title: 'Customer Reviews & Testimonials | Valley Property Services',
     description: 'Read what our customers in Northeast Wisconsin say about our window cleaning, roof washing, and exterior cleaning services. 100+ 5-star Google Reviews.',
-    alternates: {
-        canonical: 'https://valleywindowcare.com/reviews'
-    }
 };
 
 const reviews = [

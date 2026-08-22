@@ -155,17 +155,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     return {
         title: seoTitle,
         description: seoDescription,
-        alternates: {
-            canonical: `https://valleywindowcare.com/services/${service}`
-        },
         openGraph: {
             title: seoTitle,
             description: seoDescription,
-            url: `https://valleywindowcare.com/services/${service}`,
+            url: `https://www.valleyexteriorpros.com/services/${service}`,
             siteName: 'Valley Property Services',
             images: [
                 {
-                    url: `https://valleywindowcare.com${seoImage}`,
+                    url: `https://www.valleyexteriorpros.com${seoImage}`,
                     width: 1200,
                     height: 630,
                     alt: `${formattedName} Portfolio Showcase in Wisconsin`,
@@ -251,13 +248,13 @@ export default async function ServiceGenericPage({ params }: PageProps) {
                                 </div>
                             </a>
 
-                            <a href="mailto:info@valleywindowcare.com" className="!min-w-0 flex flex-col items-center gap-2 hover:text-gold transition-colors group !text-center overflow-hidden" rel="nofollow" aria-label="Email Us">
+                            <a href="mailto:info@valleyexteriorpros.com" className="!min-w-0 flex flex-col items-center gap-2 hover:text-gold transition-colors group !text-center overflow-hidden" rel="nofollow" aria-label="Email Us">
                                 <div className="bg-white/10 p-2 sm:p-3 rounded-2xl group-hover:bg-gold/20 transition-colors shrink-0">
                                     <Mail size={24} className="text-gold" />
                                 </div>
                                 <div className="flex flex-col items-center !text-center w-full px-1">
                                     <p className="!text-xs text-gray-300 font-bold mb-1 tracking-wider uppercase !text-center">Email Us</p>
-                                    <p className="font-bold !text-[10px] sm:!text-xs break-all !text-center w-full">info@valleywindowcare.com</p>
+                                    <p className="font-bold !text-[10px] sm:!text-xs break-all !text-center w-full">info@valleyexteriorpros.com</p>
                                 </div>
                             </a>
                         </div>
@@ -471,14 +468,14 @@ export default async function ServiceGenericPage({ params }: PageProps) {
                             "@type": "Service",
                             "name": formattedName,
                             "serviceType": formattedName,
-                            "description": `Valley Property Services provides premium ${formattedName.toLowerCase()} and property maintenance for homes and businesses in Northeast Wisconsin.`,
-                            "image": `https://valleywindowcare.com${bodyImageToUse}`,
+                             "description": `Valley Property Services provides premium ${formattedName.toLowerCase()} and property maintenance for homes and businesses in Northeast Wisconsin.`,
+                            "image": `https://www.valleyexteriorpros.com${bodyImageToUse}`,
                             "provider": {
                                 "@type": "LocalBusiness",
                                 "name": "Valley Property Services",
-                                "image": "https://valleywindowcare.com/images/portfolio/house-wash-before-after.webp",
+                                "image": "https://www.valleyexteriorpros.com/images/portfolio/house-wash-before-after.webp",
                                 "telephone": "(920) 609-7085",
-                                "url": `https://valleywindowcare.com/services/${service}`
+                                "url": `https://www.valleyexteriorpros.com/services/${service}`
                             },
                             "areaServed": [
                                 { "@type": "City", "name": "Green Bay" },
@@ -513,24 +510,24 @@ export default async function ServiceGenericPage({ params }: PageProps) {
                         __html: JSON.stringify({
                             "@context": "https://schema.org",
                             "@type": "BreadcrumbList",
-                            "itemListElement": [
+                             "itemListElement": [
                                 {
                                     "@type": "ListItem",
                                     "position": 1,
                                     "name": "Home",
-                                    "item": "https://valleywindowcare.com/"
+                                    "item": "https://www.valleyexteriorpros.com/"
                                 },
                                 {
                                     "@type": "ListItem",
                                     "position": 2,
                                     "name": "Services",
-                                    "item": "https://valleywindowcare.com/services"
+                                    "item": "https://www.valleyexteriorpros.com/services"
                                 },
                                 {
                                     "@type": "ListItem",
                                     "position": 3,
                                     "name": formattedName,
-                                    "item": `https://valleywindowcare.com/services/${service}`
+                                    "item": `https://www.valleyexteriorpros.com/services/${service}`
                                 }
                             ]
                         })

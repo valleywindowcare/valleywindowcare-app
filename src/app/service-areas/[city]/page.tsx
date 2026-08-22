@@ -70,9 +70,6 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         title: generatedTitle,
         description: seoDescription,
         robots: shouldNoindex ? { index: false, follow: true } : { index: true, follow: true },
-        alternates: {
-            canonical: `https://valleywindowcare.com/service-areas/${content.citySlug}`
-        }
     };
 }
 
@@ -480,13 +477,13 @@ export default async function CityHubPage({ params }: PageProps) {
                             "@context": "https://schema.org",
                             "@type": "LocalBusiness",
                             "name": "Valley Property Services",
-                            "image": "https://valleywindowcare.com/images/portfolio/building-wash-copy.webp",
+                            "image": "https://www.valleyexteriorpros.com/images/portfolio/building-wash-copy.webp",
                             "areaServed": {
                                 "@type": "City",
                                 "name": `${cityName}, WI`
                             },
                             "telephone": "(920) 609-7085",
-                            "url": `https://valleywindowcare.com/service-areas/${content.citySlug}`,
+                            "url": `https://www.valleyexteriorpros.com/service-areas/${content.citySlug}`,
                             "geo": {
                                 "@type": "GeoCoordinates",
                                 "latitude": 44.5192,

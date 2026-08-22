@@ -6,9 +6,6 @@ import ValueCalculator from '@/components/ValueCalculator';
 export const metadata: Metadata = {
     title: 'Exterior Cleaning Pricing in Northeast Wisconsin | Valley Property Services',
     description: 'Explore baseline pricing estimates for professional roof washing, window cleaning, and exterior maintenance across Green Bay, Appleton, and Door County.',
-    alternates: {
-        canonical: 'https://valleywindowcare.com/pricing'
-    }
 };
 
 export default function PricingPage() {

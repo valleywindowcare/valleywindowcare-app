@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Valley Property Services | Exterior Restoration & Pressure Washing | De Pere, WI",
     description: "Northeast Wisconsin's elite exterior restoration specialists. Get a fast quote for safe soft washing, high-end pressure washing, paver sealing, and professional window cleaning.",
-    url: "https://www.valleywindowcare.com",
+    url: "https://www.valleyexteriorpros.com",
     siteName: "Valley Property Services",
     locale: "en_US",
     type: "website",

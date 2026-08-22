@@ -51,11 +51,11 @@ Valley Property Services don’t treat pressure washing as a one-size-fits-all s
 
 We provide **full exterior cleaning**, including:
 
-**[House Washing**](https://valleywindowcare.com/house-washing-company-in-green-bay-wisconsin/) (vinyl, siding, stucco)
+**[House Washing**](https://valleyexteriorpros.com/house-washing-company-in-green-bay-wisconsin/) (vinyl, siding, stucco)
 
-[**[Roof cleaning](https://valleywindowcare.com/roof-cleaning-company-in-green-bay-wisconsin/)** using safe soft-wash methods
+[**[Roof cleaning](https://valleyexteriorpros.com/roof-cleaning-company-in-green-bay-wisconsin/)** using safe soft-wash methods
 
-**[Paver patio cleaning](https://valleywindowcare.com/paver-patio-restorations-in-green-bay-wisconsin/), resanding, and sealing**
+**[Paver patio cleaning](https://valleyexteriorpros.com/paver-patio-restorations-in-green-bay-wisconsin/), resanding, and sealing**
 
 Concrete and exterior surface cleaning
 

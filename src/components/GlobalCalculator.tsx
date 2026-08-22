@@ -270,13 +270,13 @@ export default function GlobalCalculator() {
 
               <div className="space-y-3 pt-4">
                 <a 
-                  href="tel:9205285732"
+                  href="tel:920-609-7085"
                   className="w-full bg-gold text-navy font-black text-lg py-4 rounded-full flex justify-center items-center gap-3 hover:bg-gold/90 transition-transform active:scale-95 shadow-md"
                 >
                   <Phone size={24} /> Tap to Claim 10% Discount
                 </a>
                 <a 
-                  href={`sms:9205285732?body=Hi, I just generated a quote for ${quantity} ${labels[serviceType]} for $${estimate}. Can we schedule this?`}
+                  href={`sms:9206097085?body=Hi, I just generated a quote for ${quantity} ${labels[serviceType]} for $${estimate}. Can we schedule this?`}
                   className="w-full bg-navy text-white font-black text-lg py-4 rounded-full flex justify-center items-center gap-3 hover:bg-navy-dark transition-transform active:scale-95 shadow-md"
                 >
                   <MessageSquare size={24} /> Text Us To Book
