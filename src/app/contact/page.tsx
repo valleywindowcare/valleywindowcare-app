@@ -28,7 +28,7 @@ export default function ContactPage() {
                             <Mail size={28} />
                         </div>
                         <h3 className="text-xl font-bold text-navy mb-2">Email Us</h3>
-                        <a href="mailto:info@valleyexteriorpros.com" className="text-gray-600 hover:text-gold transition-colors font-medium break-all" rel="nofollow">info@valleyexteriorpros.com</a>
+                        <a href="mailto:info@valleywindowcare.com" className="text-gray-600 hover:text-gold transition-colors font-medium break-all" rel="nofollow">info@valleywindowcare.com</a>
                     </div>
                     <div className="bg-white p-8 rounded-3xl shadow-sm text-center border border-gray-100 hover:shadow-md transition-shadow">
                         <div className="bg-gold/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-gold">

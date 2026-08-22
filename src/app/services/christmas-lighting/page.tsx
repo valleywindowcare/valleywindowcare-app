@@ -69,13 +69,13 @@ export default function ChristmasLightingPage() {
                                         <p className="font-bold !text-xs sm:!text-sm whitespace-nowrap !text-center">(920) 609-7085</p>
                                     </div>
                                 </a>
-                                <a href="mailto:info@valleyexteriorpros.com" className="!min-w-0 flex flex-col items-center gap-2 hover:text-gold transition-colors group !text-center overflow-hidden" rel="nofollow">
+                                <a href="mailto:info@valleywindowcare.com" className="!min-w-0 flex flex-col items-center gap-2 hover:text-gold transition-colors group !text-center overflow-hidden" rel="nofollow">
                                     <div className="bg-white/10 p-2 sm:p-3 rounded-2xl group-hover:bg-gold/20 transition-colors shrink-0">
                                         <Mail size={24} className="text-gold" />
                                     </div>
                                     <div className="flex flex-col items-center !text-center w-full px-1">
                                         <p className="!text-xs text-gray-300 font-bold mb-1 tracking-wider uppercase !text-center">Email Us</p>
-                                        <p className="font-bold !text-[10px] sm:!text-xs break-all !text-center w-full">info@valleyexteriorpros.com</p>
+                                        <p className="font-bold !text-[10px] sm:!text-xs break-all !text-center w-full">info@valleywindowcare.com</p>
                                     </div>
                                 </a>
                             </div>

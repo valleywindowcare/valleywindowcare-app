@@ -83,7 +83,7 @@ export default function RootLayout({
               "legalName": "Valley Property Services",
               "url": "https://www.valleyexteriorpros.com",
               "telephone": "+1-920-609-7085",
-              "email": "info@valleyexteriorpros.com",
+              "email": "info@valleywindowcare.com",
               "priceRange": "$$",
               "address": {
                 "@type": "PostalAddress",

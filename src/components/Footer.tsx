@@ -133,11 +133,11 @@ export default function Footer() {
                                 </a>
                             </li>
                             <li>
-                                <a href="mailto:info@valleyexteriorpros.com" aria-label="Email info@valleyexteriorpros.com" className="flex items-center gap-3 text-navy font-bold hover:text-gold transition-colors group" rel="nofollow">
+                                <a href="mailto:info@valleywindowcare.com" aria-label="Email info@valleywindowcare.com" className="flex items-center gap-3 text-navy font-bold hover:text-gold transition-colors group" rel="nofollow">
                                     <div className="w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center shrink-0 group-hover:bg-gold/20 transition-colors">
                                         <Mail size={14} className="text-navy group-hover:text-gold transition-colors" />
                                     </div>
-                                    <span className="text-sm">info@valleyexteriorpros.com</span>
+                                    <span className="text-sm">info@valleywindowcare.com</span>
                                 </a>
                             </li>
                             <li>
