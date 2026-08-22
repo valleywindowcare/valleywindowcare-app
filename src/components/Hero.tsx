@@ -30,7 +30,7 @@ export default function Hero({
     const isDefault = !bgImage || bgImage.includes("placeholder");
 
     return (
-        <section className={`!relative !w-full !min-h-[85vh] sm:!min-h-screen !flex !flex-col !items-center !justify-center overflow-hidden text-white bg-navy pb-24 lg:pb-32`}>
+        <section className={`!relative !w-full !min-h-[85dvh] sm:!min-h-screen !flex !flex-col !items-center !justify-center overflow-hidden text-white bg-navy pb-24 lg:pb-32`}>
             {/* Background Image */}
             {bgImage && !bgImage.includes("placeholder") && (
                 <div className="absolute inset-0 z-0">

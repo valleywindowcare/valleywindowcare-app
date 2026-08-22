@@ -16,7 +16,7 @@ export default function BeforeAfterSlider({
     const [sliderPos, setSliderPos] = useState(50);
 
     return (
-        <div className={`relative w-full ${aspectRatio} overflow-hidden rounded-2xl shadow-xl select-none group border border-slate-100`}>
+        <div className={`relative w-full ${aspectRatio} overflow-hidden rounded-2xl shadow-xl select-none group border border-slate-100 touch-pan-y`}>
             {/* After Image Container (Shows Right Half of Combined Image) */}
             <div className="absolute inset-0 w-full h-full bg-slate-100">
                 <div className="absolute inset-0 w-full h-full">
@@ -72,7 +72,7 @@ export default function BeforeAfterSlider({
                 max="100"
                 value={sliderPos}
                 onChange={(e) => setSliderPos(Number(e.target.value))}
-                className="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-30"
+                className="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-30 touch-pan-y"
                 aria-label="Before and after slider handle"
             />
         </div>

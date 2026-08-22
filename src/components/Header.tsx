@@ -132,7 +132,7 @@ export default function Header() {
             </div>
 
             {isMobileMenuOpen && (
-                <div className="xl:hidden absolute top-full left-0 w-full bg-white border-b border-gray-100 shadow-xl overflow-y-auto max-h-[calc(100vh-80px)] mt-0 pt-0">
+                <div className="xl:hidden absolute top-full left-0 w-full bg-white border-b border-gray-100 shadow-xl overflow-y-auto max-h-[calc(100dvh-80px)] mt-0 pt-0">
                     <nav className="flex flex-col p-4 text-navy font-bold tracking-wide">
                         {/* Services Accordion Toggle */}
                         <div className="border-b border-gray-100">

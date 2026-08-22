@@ -322,7 +322,7 @@ export default async function CityHubPage({ params }: PageProps) {
                         {/* Service 1 */}
                         <section className="flex flex-col md:flex-row gap-8 items-center bg-white/70 backdrop-blur-xl p-8 rounded-[32px] shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-white/40 transition-transform duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(11,35,65,0.15)]">
                             <div className="w-full md:w-1/2 relative h-[300px] rounded-2xl overflow-hidden shrink-0 shadow-inner">
-                                <Image src={'/images/portfolio/rust-removal-before-after.webp'} alt={`Professional rust removal and mineral extraction in ${cityName}, ${targetCounty} County`} fill className="object-cover" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" priority={true} />
+                                <Image src={'/images/portfolio/rust-removal-before-after.webp'} alt={`Professional rust removal and mineral extraction in ${cityName}, ${targetCounty} County`} fill className="object-cover" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" loading="lazy" />
                             </div>
                             <div className="w-full md:w-1/2 prose prose-slate lg:prose-xl max-w-none">
                                 <Link href="/services/residential-rust-removal" className="no-underline hover:text-gold transition-colors">
