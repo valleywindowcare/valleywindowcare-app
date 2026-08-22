@@ -192,7 +192,9 @@ export default function RootLayout({
                   window.dataLayer = window.dataLayer || [];
                   function gtag(){dataLayer.push(arguments);}
                   gtag('js', new Date());
-                  gtag('config', '${process.env.NEXT_PUBLIC_GADS_ID}');
+                  gtag('config', '${process.env.NEXT_PUBLIC_GADS_ID}', {
+                    'phone_conversion_number': '(920) 609-7085'
+                  });
                 `,
               }}
             />
