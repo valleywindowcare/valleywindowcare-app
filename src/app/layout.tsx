@@ -178,7 +178,8 @@ export default function RootLayout({
         {/* End Google Tag Manager (noscript) */}
         <SpeedInsights />
         <Analytics />
-        {process.env.NEXT_PUBLIC_GADS_ID && (
+        {/* Commented out Google Ads Call Conversion DNI script to prevent dynamic number replacements */}
+        {/* {process.env.NEXT_PUBLIC_GADS_ID && (
           <>
             <Script
               strategy="lazyOnload"
@@ -199,7 +200,7 @@ export default function RootLayout({
               }}
             />
           </>
-        )}
+        )} */}
         {process.env.NEXT_PUBLIC_META_PIXEL_ID && (
           <Script
             id="fb-pixel"
