@@ -43,7 +43,7 @@ export default function ValueCalculator() {
     }
   };
 
-  const calculateCost = () => {
+  const calculateCostRange = () => {
     const qty = getActiveQuantity();
     const rate = pricingMatrix[service];
     let base = qty * rate;
@@ -57,7 +57,13 @@ export default function ValueCalculator() {
 
     // Regional Spring Multiplier
     const multiplier = (region === "Green Bay" || region === "Appleton") ? 1.15 : 1.0;
-    return Math.round(base * multiplier);
+    const finalBase = base * multiplier;
+
+    // Calculate +/- 10% range, rounded to nearest $5
+    const low = Math.round((finalBase * 0.9) / 5) * 5;
+    const high = Math.round((finalBase * 1.1) / 5) * 5;
+
+    return { low, high };
   };
 
   const getServiceNameStr = () => {
@@ -75,6 +81,8 @@ export default function ValueCalculator() {
     setStep(2);
   };
 
+  const costRange = calculateCostRange();
+
   const handleStep2Submit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
@@ -89,12 +97,18 @@ export default function ValueCalculator() {
         name: safeName,
         phone: safePhone,
         email: safeEmail,
-        projectDetails: `Quote Generation: ${activeQty} units for ${activeServiceStr}. Region: ${region}`,
+        projectDetails: `Quote Generation: ${activeQty} units for ${activeServiceStr}. Region: ${region}. Range: $${costRange.low}-$${costRange.high}`,
         servicesRequested: activeServiceStr
     };
 
     try {
-        const generatedEventId = crypto.randomUUID();
+        const generatedEventId = typeof window !== "undefined" && window.crypto && window.crypto.randomUUID
+            ? window.crypto.randomUUID()
+            : "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function (c) {
+                const r = (Math.random() * 16) | 0;
+                const v = c === "x" ? r : (r & 0x3) | 0x8;
+                return v.toString(16);
+            });
 
         const web3Payload = {
             access_key: "c8727880-065b-4c99-9190-7f4a13170752", 
@@ -141,8 +155,6 @@ export default function ValueCalculator() {
         setStep(3);
     }
   };
-
-  const estimate = calculateCost();
 
   return (
     <>
@@ -301,9 +313,9 @@ export default function ValueCalculator() {
                   {step === 3 && (
                      <motion.div key="step3" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="w-full h-full flex flex-col justify-center text-center space-y-5">
                        <div>
-                          <p className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-1">Your Estimate</p>
-                          <div className="text-6xl sm:text-7xl font-black text-navy tracking-tighter">
-                            ${estimate}
+                          <p className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-1">Your Estimated Range</p>
+                          <div className="text-5xl sm:text-6xl font-black text-navy tracking-tighter">
+                            ${costRange.low} - ${costRange.high}
                           </div>
                        </div>
                        

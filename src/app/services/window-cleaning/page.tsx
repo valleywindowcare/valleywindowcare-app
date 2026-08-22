@@ -64,6 +64,7 @@ export default function ServicePage() {
                 }
                 description="Professional pure-water exterior window cleaning. We physically remove dirt, cobwebs, and hard water stains."
                 bgImage="/images/portfolio/window-cleaning-before-after.jpg.webp"
+                showTrustBadges={true}
             />
 
             {/* GOLD STANDARD ARCHITECTURE CONTAINER */}

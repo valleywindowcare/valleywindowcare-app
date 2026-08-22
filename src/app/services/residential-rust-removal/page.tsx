@@ -64,7 +64,8 @@ export default function ServicePage() {
                     </>
                 }
                 description="Professional battery acid and fertilizer rust removal. We safely extract deep orange stains from exterior concrete."
-                bgImage="/images/portfolio/rust-removal-before-after.webp"  
+                bgImage="/images/portfolio/rust-removal-before-after.webp"
+                showTrustBadges={true}
             />
 
             {/* GOLD STANDARD ARCHITECTURE CONTAINER */}

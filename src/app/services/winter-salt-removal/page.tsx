@@ -39,6 +39,17 @@ export default function WinterSaltRemovalPage() {
                         <p className="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl leading-relaxed font-light">
                             Stop expensive concrete spalling and entirely eliminate winter slip-and-fall liability. Standard rinsing actually pushes caustic municipal road salts deeper into the pores. We deploy advanced chemical descalers to molecularly neutralize destructive chlorides and magnesium deposits from your storefronts and walkways.
                         </p>
+                        <div className="mb-10 flex flex-wrap gap-4 text-xs sm:text-sm font-bold text-white relative z-10">
+                          <div className="flex items-center gap-2 bg-white/15 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 shadow-md">
+                            <span className="text-gold">🛡️</span> Licensed &amp; Insured
+                          </div>
+                          <div className="flex items-center gap-2 bg-white/15 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 shadow-md">
+                            <span className="text-gold">✅</span> 100% Satisfaction Guarantee
+                          </div>
+                          <div className="flex items-center gap-2 bg-white/15 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 shadow-md">
+                            <span className="text-gold">🛡️</span> Zero Damage Guarantee
+                          </div>
+                        </div>
                         
                         <div className="flex flex-col sm:flex-row gap-4">
                             <Link href="/contact" className="bg-gold hover:bg-gold-light text-navy-dark px-8 py-4 rounded-full font-bold text-center transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2 hover:-translate-y-1">

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Shield, Sparkles, Target, Users, CheckCircle2 } from "lucide-react";
 
 import ReviewSlider from '@/components/ReviewSlider';
@@ -47,18 +48,29 @@ export default function AboutUsPage() {
             <section className="py-20 px-4">
                 <div className="container mx-auto max-w-5xl">
                     <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 flex flex-col md:flex-row">
-                        <div className="md:w-1/2 bg-navy p-12 text-white flex flex-col justify-center">
-                            <h2 className="text-3xl font-bold mb-6 text-gold">Meet the Team</h2>
-                            <p className="text-gray-300 mb-6 leading-relaxed italic">
-                                "As the face of Valley Property Services, we pride ourselves on our team's outstanding ability to provide professional services, build relationships with customers, and safely beat expectations on the job."
-                            </p>
-                            <p className="font-bold text-xl mb-8">– The Valley Property Services Team</p>
-
-                            <div className="pt-8 border-t border-white/10">
-                                <h3 className="text-xl font-bold mb-3">Our Leadership</h3>
-                                <p className="text-gray-300 text-sm leading-relaxed">
-                                    Our clients recognize our leadership team as delivering "wonderful" results. Known for being courteous, detail-oriented, and highly professional on every property.
+                        <div className="md:w-1/2 bg-navy text-white flex flex-col justify-between overflow-hidden relative min-h-[500px]">
+                            {/* Profile Image Background */}
+                            <div className="relative w-full h-64 shrink-0 border-b border-white/10">
+                                <Image
+                                    src="/images/portfolio/building-wash-copy.webp"
+                                    alt="James, Founder and Owner-Operator of Valley Property Services"
+                                    fill
+                                    priority
+                                    className="object-cover object-center"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-[#1B365D] via-[#1B365D]/30 to-transparent"></div>
+                                <div className="absolute bottom-4 left-6">
+                                    <span className="bg-gold text-navy font-bold px-3 py-1 rounded-full text-xs uppercase tracking-wider">Owner-Operator</span>
+                                </div>
+                            </div>
+                            
+                            <div className="p-8 sm:p-10 flex-grow flex flex-col justify-center bg-[#1B365D]">
+                                <h2 className="text-2xl font-extrabold mb-1 text-gold">Meet the Founder</h2>
+                                <h3 className="text-xl font-bold text-white mb-4">James</h3>
+                                <p className="text-gray-300 mb-6 leading-relaxed text-sm sm:text-base italic">
+                                    "I founded Valley Property Services with a single goal: to deliver uncompromising quality and absolute transparency to property owners in Northeast Wisconsin. I'm personally involved in every project, overseeing our safety protocols and ensuring our work exceeds your expectations."
                                 </p>
+                                <p className="font-bold text-sm tracking-wider uppercase text-gold">– James, Founder &amp; Owner-Operator</p>
                             </div>
                         </div>
                         <div className="md:w-1/2 p-12 lg:p-16 flex flex-col justify-center">

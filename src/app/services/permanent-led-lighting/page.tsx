@@ -41,6 +41,17 @@ export default function PermanentLEDLightingPage() {
                         <p className="text-lg md:text-xl text-gray-100 mb-8 font-semibold leading-relaxed drop-shadow-md">
                             Powered by Omni — The Industry’s Most Durable & Versatile Smart Lighting System.
                         </p>
+                        <div className="mb-8 flex flex-wrap justify-center gap-4 text-xs sm:text-sm font-bold text-white relative z-10">
+                          <div className="flex items-center gap-2 bg-white/15 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 shadow-md">
+                            <span className="text-gold">🛡️</span> Licensed &amp; Insured
+                          </div>
+                          <div className="flex items-center gap-2 bg-white/15 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 shadow-md">
+                            <span className="text-gold">✅</span> 100% Satisfaction Guarantee
+                          </div>
+                          <div className="flex items-center gap-2 bg-white/15 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 shadow-md">
+                            <span className="text-gold">🛡️</span> Zero Damage Guarantee
+                          </div>
+                        </div>
                     </div>
                     {/* Hero Form Stack */}
                     <div className="!relative !z-10 !w-full !max-w-xl !mx-auto !bg-white !rounded-xl !shadow-2xl !overflow-hidden flex flex-col text-navy-dark min-h-[500px] sm:min-h-[480px]">

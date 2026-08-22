@@ -64,7 +64,8 @@ export default function ServicePage() {
                     </>
                 }
                 description="Professional awning and fabric canopy cleaning. We physically remove mildew, traffic exhaust, and bird droppings."
-                bgImage="/images/portfolio/awning-cleaning.webp"  
+                bgImage="/images/portfolio/awning-cleaning.webp"
+                showTrustBadges={true}
             />
 
             {/* GOLD STANDARD ARCHITECTURE CONTAINER */}

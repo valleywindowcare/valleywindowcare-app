@@ -65,6 +65,7 @@ export default function ServicePage() {
                 }
                 description="Professional low-pressure exterior siding cleaning. We safely eradicate algae, mildew, and dirt without high pressure."
                 bgImage="/images/portfolio/soft-washing.webp"
+                showTrustBadges={true}
             />
 
             {/* GOLD STANDARD ARCHITECTURE CONTAINER */}

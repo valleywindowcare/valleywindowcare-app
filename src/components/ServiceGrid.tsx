@@ -1,4 +1,5 @@
 "use client";
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ChevronRight, Home, Building2 } from 'lucide-react';
@@ -8,7 +9,7 @@ import { motion } from 'framer-motion';
 export type DynamicGridItem = {
     serviceName: string;
     serviceSlug: string;
-    imagePath?: string; // Optional now as we don't render them in the table view
+    imagePath?: string;
 };
 
 interface ServiceGridProps {
@@ -16,9 +17,6 @@ interface ServiceGridProps {
     gridItems?: DynamicGridItem[];
 }
 
-const formatSlug = (city: string) => city.toLowerCase().replace(/ /g, '-');
-
-// Helper to determine category
 const isCommercial = (name: string) => {
     if (name === "Residential Permanent LED Lighting") return false;
     const commercialKeywords = ['Commercial', 'Building', 'Dumpster', 'Graffiti', 'HOA', 'Storefront', 'Drive-Thru', 'Parking Lot', 'Awning', 'Gas Station', 'Post Construction', 'Chewing Gum', 'Hood', 'Apartment', 'Permanent LED Lighting'];
@@ -61,6 +59,17 @@ const DEFAULT_SERVICES = [
 ];
 
 export default function ServiceGrid({ city, gridItems }: ServiceGridProps) {
+    const [isMobile, setIsMobile] = useState(false);
+    const [showAllRes, setShowAllRes] = useState(false);
+    const [showAllCom, setShowAllCom] = useState(false);
+
+    useEffect(() => {
+        const checkMobile = () => setIsMobile(window.innerWidth < 768);
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+        return () => window.removeEventListener('resize', checkMobile);
+    }, []);
+
     const itemsToRender: DynamicGridItem[] = gridItems && gridItems.length > 0
         ? gridItems
         : DEFAULT_SERVICES.map(s => ({
@@ -75,49 +84,79 @@ export default function ServiceGrid({ city, gridItems }: ServiceGridProps) {
         ? `We provide top-rated residential and commercial cleaning services specifically tailored for ${city}, Wisconsin and surrounding areas.`
         : "We provide top-rated residential and commercial cleaning services across Green Bay, Appleton, Door County, and Oshkosh.";
 
-    const renderList = (items: DynamicGridItem[], icon: React.ReactNode, title: string) => (
-        <div className="bg-white/60 backdrop-blur-2xl rounded-[32px] shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-white/40 overflow-hidden mb-12">
-            <div className="bg-white/40 border-b border-white/40 p-8 flex items-center gap-4">
-                <div className="bg-gradient-to-br from-navy to-navy-dark p-3 rounded-2xl shadow-md text-white">
-                    {icon}
+    const renderList = (
+        items: DynamicGridItem[], 
+        icon: React.ReactNode, 
+        title: string,
+        isExpanded: boolean,
+        setIsExpanded: (val: boolean) => void
+    ) => {
+        const hasMore = items.length > 6;
+        const visibleItems = (isMobile && !isExpanded) ? items.slice(0, 6) : items;
+
+        return (
+            <div className="bg-white/60 backdrop-blur-2xl rounded-[32px] shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-white/40 overflow-hidden mb-12">
+                <div className="bg-white/40 border-b border-white/40 p-6 md:p-8 flex items-center gap-4">
+                    <div className="bg-gradient-to-br from-navy to-navy-dark p-3 rounded-2xl shadow-md text-white">
+                        {icon}
+                    </div>
+                    <h3 className="text-xl md:text-2xl font-black tracking-tight text-navy">{title}</h3>
                 </div>
-                <h3 className="text-2xl font-black tracking-tight text-navy">{title}</h3>
-            </div>
 
-            <div className="p-8">
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                    {items.map((service, idx) => {
-                        const href = `/services/${service.serviceSlug}`;
+                <div className="p-6 md:p-8">
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-6">
+                        {visibleItems.map((service, idx) => {
+                            const href = `/services/${service.serviceSlug}`;
 
-                        return (
-                            <motion.div
-                                key={idx}
-                                whileHover={{ scale: 1.03, y: -5 }}
-                                transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                                className="h-64"
-                            >
-                                <Link
-                                    href={href}
-                                    className="group relative overflow-hidden bg-navy border border-white/20 rounded-[32px] shadow-[0_8px_30px_rgb(0,0,0,0.12)] flex flex-col h-full w-full"
+                            return (
+                                <motion.div
+                                    key={idx}
+                                    whileHover={{ scale: 1.03, y: -5 }}
+                                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                                    className="h-32 md:h-64"
                                 >
-                                    <Image src={serviceContentMap[service.serviceSlug]?.image || "/images/portfolio/house-washing.webp"} alt={service.serviceName} fill quality={75} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" loading="lazy" className="object-cover group-hover:scale-110 transition-transform duration-700 ease-out z-0" />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-[#0b2341]/95 via-[#0b2341]/40 to-transparent z-10 transition-opacity duration-300 group-hover:opacity-80"></div>
-                                    <div className="relative z-20 flex flex-row items-end justify-between h-full p-6">
-                                        <span className="font-extrabold tracking-tight text-white group-hover:text-gold transition-colors text-xl leading-tight drop-shadow-md">
-                                            {service.serviceName}
-                                        </span>
-                                        <div className="bg-white/20 backdrop-blur-md shadow-inner p-3 rounded-full transform group-hover:scale-110 group-hover:bg-white/30 transition-all">
-                                            <ChevronRight className="text-white" size={20} />
+                                    <Link
+                                        href={href}
+                                        className="group relative overflow-hidden bg-navy border border-white/20 rounded-[20px] md:rounded-[32px] shadow-[0_8px_30px_rgb(0,0,0,0.12)] flex flex-col h-full w-full"
+                                    >
+                                        <Image 
+                                            src={serviceContentMap[service.serviceSlug]?.image || "/images/portfolio/house-washing.webp"} 
+                                            alt={service.serviceName} 
+                                            fill 
+                                            quality={75} 
+                                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" 
+                                            loading="lazy" 
+                                            className="object-cover group-hover:scale-110 transition-transform duration-700 ease-out z-0" 
+                                        />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-[#0b2341]/95 via-[#0b2341]/40 to-transparent z-10 transition-opacity duration-300 group-hover:opacity-80"></div>
+                                        <div className="relative z-20 flex flex-row items-end justify-between h-full p-4 md:p-6">
+                                            <span className="font-extrabold tracking-tight text-white group-hover:text-gold transition-colors text-xs sm:text-sm md:text-xl leading-tight drop-shadow-md">
+                                                {service.serviceName}
+                                            </span>
+                                            <div className="bg-white/20 backdrop-blur-md shadow-inner p-1 md:p-3 rounded-full transform group-hover:scale-110 group-hover:bg-white/30 transition-all shrink-0">
+                                                <ChevronRight className="text-white w-4 h-4 md:w-5 md:h-5" />
+                                            </div>
                                         </div>
-                                    </div>
-                                </Link>
-                            </motion.div>
-                        );
-                    })}
+                                    </Link>
+                                </motion.div>
+                            );
+                        })}
+                    </div>
+
+                    {isMobile && hasMore && (
+                        <div className="flex justify-center mt-6 pt-2">
+                            <button
+                                onClick={() => setIsExpanded(!isExpanded)}
+                                className="bg-navy hover:bg-gold text-white hover:text-navy px-8 py-3 rounded-full font-bold transition-all text-xs tracking-wider uppercase shadow-md flex items-center gap-2 border border-white/10"
+                            >
+                                {isExpanded ? "Show Fewer Services" : `Show All ${items.length} Services`}
+                            </button>
+                        </div>
+                    )}
                 </div>
             </div>
-        </div>
-    );
+        );
+    };
 
     return (
         <section className="py-24 bg-slate-50 relative overflow-hidden">
@@ -135,11 +174,11 @@ export default function ServiceGrid({ city, gridItems }: ServiceGridProps) {
                 </div>
 
                 {residentialServices.length > 0 &&
-                    renderList(residentialServices, <Home size={28} />, `Residential Cleaning in ${city || 'Wisconsin'}`)
+                    renderList(residentialServices, <Home size={28} />, `Residential Cleaning in ${city || 'Wisconsin'}`, showAllRes, setShowAllRes)
                 }
 
                 {commercialServices.length > 0 &&
-                    renderList(commercialServices, <Building2 size={28} />, `Commercial Exterior Services in ${city || 'Wisconsin'}`)
+                    renderList(commercialServices, <Building2 size={28} />, `Commercial Exterior Services in ${city || 'Wisconsin'}`, showAllCom, setShowAllCom)
                 }
             </div>
         </section>

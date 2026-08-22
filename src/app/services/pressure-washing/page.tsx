@@ -101,6 +101,17 @@ export default function PressureWashingPage() {
                         <p className="text-lg md:text-xl text-gray-100 mb-6 font-semibold leading-relaxed drop-shadow-md">
                             Valley Property Services provides premium pressure washing services to enhance your property's value.
                         </p>
+                        <div className="mb-6 flex flex-wrap justify-center gap-4 text-xs sm:text-sm font-bold text-white relative z-10">
+                          <div className="flex items-center gap-2 bg-white/15 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 shadow-md">
+                            <span className="text-gold">🛡️</span> Licensed &amp; Insured
+                          </div>
+                          <div className="flex items-center gap-2 bg-white/15 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 shadow-md">
+                            <span className="text-gold">✅</span> 100% Satisfaction Guarantee
+                          </div>
+                          <div className="flex items-center gap-2 bg-white/15 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 shadow-md">
+                            <span className="text-gold">🛡️</span> Zero Damage Guarantee
+                          </div>
+                        </div>
                         <div className="bg-white/10 p-6 rounded-xl border border-white/20 backdrop-blur-sm text-left mb-8 shadow-lg">
                             <p className="text-base md:text-lg text-gray-100 leading-relaxed font-medium">
                                 Valley Property Services is a fully licensed and insured exterior cleaning company based in De Pere, Wisconsin. We provide residential soft washing, commercial pressure washing, and roof cleaning services across Green Bay, Appleton, and the Fox Valley. Our proprietary low-pressure system effectively removes Gloeocapsa magma (roof algae), rust, and winter road salt without damaging siding or concrete infrastructure.

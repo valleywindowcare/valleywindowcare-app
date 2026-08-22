@@ -64,7 +64,8 @@ export default function ServicePage() {
                     </>
                 }
                 description="Professional pure-water photovoltaic array cleaning. We physically remove dust, exhaust, and bird droppings to restore energy efficiency."
-                bgImage="/images/portfolio/roof-cleaning-copy-2.webp"  
+                bgImage="/images/portfolio/roof-cleaning-copy-2.webp"
+                showTrustBadges={true}
             />
 
             {/* GOLD STANDARD ARCHITECTURE CONTAINER */}

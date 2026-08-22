@@ -30,7 +30,7 @@ export default function Hero({
     const isDefault = !bgImage || bgImage.includes("placeholder");
 
     return (
-        <section className={`!relative !w-full !min-h-screen !flex !flex-col !items-center !justify-center overflow-hidden text-white bg-navy pb-24 lg:pb-32`}>
+        <section className={`!relative !w-full !min-h-[85vh] sm:!min-h-screen !flex !flex-col !items-center !justify-center overflow-hidden text-white bg-navy pb-24 lg:pb-32`}>
             {/* Background Image */}
             {bgImage && !bgImage.includes("placeholder") && (
                 <div className="absolute inset-0 z-0">
@@ -64,13 +64,13 @@ export default function Hero({
                     {showTrustBadges && (
                         <div className="mt-6 flex flex-wrap justify-center gap-4 text-xs sm:text-sm font-bold text-white relative z-10">
                           <div className="flex items-center gap-2 bg-white/15 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 shadow-md">
-                            <span className="text-gold">★</span> 5.0 Rated (100+ Reviews)
-                          </div>
-                          <div className="flex items-center gap-2 bg-white/15 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 shadow-md">
-                            <span className="text-gold">🛡️</span> Zero Structural Damage Guarantee
+                            <span className="text-gold">🛡️</span> Licensed &amp; Insured
                           </div>
                           <div className="flex items-center gap-2 bg-white/15 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 shadow-md">
                             <span className="text-gold">✅</span> 100% Satisfaction Guarantee
+                          </div>
+                          <div className="flex items-center gap-2 bg-white/15 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 shadow-md">
+                            <span className="text-gold">🛡️</span> Zero Damage Guarantee
                           </div>
                         </div>
                     )}

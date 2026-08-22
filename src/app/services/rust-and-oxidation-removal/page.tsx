@@ -21,6 +21,17 @@ export default function RustRemovalService() {
                     <p className="text-xl text-gray-300 md:text-2xl font-light">
                         Targeted chemical remediation for stubborn stains and vinyl siding degradation.
                     </p>
+                    <div className="mt-8 flex flex-wrap justify-center gap-4 text-xs sm:text-sm font-bold text-white relative z-10">
+                      <div className="flex items-center gap-2 bg-white/15 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 shadow-md">
+                        <span className="text-gold">🛡️</span> Licensed &amp; Insured
+                      </div>
+                      <div className="flex items-center gap-2 bg-white/15 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 shadow-md">
+                        <span className="text-gold">✅</span> 100% Satisfaction Guarantee
+                      </div>
+                      <div className="flex items-center gap-2 bg-white/15 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 shadow-md">
+                        <span className="text-gold">🛡️</span> Zero Damage Guarantee
+                      </div>
+                    </div>
                 </div>
             </section>
 

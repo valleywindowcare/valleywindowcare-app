@@ -34,6 +34,7 @@ export default function Home() {
       <Hero 
         bgImage="/images/portfolio/store-front-cleaning.webp" 
         bgImageAlt="Professional commercial storefront cleaning services by Valley Property Services in Green Bay, WI"
+        showTrustBadges={true}
       />
       <Process />
       <ServiceGrid />

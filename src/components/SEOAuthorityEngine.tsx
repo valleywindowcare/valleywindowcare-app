@@ -204,12 +204,7 @@ export default function SEOAuthorityEngine({ serviceSlug, serviceName, cityName 
                         </Link>
                     </div>
 
-                    {/* LSI Keyword Cloud Injection for Crawlers */}
-                    <div className="mt-12 pt-8 border-t border-gray-100">
-                        <p className="text-xs text-gray-400 leading-loose text-center max-w-5xl mx-auto">
-                            {content.lsiKeywords.join(" • ")}
-                        </p>
-                    </div>
+
                 </section>
             </article>
         </div>
