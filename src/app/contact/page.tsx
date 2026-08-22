@@ -38,6 +38,19 @@ export default function ContactPage() {
                         <p className="text-gray-600 font-medium">462 S Good Hope Rd<br />De Pere, WI 54115</p>
                     </div>
                 </div>
+
+                <div className="w-full h-80 md:h-96 rounded-xl overflow-hidden shadow-lg mt-8 border border-gray-200/20">
+                  <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d900.5056045384954!2d-88.06395880642742!3d44.43266399605391!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8802f7860e31a465%3A0xc422a0d3f9df71ea!2sValley%20Property%20Services!5e0!3m2!1sen!2sus!4v1787425054243!5m2!1sen!2sus" 
+                    width="100%" 
+                    height="100%" 
+                    style={{ border: 0 }} 
+                    allowFullScreen={true} 
+                    loading="lazy" 
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    title="Google Maps Location for Valley Property Services"
+                  />
+                </div>
             </div>
             <ReviewSlider />
         </main>
