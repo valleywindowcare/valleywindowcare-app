@@ -13,11 +13,11 @@ export const faqData: Record<string, FAQ[]> = {
     "roof-cleaning": [
         {
             q: "Is soft washing safe for my roof?",
-            a: "Yes, soft washing is a safe and effective method for cleaning and preserving the integrity of various types of roofs, including asphalt shingles, metal roofs, and tile roofs. The low-pressure technique avoids damaging delicate roofing materials."
+            a: "Yes. We specialize in ARMA-compliant Gloeocapsa magma roof cleaning Green Bay and non pressure roof cleaning Appleton WI. The low-pressure technique avoids damaging delicate roofing shingles while removing all black organic stains safely."
         },
         {
             q: "How often should I have my roof soft washed?",
-            a: "Most homeowners should plan to soft wash their roof every 2 to 3 years to maintain its appearance and protect the roofing materials. Regular roof soft wash services can extend the life of your roof and prevent costly repairs."
+            a: "Most homeowners should plan to soft wash their roof every 2 to 3 years. Regular roof soft wash services can extend the life of your roof and prevent costly repairs."
         },
         {
             q: "Will roof cleaning affect my home’s energy efficiency?",
@@ -49,15 +49,15 @@ export const faqData: Record<string, FAQ[]> = {
     "pressure-washing": [
         {
             q: "Is pressure washing safe for my home’s siding or roof?",
-            a: "Yes, when done correctly. We use soft washing techniques for delicate surfaces like vinyl siding, stucco, and roofing to prevent any damage. For concrete, brick, or hard surfaces, we apply high-pressure washing to remove stains effectively."
+            a: "Yes. For delicate surfaces, we use soft wash siding cleaning Green Bay WI and the Fox Valley. For hard surfaces, we provide concrete pressure washing Appleton and driveway cleaning Green Bay to remove deep stains safely."
         },
         {
             q: "What is the difference between pressure washing and soft washing?",
-            a: "Pressure washing uses high-pressure water to physically blast away dirt, while soft washing utilizes specialized cleaning solutions and low-pressure water to kill and remove organic growth at the source."
+            a: "Pressure washing uses high-pressure water for tough flatwork, while soft washing uses low pressure and algaecides to clean surfaces without damage."
         },
         {
-            q: "What surfaces can be cleaned with soft washing?",
-            a: "Soft washing is versatile and can be used on roofs, vinyl siding, stucco, wood decks, fences, and other delicate exterior finishes."
+            q: "Do you offer services for businesses?",
+            a: "Yes. We offer commercial pressure washing Fox Valley and commercial building washing Green Bay. We clean commercial storefronts, dumpster pads, and parking lots."
         }
     ],
     "commercial-pressure-washing": [

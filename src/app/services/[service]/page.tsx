@@ -141,15 +141,57 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 
 
-    const seoTitle = isCommercial
-        ? `Commercial ${formattedName} in Green Bay & Northeast WI`
-        : `${formattedName} in Green Bay & Northeast WI`;
+    const serviceMetaMap: Record<string, { title: string, description: string }> = {
+        "pressure-washing": {
+            title: "Pressure Washing Green Bay WI & Appleton | Power Washing",
+            description: "Premier pressure washing Green Bay WI, power washing Appleton WI, and commercial pressure washing Fox Valley. Restoring driveways and siding safely."
+        },
+        "house-washing": {
+            title: "House Washing Green Bay & Appleton WI | Soft Wash Siding",
+            description: "Top-rated house washing Green Bay and house washing Appleton WI. Safe soft wash siding cleaning Green Bay WI to clean vinyl, brick, and stucco."
+        },
+        "roof-cleaning": {
+            title: "Roof Stain Removal Green Bay & Soft Washing Appleton",
+            description: "Specializing in Gloeocapsa magma roof cleaning Green Bay and non pressure roof cleaning Appleton WI. Restore your shingles and remove moss safely."
+        },
+        "concrete-cleaning": {
+            title: "Concrete Pressure Washing Appleton & Driveway Cleaning Green Bay",
+            description: "Safe driveway cleaning Green Bay and concrete pressure washing Appleton. Clean winter road salt concrete damage and remove oil stains."
+        },
+        "driveway-cleaning": {
+            title: "Driveway Cleaning Green Bay & Concrete Washing Appleton",
+            description: "Safe driveway cleaning Green Bay and concrete pressure washing Appleton. Clean winter road salt concrete damage and remove oil stains."
+        },
+        "rust-removal": {
+            title: "Rust Stain Removal Pressure Washer Appleton & Green Bay",
+            description: "Elite rust stain removal pressure washer Appleton and Green Bay. Remove irrigation, battery, and metal rust stains safely."
+        },
+        "dumpster-pad-cleaning": {
+            title: "Dumpster Pad Hot Water Steam Cleaning Green Bay & Appleton",
+            description: "Premium dumpster pad hot water steam cleaning Green Bay and Fox Valley. Eliminate grease, odors, and sanitize commercial pads."
+        },
+        "commercial-hood-cleaning": {
+            title: "Commercial Hood Cleaning De Pere & Green Bay | Restaurant Exhaust",
+            description: "Certified commercial hood cleaning De Pere / Green Bay. NFPA 96 exhaust system cleaning, steam washing, and grease extraction for commercial kitchens."
+        },
+        "permanent-led-lighting": {
+            title: "Permanent LED Holiday Lighting Installer Appleton WI & Green Bay",
+            description: "Professional permanent LED holiday lighting installer Appleton WI and Green Bay. Custom color-changing smart track lights for homes and businesses."
+        },
+        "residential-permanent-led-lighting": {
+            title: "Permanent LED Holiday Lighting Installer Appleton WI & Green Bay",
+            description: "Professional permanent LED holiday lighting installer Appleton WI and Green Bay. Custom color-changing smart track lights for homes and businesses."
+        }
+    };
 
-    const seoDescription = service === 'roof-cleaning'
-        ? "Expert Roof Cleaning in Green Bay & Appleton. Remove black streaks and moss safely with our soft-wash system. Licensed and insured."
-        : isCommercial
+    const specificMeta = serviceMetaMap[service];
+    const seoTitle = specificMeta ? specificMeta.title : (isCommercial
+        ? `Commercial ${formattedName} in Green Bay & Northeast WI`
+        : `${formattedName} in Green Bay & Northeast WI`);
+
+    const seoDescription = specificMeta ? specificMeta.description : (isCommercial
         ? `Valley Property Services provides premium ${formattedName.toLowerCase()} and property maintenance for businesses in Green Bay, Appleton, and surrounding areas.`
-        : `Valley Property Services offers premium ${formattedName.toLowerCase()} for residential properties in Green Bay, Appleton, and surrounding areas.`;
+        : `Valley Property Services offers premium ${formattedName.toLowerCase()} for residential properties in Green Bay, Appleton, and surrounding areas.`);
 
     const seoImage = categoryFallbacks[service] || "/images/portfolio/house-washing.webp";
 
@@ -483,14 +525,41 @@ export default async function ServiceGenericPage({ params }: PageProps) {
                             "@type": "Service",
                             "name": formattedName,
                             "serviceType": formattedName,
-                             "description": `Valley Property Services provides premium ${formattedName.toLowerCase()} and property maintenance for homes and businesses in Northeast Wisconsin.`,
+                            "description": `Valley Property Services provides premium ${formattedName.toLowerCase()} and property maintenance for homes and businesses in Northeast Wisconsin.`,
                             "image": `https://www.valleyexteriorpros.com${bodyImageToUse}`,
+                            "keywords": [
+                                "pressure washing Green Bay WI", "pressure washing Appleton WI", "house washing Green Bay", "house washing Appleton WI",
+                                "soft wash siding cleaning Green Bay WI", "roof soft washing Appleton", "roof stain removal Green Bay",
+                                "concrete pressure washing Appleton", "driveway cleaning Green Bay", "commercial pressure washing Fox Valley",
+                                "commercial building washing Green Bay", "Gloeocapsa magma roof cleaning Green Bay", "non pressure roof cleaning Appleton WI",
+                                "winter road salt concrete washing Green Bay", "rust stain removal pressure washer Appleton",
+                                "dumpster pad hot water steam cleaning Green Bay", "commercial hood cleaning De Pere / Green Bay",
+                                "permanent LED holiday lighting installer Appleton WI"
+                            ],
                             "provider": {
                                 "@type": "LocalBusiness",
                                 "name": "Valley Property Services",
                                 "image": "https://www.valleyexteriorpros.com/images/portfolio/house-wash-before-after.webp",
                                 "telephone": "(920) 609-7085",
-                                "url": `https://www.valleyexteriorpros.com/services/${service}`
+                                "url": `https://www.valleyexteriorpros.com/services/${service}`,
+                                "keywords": [
+                                    "pressure washing Green Bay WI", "pressure washing Appleton WI", "house washing Green Bay", "house washing Appleton WI",
+                                    "soft wash siding cleaning Green Bay WI", "roof soft washing Appleton", "roof stain removal Green Bay",
+                                    "concrete pressure washing Appleton", "driveway cleaning Green Bay", "commercial pressure washing Fox Valley",
+                                    "commercial building washing Green Bay", "Gloeocapsa magma roof cleaning Green Bay", "non pressure roof cleaning Appleton WI",
+                                    "winter road salt concrete washing Green Bay", "rust stain removal pressure washer Appleton",
+                                    "dumpster pad hot water steam cleaning Green Bay", "commercial hood cleaning De Pere / Green Bay",
+                                    "permanent LED holiday lighting installer Appleton WI"
+                                ],
+                                "knowsAbout": [
+                                    "pressure washing Green Bay WI", "pressure washing Appleton WI", "house washing Green Bay", "house washing Appleton WI",
+                                    "soft wash siding cleaning Green Bay WI", "roof soft washing Appleton", "roof stain removal Green Bay",
+                                    "concrete pressure washing Appleton", "driveway cleaning Green Bay", "commercial pressure washing Fox Valley",
+                                    "commercial building washing Green Bay", "Gloeocapsa magma roof cleaning Green Bay", "non pressure roof cleaning Appleton WI",
+                                    "winter road salt concrete washing Green Bay", "rust stain removal pressure washer Appleton",
+                                    "dumpster pad hot water steam cleaning Green Bay", "commercial hood cleaning De Pere / Green Bay",
+                                    "permanent LED holiday lighting installer Appleton WI"
+                                ]
                             },
                             "areaServed": [
                                 { "@type": "City", "name": "Green Bay" },
@@ -501,16 +570,49 @@ export default async function ServiceGenericPage({ params }: PageProps) {
                             ],
                             "hasOfferCatalog": {
                                 "@type": "OfferCatalog",
-                                "name": `${formattedName} Services`,
+                                "name": "Valley Property Services Exterior Restoration Catalog",
                                 "itemListElement": [
                                     {
                                         "@type": "Offer",
                                         "itemOffered": {
                                             "@type": "Service",
-                                            "name": formattedName
-                                        },
-                                        "priceCurrency": "USD",
-                                        "price": service.includes('gutter') ? "150.00" : service.includes('house') || service.includes('siding') ? "350.00" : service.includes('roof') || service.includes('soft-wash') ? "500.00" : "149.00"
+                                            "name": "Pressure Washing Green Bay WI & Appleton"
+                                        }
+                                    },
+                                    {
+                                        "@type": "Offer",
+                                        "itemOffered": {
+                                            "@type": "Service",
+                                            "name": "House Washing & Soft Wash Siding Cleaning"
+                                        }
+                                    },
+                                    {
+                                        "@type": "Offer",
+                                        "itemOffered": {
+                                            "@type": "Service",
+                                            "name": "Gloeocapsa Magma Roof Cleaning & Stain Removal"
+                                        }
+                                    },
+                                    {
+                                        "@type": "Offer",
+                                        "itemOffered": {
+                                            "@type": "Service",
+                                            "name": "Winter Road Salt Concrete Washing"
+                                        }
+                                    },
+                                    {
+                                        "@type": "Offer",
+                                        "itemOffered": {
+                                            "@type": "Service",
+                                            "name": "Commercial Kitchen Exhaust & Hood Cleaning"
+                                        }
+                                    },
+                                    {
+                                        "@type": "Offer",
+                                        "itemOffered": {
+                                            "@type": "Service",
+                                            "name": "Permanent LED Holiday Lighting Installation"
+                                        }
                                     }
                                 ]
                             }

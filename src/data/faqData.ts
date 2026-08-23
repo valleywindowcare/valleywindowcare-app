@@ -23,7 +23,7 @@ export const faqData: FaqCategoryMap = {
     "roof-cleaning": [
         {
             question: "What is soft washing for roofs?",
-            answer: "Soft washing is a specialized, low-pressure cleaning method. Instead of damaging high-pressure water, we use professional-grade algaecides and surfactants to safely dissolve and kill the root spores of Gloeocapsa Magma (black streaks), moss, and lichen on your shingles."
+            answer: "Soft washing is a specialized, low-pressure cleaning method. We specialize in ARMA-compliant Gloeocapsa magma roof cleaning Green Bay and non pressure roof cleaning Appleton WI to safely dissolve and kill the root spores of moss and lichen. This provides expert roof soft washing Appleton and roof stain removal Green Bay without damaging shingles."
         },
         {
             question: "Will pressure washing void my roof warranty?",
@@ -101,11 +101,15 @@ export const faqData: FaqCategoryMap = {
     "pressure-washing": [
         {
             question: "What is the difference between pressure washing and soft washing?",
-            answer: "Pressure washing uses highly pressurized water (up to 4,000 PSI) to blast tough environmental stains out of durable, flatwork surfaces like concrete and brick. Soft washing uses low pressure combined with tailored algaecides to safely clean fragile surfaces like roofs, siding, and wood."
+            answer: "Pressure washing uses highly pressurized water to clean durable surfaces, including concrete pressure washing Appleton and driveway cleaning Green Bay. Soft washing uses low pressure and algaecides for delicate surfaces."
+        },
+        {
+            question: "Do you clean winter road salt from concrete?",
+            answer: "Yes, we specialize in winter road salt concrete washing Green Bay. Our hot-water system neutralizes salt deposits to protect your concrete flatwork."
         },
         {
             question: "Do you use hot or cold water?",
-            answer: "We deploy commercial-grade trailer rigs equipped with heavy-duty burner units. We have the capability to clean with water heated over 200°F, which is essential for emulsifying and extracting oil, heavy grease, and chewing gum from concrete surfaces."
+            answer: "We deploy commercial-grade trailer rigs equipped with heavy-duty burner units. We have the capability to clean with water heated over 200°F, which is essential for commercial pressure washing Fox Valley."
         },
         {
             question: "Can you remove tire marks from my driveway?",
@@ -152,6 +156,18 @@ export const faqData: FaqCategoryMap = {
         {
             question: "Can you deep-clean the breezeways and concrete stairwells as well?",
             answer: "Absolutely. In addition to our commercial soft washing rigs that handle the vertical facades, we deploy high-temperature, 200°F steam cleaning units specifically engineered to extract extreme foot-traffic grime, set-in chewing gum, and bio-hazardous stains from concrete breezeways and community dumpster pads."
+        }
+    ],
+    "commercial-hood-cleaning": [
+        {
+            question: "Do you offer certified kitchen exhaust and commercial hood cleaning?",
+            answer: "Yes, we provide certified commercial hood cleaning De Pere / Green Bay and surrounding areas. Our technicians clean to NFPA 96 standards, executing hot-water steam washing of exhaust hoods, ducts, fans, and filters to ensure fire-safety compliance."
+        }
+    ],
+    "dumpster-pad-cleaning": [
+        {
+            question: "How do you clean grease and grime from commercial dumpster pads?",
+            answer: "We utilize dumpster pad hot water steam cleaning Green Bay and Fox Valley. Our 200°F super-heated steam pressure washers emulsify heavy kitchen grease, remove stubborn chewing gum, and apply professional-grade deodorizers to sanitize the pad."
         }
     ]
 };
