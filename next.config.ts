@@ -164,7 +164,7 @@ const legacyToNestedMap: Record<string, string> = {
   "/gutter-cleaning-company-in-green-bay-wisconsin": "/services/gutter-cleaning",
   "/blog/category-property-washing": "/blog",
   "/commercial-pressure-washing-company-in-green-bay-wisconsin": "/services/commercial-pressure-washing",
-  "/concrete-cleaning-company-in-green-bay-wisconsin": "/services/concrete-cleaning",
+  "/concrete-cleaning-company-in-green-bay-wisconsin": "/service-areas/green-bay",
   "/permanent-lighting-solutions-green-bay-wi": "/services/residential-permanent-led-lighting",
   "/driveway-cleaning-company-in-green-bay-wisconsin": "/services/driveway-cleaning-green-bay",
   "/professional-awning-cleaning-in-green-bay-wisconsin": "/services/commercial-awning-cleaning-green-bay",
@@ -337,6 +337,79 @@ const nextConfig: NextConfig = {
     const finalCsvRedirects = csvRedirects.filter(r => !staticSources.has(r.source));
 
     const domainRedirects = [
+      // 1. /services/:path* redirects
+      {
+        source: '/services/:path*',
+        has: [
+          {
+            type: 'host' as const,
+            value: 'valleywindowcare.com',
+          },
+        ],
+        destination: 'https://valleyexteriorpros.com/services/:path*',
+        permanent: true,
+      },
+      {
+        source: '/services/:path*',
+        has: [
+          {
+            type: 'host' as const,
+            value: 'www.valleywindowcare.com',
+          },
+        ],
+        destination: 'https://valleyexteriorpros.com/services/:path*',
+        permanent: true,
+      },
+
+      // 2. /service-areas/:path* redirects
+      {
+        source: '/service-areas/:path*',
+        has: [
+          {
+            type: 'host' as const,
+            value: 'valleywindowcare.com',
+          },
+        ],
+        destination: 'https://valleyexteriorpros.com/service-areas/:path*',
+        permanent: true,
+      },
+      {
+        source: '/service-areas/:path*',
+        has: [
+          {
+            type: 'host' as const,
+            value: 'www.valleywindowcare.com',
+          },
+        ],
+        destination: 'https://valleyexteriorpros.com/service-areas/:path*',
+        permanent: true,
+      },
+
+      // 3. /concrete-cleaning-company-in-green-bay-wisconsin redirect
+      {
+        source: '/concrete-cleaning-company-in-green-bay-wisconsin',
+        has: [
+          {
+            type: 'host' as const,
+            value: 'valleywindowcare.com',
+          },
+        ],
+        destination: 'https://valleyexteriorpros.com/service-areas/green-bay',
+        permanent: true,
+      },
+      {
+        source: '/concrete-cleaning-company-in-green-bay-wisconsin',
+        has: [
+          {
+            type: 'host' as const,
+            value: 'www.valleywindowcare.com',
+          },
+        ],
+        destination: 'https://valleyexteriorpros.com/service-areas/green-bay',
+        permanent: true,
+      },
+
+      // 4. Catch-all fallback: /:path* redirects
       {
         source: '/:path*',
         has: [
@@ -345,7 +418,7 @@ const nextConfig: NextConfig = {
             value: 'valleywindowcare.com',
           },
         ],
-        destination: 'https://www.valleyexteriorpros.com/:path*',
+        destination: 'https://valleyexteriorpros.com/:path*',
         permanent: true,
       },
       {
@@ -356,7 +429,7 @@ const nextConfig: NextConfig = {
             value: 'www.valleywindowcare.com',
           },
         ],
-        destination: 'https://www.valleyexteriorpros.com/:path*',
+        destination: 'https://valleyexteriorpros.com/:path*',
         permanent: true,
       },
     ];
