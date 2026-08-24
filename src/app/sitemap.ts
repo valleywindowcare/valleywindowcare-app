@@ -170,11 +170,82 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 0.7,
         }));
 
-    return [
+    // Canonical Equality Filter Predicates
+    const isSelfCanonical = (routePath: string, declaredCanonical: string) => {
+        const expectedUrl = new URL(routePath, 'https://valleyexteriorpros.com').href;
+        const normalize = (u: string) => u.replace(/\/$/, "");
+        return normalize(declaredCanonical) === normalize(expectedUrl);
+    };
+
+    const getDeclaredCanonical = (routePath: string): string => {
+        // Special case: /quote/success is noindexed and not self-canonical
+        if (routePath === "/quote/success") return "";
+
+        // Special case: shawano is noindexed and not self-canonical
+        if (routePath === "/service-areas/shawano") return "";
+
+        // Special case: duplicate routes
+        if (routePath === "/services/blog") return "https://valleyexteriorpros.com/blog";
+
+        // Dynamic blog posts
+        if (routePath.startsWith("/blog/")) {
+            const slug = routePath.split("/")[2];
+            if (redirectedSlugs.includes(slug)) return "";
+            return `https://valleyexteriorpros.com/blog/${slug}`;
+        }
+
+        // Cities:
+        if (routePath.startsWith("/service-areas/") && !routePath.includes("/", 15)) {
+            const city = routePath.split("/")[2];
+            const redirects: Record<string, string> = {
+                "de-pere": "green-bay",
+                "howard": "green-bay",
+                "suamico": "green-bay",
+                "sturgeon-bay": "door-county",
+                "egg-harbor": "door-county",
+                "fish-creek": "door-county",
+                "sister-bay": "door-county"
+            };
+            if (city in redirects) {
+                return `https://valleyexteriorpros.com/service-areas/${redirects[city]}`;
+            }
+            return `https://valleyexteriorpros.com/service-areas/${city}`;
+        }
+
+        // Intersections:
+        if (routePath.startsWith("/service-areas/") && routePath.includes("/", 15)) {
+            const parts = routePath.split("/");
+            const city = parts[2];
+            const service = parts[3];
+            
+            const explicit = [
+                "/service-areas/green-bay/pressure-washing",
+                "/service-areas/green-bay/roof-cleaning",
+                "/service-areas/appleton/pressure-washing",
+                "/service-areas/appleton/house-washing"
+            ];
+            
+            if (explicit.includes(routePath)) {
+                return `https://valleyexteriorpros.com/service-areas/${city}/${service}`;
+            }
+            
+            return `https://valleyexteriorpros.com/services/${service}`;
+        }
+
+        return `https://valleyexteriorpros.com${routePath}`;
+    };
+
+    const allRoutes = [
         ...coreRoutes,
         ...serviceRoutes,
         ...locationRoutes,
         ...intersectionRoutes,
         ...blogRoutes
     ];
+
+    return allRoutes.filter((route) => {
+        const routePath = route.url.replace(baseUrl, "");
+        const declaredCanonical = getDeclaredCanonical(routePath);
+        return isSelfCanonical(routePath, declaredCanonical);
+    });
 }

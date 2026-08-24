@@ -82,6 +82,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         title: generatedTitle,
         description: seoDescription,
         robots: shouldNoindex ? { index: false, follow: true } : { index: true, follow: true },
+        alternates: {
+            canonical: `https://valleyexteriorpros.com/service-areas/${city}`
+        }
     };
 }
 
