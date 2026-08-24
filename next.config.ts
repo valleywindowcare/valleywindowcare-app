@@ -61,7 +61,6 @@ function getCsvRedirects() {
 const validServicesRegex = `(roof-cleaning|house-washing|gutter-cleaning|concrete-cleaning|window-cleaning|christmas-lighting|pressure-washing|residential-permanent-led-lighting|fence-cleaning|deck-cleaning|oxidation-removal|soft-wash|driveway-cleaning|solar-panel-cleaning|rust-removal|building-washing|dumpster-pad-cleaning|permanent-led-lighting|commercial-roof-cleaning|commercial-pressure-washing|graffiti-removal|hoa-multi-unit-cleaning|storefront-cleaning|premium-drive-thru-cleaning|parking-lot-and-garage-cleaning|chewing-gum-removal|commercial-awning-cleaning|gas-station-cleaning|post-construction-cleanup|paver-patio-restorations|commercial-hood-cleaning|apartment-exterior-cleaning|winter-salt-removal)`;
 
 const legacyToNestedMap: Record<string, string> = {
-  "/service-areas/green-bay/roof-cleaning": "/services/roof-cleaning",
   "/leaf-cleanups": "/services/house-washing",
   "/led-smart-lighting-solutions-green-bay-wi": "/services/permanent-led-lighting",
   "/window-cleaning": "/services/window-cleaning",
@@ -291,8 +290,17 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
-        // Matches /service-areas/neenah/roof-cleaning -> /services/roof-cleaning
-        source: `/service-areas/:city/:service${validServicesRegex}`,
+        source: `/service-areas/green-bay/:service(house-washing|gutter-cleaning|concrete-cleaning|window-cleaning|christmas-lighting|residential-permanent-led-lighting|fence-cleaning|deck-cleaning|oxidation-removal|soft-wash|driveway-cleaning|solar-panel-cleaning|rust-removal|building-washing|dumpster-pad-cleaning|permanent-led-lighting|commercial-roof-cleaning|commercial-pressure-washing|graffiti-removal|hoa-multi-unit-cleaning|storefront-cleaning|premium-drive-thru-cleaning|parking-lot-and-garage-cleaning|chewing-gum-removal|commercial-awning-cleaning|gas-station-cleaning|post-construction-cleanup|paver-patio-restorations|commercial-hood-cleaning|apartment-exterior-cleaning|winter-salt-removal)`,
+        destination: '/services/:service',
+        permanent: true,
+      },
+      {
+        source: `/service-areas/appleton/:service(roof-cleaning|gutter-cleaning|concrete-cleaning|window-cleaning|christmas-lighting|residential-permanent-led-lighting|fence-cleaning|deck-cleaning|oxidation-removal|soft-wash|driveway-cleaning|solar-panel-cleaning|rust-removal|building-washing|dumpster-pad-cleaning|permanent-led-lighting|commercial-roof-cleaning|commercial-pressure-washing|graffiti-removal|hoa-multi-unit-cleaning|storefront-cleaning|premium-drive-thru-cleaning|parking-lot-and-garage-cleaning|chewing-gum-removal|commercial-awning-cleaning|gas-station-cleaning|post-construction-cleanup|paver-patio-restorations|commercial-hood-cleaning|apartment-exterior-cleaning|winter-salt-removal)`,
+        destination: '/services/:service',
+        permanent: true,
+      },
+      {
+        source: `/service-areas/:city(algoma|de-pere|door-county|kewaunee|kimberly|little-chute|manitowoc|neenah|oshkosh|shawano|two-rivers|wrightstown|sturgeon-bay|egg-harbor|fish-creek|sister-bay|howard|suamico)/:service${validServicesRegex}`,
         destination: '/services/:service',
         permanent: true,
       },

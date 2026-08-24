@@ -1,5 +1,13 @@
 import { MetadataRoute } from 'next';
 import { blogData } from '@/data/blogData';
+import serviceData from '@/data/serviceAreasContent.json';
+
+interface ServiceContent {
+    type: string;
+    citySlug: string;
+    serviceSlug: string;
+}
+const typedServiceData = serviceData as unknown as ServiceContent[];
 
 // Static / Core 200 OK routes
 const coreRoutesList = [
@@ -23,7 +31,7 @@ const coreRoutesList = [
     "/quote"
 ];
 
-// Active services dynamically mapped from services/[service]/page.tsx array (32 services)
+// Active services dynamically mapped from services/[service]/page.tsx array (32 services) + 6 static services
 const validServices = [
     "roof-cleaning",
     "house-washing",
@@ -56,7 +64,13 @@ const validServices = [
     "post-construction-cleanup",
     "paver-patio-restorations",
     "commercial-hood-cleaning",
-    "apartment-exterior-cleaning"
+    "apartment-exterior-cleaning",
+    "apartment-hoa-cleaning",
+    "building-wash",
+    "permanent-holiday-lighting",
+    "residential-rust-removal",
+    "rust-and-oxidation-removal",
+    "winter-salt-removal"
 ];
 
 // 19 city hub routes in validLocations
@@ -82,14 +96,6 @@ const validLocations = [
     "suamico"
 ];
 
-// Child Geo-Service Intersection Routes (4 valid intersections)
-const intersections = [
-    { city: "green-bay", service: "pressure-washing" },
-    { city: "green-bay", service: "roof-cleaning" },
-    { city: "appleton", service: "pressure-washing" },
-    { city: "appleton", service: "house-washing" }
-];
-
 export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = 'https://valleyexteriorpros.com';
 
@@ -109,7 +115,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 0.9,
     }));
 
-    // 3. Location Hubs (using explicit 19 city hub routes in validLocations)
+    // 3. Location Hubs
     const locationRoutes: MetadataRoute.Sitemap = validLocations.map((city) => ({
         url: `${baseUrl}/service-areas/${city}`,
         lastModified: new Date(),
@@ -118,15 +124,37 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }));
 
     // 4. Intersections
-    const intersectionRoutes: MetadataRoute.Sitemap = intersections.map((item) => ({
-        url: `${baseUrl}/service-areas/${item.city}/${item.service}`,
+    const targetCities = ['green-bay', 'neenah', 'appleton', 'ashwaubenon', 'menasha', 'kaukauna'];
+    const targetServices = ['roof-cleaning', 'permanent-led-lighting', 'paver-patio-restorations', 'commercial-pressure-washing'];
+
+    const specificRoutes = typedServiceData
+        .filter(d => d.type === 'service')
+        .map(d => `/service-areas/${d.citySlug}/${d.serviceSlug}`);
+
+    const intersectionPaths = new Set<string>();
+    
+    // Add explicit valid intersections
+    intersectionPaths.add("/service-areas/green-bay/pressure-washing");
+    intersectionPaths.add("/service-areas/green-bay/roof-cleaning");
+    intersectionPaths.add("/service-areas/appleton/pressure-washing");
+    intersectionPaths.add("/service-areas/appleton/house-washing");
+
+    // Add target intersections matching target criteria
+    specificRoutes.forEach((route) => {
+        const isTarget = targetCities.some(city => route.includes(`/${city}/`)) && targetServices.some(service => route.endsWith(`/${service}`));
+        if (isTarget) {
+            intersectionPaths.add(route);
+        }
+    });
+
+    const intersectionRoutes: MetadataRoute.Sitemap = Array.from(intersectionPaths).map((route) => ({
+        url: `${baseUrl}${route}`,
         lastModified: new Date(),
         changeFrequency: 'weekly',
-        priority: 0.85,
+        priority: 0.8,
     }));
 
     // 5. Blog Posts (programmatically map active slugs from blogData)
-    // Filter out legacy redirected posts
     const redirectedSlugs = [
         "window-cleaning",
         "permanent-lighting-green-bay-wi",
