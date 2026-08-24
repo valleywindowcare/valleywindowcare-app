@@ -305,7 +305,6 @@ export default function PressureWashingPage() {
                 <VanillaMapClient />
             </div>
 
-            {/* BLUF FAQ SECTION */}
             <section className="container mx-auto px-4 py-16 max-w-4xl">
                 <FAQSchema faqs={[
                     {
@@ -319,28 +318,75 @@ export default function PressureWashingPage() {
                     {
                         question: "Are your pressure washing chemicals safe for pets?",
                         answer: "Absolutely. Valley Property Services exclusively utilizes 100% biodegradable, non-butyl, and EPA-compliant cleaning solutions that are completely safe for your family, pets, and the local Fox Valley environment."
+                    },
+                    {
+                        question: "What is winter salt neutralization and concrete post-treatment?",
+                        answer: "Wisconsin roads use heavy calcium chloride and rock salts that degrade concrete. Our pressure washing uses specialized salt neutralizers to dissolve trapped salts, and we post-treat with algaecides to prevent organic regrowth."
+                    },
+                    {
+                        question: "What pressure do you use for wood decks and fences?",
+                        answer: "We never use high pressure on wood. We use low-pressure soft washing with specialized wood cleaners to dissolve grime and mold without gouging the wood fibers, preserving the grain."
+                    },
+                    {
+                        question: "How do you prevent zebra striping on concrete driveways?",
+                        answer: "We use professional-grade rotary surface cleaners that maintain a constant distance and uniform pressure from the concrete, ensuring a streak-free clean unlike manual wands."
+                    },
+                    {
+                        question: "Is your business licensed and insured?",
+                        answer: "Yes, we are fully licensed and carry comprehensive $2M general liability insurance to protect your property and ensure peace of mind."
                     }
                 ]} />
                 <h2 className="text-3xl md:text-4xl font-extrabold text-navy text-center mb-12">
                     Frequently Asked Questions
                 </h2>
                 <div className="space-y-6">
-                    <div className="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100">
-                        <h3 className="text-xl font-bold text-navy mb-3">Is soft washing safe for vinyl siding?</h3>
-                        <p className="text-gray-600 leading-relaxed font-medium">
+                    <div className="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 relative overflow-hidden group hover:border-gold/30 hover:shadow-md transition-all">
+                        <div className="absolute top-0 left-0 w-2 h-full bg-gold"></div>
+                        <h3 className="text-xl font-bold text-navy-dark mb-3 pl-4">Is soft washing safe for vinyl siding?</h3>
+                        <p className="text-gray-700 leading-relaxed font-medium pl-4 text-lg">
                             Yes, soft washing is the safest and most effective method for cleaning vinyl siding. Unlike high-pressure washing that can force water behind panels, we use low pressure (under 150 PSI) and eco-friendly detergents to dissolve dirt and algae safely.
                         </p>
                     </div>
-                    <div className="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100">
-                        <h3 className="text-xl font-bold text-navy mb-3">Will pressure washing damage my concrete driveway?</h3>
-                        <p className="text-gray-600 leading-relaxed font-medium">
+                    <div className="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 relative overflow-hidden group hover:border-gold/30 hover:shadow-md transition-all">
+                        <div className="absolute top-0 left-0 w-2 h-full bg-gold"></div>
+                        <h3 className="text-xl font-bold text-navy-dark mb-3 pl-4">Will pressure washing damage my concrete driveway?</h3>
+                        <p className="text-gray-700 leading-relaxed font-medium pl-4 text-lg">
                             No, professional pressure washing restores concrete and prevents damage. We use calibrated surface cleaners to safely extract deep oil stains and organic growth, preventing the severe freeze-thaw cracking common in Wisconsin winters.
                         </p>
                     </div>
-                    <div className="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100">
-                        <h3 className="text-xl font-bold text-navy mb-3">Are your pressure washing chemicals safe for pets?</h3>
-                        <p className="text-gray-600 leading-relaxed font-medium">
+                    <div className="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 relative overflow-hidden group hover:border-gold/30 hover:shadow-md transition-all">
+                        <div className="absolute top-0 left-0 w-2 h-full bg-gold"></div>
+                        <h3 className="text-xl font-bold text-navy-dark mb-3 pl-4">Are your pressure washing chemicals safe for pets?</h3>
+                        <p className="text-gray-700 leading-relaxed font-medium pl-4 text-lg">
                             Absolutely. Valley Property Services exclusively utilizes 100% biodegradable, non-butyl, and EPA-compliant cleaning solutions that are completely safe for your family, pets, and the local Fox Valley environment.
+                        </p>
+                    </div>
+                    <div className="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 relative overflow-hidden group hover:border-gold/30 hover:shadow-md transition-all">
+                        <div className="absolute top-0 left-0 w-2 h-full bg-gold"></div>
+                        <h3 className="text-xl font-bold text-navy-dark mb-3 pl-4">What is winter salt neutralization and concrete post-treatment?</h3>
+                        <p className="text-gray-700 leading-relaxed font-medium pl-4 text-lg">
+                            Wisconsin roads use heavy calcium chloride and rock salts that degrade concrete. Our pressure washing uses specialized salt neutralizers to dissolve trapped salts, and we post-treat with algaecides to prevent organic regrowth.
+                        </p>
+                    </div>
+                    <div className="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 relative overflow-hidden group hover:border-gold/30 hover:shadow-md transition-all">
+                        <div className="absolute top-0 left-0 w-2 h-full bg-gold"></div>
+                        <h3 className="text-xl font-bold text-navy-dark mb-3 pl-4">What pressure do you use for wood decks and fences?</h3>
+                        <p className="text-gray-700 leading-relaxed font-medium pl-4 text-lg">
+                            We never use high pressure on wood. We use low-pressure soft washing with specialized wood cleaners to dissolve grime and mold without gouging the wood fibers, preserving the grain.
+                        </p>
+                    </div>
+                    <div className="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 relative overflow-hidden group hover:border-gold/30 hover:shadow-md transition-all">
+                        <div className="absolute top-0 left-0 w-2 h-full bg-gold"></div>
+                        <h3 className="text-xl font-bold text-navy-dark mb-3 pl-4">How do you prevent zebra striping on concrete driveways?</h3>
+                        <p className="text-gray-700 leading-relaxed font-medium pl-4 text-lg">
+                            We use professional-grade rotary surface cleaners that maintain a constant distance and uniform pressure from the concrete, ensuring a streak-free clean unlike manual wands.
+                        </p>
+                    </div>
+                    <div className="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 relative overflow-hidden group hover:border-gold/30 hover:shadow-md transition-all">
+                        <div className="absolute top-0 left-0 w-2 h-full bg-gold"></div>
+                        <h3 className="text-xl font-bold text-navy-dark mb-3 pl-4">Is your business licensed and insured?</h3>
+                        <p className="text-gray-700 leading-relaxed font-medium pl-4 text-lg">
+                            Yes, we are fully licensed and carry comprehensive $2M general liability insurance to protect your property and ensure peace of mind.
                         </p>
                     </div>
                 </div>

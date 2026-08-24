@@ -74,18 +74,34 @@ export const serviceContentMap: Record<string, { pageH1?: string, description: R
         },
         image: "/images/portfolio/roof-cleaning.webp",
         faqs: [
-          {
-                    "question": "Is soft washing safe for my asphalt shingle roof in Wisconsin?",
-                    "answer": "Yes, our low-pressure soft washing system is the recommended manufacturer method for cleaning asphalt roofs without stripping the granules or causing water damage."
-          },
-          {
-                    "question": "How long does a typical roof cleaning treatment last in Green Bay?",
-                    "answer": "A professional soft wash treatment from Valley Property Services typically keeps algae, moss, and lichen at bay for 2 to 4 years, depending on tree coverage and property shading."
-          },
-          {
-                    "question": "Will the cleaning solution harm my landscaping?",
-                    "answer": "No, we take extensive precautions to pre-wet and neutralize all surrounding vegetation before, during, and after our roof washing service."
-          }
+            {
+                "question": "Is soft washing safe for my asphalt shingle roof in Wisconsin?",
+                "answer": "Yes, our low-pressure soft washing system is the recommended manufacturer method for cleaning asphalt roofs without stripping the granules or causing water damage."
+            },
+            {
+                "question": "How long does a typical roof cleaning treatment last in Green Bay?",
+                "answer": "A professional soft wash treatment from Valley Property Services typically keeps algae, moss, and lichen at bay for 2 to 4 years, depending on tree coverage and property shading."
+            },
+            {
+                "question": "Will the cleaning solution harm my landscaping?",
+                "answer": "No, we take extensive precautions to pre-wet and post-rinse all surrounding vegetation before, during, and after our roof washing service to completely protect your plants."
+            },
+            {
+                "question": "Does your roof cleaning method comply with shingle manufacturer guidelines?",
+                "answer": "Yes. We strictly follow the Asphalt Roofing Manufacturers Association (ARMA) recommendations by utilizing low-pressure chemical application (under 100 PSI) and avoiding high-pressure wands."
+            },
+            {
+                "question": "What is the source of the black streaks on my roof?",
+                "answer": "The dark streaks are caused by Gloeocapsa Magma, a hardy algae that feeds on the limestone filler inside asphalt shingles. If left untreated, it breaks down the shingles, causing decay and heat retention."
+            },
+            {
+                "question": "Can moss build-up cause my home insurance to be canceled?",
+                "answer": "Yes, many home insurance providers in Northeast Wisconsin actively audit properties and require the removal of structural moss and biological growth to maintain coverage."
+            },
+            {
+                "question": "Do you bag the downspouts during roof washing?",
+                "answer": "Yes, we wrap and bag downspout discharge outlets to collect run-off and prevent any cleaning solution from draining directly into your lawn, garden beds, or storm runoff."
+            }
         ]
     },
     "house-washing": {
@@ -158,6 +174,14 @@ export const serviceContentMap: Record<string, { pageH1?: string, description: R
             {
                 "question": "How often should I have my home's exterior professionally washed?",
                 "answer": "We highly recommend an annual exterior house cleaning every spring or summer to prevent green algae and dark mold streaks from permanently staining and degrading your siding."
+            },
+            {
+                "question": "Can high pressure damage vinyl siding?",
+                "answer": "Absolutely. High pressure can crack vinyl panels, strip UV protection, and force water behind the siding panels, leading to trapped moisture and toxic mold growth within your walls."
+            },
+            {
+                "question": "Do I need to be home during the house washing service?",
+                "answer": "No, you do not need to be home. We just ask that you close all windows/doors, shut off exterior water valves, unlock gates, and ensure pets are safely indoors."
             }
         ]
     },

@@ -51,6 +51,68 @@ export default function ContactPage() {
                     title="Google Maps Location for Valley Property Services"
                   />
                 </div>
+
+                <div className="grid md:grid-cols-2 gap-8 mt-12 bg-white p-8 md:p-12 rounded-3xl border border-gray-100 shadow-sm">
+                    <div>
+                        <h2 className="text-2xl font-bold text-navy mb-6">Service Overview & Expectations</h2>
+                        
+                        <div className="space-y-6">
+                            <div>
+                                <h3 className="text-lg font-bold text-navy mb-2">Estimate Response Timeline</h3>
+                                <p className="text-gray-600 leading-relaxed">
+                                    We respect your time. All contact form submissions and online estimate requests are reviewed and responded to by a local team member <strong>within 24 hours</strong>. If you need immediate assistance or are experiencing an urgent cleanup request, please call or text us at <strong>(920) 609-7085</strong>.
+                                </p>
+                            </div>
+
+                            <div>
+                                <h3 className="text-lg font-bold text-navy mb-2">Licensing & General Liability Insurance</h3>
+                                <p className="text-gray-600 leading-relaxed">
+                                    Valley Property Services is fully registered, licensed, and bonded in the State of Wisconsin. We maintain a comprehensive <strong>$2,000,000 general liability insurance policy</strong> and full workers' compensation coverage. Your home and commercial properties are in completely safe, qualified hands.
+                                </p>
+                            </div>
+
+                            <div>
+                                <h3 className="text-lg font-bold text-navy mb-2">Northeast Wisconsin Service Areas</h3>
+                                <p className="text-gray-600 leading-relaxed">
+                                    Our service trucks travel daily throughout Brown, Outagamie, Winnebago, and Door counties. We regularly service properties in Green Bay, Appleton, De Pere, Howard, Suamico, Bellevue, Hobart, Neenah, Menasha, Oshkosh, Sturgeon Bay, Egg Harbor, Fish Creek, and Sister Bay.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="bg-slate-50 p-6 md:p-8 rounded-2xl border border-gray-200/50">
+                        <h2 className="text-2xl font-bold text-navy mb-6">Customer Preparation Checklist</h2>
+                        <p className="text-gray-600 mb-6">
+                            To ensure a smooth, efficient, and completely safe exterior restoration, we kindly ask that you review these preparation guidelines before our team arrives:
+                        </p>
+                        <ul className="space-y-4">
+                            <li className="flex items-start gap-3">
+                                <span className="flex items-center justify-center bg-gold text-navy font-bold rounded-full w-6 h-6 text-sm shrink-0 mt-0.5">1</span>
+                                <p className="text-gray-600 text-sm leading-relaxed">
+                                    <strong>Secure All Openings:</strong> Please double-check and ensure all windows and exterior doors are completely closed and locked to prevent water entry.
+                                </p>
+                            </li>
+                            <li className="flex items-start gap-3">
+                                <span className="flex items-center justify-center bg-gold text-navy font-bold rounded-full w-6 h-6 text-sm shrink-0 mt-0.5">2</span>
+                                <p className="text-gray-600 text-sm leading-relaxed">
+                                    <strong>Clear Service Areas:</strong> Move vehicles from driveways, pull patio furniture away from walls, and relocate children's toys, potted plants, and pet bowls.
+                                </p>
+                            </li>
+                            <li className="flex items-start gap-3">
+                                <span className="flex items-center justify-center bg-gold text-navy font-bold rounded-full w-6 h-6 text-sm shrink-0 mt-0.5">3</span>
+                                <p className="text-gray-600 text-sm leading-relaxed">
+                                    <strong>Water & Gate Access:</strong> Ensure all outdoor spigots have working water supply and unlock side gates or back perimeter fences so our technicians can safely access your property.
+                                </p>
+                            </li>
+                            <li className="flex items-start gap-3">
+                                <span className="flex items-center justify-center bg-gold text-navy font-bold rounded-full w-6 h-6 text-sm shrink-0 mt-0.5">4</span>
+                                <p className="text-gray-600 text-sm leading-relaxed">
+                                    <strong>Safety First:</strong> Keep all pets and family members safely indoors during the duration of our cleaning service to protect against active spray.
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
             <ReviewSlider />
         </main>

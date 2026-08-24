@@ -40,6 +40,83 @@ export default function PricingPage() {
             <div id="calculator-hub">
                 <ValueCalculator />
             </div>
+
+            {/* Package Comparison Table */}
+            <section className="py-16 bg-white border-t border-gray-100">
+                <div className="container mx-auto px-4 max-w-5xl">
+                    <div className="text-center mb-12">
+                        <h2 className="text-3xl font-extrabold text-navy mb-4">Service Package Comparison</h2>
+                        <p className="text-gray-600 max-w-2xl mx-auto">
+                            Choose the level of cleaning that fits your home's needs. All packages utilize our low-pressure soft wash process.
+                        </p>
+                    </div>
+
+                    <div className="overflow-x-auto border border-gray-200 rounded-2xl shadow-sm">
+                        <table className="w-full text-left border-collapse bg-white">
+                            <thead>
+                                <tr className="bg-navy text-white text-sm uppercase tracking-wider">
+                                    <th className="p-6 font-bold">Package Tier</th>
+                                    <th className="p-6 font-bold">Sq Footage Range</th>
+                                    <th className="p-6 font-bold">Features Included</th>
+                                    <th className="p-6 font-bold text-right">Est. Starting Price</th>
+                                </tr>
+                            </thead>
+                            <tbody className="divide-y divide-gray-200 text-gray-700">
+                                <tr className="hover:bg-slate-50 transition-colors">
+                                    <td className="p-6 font-bold text-navy">
+                                        Basic Soft Wash
+                                        <span className="block text-xs font-normal text-gray-500 mt-1">Essential siding treatment</span>
+                                    </td>
+                                    <td className="p-6 text-sm">Up to 2,000 sq ft</td>
+                                    <td className="p-6 text-sm">
+                                        <ul className="space-y-1.5 list-disc list-inside">
+                                            <li>House Soft Wash (Siding Only)</li>
+                                            <li>Mildew, Mold & Algae Treatment</li>
+                                            <li>Landscape & Plant Protection Protocol</li>
+                                        </ul>
+                                    </td>
+                                    <td className="p-6 font-extrabold text-navy text-right text-lg">$350</td>
+                                </tr>
+                                <tr className="hover:bg-slate-50 transition-colors bg-slate-50/30">
+                                    <td className="p-6 font-bold text-navy">
+                                        Premium Exterior Clean
+                                        <span className="block text-xs font-normal text-gold mt-1 font-semibold">★ Most Popular</span>
+                                    </td>
+                                    <td className="p-6 text-sm">Up to 3,000 sq ft</td>
+                                    <td className="p-6 text-sm">
+                                        <ul className="space-y-1.5 list-disc list-inside">
+                                            <li>House Soft Wash (All Siding)</li>
+                                            <li>Gutter Cleaning & Downspout Flushing</li>
+                                            <li>Streak-Free Exterior Window Cleaning</li>
+                                            <li>Premium Soap & Wax Upgrade</li>
+                                        </ul>
+                                    </td>
+                                    <td className="p-6 font-extrabold text-navy text-right text-lg">$550</td>
+                                </tr>
+                                <tr className="hover:bg-slate-50 transition-colors">
+                                    <td className="p-6 font-bold text-navy">
+                                        Ultimate Curb Appeal Package
+                                        <span className="block text-xs font-normal text-gray-500 mt-1">All-inclusive restoration</span>
+                                    </td>
+                                    <td className="p-6 text-sm">Up to 4,000 sq ft</td>
+                                    <td className="p-6 text-sm">
+                                        <ul className="space-y-1.5 list-disc list-inside">
+                                            <li>House Soft Wash (All Siding)</li>
+                                            <li>Full Roof Soft Wash (Moss & Lichen Kill)</li>
+                                            <li>Gutter Cleaning & Downspout Flushing</li>
+                                            <li>Streak-Free Exterior Window Cleaning</li>
+                                            <li>Concrete Driveway & Walkway Power Wash</li>
+                                            <li>Salt Neutralization & Post-Treatment</li>
+                                        </ul>
+                                    </td>
+                                    <td className="p-6 font-extrabold text-navy text-right text-lg">$950</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
             <PricingGuide />
             <section className="bg-white border-t border-gray-100 py-12">
                 <FAQAccordion faqs={pricingFaqs} />
