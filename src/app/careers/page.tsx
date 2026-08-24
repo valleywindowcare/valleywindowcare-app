@@ -5,7 +5,7 @@ import { ChevronRight, Briefcase, GraduationCap, DollarSign } from 'lucide-react
 import HeroForm from '@/components/HeroForm';
 
 export const metadata: Metadata = {
-    title: 'Pressure Washing Jobs in Wisconsin | Careers at Valley Property Services',
+    title: 'Pressure Washing Jobs in Wisconsin | Careers',
     description: 'Join the premier exterior maintenance team in the Fox Valley. Seeking highly-motivated individuals for pressure washing jobs and field operations.',
 };
 
