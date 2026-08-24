@@ -191,9 +191,9 @@ export default function PermanentLEDLightingPage() {
                             "provider": {
                                 "@type": "LocalBusiness",
                                 "name": "Valley Property Services",
-                                "image": "https://www.valleyexteriorpros.com/images/portfolio/permanent-lighting-night-suamico.webp",
+                                "image": "https://valleyexteriorpros.com/images/portfolio/permanent-lighting-night-suamico.webp",
                                 "telephone": "(920) 609-7085",
-                                "url": `https://www.valleyexteriorpros.com/services/permanent-led-lighting`
+                                "url": `https://valleyexteriorpros.com/services/permanent-led-lighting`
                             },
                             "areaServed": [
                                 { "@type": "City", "name": "Green Bay" },

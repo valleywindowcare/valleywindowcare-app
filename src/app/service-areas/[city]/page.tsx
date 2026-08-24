@@ -496,9 +496,9 @@ export default async function CityHubPage({ params }: PageProps) {
                             "@context": "https://schema.org",
                             "@type": "LocalBusiness",
                             "name": "Valley Property Services",
-                            "image": "https://www.valleyexteriorpros.com/images/portfolio/building-wash-copy.webp",
+                            "image": "https://valleyexteriorpros.com/images/portfolio/building-wash-copy.webp",
                             "telephone": "(920) 609-7085",
-                            "url": `https://www.valleyexteriorpros.com/service-areas/${content.citySlug}`,
+                            "url": `https://valleyexteriorpros.com/service-areas/${content.citySlug}`,
                             "areaServed": {
                                 "@type": "City",
                                 "name": `${cityName}, WI`

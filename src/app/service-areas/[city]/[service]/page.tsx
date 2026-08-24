@@ -38,7 +38,7 @@ const VALID_INTERSECTIONS = {
           "@type": "HomeAndConstructionBusiness",
           "name": "Valley Property Services",
           "telephone": "+1-920-609-7085",
-          "url": "https://www.valleyexteriorpros.com"
+          "url": "https://valleyexteriorpros.com"
         },
         "areaServed": {
           "@type": "City",
@@ -76,7 +76,7 @@ const VALID_INTERSECTIONS = {
           "@type": "HomeAndConstructionBusiness",
           "name": "Valley Property Services",
           "telephone": "+1-920-609-7085",
-          "url": "https://www.valleyexteriorpros.com"
+          "url": "https://valleyexteriorpros.com"
         },
         "areaServed": {
           "@type": "City",
@@ -116,7 +116,7 @@ const VALID_INTERSECTIONS = {
           "@type": "HomeAndConstructionBusiness",
           "name": "Valley Property Services",
           "telephone": "+1-920-609-7085",
-          "url": "https://www.valleyexteriorpros.com"
+          "url": "https://valleyexteriorpros.com"
         },
         "areaServed": {
           "@type": "City",
@@ -154,7 +154,7 @@ const VALID_INTERSECTIONS = {
           "@type": "HomeAndConstructionBusiness",
           "name": "Valley Property Services",
           "telephone": "+1-920-609-7085",
-          "url": "https://www.valleyexteriorpros.com"
+          "url": "https://valleyexteriorpros.com"
         },
         "areaServed": {
           "@type": "City",

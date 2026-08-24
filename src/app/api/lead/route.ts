@@ -42,7 +42,7 @@ export async function POST(request: Request) {
                         event_time: Math.floor(Date.now() / 1000), // Unix timestamp in seconds
                         action_source: "website",
                         event_id: eventId, // CRITICAL: This exact UUID must map to the browser Pixel eventID
-                        event_source_url: request.headers.get('referer') || "https://www.valleyexteriorpros.com/",
+                        event_source_url: request.headers.get('referer') || "https://valleyexteriorpros.com/",
                         user_data: {
                             client_ip_address: ipAddress,
                             client_user_agent: userAgent,

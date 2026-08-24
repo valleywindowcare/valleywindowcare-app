@@ -15,8 +15,8 @@ export default function AboutUsPage() {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "Valley Property Services",
-      "image": "https://www.valleyexteriorpros.com/images/portfolio/house-wash-before-after.webp",
-      "url": "https://www.valleyexteriorpros.com/about-us",
+      "image": "https://valleyexteriorpros.com/images/portfolio/house-wash-before-after.webp",
+      "url": "https://valleyexteriorpros.com/about-us",
       "telephone": "(920) 609-7085",
       "address": {
         "@type": "PostalAddress",

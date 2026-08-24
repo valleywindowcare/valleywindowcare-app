@@ -29,7 +29,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.valleyexteriorpros.com"),
+  metadataBase: new URL("https://valleyexteriorpros.com"),
   title: {
     default: "Pressure Washing & Roof Cleaning Green Bay | Valley Property Services",
     template: "%s | Valley Property Services",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Valley Property Services | Exterior Restoration & Pressure Washing | De Pere, WI",
     description: "Valley Property Services specializes in premium exterior restoration, soft wash roof cleaning, pressure washing, paver sealing, and window cleaning across De Pere, Green Bay, and the Fox Valley.",
-    url: "https://www.valleyexteriorpros.com",
+    url: "https://valleyexteriorpros.com",
     siteName: "Valley Property Services",
     locale: "en_US",
     type: "website",
@@ -81,7 +81,7 @@ export default function RootLayout({
               "name": "Valley Property Services",
               "alternateName": ["Valley Exterior Pros", "Valley Exterior Restoration"],
               "legalName": "Valley Property Services",
-              "url": "https://www.valleyexteriorpros.com",
+              "url": "https://valleyexteriorpros.com",
               "telephone": "+1-920-609-7085",
               "email": "info@valleywindowcare.com",
               "priceRange": "$$",

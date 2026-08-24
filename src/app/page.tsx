@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Pressure Washing Green Bay WI & Appleton | Valley Property Services",
     description: "Top-rated pressure washing Green Bay WI and pressure washing Appleton WI. Specializing in house washing Green Bay, roof soft washing Appleton, and commercial building washing Green Bay.",
-    url: "https://www.valleyexteriorpros.com",
+    url: "https://valleyexteriorpros.com",
     siteName: "Valley Property Services",
     locale: "en_US",
     type: "website",

@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
             allow: '/',
             disallow: ['/privacy-policy', '/terms-and-conditions', '/service-guarantee'],
         },
-        sitemap: 'https://www.valleyexteriorpros.com/sitemap.xml',
+        sitemap: 'https://valleyexteriorpros.com/sitemap.xml',
     }
 }

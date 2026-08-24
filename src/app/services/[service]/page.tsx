@@ -201,11 +201,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         openGraph: {
             title: seoTitle,
             description: seoDescription,
-            url: `https://www.valleyexteriorpros.com/services/${service}`,
+            url: `https://valleyexteriorpros.com/services/${service}`,
             siteName: 'Valley Property Services',
             images: [
                 {
-                    url: `https://www.valleyexteriorpros.com${seoImage}`,
+                    url: `https://valleyexteriorpros.com${seoImage}`,
                     width: 1200,
                     height: 630,
                     alt: `${formattedName} Portfolio Showcase in Wisconsin`,
@@ -526,7 +526,7 @@ export default async function ServiceGenericPage({ params }: PageProps) {
                             "name": formattedName,
                             "serviceType": formattedName,
                             "description": `Valley Property Services provides premium ${formattedName.toLowerCase()} and property maintenance for homes and businesses in Northeast Wisconsin.`,
-                            "image": `https://www.valleyexteriorpros.com${bodyImageToUse}`,
+                            "image": `https://valleyexteriorpros.com${bodyImageToUse}`,
                             "keywords": [
                                 "pressure washing Green Bay WI", "pressure washing Appleton WI", "house washing Green Bay", "house washing Appleton WI",
                                 "soft wash siding cleaning Green Bay WI", "roof soft washing Appleton", "roof stain removal Green Bay",
@@ -539,9 +539,9 @@ export default async function ServiceGenericPage({ params }: PageProps) {
                             "provider": {
                                 "@type": "LocalBusiness",
                                 "name": "Valley Property Services",
-                                "image": "https://www.valleyexteriorpros.com/images/portfolio/house-wash-before-after.webp",
+                                "image": "https://valleyexteriorpros.com/images/portfolio/house-wash-before-after.webp",
                                 "telephone": "(920) 609-7085",
-                                "url": `https://www.valleyexteriorpros.com/services/${service}`,
+                                "url": `https://valleyexteriorpros.com/services/${service}`,
                                 "keywords": [
                                     "pressure washing Green Bay WI", "pressure washing Appleton WI", "house washing Green Bay", "house washing Appleton WI",
                                     "soft wash siding cleaning Green Bay WI", "roof soft washing Appleton", "roof stain removal Green Bay",
@@ -632,19 +632,19 @@ export default async function ServiceGenericPage({ params }: PageProps) {
                                     "@type": "ListItem",
                                     "position": 1,
                                     "name": "Home",
-                                    "item": "https://www.valleyexteriorpros.com/"
+                                    "item": "https://valleyexteriorpros.com/"
                                 },
                                 {
                                     "@type": "ListItem",
                                     "position": 2,
                                     "name": "Services",
-                                    "item": "https://www.valleyexteriorpros.com/services"
+                                    "item": "https://valleyexteriorpros.com/services"
                                 },
                                 {
                                     "@type": "ListItem",
                                     "position": 3,
                                     "name": formattedName,
-                                    "item": `https://www.valleyexteriorpros.com/services/${service}`
+                                    "item": `https://valleyexteriorpros.com/services/${service}`
                                 }
                             ]
                         })
