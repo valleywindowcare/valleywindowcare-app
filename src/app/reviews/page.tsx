@@ -181,7 +181,61 @@ export default function ReviewsPage() {
                 </div>
 
             </div>
-    <ReviewSlider />
-</div>
+            
+            {/* JSON-LD Review Schema */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "HomeAndConstructionBusiness",
+                        "name": "Valley Property Services",
+                        "image": "https://valleyexteriorpros.com/images/portfolio/house-wash-before-after.webp",
+                        "url": "https://valleyexteriorpros.com/reviews",
+                        "telephone": "+1-920-609-7085",
+                        "address": {
+                            "@type": "PostalAddress",
+                            "streetAddress": "462 S Good Hope Rd",
+                            "addressLocality": "De Pere",
+                            "addressRegion": "WI",
+                            "postalCode": "54115",
+                            "addressCountry": "US"
+                        },
+                        "aggregateRating": {
+                            "@type": "AggregateRating",
+                            "ratingValue": "5.0",
+                            "reviewCount": "100"
+                        },
+                        "review": reviews.map((r) => {
+                            let dateStr = "2026-03-24";
+                            if (r.date.includes("5 months")) dateStr = "2026-03-24";
+                            else if (r.date.includes("6 months")) dateStr = "2026-02-24";
+                            else if (r.date.includes("7 months")) dateStr = "2026-01-24";
+                            else if (r.date.includes("8 months")) dateStr = "2025-12-24";
+                            else if (r.date.includes("10 months")) dateStr = "2025-10-24";
+                            else if (r.date.includes("1 year")) dateStr = "2025-08-24";
+
+                            return {
+                                "@type": "Review",
+                                "author": {
+                                    "@type": "Person",
+                                    "name": r.reviewer
+                                },
+                                "datePublished": dateStr,
+                                "reviewBody": r.text,
+                                "reviewRating": {
+                                    "@type": "Rating",
+                                    "ratingValue": "5",
+                                    "bestRating": "5",
+                                    "worstRating": "1"
+                                }
+                            };
+                        })
+                    })
+                }}
+            />
+
+            <ReviewSlider />
+        </div>
     );
 }
