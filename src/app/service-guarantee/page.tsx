@@ -5,7 +5,7 @@ import { ChevronRight, ShieldCheck } from "lucide-react";
 import ReviewSlider from '@/components/ReviewSlider';
 
 export const metadata: Metadata = {
-    title: "Service Guarantee | Valley Property Services",
+    title: "Service Guarantee",
     description: "Our 100% Satisfaction Guarantee. We stand entirely behind the quality of our exterior cleaning services in Wisconsin.",
 };
 

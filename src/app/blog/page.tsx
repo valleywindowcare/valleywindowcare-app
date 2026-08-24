@@ -9,7 +9,7 @@ import BlogFilterGrid from '@/components/BlogFilterGrid';
 import ReviewSlider from '@/components/ReviewSlider';
 
 export const metadata = {
-    title: 'Exterior Cleaning Insights & Tips | Valley Property Services Blog',
+    title: 'Exterior Cleaning Insights & Tips',
     description: 'Read expert advice on roof cleaning, commercial pressure washing, and permanent lighting solutions across Northeast Wisconsin.',
 };
 

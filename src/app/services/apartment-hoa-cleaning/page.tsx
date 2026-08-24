@@ -12,7 +12,7 @@ import { faqData } from "@/data/faqData";
 import VanillaMapClient from "@/components/VanillaMapClient";
 
 export const metadata = {
-    title: "Apartment & HOA Cleaning | Valley Property Services",
+    title: "Apartment & HOA Cleaning",
     description: "Professional multi-unit exterior cleaning for apartments and HOAs in Green Bay.",
 };
 

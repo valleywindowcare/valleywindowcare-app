@@ -39,7 +39,7 @@ export function isRedirectDestination(urlPath: string): boolean {
         "/service-areas/green-bay/commercial-pressure-washing",
         "/service-areas/green-bay/concrete-cleaning",
         "/service-areas/green-bay/residential-permanent-led-lighting",
-        "/services/driveway-cleaning-green-bay",
+        "/services/driveway-cleaning",
         "/services/commercial-awning-cleaning-green-bay",
         "/service-areas/appleton/commercial-hood-cleaning",
         "/service-areas/green-bay/commercial-hood-cleaning",

@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   description: "Top-rated pressure washing Green Bay WI and pressure washing Appleton WI. Specializing in house washing Green Bay, roof soft washing Appleton, and commercial building washing Green Bay. Request a free quote today!",
   openGraph: {
-    title: "Pressure Washing Green Bay WI & Appleton | Valley Property Services",
+    title: "Pressure Washing Green Bay WI & Appleton",
     description: "Top-rated pressure washing Green Bay WI and pressure washing Appleton WI. Specializing in house washing Green Bay, roof soft washing Appleton, and commercial building washing Green Bay.",
     url: "https://valleyexteriorpros.com",
     siteName: "Valley Property Services",

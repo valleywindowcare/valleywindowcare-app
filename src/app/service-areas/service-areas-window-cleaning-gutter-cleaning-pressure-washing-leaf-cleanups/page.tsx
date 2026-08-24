@@ -3,7 +3,7 @@ import Link from 'next/link';
 import ReviewSlider from '@/components/ReviewSlider';
 
 export const metadata = {
-    title: "service areas window cleaning gutter cleaning pressure washing leaf cleanups | Valley Property Services",
+    title: "service areas window cleaning gutter cleaning pressure washing leaf cleanups",
     description: "Professional exterior cleaning services in Northeast Wisconsin."
 };
 

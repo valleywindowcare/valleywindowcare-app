@@ -11,7 +11,7 @@ import VanillaMapClient from "@/components/VanillaMapClient";
 import PricingMatrix from "@/components/PricingMatrix";
 
 export const metadata = {
-    title: "Professional Pressure Washing Company & Building Washing | Valley Property Services",
+    title: "Professional Pressure Washing Company & Building Washing",
     description: "Northeast Wisconsin's most trusted commercial pressure washing company. Dumpster pads, storefronts, and massive concrete restoration.",
 };
 

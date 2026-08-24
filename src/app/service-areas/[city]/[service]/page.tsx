@@ -10,7 +10,7 @@ import { Metadata } from 'next';
 const VALID_INTERSECTIONS = {
   "green-bay": {
     "pressure-washing": {
-      title: "Professional Pressure Washing in Green Bay, WI | Valley Property Services",
+      title: "Professional Pressure Washing in Green Bay, WI",
       description: "Get elite, commercial-grade pressure washing in Green Bay, WI. High-power concrete cleaning, driveway wash, and exterior restoration near Lambeau Field and Astor Park.",
       heroTitle: "Elite Pressure Washing in Green Bay, WI",
       heroDesc: "Professional hot-water flatwork cleaning and exterior restoration for residential and commercial properties.",
@@ -48,7 +48,7 @@ const VALID_INTERSECTIONS = {
       }
     },
     "roof-cleaning": {
-      title: "Safe Soft Wash Roof Cleaning in Green Bay, WI | Valley Property Services",
+      title: "Safe Soft Wash Roof Cleaning in Green Bay, WI",
       description: "Protect your roof with professional soft wash roof cleaning in Green Bay, WI. Safely remove black algae streaks, moss, and lichen from shingles without damage.",
       heroTitle: "Safe Soft Wash Roof Cleaning in Green Bay, WI",
       heroDesc: "Eliminate black algae streaks, moss, and lichen safely using low-pressure soft washing techniques.",
@@ -88,7 +88,7 @@ const VALID_INTERSECTIONS = {
   },
   "appleton": {
     "pressure-washing": {
-      title: "Professional Pressure Washing in Appleton, WI | Valley Property Services",
+      title: "Professional Pressure Washing in Appleton, WI",
       description: "Premium power washing and concrete cleaning in Appleton, WI. Keep your driveways, patios, and commercial walkways clean along the I-41 corridor.",
       heroTitle: "Premium Pressure Washing in Appleton, WI",
       heroDesc: "Professional concrete washing, driveway cleaning, and commercial flatwork restoration.",
@@ -126,7 +126,7 @@ const VALID_INTERSECTIONS = {
       }
     },
     "house-washing": {
-      title: "Safe Soft Wash House Washing in Appleton, WI | Valley Property Services",
+      title: "Safe Soft Wash House Washing in Appleton, WI",
       description: "Expert soft wash house washing in Appleton, WI. Safely clean vinyl, brick, and stucco siding without high pressure. Eco-friendly algae and mold removal.",
       heroTitle: "Safe Soft Wash House Washing in Appleton, WI",
       heroDesc: "Gentle low-pressure exterior siding cleaning for vinyl, brick, wood, and stucco home exteriors.",

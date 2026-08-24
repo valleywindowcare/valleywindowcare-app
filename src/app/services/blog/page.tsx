@@ -3,7 +3,7 @@ import Link from 'next/link';
 import ReviewSlider from '@/components/ReviewSlider';
 
 export const metadata = {
-    title: "blog | Valley Property Services",
+    title: "blog",
     description: "Professional exterior cleaning services in Northeast Wisconsin."
 };
 

@@ -5,7 +5,7 @@ import { Phone, Mail, MapPin } from "lucide-react";
 import ReviewSlider from '@/components/ReviewSlider';
 
 export const metadata: Metadata = {
-    title: "Contact Us | Valley Property Services",
+    title: "Contact Us",
     description: "Get a free quote for pressure washing, window cleaning, and exterior maintenance in Northeast Wisconsin.",
 };
 

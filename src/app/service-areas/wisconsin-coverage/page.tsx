@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-    title: 'Wisconsin Service Area Coverage | Valley Property Services',
+    title: 'Wisconsin Service Area Coverage',
     description: 'Comprehensive service area directory for Northeast Wisconsin. Valley Property Services serves Green Bay, Appleton, Door County, and surrounding satellite communities.',
 };
 

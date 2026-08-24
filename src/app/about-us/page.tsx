@@ -6,7 +6,7 @@ import { Shield, Sparkles, Target, Users, CheckCircle2 } from "lucide-react";
 import ReviewSlider from '@/components/ReviewSlider';
 
 export const metadata: Metadata = {
-    title: "About Us | Valley Property Services",
+    title: "About Us",
     description: "Learn about Valley Property Services's story, our team, and our commitment to crystal clear exterior cleaning services in Green Bay.",
 };
 

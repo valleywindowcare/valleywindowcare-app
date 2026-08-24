@@ -9,7 +9,7 @@ import { ShieldCheck, CheckCircle, ArrowRight, MapPin } from 'lucide-react';
 import ReviewSlider from '@/components/ReviewSlider';
 
 export const metadata = {
-    title: "Driveway Cleaning | Valley Property Services",
+    title: "Driveway Cleaning",
     description: "Professional concrete and asphalt surface cleaning. We physically remove oil stains, tire marks, and organic buildup.",
 };
 

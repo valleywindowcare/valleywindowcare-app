@@ -12,7 +12,7 @@ import { faqData } from "@/data/faqData";
 import VanillaMapClient from "@/components/VanillaMapClient";
 
 export const metadata = {
-    title: "Residential Permanent LED Lighting | Valley Property Services",
+    title: "Residential Permanent LED Lighting",
     description: "Professional permanent LED lighting installation for residential homes in Green Bay and Appleton.",
 };
 

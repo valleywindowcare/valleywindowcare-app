@@ -13,7 +13,7 @@ import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 
 export const metadata: Metadata = {
-    title: "Permanent Lighting Green Bay Wi | Valley Property Services",
+    title: "Permanent Lighting Green Bay Wi",
     description: "Valley Property Services provides premium exterior services including Permanent Lighting Green Bay Wi in Northeast Wisconsin.",
 };
 

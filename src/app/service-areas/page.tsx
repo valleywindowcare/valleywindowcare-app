@@ -15,7 +15,7 @@ export const CITIES = [
 const generateSlug = (city: string) => city.toLowerCase().replace(/ /g, '-');
 
 export const metadata = {
-    title: "Service Areas | Valley Property Services",
+    title: "Service Areas",
     description: "View our full coverage area across Northeast Wisconsin including Green Bay, Appleton, and Oshkosh."
 };
 

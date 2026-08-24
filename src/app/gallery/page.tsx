@@ -4,7 +4,7 @@ import ReviewSlider from '@/components/ReviewSlider';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: "Project Gallery | Valley Property Services",
+    title: "Project Gallery",
     description: "Browse our portfolio of professional exterior cleaning, window washing, roof cleaning, and permanent lighting projects across Northeast Wisconsin."
 };
 

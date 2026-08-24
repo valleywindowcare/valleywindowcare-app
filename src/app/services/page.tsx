@@ -4,7 +4,7 @@ import Link from 'next/link';
 import ReviewSlider from '@/components/ReviewSlider';
 
 export const metadata = {
-    title: "All Exterior Cleaning Services | Valley Property Services",
+    title: "All Exterior Cleaning Services",
     description: "View our comprehensive list of residential and commercial exterior cleaning, pressure washing, and permanent lighting services in Northeast Wisconsin."
 };
 

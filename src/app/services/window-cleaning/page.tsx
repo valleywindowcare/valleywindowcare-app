@@ -9,7 +9,7 @@ import PricingMatrix from '@/components/PricingMatrix';
 import FAQSchema from '@/components/FAQSchema';
 
 export const metadata = {
-    title: "Window Cleaning Services in Northeast Wisconsin | Valley Property Services",
+    title: "Window Cleaning Services in Northeast Wisconsin",
     description: "Professional window cleaning services. Valley Property Services delivers pure-water glass maintenance solutions across Northeast Wisconsin.",
 };
 

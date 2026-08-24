@@ -5,7 +5,7 @@ import { AlertTriangle, CheckCircle, Droplets, Shield } from 'lucide-react';
 import ValueCalculator from '@/components/ValueCalculator';
 
 export const metadata: Metadata = {
-    title: 'DIY vs Professional Pressure Washing | Valley Property Services',
+    title: 'DIY vs Professional Pressure Washing',
     description: 'Expert advice on why professional soft washing systems outclass destructive retail pressure washers. Calculate your exact Wisconsin property restoration costs online.',
 };
 

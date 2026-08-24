@@ -7,7 +7,7 @@ import ReviewSlider from '@/components/ReviewSlider';
 import FAQSchema from '@/components/FAQSchema';
 
 export const metadata = {
-    title: 'Commercial Winter Salt Removal Services | Valley Property Services',
+    title: 'Commercial Winter Salt Removal Services',
     description: 'Protect your commercial concrete from costly spalling and slip-and-fall liability. We use specialized chemical neutralizers to eliminate harsh road salts and magnesium chlorides.',
 };
 

@@ -5,7 +5,7 @@ import { ChevronRight } from "lucide-react";
 import ReviewSlider from '@/components/ReviewSlider';
 
 export const metadata: Metadata = {
-    title: "Privacy Policy | Valley Property Services",
+    title: "Privacy Policy",
     description: "Privacy policy and data collection practices for Valley Property Services.",
 };
 

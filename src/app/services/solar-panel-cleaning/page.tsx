@@ -9,7 +9,7 @@ import { ShieldCheck, CheckCircle, ArrowRight, MapPin } from 'lucide-react';
 import ReviewSlider from '@/components/ReviewSlider';
 
 export const metadata = {
-    title: "Solar Panel Cleaning | Valley Property Services",
+    title: "Solar Panel Cleaning",
     description: "Professional pure-water photovoltaic array cleaning. We physically remove dust, exhaust, and bird droppings to restore energy efficiency.",
 };
 

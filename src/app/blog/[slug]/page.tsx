@@ -30,12 +30,12 @@ export async function generateMetadata({ params }: Props) {
 
     if (!post) {
         return {
-            title: 'Post Not Found | Valley Property Services',
+            title: 'Post Not Found',
         };
     }
 
     return {
-        title: `${post.title} | Valley Property Services`,
+        title: `${post.title}`,
         description: post.excerpt,
     };
 }

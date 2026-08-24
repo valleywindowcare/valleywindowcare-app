@@ -5,7 +5,7 @@ import { ChevronRight } from "lucide-react";
 import ReviewSlider from '@/components/ReviewSlider';
 
 export const metadata: Metadata = {
-    title: "Terms and Conditions | Valley Property Services",
+    title: "Terms and Conditions",
     description: "Terms and conditions for usage of Valley Property Services services.",
 };
 

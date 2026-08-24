@@ -9,7 +9,7 @@ import { ShieldCheck, CheckCircle, ArrowRight, MapPin } from 'lucide-react';
 import ReviewSlider from '@/components/ReviewSlider';
 
 export const metadata = {
-    title: "Residential Rust Removal | Valley Property Services",
+    title: "Residential Rust Removal",
     description: "Professional battery acid and fertilizer rust removal. We safely extract deep orange stains from exterior concrete.",
 };
 

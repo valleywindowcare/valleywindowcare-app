@@ -13,7 +13,7 @@ import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 
 export const metadata: Metadata = {
-    title: "Window Cleaning | Valley Property Services",
+    title: "Window Cleaning",
     description: "Valley Property Services provides premium exterior services including Window Cleaning in Northeast Wisconsin.",
 };
 

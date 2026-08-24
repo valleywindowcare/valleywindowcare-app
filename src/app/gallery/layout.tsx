@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Our Work Gallery | Valley Property Services',
+    title: 'Our Work Gallery',
     description: 'Explore our portfolio showcasing premium residential and commercial exterior cleaning, power washing, and permanent LED lighting installations delivering incredible results across Door County, Green Bay, and all of Northeast Wisconsin.'
 };
 

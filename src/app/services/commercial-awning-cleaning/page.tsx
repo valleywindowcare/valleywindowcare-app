@@ -9,7 +9,7 @@ import { ShieldCheck, CheckCircle, ArrowRight, MapPin } from 'lucide-react';
 import ReviewSlider from '@/components/ReviewSlider';
 
 export const metadata = {
-    title: "Commercial Awning Cleaning | Valley Property Services",
+    title: "Commercial Awning Cleaning",
     description: "Professional awning and fabric canopy cleaning. We physically remove mildew, traffic exhaust, and bird droppings.",
 };
 

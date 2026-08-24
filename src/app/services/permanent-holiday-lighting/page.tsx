@@ -12,7 +12,7 @@ import { faqData } from "@/data/faqData";
 import VanillaMapClient from "@/components/VanillaMapClient";
 
 export const metadata = {
-    title: "Permanent Holiday Lighting Installation | Valley Property Services",
+    title: "Permanent Holiday Lighting Installation",
     description: "Professional permanent holiday lighting installation in Green Bay. Custom designs and safe installation.",
 };
 

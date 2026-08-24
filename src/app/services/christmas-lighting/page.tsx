@@ -12,7 +12,7 @@ import { faqData } from "@/data/faqData";
 import VanillaMapClient from "@/components/VanillaMapClient";
 
 export const metadata = {
-    title: "Christmas Lighting Installation | Valley Property Services",
+    title: "Christmas Lighting Installation",
     description: "Professional Christmas and holiday lighting installation in Green Bay. Custom designs and safe installation.",
 };
 
