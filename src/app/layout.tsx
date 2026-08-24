@@ -42,6 +42,14 @@ export const metadata: Metadata = {
     siteName: "Valley Property Services",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "/images/portfolio/house-wash-before-after.webp",
+        width: 1200,
+        height: 630,
+        alt: "Valley Property Services - Premier Exterior Restoration in Northeast Wisconsin"
+      }
+    ]
   },
 };
 
@@ -90,7 +98,7 @@ export default function RootLayout({
                 "https://www.google.com/maps?cid=14133068595604156906"
               ],
               "telephone": "+1-920-609-7085",
-              "email": "info@valleywindowcare.com",
+              "email": "info@valleyexteriorpros.com",
               "priceRange": "$$",
               "address": {
                 "@type": "PostalAddress",
@@ -164,7 +172,7 @@ export default function RootLayout({
               "aggregateRating": {
                 "@type": "AggregateRating",
                 "ratingValue": "5.0",
-                "reviewCount": "100"
+                "reviewCount": "15"
               }
             }).replace(/</g, '\\u003c')
           }}

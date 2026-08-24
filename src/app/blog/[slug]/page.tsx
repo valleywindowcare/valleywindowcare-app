@@ -49,8 +49,47 @@ export default async function BlogPostTemplate({ params }: Props) {
         notFound();
     }
 
+    let isoDate = "";
+    try {
+        isoDate = new Date(post.date).toISOString().split('T')[0];
+    } catch (e) {
+        isoDate = new Date().toISOString().split('T')[0];
+    }
+
     return (
         <main className="w-full overflow-hidden bg-white">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "BlogPosting",
+                        "headline": post.title,
+                        "description": post.excerpt,
+                        "image": `https://valleyexteriorpros.com${post.imagePath}`,
+                        "datePublished": isoDate,
+                        "author": {
+                            "@type": "Organization",
+                            "@id": "https://valleyexteriorpros.com/#organization",
+                            "name": "Valley Property Services",
+                            "url": "https://valleyexteriorpros.com"
+                        },
+                        "publisher": {
+                            "@type": "Organization",
+                            "@id": "https://valleyexteriorpros.com/#organization",
+                            "name": "Valley Property Services",
+                            "logo": {
+                                "@type": "ImageObject",
+                                "url": "https://valleyexteriorpros.com/images/portfolio/building-wash-copy.webp"
+                            }
+                        },
+                        "mainEntityOfPage": {
+                            "@type": "WebPage",
+                            "@id": `https://valleyexteriorpros.com/blog/${post.slug}`
+                        }
+                    })
+                }}
+            />
             {/* HERO SECTION */}
             <section className="relative w-full h-[40vh] sm:h-[50vh] flex items-center justify-center bg-navy">
                 <SafeHeroImage

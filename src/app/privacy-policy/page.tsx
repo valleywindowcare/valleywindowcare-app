@@ -101,7 +101,7 @@ export default function PrivacyPolicyPage() {
                         <p className="mb-4">If you have questions about this Privacy Policy, contact us at:</p>
                         <p className="font-semibold">Valley Property Services</p>
                         <ul className="space-y-1">
-                            <li><strong>Email:</strong> info@valleywindowcare.com</li>
+                            <li><strong>Email:</strong> info@valleyexteriorpros.com</li>
                             <li><strong>Phone:</strong> (920) 609-7085</li>
                             <li><strong>Address:</strong> 462 S Good Hope Rd, De Pere, Wisconsin 54115</li>
                         </ul>
