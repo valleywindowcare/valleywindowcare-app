@@ -190,6 +190,7 @@ export default function PermanentLEDLightingPage() {
                             "name": "Permanent LED Lighting",
                             "provider": {
                                 "@type": "LocalBusiness",
+                                "@id": "https://valleyexteriorpros.com/#organization",
                                 "name": "Valley Property Services",
                                 "image": "https://valleyexteriorpros.com/images/portfolio/permanent-lighting-night-suamico.webp",
                                 "telephone": "(920) 609-7085",

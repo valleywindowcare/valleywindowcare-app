@@ -78,6 +78,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "HomeAndConstructionBusiness",
+              "@id": "https://valleyexteriorpros.com/#organization",
               "name": "Valley Property Services",
               "alternateName": ["Valley Exterior Pros", "Valley Exterior Restoration"],
               "legalName": "Valley Property Services",

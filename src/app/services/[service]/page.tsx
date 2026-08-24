@@ -538,6 +538,7 @@ export default async function ServiceGenericPage({ params }: PageProps) {
                             ],
                             "provider": {
                                 "@type": "LocalBusiness",
+                                "@id": "https://valleyexteriorpros.com/#organization",
                                 "name": "Valley Property Services",
                                 "image": "https://valleyexteriorpros.com/images/portfolio/house-wash-before-after.webp",
                                 "telephone": "(920) 609-7085",

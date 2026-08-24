@@ -36,6 +36,7 @@ const VALID_INTERSECTIONS = {
         "name": "Professional Pressure Washing in Green Bay",
         "provider": {
           "@type": "HomeAndConstructionBusiness",
+          "@id": "https://valleyexteriorpros.com/#organization",
           "name": "Valley Property Services",
           "telephone": "+1-920-609-7085",
           "url": "https://valleyexteriorpros.com"
@@ -74,6 +75,7 @@ const VALID_INTERSECTIONS = {
         "name": "Soft Wash Roof Cleaning in Green Bay",
         "provider": {
           "@type": "HomeAndConstructionBusiness",
+          "@id": "https://valleyexteriorpros.com/#organization",
           "name": "Valley Property Services",
           "telephone": "+1-920-609-7085",
           "url": "https://valleyexteriorpros.com"
@@ -114,6 +116,7 @@ const VALID_INTERSECTIONS = {
         "name": "Premium Pressure Washing in Appleton",
         "provider": {
           "@type": "HomeAndConstructionBusiness",
+          "@id": "https://valleyexteriorpros.com/#organization",
           "name": "Valley Property Services",
           "telephone": "+1-920-609-7085",
           "url": "https://valleyexteriorpros.com"
@@ -152,6 +155,7 @@ const VALID_INTERSECTIONS = {
         "name": "Soft Wash House Washing in Appleton",
         "provider": {
           "@type": "HomeAndConstructionBusiness",
+          "@id": "https://valleyexteriorpros.com/#organization",
           "name": "Valley Property Services",
           "telephone": "+1-920-609-7085",
           "url": "https://valleyexteriorpros.com"

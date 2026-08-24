@@ -189,6 +189,7 @@ export default function ReviewsPage() {
                     __html: JSON.stringify({
                         "@context": "https://schema.org",
                         "@type": "HomeAndConstructionBusiness",
+                        "@id": "https://valleyexteriorpros.com/#organization",
                         "name": "Valley Property Services",
                         "image": "https://valleyexteriorpros.com/images/portfolio/house-wash-before-after.webp",
                         "url": "https://valleyexteriorpros.com/reviews",
@@ -217,6 +218,10 @@ export default function ReviewsPage() {
 
                             return {
                                 "@type": "Review",
+                                "itemReviewed": {
+                                    "@type": "LocalBusiness",
+                                    "@id": "https://valleyexteriorpros.com/#organization"
+                                },
                                 "author": {
                                     "@type": "Person",
                                     "name": r.reviewer

@@ -495,6 +495,7 @@ export default async function CityHubPage({ params }: PageProps) {
                         __html: JSON.stringify({
                             "@context": "https://schema.org",
                             "@type": "LocalBusiness",
+                            "@id": "https://valleyexteriorpros.com/#organization",
                             "name": "Valley Property Services",
                             "image": "https://valleyexteriorpros.com/images/portfolio/building-wash-copy.webp",
                             "telephone": "(920) 609-7085",

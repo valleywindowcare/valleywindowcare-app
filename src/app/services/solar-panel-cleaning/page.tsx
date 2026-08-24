@@ -20,6 +20,7 @@ export default function ServicePage() {
       "name": "Solar Panel Cleaning Services",
       "provider": {
         "@type": "LocalBusiness",
+        "@id": "https://valleyexteriorpros.com/#organization",
         "name": "Valley Property Services",
         "address": {
           "@type": "PostalAddress",
