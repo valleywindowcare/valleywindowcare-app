@@ -172,6 +172,7 @@ const legacyToNestedMap: Record<string, string> = {
   "/commercial-vent-hood-cleaning-in-green-bay-appleton-wiay-wi": "/services/commercial-hood-cleaning",
   "/expert-hood-vent-cleaning-green-bay-hhood-vent-cleaning-green-bay": "/services/commercial-hood-cleaning",
   "/blog/permanent-lighting-green-bay-wi": "/blog",
+  "/blog/how-to-restore-and-maintain-your-pavers-a-complete-guide-to-paver-cleaning-and-sealing-cloned": "/blog/how-to-restore-and-maintain-your-pavers-a-complete-guide-to-paver-cleaning-and-sealing",
   "/window-cleaning-faqs": "/faq",
   "/solar-panel-cleaning-in-green-bay-wisconsin": "/services/solar-panel-cleaning-green-bay",
   "/fence-cleaning-in-green-bay-wisconsin": "/services/fence-cleaning",
