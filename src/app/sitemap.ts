@@ -1,6 +1,8 @@
 import { MetadataRoute } from 'next';
 import { blogData } from '@/data/blogData';
 import serviceData from '@/data/serviceAreasContent.json';
+import fs from 'fs';
+import path from 'path';
 
 interface ServiceContent {
     type: string;
@@ -31,7 +33,7 @@ const coreRoutesList = [
     "/quote"
 ];
 
-// Active services dynamically mapped from services/[service]/page.tsx array (32 services) + 6 static services
+// Active services dynamically mapped from services/[service]/page.tsx array (36 services) + 6 static services
 const validServices = [
     "roof-cleaning",
     "house-washing",
@@ -70,7 +72,11 @@ const validServices = [
     "permanent-holiday-lighting",
     "residential-rust-removal",
     "rust-and-oxidation-removal",
-    "winter-salt-removal"
+    "winter-salt-removal",
+    "hoa-services",
+    "deck-restoration",
+    "hood-vent-cleaning",
+    "professional-awning-cleaning-in-green-bay-wisconsin"
 ];
 
 // 19 city hub routes in validLocations
@@ -107,8 +113,33 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: route === "" ? 1.0 : 0.8,
     }));
 
+    // Dynamically discover all static service subdirectories in src/app/services/ containing page.tsx
+    const servicesDir = path.join(process.cwd(), 'src/app/services');
+    const staticServices = new Set<string>();
+    try {
+        if (fs.existsSync(servicesDir)) {
+            const files = fs.readdirSync(servicesDir);
+            files.forEach((file) => {
+                const subPath = path.join(servicesDir, file);
+                if (fs.statSync(subPath).isDirectory()) {
+                    if (file !== '[service]' && file !== 'blog' && fs.existsSync(path.join(subPath, 'page.tsx'))) {
+                        staticServices.add(file);
+                    }
+                }
+            });
+        }
+    } catch (err) {
+        console.error("Error reading services directory:", err);
+    }
+
+    // Merge static discovered services with predefined valid services
+    const allServices = Array.from(new Set([
+        ...validServices,
+        ...Array.from(staticServices)
+    ]));
+
     // 2. Services Routes
-    const serviceRoutes: MetadataRoute.Sitemap = validServices.map((service) => ({
+    const serviceRoutes: MetadataRoute.Sitemap = allServices.map((service) => ({
         url: `${baseUrl}/services/${service}`,
         lastModified: new Date(),
         changeFrequency: 'weekly',

@@ -70,7 +70,11 @@ const validServices = [
     "post-construction-cleanup",
     "paver-patio-restorations",
     "commercial-hood-cleaning",
-    "apartment-exterior-cleaning"
+    "apartment-exterior-cleaning",
+    "hoa-services",
+    "deck-restoration",
+    "hood-vent-cleaning",
+    "professional-awning-cleaning-in-green-bay-wisconsin"
 ];
 
 const commercialServices = [
