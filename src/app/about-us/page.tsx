@@ -13,7 +13,8 @@ export const metadata: Metadata = {
 export default function AboutUsPage() {
     const jsonLd = {
       "@context": "https://schema.org",
-      "@type": "LocalBusiness",
+      "@type": "HomeAndConstructionBusiness",
+      "@id": "https://valleyexteriorpros.com/#organization",
       "name": "Valley Property Services",
       "image": "https://valleyexteriorpros.com/images/portfolio/house-wash-before-after.webp",
       "url": "https://valleyexteriorpros.com/about-us",

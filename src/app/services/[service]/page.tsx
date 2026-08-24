@@ -537,7 +537,7 @@ export default async function ServiceGenericPage({ params }: PageProps) {
                                 "permanent LED holiday lighting installer Appleton WI"
                             ],
                             "provider": {
-                                "@type": "LocalBusiness",
+                                "@type": "HomeAndConstructionBusiness",
                                 "@id": "https://valleyexteriorpros.com/#organization",
                                 "name": "Valley Property Services",
                                 "image": "https://valleyexteriorpros.com/images/portfolio/house-wash-before-after.webp",

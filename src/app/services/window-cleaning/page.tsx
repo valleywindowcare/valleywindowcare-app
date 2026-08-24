@@ -19,7 +19,7 @@ export default function ServicePage() {
         "@type": "Service",
         "name": "Professional Window Cleaning",
         "provider": {
-            "@type": "LocalBusiness",
+            "@type": "HomeAndConstructionBusiness",
         "@id": "https://valleyexteriorpros.com/#organization",
         "name": "Valley Property Services",
             "address": {

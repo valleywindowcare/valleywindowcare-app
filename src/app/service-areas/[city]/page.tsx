@@ -494,7 +494,7 @@ export default async function CityHubPage({ params }: PageProps) {
                     dangerouslySetInnerHTML={{
                         __html: JSON.stringify({
                             "@context": "https://schema.org",
-                            "@type": "LocalBusiness",
+                            "@type": "HomeAndConstructionBusiness",
                             "@id": "https://valleyexteriorpros.com/#organization",
                             "name": "Valley Property Services",
                             "image": "https://valleyexteriorpros.com/images/portfolio/building-wash-copy.webp",

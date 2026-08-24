@@ -189,7 +189,7 @@ export default function PermanentLEDLightingPage() {
                             "@type": "Service",
                             "name": "Permanent LED Lighting",
                             "provider": {
-                                "@type": "LocalBusiness",
+                                "@type": "HomeAndConstructionBusiness",
                                 "@id": "https://valleyexteriorpros.com/#organization",
                                 "name": "Valley Property Services",
                                 "image": "https://valleyexteriorpros.com/images/portfolio/permanent-lighting-night-suamico.webp",

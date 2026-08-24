@@ -188,26 +188,7 @@ export default function ReviewsPage() {
                 dangerouslySetInnerHTML={{
                     __html: JSON.stringify({
                         "@context": "https://schema.org",
-                        "@type": "HomeAndConstructionBusiness",
-                        "@id": "https://valleyexteriorpros.com/#organization",
-                        "name": "Valley Property Services",
-                        "image": "https://valleyexteriorpros.com/images/portfolio/house-wash-before-after.webp",
-                        "url": "https://valleyexteriorpros.com/reviews",
-                        "telephone": "+1-920-609-7085",
-                        "address": {
-                            "@type": "PostalAddress",
-                            "streetAddress": "462 S Good Hope Rd",
-                            "addressLocality": "De Pere",
-                            "addressRegion": "WI",
-                            "postalCode": "54115",
-                            "addressCountry": "US"
-                        },
-                        "aggregateRating": {
-                            "@type": "AggregateRating",
-                            "ratingValue": "5.0",
-                            "reviewCount": "100"
-                        },
-                        "review": reviews.map((r) => {
+                        "@graph": reviews.map((r) => {
                             let dateStr = "2026-03-24";
                             if (r.date.includes("5 months")) dateStr = "2026-03-24";
                             else if (r.date.includes("6 months")) dateStr = "2026-02-24";
@@ -219,7 +200,7 @@ export default function ReviewsPage() {
                             return {
                                 "@type": "Review",
                                 "itemReviewed": {
-                                    "@type": "LocalBusiness",
+                                    "@type": "HomeAndConstructionBusiness",
                                     "@id": "https://valleyexteriorpros.com/#organization"
                                 },
                                 "author": {

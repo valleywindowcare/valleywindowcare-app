@@ -20,7 +20,7 @@ export default function PressureWashingPage() {
         "@type": "Service",
         "name": "Professional Pressure Washing & Soft Washing",
         "provider": {
-            "@type": "LocalBusiness",
+            "@type": "HomeAndConstructionBusiness",
         "@id": "https://valleyexteriorpros.com/#organization",
         "name": "Valley Property Services",
             "telephone": "920-609-7085",
