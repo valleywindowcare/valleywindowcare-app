@@ -4,7 +4,7 @@ import { blogData } from '@/data/blogData';
 export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = 'https://valleyexteriorpros.com';
 
-    // Core Pages (8)
+    // Core Pages (13)
     const coreRoutes: MetadataRoute.Sitemap = [
         { url: `${baseUrl}`, lastModified: new Date(), changeFrequency: 'weekly', priority: 1.0 },
         { url: `${baseUrl}/contact`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
@@ -15,6 +15,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
         { url: `${baseUrl}/expert-guides/diy-vs-professional-pressure-washing`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
         { url: `${baseUrl}/service-areas/wisconsin-coverage`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
         { url: `${baseUrl}/careers`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
+        { url: `${baseUrl}/faq`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+        { url: `${baseUrl}/services`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
+        { url: `${baseUrl}/service-areas`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
+        { url: `${baseUrl}/gallery`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     ];
 
     // High-Ticket Services (32)
@@ -38,10 +42,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 0.9,
     }));
 
-    // Location Hubs (9)
+    // Location Hubs (7)
     const validLocations = [
         "appleton", "green-bay", "de-pere", "door-county", "neenah", "oshkosh",
-        "shawano", "manitowoc", "marinette"
+        "manitowoc"
     ];
 
     const locationRoutes: MetadataRoute.Sitemap = validLocations.map((location) => ({

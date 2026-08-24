@@ -5,7 +5,7 @@ export default function robots(): MetadataRoute.Robots {
         rules: {
             userAgent: '*',
             allow: '/',
-            disallow: ['/privacy-policy', '/terms-and-conditions', '/service-guarantee'],
+            disallow: [],
         },
         sitemap: 'https://valleyexteriorpros.com/sitemap.xml',
     }

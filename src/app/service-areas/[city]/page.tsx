@@ -90,7 +90,7 @@ export default async function CityHubPage({ params }: PageProps) {
     const content = serviceData.find((d) => d.type === 'hub' && d.citySlug === city);
 
     if (!content) {
-        return <div>404: City Not Found</div>;
+        notFound();
     }
 
     const cityName = content.city;
