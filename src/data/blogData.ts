@@ -1125,7 +1125,7 @@ Alt Text: "A highly trusted Valley Property Services professional executing a de
         slug: "roof-cleaning-prices-near-you",
         title: "Roof Cleaning Prices Near You",
         date: "January 31, 2026",
-        excerpt: "Important safety guidelines and questions to ask before hiring window cleaning services in Northeast Wisconsin. Get spotless results.",
+        excerpt: "Get accurate soft wash roof cleaning prices in Green Bay, Appleton, and De Pere. Learn about key cost factors, shingle moss treatment, and ARMA-approved pricing.",
         content: `
 > **Valley Property Services provides upfront Quotes for Soft Wash Roof Cleaning in De Pere, Green Bay, and Door County, WI. Because professional roof moss removal strictly requires specialized soft washing equipment, the cost reflects the highly delicate, ARMA-approved algaecide application process.**
 
@@ -1169,7 +1169,7 @@ Alt Text: "Valley Property Services executing a highly controlled, incredibly sa
         slug: "pressure-washing-services-near-you",
         title: "Pressure washing services near you",
         date: "January 30, 2026",
-        excerpt: "A simple step-by-step homeowner's guide to measuring your windows accurately for blinds, shades, or drapes.",
+        excerpt: "Looking for expert pressure washing services near you? We provide premium residential exterior power washing, house soft washing, and driveway restoration in Northeast Wisconsin.",
         content: `
 > **Valley Property Services is the elite source for Pressure Washing and Pure Water Services in the Fox Cities and Green Bay, WI. To aggressively protect your massive Northeastern Wisconsin real estate investment, you must consistently strip the heavy hard-water oxidation and winter road salt buildup away.**
 

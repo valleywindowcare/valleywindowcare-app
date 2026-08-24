@@ -1,6 +1,5 @@
 import { MetadataRoute } from 'next';
 import { blogData } from '@/data/blogData';
-import serviceData from '@/data/serviceAreasContent.json';
 
 // Static / Core 200 OK routes
 const coreRoutesList = [
@@ -21,8 +20,7 @@ const coreRoutesList = [
     "/terms-and-conditions",
     "/service-guarantee",
     "/wisconsin-maintenance-calendar",
-    "/quote",
-    "/quote/success"
+    "/quote"
 ];
 
 // Active services dynamically mapped from services/[service]/page.tsx array (32 services)
@@ -61,12 +59,27 @@ const validServices = [
     "apartment-exterior-cleaning"
 ];
 
-// Excluded cities (noindexed/soft-404/redirected)
-const excludedCities = [
-    "shawano",
-    "marinette",
-    "peshtigo",
-    "oconto"
+// 19 city hub routes in validLocations
+const validLocations = [
+    "appleton",
+    "green-bay",
+    "de-pere",
+    "door-county",
+    "neenah",
+    "oshkosh",
+    "manitowoc",
+    "algoma",
+    "kewaunee",
+    "kimberly",
+    "little-chute",
+    "two-rivers",
+    "wrightstown",
+    "sturgeon-bay",
+    "egg-harbor",
+    "fish-creek",
+    "sister-bay",
+    "howard",
+    "suamico"
 ];
 
 // Child Geo-Service Intersection Routes (4 valid intersections)
@@ -96,16 +109,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 0.9,
     }));
 
-    // 3. Location Hubs (programmatically load active hubs from serviceAreasContent.json)
-    const activeCities = Array.from(
-        new Set(
-            serviceData
-                .filter((item) => item.type === 'hub' && item.citySlug)
-                .map((item) => item.citySlug)
-        )
-    ).filter((citySlug) => citySlug && !excludedCities.includes(citySlug));
-
-    const locationRoutes: MetadataRoute.Sitemap = activeCities.map((city) => ({
+    // 3. Location Hubs (using explicit 19 city hub routes in validLocations)
+    const locationRoutes: MetadataRoute.Sitemap = validLocations.map((city) => ({
         url: `${baseUrl}/service-areas/${city}`,
         lastModified: new Date(),
         changeFrequency: 'monthly',
