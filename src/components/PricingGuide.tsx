@@ -7,7 +7,7 @@ export default function PricingGuide() {
             <div className="container mx-auto px-4 max-w-5xl">
                 <div className="text-center mb-12">
                     <h2 className="text-3xl md:text-4xl font-extrabold text-navy mb-4 tracking-tight">
-                        2026 Pressure Washing & Exterior Cleaning Cost Guide for the Fox Valley
+                        Pressure Washing & Exterior Cleaning Cost Guide for the Fox Valley (2026)
                     </h2>
                     <p className="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
                         We believe in upfront, authoritative pricing. Whether you are actively searching for "cost per square foot" benchmarks or exact flat-rate packages, these 2026 baseline estimates deliver the exact starting costs for our professional operations.
