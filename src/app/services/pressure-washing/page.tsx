@@ -1,4 +1,5 @@
 import { Mail, Phone } from "lucide-react";
+import Link from "next/link";
 import Image from "next/image";
 import HeroForm from "@/components/HeroForm";
 import Process from "@/components/Process";
@@ -6,7 +7,6 @@ import ServiceContent from "@/components/ServiceContent";
 import SEOAuthorityEngine from "@/components/SEOAuthorityEngine";
 import VanillaMapClient from "@/components/VanillaMapClient";
 import PricingMatrix from "@/components/PricingMatrix";
-import ValueCalculator from "@/components/ValueCalculator";
 import FAQSchema from "@/components/FAQSchema";
 
 export const metadata = {
@@ -255,9 +255,15 @@ export default function PressureWashingPage() {
                 </div>
             </section>
 
-            {/* ESTIMATED PROJECT BASE // VALUE CALCULATOR */}
-            <div className="container mx-auto px-4 max-w-6xl">
-                <ValueCalculator />
+            {/* ESTIMATED PROJECT BASE // GET A FREE QUOTE CTA */}
+            <div className="container mx-auto px-4 max-w-4xl text-center my-12 py-10 bg-white rounded-3xl shadow-sm border border-gray-100">
+                <h2 className="text-3xl font-extrabold text-navy mb-4">Ready to Get a Custom Quote?</h2>
+                <p className="text-gray-600 max-w-xl mx-auto mb-6 text-lg">
+                    Contact our owner-operator team today for a free, exact estimate tailored to your property's specific size and cleaning needs.
+                </p>
+                <Link href="/quote" className="inline-block bg-gold hover:bg-gold-light text-white font-bold py-4 px-10 rounded-full shadow-lg transition-transform hover:-translate-y-0.5 text-lg">
+                    Get Your Custom Quote Today
+                </Link>
             </div>
 
             {/* GLOBALLY STANDARDIZED PRICING MATRIX (GEO) */}

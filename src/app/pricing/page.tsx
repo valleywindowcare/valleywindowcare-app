@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Hero from '@/components/Hero';
 import PricingGuide from '@/components/PricingGuide';
-import ValueCalculator from '@/components/ValueCalculator';
+import HeroForm from '@/components/HeroForm';
 import FAQAccordion from '@/components/FAQAccordion';
 import FAQSchema from '@/components/FAQSchema';
 
@@ -37,8 +37,10 @@ export default function PricingPage() {
                 description="We believe in upfront, honest pricing. These baseline estimates help you understand the starting costs for our professional services before scheduling your free, exact quote."
                 showScrollArrow={true}
             />
-            <div id="calculator-hub">
-                <ValueCalculator hideSchema />
+            <div id="quote-form-hub" className="py-12 px-4 max-w-2xl mx-auto">
+                <div className="bg-white rounded-3xl shadow-xl border border-gray-200 overflow-hidden">
+                    <HeroForm />
+                </div>
             </div>
 
             {/* Package Comparison Table */}

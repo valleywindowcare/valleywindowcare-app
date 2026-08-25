@@ -2,7 +2,6 @@ import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { AlertTriangle, CheckCircle, Droplets, Shield } from 'lucide-react';
-import ValueCalculator from '@/components/ValueCalculator';
 
 export const metadata: Metadata = {
     title: 'DIY vs Professional Pressure Washing',
@@ -77,12 +76,8 @@ export default function DiyVsPro() {
                         </ul>
                     </div>
                 </div>
-
-                <div className="mb-20">
-                    <ValueCalculator />
-                </div>
                 
-                <div className="text-center bg-gray-50 p-12 rounded-3xl border border-gray-100 shadow-sm">
+                <div className="text-center bg-gray-50 p-12 rounded-3xl border border-gray-100 shadow-sm mt-12">
                     <h3 className="text-3xl font-extrabold text-navy mb-4">View The Full Price Matrix</h3>
                     <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
                         Don't risk destroying your siding for a DIY project. Review our transparent 2026 Price Guide and see exactly what it takes to protect your Wisconsin real estate.
