@@ -1,31 +1,46 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Shield, Sparkles, Target, Users, CheckCircle2 } from "lucide-react";
-
+import { Shield, Sparkles, Target, Users, CheckCircle2, History, ShieldAlert, Award } from "lucide-react";
 import ReviewSlider from '@/components/ReviewSlider';
 
 export const metadata: Metadata = {
-    title: "About Us",
-    description: "Learn about Valley Property Services's story, our team, and our commitment to crystal clear exterior cleaning services in Green Bay.",
+    title: "About Us | Valley Property Services",
+    description: "Learn about Valley Property Services's history since 2020, our exterior cleaning philosophy, and our commitment to serving Green Bay & Fox Valley.",
 };
 
 export default function AboutUsPage() {
     const jsonLd = {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "@id": "https://valleyexteriorpros.com/about-us#james",
-      "name": "James",
-      "jobTitle": "Owner & Founder",
-      "worksFor": { "@id": "https://valleyexteriorpros.com/#organization" },
-      "url": "https://valleyexteriorpros.com/about-us"
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Organization",
+                "@id": "https://valleyexteriorpros.com/#organization",
+                "name": "Valley Property Services",
+                "url": "https://valleyexteriorpros.com",
+                "logo": "https://valleyexteriorpros.com/images/og-default.jpg",
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "telephone": "920-609-7085",
+                    "contactType": "customer service"
+                }
+            },
+            {
+                "@type": "Person",
+                "@id": "https://valleyexteriorpros.com/about-us#james",
+                "name": "James",
+                "jobTitle": "Owner & Founder",
+                "worksFor": { "@id": "https://valleyexteriorpros.com/#organization" },
+                "url": "https://valleyexteriorpros.com/about-us"
+            }
+        ]
     };
 
     return (
-        <main className="min-h-screen bg-slate-50">
+        <main className="min-h-screen bg-slate-50 text-navy">
             <script
-              type="application/ld+json"
-              dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
             />
             {/* Minimalist Hero */}
             <section className="bg-navy pt-32 pb-20 px-4 relative overflow-hidden">
@@ -63,7 +78,7 @@ export default function AboutUsPage() {
                                 <h2 className="text-2xl font-extrabold mb-1 text-gold">Meet the Founder</h2>
                                 <h3 className="text-xl font-bold text-white mb-4">James</h3>
                                 <p className="text-gray-300 mb-6 leading-relaxed text-sm sm:text-base italic">
-                                    "I founded Valley Property Services with a single goal: to deliver uncompromising quality and absolute transparency to property owners in Northeast Wisconsin. I'm personally involved in every project, overseeing our safety protocols and ensuring our work exceeds your expectations."
+                                    "I founded Valley Property Services with a single goal: to deliver uncompromising technical quality and absolute operational transparency to property owners in Northeast Wisconsin. I'm personally involved in every project, overseeing our safety protocols and ensuring our work exceeds your expectations."
                                 </p>
                                 <p className="font-bold text-sm tracking-wider uppercase text-gold">– James, Founder &amp; Owner-Operator</p>
                             </div>
@@ -102,20 +117,53 @@ export default function AboutUsPage() {
                 </div>
             </section>
 
-            {/* MODULE 1: Our Roots & Expertise */}
+            {/* EXPANDED DETAILED TEXT - HISTORY & PHILOSOPHY */}
             <section className="py-16 bg-white border-b border-gray-100 relative z-10">
-                <div className="container mx-auto max-w-4xl px-4 text-center">
-                    <h2 className="text-3xl md:text-4xl font-extrabold text-navy mb-8 tracking-tight">Our Roots & Expertise</h2>
-                    <div className="prose md:prose-lg max-w-none text-navy text-left space-y-6">
-                        <p className="leading-relaxed text-lg">
-                            Valley Property Services was founded on fundamental accountability. We physically operate the equipment. We inspect the final results ourselves. You deal directly with the ownership team on every specific project.
-                        </p>
-                        <p className="leading-relaxed text-lg">
-                            We dedicate ourselves to mastering commercial-grade exterior cleaning. We use 40-foot carbon-fiber pure-water poles. We deploy low-pressure soft wash rigs. We manufacture permanent architectural lighting. Our technicians train relentlessly on safe, low-impact chemical applications.
-                        </p>
-                        <p className="leading-relaxed text-lg">
-                            We dispatch our crews daily across Northeast Wisconsin. We maintain high-value properties in <Link href="/service-areas/appleton" className="text-blue-600 font-bold hover:text-gold transition-colors">Appleton</Link>, <Link href="/service-areas/green-bay" className="text-blue-600 font-bold hover:text-gold transition-colors">Green Bay</Link>, and <Link href="/service-areas/door-county" className="text-blue-600 font-bold hover:text-gold transition-colors">Door County</Link>. We understand the heavy local environmental demands. We protect your physical investments from destructive Wisconsin weather.
-                        </p>
+                <div className="container mx-auto max-w-4xl px-4">
+                    <div className="prose prose-lg max-w-none text-gray-700 space-y-8">
+                        
+                        {/* SECTION 1: BUSINESS HISTORY SINCE 2020 */}
+                        <div>
+                            <h2 className="text-3xl font-extrabold text-navy mb-4 flex items-center gap-3">
+                                <History className="text-gold" size={28} /> Our History Since 2020
+                            </h2>
+                            <p className="leading-relaxed">
+                                Valley Property Services was founded in 2020 by James during a time of shifting service sector standards. What began as a single-operator business equipped with a single professional-grade cold-water pressure washing rig has grown year-over-year into a premier commercial and residential exterior restoration team. James recognized that the property cleaning industry in Northeast Wisconsin lacked two fundamental things: rigorous technical safety and absolute operational transparency.
+                            </p>
+                            <p className="leading-relaxed">
+                                Over the years, we expanded our capabilities, investing in state-of-the-art equipment such as high-reach carbon-fiber pure-water poles, dedicated low-pressure soft wash trailer rigs, and high-temperature steam cleaning systems. By 2023, Valley Property Services was serving not only single-family homeowners but also major retail complexes, industrial warehouses, and multi-unit housing developments across the Fox Valley corridor. Our growth is built entirely on word-of-mouth referrals, secured through our uncompromising quality control and commitment to doing the job right the first time.
+                            </p>
+                        </div>
+
+                        {/* SECTION 2: EXTERIOR CLEANING PHILOSOPHY */}
+                        <div>
+                            <h2 className="text-3xl font-extrabold text-navy mb-4 flex items-center gap-3">
+                                <Award className="text-gold" size={28} /> Our Exterior Cleaning Philosophy
+                            </h2>
+                            <p className="leading-relaxed">
+                                Our cleaning philosophy centers on **chemistry over pressure**. Standard power washing companies rely on high physical water pressure to shear away grime. While this is fast, it is highly destructive to modern building materials, easily cracking vinyl siding, gouging wood decks, eroding stucco, and forcing water behind siding seams, which breeds mold.
+                            </p>
+                            <p className="leading-relaxed">
+                                We utilize specialized soft wash systems that apply biodegradable cleaners at low pressure (under 100 PSI). This system kills organic growth, mold, algae, and lichen at the root, completely sanitizing the surface rather than merely cleaning it. This algaecide treatment keeps surfaces clean up to four times longer than traditional washing, ensuring long-term structural protection for your building's exterior.
+                            </p>
+                            <p className="leading-relaxed">
+                                We operate with strict environmental safety guidelines. We pre-hydrate surrounding lawns and landscaping to create a protective moisture barrier, continuously mist plants, and reclaim wash water when cleaning grease pad enclosures to prevent storm drain runoff in compliance with EPA regulations.
+                            </p>
+                        </div>
+
+                        {/* SECTION 3: COMMUNITY COMMITMENT */}
+                        <div>
+                            <h2 className="text-3xl font-extrabold text-navy mb-4 flex items-center gap-3">
+                                <ShieldAlert className="text-gold" size={28} /> Commitment to the Fox Valley & Green Bay Community
+                            </h2>
+                            <p className="leading-relaxed">
+                                We are proudly based in Northeast Wisconsin, serving property owners throughout Appleton, Green Bay, De Pere, Neenah, and Oshkosh. We understand the specific demands of local environments, including high moisture levels from the Lower Fox River basin that breed black roof algae, and winter road salt tracking that corrodes driveways and siding.
+                            </p>
+                            <p className="leading-relaxed">
+                                We are dedicated to protecting local properties from the harsh freeze-thaw cycles of Wisconsin winters. Our crews carry specialized compaction plates, commercial drying blowers, and warm-water rotary wash systems to ensure a perfect finish. We carry a $2,000,000 general liability policy and complete workers' compensation insurance, protecting our crews, our clients, and our local community.
+                            </p>
+                        </div>
+
                     </div>
                 </div>
             </section>
@@ -179,7 +227,6 @@ export default function AboutUsPage() {
                     </div>
                 </div>
             </section>
-
 
             <ReviewSlider />
 

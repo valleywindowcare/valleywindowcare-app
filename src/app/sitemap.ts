@@ -246,7 +246,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const redirectedSlugs = [
         "window-cleaning",
         "permanent-lighting-green-bay-wi",
-        "how-to-restore-and-maintain-your-pavers-a-complete-guide-to-paver-cleaning-and-sealing-cloned"
+        "how-to-restore-and-maintain-your-pavers-a-complete-guide-to-paver-cleaning-and-sealing-cloned",
+        "eco-friendly-exterior-cleaning-in-green-bay",
+        "how-to-safely-decorate-your-roof-for-christmas-diy-tips-for-a-festive-038-stylish-holiday-home",
+        "can-i-clean-my-windows-with-tap-water",
+        "hiring-window-cleaners-what-you-should-know",
+        "how-to-measure-your-windows-for-blinds"
     ];
 
     const blogRoutes: MetadataRoute.Sitemap = blogData

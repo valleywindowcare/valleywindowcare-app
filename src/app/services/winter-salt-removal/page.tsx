@@ -1,275 +1,85 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowRight, ShieldCheck, CheckCircle2, AlertTriangle, Snowflake, Beaker } from 'lucide-react';
-import PricingMatrix from '@/components/PricingMatrix';
+import ServiceGrid from '@/components/ServiceGrid';
+import Hero from '@/components/Hero';
+import HeroForm from "@/components/HeroForm";
+import { ShieldCheck, CheckCircle, ArrowRight, MapPin, Phone, Mail } from 'lucide-react';
 import ReviewSlider from '@/components/ReviewSlider';
 import FAQSchema from '@/components/FAQSchema';
 
 export const metadata = {
-    title: 'Commercial Winter Salt Removal Services',
-    description: 'Protect your commercial concrete from costly spalling and slip-and-fall liability. We use specialized chemical neutralizers to eliminate harsh road salts and magnesium chlorides.',
+    title: "Winter Salt Removal Services | Green Bay & Appleton",
+    description: "Northeast Wisconsin's leading winter salt removal and concrete neutralization company. Safe chemical extraction of corrosive road salt from concrete, brick, and siding.",
 };
 
+const faqs = [
+    {
+        question: "Why is winter road salt highly corrosive to concrete and masonry?",
+        answer: "Winter road salt (primarily sodium chloride and calcium chloride) is highly hygroscopic, meaning it absorbs moisture from the air. When salt residues settle on porous concrete and brick, they draw moisture into the substrate. During winter freeze-thaw cycles in Wisconsin, this trapped water expands, creating severe internal pressure that causes the concrete surface to crack, scale, and spall (break off in flakes). Furthermore, salt is chemically corrosive to concrete's alkaline structure and rusts the internal steel rebar, causing concrete cancer. Regular spring salt removal washes away these corrosive residues, protecting the structural integrity of your driveways, sidewalks, and parking decks."
+    },
+    {
+        question: "Why does standard cold-water pressure washing fail to remove salt?",
+        answer: "Standard cold-water pressure washing merely wet-treats the surface, pushing salt minerals deeper into the porous concrete concrete capillaries rather than extracting them. As the concrete dries, the salt recrystallizes and returns to the surface as a white haze (efflorescence), continuing its corrosive work. We utilize specialized chemical salt-neutralizing agents combined with high-flow warm water. The neutralizer breaks the chemical bond between the salt ions and the concrete substrate, suspending the salts so they can be completely flushed out of the pores, ensuring a deep, permanent extraction."
+    },
+    {
+        question: "How do you remove the white salt film from vinyl and metal siding?",
+        answer: "Wind-blown road salt mist deposits a stubborn white, chalky film on vinyl siding, window frames, and commercial metal panels. This film looks unsightly and corrodes aluminum trim and siding hardware. We apply low-pressure soft washing utilizing specialized salt-neutralizing detergents. These detergents dissolve the salt crystals on contact, allowing them to be rinsed away safely under low pressure (under 100 PSI) without stripping paint or damage. We follow this with a pure-water rinse of all window glass to leave a spot-free finish."
+    },
+    {
+        question: "When is the best time to schedule spring salt removal in Wisconsin?",
+        answer: "The ideal time to schedule professional salt removal is in the early spring, immediately after the final snowstorms have passed and temperatures consistently stay above freezing. This is typically between late March and early May. Washing the salt away early in the spring prevents the minerals from reacting with summer heat and rain, which accelerates corrosion and allows algae to breed on the salt film, keeping your concrete clean and secure for the upcoming season."
+    },
+    {
+        question: "Will the salt neutralization chemicals damage my landscaping or lawn?",
+        answer: "No, our salt neutralizing agents are fully biodegradable and completely safe for lawns, gardens, and pets when applied by our technicians. We utilize a strict plant protection protocol. Before washing, we pre-hydrate all surrounding lawns and shrubs to create a protective moisture barrier. We continuously mist the foliage and perform a thorough post-wash rinse of all plants. Furthermore, neutralizing the salt runoff actually helps protect your lawn, as road salt runoff itself is highly toxic to grass and shrubs, causing winter burn."
+    },
+    {
+        question: "Can you clean winter salt from multi-level parking garages and commercial decks?",
+        answer: "Yes, we are fully equipped to clean winter salt residues from large commercial parking structures, retail walkways, and warehouse bays. Parking garages accumulate massive salt loads tracked in by vehicles, which corrodes the concrete joints. We utilize heavy-duty trailer rigs, hot-water steam surface cleaners, and salt neutralizers to wash parking decks, ramps, and walls, reclaiming all wastewater to comply with local EPA stormwater regulations."
+    },
+    {
+        question: "How frequently should salt removal be scheduled for commercial properties?",
+        answer: "For commercial properties, retail centers, and high-traffic parking garages in Appleton and Green Bay, we recommend scheduling professional salt removal twice a year—ideally in the early spring to remove winter accumulations, and a lighter wash in late winter during a warm thaw cycle to minimize continuous corrosion. Residential driveways typically only require a thorough cleaning once a year in the spring."
+    }
+];
+
 export default function WinterSaltRemovalPage() {
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Winter Salt Removal Services",
+        "provider": {
+            "@type": "HomeAndConstructionBusiness",
+            "@id": "https://valleyexteriorpros.com/#organization",
+            "name": "Valley Property Services",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Appleton",
+                "addressRegion": "WI"
+            }
+        },
+        "areaServed": ["Appleton", "Green Bay", "De Pere", "Northeast Wisconsin"],
+        "offers": {
+            "@type": "AggregateOffer",
+            "priceCurrency": "USD",
+            "lowPrice": "250",
+            "highPrice": "850",
+            "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "priceCurrency": "USD",
+                "minPrice": "250.00",
+                "maxPrice": "850.00"
+            }
+        },
+        "description": "Chemical winter salt removal, concrete neutralization, and siding salt-film washing."
+    };
+
     return (
-        <div className="bg-white">
-            {/* HERO SECTION */}
-            <section className="relative pt-20 pb-32 lg:pt-32 lg:pb-40 overflow-hidden">
-                <div className="absolute inset-0 z-0">
-                    <Image
-                        src="/images/portfolio/concrete-cleaning.webp"
-                        alt="Commercial Winter Salt and Chloride Removal"
-                        fill
-                        className="object-cover object-center"
-                        priority
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-r from-navy-dark/95 via-navy/90 to-transparent"></div>
-                </div>
-
-                <div className="container mx-auto px-4 relative z-10">
-                    <div className="max-w-3xl">
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/20 text-blue-100 font-medium text-sm mb-6 border border-blue-400/30">
-                            <Snowflake size={16} />
-                            <span>B2B Commercial Service</span>
-                        </div>
-                        <h1 className="text-4xl md:text-5xl lg:text-7xl font-black text-white mb-6 leading-tight tracking-tight">
-                            Commercial Winter <span className="text-gold block mt-2">Salt Removal</span>
-                        </h1>
-                        <p className="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl leading-relaxed font-light">
-                            Stop expensive concrete spalling and entirely eliminate winter slip-and-fall liability. Standard rinsing actually pushes caustic municipal road salts deeper into the pores. We deploy advanced chemical descalers to molecularly neutralize destructive chlorides and magnesium deposits from your storefronts and walkways.
-                        </p>
-                        <div className="mb-10 flex flex-wrap gap-4 text-xs sm:text-sm font-bold text-white relative z-10">
-                          <div className="bg-slate-900/90 text-white border border-slate-700/60 px-3.5 py-1.5 rounded-full shadow-md font-semibold text-xs md:text-sm inline-flex items-center gap-2">
-                            <span className="text-gold">🛡️</span> Licensed &amp; Insured
-                          </div>
-                          <div className="bg-slate-900/90 text-white border border-slate-700/60 px-3.5 py-1.5 rounded-full shadow-md font-semibold text-xs md:text-sm inline-flex items-center gap-2">
-                            <span className="text-gold">✅</span> 100% Satisfaction Guarantee
-                          </div>
-                          <div className="bg-slate-900/90 text-white border border-slate-700/60 px-3.5 py-1.5 rounded-full shadow-md font-semibold text-xs md:text-sm inline-flex items-center gap-2">
-                            <span className="text-gold">🛡️</span> Zero Damage Guarantee
-                          </div>
-                        </div>
-                        
-                        <div className="flex flex-col sm:flex-row gap-4">
-                            <Link href="/contact" className="bg-gold hover:bg-gold-light text-navy-dark px-8 py-4 rounded-full font-bold text-center transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2 hover:-translate-y-1">
-                                Secure Winter Protection <ArrowRight size={20} />
-                            </Link>
-                            <a href="tel:920-609-7085" className="bg-white/10 hover:bg-white/20 text-white  border border-white/20 px-8 py-4 rounded-full font-bold text-center transition-all flex items-center justify-center gap-2">
-                                Call (920) 609-7085
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* METHODOLOGY SECTION */}
-            <section className="py-24 bg-slate-50 relative overflow-hidden">
-                <div className="container mx-auto px-4 max-w-6xl relative z-10">
-                    <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-5xl font-extrabold text-navy mb-6 tracking-tight">Advanced Chloride Neutralization</h2>
-                        <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                            Abrasive winter de-icing chemicals are designed to aggressively melt ice, but they simultaneously destroy the structural integrity of your expensive porous concrete and entryway masonry.
-                        </p>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-                            <div className="w-14 h-14 bg-red-50 text-red-600 rounded-xl flex items-center justify-center mb-6">
-                                <AlertTriangle size={28} />
-                            </div>
-                            <h3 className="text-xl font-bold text-navy-dark mb-4">The Danger of "Just Rinsing"</h3>
-                            <p className="text-gray-600 leading-relaxed">
-                                Simply using a hose or standard pressure washer with warm water dissolves the salt temporarily, forcing the highly toxic caustic brine deeper into the micro-fissures of your concrete. When that water inevitably refreezes, it expands massively, instantly causing irreversible spalling and surface cracking.
-                            </p>
-                        </div>
-                        <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-                            <div className="w-14 h-14 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-6">
-                                <Beaker size={28} />
-                            </div>
-                            <h3 className="text-xl font-bold text-navy-dark mb-4">Molecular Descaling</h3>
-                            <p className="text-gray-600 leading-relaxed">
-                                Our highly trained technicians deploy specialized, commercial-grade chemical neutralizers that specifically target and bond to calcium and magnesium chlorides. This chemical reaction breaks down the salt at a molecular level so it can be extracted cleanly without being driven into the porous substrate.
-                            </p>
-                        </div>
-                        <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow lg:col-span-1 md:col-span-2">
-                            <div className="w-14 h-14 bg-green-50 text-green-600 rounded-xl flex items-center justify-center mb-6">
-                                <ShieldCheck size={28} />
-                            </div>
-                            <h3 className="text-xl font-bold text-navy-dark mb-4">Liability Mitigation</h3>
-                            <p className="text-gray-600 leading-relaxed">
-                                Beyond the massive aesthetic improvement for your storefront brand image, properly extracting deeply embedded winter slurry dramatically reduces the slippery, greasy film left behind by modern de-icers. This direct intervention severely curtails your physical slip-and-fall liability risk during the active winter season.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* PROPERTY PROTECTION PROTOCOL */}
-            <section className="py-24 bg-navy text-white relative">
-                <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
-                <div className="container mx-auto px-4 max-w-5xl relative z-10">
-                    <div className="bg-navy/90 border border-white/10 rounded-3xl p-8 md:p-12">
-                        <div className="flex flex-col md:flex-row gap-12 items-center">
-                            <div className="w-full md:w-1/3 text-center md:text-left">
-                                <ShieldCheck size={80} className="text-gold mx-auto md:mx-0 mb-6" />
-                                <h2 className="text-3xl font-bold mb-4">Winter Protection <span className="text-gold block">Protocol</span></h2>
-                                <p className="text-gray-300">
-                                    Our operational standards drastically exceed industry norms, perfectly tailored for brutal freeze-thaw cycles.
-                                </p>
-                            </div>
-                            <div className="w-full md:w-2/3 space-y-6">
-                                <div className="flex gap-4 items-start">
-                                    <CheckCircle2 className="text-gold shrink-0 mt-1" size={24} />
-                                    <div>
-                                        <h3 className="text-xl font-bold mb-2">Cold-Weather Operations</h3>
-                                        <p className="text-gray-300 leading-relaxed">We utilize specialized high-heat systems precisely engineered to function correctly mid-winter, allowing for safe extraction even in sub-optimal ambient temperatures.</p>
-                                    </div>
-                                </div>
-                                <div className="flex gap-4 items-start">
-                                    <CheckCircle2 className="text-gold shrink-0 mt-1" size={24} />
-                                    <div>
-                                        <h3 className="text-xl font-bold mb-2">Freeze-Thaw Prevention</h3>
-                                        <p className="text-gray-300 leading-relaxed">By chemically neutralizing and immediately extracting the briny liquid from the surface, we stop the moisture from penetrating the concrete, entirely preventing the destructive seasonal expansion cycle.</p>
-                                    </div>
-                                </div>
-                                <div className="flex gap-4 items-start">
-                                    <CheckCircle2 className="text-gold shrink-0 mt-1" size={24} />
-                                    <div>
-                                        <h3 className="text-xl font-bold mb-2">Surface Ph Balancing</h3>
-                                        <p className="text-gray-300 leading-relaxed">Our protocol leaves your concrete in a perfectly pH-balanced state, restoring traction to commercial walkways and instantly preventing the highly acidic salt from causing microscopic etching.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* PRICING MATRIX */}
-            <PricingMatrix 
-                title="Transparent Winter Extraction Pricing"
-                description="We actively cater our extraction services to commercial storefronts, banking drive-thrus, and B2B property managers. Every proposal is custom-quoted based on structural footprint and chemical requirement."
-                rateTitle="Commercial Walkways"
-                ratePrice="Custom Quote"
-                rateDetails="Evaluated per linear foot based on historic salt accumulation and overall porous damage severity."
-                minimumPrice="$300.00"
-                minimumDetails="Baseline mobilization for commercial storefronts and walkway salt neutralization."
-                variableTitle="Large Parking Pads"
-                variableHeading="Custom Assessed"
-                variableDetails="Volumetric extraction utilizing heavy-duty ride-on surface rotary units for mass chloride mitigation."
-            />
-
-            {/* BLUF FAQS */}
-            <section className="py-24 bg-white border-t border-gray-100">
-                <FAQSchema faqs={[
-                    {
-                        question: "Why can't we just wash the salt away with warm water in the spring?",
-                        answer: "Warm water only dissolves salt temporarily and physically drives the caustic brine deeper into your porous concrete. When the temperatures eventually drop again at night, that deeply embedded moisture refreezes and expands, fracturing your slab from the inside out. We strictly use specialized descaling chemicals to permanently neutralize the chlorides at the surface level."
-                    },
-                    {
-                        question: "Is the chemical neutralizer safe for the landscaping near our entryway?",
-                        answer: "Yes. The specialized compounds we utilize solely target and react with volatile calcium and magnesium chlorides. They are biodegradable and infinitely safer for your surrounding highly sensitive ornamental commercial plantings than allowing the toxic municipal road salt to continually leach into the soil."
-                    },
-                    {
-                        question: "Does this service actually help prevent slip-and-fall accidents?",
-                        answer: "Absolutely. Modern liquid de-icers naturally leave a greasy, highly slick film on cold concrete that standard rain cannot effectively wash away. Our extraction protocol chemically dissolves this film, restoring the natural, friction-heavy traction of the bare concrete and critically protecting your customers and staff."
-                    }
-                ]} />
-                <div className="container mx-auto px-4 max-w-4xl">
-                    <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-extrabold text-navy mb-4 tracking-tight">Bottom Line Up Front (BLUF)</h2>
-                        <p className="text-gray-600 font-medium">Direct answers to the most common winter maintenance questions.</p>
-                    </div>
-
-                    <div className="space-y-6">
-                        <div className="bg-slate-50 p-8 rounded-2xl border border-gray-100">
-                            <h3 className="text-xl font-bold text-navy-dark mb-3 flex items-start gap-3">
-                                <span className="text-gold font-black">Q:</span>
-                                Why can't we just wash the salt away with warm water in the spring?
-                            </h3>
-                            <p className="text-gray-600 leading-relaxed flex items-start gap-3">
-                                <span className="text-navy font-black">A:</span>
-                                Warm water only dissolves salt temporarily and physically drives the caustic brine deeper into your porous concrete. When the temperatures eventually drop again at night, that deeply embedded moisture refreezes and expands, fracturing your slab from the inside out. We strictly use specialized descaling chemicals to permanently neutralize the chlorides at the surface level.
-                            </p>
-                        </div>
-
-                        <div className="bg-slate-50 p-8 rounded-2xl border border-gray-100">
-                            <h3 className="text-xl font-bold text-navy-dark mb-3 flex items-start gap-3">
-                                <span className="text-gold font-black">Q:</span>
-                                Is the chemical neutralizer safe for the landscaping near our entryway?
-                            </h3>
-                            <p className="text-gray-600 leading-relaxed flex items-start gap-3">
-                                <span className="text-navy font-black">A:</span>
-                                Yes. The specialized compounds we utilize solely target and react with volatile calcium and magnesium chlorides. They are biodegradable and infinitely safer for your surrounding highly sensitive ornamental commercial plantings than allowing the toxic municipal road salt to continually leach into the soil.
-                            </p>
-                        </div>
-
-                        <div className="bg-slate-50 p-8 rounded-2xl border border-gray-100">
-                            <h3 className="text-xl font-bold text-navy-dark mb-3 flex items-start gap-3">
-                                <span className="text-gold font-black">Q:</span>
-                                Does this service actually help prevent slip-and-fall accidents?
-                            </h3>
-                            <p className="text-gray-600 leading-relaxed flex items-start gap-3">
-                                <span className="text-navy font-black">A:</span>
-                                Absolutely. Modern liquid de-icers naturally leave a greasy, highly slick film on cold concrete that standard rain cannot effectively wash away. Our extraction protocol chemically dissolves this film, restoring the natural, friction-heavy traction of the bare concrete and critically protecting your customers and staff.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* REVIEWS & CTA */}
-            <div className="bg-slate-50 py-12">
-                <ReviewSlider />
-            </div>
-
-            <section className="py-24 bg-gold relative overflow-hidden">
-                <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
-                <div className="container mx-auto px-4 max-w-4xl relative z-10 text-center">
-                    <h2 className="text-4xl md:text-5xl font-black text-navy-dark mb-6 tracking-tight">Secure Your Commercial Concrete Today</h2>
-                    <p className="text-xl text-navy/80 mb-10 font-bold max-w-2xl mx-auto">
-                        Don't let municipal road salt destroy your expensive property structures. Book your professional winter extraction now.
-                    </p>
-                    <Link href="/contact" className="inline-block bg-white text-navy px-10 py-5 rounded-full font-black text-lg shadow-xl hover:shadow-2xl transition-all hover:-translate-y-1 uppercase tracking-widest">
-                        Request a Free Commercial Proposal &rarr;
-                    </Link>
-                </div>
-            </section>
-
-            {/* JSON-LD Schemas */}
+        <main className="w-full overflow-hidden bg-slate-50 text-navy">
             <script
                 type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                    __html: JSON.stringify({
-                        "@context": "https://schema.org",
-                        "@type": "Service",
-                        "name": "Commercial Winter Salt Removal",
-                        "serviceType": "Commercial Winter Salt Removal",
-                        "description": "Professional winter salt and chloride extraction to prevent concrete spalling and slip hazards.",
-                        "provider": {
-                            "@type": "HomeAndConstructionBusiness",
-                            "@id": "https://valleyexteriorpros.com/#organization",
-                            "name": "Valley Property Services",
-                            "address": {
-                                "@type": "PostalAddress",
-                                "addressLocality": "Appleton",
-                                "addressRegion": "WI"
-                            }
-                        },
-                        "areaServed": ["Appleton", "Green Bay", "De Pere", "Northeast Wisconsin"],
-                        "offers": {
-                            "@type": "Offer",
-                            "priceCurrency": "USD",
-                            "price": "295.00",
-                            "priceSpecification": {
-                                "@type": "UnitPriceSpecification",
-                                "priceCurrency": "USD",
-                                "price": "295.00"
-                            }
-                        }
-                    })
-                }}
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
             />
             <script
                 type="application/ld+json"
@@ -300,6 +110,144 @@ export default function WinterSaltRemovalPage() {
                     })
                 }}
             />
-        </div>
+
+            <Hero
+                h1={
+                    <>
+                        <span className="capitalize text-4xl md:text-5xl lg:text-7xl">Winter Salt Removal</span>
+                    </>
+                }
+                description="Neutralize and extract corrosive road salt deposits. Chemical concrete neutralization and siding washing for residential and commercial properties."
+                bgImage="/images/portfolio/winter-salt-removal.webp"
+                showTrustBadges={true}
+            />
+
+            <div className="max-w-4xl mx-auto bg-white text-navy rounded-2xl shadow-sm p-4 sm:p-8 mt-12 mb-20 relative z-10">
+                <article className="prose prose-lg md:prose-xl text-gray-600 max-w-none mb-16">
+                    
+                    {/* SECTION 1: INTRODUCTION */}
+                    <section className="mb-12 mt-8">
+                        <div className="text-lg leading-relaxed mb-8 font-bold text-navy">
+                            Valley Property Services is the leading provider of professional winter salt removal and concrete neutralization in <Link href="/service-areas/appleton" className="text-blue-600 hover:text-gold font-semibold transition-colors">Appleton</Link>, <Link href="/service-areas/green-bay" className="text-blue-600 hover:text-gold font-semibold transition-colors">Green Bay</Link>, and <Link href="/service-areas/de-pere" className="text-blue-600 hover:text-gold font-semibold transition-colors">De Pere</Link>, WI.
+                        </div>
+                        <p className="leading-relaxed text-lg mb-6">
+                            Wisconsin winters require heavy road salt and de-icing chemicals to keep walkways and roads safe. However, as cars track this salt onto your driveway, sidewalks, and parking garages, it creates a corrosive mineral layer. Road salt is highly hygroscopic, drawing moisture into the concrete pores, which expands during freeze-thaw cycles, causing cracking, scaling, and spalling.
+                        </p>
+                        <p className="leading-relaxed text-lg mb-6">
+                            Simply washing concrete with cold water does not solve the problem. Cold water merely pushes salt minerals deeper into the concrete pores, where they recrystallize as a white haze (efflorescence) and continue to corrode the internal rebar. We utilize specialized chemical neutralizing agents and warm-water rotary cleaners to break the salt bonds, extracting the minerals completely and protecting your masonry surfaces.
+                        </p>
+                    </section>
+
+                    {/* SECTION 2: DEPTH ANALYSIS */}
+                    <section className="mb-12">
+                        <h2 className="text-3xl font-extrabold text-navy mb-6">The Science of Salt Neutralization & Concrete Protection</h2>
+                        <p className="leading-relaxed text-lg mb-6">
+                            Road salts are chemical compounds that bond to concrete's alkaline pores. We apply specialized chemical salt-neutralizing agents that break the chemical bond between the salt ions and the concrete. Once the bond is broken, the salts dissolve completely in water, allowing them to be flushed out of the concrete capillaries using warm-water rotary surface cleaners.
+                        </p>
+                        <p className="leading-relaxed text-lg mb-6">
+                            For vinyl and metal siding facades, road salt mist tracked by wind deposits a chalky white film. We apply low-pressure soft washing with salt-neutralizing detergents. This dissolves the salt crystals on contact, which we then rinse away at low pressure (under 100 PSI), leaving window frames and trim salt-free.
+                        </p>
+                        <div className="bg-slate-50 border-l-4 border-gold p-6 my-8 rounded-r-2xl shadow-sm">
+                            <h4 className="text-navy font-bold text-xl mb-3">Our strict Landscape and Water compliance guarantee</h4>
+                            <p className="text-gray-700 leading-relaxed font-medium">
+                                Road salt runoff is highly toxic to grass, shrubs, and local waterways. We pre-hydrate all surrounding landscaping with fresh water before starting to shield plant roots. We continuously mist foliage and vacuum reclaim all rinse runoff where required, discharging wastewater safely into municipal sanitary sewers to protect local Wisconsin ecosystems.
+                            </p>
+                        </div>
+                    </section>
+
+                    {/* SECTION 3: WORKFLOW */}
+                    <section className="mb-12">
+                        <h2 className="text-3xl font-extrabold text-navy mb-6">Our 3-Phase Salt Removal Process</h2>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 not-prose">
+                            <div className="bg-slate-50 p-6 rounded-xl border border-gray-100 shadow-sm">
+                                <span className="text-gold font-black text-2xl mb-2 block">01</span>
+                                <h4 className="text-lg font-bold text-navy mb-2">Identify & Pre-treat</h4>
+                                <p className="text-gray-600 text-sm leading-relaxed">We pre-hydrate surrounding lawns, identify salt buildup areas, and apply chemical neutralizing detergents to break salt bonds.</p>
+                            </div>
+                            <div className="bg-slate-50 p-6 rounded-xl border border-gray-100 shadow-sm">
+                                <span className="text-gold font-black text-2xl mb-2 block">02</span>
+                                <h4 className="text-lg font-bold text-navy mb-2">Warm-Water Extraction</h4>
+                                <p className="text-gray-600 text-sm leading-relaxed">We wash concrete using warm-water rotary surface cleaners, extracting salt minerals deep from concrete capillaries.</p>
+                            </div>
+                            <div className="bg-slate-50 p-6 rounded-xl border border-gray-100 shadow-sm">
+                                <span className="text-gold font-black text-2xl mb-2 block">03</span>
+                                <h4 className="text-lg font-bold text-navy mb-2">Rinse & Protect</h4>
+                                <p className="text-gray-600 text-sm leading-relaxed">We rinse siding and window glass to remove mist film, flush surrounding lawns, and verify a clean, spot-free finish.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* SECTION 4: TABLE */}
+                    <section className="mb-12">
+                        <h2 className="text-3xl font-extrabold text-navy mb-6">Scope of Work & Pricing Matrix</h2>
+                        <p className="leading-relaxed text-lg mb-6">
+                            We provide transparent pricing based on the total concrete square footage and severity of salt film. Below is a baseline overview of our packages.
+                        </p>
+                        <div className="overflow-x-auto border border-gray-200 rounded-2xl shadow-sm bg-white not-prose">
+                            <table className="w-full text-left border-collapse">
+                                <thead>
+                                    <tr className="bg-navy text-white text-xs sm:text-sm uppercase tracking-wider">
+                                        <th className="p-4 font-bold border-b border-gray-200">Service Type</th>
+                                        <th className="p-4 font-bold border-b border-gray-200">Surface Scale</th>
+                                        <th className="p-4 font-bold border-b border-gray-200">Est. Investment</th>
+                                        <th className="p-4 font-bold border-b border-gray-200">Key Inclusions</th>
+                                        <th className="p-4 font-bold border-b border-gray-200">Time on Site</th>
+                                    </tr>
+                                </thead>
+                                <tbody className="divide-y divide-gray-100 text-gray-700 text-xs sm:text-sm">
+                                    <tr className="hover:bg-slate-50 transition-colors">
+                                        <td className="p-4 font-bold text-navy">Residential Entry & Siding</td>
+                                        <td className="p-4">Up to 1,500 sq ft concrete/siding</td>
+                                        <td className="p-4 font-semibold">$250 - $400</td>
+                                        <td className="p-4">Driveway salt wash, entryway neutralization, siding salt-film rinse, plant protection</td>
+                                        <td className="p-4">1.5 - 2.5 hours</td>
+                                    </tr>
+                                    <tr className="hover:bg-slate-50 transition-colors">
+                                        <td className="p-4 font-bold text-navy">Commercial Walkway & Facade</td>
+                                        <td className="p-4 font-semibold">1,500 - 5,000 sq ft concrete</td>
+                                        <td className="p-4 font-semibold">$450 - $850</td>
+                                        <td className="p-4">Storefront walkway wash, salt neutralization, entrance window squeegee, EPA runoff control</td>
+                                        <td className="p-4">2.5 - 4 hours</td>
+                                    </tr>
+                                    <tr className="hover:bg-slate-50 transition-colors">
+                                        <td className="p-4 font-bold text-navy">Commercial Parking Deck</td>
+                                        <td className="p-4 font-semibold">5,000+ sq ft / Plural sites</td>
+                                        <td className="p-4 font-semibold">Custom Quote</td>
+                                        <td className="p-4">Multi-level deck salt wash, ramp washing, joint salt neutralization, complete sweep prep</td>
+                                        <td className="p-4">Scheduled phases</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                    {/* SECTION 5: FAQ ACCORDION */}
+                    <section className="mb-12 mt-16 bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-gray-100 not-prose">
+                        <div className="text-center mb-10">
+                            <h2 className="text-3xl font-extrabold text-navy mb-4">Frequently Asked Questions</h2>
+                            <p className="text-gray-600 text-lg">Direct, technical answers regarding our winter salt removal services.</p>
+                        </div>
+                        <div className="space-y-6 text-left">
+                            {faqs.map((faq, idx) => (
+                                <div key={idx} className="p-6 bg-slate-50 border-l-4 border-gold rounded-r-xl">
+                                    <h3 className="text-xl font-bold text-navy mb-2">Q: {faq.question}</h3>
+                                    <p className="text-gray-700 leading-relaxed font-medium">A: {faq.answer}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </section>
+                </article>
+            </div>
+
+            <FAQSchema faqs={faqs} />
+            <ReviewSlider />
+
+            <div className="bg-white border-t border-gray-200">
+                <div className="container mx-auto px-4 max-w-6xl py-16 text-center">
+                    <h2 className="text-3xl md:text-4xl font-extrabold text-navy mb-8 tracking-tight">Explore More Exterior Services</h2>
+                    <ServiceGrid />
+                </div>
+            </div>
+        </main>
     );
 }

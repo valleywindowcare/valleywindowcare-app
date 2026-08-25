@@ -1,69 +1,85 @@
 import React from 'react';
-import PricingMatrix from '@/components/PricingMatrix';
-import { serviceContentMap } from '@/data/serviceContent';
 import Link from 'next/link';
+import Image from 'next/image';
 import ServiceGrid from '@/components/ServiceGrid';
 import Hero from '@/components/Hero';
-import { ShieldCheck, CheckCircle, ArrowRight, MapPin } from 'lucide-react';
-
+import HeroForm from "@/components/HeroForm";
+import { ShieldCheck, CheckCircle, ArrowRight, MapPin, Phone, Mail } from 'lucide-react';
 import ReviewSlider from '@/components/ReviewSlider';
+import FAQSchema from '@/components/FAQSchema';
 
 export const metadata = {
-    title: "Commercial Awning Cleaning",
-    description: "Professional awning and fabric canopy cleaning. We physically remove mildew, traffic exhaust, and bird droppings.",
+    title: "Commercial Awning Cleaning | Green Bay & Appleton",
+    description: "Northeast Wisconsin's leading commercial awning cleaning company. Specialized low-pressure soft washing and UV sealants for fabric and vinyl awnings.",
 };
 
-export default function ServicePage() {
+const faqs = [
+    {
+        question: "Why is high-pressure washing dangerous for commercial awnings?",
+        answer: "Commercial awnings and canopies are typically constructed from delicate materials such as woven acrylic fabrics (like Sunbrella) or heavy-gauge vinyl. Standard high-pressure power washing is highly destructive to these substrates. High-pressure water wands can easily rip seams, tear through fabric weave, strip away protective water-repellent coatings, and crack vinyl paneling. Even worse, high pressure can force water behind the awning frame joints, leading to frame corrosion or structural rot. We utilize specialized soft wash systems that apply biodegradable cleaners at extremely low pressure (under 100 PSI). This system kills organic mold and lifts dirt safely without any risk of structural damage or coating loss."
+    },
+    {
+        question: "What is the difference between cleaning fabric and vinyl awnings?",
+        answer: "Fabric and vinyl awnings require completely distinct cleaning chemistries and techniques. Fabric awnings are porous, allowing mold, mildew, and algae to grow deep inside the fibers. We apply algaecide sanitizers that penetrate the weave, killing organic growth at the root. We follow this with a low-pressure rinse and a fabric protectant sealer. Vinyl awnings are non-porous but collect heavy soot, grease, and bird droppings. We use specialized surfactants that break the static bond holding soot to the vinyl, followed by a vinyl sealant that restores gloss and provides UV resistance, preventing cracking and yellowing."
+    },
+    {
+        question: "Do you apply fabric waterproofing sealants and UV protectants?",
+        answer: "Yes, we offer professional fabric waterproofing sealants and UV protectants as a key addition to our cleaning services. Over time, sunlight, rain, and snow strip away the original factory water-repellent coating on fabric awnings, causing the fabric to absorb water, which leads to rapid mold growth and rotting. After a deep clean and complete drying, we spray a premium, commercial-grade fluoropolymer fabric protectant. This coating restores water repellency, prevents moisture absorption, and provides UV block filters, extending the lifespan of your awning and keeping it cleaner for longer."
+    },
+    {
+        question: "Can you remove tough exhaust soot and grease from restaurant awnings?",
+        answer: "Yes, we are highly experienced in removing tough soot, grease, and carbon buildup from restaurant, retail, and hotel awnings. Awnings located near roads, drive-thrus, or kitchen vents collect airborne greases and exhaust soot that standard soap cannot clean. We apply specialized non-butyl degreasers designed specifically for commercial fabrics and vinyls. These detergents emulsify grease, lift exhaust soot, and wash away easily under low pressure, restoring your awning's vibrant colors without damaging the fabric fibers."
+    },
+    {
+        question: "What safety protocols do your crews follow when working on high awnings?",
+        answer: "Safety is our highest priority. Awning cleaning requires working at heights over walkways and roads, presenting fall hazards and public safety risks. All of our technicians are fully trained in OSHA safety standards and wear safety harnesses. We use specialized boom lifts and carbon-fiber water-fed poles to clean high awnings safely. We also set up caution tape, warning signs, and block public walkways to ensure complete safety for your customers and employees during the clean."
+    },
+    {
+        question: "Are your cleaning detergents safe for plants, animals, and customers?",
+        answer: "Yes, our cleaning detergents are highly diluted, biodegradable, and fully safe for plants and animals when applied by our technicians. We utilize a strict plant protection protocol to safeguard all surrounding vegetation. Before applying any soaps, we saturate surrounding lawns, shrubs, and gardens with fresh water to create a moisture barrier. We continuously mist the foliage and perform a thorough post-rinse of all plants. Our cleaning chemicals break down naturally into simple salts, ensuring zero environmental damage."
+    },
+    {
+        question: "How frequently should commercial storefront awnings be professionally cleaned?",
+        answer: "For most storefront awnings in Appleton and Green Bay, we recommend a professional cleaning and sealing once or twice a year—ideally in the spring to remove winter salt dust and soot, and in the fall to clean off summer dust, bird droppings, and organic mold. Awnings located near high-volume traffic lanes or restaurants may require quarterly cleanings to prevent heavy grease stains from permanently discoloring the fabric."
+    }
+];
+
+export default function CommercialAwningCleaningPage() {
     const jsonLd = {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "name": "Commercial Awning Cleaning Services",
-      "provider": {
-        "@type": "HomeAndConstructionBusiness",
-        "@id": "https://valleyexteriorpros.com/#organization",
-        "name": "Valley Property Services",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Appleton",
-          "addressRegion": "WI"
-        }
-      },
-      "areaServed": ["Appleton", "Green Bay", "Northeast Wisconsin"],
-      "offers": {
-          "@type": "AggregateOffer",
-          "priceCurrency": "USD",
-          "lowPrice": "199",
-          "priceSpecification": {
-              "@type": "UnitPriceSpecification",
-              "priceCurrency": "USD",
-              "minPrice": "199.00"
-          }
-      },
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Commercial Awning Cleaning Services Packages",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Commercial Awning Cleaning"
-            },
-            "priceSpecification": {
-              "@type": "UnitPriceSpecification",
-              "priceCurrency": "USD",
-              "minPrice": "199.00"
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Commercial Awning Cleaning Services",
+        "provider": {
+            "@type": "HomeAndConstructionBusiness",
+            "@id": "https://valleyexteriorpros.com/#organization",
+            "name": "Valley Property Services",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Appleton",
+                "addressRegion": "WI"
             }
-          }
-        ]
-      }
+        },
+        "areaServed": ["Appleton", "Green Bay", "De Pere", "Northeast Wisconsin"],
+        "offers": {
+            "@type": "AggregateOffer",
+            "priceCurrency": "USD",
+            "lowPrice": "250",
+            "highPrice": "750",
+            "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "priceCurrency": "USD",
+                "minPrice": "250.00",
+                "maxPrice": "750.00"
+            }
+        },
+        "description": "Safe commercial awning soft washing, UV protection, and fabric waterproofing services."
     };
 
     return (
-        <main className="w-full overflow-hidden bg-slate-50">
+        <main className="w-full overflow-hidden bg-slate-50 text-navy">
             <script
-              type="application/ld+json"
-              dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
             />
             <script
                 type="application/ld+json"
@@ -94,155 +110,142 @@ export default function ServicePage() {
                     })
                 }}
             />
-            
-            {/* HERO MODULE */}
-            <Hero 
+
+            <Hero
                 h1={
                     <>
-                        <span className="capitalize">Commercial Awning Cleaning</span> <br />
-                        <span className="text-gold text-2xl md:text-3xl mt-4 block">Valley Property Services</span>
+                        <span className="capitalize text-4xl md:text-5xl lg:text-7xl">Commercial Awning Cleaning</span>
                     </>
                 }
-                description="Professional awning and fabric canopy cleaning. We physically remove mildew, traffic exhaust, and bird droppings."
-                bgImage="/images/portfolio/awning-cleaning.webp"
+                description="Restore canopy fabrics and vinyls. Specialized low-pressure soft washing, mold removal, and UV waterproofing sealants."
+                bgImage="/images/portfolio/commercial-awning-cleaning.webp"
                 showTrustBadges={true}
             />
 
-            {/* GOLD STANDARD ARCHITECTURE CONTAINER */}
             <div className="max-w-4xl mx-auto bg-white text-navy rounded-2xl shadow-sm p-4 sm:p-8 mt-12 mb-20 relative z-10">
                 <article className="prose prose-lg md:prose-xl text-gray-600 max-w-none mb-16">
                     
-                    {/* ENTITY CAPSULE */}
-                    <section className="mb-16 mt-8">
+                    {/* SECTION 1: INTRODUCTION */}
+                    <section className="mb-12 mt-8">
                         <div className="text-lg leading-relaxed mb-8 font-bold text-navy">
-                            Valley Property Services is a fully insured exterior cleaning company providing professional commercial awning cleaning in <Link href="/service-areas/appleton" className="text-blue-600 hover:text-gold font-semibold transition-colors">Appleton</Link>, <Link href="/service-areas/green-bay" className="text-blue-600 hover:text-gold font-semibold transition-colors">Green Bay</Link>, and <Link href="/service-areas/door-county" className="text-blue-600 hover:text-gold font-semibold transition-colors">Door County</Link>, WI.
+                            Valley Property Services is the leading provider of professional commercial awning cleaning and sealing in <Link href="/service-areas/appleton" className="text-blue-600 hover:text-gold font-semibold transition-colors">Appleton</Link>, <Link href="/service-areas/green-bay" className="text-blue-600 hover:text-gold font-semibold transition-colors">Green Bay</Link>, and <Link href="/service-areas/de-pere" className="text-blue-600 hover:text-gold font-semibold transition-colors">De Pere</Link>, WI.
                         </div>
+                        <p className="leading-relaxed text-lg mb-6">
+                            Commercial awnings are a prominent branding tool, welcoming customers to your storefront. However, exposure to weather conditions leads to the rapid build-up of dark atmospheric soot, road salts, bird droppings, mold, and green algae. If left unmaintained, this organic biofilm decomposes awning fabrics and fades vinyl panels, causing permanent damage.
+                        </p>
+                        <p className="leading-relaxed text-lg mb-6">
+                            Using high pressure to clean awnings is a major mistake. High pressure will tear seams, split fabric weave, and crack vinyl. We utilize specialized soft wash systems that apply biodegradable cleaners at low pressure (under 100 PSI). This system kills mold and lifts dirt safely without any risk of structural damage or coating loss, preserving your storefront image.
+                        </p>
                     </section>
 
-                    {/* METHODOLOGY/PROCESS STEPS */}
-                    <section className="mb-16">
-                        <div className="flex items-center gap-3 mb-8">
-                            <ShieldCheck className="text-gold" size={32} />
-                            <h2 className="text-3xl md:text-4xl font-extrabold text-navy m-0">
-                                Our Execution Methodology
-                            </h2>
-                        </div>
-                        
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 not-prose">
-                            {/* Step 1 */}
-                            <div className="bg-white p-8 rounded-2xl shadow-soft border border-gray-100 relative overflow-hidden group hover:border-gold/30 transition-colors">
-                                <div className="text-6xl font-black text-gray-50 absolute -top-4 -right-2 z-0 group-hover:text-gold/5 transition-colors">01</div>
-                                <h4 className="text-xl font-bold text-navy mb-4 relative z-10 flex items-center gap-2">
-                                    <span className="w-8 h-8 rounded-full bg-gold/20 text-navy flex items-center justify-center text-sm">1</span>
-                                    Fabric Inspection
-                                </h4>
-                                <p className="text-gray-600 relative z-10 leading-relaxed">
-                                    We check the awning material safely. We locate weak seams. We identify heavy stain locations. We prepare the safest chemical mix.
-                                </p>
-                            </div>
-                            
-                            {/* Step 2 */}
-                            <div className="bg-white p-8 rounded-2xl shadow-soft border border-gray-100 relative overflow-hidden group hover:border-gold/30 transition-colors">
-                                <div className="text-6xl font-black text-gray-50 absolute -top-4 -right-2 z-0 group-hover:text-gold/5 transition-colors">02</div>
-                                <h4 className="text-xl font-bold text-navy mb-4 relative z-10 flex items-center gap-2">
-                                    <span className="w-8 h-8 rounded-full bg-gold/20 text-navy flex items-center justify-center text-sm">2</span>
-                                    Low-Pressure Soft Wash
-                                </h4>
-                                <p className="text-gray-600 relative z-10 leading-relaxed">
-                                    We apply specialized fabric detergents. We avoid high-pressure wands. We eradicate deep mildew spores. We protect the physical canopy structure.
-                                </p>
-                            </div>
-
-                            {/* Step 3 */}
-                            <div className="bg-white p-8 rounded-2xl shadow-soft border border-gray-100 relative overflow-hidden group hover:border-gold/30 transition-colors">
-                                <div className="text-6xl font-black text-gray-50 absolute -top-4 -right-2 z-0 group-hover:text-gold/5 transition-colors">03</div>
-                                <h4 className="text-xl font-bold text-navy mb-4 relative z-10 flex items-center gap-2">
-                                    <span className="w-8 h-8 rounded-full bg-gold/20 text-navy flex items-center justify-center text-sm">3</span>
-                                    Debris & Stain Removal
-                                </h4>
-                                <p className="text-gray-600 relative z-10 leading-relaxed">
-                                    We rinse the fabric clean. We remove all agitated dirt. The canopy regains its original color. We restore your business storefront appeal.
-                                </p>
-                            </div>
-                        </div>
-                    </section>
-
-                    {/* TYPES WE HANDLE (BENEFITS CONTAINER) */}
-                    <section className="mb-16 bg-[#FFFFFF] text-[#1E2B3C] p-8 md:p-12 rounded-3xl not-prose shadow-[0_0_40px_rgba(30,43,60,0.06)] border border-gray-100">
-                        <h2 className="text-3xl md:text-4xl font-extrabold mb-6 text-navy border-b border-gray-100 pb-6">
-                            Target Surfaces
-                        </h2>
-                        
-                        <div className="space-y-6 mt-10">
-                            {/* Type 1 */}
-                            <div className="flex gap-4 items-start">
-                                <CheckCircle className="text-gold shrink-0 mt-1" size={24} />
-                                <div>
-                                    <h4 className="text-xl font-bold text-navy-dark mb-2">Vinyl Awnings</h4>
-                                    <p className="text-gray-600 leading-relaxed">We clean durable commercial vinyl. We strip heavy grease deposits. We restore the bright color safely.</p>
-                                </div>
-                            </div>
-                            
-                            {/* Type 2 */}
-                            <div className="flex gap-4 items-start">
-                                <CheckCircle className="text-gold shrink-0 mt-1" size={24} />
-                                <div>
-                                    <h4 className="text-xl font-bold text-navy-dark mb-2">Fabric Canopies</h4>
-                                    <p className="text-gray-600 leading-relaxed">We wash delicate canvas materials. We use low-pressure techniques. We completely avoid tearing the fabric seams.</p>
-                                </div>
-                            </div>
-
-                            {/* Type 3 */}
-                            <div className="flex gap-4 items-start">
-                                <CheckCircle className="text-gold shrink-0 mt-1" size={24} />
-                                <div>
-                                    <h4 className="text-xl font-bold text-navy-dark mb-2">Entrance Walkways</h4>
-                                    <p className="text-gray-600 leading-relaxed">We clean covered business entrances. We remove thick bird droppings. Clean fabric visually attracts local retail customers.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    
-                    
-                    {/* LOCAL SEO & CROSS-LINKING */}
-                    <section className="mb-16">
-                        <div className="flex items-center gap-3 mb-6">
-                            <MapPin className="text-gold" size={32} />
-                            <h2 className="text-3xl md:text-4xl font-extrabold text-navy m-0">
-                                Local Routes & Complete Care
-                            </h2>
-                        </div>
-                        <div className="space-y-6 text-lg bg-slate-50 p-8 rounded-2xl border border-slate-100">
-                                <p className="leading-relaxed">
-                                We dispatch commercial route vehicles daily through <Link href="/service-areas/green-bay" className="text-gold font-bold hover:underline">Green Bay</Link> and <Link href="/service-areas/appleton" className="text-gold font-bold hover:underline">Appleton</Link>. Maintaining clean fabric permanently boosts physical property value.
+                    {/* SECTION 2: DEPTH ANALYSIS */}
+                    <section className="mb-12">
+                        <h2 className="text-3xl font-extrabold text-navy mb-6">The Technology of Fabric & Vinyl Restoration</h2>
+                        <p className="leading-relaxed text-lg mb-6">
+                            Fabric and vinyl awnings require completely distinct cleaning chemistries. Fabric is porous, trapping mold spores inside the weave. We apply algaecide surfactants that penetrate the weave, killing organic growth. We follow this with a low-pressure rinse and a fabric protectant sealer. Vinyl is non-porous but collects heavy soot and grease. We use specialized surfactants that break the static bond holding soot, followed by a vinyl sealant that restores gloss and provides UV resistance.
+                        </p>
+                        <p className="leading-relaxed text-lg mb-6">
+                            After cleaning, we apply professional waterproofing sealants. Over time, UV rays strip the factory water-repellent coating. We spray a premium fluoropolymer protectant that restores water repellency, prevents moisture absorption, and provides UV blocks, extending awning lifespan.
+                        </p>
+                        <div className="bg-slate-50 border-l-4 border-gold p-6 my-8 rounded-r-2xl shadow-sm">
+                            <h4 className="text-navy font-bold text-xl mb-3">Our strict Public Safety and Environmental protocols</h4>
+                            <p className="text-gray-700 leading-relaxed font-medium">
+                                Awning washing is performed over public entryways and walkways. We block off areas, set up safety cones, cover outdoor electronics, and schedule washes during off-hours. We also protect surrounding landscaping by pre-hydrating foliage to ensure zero chemical runoff absorption.
                             </p>
-                            <p className="leading-relaxed">
-                                Need your concrete walkways cleaned too? We offer professional, high-volume <Link href="/services/concrete-cleaning" className="text-gold font-bold hover:underline">Concrete Cleaning</Link> alongside our awning operations. 
-                            </p>
-                            <div className="mt-8">
-                                <Link href="/contact" className="inline-flex items-center gap-2 bg-gold text-navy px-8 py-4 rounded-xl font-bold hover:bg-navy hover:text-white transition-colors">
-                                    Request Your Custom Quote <ArrowRight size={20} />
-                                </Link>
-                            </div>
-                            </div>
+                        </div>
                     </section>
 
+                    {/* SECTION 3: WORKFLOW */}
+                    <section className="mb-12">
+                        <h2 className="text-3xl font-extrabold text-navy mb-6">Our 3-Phase Awning Cleaning Process</h2>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 not-prose">
+                            <div className="bg-slate-50 p-6 rounded-xl border border-gray-100 shadow-sm">
+                                <span className="text-gold font-black text-2xl mb-2 block">01</span>
+                                <h4 className="text-lg font-bold text-navy mb-2">Safety Prep & Tape</h4>
+                                <p className="text-gray-600 text-sm leading-relaxed">We block public walkways, pre-hydrate surrounding vegetation, and tape off door electronics and signs.</p>
+                            </div>
+                            <div className="bg-slate-50 p-6 rounded-xl border border-gray-100 shadow-sm">
+                                <span className="text-gold font-black text-2xl mb-2 block">02</span>
+                                <h4 className="text-lg font-bold text-navy mb-2">Soft Wash Treatment</h4>
+                                <p className="text-gray-600 text-sm leading-relaxed">We apply custom algaecide surfactants at low pressure to kill organic growth and break down soot bonds.</p>
+                            </div>
+                            <div className="bg-slate-50 p-6 rounded-xl border border-gray-100 shadow-sm">
+                                <span className="text-gold font-black text-2xl mb-2 block">03</span>
+                                <h4 className="text-lg font-bold text-navy mb-2">Rinse & Protect Sealer</h4>
+                                <p className="text-gray-600 text-sm leading-relaxed">We rinse the awning clean under low pressure, and apply fluoropolymer waterproofing sealants after drying.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* SECTION 4: TABLE */}
+                    <section className="mb-12">
+                        <h2 className="text-3xl font-extrabold text-navy mb-6">Scope of Work & Pricing Matrix</h2>
+                        <p className="leading-relaxed text-lg mb-6">
+                            We provide transparent pricing based on the linear footage and material type of your commercial awning. Below is a baseline overview of our packages.
+                        </p>
+                        <div className="overflow-x-auto border border-gray-200 rounded-2xl shadow-sm bg-white not-prose">
+                            <table className="w-full text-left border-collapse">
+                                <thead>
+                                    <tr className="bg-navy text-white text-xs sm:text-sm uppercase tracking-wider">
+                                        <th className="p-4 font-bold border-b border-gray-200">Service Type</th>
+                                        <th className="p-4 font-bold border-b border-gray-200">Awning Length</th>
+                                        <th className="p-4 font-bold border-b border-gray-200">Est. Investment</th>
+                                        <th className="p-4 font-bold border-b border-gray-200">Key Inclusions</th>
+                                        <th className="p-4 font-bold border-b border-gray-200">Time on Site</th>
+                                    </tr>
+                                </thead>
+                                <tbody className="divide-y divide-gray-100 text-gray-700 text-xs sm:text-sm">
+                                    <tr className="hover:bg-slate-50 transition-colors">
+                                        <td className="p-4 font-bold text-navy">Small Entry Canopy</td>
+                                        <td className="p-4">Up to 15 linear ft</td>
+                                        <td className="p-4 font-semibold">$250 - $375</td>
+                                        <td className="p-4">Soft wash detergent, low-pressure rinse, window protection, off-hours execution</td>
+                                        <td className="p-4">1.5 - 2 hours</td>
+                                    </tr>
+                                    <tr className="hover:bg-slate-50 transition-colors">
+                                        <td className="p-4 font-bold text-navy">Standard Storefront Awning</td>
+                                        <td className="p-4 font-semibold">15 - 50 linear ft</td>
+                                        <td className="p-4 font-semibold">$400 - $750</td>
+                                        <td className="p-4">Deep soft wash, mold removal, frame rinse, water-repellent sealer application</td>
+                                        <td className="p-4">2.5 - 4 hours</td>
+                                    </tr>
+                                    <tr className="hover:bg-slate-50 transition-colors">
+                                        <td className="p-4 font-bold text-navy">Large Retail Plaza</td>
+                                        <td className="p-4 font-semibold">50+ linear ft / Plural Sites</td>
+                                        <td className="p-4 font-semibold">Custom Quote</td>
+                                        <td className="p-4">Multi-site scheduling, boom lift access, detailed fabric restoration, bulk commercial rates</td>
+                                        <td className="p-4">Scheduled phases</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                    {/* SECTION 5: FAQ ACCORDION */}
+                    <section className="mb-12 mt-16 bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-gray-100 not-prose">
+                        <div className="text-center mb-10">
+                            <h2 className="text-3xl font-extrabold text-navy mb-4">Frequently Asked Questions</h2>
+                            <p className="text-gray-600 text-lg">Direct, technical answers regarding our commercial awning cleaning services.</p>
+                        </div>
+                        <div className="space-y-6 text-left">
+                            {faqs.map((faq, idx) => (
+                                <div key={idx} className="p-6 bg-slate-50 border-l-4 border-gold rounded-r-xl">
+                                    <h3 className="text-xl font-bold text-navy mb-2">Q: {faq.question}</h3>
+                                    <p className="text-gray-700 leading-relaxed font-medium">A: {faq.answer}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </section>
                 </article>
             </div>
 
-
-            
-            {serviceContentMap['commercial-awning-cleaning']?.pricing && (
-                <PricingMatrix {...serviceContentMap['commercial-awning-cleaning'].pricing} />
-            )}
+            <FAQSchema faqs={faqs} />
             <ReviewSlider />
 
-            {/* SERVICES GRID */}
             <div className="bg-white border-t border-gray-200">
                 <div className="container mx-auto px-4 max-w-6xl py-16 text-center">
-                     <h2 className="text-3xl md:text-4xl font-extrabold text-navy mb-8 tracking-tight">Explore More Exterior Services</h2>
-                     <ServiceGrid />
+                    <h2 className="text-3xl md:text-4xl font-extrabold text-navy mb-8 tracking-tight">Explore More Exterior Services</h2>
+                    <ServiceGrid />
                 </div>
             </div>
         </main>
