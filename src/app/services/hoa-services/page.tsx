@@ -59,6 +59,18 @@ export default function HoaServicesPage() {
             }
         },
         "areaServed": ["Appleton", "Green Bay", "De Pere", "Northeast Wisconsin"],
+        "offers": {
+            "@type": "AggregateOffer",
+            "priceCurrency": "USD",
+            "lowPrice": "600",
+            "highPrice": "12000",
+            "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "priceCurrency": "USD",
+                "minPrice": "600.00",
+                "maxPrice": "12000.00"
+            }
+        },
         "description": "Professional multi-unit soft washing and concrete cleaning for HOAs, condos, and apartments."
     };
 
@@ -67,6 +79,35 @@ export default function HoaServicesPage() {
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "BreadcrumbList",
+                        "itemListElement": [
+                            {
+                                "@type": "ListItem",
+                                "position": 1,
+                                "name": "Home",
+                                "item": "https://valleyexteriorpros.com/"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 2,
+                                "name": "Services",
+                                "item": "https://valleyexteriorpros.com/services"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 3,
+                                "name": "HOA & Multi-Unit Cleaning",
+                                "item": "https://valleyexteriorpros.com/services/hoa-services"
+                            }
+                        ]
+                    })
+                }}
             />
 
             <Hero

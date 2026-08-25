@@ -236,6 +236,70 @@ export default function WinterSaltRemovalPage() {
                     </Link>
                 </div>
             </section>
+
+            {/* JSON-LD Schemas */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "Service",
+                        "name": "Commercial Winter Salt Removal",
+                        "serviceType": "Commercial Winter Salt Removal",
+                        "description": "Professional winter salt and chloride extraction to prevent concrete spalling and slip hazards.",
+                        "provider": {
+                            "@type": "HomeAndConstructionBusiness",
+                            "@id": "https://valleyexteriorpros.com/#organization",
+                            "name": "Valley Property Services",
+                            "address": {
+                                "@type": "PostalAddress",
+                                "addressLocality": "Appleton",
+                                "addressRegion": "WI"
+                            }
+                        },
+                        "areaServed": ["Appleton", "Green Bay", "De Pere", "Northeast Wisconsin"],
+                        "offers": {
+                            "@type": "Offer",
+                            "priceCurrency": "USD",
+                            "price": "295.00",
+                            "priceSpecification": {
+                                "@type": "UnitPriceSpecification",
+                                "priceCurrency": "USD",
+                                "price": "295.00"
+                            }
+                        }
+                    })
+                }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "BreadcrumbList",
+                        "itemListElement": [
+                            {
+                                "@type": "ListItem",
+                                "position": 1,
+                                "name": "Home",
+                                "item": "https://valleyexteriorpros.com/"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 2,
+                                "name": "Services",
+                                "item": "https://valleyexteriorpros.com/services"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 3,
+                                "name": "Winter Salt Removal",
+                                "item": "https://valleyexteriorpros.com/services/winter-salt-removal"
+                            }
+                        ]
+                    })
+                }}
+            />
         </div>
     );
 }

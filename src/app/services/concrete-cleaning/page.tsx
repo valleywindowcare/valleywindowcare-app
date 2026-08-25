@@ -8,46 +8,46 @@ import ReviewSlider from '@/components/ReviewSlider';
 import FAQSchema from '@/components/FAQSchema';
 
 export const metadata = {
-    title: "Driveway Cleaning & Sealing in Green Bay & Appleton",
-    description: "Professional concrete driveway pressure washing and sealing services. Valley Property Services removes tire marks, road salt, and oil stains across Northeast Wisconsin.",
+    title: "Concrete Cleaning & Pressure Washing in Green Bay & Appleton",
+    description: "Professional concrete pressure washing and driveway cleaning services. Valley Property Services removes road salt, mold, and oil stains across Northeast Wisconsin.",
 };
 
 const faqs = [
     {
-        question: "How does winter road salt damage my residential concrete driveway?",
-        answer: "During Wisconsin winters, vehicles carry road salt, magnesium chloride, and calcium chloride slurry back onto your concrete driveway. Concrete is highly porous, acting like a hard sponge. When these melted salts seep into the concrete pores, they lower the freezing point of water and attract additional moisture. As this water freezes and expands by about 9% inside the pores, it creates high internal hydraulic pressure. This pressure causes the surface layer of the concrete to crack, pit, and flake away—a process known as spalling. Standard cold-water rinsing only pushes the salt chemicals deeper into the concrete. We use specialized hot-water extraction and chemical descalers to neutralize and draw the salts out, protecting your driveway's structural integrity."
+        question: "How does professional cleaning prevent concrete spalling and salt damage?",
+        answer: "Concrete is a highly porous material that naturally absorbs water, road salt, and liquid de-icers (like calcium chloride and magnesium chloride) during cold Wisconsin winters. When these salts settle inside the concrete pores, they attract moisture, creating a highly corrosive solution. During freeze-thaw cycles, this absorbed water expands by approximately 9% inside the concrete, creating immense internal pressure. Over time, this pressure causes the concrete surface to crack, pit, and flake off—a destructive process known as spalling. Professional hot-water washing combined with specialized chemical neutralizers completely flushes out these caustic salts from deep within the concrete pores, halting structural degradation and saving you thousands of dollars in premature replacement costs."
     },
     {
-        question: "What is the benefit of applying a penetrating sealer to my driveway?",
-        answer: "A premium silane-siloxane penetrating sealer offers the highest level of protection for concrete driveways. Unlike cheap topical sealers that form a glossy surface film that can peel, a penetrating sealer seeps deep into the concrete pores, reacting chemically to form a hydrophobic barrier. This barrier repels water, oils, and winter road salts, preventing them from soaking into the concrete. This protection drastically reduces winter spalling, makes oil spills easy to clean, and prevents organic growth like mold and algae from taking root. Penetrating sealers leave a natural, non-slip finish that will not peel, bubble, or wear away, extending your driveway's life by years."
+        question: "What is a rotary surface cleaner and why is it superior to pressure wands?",
+        answer: "A rotary surface cleaner is a specialized professional tool that features a rotating bar with multiple spray nozzles spinning at high speed inside a circular hover dome. This design is vastly superior to standard pressure wands because it maintains a perfectly uniform nozzle distance and spray angle across the entire concrete surface. This uniform coverage eliminates 'zebra striping' (uneven, light-and-dark cleaning streaks) which is a common problem when using hand-held wands. Furthermore, surface cleaners distribute water pressure evenly, preventing the nozzle from etching or scarring the concrete cream layer, while the circular dome contains the dirty water overspray, keeping your surrounding property clean."
     },
     {
-        question: "Can your cleaning process completely remove motor oil and vehicle fluids?",
-        answer: "Our hot-water steam washing (200°F+) combined with professional-grade, oil-emulsifying degreasers is highly effective at lifting vehicle fluids. However, the final result depends on the concrete's age and how long the oil has sat. Fresh oil spills can typically be removed completely (90% to 95% restoration). For old, weathered oil spots that have sat for months, the oil has penetrated deep into the concrete pores. We apply specialized poultice treatments to draw the oil to the surface, and while we can completely emulsify the grease to eliminate slip hazards, a light shadow may remain. We apply targeted chemical treatments to achieve the best possible result."
+        question: "Can your cleaning process completely remove motor oil and diesel stains?",
+        answer: "Our hot-water steam washing (200°F+) combined with professional-grade, oil-emulsifying degreasers is highly effective at lifting motor oil and diesel stains. However, the final result depends on how long the oil has resided on the surface. Concrete acts like a sponge, drawing oil deep into the concrete matrix. If the spill is fresh, we can typically lift 90% to 95% of the oil. For old, weathered oil spots that have sat for months or years, we can completely emulsify the slick, greasy surface residue to eliminate slip hazards, but a light shadow or stain may remain. We apply targeted, multi-stage chemical treatments to achieve the best possible aesthetic outcome."
     },
     {
-        question: "Is high pressure dangerous for concrete driveways?",
-        answer: "Yes, excessive pressure can permanently damage concrete. Concrete driveways have a thin, smooth top layer called the 'cream.' If a pressure washer nozzle is held too close or if the pressure exceeds 3,500 PSI, it can blast away this cream layer, exposing the rough aggregate underneath. This damage is permanent and makes the concrete more porous and vulnerable to salt erosion. We use specialized rotary surface cleaners that distribute water pressure evenly, combined with hot water and eco-friendly surfactants. This allows us to lift dirt and stains safely using lower, non-destructive pressures."
+        question: "Is sealing my concrete driveway necessary after pressure washing?",
+        answer: "While not strictly mandatory, we highly recommend applying a premium silane-siloxane penetrating sealer after a deep cleaning. Clean concrete is highly porous and will immediately begin absorbing rain, oils, and winter road salts. A silane-siloxane sealer penetrates up to a quarter-inch into the concrete pores, forming a hydrophobic chemical barrier that repels water and prevents chemical entry. This barrier prevents liquid absorption, drastically reduces winter freeze-thaw spalling, makes oil spills easy to clean, and prevents mold and algae from taking root, extending the life of your driveway by years."
     },
     {
-        question: "How long after cleaning and sealing can I park on my driveway?",
-        answer: "We recommend keeping all vehicles off the driveway for at least 24 hours after a standard hot-water cleaning to allow the concrete to dry completely. If we apply a silane-siloxane penetrating sealer, you must keep vehicles off the driveway for a full 36 to 48 hours to allow the sealer to cure and form its protective hydrophobic barrier. Walking on the driveway is completely safe as soon as the surface is dry to the touch, which typically takes 1 to 2 hours depending on sun and wind."
+        question: "How long after concrete cleaning should I wait before parking my car?",
+        answer: "We recommend keeping vehicles off the concrete driveway for at least 24 hours after cleaning is completed to ensure the concrete has dried completely and the pores have closed. If we have applied a silane-siloxane penetrating sealer, you must keep all vehicle traffic off the surface for a full 36 to 48 hours to allow the sealer to cure and form its protective barrier. Walking on the concrete is completely safe as soon as the surface is dry to the touch (typically within 1 to 2 hours of completion, depending on sun and wind)."
     },
     {
-        question: "Will the cleaning chemicals harm my lawn or landscape plants?",
-        answer: "No. We deploy a strict plant protection protocol to ensure your grass and landscaping remain safe. We saturate the surrounding soil with fresh water before we begin, creating a protective moisture barrier so the plants cannot absorb any runoff. During cleaning, we continuously rinse the grass edges, and we use biodegradable surfactants that neutralize when diluted, ensuring zero chemical burn risk to your lawns and gardens."
+        question: "Does pressure washing concrete present any risk of damage to my landscaping?",
+        answer: "No, we employ a strict plant protection protocol to ensure your grass, flowers, and shrubs remain perfectly safe. We saturate the surrounding soil and turf with fresh water before we begin, creating a protective barrier so the plants cannot absorb any runoff. During cleaning, we continuously rinse the perimeter of the concrete, and we apply eco-friendly, biodegradable surfactants that naturally neutralize when diluted, ensuring zero chemical burn risk to your lawns and gardens."
     },
     {
-        question: "How often should I have my residential driveway cleaned and sealed?",
-        answer: "For residential properties in Appleton, Green Bay, and De Pere, we recommend scheduling a professional driveway cleaning once a year, ideally in the spring. A spring cleaning removes the concentrated road salt, sand, and grime that accumulates over the winter before it can cause permanent spalling. For shaded patios or walkways surrounded by heavy tree cover, a bi-annual schedule (spring and fall) may be necessary to prevent slippery black algae and mold from taking over the concrete."
+        question: "How frequently should residential concrete driveways and walkways be cleaned?",
+        answer: "For residential properties in Appleton, Green Bay, and De Pere, we recommend scheduling a professional concrete cleaning once a year, ideally in the spring. A spring cleaning removes the concentrated road salt, sand, and grime that accumulates over the winter before it can cause permanent spalling. For shaded patios or walkways surrounded by heavy tree cover, a bi-annual schedule (spring and fall) may be necessary to prevent slippery black algae and mold from taking over the concrete."
     }
 ];
 
-export default function DrivewayCleaningPage() {
+export default function ConcreteCleaningPage() {
     const jsonLd = {
         "@context": "https://schema.org",
         "@type": "Service",
-        "name": "Driveway Cleaning & Sealing Services",
+        "name": "Concrete Cleaning & Pressure Washing Services",
         "provider": {
             "@type": "HomeAndConstructionBusiness",
             "@id": "https://valleyexteriorpros.com/#organization",
@@ -63,15 +63,15 @@ export default function DrivewayCleaningPage() {
             "@type": "AggregateOffer",
             "priceCurrency": "USD",
             "lowPrice": "150",
-            "highPrice": "950",
+            "highPrice": "1200",
             "priceSpecification": {
                 "@type": "UnitPriceSpecification",
                 "priceCurrency": "USD",
                 "minPrice": "150.00",
-                "maxPrice": "950.00"
+                "maxPrice": "1200.00"
             }
         },
-        "description": "Professional driveway pressure washing, oil stain neutralization, and concrete sealing services."
+        "description": "Professional concrete cleaning, road salt removal, and driveway pressure washing services."
     };
 
     return (
@@ -102,8 +102,8 @@ export default function DrivewayCleaningPage() {
                             {
                                 "@type": "ListItem",
                                 "position": 3,
-                                "name": "Driveway Cleaning",
-                                "item": "https://valleyexteriorpros.com/services/driveway-cleaning"
+                                "name": "Concrete Cleaning",
+                                "item": "https://valleyexteriorpros.com/services/concrete-cleaning"
                             }
                         ]
                     })
@@ -113,10 +113,10 @@ export default function DrivewayCleaningPage() {
             <Hero
                 h1={
                     <>
-                        <span className="capitalize text-4xl md:text-5xl lg:text-7xl">Driveway Cleaning & Sealing</span>
+                        <span className="capitalize text-4xl md:text-5xl lg:text-7xl">Concrete Cleaning & Pressure Washing</span>
                     </>
                 }
-                description="Restore your driveway's appearance and protect against winter salt damage. High-temperature concrete cleaning and premium penetrating sealers."
+                description="Eradicate slippery mold, dark organic growth, and winter road salt. High-temperature rotary concrete washing for driveways, patios, and walkways."
                 bgImage="/images/portfolio/concrete-cleaning.webp"
                 showTrustBadges={true}
             />
@@ -127,40 +127,40 @@ export default function DrivewayCleaningPage() {
                     {/* SECTION 1: INTRODUCTION */}
                     <section className="mb-12 mt-8">
                         <div className="text-lg leading-relaxed mb-8 font-bold text-navy">
-                            Valley Property Services provides professional driveway pressure washing and concrete sealing services in <Link href="/service-areas/appleton" className="text-blue-600 hover:text-gold font-semibold transition-colors">Appleton</Link>, <Link href="/service-areas/green-bay" className="text-blue-600 hover:text-gold font-semibold transition-colors">Green Bay</Link>, and <Link href="/service-areas/de-pere" className="text-blue-600 hover:text-gold font-semibold transition-colors">De Pere</Link>, WI.
+                            Valley Property Services provides professional concrete pressure washing and driveway restoration services in <Link href="/service-areas/appleton" className="text-blue-600 hover:text-gold font-semibold transition-colors">Appleton</Link>, <Link href="/service-areas/green-bay" className="text-blue-600 hover:text-gold font-semibold transition-colors">Green Bay</Link>, and <Link href="/service-areas/de-pere" className="text-blue-600 hover:text-gold font-semibold transition-colors">De Pere</Link>, WI.
                         </div>
                         <p className="leading-relaxed text-lg mb-6">
-                            Your driveway is one of the most prominent features of your home's exterior, directly impacting your property's curb appeal and value. Because driveways are exposed to vehicular traffic and Wisconsin's harsh seasonal changes, they quickly accumulate motor oil leaks, black tire marks, green algae, mold, dirt, and chemical road salts.
+                            Concrete surfaces like driveways, walkways, patios, and pool decks are major functional and aesthetic components of your property. However, concrete is inherently highly porous, meaning it absorbs water, oils, road salts, and organic materials. Over time, exposure to humid Wisconsin summers and freezing winters leads to the accumulation of black mold, slippery green algae, tire marks, oil spots, and caustic road salt.
                         </p>
                         <p className="leading-relaxed text-lg mb-6">
-                            Standard pressure washing is often insufficient to clean driveways safely. Using cold-water wands can leave permanent swirl marks on your concrete and fails to lift deep petroleum stains. Even worse, excessive pressure can blast away the protective surface layer of the concrete, exposing aggregate and accelerating erosion. We use commercial-grade hot-water surface cleaners and biodegradable surfactants to lift stains safely and evenly without damaging your concrete.
+                            Many property owners try to clean their concrete using cheap electric pressure washers or simple garden hoses. This often results in a patchy finish, leaving ugly wand marks, and failing to lift deep stains. Even worse, using high pressure incorrectly can permanently etch the surface cream layer of the concrete, exposing aggregate and making it more vulnerable to erosion. Our professional concrete cleaning uses commercial-grade hot-water surface cleaners and specialized eco-friendly detergents to lift stains safely and evenly.
                         </p>
                     </section>
 
                     {/* SECTION 2: DEPTH ANALYSIS */}
                     <section className="mb-12">
-                        <h2 className="text-3xl font-extrabold text-navy mb-6">Penetrating Sealer Defense Against Winter Salt</h2>
+                        <h2 className="text-3xl font-extrabold text-navy mb-6">The Importance of Spring Salt Flushing</h2>
                         <p className="leading-relaxed text-lg mb-6">
-                            In Wisconsin, winter road maintenance relies on calcium chloride and magnesium chloride. When you park on your driveway, these corrosive salts seep deep into the porous concrete structure. During freeze-thaw cycles, this absorbed water expands by approximately 9%, creating high internal hydraulic pressure that cracks, pits, and flakes off the surface—a destructive process known as spalling.
+                            Winter road maintenance in Wisconsin relies heavily on calcium chloride and magnesium chloride. As vehicles park on your driveway, these salts melt and seep deep into the porous concrete structure. During winter freeze-thaw cycles, this absorbed water expands by approximately 9%, creating high internal pressure that cracks, pits, and flakes off the surface—a destructive process known as spalling.
                         </p>
                         <p className="leading-relaxed text-lg mb-6">
-                            A premium silane-siloxane penetrating sealer is the best defense against this damage. Unlike cheap topical sealers that form a glossy surface film that can peel, a penetrating sealer seeps deep into the concrete pores, reacting chemically to form a hydrophobic barrier. This barrier repels water, oils, and winter road salts, preventing them from soaking into the concrete. This protection drastically reduces winter spalling, makes oil spills easy to clean, and prevents organic growth like mold and algae from taking root. Penetrating sealers leave a natural, non-slip finish that will not peel, bubble, or wear away, extending your driveway's life by years.
+                            Flushing these salts out in the spring is essential to save your concrete. Our high-flow, hot-water rotary cleaning systems flush these chemical salts out from deep within the concrete matrix, protecting the structural integrity of your driveway. Following cleaning, we recommend applying a premium silane-siloxane penetrating sealer. This sealer creates a hydrophobic chemical barrier that repels water and prevents future salt absorption, extending the life of your concrete by years.
                         </p>
                         <div className="bg-slate-50 border-l-4 border-gold p-6 my-8 rounded-r-2xl shadow-sm">
-                            <h4 className="text-navy font-bold text-xl mb-3">Our strict Oil Stain Extraction Protocol</h4>
+                            <h4 className="text-navy font-bold text-xl mb-3">Our strict Slip and Fall Liability Mitigation</h4>
                             <p className="text-gray-700 leading-relaxed font-medium">
-                                Motor oil and vehicle fluids penetrate deep into concrete pores, leaving permanent dark stains. We apply specialized poultice treatments to draw the oil out of the concrete matrix, and then emulsify the residue using 200°F+ hot water and biodegradable degreasers. This process removes the slippery texture and restores the concrete's appearance, ensuring a clean, safe surface.
+                                Slippery concrete walkways and entryways are a major liability hazard, especially during rainy or humid weather. Mold, mildew, and black algae build up on concrete, forming a slick organic biofilm. We do not just wash away this surface growth; we sanitize the concrete using biodegradable algaecides that kill the organic spores at the root, restoring natural friction and ensuring safe walkways for your family, guests, or retail customers.
                             </p>
                         </div>
                     </section>
 
                     {/* SECTION 3: WORKFLOW */}
                     <section className="mb-12">
-                        <h2 className="text-3xl font-extrabold text-navy mb-6">Our 3-Phase Driveway Restoration Process</h2>
+                        <h2 className="text-3xl font-extrabold text-navy mb-6">Our 3-Phase Concrete Cleaning Process</h2>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 not-prose">
                             <div className="bg-slate-50 p-6 rounded-xl border border-gray-100 shadow-sm">
                                 <span className="text-gold font-black text-2xl mb-2 block">01</span>
-                                <h4 className="text-lg font-bold text-navy mb-2">Degreasing & Pre-wash</h4>
+                                <h4 className="text-lg font-bold text-navy mb-2">Pre-Treatment & Sweep</h4>
                                 <p className="text-gray-600 text-sm leading-relaxed">We sweep away loose debris and apply specialized biodegradable surfactants to break down grease, oil, and loosen organic spores.</p>
                             </div>
                             <div className="bg-slate-50 p-6 rounded-xl border border-gray-100 shadow-sm">
@@ -170,7 +170,7 @@ export default function DrivewayCleaningPage() {
                             </div>
                             <div className="bg-slate-50 p-6 rounded-xl border border-gray-100 shadow-sm">
                                 <span className="text-gold font-black text-2xl mb-2 block">03</span>
-                                <h4 className="text-lg font-bold text-navy mb-2">Flush & Sealer Apply</h4>
+                                <h4 className="text-lg font-bold text-navy mb-2">Flush, Neutralize & Seal</h4>
                                 <p className="text-gray-600 text-sm leading-relaxed">We rinse the surface clean. For maximum protection, we apply a silane-siloxane sealer to block future salt and water intrusion.</p>
                             </div>
                         </div>
@@ -180,7 +180,7 @@ export default function DrivewayCleaningPage() {
                     <section className="mb-12">
                         <h2 className="text-3xl font-extrabold text-navy mb-6">Scope of Work & Pricing Matrix</h2>
                         <p className="leading-relaxed text-lg mb-6">
-                            We provide transparent, flat-rate pricing based on the total square footage and state of your concrete. Below is a baseline overview of our driveway cleaning packages.
+                            We provide transparent, flat-rate pricing based on the total square footage and state of your concrete. Below is a baseline overview of our concrete cleaning packages.
                         </p>
                         <div className="overflow-x-auto border border-gray-200 rounded-2xl shadow-sm bg-white not-prose">
                             <table className="w-full text-left border-collapse">
@@ -195,9 +195,9 @@ export default function DrivewayCleaningPage() {
                                 </thead>
                                 <tbody className="divide-y divide-gray-100 text-gray-700 text-xs sm:text-sm">
                                     <tr className="hover:bg-slate-50 transition-colors">
-                                        <td className="p-4 font-bold text-navy">Small Driveway Wash</td>
-                                        <td className="p-4">1-car driveway (up to 800 sq ft)</td>
-                                        <td className="p-4 font-semibold">$150 - $225 </td>
+                                        <td className="p-4 font-bold text-navy">Sidewalk & Walkway Pack</td>
+                                        <td className="p-4">Up to 800 sq ft</td>
+                                        <td className="p-4 font-semibold">$150 - $250 </td>
                                         <td className="p-4">Pre-treatment, rotary steam wash, edge detail, organic sanitization, final rinse</td>
                                         <td className="p-4">1 - 1.5 hours</td>
                                     </tr>
@@ -209,18 +209,18 @@ export default function DrivewayCleaningPage() {
                                         <td className="p-4">1.5 - 2.5 hours</td>
                                     </tr>
                                     <tr className="hover:bg-slate-50 transition-colors">
-                                        <td className="p-4 font-bold text-navy">Large Driveway & Walkway Clean</td>
+                                        <td className="p-4 font-bold text-navy">Large Driveway & Patio Clean</td>
                                         <td className="p-4 font-semibold">1,500 - 3,000 sq ft</td>
-                                        <td className="p-4 font-semibold">$350 - $550 </td>
+                                        <td className="p-4 font-semibold">$350 - $600 </td>
                                         <td className="p-4">Full driveway, walkways, and back patio steam clean, oil treatment, water sweep</td>
                                         <td className="p-4">2.5 - 4 hours</td>
                                     </tr>
                                     <tr className="hover:bg-slate-50 transition-colors">
-                                        <td className="p-4 font-bold text-navy">Premium Driveway Clean & Seal</td>
-                                        <td className="p-4 font-semibold">Up to 2,000 sq ft</td>
-                                        <td className="p-4 font-semibold">$650 - $950 </td>
-                                        <td className="p-4">Deep steam wash, oil lift, joint flush, silane-siloxane sealer spray coating</td>
-                                        <td className="p-4">4 - 6 hours</td>
+                                        <td className="p-4 font-bold text-navy">Commercial Concrete scrubbing</td>
+                                        <td className="p-4 font-semibold">3,000+ sq ft / Commercial lot</td>
+                                        <td className="p-4 font-semibold">Custom Quote </td>
+                                        <td className="p-4">Off-hours steam wash, grease emulsifier, wastewater vacuum recovery, EPA containment</td>
+                                        <td className="p-4">Flexible off-hours</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -242,7 +242,7 @@ export default function DrivewayCleaningPage() {
                     <section className="mb-12 mt-16 bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-gray-100 not-prose">
                         <div className="text-center mb-10">
                             <h2 className="text-3xl font-extrabold text-navy mb-4">Frequently Asked Questions</h2>
-                            <p className="text-gray-600 text-lg">Direct, technical answers regarding our driveway cleaning and sealing services.</p>
+                            <p className="text-gray-600 text-lg">Direct, technical answers regarding our concrete pressure washing and cleaning services.</p>
                         </div>
                         <div className="space-y-6 text-left">
                             {faqs.map((faq, idx) => (

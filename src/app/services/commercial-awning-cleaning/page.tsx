@@ -29,6 +29,16 @@ export default function ServicePage() {
         }
       },
       "areaServed": ["Appleton", "Green Bay", "Northeast Wisconsin"],
+      "offers": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "USD",
+          "lowPrice": "199",
+          "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "priceCurrency": "USD",
+              "minPrice": "199.00"
+          }
+      },
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Commercial Awning Cleaning Services Packages",
@@ -54,6 +64,35 @@ export default function ServicePage() {
             <script
               type="application/ld+json"
               dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "BreadcrumbList",
+                        "itemListElement": [
+                            {
+                                "@type": "ListItem",
+                                "position": 1,
+                                "name": "Home",
+                                "item": "https://valleyexteriorpros.com/"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 2,
+                                "name": "Services",
+                                "item": "https://valleyexteriorpros.com/services"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 3,
+                                "name": "Commercial Awning Cleaning",
+                                "item": "https://valleyexteriorpros.com/services/commercial-awning-cleaning"
+                            }
+                        ]
+                    })
+                }}
             />
             
             {/* HERO MODULE */}

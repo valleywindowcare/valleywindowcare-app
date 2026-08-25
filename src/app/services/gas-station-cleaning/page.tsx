@@ -59,6 +59,18 @@ export default function GasStationCleaningPage() {
             }
         },
         "areaServed": ["Appleton", "Green Bay", "De Pere", "Northeast Wisconsin"],
+        "offers": {
+            "@type": "AggregateOffer",
+            "priceCurrency": "USD",
+            "lowPrice": "350",
+            "highPrice": "2200",
+            "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "priceCurrency": "USD",
+                "minPrice": "350.00",
+                "maxPrice": "2200.00"
+            }
+        },
         "description": "Professional EPA-compliant gas station canopy, pump island, and concrete grease cleaning."
     };
 
@@ -67,6 +79,35 @@ export default function GasStationCleaningPage() {
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "BreadcrumbList",
+                        "itemListElement": [
+                            {
+                                "@type": "ListItem",
+                                "position": 1,
+                                "name": "Home",
+                                "item": "https://valleyexteriorpros.com/"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 2,
+                                "name": "Services",
+                                "item": "https://valleyexteriorpros.com/services"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 3,
+                                "name": "Gas Station Cleaning",
+                                "item": "https://valleyexteriorpros.com/services/gas-station-cleaning"
+                            }
+                        ]
+                    })
+                }}
             />
 
             <Hero

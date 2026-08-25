@@ -59,6 +59,18 @@ export default function RustRemovalPage() {
             }
         },
         "areaServed": ["Appleton", "Green Bay", "De Pere", "Northeast Wisconsin"],
+        "offers": {
+            "@type": "AggregateOffer",
+            "priceCurrency": "USD",
+            "lowPrice": "195",
+            "highPrice": "895",
+            "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "priceCurrency": "USD",
+                "minPrice": "195.00",
+                "maxPrice": "895.00"
+            }
+        },
         "description": "Professional rust and mineral stain removal for residential and commercial concrete, brick, and siding."
     };
 
@@ -67,6 +79,35 @@ export default function RustRemovalPage() {
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "BreadcrumbList",
+                        "itemListElement": [
+                            {
+                                "@type": "ListItem",
+                                "position": 1,
+                                "name": "Home",
+                                "item": "https://valleyexteriorpros.com/"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 2,
+                                "name": "Services",
+                                "item": "https://valleyexteriorpros.com/services"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 3,
+                                "name": "Rust Removal",
+                                "item": "https://valleyexteriorpros.com/services/rust-removal"
+                            }
+                        ]
+                    })
+                }}
             />
 
             <Hero

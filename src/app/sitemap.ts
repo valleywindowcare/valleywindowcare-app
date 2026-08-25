@@ -94,12 +94,9 @@ const validServices = [
     "gutter-cleaning",
     "concrete-cleaning",
     "window-cleaning",
-    "christmas-lighting",
     "pressure-washing",
-    "residential-permanent-led-lighting",
     "fence-cleaning",
     "deck-cleaning",
-    "oxidation-removal",
     "soft-wash",
     "driveway-cleaning",
     "solar-panel-cleaning",
@@ -110,7 +107,6 @@ const validServices = [
     "commercial-roof-cleaning",
     "commercial-pressure-washing",
     "graffiti-removal",
-    "hoa-multi-unit-cleaning",
     "storefront-cleaning",
     "premium-drive-thru-cleaning",
     "parking-lot-and-garage-cleaning",
@@ -120,17 +116,8 @@ const validServices = [
     "post-construction-cleanup",
     "paver-patio-restorations",
     "commercial-hood-cleaning",
-    "apartment-exterior-cleaning",
-    "apartment-hoa-cleaning",
-    "building-wash",
-    "permanent-holiday-lighting",
-    "residential-rust-removal",
-    "rust-and-oxidation-removal",
     "winter-salt-removal",
-    "hoa-services",
-    "deck-restoration",
-    "hood-vent-cleaning",
-    "professional-awning-cleaning-in-green-bay-wisconsin"
+    "hoa-services"
 ];
 
 // 19 city hub routes in validLocations

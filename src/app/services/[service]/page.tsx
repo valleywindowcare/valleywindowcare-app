@@ -43,12 +43,9 @@ const validServices = [
     "gutter-cleaning",
     "concrete-cleaning",
     "window-cleaning",
-    "christmas-lighting",
     "pressure-washing",
-    "residential-permanent-led-lighting",
     "fence-cleaning",
     "deck-cleaning",
-    "oxidation-removal",
     "soft-wash",
     "driveway-cleaning",
     "solar-panel-cleaning",
@@ -60,7 +57,6 @@ const validServices = [
     "commercial-roof-cleaning",
     "commercial-pressure-washing",
     "graffiti-removal",
-    "hoa-multi-unit-cleaning",
     "storefront-cleaning",
     "premium-drive-thru-cleaning",
     "parking-lot-and-garage-cleaning",
@@ -70,11 +66,8 @@ const validServices = [
     "post-construction-cleanup",
     "paver-patio-restorations",
     "commercial-hood-cleaning",
-    "apartment-exterior-cleaning",
-    "hoa-services",
-    "deck-restoration",
-    "hood-vent-cleaning",
-    "professional-awning-cleaning-in-green-bay-wisconsin"
+    "winter-salt-removal",
+    "hoa-services"
 ];
 
 const commercialServices = [
@@ -84,7 +77,6 @@ const commercialServices = [
     "commercial-roof-cleaning",
     "commercial-pressure-washing",
     "graffiti-removal",
-    "hoa-multi-unit-cleaning",
     "storefront-cleaning",
     "premium-drive-thru-cleaning",
     "parking-lot-and-garage-cleaning",
@@ -94,7 +86,7 @@ const commercialServices = [
     "post-construction-cleanup",
     "paver-patio-restorations",
     "commercial-hood-cleaning",
-    "apartment-exterior-cleaning"
+    "hoa-services"
 ];
 
 export function generateStaticParams() {
@@ -531,6 +523,16 @@ export default async function ServiceGenericPage({ params }: PageProps) {
                             "serviceType": formattedName,
                             "description": `Valley Property Services provides premium ${formattedName.toLowerCase()} and property maintenance for homes and businesses in Northeast Wisconsin.`,
                             "image": `https://valleyexteriorpros.com${bodyImageToUse}`,
+                            "offers": {
+                                "@type": "Offer",
+                                "priceCurrency": "USD",
+                                "price": content.pricing?.minimumPrice ? parseFloat(content.pricing.minimumPrice.replace(/[^0-9.]/g, '')) : 195.00,
+                                "priceSpecification": {
+                                    "@type": "UnitPriceSpecification",
+                                    "priceCurrency": "USD",
+                                    "price": content.pricing?.minimumPrice ? parseFloat(content.pricing.minimumPrice.replace(/[^0-9.]/g, '')) : 195.00
+                                }
+                            },
                             "keywords": [
                                 "pressure washing Green Bay WI", "pressure washing Appleton WI", "house washing Green Bay", "house washing Appleton WI",
                                 "soft wash siding cleaning Green Bay WI", "roof soft washing Appleton", "roof stain removal Green Bay",

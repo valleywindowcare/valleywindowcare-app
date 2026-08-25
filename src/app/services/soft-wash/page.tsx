@@ -29,6 +29,16 @@ export default function ServicePage() {
             }
         },
         "areaServed": ["Appleton", "Green Bay", "Northeast Wisconsin"],
+        "offers": {
+            "@type": "AggregateOffer",
+            "priceCurrency": "USD",
+            "lowPrice": "299",
+            "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "priceCurrency": "USD",
+                "minPrice": "299.00"
+            }
+        },
         "hasOfferCatalog": {
             "@type": "OfferCatalog",
             "name": "Residential Soft Washing Services Packages",
@@ -54,6 +64,35 @@ export default function ServicePage() {
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "BreadcrumbList",
+                        "itemListElement": [
+                            {
+                                "@type": "ListItem",
+                                "position": 1,
+                                "name": "Home",
+                                "item": "https://valleyexteriorpros.com/"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 2,
+                                "name": "Services",
+                                "item": "https://valleyexteriorpros.com/services"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 3,
+                                "name": "Soft Wash",
+                                "item": "https://valleyexteriorpros.com/services/soft-wash"
+                            }
+                        ]
+                    })
+                }}
             />
 
             {/* HERO MODULE */}

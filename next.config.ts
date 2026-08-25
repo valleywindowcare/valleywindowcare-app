@@ -61,6 +61,19 @@ function getCsvRedirects() {
 const validServicesRegex = `(roof-cleaning|house-washing|gutter-cleaning|concrete-cleaning|window-cleaning|christmas-lighting|pressure-washing|residential-permanent-led-lighting|fence-cleaning|deck-cleaning|oxidation-removal|soft-wash|driveway-cleaning|solar-panel-cleaning|rust-removal|building-washing|dumpster-pad-cleaning|permanent-led-lighting|commercial-roof-cleaning|commercial-pressure-washing|graffiti-removal|hoa-multi-unit-cleaning|storefront-cleaning|premium-drive-thru-cleaning|parking-lot-and-garage-cleaning|chewing-gum-removal|commercial-awning-cleaning|gas-station-cleaning|post-construction-cleanup|paver-patio-restorations|commercial-hood-cleaning|apartment-exterior-cleaning|winter-salt-removal)`;
 
 const legacyToNestedMap: Record<string, string> = {
+  "/services/rust-and-oxidation-removal": "/services/rust-removal",
+  "/services/residential-rust-removal": "/services/rust-removal",
+  "/services/oxidation-removal": "/services/rust-removal",
+  "/services/hoa-multi-unit-cleaning": "/services/hoa-services",
+  "/services/apartment-exterior-cleaning": "/services/hoa-services",
+  "/services/apartment-hoa-cleaning": "/services/hoa-services",
+  "/services/christmas-lighting": "/services/permanent-led-lighting",
+  "/services/residential-permanent-led-lighting": "/services/permanent-led-lighting",
+  "/services/permanent-holiday-lighting": "/services/permanent-led-lighting",
+  "/services/building-wash": "/services/building-washing",
+  "/services/hood-vent-cleaning": "/services/commercial-hood-cleaning",
+  "/services/deck-restoration": "/services/deck-cleaning",
+  "/services/professional-awning-cleaning-in-green-bay-wisconsin": "/services/commercial-awning-cleaning",
   "/service-areas/service-areas-window-cleaning-gutter-cleaning-pressure-washing-leaf-cleanups": "/service-areas",
   "/leaf-cleanups": "/services/house-washing",
   "/led-smart-lighting-solutions-green-bay-wi": "/services/permanent-led-lighting",

@@ -200,6 +200,45 @@ export default function PermanentLEDLightingPage() {
                                 { "@type": "City", "name": "Green Bay" },
                                 { "@type": "City", "name": "Appleton" },
                                 { "@type": "City", "name": "Door County" }
+                            ],
+                            "offers": {
+                                "@type": "Offer",
+                                "priceCurrency": "USD",
+                                "price": "500.00",
+                                "priceSpecification": {
+                                    "@type": "UnitPriceSpecification",
+                                    "priceCurrency": "USD",
+                                    "price": "500.00"
+                                }
+                            }
+                        })
+                    }}
+                />
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify({
+                            "@context": "https://schema.org",
+                            "@type": "BreadcrumbList",
+                            "itemListElement": [
+                                {
+                                    "@type": "ListItem",
+                                    "position": 1,
+                                    "name": "Home",
+                                    "item": "https://valleyexteriorpros.com/"
+                                },
+                                {
+                                    "@type": "ListItem",
+                                    "position": 2,
+                                    "name": "Services",
+                                    "item": "https://valleyexteriorpros.com/services"
+                                },
+                                {
+                                    "@type": "ListItem",
+                                    "position": 3,
+                                    "name": "Permanent LED Lighting",
+                                    "item": "https://valleyexteriorpros.com/services/permanent-led-lighting"
+                                }
                             ]
                         })
                     }}

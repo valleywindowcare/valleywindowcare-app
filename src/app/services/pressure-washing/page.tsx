@@ -38,6 +38,16 @@ export default function PressureWashingPage() {
             { "@type": "City", "name": "Neenah" },
             { "@type": "City", "name": "De Pere" }
         ],
+        "offers": {
+            "@type": "AggregateOffer",
+            "priceCurrency": "USD",
+            "lowPrice": "200",
+            "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "priceCurrency": "USD",
+                "minPrice": "200.00"
+            }
+        },
         "hasOfferCatalog": {
             "@type": "OfferCatalog",
             "name": "Pressure Washing Services",
@@ -72,6 +82,35 @@ export default function PressureWashingPage() {
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "BreadcrumbList",
+                        "itemListElement": [
+                            {
+                                "@type": "ListItem",
+                                "position": 1,
+                                "name": "Home",
+                                "item": "https://valleyexteriorpros.com/"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 2,
+                                "name": "Services",
+                                "item": "https://valleyexteriorpros.com/services"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 3,
+                                "name": "Pressure Washing",
+                                "item": "https://valleyexteriorpros.com/services/pressure-washing"
+                            }
+                        ]
+                    })
+                }}
             />
             {/* HERO SECTION WITH HARDCODED IMAGE REPAIR */}
             <section className={`!relative !w-full !min-h-screen !flex !flex-col !items-center !justify-center overflow-hidden text-white bg-navy`}>
