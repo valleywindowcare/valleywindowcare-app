@@ -67,20 +67,21 @@ export default async function BlogPostTemplate({ params }: Props) {
                         "headline": post.title,
                         "description": post.excerpt,
                         "image": `https://valleyexteriorpros.com${post.imagePath}`,
-                        "datePublished": isoDate,
                         "author": {
-                            "@type": "Organization",
-                            "@id": "https://valleyexteriorpros.com/#organization",
-                            "name": "Valley Property Services",
-                            "url": "https://valleyexteriorpros.com"
+                            "@type": "Person",
+                            "name": "James",
+                            "jobTitle": "Owner & Founder",
+                            "url": "https://valleyexteriorpros.com/about-us"
                         },
+                        "datePublished": isoDate,
+                        "dateModified": isoDate,
                         "publisher": {
                             "@type": "Organization",
                             "@id": "https://valleyexteriorpros.com/#organization",
                             "name": "Valley Property Services",
                             "logo": {
                                 "@type": "ImageObject",
-                                "url": "https://valleyexteriorpros.com/images/portfolio/building-wash-copy.webp"
+                                "url": "https://valleyexteriorpros.com/Blue%20Version%20copy/VPS%20Exterior%20Cleaning/PNG/VPS%20Exterior%20Cleaning.png"
                             }
                         },
                         "mainEntityOfPage": {

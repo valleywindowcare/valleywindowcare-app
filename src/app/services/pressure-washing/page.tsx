@@ -30,11 +30,6 @@ export default function PressureWashingPage() {
                 "addressRegion": "WI",
                 "postalCode": "54115",
                 "streetAddress": "462 S Good Hope Rd"
-            },
-            "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "5.0",
-                "reviewCount": "15"
             }
         },
         "areaServed": [

@@ -168,11 +168,6 @@ export default function RootLayout({
                     }
                   }
                 ]
-              },
-              "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "5.0",
-                "reviewCount": "15"
               }
             }).replace(/</g, '\\u003c')
           }}

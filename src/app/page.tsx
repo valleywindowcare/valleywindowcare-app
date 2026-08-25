@@ -25,6 +25,14 @@ export const metadata: Metadata = {
     siteName: "Valley Property Services",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "/images/portfolio/house-wash-before-after.webp",
+        width: 1200,
+        height: 630,
+        alt: "Valley Property Services - Premier Exterior Restoration in Northeast Wisconsin"
+      }
+    ]
   },
 };
 

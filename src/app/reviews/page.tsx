@@ -188,7 +188,17 @@ export default function ReviewsPage() {
                 dangerouslySetInnerHTML={{
                     __html: JSON.stringify({
                         "@context": "https://schema.org",
-                        "@graph": reviews.map((r) => {
+                        "@type": "HomeAndConstructionBusiness",
+                        "@id": "https://valleyexteriorpros.com/#organization",
+                        "name": "Valley Property Services",
+                        "url": "https://valleyexteriorpros.com",
+                        "image": "https://valleyexteriorpros.com/images/portfolio/house-wash-before-after.webp",
+                        "aggregateRating": {
+                            "@type": "AggregateRating",
+                            "ratingValue": "5.0",
+                            "reviewCount": "15"
+                        },
+                        "review": reviews.map((r) => {
                             let dateStr = "2026-03-24";
                             if (r.date.includes("5 months")) dateStr = "2026-03-24";
                             else if (r.date.includes("6 months")) dateStr = "2026-02-24";
@@ -199,10 +209,6 @@ export default function ReviewsPage() {
 
                             return {
                                 "@type": "Review",
-                                "itemReviewed": {
-                                    "@type": "HomeAndConstructionBusiness",
-                                    "@id": "https://valleyexteriorpros.com/#organization"
-                                },
                                 "author": {
                                     "@type": "Person",
                                     "name": r.reviewer

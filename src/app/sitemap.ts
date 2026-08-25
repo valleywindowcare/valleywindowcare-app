@@ -11,6 +11,59 @@ interface ServiceContent {
 }
 const typedServiceData = serviceData as unknown as ServiceContent[];
 
+function getDynamicServicesList(): string[] {
+    try {
+        const filePath = path.join(process.cwd(), 'src/app/services/[service]/page.tsx');
+        if (fs.existsSync(filePath)) {
+            const content = fs.readFileSync(filePath, 'utf-8');
+            const match = content.match(/const\s+validServices\s*=\s*\[([\s\S]*?)\];/);
+            if (match) {
+                const arrayContent = match[1];
+                const services: string[] = [];
+                const regex = /["']([^"']+)["']/g;
+                let m;
+                while ((m = regex.exec(arrayContent)) !== null) {
+                    services.push(m[1]);
+                }
+                return services;
+            }
+        }
+    } catch (err) {
+        console.error("Error parsing dynamic services list:", err);
+    }
+    return [];
+}
+
+function getDynamicIntersectionsList(): string[] {
+    try {
+        const filePath = path.join(process.cwd(), 'src/app/service-areas/[city]/[service]/page.tsx');
+        if (fs.existsSync(filePath)) {
+            const content = fs.readFileSync(filePath, 'utf-8');
+            const routes: string[] = [];
+            const blockMatch = content.match(/const\s+VALID_INTERSECTIONS\s*=\s*\{([\s\S]*?)\};/);
+            if (blockMatch) {
+                const blockContent = blockMatch[1];
+                const cityRegex = /"([^"]+)"\s*:\s*\{([\s\S]*?)\}\s*,\s*\n/g;
+                let cityMatch;
+                while ((cityMatch = cityRegex.exec(blockContent)) !== null) {
+                    const city = cityMatch[1];
+                    const serviceBlock = cityMatch[2];
+                    const serviceRegex = /"([^"]+)"\s*:\s*\{/g;
+                    let serviceMatch;
+                    while ((serviceMatch = serviceRegex.exec(serviceBlock)) !== null) {
+                        const service = serviceMatch[1];
+                        routes.push(`/service-areas/${city}/${service}`);
+                    }
+                }
+            }
+            return routes;
+        }
+    } catch (err) {
+        console.error("Error parsing dynamic intersections list:", err);
+    }
+    return [];
+}
+
 // Static / Core 200 OK routes
 const coreRoutesList = [
     "",
@@ -30,7 +83,9 @@ const coreRoutesList = [
     "/terms-and-conditions",
     "/service-guarantee",
     "/wisconsin-maintenance-calendar",
-    "/quote"
+    "/quote",
+    "/paver-patio-restorations",
+    "/service-areas/service-areas-window-cleaning-gutter-cleaning-pressure-washing-leaf-cleanups"
 ];
 
 // Active services dynamically mapped from services/[service]/page.tsx array (36 services) + 6 static services
@@ -132,9 +187,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
         console.error("Error reading services directory:", err);
     }
 
-    // Merge static discovered services with predefined valid services
+    // Merge static discovered services with predefined valid services and dynamically parsed services
+    const dynamicServicesList = getDynamicServicesList();
     const allServices = Array.from(new Set([
         ...validServices,
+        ...dynamicServicesList,
         ...Array.from(staticServices)
     ]));
 
@@ -147,7 +204,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }));
 
     // 3. Location Hubs
-    const locationRoutes: MetadataRoute.Sitemap = validLocations.map((city) => ({
+    const dynamicLocations = (serviceData as any[])
+        .filter((d) => d.type === 'hub')
+        .map((d) => d.citySlug);
+    const allLocations = Array.from(new Set([
+        ...validLocations,
+        ...dynamicLocations
+    ]));
+
+    const locationRoutes: MetadataRoute.Sitemap = allLocations.map((city) => ({
         url: `${baseUrl}/service-areas/${city}`,
         lastModified: new Date(),
         changeFrequency: 'monthly',
@@ -176,6 +241,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
         if (isTarget) {
             intersectionPaths.add(route);
         }
+    });
+
+    // Add dynamic intersections from generateStaticParams in [city]/[service]/page.tsx
+    const dynamicIntersections = getDynamicIntersectionsList();
+    dynamicIntersections.forEach((route) => {
+        intersectionPaths.add(route);
     });
 
     const intersectionRoutes: MetadataRoute.Sitemap = Array.from(intersectionPaths).map((route) => ({
