@@ -107,11 +107,7 @@ export default function HeroForm({ idPrefix = "" }: { idPrefix?: string }) {
 
             // Fire OpenAI Conversion Event
             if (typeof window !== "undefined" && window.oaiq) {
-                window.oaiq("measure", "registration_completed", {
-                    type: "customer_action",
-                    amount: 0,
-                    currency: "USD"
-                });
+                window.oaiq("measure", "lead_created", { type: "customer_action" });
             }
             
             // GTM DataLayer Intercept Configuration
