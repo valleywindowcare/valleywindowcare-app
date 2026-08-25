@@ -2,11 +2,17 @@
 @plugin "@tailwindcss/typography";
 
 @theme {
-  --color-navy: #1E3A8A;
+  --color-navy: #0D5C9D;
   --color-gold: #EA580C;
   --color-gold-light: #C2410C;
-  --color-navy-dark: #172554;
+  --color-navy-dark: #094678;
   --color-slate-50: #F8FAFC;
+  --color-slate-600: #475569;
+  --color-slate-900: #0F172A;
+  --color-gray-500: #475569;
+  --color-gray-600: #475569;
+  --color-gray-200: #E2E8F0;
+  --color-slate-200: #E2E8F0;
 }
 
 :root {
@@ -20,8 +26,8 @@
   --font-sans: var(--font-outfit), sans-serif;
   --font-inter: var(--font-inter), sans-serif;
   --font-outfit: var(--font-outfit), sans-serif;
-  --shadow-soft: 0px 8px 30px rgba(30, 58, 138, 0.04);
-  --shadow-hover: 0px 15px 40px rgba(30, 58, 138, 0.08);
+  --shadow-soft: 0px 8px 30px rgba(13, 92, 157, 0.04);
+  --shadow-hover: 0px 15px 40px rgba(13, 92, 157, 0.08);
   --shadow-card: 0px 4px 20px rgba(0, 0, 0, 0.03);
   --shadow-card-hover: 0px 12px 30px rgba(234, 88, 12, 0.15);
   /* Contrast Highlight tinted hover shadow */
