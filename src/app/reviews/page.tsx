@@ -190,9 +190,6 @@ export default function ReviewsPage() {
                         "@context": "https://schema.org",
                         "@type": "HomeAndConstructionBusiness",
                         "@id": "https://valleyexteriorpros.com/#organization",
-                        "name": "Valley Property Services",
-                        "url": "https://valleyexteriorpros.com",
-                        "image": "https://valleyexteriorpros.com/images/portfolio/house-wash-before-after.webp",
                         "aggregateRating": {
                             "@type": "AggregateRating",
                             "ratingValue": "5.0",

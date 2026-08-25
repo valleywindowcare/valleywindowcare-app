@@ -68,10 +68,7 @@ export default async function BlogPostTemplate({ params }: Props) {
                         "description": post.excerpt,
                         "image": `https://valleyexteriorpros.com${post.imagePath}`,
                         "author": {
-                            "@type": "Person",
-                            "name": "James",
-                            "jobTitle": "Owner & Founder",
-                            "url": "https://valleyexteriorpros.com/about-us"
+                            "@id": "https://valleyexteriorpros.com/about-us#james"
                         },
                         "datePublished": isoDate,
                         "dateModified": isoDate,

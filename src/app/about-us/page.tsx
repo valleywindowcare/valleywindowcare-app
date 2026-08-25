@@ -13,18 +13,12 @@ export const metadata: Metadata = {
 export default function AboutUsPage() {
     const jsonLd = {
       "@context": "https://schema.org",
-      "@type": "HomeAndConstructionBusiness",
-      "@id": "https://valleyexteriorpros.com/#organization",
-      "name": "Valley Property Services",
-      "image": "https://valleyexteriorpros.com/images/portfolio/house-wash-before-after.webp",
-      "url": "https://valleyexteriorpros.com/about-us",
-      "telephone": "(920) 609-7085",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Appleton",
-        "addressRegion": "WI"
-      },
-      "areaServed": ["Appleton", "Green Bay", "Door County"]
+      "@type": "Person",
+      "@id": "https://valleyexteriorpros.com/about-us#james",
+      "name": "James",
+      "jobTitle": "Owner & Founder",
+      "worksFor": { "@id": "https://valleyexteriorpros.com/#organization" },
+      "url": "https://valleyexteriorpros.com/about-us"
     };
 
     return (
