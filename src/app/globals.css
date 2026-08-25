@@ -2,17 +2,16 @@
 @plugin "@tailwindcss/typography";
 
 @theme {
-  --color-navy: #006CB8;
-  --color-gold: #FF6B00;
-  --color-gold-light: #FF8533;
-  --color-secondary-brand: #00AEEF;
-  --color-navy-dark: #004B80;
-  --color-slate-50: #F6F7FB;
+  --color-navy: #1E3A8A;
+  --color-gold: #EA580C;
+  --color-gold-light: #C2410C;
+  --color-navy-dark: #172554;
+  --color-slate-50: #F8FAFC;
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #F8FAFC;
+  --foreground: #0F172A;
 }
 
 @theme inline {
@@ -21,10 +20,10 @@
   --font-sans: var(--font-outfit), sans-serif;
   --font-inter: var(--font-inter), sans-serif;
   --font-outfit: var(--font-outfit), sans-serif;
-  --shadow-soft: 0px 8px 30px rgba(0, 108, 184, 0.04);
-  --shadow-hover: 0px 15px 40px rgba(0, 108, 184, 0.08);
+  --shadow-soft: 0px 8px 30px rgba(30, 58, 138, 0.04);
+  --shadow-hover: 0px 15px 40px rgba(30, 58, 138, 0.08);
   --shadow-card: 0px 4px 20px rgba(0, 0, 0, 0.03);
-  --shadow-card-hover: 0px 12px 30px rgba(255, 107, 0, 0.15);
+  --shadow-card-hover: 0px 12px 30px rgba(234, 88, 12, 0.15);
   /* Contrast Highlight tinted hover shadow */
 }
 
@@ -72,7 +71,7 @@
 
 body {
   background: var(--background);
-  color: #353738;
+  color: var(--foreground);
   font-family: var(--font-inter), Arial, Helvetica, sans-serif;
   @apply antialiased;
 }
