@@ -128,29 +128,29 @@ export default function PremiumDriveThruCleaningPage() {
                     {/* SECTION 1: INTRODUCTION */}
                     <section className="mb-12 mt-8">
                         <div className="text-lg leading-relaxed mb-8 font-bold text-navy">
-                            Valley Property Services is the leading provider of professional commercial drive-thru cleaning and concrete pressure washing in <Link href="/service-areas/appleton" className="text-blue-600 hover:text-gold font-semibold transition-colors">Appleton</Link>, <Link href="/service-areas/green-bay" className="text-blue-600 hover:text-gold font-semibold transition-colors">Green Bay</Link>, and <Link href="/service-areas/de-pere" className="text-blue-600 hover:text-gold font-semibold transition-colors">De Pere</Link>, WI.
+                            Valley Property Services is the leading provider of professional commercial drive-thru lane cleaning and hot-water pressure washing in <Link href="/service-areas/appleton" className="text-blue-600 hover:text-gold font-semibold transition-colors">Appleton</Link>, <Link href="/service-areas/green-bay" className="text-blue-600 hover:text-gold font-semibold transition-colors">Green Bay</Link>, and <Link href="/service-areas/de-pere" className="text-blue-600 hover:text-gold font-semibold transition-colors">De Pere</Link>, WI.
                         </div>
                         <p className="leading-relaxed text-lg mb-6">
-                            Your building's drive-thru lane is the direct handshake with a significant portion of your customer base, playing a critical role in customer perception and brand reputation. High-traffic lanes quickly accumulate chewing gum stains, grease spills, black tire marks, and dark atmospheric dirt. This grime looks unprofessional and creates slippery hazards that invite major slip-and-fall liability claims.
+                            Drive-thru lanes at fast-food restaurants, Quick Service Restaurants (QSRs), banks, and pharmacies experience high volumes of slow-moving, idling vehicle traffic. This continuous idling leads to heavy accumulations of dripping engine oil, leaking transmission fluids, tire rubber residue, and exhaust soot. Combined with spilled sugary beverages and food grease, drive-thru lanes quickly become dark, sticky, and highly slippery concrete surfaces that pose severe slip risks.
                         </p>
                         <p className="leading-relaxed text-lg mb-6">
-                            Washing drive-thru entryways requires specialized commercial equipment. Cold-water wands cannot dissolve petroleum grease or lift deeply set gum, and using excessive pressure can permanently scar concrete. Our commercial crews utilize heavy-duty trailer rigs that heat water to 200°F+ at high flow rates. Combined with rotary surface cleaners and eco-friendly surfactants, we clean lanes evenly, safely, and legally under WDNR water recovery guidelines.
+                            Washing grease-laden drive-thru lanes requires specialized commercial equipment. Standard cold-water pressure washers cannot dissolve oil binders or lift deeply set petroleum stains. Our commercial crews utilize heavy-duty, trailer-mounted pressure washing rigs that heat water to 200°F+ at high flow rates. Combined with industrial-grade degreasers and rotary surface cleaners, we sweep and deep-clean lanes, curbs, and trash receptacles safely and legally under WDNR water recovery guidelines.
                         </p>
                     </section>
 
                     {/* SECTION 2: DEPTH ANALYSIS */}
                     <section className="mb-12">
-                        <h2 className="text-3xl font-extrabold text-navy mb-6">The Science of Drive-Thru Grease & Gum Neutralization</h2>
+                        <h2 className="text-3xl font-extrabold text-navy mb-6">Targeted Cleaning for Idling Lanes, Menu Boards, and Ordering Columns</h2>
                         <p className="leading-relaxed text-lg mb-6">
-                            Commercial lanes are subject to petroleum leaks, vehicle exhaust soot, and food grease. Standard soap does not break down these oil bonds. We apply commercial-grade degreasers that emulsify the grease molecules, pulling them out of the porous concrete matrix. We then sweep the area with 200°F+ steam using rotary heads, melting gum binders and lifting dirt cleanly without pitting the concrete face.
+                            Drive-thru operations collect distinct pollutants that are different from standard storefront sidewalks. Idling engines drop hot oil and carbon exhaust that bake directly into the concrete pores. We apply specialized alkaline degreasers that chemically react with these petroleum hydrocarbons, emulsifying and drawing the oils to the surface. We then wash the lane concrete using 200°F+ hot steam at high pressure, melting the oil binders and lifting the stains without etching the concrete face.
                         </p>
                         <p className="leading-relaxed text-lg mb-6">
-                            For vertical surfaces, menu boards, intercoms, and digital screens, we use a low-pressure soft wash system. High pressure can tear graphics, damage electronic components, or inject moisture behind building panels. Our soft wash applies biodegradable sanitizers to kill organic growth at the root, followed by a gentle rinse that protects delicate signage.
+                            We also clean the surrounding transaction components. This includes low-pressure soft washing of digital ordering menu boards, order intercom speakers, traffic bollards, and overhead height clearance bars. We utilize gentle surfactants to clean dust and grease off these components, protecting delicate digital screens and electrical wiring from water damage.
                         </p>
                         <div className="bg-slate-50 border-l-4 border-gold p-6 my-8 rounded-r-2xl shadow-sm">
                             <h4 className="text-navy font-bold text-xl mb-3">Our strict EPA Wastewater Reclamation Protocol</h4>
                             <p className="text-gray-700 leading-relaxed font-medium">
-                                It is illegal to allow pressure washing runoff to flow into municipal storm drains. We seal nearby storm sewers with specialized containment berms, vacuum reclaim the wash water from the concrete using commercial surface cleaners, filter out solid debris and hydrocarbons, and discharge the grey water into municipal sanitary sewers. This process protects local Wisconsin waterways and shields your business from heavy regulatory fines.
+                                Drive-thru wastewater carries high petroleum oil, grease, and surfactant loads, making it illegal to discharge into municipal storm sewers. We block nearby storm sewers with specialized containment berms, vacuum reclaim all wash runoff, filter out suspended solids and hydrocarbons, and discharge the grey water safely into municipal sanitary sewers, keeping your business fully compliant.
                             </p>
                         </div>
                     </section>

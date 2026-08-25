@@ -14,7 +14,7 @@ export default function AboutUsPage() {
         "@context": "https://schema.org",
         "@graph": [
             {
-                "@type": "Organization",
+                "@type": "HomeAndConstructionBusiness",
                 "@id": "https://valleyexteriorpros.com/#organization",
                 "name": "Valley Property Services",
                 "url": "https://valleyexteriorpros.com",
@@ -30,8 +30,13 @@ export default function AboutUsPage() {
                 "@id": "https://valleyexteriorpros.com/about-us#james",
                 "name": "James",
                 "jobTitle": "Owner & Founder",
+                "description": "Owner/Founder of Valley Property Services, exterior restoration specialist serving Green Bay & Fox Valley",
+                "image": "https://valleyexteriorpros.com/images/portfolio/building-wash-copy.webp",
                 "worksFor": { "@id": "https://valleyexteriorpros.com/#organization" },
-                "url": "https://valleyexteriorpros.com/about-us"
+                "url": "https://valleyexteriorpros.com/about-us",
+                "sameAs": [
+                    "https://valleyexteriorpros.com/about-us"
+                ]
             }
         ]
     };

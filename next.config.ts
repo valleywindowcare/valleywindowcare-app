@@ -61,6 +61,7 @@ function getCsvRedirects() {
 const validServicesRegex = `(roof-cleaning|house-washing|gutter-cleaning|concrete-cleaning|window-cleaning|christmas-lighting|pressure-washing|residential-permanent-led-lighting|fence-cleaning|deck-cleaning|oxidation-removal|soft-wash|driveway-cleaning|solar-panel-cleaning|rust-removal|building-washing|dumpster-pad-cleaning|permanent-led-lighting|commercial-roof-cleaning|commercial-pressure-washing|graffiti-removal|hoa-multi-unit-cleaning|storefront-cleaning|premium-drive-thru-cleaning|parking-lot-and-garage-cleaning|chewing-gum-removal|commercial-awning-cleaning|gas-station-cleaning|post-construction-cleanup|paver-patio-restorations|commercial-hood-cleaning|apartment-exterior-cleaning|winter-salt-removal)`;
 
 const legacyToNestedMap: Record<string, string> = {
+  "/blog/exterior-house-cleaning-checklist": "/blog/an-experts-guide-to-cleaning-the-exterior-of-your-home",
   "/blog/eco-friendly-exterior-cleaning-in-green-bay": "/blog/eco-friendly-exterior-cleaning-green-bay",
   "/blog/how-to-safely-decorate-your-roof-for-christmas-diy-tips-for-a-festive-038-stylish-holiday-home": "/blog/how-to-safely-decorate-your-roof-for-christmas-diy-tips-for-a-festive-stylish-holiday-home",
   "/blog/can-i-clean-my-windows-with-tap-water": "/blog/why-tap-water-leaves-window-streaks",

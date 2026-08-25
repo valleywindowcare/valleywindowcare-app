@@ -251,7 +251,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
         "how-to-safely-decorate-your-roof-for-christmas-diy-tips-for-a-festive-038-stylish-holiday-home",
         "can-i-clean-my-windows-with-tap-water",
         "hiring-window-cleaners-what-you-should-know",
-        "how-to-measure-your-windows-for-blinds"
+        "how-to-measure-your-windows-for-blinds",
+        "exterior-house-cleaning-checklist"
     ];
 
     const blogRoutes: MetadataRoute.Sitemap = blogData
