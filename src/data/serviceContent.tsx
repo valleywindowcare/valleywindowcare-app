@@ -228,18 +228,38 @@ export const serviceContentMap: Record<string, { pageH1?: string, description: R
         },
         image: "/images/portfolio/gutter-cleaning.webp",
         faqs: [
-          {
-                    "question": "Do you clean up the debris after flushing the gutters?",
-                    "answer": "Yes, every gutter cleaning service includes full debris removal and flushing of the downspouts to guarantee proper water flow."
-          },
-          {
-                    "question": "How often should Fox Valley residents clean their gutters?",
-                    "answer": "With the heavy foliage in the Fox Valley, we recommend clearing your gutters at least twice a year—once in late spring and once after the leaves fall in autumn."
-          },
-          {
-                    "question": "Can clogged gutters cause foundation damage?",
-                    "answer": "Absolutely. Blocked gutters force rainwater to overflow straight down your siding, pooling around the foundation and potentially causing basement leaks or freezing damage in winter."
-          }
+            {
+                "question": "How often should Northeast Wisconsin residents clean their gutters?",
+                "answer": "With the heavy seasonal foliage in the Fox Valley, we recommend clearing your gutters at least twice a year—once in late spring to remove oak tassels, seed pods, and pine needles, and once in late autumn after the leaves fall to prepare for winter."
+            },
+            {
+                "question": "Can clogged gutters cause foundation damage or basement leaks?",
+                "answer": "Yes, absolutely. Blocked gutters force rainwater to overflow straight down your siding. This water pools directly around your foundation, potentially causing basement cracks, crawlspace dampness, or winter soil heaving that compromises structural integrity."
+            },
+            {
+                "question": "What safety equipment and standoffs do you use to protect my property?",
+                "answer": "We prioritize property protection. We exclusively use padded ladder stand-off arms that rest the weight of our ladders directly against your roof deck rather than resting them against your delicate aluminum gutter lips, guaranteeing zero gutter denting."
+            },
+            {
+                "question": "Do you clear and verify the flow of downspouts?",
+                "answer": "Yes! Every standard gutter cleaning includes full vertical flushing of all downspouts. We clear any elbows of packed organic sludge and verify clear water flow all the way to ground level or underground drain exits."
+            },
+            {
+                "question": "Is it necessary to be home during the gutter cleaning service?",
+                "answer": "No, you do not need to be home. As long as we have exterior access to all sides of the property, gates are unlocked, and pets are safely indoors, our technicians can perform the service and send you before-and-after photos."
+            },
+            {
+                "question": "Do you clean the outside of the gutters (gutter brightening)?",
+                "answer": "Standard gutter cleaning clears debris from the inside of the gutters to ensure proper water flow. If your gutters have black vertical runoff stripes (often called 'tiger striping'), we offer a premium Gutter Brightening service using specialized chemical solutions that safely lift these oxidation lines."
+            },
+            {
+                "question": "What do you do with the organic debris you remove from the gutters?",
+                "answer": "We manually scoop all debris out of your gutters and bag it directly on the roof. We never blow or fling gutter sludge down onto your siding, deck, or landscaping. All bags are completely hauled away and composted off-site."
+            },
+            {
+                "question": "Do you install gutter guards or clean gutters that already have guards installed?",
+                "answer": "Yes! We can clean gutters with existing guards by carefully removing sections to clear trapped pine needles and sediment. We also offer professional micro-mesh gutter guard installation services to dramatically reduce cleaning frequencies."
+            }
         ]
     },
     "concrete-cleaning": {

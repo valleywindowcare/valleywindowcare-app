@@ -75,7 +75,7 @@ export default function PricingPage() {
                                             <li>Landscape & Plant Protection Protocol</li>
                                         </ul>
                                     </td>
-                                    <td className="p-6 font-extrabold text-navy text-right text-lg">$350</td>
+                                    <td className="p-6 font-extrabold text-navy text-right text-lg">$350 </td>
                                 </tr>
                                 <tr className="hover:bg-slate-50 transition-colors bg-slate-50/30">
                                     <td className="p-6 font-bold text-navy">
@@ -91,7 +91,7 @@ export default function PricingPage() {
                                             <li>Premium Soap & Wax Upgrade</li>
                                         </ul>
                                     </td>
-                                    <td className="p-6 font-extrabold text-navy text-right text-lg">$550</td>
+                                    <td className="p-6 font-extrabold text-navy text-right text-lg">$550 </td>
                                 </tr>
                                 <tr className="hover:bg-slate-50 transition-colors">
                                     <td className="p-6 font-bold text-navy">
@@ -109,7 +109,70 @@ export default function PricingPage() {
                                             <li>Salt Neutralization & Post-Treatment</li>
                                         </ul>
                                     </td>
-                                    <td className="p-6 font-extrabold text-navy text-right text-lg">$950</td>
+                                    <td className="p-6 font-extrabold text-navy text-right text-lg">$950 </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            {/* Per-Service Breakdown Table */}
+            <section className="py-16 bg-slate-50 border-t border-gray-100">
+                <div className="container mx-auto px-4 max-w-5xl">
+                    <div className="text-center mb-12">
+                        <h2 className="text-3xl font-extrabold text-navy mb-4">Per-Service Pricing Breakdown</h2>
+                        <p className="text-gray-600 max-w-2xl mx-auto">
+                            Detailed starting estimates and typical job specifications for each of our core services.
+                        </p>
+                    </div>
+
+                    <div className="overflow-x-auto border border-gray-200 rounded-2xl shadow-sm bg-white">
+                        <table className="w-full text-left border-collapse">
+                            <thead>
+                                <tr className="bg-navy text-white text-sm uppercase tracking-wider">
+                                    <th className="p-6 font-bold">Service Name</th>
+                                    <th className="p-6 font-bold">Property Size / Range</th>
+                                    <th className="p-6 font-bold">Estimated Price Range</th>
+                                    <th className="p-6 font-bold">Key Inclusions</th>
+                                    <th className="p-6 font-bold">Typical Time on Site</th>
+                                </tr>
+                            </thead>
+                            <tbody className="divide-y divide-gray-200 text-gray-700">
+                                <tr className="hover:bg-slate-50 transition-colors">
+                                    <td className="p-6 font-bold text-navy">Roof Cleaning</td>
+                                    <td className="p-6 text-sm">1,500 - 3,000 sq ft (Roof area)</td>
+                                    <td className="p-6 text-sm font-semibold">$500 - $950 </td>
+                                    <td className="p-6 text-sm">ARMA-compliant soft wash, moss/lichen kill, gutter rinse</td>
+                                    <td className="p-6 text-sm">2.5 - 4 hours</td>
+                                </tr>
+                                <tr className="hover:bg-slate-50 transition-colors">
+                                    <td className="p-6 font-bold text-navy">House Washing</td>
+                                    <td className="p-6 text-sm">1,500 - 3,000 sq ft (Siding area)</td>
+                                    <td className="p-6 text-sm font-semibold">$350 - $600 </td>
+                                    <td className="p-6 text-sm">Low-pressure soft wash siding, gutter exterior brightening</td>
+                                    <td className="p-6 text-sm">1.5 - 3 hours</td>
+                                </tr>
+                                <tr className="hover:bg-slate-50 transition-colors">
+                                    <td className="p-6 font-bold text-navy">Window Cleaning</td>
+                                    <td className="p-6 text-sm">15 - 30 Windows (Interior/Exterior)</td>
+                                    <td className="p-6 text-sm font-semibold">$150 - $300 </td>
+                                    <td className="p-6 text-sm">Streak-free glass wash, screen wipe, sill cleaning</td>
+                                    <td className="p-6 text-sm">2 - 3.5 hours</td>
+                                </tr>
+                                <tr className="hover:bg-slate-50 transition-colors">
+                                    <td className="p-6 font-bold text-navy">Gutter Cleaning</td>
+                                    <td className="p-6 text-sm">100 - 250 linear ft</td>
+                                    <td className="p-6 text-sm font-semibold">$150 - $350 </td>
+                                    <td className="p-6 text-sm">Debris extraction, downspout flushing & flow check</td>
+                                    <td className="p-6 text-sm">1 - 2 hours</td>
+                                </tr>
+                                <tr className="hover:bg-slate-50 transition-colors">
+                                    <td className="p-6 font-bold text-navy">Concrete Cleaning</td>
+                                    <td className="p-6 text-sm">400 - 1,200 sq ft (Driveway/Walkways)</td>
+                                    <td className="p-6 text-sm font-semibold">$250 - $500 </td>
+                                    <td className="p-6 text-sm">Hot-water pressure wash, post-treatment brightening</td>
+                                    <td className="p-6 text-sm">1.5 - 3 hours</td>
                                 </tr>
                             </tbody>
                         </table>

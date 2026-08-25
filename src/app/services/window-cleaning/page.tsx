@@ -247,16 +247,36 @@ export default function ServicePage() {
                     <section className="mb-16 mt-16 bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-gray-100">
                         <FAQSchema faqs={[
                             {
-                                question: "Do you clean window screens and exterior tracks?",
-                                answer: "Yes. Every exterior window washing service includes complimentary dry-brushing of screens and wiping out of the immediate exterior window tracks."
+                                question: "How often should I have my windows professionally cleaned in Northeast Wisconsin?",
+                                answer: "For most residential properties in Green Bay, Appleton, and the Fox Valley, we recommend a minimum of two professional cleanings per year (typically spring and fall). Homes surrounded by dense trees, dirt roads, or lake winds (such as Door County waterfront estates) may require quarterly cleanings to prevent mineral buildup and insect debris."
                             },
                             {
-                                question: "Does pure-water cleaning really work without soap?",
-                                answer: "Absolutely. By aggressively filtering regular tap water with reverse-osmosis and deionizing resin, the hungry pure water molecules act as a powerful solvent that breaks down dirt naturally, leaving a 100% streak-free finish."
+                                question: "What safety equipment and protocols does your team use for multi-story window cleaning?",
+                                answer: "Safety is our absolute priority. We utilize advanced carbon-fiber water-fed extension poles that allow us to clean windows up to 3 stories high safely from the ground. For higher panes, our technicians are trained in OSHA-compliant ladder safety and stand-off stabilizer brackets that rest on structural walls rather than delicate siding or gutters. We are fully insured with a $2M general liability policy for your complete peace of mind."
                             },
                             {
-                                question: "Do you offer commercial window cleaning for Green Bay businesses?",
-                                answer: "Yes. We offer customized commercial route schedules for local storefronts, offices, and multi-story retail locations to ensure your business constantly attracts foot traffic."
+                                question: "Do you guarantee a streak-free finish? What if it rains right after my service?",
+                                answer: "Yes, we back all of our window cleaning services with a 100% Streak-Free Guarantee. Our multi-stage deionized water filtration system strips all dissolved solids, leaving zero residue. If you notice any streaks or spots within 48 hours of your service, notify us and we will return to re-clean those panes completely free of charge. If it rains within 24 hours of your cleaning, we also cover you under our local weather warranty."
+                            },
+                            {
+                                question: "Is seasonal window cleaning available during late autumn or winter?",
+                                answer: "We offer professional window cleaning throughout the spring, summer, and late autumn months (typically down to 35°F). In the late autumn, window cleaning is crucial for removing summer pollen and preparing your home for winter's low-angle sunlight. We do not perform window cleaning in freezing winter temperatures due to ice safety hazards for our technicians and risk of glass thermal shock."
+                            },
+                            {
+                                question: "How does pure-water cleaning work without soap or squeegees?",
+                                answer: "We utilize multi-stage deionization filtration (pure water technology) that strips regular tap water of all minerals (calcium, magnesium, etc.). Because the water is completely pure, it behaves like a natural solvent, aggressively drawing dirt, organic matter, and dust off the glass surface. The windows are then left to dry naturally, leaving a completely spot-free, streak-free finish with no soapy residue that would quickly attract new dirt."
+                            },
+                            {
+                                question: "Do you clean window screens, tracks, and frames, or just the glass?",
+                                answer: "Every standard window cleaning service includes complimentary dry-brushing of screens and wiping out of the immediate exterior window tracks and sills. For heavily soiled tracks or screens requiring deep chemical washing and restoration, we offer premium screen-cleaning upgrades to restore them to like-new condition."
+                            },
+                            {
+                                question: "Can you remove hard water spots, paint, or construction debris from windows?",
+                                answer: "Standard window cleaning easily removes dirt, pollen, and insect spots. For windows with heavy white hard water etching (caused by mineral-heavy lawn sprinklers or concrete runoff) or post-construction paint overspray and tape residue, we offer specialized restoration services utilizing acid-based mineral dissolving solutions and safety glass scrapers to safely lift the contaminants."
+                            },
+                            {
+                                question: "Do you clean interior windows as well as exterior?",
+                                answer: "Yes! We provide both interior and exterior window cleaning packages. When cleaning interior windows, our technicians wear protective shoe covers, utilize clean drop cloths under every window, and use specialized micro-mist sprayers to ensure zero water drips or overspray on your walls, baseboards, or carpets."
                             }
                         ]} />
                         <div className="text-center mb-10">
@@ -265,16 +285,36 @@ export default function ServicePage() {
                         </div>
                         <div className="space-y-6 text-left">
                             <div className="p-6 bg-slate-50 border-l-4 border-gold rounded-r-xl">
-                                <h3 className="text-xl font-bold text-navy mb-2">Q: Do you clean window screens and exterior tracks?</h3>
-                                <p className="text-gray-700 leading-relaxed font-medium">A: Yes. Every exterior window washing service includes complimentary dry-brushing of screens and wiping out of the immediate exterior window tracks.</p>
+                                <h3 className="text-xl font-bold text-navy mb-2">Q: How often should I have my windows professionally cleaned in Northeast Wisconsin?</h3>
+                                <p className="text-gray-700 leading-relaxed font-medium">A: For most residential properties in Green Bay, Appleton, and the Fox Valley, we recommend a minimum of two professional cleanings per year (typically spring and fall). Homes surrounded by dense trees, dirt roads, or lake winds (such as Door County waterfront estates) may require quarterly cleanings to prevent mineral buildup and insect debris.</p>
                             </div>
                             <div className="p-6 bg-slate-50 border-l-4 border-gold rounded-r-xl">
-                                <h3 className="text-xl font-bold text-navy mb-2">Q: Does pure-water cleaning really work without soap?</h3>
-                                <p className="text-gray-700 leading-relaxed font-medium">A: Absolutely. By aggressively filtering regular tap water with reverse-osmosis and deionizing resin, the hungry pure water molecules act as a powerful solvent that breaks down dirt naturally, leaving a 100% streak-free finish.</p>
+                                <h3 className="text-xl font-bold text-navy mb-2">Q: What safety equipment and protocols does your team use for multi-story window cleaning?</h3>
+                                <p className="text-gray-700 leading-relaxed font-medium">A: Safety is our absolute priority. We utilize advanced carbon-fiber water-fed extension poles that allow us to clean windows up to 3 stories high safely from the ground. For higher panes, our technicians are trained in OSHA-compliant ladder safety and stand-off stabilizer brackets that rest on structural walls rather than delicate siding or gutters. We are fully insured with a $2M general liability policy for your complete peace of mind.</p>
                             </div>
                             <div className="p-6 bg-slate-50 border-l-4 border-gold rounded-r-xl">
-                                <h3 className="text-xl font-bold text-navy mb-2">Q: Do you offer commercial window cleaning for Green Bay businesses?</h3>
-                                <p className="text-gray-700 leading-relaxed font-medium">A: Yes. We offer customized commercial route schedules for local storefronts, offices, and multi-story retail locations to ensure your business constantly attracts foot traffic.</p>
+                                <h3 className="text-xl font-bold text-navy mb-2">Q: Do you guarantee a streak-free finish? What if it rains right after my service?</h3>
+                                <p className="text-gray-700 leading-relaxed font-medium">A: Yes, we back all of our window cleaning services with a 100% Streak-Free Guarantee. Our multi-stage deionized water filtration system strips all dissolved solids, leaving zero residue. If you notice any streaks or spots within 48 hours of your service, notify us and we will return to re-clean those panes completely free of charge. If it rains within 24 hours of your cleaning, we also cover you under our local weather warranty.</p>
+                            </div>
+                            <div className="p-6 bg-slate-50 border-l-4 border-gold rounded-r-xl">
+                                <h3 className="text-xl font-bold text-navy mb-2">Q: Is seasonal window cleaning available during late autumn or winter?</h3>
+                                <p className="text-gray-700 leading-relaxed font-medium">A: We offer professional window cleaning throughout the spring, summer, and late autumn months (typically down to 35°F). In the late autumn, window cleaning is crucial for removing summer pollen and preparing your home for winter's low-angle sunlight. We do not perform window cleaning in freezing winter temperatures due to ice safety hazards for our technicians and risk of glass thermal shock.</p>
+                            </div>
+                            <div className="p-6 bg-slate-50 border-l-4 border-gold rounded-r-xl">
+                                <h3 className="text-xl font-bold text-navy mb-2">Q: How does pure-water cleaning work without soap or squeegees?</h3>
+                                <p className="text-gray-700 leading-relaxed font-medium">A: We utilize multi-stage deionization filtration (pure water technology) that strips regular tap water of all minerals (calcium, magnesium, etc.). Because the water is completely pure, it behaves like a natural solvent, aggressively drawing dirt, organic matter, and dust off the glass surface. The windows are then left to dry naturally, leaving a completely spot-free, streak-free finish with no soapy residue that would quickly attract new dirt.</p>
+                            </div>
+                            <div className="p-6 bg-slate-50 border-l-4 border-gold rounded-r-xl">
+                                <h3 className="text-xl font-bold text-navy mb-2">Q: Do you clean window screens, tracks, and frames, or just the glass?</h3>
+                                <p className="text-gray-700 leading-relaxed font-medium">A: Every standard window cleaning service includes complimentary dry-brushing of screens and wiping out of the immediate exterior window tracks and sills. For heavily soiled tracks or screens requiring deep chemical washing and restoration, we offer premium screen-cleaning upgrades to restore them to like-new condition.</p>
+                            </div>
+                            <div className="p-6 bg-slate-50 border-l-4 border-gold rounded-r-xl">
+                                <h3 className="text-xl font-bold text-navy mb-2">Q: Can you remove hard water spots, paint, or construction debris from windows?</h3>
+                                <p className="text-gray-700 leading-relaxed font-medium">A: Standard window cleaning easily removes dirt, pollen, and insect spots. For windows with heavy white hard water etching (caused by mineral-heavy lawn sprinklers or concrete runoff) or post-construction paint overspray and tape residue, we offer specialized restoration services utilizing acid-based mineral dissolving solutions and safety glass scrapers to safely lift the contaminants.</p>
+                            </div>
+                            <div className="p-6 bg-slate-50 border-l-4 border-gold rounded-r-xl">
+                                <h3 className="text-xl font-bold text-navy mb-2">Q: Do you clean interior windows as well as exterior?</h3>
+                                <p className="text-gray-700 leading-relaxed font-medium">A: Yes! We provide both interior and exterior window cleaning packages. When cleaning interior windows, our technicians wear protective shoe covers, utilize clean drop cloths under every window, and use specialized micro-mist sprayers to ensure zero water drips or overspray on your walls, baseboards, or carpets.</p>
                             </div>
                         </div>
                     </section>
