@@ -38,7 +38,7 @@ export default function PricingPage() {
                 showScrollArrow={true}
             />
             <div id="calculator-hub">
-                <ValueCalculator />
+                <ValueCalculator hideSchema />
             </div>
 
             {/* Package Comparison Table */}

@@ -83,8 +83,7 @@ const coreRoutesList = [
     "/terms-and-conditions",
     "/service-guarantee",
     "/wisconsin-maintenance-calendar",
-    "/quote",
-    "/paver-patio-restorations"
+    "/quote"
 ];
 
 // Active services dynamically mapped from services/[service]/page.tsx array (36 services) + 6 static services
@@ -94,6 +93,7 @@ const validServices = [
     "gutter-cleaning",
     "concrete-cleaning",
     "window-cleaning",
+    "christmas-lighting",
     "pressure-washing",
     "fence-cleaning",
     "deck-cleaning",

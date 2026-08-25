@@ -11,46 +11,46 @@ import PricingMatrix from '@/components/PricingMatrix';
 import VanillaMapClient from '@/components/VanillaMapClient';
 
 export const metadata = {
-    title: "Permanent LED Lighting Installers | Green Bay & Appleton",
-    description: "Northeast Wisconsin's certified Omni permanent holiday and architectural lighting installers. Low-profile smart track systems for homes and businesses.",
+    title: "Professional Christmas Light Installation | Green Bay & Fox Valley",
+    description: "Hang your holiday lights safely with Northeast Wisconsin's premier Christmas light installers. Custom-cut commercial-grade LED design, maintenance, removal, and storage.",
 };
 
 const faqs = [
     {
-        question: "What is Omni Permanent LED Lighting, and how does it compare to other track systems?",
-        answer: "Omni Permanent LED Lighting is a premium, architectural-grade smart track system designed to be permanently mounted under your home's roofline. Unlike other systems like Oelo or Trimlight, Omni utilizes a highly durable, custom-extruded aluminum track that is precisely color-matched to your existing gutters, soffit, and fascia. This ensure that by day, the system is completely invisible, maintaining your property's clean architectural lines. By night, the individually addressable RGBW LED diodes deliver stunning, high-lumen lighting. Omni also uses a dedicated, true-warm-white LED chip alongside the RGB diodes. This allows you to generate a soft, elegant 2700K warm white wash for everyday architectural security, as well as millions of vibrant holiday colors, which is a major advantage over standard RGB systems that produce a harsh, bluish-white light."
+        question: "Do I buy the holiday lights, or does your company lease them?",
+        answer: "We operate on a complete, all-inclusive lease model. We supply commercial-grade C9 LED lighting specifically designed and custom-cut to your home's unique roofline dimensions. Because we lease the lights, you do not have to worry about upfront bulb purchases, failing strands, or bulb deterioration. If a bulb burns out or a clip slips during the holiday season, we replace it at no charge. At the end of the season, we remove the lights, label them for your property, and store them in our climate-controlled facility. This lease structure guarantees a stress-free holiday display with brand-new, commercial-grade components every year."
     },
     {
-        question: "Is the permanent track visible from the street during the day?",
-        answer: "No. The Omni track system is specifically engineered for low-profile aesthetics. The custom aluminum tracks are professionally color-matched to your home's fascia or soffits. The track mounts directly under the eave behind the drip edge, facing downward or outward depending on your home's architectural shape. The LED diodes are recessed inside the channel, meaning they do not protrude or catch the light. From the street, the track looks like a natural, built-in piece of trim molding, making the entire installation virtually invisible during the day."
+        question: "What is the difference between commercial-grade C9 LEDs and store-bought holiday lights?",
+        answer: "Standard retail lights are typically thin-gauge, mass-produced wires with non-removable bulbs that easily break, fail, or tangle. Commercial-grade C9 LED light strings are built with heavy-gauge, UV-protected copper wires and use custom socket configurations. The bulbs are threaded and utilize durable acrylic casings that are virtually shatterproof. Furthermore, because we build each display custom to your roofline, there are no messy overlapping strands or extension cords hanging over your siding. The commercial C9 bulbs are also significantly brighter, delivering a crisp, high-lumen, uniform holiday aesthetic that store-bought strands cannot match."
     },
     {
-        question: "How are the permanent LED lights controlled, and can they be scheduled?",
-        answer: "The Omni system is powered by a state-of-the-art cloud controller that connects to your local Wi-Fi network. You control the lights using a dedicated smartphone app (iOS and Android). The app allows you to customize every single light diode individually, select from hundreds of pre-built holiday and sports-themed animations, or build your own custom color palettes. It features an advanced calendar scheduling system, allowing you to set programs to run automatically for specific holidays, birthdays, or game days, or activate a soft architectural warm white to turn on at sunset and off at sunrise for year-round security lighting."
+        question: "Is maintenance and bulb replacement included during the holiday season?",
+        answer: "Yes, complete seasonal maintenance is included in our lease contract at zero additional cost. Wisconsin winters can bring heavy snow, ice storms, and high winds that can shift light clips or compromise wiring. If you ever notice a bulb burns out, a clip slips, or a strand stops illuminating, simply contact our office. We guarantee to send a service technician to your property within 24 to 48 hours to resolve the issue, keeping your holiday display looking perfect from Thanksgiving through New Year's."
     },
     {
-        question: "What is the lifespan and warranty of the Omni permanent lighting system?",
-        answer: "Omni permanent LED systems are built to withstand Northeast Wisconsin's extreme weather, including sub-zero winter temperatures and heavy summer storms. The LED diodes are rated for 50,000 hours of active use, which translates to over 15 to 20 years of normal operation. The system is backed by a comprehensive manufacturer's product warranty covering the diodes and controller, and Valley Property Services provides a dedicated labor warranty on our professional installations. If an individual diode ever fails, our modular track design allows us to swap out that single bulb quickly without replacing the entire track."
+        question: "When do you install the lights, and when do you remove them?",
+        answer: "Our installation window begins in early October and runs through mid-December. We recommend booking early, as our schedule fills up rapidly by November. We can install the light tracks early in the autumn when temperatures are milder, and you can plug in the timers whenever you are ready to illuminate your display. Removal begins in early January, typically starting after New Year's Day, and runs through mid-February depending on winter snow accumulation and eave ice conditions. You do not need to be home for either the installation or the removal process."
     },
     {
-        question: "What is the electricity cost of running permanent LED lighting year-round?",
-        answer: "Permanent LED lighting is incredibly energy-efficient. Because the system utilizes low-voltage DC power (12V or 24V depending on the run length), the power draw is a fraction of standard incandescent or traditional Christmas light strings. Running a standard 150-foot Omni system for 4 hours every evening costs approximately $1.50 to $3.00 per month in electricity. This allows you to use the system every night for architectural security lighting without worrying about high electric bills."
+        question: "How do you configure timers, and are they smart app-controlled?",
+        answer: "We supply heavy-duty, weather-rated digital phototimers or smart outdoor plugs with every installation. The standard timers use photosensors to turn the lights on automatically at dusk and can be programmed to run for 2, 4, 6, or 8 hours, or remain on until dawn. If you prefer, we can integrate smart Wi-Fi plugs that connect to your home Wi-Fi, allowing you to set custom schedules, turn the lights on or off remotely, or integrate the display with your existing smart home systems directly from your smartphone."
     },
     {
-        question: "Do you install permanent lighting on commercial buildings and storefronts?",
-        answer: "Yes, we provide professional permanent LED lighting installations for commercial properties, including retail centers, corporate offices, c-stores, and hospitality venues across the Fox Valley. Permanent commercial lighting is an excellent way to draw attention to your business, highlight your building's architecture, and display custom brand colors or seasonal holiday designs. The system also serves as highly effective night security lighting, reducing liability and protecting your storefront."
+        question: "What safety protocols do your crews follow when installing roofline lights?",
+        answer: "Safety is our highest priority. Hanging holiday lights requires working on high rooflines in freezing weather, presenting major fall hazards. Our technicians are fully trained in OSHA safety guidelines, wear specialized slip-resistant footwear designed for roof pitches, and utilize professional safety harnesses and anchoring gear. We are fully insured with a $2M general liability policy and complete workers' compensation insurance, protecting you from any personal liability or injury risk on your property."
     },
     {
-        question: "How long does a professional permanent lighting installation take?",
-        answer: "For a standard residential home (150 to 250 linear feet), a professional installation is typically completed in 1 to 2 workdays. Our certified technicians use professional safety ladders and boom lifts to install the track securely under your eaves. We handle all low-voltage wiring, mount the weather-rated controller box, and walk you through the app setup and scheduling configurations on your phone before we leave the job site."
+        question: "Do you install Christmas lights on commercial buildings or retail storefronts?",
+        answer: "Yes, we have a dedicated commercial holiday lighting division serving shopping plazas, offices, restaurants, bank branches, and municipalities across Green Bay, Appleton, and De Pere. Commercial holiday displays increase customer traffic, draw attention to your storefront, and enhance employee morale. We handle the entire design, municipal power planning, overnight installation, maintenance, and seasonal storage, allowing you to focus on your holiday business operations."
     }
 ];
 
-export default function PermanentLEDLightingPage() {
+export default function ChristmasLightingPage() {
     const jsonLd = {
         "@context": "https://schema.org",
         "@type": "Service",
-        "name": "Permanent LED Lighting Installation Services",
+        "name": "Christmas Light Installation Services",
         "provider": {
             "@type": "HomeAndConstructionBusiness",
             "@id": "https://valleyexteriorpros.com/#organization",
@@ -72,7 +72,7 @@ export default function PermanentLEDLightingPage() {
                 "price": "500.00"
             }
         },
-        "description": "Certified installers of Omni permanent LED holiday and architectural lighting systems."
+        "description": "Professional commercial-grade Christmas light installation, lease, maintenance, and storage services."
     };
 
     return (
@@ -103,8 +103,8 @@ export default function PermanentLEDLightingPage() {
                             {
                                 "@type": "ListItem",
                                 "position": 3,
-                                "name": "Permanent LED Lighting",
-                                "item": "https://valleyexteriorpros.com/services/permanent-led-lighting"
+                                "name": "Christmas Lighting",
+                                "item": "https://valleyexteriorpros.com/services/christmas-lighting"
                             }
                         ]
                     })
@@ -116,7 +116,7 @@ export default function PermanentLEDLightingPage() {
                 <div className="absolute inset-0 z-0">
                     <Image
                         src="/images/portfolio/permanent-led-lighting.webp"
-                        alt="Permanent LED Lighting Installation"
+                        alt="Christmas Light Installation"
                         fill
                         priority={true}
                         quality={100}
@@ -127,11 +127,11 @@ export default function PermanentLEDLightingPage() {
                 <div className="container mx-auto px-4 relative z-20 flex flex-col items-center justify-center text-center pt-24 pb-12">
                     <div className="max-w-4xl mb-8">
                         <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold leading-tight mb-6 tracking-tight drop-shadow-lg mx-auto text-white">
-                            Permanent <span className="text-gold">LED Lighting</span><br />
+                            Holiday & <span className="text-gold">Christmas Light Hanging</span><br />
                             <span className="text-2xl md:text-3xl mt-4 block">Green Bay & Northeast Wisconsin</span>
                         </h1>
                         <p className="text-lg md:text-xl text-gray-100 mb-6 font-semibold leading-relaxed drop-shadow-md">
-                            Certified Omni Installers. Year-round smart holiday and architectural accent track systems.
+                            Safely hang your holiday lights. Custom-cut commercial-grade C9 LEDs, maintenance, removal, and storage.
                         </p>
                         <div className="mb-6 flex flex-wrap justify-center gap-4 text-xs sm:text-sm font-bold text-white relative z-10">
                           <div className="bg-slate-900/90 text-white border border-slate-700/60 px-3.5 py-1.5 rounded-full shadow-md font-semibold text-xs md:text-sm inline-flex items-center gap-2">
@@ -146,7 +146,7 @@ export default function PermanentLEDLightingPage() {
                     <div className="relative z-10 w-full max-w-xl mx-auto bg-white rounded-xl shadow-2xl overflow-hidden flex flex-col text-navy-dark min-h-[500px]">
                         <div className="bg-gradient-to-br from-[#1B365D]/95 to-[#2c538c]/95 text-white w-full border-b border-white/10">
                             <div className="flex flex-col items-center justify-center text-center w-full pt-4 pb-2">
-                                <h3 className="text-2xl font-bold text-center w-full block">Get In Touch Fast</h3>
+                                <h3 className="text-2xl font-bold text-center w-full block">Get a Holiday Quote Fast</h3>
                             </div>
                             <div className="flex flex-row justify-around items-center p-6 w-full">
                                 <a href="tel:920-609-7085" className="min-w-0 flex flex-col items-center gap-2 hover:text-gold transition-colors group text-center" rel="nofollow">
@@ -178,58 +178,53 @@ export default function PermanentLEDLightingPage() {
             <div className="max-w-4xl mx-auto bg-white text-navy rounded-2xl shadow-sm p-4 sm:p-8 mt-12 mb-20 relative z-10">
                 <article className="prose prose-lg md:prose-xl text-gray-600 max-w-none mb-16">
                     
-                    {/* Omni Certified Installer Block */}
-                    <div className="mb-16 max-w-4xl mx-auto text-center bg-slate-50 p-8 rounded-3xl border border-gray-100 shadow-sm not-prose">
-                        <div className="flex justify-center mb-6 bg-[#1B365D] p-6 rounded-2xl max-w-xs mx-auto shadow-md">
-                            <Image src="/images/portfolio/Omni Certified Installer Logo (1).png" alt="Powered By Omni" width={250} height={100} className="object-contain" />
-                        </div>
-                        <p className="text-gray-700 text-lg leading-relaxed font-medium text-left max-w-2xl mx-auto">
-                            Say goodbye to ladders and tangled strands forever. If you are searching for an <strong>Oelo and Trimlight Authorized Installer</strong> in Green Bay or Appleton, Valley Property Services serves as your elite alternative. We are proud to exclusively deploy Omni Permanent Lighting. Designed to be virtually invisible by day and spectacular by night, our track-based LED system provides elegant architectural lighting and vibrant holiday displays year-round.
-                        </p>
-                    </div>
-
                     {/* SECTION 1: INTRODUCTION */}
-                    <section className="mb-12">
+                    <section className="mb-12 mt-8">
                         <div className="text-lg leading-relaxed mb-8 font-bold text-navy">
-                            Valley Property Services is the leading certified installer of premium Omni Permanent LED Smart Track lighting for properties throughout <Link href="/service-areas/appleton" className="text-blue-600 hover:text-gold font-semibold transition-colors">Appleton</Link>, <Link href="/service-areas/green-bay" className="text-blue-600 hover:text-gold font-semibold transition-colors">Green Bay</Link>, and <Link href="/service-areas/de-pere" className="text-blue-600 hover:text-gold font-semibold transition-colors">De Pere</Link>, WI.
+                            Valley Property Services provides professional Christmas light installation and leasing services in <Link href="/service-areas/appleton" className="text-blue-600 hover:text-gold font-semibold transition-colors">Appleton</Link>, <Link href="/service-areas/green-bay" className="text-blue-600 hover:text-gold font-semibold transition-colors">Green Bay</Link>, and <Link href="/service-areas/de-pere" className="text-blue-600 hover:text-gold font-semibold transition-colors">De Pere</Link>, WI.
                         </div>
                         <p className="leading-relaxed text-lg mb-6">
-                            Year-round lighting is a major upgrade for any modern home. Standard holiday string lights deteriorate quickly, require dangerous ladder climbs twice a year, and clutter your eaves. By installing a custom permanent track system, you secure a long-term architectural asset.
+                            Decorating your home for the holidays is a beloved tradition, but it presents major safety risks. Balancing on tall extension ladders in icy, freezing weather to hang holiday lights can lead to severe accidents. Furthermore, store-bought string lights fail frequently, leave messy hanging cords, and require hours of detangling and packaging every winter.
                         </p>
                         <p className="leading-relaxed text-lg mb-6">
-                            We utilize Omni track systems built with high-lumen RGBW smart diodes. The custom-extruded aluminum track is color-matched to your home's fascia, completely hiding the tracks during the day. By night, you can choose from millions of colors, set scheduling routines, or use a soft 2700K warm white for year-round architectural accent and safety.
+                            We provide a completely hands-free holiday solution. We design, supply, install, maintain, remove, and store your Christmas displays. We utilize commercial-grade, shatterproof C9 LED lights that are custom-cut to your home's rooflines, ensuring a spectacular, uniform glow with zero overlapping wires or extension cords.
                         </p>
                     </section>
 
-                    {/* SECTION 2: TECHNICAL DETAILS */}
+                    {/* SECTION 2: LEASING MODEL DETAIL */}
                     <section className="mb-12">
-                        <h2 className="text-3xl font-extrabold text-navy mb-6">The Technology Behind Omni Smart Track Systems</h2>
+                        <h2 className="text-3xl font-extrabold text-navy mb-6">Our Turnkey Lease & Storage Model</h2>
                         <p className="leading-relaxed text-lg mb-6">
-                            Many consumers compare Omni to older generation systems like Trimlight. The key difference lies in the diode structure and aluminum extrusion durability. Omni uses individually addressable LED diodes that feature a dedicated, independent warm white chip. This enables you to emit a true soft-white glow rather than the harsh, unnatural bluish-white color created by standard RGB-only tracks.
+                            We operate on a complete lease model, meaning you do not have to purchase expensive lighting gear that will degrade over time. We supply the lighting strands, custom-fit clips, wiring, and phototimers. If any bulb burns out or a storm shifts a strand, our crews come out and repair it at no cost.
                         </p>
                         <p className="leading-relaxed text-lg mb-6">
-                            The tracks themselves are built from heavy-gauge aluminum designed to withstand high winds, sub-zero winter temperatures, and summer UV rays. Diodes are recessed inside the track, preventing them from catching sunlight or street view angles, ensuring the track blends in with your trim.
+                            After the holidays, we remove the display, label the layout for your property, and store it in our dry, climate-controlled facility. This ensures your lights stay protected from dust, water, and pests, keeping them ready for a bright re-installation next season.
                         </p>
                     </section>
 
                     {/* SECTION 3: WORKFLOW */}
                     <section className="mb-12">
-                        <h2 className="text-3xl font-extrabold text-navy mb-6">Our 3-Phase Installation Process</h2>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 not-prose">
+                        <h2 className="text-3xl font-extrabold text-navy mb-6">Our 4-Step Holiday Light Service</h2>
+                        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 not-prose">
                             <div className="bg-slate-50 p-6 rounded-xl border border-gray-100 shadow-sm">
                                 <span className="text-gold font-black text-2xl mb-2 block">01</span>
-                                <h4 className="text-lg font-bold text-navy mb-2">Measure & Color Match</h4>
-                                <p className="text-gray-600 text-sm leading-relaxed">We inspect your roofline, calculate total linear footage, and select the aluminum track color that matches your soffit.</p>
+                                <h4 className="text-lg font-bold text-navy mb-2">Custom Design</h4>
+                                <p className="text-gray-600 text-xs leading-relaxed">We calculate your roofline lengths, help you select bulb colors (white, multi, warm, etc.), and schedule an install slot.</p>
                             </div>
                             <div className="bg-slate-50 p-6 rounded-xl border border-gray-100 shadow-sm">
                                 <span className="text-gold font-black text-2xl mb-2 block">02</span>
-                                <h4 className="text-lg font-bold text-navy mb-2">Precision Eave Mount</h4>
-                                <p className="text-gray-600 text-sm leading-relaxed">We mount the low-profile aluminum tracks, run the low-voltage wiring, and set up a weather-rated smart controller.</p>
+                                <h4 className="text-lg font-bold text-navy mb-2">Pro Installation</h4>
+                                <p className="text-gray-600 text-xs leading-relaxed">Our crews hang the custom-cut C9 strands using specialized roofline clips and set up outdoor timers.</p>
                             </div>
                             <div className="bg-slate-50 p-6 rounded-xl border border-gray-100 shadow-sm">
                                 <span className="text-gold font-black text-2xl mb-2 block">03</span>
-                                <h4 className="text-lg font-bold text-navy mb-2">App Config & Handoff</h4>
-                                <p className="text-gray-600 text-sm leading-relaxed">We hook the controller to your Wi-Fi, help you install the Omni app, and program your initial holiday schedules.</p>
+                                <h4 className="text-lg font-bold text-navy mb-2">Free Maintenance</h4>
+                                <p className="text-gray-600 text-xs leading-relaxed">If a bulb burns out or a clip slips, we send a technician to fix it within 24 to 48 hours for free.</p>
+                            </div>
+                            <div className="bg-slate-50 p-6 rounded-xl border border-gray-100 shadow-sm">
+                                <span className="text-gold font-black text-2xl mb-2 block">04</span>
+                                <h4 className="text-lg font-bold text-navy mb-2">Take Down & Store</h4>
+                                <p className="text-gray-600 text-xs leading-relaxed">In January, we take down the lights, inspect all strands, label them, and store them in our climate-controlled warehouse.</p>
                             </div>
                         </div>
                     </section>
@@ -238,7 +233,7 @@ export default function PermanentLEDLightingPage() {
                     <section className="mb-12">
                         <h2 className="text-3xl font-extrabold text-navy mb-6">Scope of Work & Pricing Matrix</h2>
                         <p className="leading-relaxed text-lg mb-6">
-                            We provide flat-rate, linear-foot pricing based on the total complexity and length of your home's rooflines.
+                            We provide upfront, flat-rate pricing based on total linear footage and display complexity. Below is a baseline overview of our holiday lighting packages.
                         </p>
                         <div className="overflow-x-auto border border-gray-200 rounded-2xl shadow-sm bg-white not-prose">
                             <table className="w-full text-left border-collapse">
@@ -253,32 +248,32 @@ export default function PermanentLEDLightingPage() {
                                 </thead>
                                 <tbody className="divide-y divide-gray-100 text-gray-700 text-xs sm:text-sm">
                                     <tr className="hover:bg-slate-50 transition-colors">
-                                        <td className="p-4 font-bold text-navy">Small Track Package</td>
-                                        <td className="p-4">Up to 100 linear ft</td>
-                                        <td className="p-4 font-semibold">$1,500 - $2,500 </td>
-                                        <td className="p-4">Color-matched tracks, RGBW smart diodes, Omni controller, app setup</td>
+                                        <td className="p-4 font-bold text-navy">Basic Front Gutter Line</td>
+                                        <td className="p-4">Up to 80 linear ft</td>
+                                        <td className="p-4 font-semibold">$500 - $750 </td>
+                                        <td className="p-4">Custom-cut C9 LED bulbs, gutter clips, phototimer, post-season removal & storage</td>
+                                        <td className="p-4">2 - 3 hours</td>
+                                    </tr>
+                                    <tr className="hover:bg-slate-50 transition-colors">
+                                        <td className="p-4 font-bold text-navy">Standard Eaves & Peaked Gables</td>
+                                        <td className="p-4 font-semibold">100 - 180 linear ft</td>
+                                        <td className="p-4 font-semibold">$750 - $1,200 </td>
+                                        <td className="p-4">Front gutter line + all front peaked gables, commercial phototimer, seasonal maintenance</td>
+                                        <td className="p-4">3 - 5 hours</td>
+                                    </tr>
+                                    <tr className="hover:bg-slate-50 transition-colors">
+                                        <td className="p-4 font-bold text-navy">Premium Roofline & Ridges</td>
+                                        <td className="p-4 font-semibold">180 - 300 linear ft</td>
+                                        <td className="p-4 font-semibold">$1,200 - $2,500 </td>
+                                        <td className="p-4">Complete front roofline, side gables, main ridge caps, ground stakes, timers</td>
                                         <td className="p-4">1 workday</td>
                                     </tr>
                                     <tr className="hover:bg-slate-50 transition-colors">
-                                        <td className="p-4 font-bold text-navy">Standard Home Package</td>
-                                        <td className="p-4 font-semibold">100 - 200 linear ft</td>
-                                        <td className="p-4 font-semibold">$2,500 - $4,500 </td>
-                                        <td className="p-4">Full front roofline, peaked gables, Omni controller, complete scheduling config</td>
-                                        <td className="p-4">1 - 2 workdays</td>
-                                    </tr>
-                                    <tr className="hover:bg-slate-50 transition-colors">
-                                        <td className="p-4 font-bold text-navy">Premium Estate Package</td>
-                                        <td className="p-4 font-semibold">200 - 350 linear ft</td>
-                                        <td className="p-4 font-semibold">$4,500 - $7,500 </td>
-                                        <td className="p-4">Full perimeter track, multi-controller power injection, smart integration, tutorials</td>
-                                        <td className="p-4">2 - 3 workdays</td>
-                                    </tr>
-                                    <tr className="hover:bg-slate-50 transition-colors">
-                                        <td className="p-4 font-bold text-navy">Commercial Track System</td>
-                                        <td className="p-4 font-semibold">350+ linear ft / Plaza</td>
+                                        <td className="p-4 font-bold text-navy">Commercial Plaza display</td>
+                                        <td className="p-4 font-semibold">300+ linear ft / Plaza</td>
                                         <td className="p-4 font-semibold">Custom Quote </td>
-                                        <td className="p-4">Industrial controllers, high-output power amps, brand color match, overnight install</td>
-                                        <td className="p-4">Flexible scheduling</td>
+                                        <td className="p-4">Storefront wash prep, high-voltage timers, multi-controller setups, overnight installs</td>
+                                        <td className="p-4">Flexible off-hours</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -289,7 +284,7 @@ export default function PermanentLEDLightingPage() {
                     <section className="mb-12 mt-16 bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-gray-100 not-prose">
                         <div className="text-center mb-10">
                             <h2 className="text-3xl font-extrabold text-navy mb-4">Frequently Asked Questions</h2>
-                            <p className="text-gray-600 text-lg">Direct, technical answers regarding our permanent LED smart lighting systems.</p>
+                            <p className="text-gray-600 text-lg">Direct, technical answers regarding our Christmas light installation and leasing services.</p>
                         </div>
                         <div className="space-y-6 text-left">
                             {faqs.map((faq, idx) => (

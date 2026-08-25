@@ -62,12 +62,12 @@ export default function PaverPatioRestorationPage() {
         "offers": {
             "@type": "AggregateOffer",
             "priceCurrency": "USD",
-            "lowPrice": "350",
+            "lowPrice": "500",
             "highPrice": "3000",
             "priceSpecification": {
                 "@type": "UnitPriceSpecification",
                 "priceCurrency": "USD",
-                "minPrice": "350.00",
+                "minPrice": "500.00",
                 "maxPrice": "3000.00"
             }
         },
@@ -185,7 +185,7 @@ export default function PaverPatioRestorationPage() {
                     <section className="mb-12">
                         <h2 className="text-3xl font-extrabold text-navy mb-6">Scope of Work & Pricing Matrix</h2>
                         <p className="leading-relaxed text-lg mb-6">
-                            We provide transparent, flat-rate pricing based on the square footage and state of your paver installation. Below is a baseline overview of our packages.
+                            We provide transparent pricing based on a benchmark rate of **$3.00 per square foot** with a **Starting at $500** base project mobilization fee. Below is a baseline overview of our packages.
                         </p>
                         <div className="overflow-x-auto border border-gray-200 rounded-2xl shadow-sm bg-white not-prose">
                             <table className="w-full text-left border-collapse">
@@ -202,14 +202,14 @@ export default function PaverPatioRestorationPage() {
                                     <tr className="hover:bg-slate-50 transition-colors">
                                         <td className="p-4 font-bold text-navy">Basic Clean & Re-Sand</td>
                                         <td className="p-4">Up to 500 sq ft</td>
-                                        <td className="p-4 font-semibold">$350 - $600 </td>
+                                        <td className="p-4 font-semibold">Starting at $500<br /><span className="text-xs text-gray-500">($3.00/sq ft benchmark)</span></td>
                                         <td className="p-4">Joint extraction, algaecide sanitization, premium polymeric sand, cleanup</td>
                                         <td className="p-4">1 workday</td>
                                     </tr>
                                     <tr className="hover:bg-slate-50 transition-colors">
                                         <td className="p-4 font-bold text-navy">Standard Patio Restoration</td>
                                         <td className="p-4 font-semibold">500 - 1,000 sq ft</td>
-                                        <td className="p-4 font-semibold">$750 - $1,500 </td>
+                                        <td className="p-4 font-semibold">Starting at $1,500<br /><span className="text-xs text-gray-500">($3.00/sq ft benchmark)</span></td>
                                         <td className="p-4">Complete deep wash, weed sterilize, polymeric re-sanding, matte sealer spray</td>
                                         <td className="p-4">1.5 - 2 workdays</td>
                                     </tr>
