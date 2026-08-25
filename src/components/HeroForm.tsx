@@ -15,10 +15,11 @@ declare global {
   }
 }
 
-export default function HeroForm() {
+export default function HeroForm({ idPrefix = "" }: { idPrefix?: string }) {
     const router = useRouter();
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
+    const prefix = idPrefix ? `${idPrefix}-` : "";
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -150,10 +151,10 @@ export default function HeroForm() {
                 <h3 className="text-xl sm:text-2xl font-extrabold mb-4 sm:mb-6 text-navy !text-center !w-full !block">Request a Free Quote</h3>
                 <form className="space-y-4" onSubmit={handleSubmit}>
                     <div>
-                        <label className="sr-only" htmlFor="name">Name</label>
+                        <label className="sr-only" htmlFor={`${prefix}name`}>Name</label>
                         <input
                             type="text"
-                            id="name"
+                            id={`${prefix}name`}
                             name="name"
                             required
                             aria-label="Name"
@@ -164,10 +165,10 @@ export default function HeroForm() {
                     </div>
                     <div className="!flex !flex-row !gap-2 !w-full">
                         <div className="flex-1">
-                            <label className="sr-only" htmlFor="phone">Phone</label>
+                            <label className="sr-only" htmlFor={`${prefix}phone`}>Phone</label>
                             <input
                                 type="tel"
-                                id="phone"
+                                id={`${prefix}phone`}
                                 name="phone"
                                 required
                                 aria-label="Phone"
@@ -177,10 +178,10 @@ export default function HeroForm() {
                             />
                         </div>
                         <div className="flex-1">
-                            <label className="sr-only" htmlFor="email">Email</label>
+                            <label className="sr-only" htmlFor={`${prefix}email`}>Email</label>
                             <input
                                 type="email"
-                                id="email"
+                                id={`${prefix}email`}
                                 name="email"
                                 required
                                 aria-label="Email"
@@ -192,10 +193,10 @@ export default function HeroForm() {
                     </div>
                     <div className="!flex !flex-row !gap-2 !w-full mt-2">
                         <div className="flex-1">
-                            <label className="sr-only" htmlFor="squareFootage">Approximate Square Footage</label>
+                            <label className="sr-only" htmlFor={`${prefix}squareFootage`}>Approximate Square Footage</label>
                             <input
                                 type="text"
-                                id="squareFootage"
+                                id={`${prefix}squareFootage`}
                                 name="squareFootage"
                                 aria-label="Approximate Square Footage"
                                 placeholder="Approx. Sq Ft"
@@ -203,10 +204,10 @@ export default function HeroForm() {
                             />
                         </div>
                         <div className="flex-1">
-                            <label className="sr-only" htmlFor="zip">Zip Code</label>
+                            <label className="sr-only" htmlFor={`${prefix}zip`}>Zip Code</label>
                             <input
                                 type="text"
-                                id="zip"
+                                id={`${prefix}zip`}
                                 name="zip"
                                 required
                                 aria-label="Zip Code"
@@ -217,9 +218,9 @@ export default function HeroForm() {
                         </div>
                     </div>
                     <div>
-                        <label className="sr-only" htmlFor="projectDetails">Project Details & Service Address</label>
+                        <label className="sr-only" htmlFor={`${prefix}projectDetails`}>Project Details & Service Address</label>
                         <textarea
-                            id="projectDetails"
+                            id={`${prefix}projectDetails`}
                             name="projectDetails"
                             rows={4}
                             required
@@ -232,29 +233,29 @@ export default function HeroForm() {
                         <fieldset>
                             <legend className="text-sm font-bold text-navy mb-2">Services Needed</legend>
                             <div className="grid grid-cols-2 gap-3 mt-1 text-sm text-gray-700">
-                                <label htmlFor="chk-house-washing" className="flex items-center gap-2 cursor-pointer hover:text-gold transition-colors">
-                                    <input id="chk-house-washing" aria-label="House Washing" type="checkbox" name="service" value="house-washing" className="accent-gold w-4 h-4 cursor-pointer" /> House Washing
+                                <label htmlFor={`${prefix}chk-house-washing`} className="flex items-center gap-2 cursor-pointer hover:text-gold transition-colors">
+                                    <input id={`${prefix}chk-house-washing`} aria-label="House Washing" type="checkbox" name="service" value="house-washing" className="accent-gold w-4 h-4 cursor-pointer" /> House Washing
                                 </label>
-                                <label htmlFor="chk-roof-cleaning" className="flex items-center gap-2 cursor-pointer hover:text-gold transition-colors">
-                                    <input id="chk-roof-cleaning" aria-label="Roof Cleaning" type="checkbox" name="service" value="roof-cleaning" className="accent-gold w-4 h-4 cursor-pointer" /> Roof Cleaning
+                                <label htmlFor={`${prefix}chk-roof-cleaning`} className="flex items-center gap-2 cursor-pointer hover:text-gold transition-colors">
+                                    <input id={`${prefix}chk-roof-cleaning`} aria-label="Roof Cleaning" type="checkbox" name="service" value="roof-cleaning" className="accent-gold w-4 h-4 cursor-pointer" /> Roof Cleaning
                                 </label>
-                                <label htmlFor="chk-window-cleaning" className="flex items-center gap-2 cursor-pointer hover:text-gold transition-colors">
-                                    <input id="chk-window-cleaning" aria-label="Window Cleaning" type="checkbox" name="service" value="window-cleaning" className="accent-gold w-4 h-4 cursor-pointer" /> Window Cleaning
+                                <label htmlFor={`${prefix}chk-window-cleaning`} className="flex items-center gap-2 cursor-pointer hover:text-gold transition-colors">
+                                    <input id={`${prefix}chk-window-cleaning`} aria-label="Window Cleaning" type="checkbox" name="service" value="window-cleaning" className="accent-gold w-4 h-4 cursor-pointer" /> Window Cleaning
                                 </label>
-                                <label htmlFor="chk-gutter-cleaning" className="flex items-center gap-2 cursor-pointer hover:text-gold transition-colors">
-                                    <input id="chk-gutter-cleaning" aria-label="Gutter Cleaning" type="checkbox" name="service" value="gutter-cleaning" className="accent-gold w-4 h-4 cursor-pointer" /> Gutter Cleaning
+                                <label htmlFor={`${prefix}chk-gutter-cleaning`} className="flex items-center gap-2 cursor-pointer hover:text-gold transition-colors">
+                                    <input id={`${prefix}chk-gutter-cleaning`} aria-label="Gutter Cleaning" type="checkbox" name="service" value="gutter-cleaning" className="accent-gold w-4 h-4 cursor-pointer" /> Gutter Cleaning
                                 </label>
-                                <label htmlFor="chk-concrete-cleaning" className="flex items-center gap-2 cursor-pointer hover:text-gold transition-colors">
-                                    <input id="chk-concrete-cleaning" aria-label="Concrete Cleaning" type="checkbox" name="service" value="concrete-cleaning" className="accent-gold w-4 h-4 cursor-pointer" /> Concrete Cleaning
+                                <label htmlFor={`${prefix}chk-concrete-cleaning`} className="flex items-center gap-2 cursor-pointer hover:text-gold transition-colors">
+                                    <input id={`${prefix}chk-concrete-cleaning`} aria-label="Concrete Cleaning" type="checkbox" name="service" value="concrete-cleaning" className="accent-gold w-4 h-4 cursor-pointer" /> Concrete Cleaning
                                 </label>
-                                <label htmlFor="chk-permanent-led" className="flex items-center gap-2 cursor-pointer hover:text-gold transition-colors">
-                                    <input id="chk-permanent-led" aria-label="Permanent LED Lighting" type="checkbox" name="service" value="permanent-led-lighting" className="accent-gold w-4 h-4 cursor-pointer" /> Permanent LED Lighting
+                                <label htmlFor={`${prefix}chk-permanent-led`} className="flex items-center gap-2 cursor-pointer hover:text-gold transition-colors">
+                                    <input id={`${prefix}chk-permanent-led`} aria-label="Permanent LED Lighting" type="checkbox" name="service" value="permanent-led-lighting" className="accent-gold w-4 h-4 cursor-pointer" /> Permanent LED Lighting
                                 </label>
-                                <label htmlFor="chk-commercial" className="flex items-center gap-2 cursor-pointer hover:text-gold transition-colors">
-                                    <input id="chk-commercial" aria-label="Commercial Services" type="checkbox" name="service" value="commercial-services" className="accent-gold w-4 h-4 cursor-pointer" /> Commercial Services
+                                <label htmlFor={`${prefix}chk-commercial`} className="flex items-center gap-2 cursor-pointer hover:text-gold transition-colors">
+                                    <input id={`${prefix}chk-commercial`} aria-label="Commercial Services" type="checkbox" name="service" value="commercial-services" className="accent-gold w-4 h-4 cursor-pointer" /> Commercial Services
                                 </label>
-                                <label htmlFor="chk-paver-patio-restorations" className="flex items-center gap-2 cursor-pointer hover:text-gold transition-colors">
-                                    <input id="chk-paver-patio-restorations" aria-label="Paver Patio Restorations" type="checkbox" name="service" value="paver-patio-restorations" className="accent-gold w-4 h-4 cursor-pointer" /> Paver Patio Restorations
+                                <label htmlFor={`${prefix}chk-paver-patio-restorations`} className="flex items-center gap-2 cursor-pointer hover:text-gold transition-colors">
+                                    <input id={`${prefix}chk-paver-patio-restorations`} aria-label="Paver Patio Restorations" type="checkbox" name="service" value="paver-patio-restorations" className="accent-gold w-4 h-4 cursor-pointer" /> Paver Patio Restorations
                                 </label>
                             </div>
                         </fieldset>

@@ -26,6 +26,22 @@ const pricingFaqs = [
   {
     question: "Is there a minimum service price?",
     answer: "Our minimum project price for single-visit services is $350. This helps cover the mobilization of our professional hot-water trailer rigs, eco-friendly cleaners, and safety gear."
+  },
+  {
+    question: "What is the difference in price between soft washing and high-pressure washing?",
+    answer: "Soft washing requires specialized low-pressure pumps, custom agricultural nozzles, and premium eco-friendly algaecide surfactants that physically sanitize the surface. Traditional high-pressure blasting can erode mortar, pit concrete, and blast moisture behind siding seams, causing interior mold. While high-pressure washing is occasionally faster to execute initially, soft washing provides a cleaner finish that lasts up to 4 to 6 times longer, protecting your manufacturer warranties and home value."
+  },
+  {
+    question: "Do you need access to my outdoor water spigots or do you bring your own water?",
+    answer: "For typical residential cleaning, we utilize your home's outdoor water spigots to supply our trailer buffer tanks. Our trailers are equipped with high-capacity 200+ gallon water tanks that allow us to operate independently if municipal water sources are unavailable, low-flow, or during restricted commercial cleaning schedules. We simply ask that you ensure outdoor water connections are turned on and accessible on the morning of your project."
+  },
+  {
+    question: "How much can I save by bundling multiple exterior cleaning services?",
+    answer: "Bundling multiple services is our most recommended way to maximize value. Combining roof cleaning, siding soft washing, and window cleaning during a single crew visit allows us to waive separate mobilization fees. Property owners typically save between $100 and $250 off their total invoice when booking bundle packages compared to standalone services booked throughout the year."
+  },
+  {
+    question: "Is your $350 service minimum absolute, and what does it cover?",
+    answer: "Yes, our $350 service minimum is our baseline mobilization fee for residential visits. This helps cover the cost of deploying our heavy-duty hot-water trailer rigs, professional algaecide surfactants, fuel, licensing, and our $2,000,000 commercial liability insurance. It ensures we can maintain the highest standards of safety, quality, and technical compliance on every single property we service."
   }
 ];
 
@@ -39,7 +55,7 @@ export default function PricingPage() {
             />
             <div id="quote-form-hub" className="py-12 px-4 max-w-2xl mx-auto">
                 <div className="bg-white rounded-3xl shadow-xl border border-gray-200 overflow-hidden">
-                    <HeroForm />
+                    <HeroForm idPrefix="pricing-top" />
                 </div>
             </div>
 
@@ -183,7 +199,23 @@ export default function PricingPage() {
             </section>
 
             <PricingGuide />
-            <section className="bg-white border-t border-gray-100 py-12">
+
+            {/* Bottom Quote Form Section */}
+            <section id="quote-form-bottom-hub" className="py-16 bg-slate-50 border-t border-b border-gray-200">
+                <div className="container mx-auto px-4 max-w-2xl">
+                    <div className="text-center mb-8">
+                        <h2 className="text-3xl font-extrabold text-navy mb-2">Request Your Exact Quote</h2>
+                        <p className="text-gray-600 max-w-md mx-auto">
+                            Fill out the form below to receive a guaranteed, upfront estimate from our owner-operator team.
+                        </p>
+                    </div>
+                    <div className="bg-white rounded-3xl shadow-xl border border-gray-200 overflow-hidden">
+                        <HeroForm idPrefix="pricing-bottom" />
+                    </div>
+                </div>
+            </section>
+
+            <section className="bg-white py-12">
                 <FAQAccordion faqs={pricingFaqs} />
                 <FAQSchema faqs={pricingFaqs} />
             </section>
