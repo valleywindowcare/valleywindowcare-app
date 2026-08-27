@@ -82,6 +82,7 @@ const coreRoutesList = [
     "/privacy-policy",
     "/terms-and-conditions",
     "/service-guarantee",
+    "/trusted-partners",
     "/wisconsin-maintenance-calendar",
     "/quote"
 ];

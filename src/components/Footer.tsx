@@ -180,6 +180,12 @@ export default function Footer() {
                                 </Link>
                             </li>
                             <li>
+                                <Link href="/trusted-partners" className="hover:text-gold transition-colors inline-block relative group">
+                                    Trusted Partners
+                                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
+                                </Link>
+                            </li>
+                            <li>
                                 <Link href="/terms-and-conditions" className="hover:text-gold transition-colors inline-block relative group">
                                     Terms & Conditions
                                     <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
