@@ -2,22 +2,36 @@
 @plugin "@tailwindcss/typography";
 
 @theme {
-  --color-navy: #0D5C9D;
-  --color-gold: #EA580C;
-  --color-gold-light: #C2410C;
-  --color-navy-dark: #094678;
-  --color-slate-50: #F8FAFC;
+  --color-navy: #0F2D4A;
+  --color-gold: #0F2D4A;
+  --color-gold-light: #173E66;
+  --color-navy-dark: #0B1724;
+  --color-slate-50: #FBF9F5;
   --color-slate-600: #475569;
-  --color-slate-900: #0F172A;
-  --color-gray-500: #475569;
+  --color-slate-900: #0F1D2B;
+  --color-gray-500: #64748B;
   --color-gray-600: #475569;
-  --color-gray-200: #E2E8F0;
-  --color-slate-200: #E2E8F0;
+  --color-gray-200: #E5DFD7;
+  --color-slate-200: #E5DFD7;
 }
 
 :root {
-  --background: #F8FAFC;
-  --foreground: #0F172A;
+  --bg-main: #FBF9F5;
+  --bg-surface: #FFFFFF;
+  --bg-surface-subtle: #F3EFEA;
+  --color-powder-blue: #94B9D2;
+  --color-powder-blue-light: #E7EFF5;
+  --color-powder-blue-hover: #7EA6C2;
+  --text-primary: #0F1D2B;
+  --text-secondary: #475569;
+  --text-muted: #64748B;
+  --cta-primary-bg: #0F2D4A;
+  --cta-primary-text: #FFFFFF;
+  --cta-primary-hover: #173E66;
+  --cta-accent-border: #94B9D2;
+
+  --background: #FBF9F5;
+  --foreground: #0F1D2B;
 }
 
 @theme inline {
@@ -26,17 +40,15 @@
   --font-sans: var(--font-outfit), sans-serif;
   --font-inter: var(--font-inter), sans-serif;
   --font-outfit: var(--font-outfit), sans-serif;
-  --shadow-soft: 0px 8px 30px rgba(13, 92, 157, 0.04);
-  --shadow-hover: 0px 15px 40px rgba(13, 92, 157, 0.08);
+  --shadow-soft: 0px 8px 30px rgba(15, 29, 43, 0.04);
+  --shadow-hover: 0px 15px 40px rgba(15, 29, 43, 0.08);
   --shadow-card: 0px 4px 20px rgba(0, 0, 0, 0.03);
-  --shadow-card-hover: 0px 12px 30px rgba(234, 88, 12, 0.15);
-  /* Contrast Highlight tinted hover shadow */
+  --shadow-card-hover: 0px 12px 30px rgba(148, 185, 210, 0.15);
 }
 
 @layer base {
   html {
     font-size: 14px;
-    /* scroll-behavior: smooth; */
     scroll-padding-top: 6rem;
   }
   @media (min-width: 768px) {
@@ -50,12 +62,14 @@
     font-family: var(--font-outfit), sans-serif;
     letter-spacing: -1.5px;
     line-height: 1.1;
+    color: var(--text-primary);
   }
 
   h2 {
     font-family: var(--font-outfit), sans-serif;
     letter-spacing: -0.75px;
     line-height: 1.2;
+    color: var(--text-primary);
   }
 
   h3,
@@ -65,6 +79,7 @@
   .font-heading {
     font-family: var(--font-outfit), sans-serif;
     letter-spacing: -0.25px;
+    color: var(--text-primary);
   }
 }
 
@@ -74,10 +89,205 @@
   }
 }
 
-
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--bg-main);
+  color: var(--text-secondary);
   font-family: var(--font-inter), Arial, Helvetica, sans-serif;
   @apply antialiased;
+}
+
+/* ==========================================================================
+   UI COMPONENT CUSTOM OVERRIDES (CREAM & POWDER BLUE HARMONY)
+   ========================================================================== */
+
+/* A. HEADER & NAVIGATION */
+header {
+  background-color: #FFFFFF !important;
+  border-bottom: 1px solid var(--color-powder-blue-light) !important;
+}
+
+header nav a, 
+header nav button, 
+header nav div.cursor-pointer {
+  color: var(--text-primary) !important;
+}
+
+header nav a:hover, 
+header nav button:hover, 
+header nav div.cursor-pointer:hover {
+  color: var(--color-powder-blue-hover) !important;
+}
+
+header nav svg:hover,
+header nav .group:hover svg {
+  color: var(--color-powder-blue-hover) !important;
+}
+
+/* Header Quote Button styling: Deep Brand Navy, pill shape, powder blue glow on hover */
+header a[href="/contact"] {
+  background-color: var(--cta-primary-bg) !important;
+  color: var(--cta-primary-text) !important;
+  border-radius: 9999px !important;
+}
+
+header a[href="/contact"]:hover {
+  background-color: var(--cta-primary-hover) !important;
+  box-shadow: 0 0 12px var(--color-powder-blue) !important;
+}
+
+/* B. HERO SECTIONS */
+section.bg-navy {
+  background: var(--bg-main) !important;
+  background-image: radial-gradient(circle at center, var(--color-powder-blue-light) 0%, var(--bg-main) 70%) !important;
+  color: var(--text-primary) !important;
+}
+
+/* Remove dark overlays in hero sections */
+section.bg-navy > .absolute.bg-black\/60,
+section.bg-navy > .absolute.inset-0.bg-black\/60 {
+  display: none !important;
+}
+
+/* Update hero typography colors for light background */
+section.bg-navy h1, 
+section.bg-navy h1 span,
+section.bg-navy p.text-gray-100 {
+  color: var(--text-primary) !important;
+  text-shadow: none !important;
+}
+
+section.bg-navy p.text-gray-300 {
+  color: var(--text-secondary) !important;
+}
+
+/* Location / Trust Badges */
+.bg-slate-900\/90, 
+[class*="bg-slate-900"] {
+  background-color: var(--color-powder-blue-light) !important;
+  border: 1px solid var(--color-powder-blue) !important;
+  color: var(--text-primary) !important;
+  box-shadow: none !important;
+}
+
+/* C. CARDS & SERVICE MATRICES */
+.bg-white, 
+.bg-white\/95 {
+  background-color: var(--bg-surface) !important;
+  border: 1px solid #E5DFD7 !important;
+  box-shadow: 0 4px 20px -2px rgba(15, 29, 43, 0.05) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Category Badges & Icon Containers */
+.bg-gold\/10, 
+.bg-navy\/5, 
+.bg-slate-100 {
+  background-color: var(--color-powder-blue-light) !important;
+}
+
+.text-gold, 
+.text-navy, 
+.text-blue-500, 
+.text-blue-600 {
+  color: var(--text-primary) !important;
+}
+
+/* Hover state for cards: Border shifts smoothly to Powder Blue with a slight upward lift (-4px) */
+.bg-white:hover, 
+.bg-white\/95:hover {
+  border-color: var(--color-powder-blue) !important;
+  transform: translateY(-4px) !important;
+  box-shadow: 0 10px 25px -5px rgba(15, 29, 43, 0.1) !important;
+}
+
+/* D. CTA BANNERS & LEAD GENERATION FORMS */
+#quote-form, 
+form {
+  background-color: var(--bg-surface) !important;
+}
+
+#quote-form input, 
+#quote-form textarea, 
+#quote-form select,
+form input, 
+form textarea, 
+form select {
+  background-color: var(--bg-main) !important;
+  border: 1px solid #E5DFD7 !important;
+  color: var(--text-primary) !important;
+  transition: all 0.2s ease-in-out !important;
+}
+
+#quote-form input:focus, 
+#quote-form textarea:focus, 
+#quote-form select:focus,
+form input:focus, 
+form textarea:focus, 
+form select:focus {
+  border-color: var(--color-powder-blue) !important;
+  outline: none !important;
+  box-shadow: 0 0 0 2px var(--color-powder-blue) !important;
+}
+
+/* Submit Button Override */
+#quote-form button[type="submit"],
+form button[type="submit"] {
+  background-color: var(--cta-primary-bg) !important;
+  color: var(--cta-primary-text) !important;
+  width: 100% !important;
+  font-weight: 800 !important;
+  transition: background-color 0.2s ease-in-out !important;
+}
+
+#quote-form button[type="submit"]:hover,
+form button[type="submit"]:hover {
+  background-color: var(--cta-primary-hover) !important;
+}
+
+/* E. FOOTER SECTION */
+footer {
+  background-color: #0B1724 !important;
+  border-top: 1px solid rgba(148, 185, 210, 0.15) !important;
+}
+
+footer h2,
+footer h3 {
+  color: #FBF9F5 !important;
+}
+
+footer p, 
+footer li, 
+footer a, 
+footer span {
+  color: #BACEDF !important;
+}
+
+footer a:hover {
+  color: #FFFFFF !important;
+}
+
+/* Footer copyright ribbon & divider styling */
+footer > div:last-child,
+.bg-navy.py-6.border-t {
+  background-color: #050b12 !important;
+  border-top: 1px solid rgba(148, 185, 210, 0.15) !important;
+}
+
+/* Mobile Sticky Bottom Bar Custom Styling */
+.fixed.bottom-0.left-0.right-0 {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  border-top: 1px solid var(--color-powder-blue-light) !important;
+}
+
+.fixed.bottom-0.left-0.right-0 a[href^="tel:"],
+.fixed.bottom-0.left-0.right-0 a[href^="sms:"] {
+  background-color: var(--cta-primary-bg) !important;
+  color: var(--cta-primary-text) !important;
+  border: none !important;
+}
+
+.fixed.bottom-0.left-0.right-0 a[href="/contact"] {
+  background-color: var(--color-powder-blue) !important;
+  color: var(--text-primary) !important;
+  border: none !important;
 }
