@@ -4,34 +4,32 @@
 @theme {
   --color-navy: #134074;
   --color-navy-dark: #0B2545;
-  --color-gold: #D97706;
-  --color-gold-light: #B45309;
+  --color-gold: #F05A24;
+  --color-gold-light: #D84815;
   --color-slate-50: #FFFFFF;
-  --color-slate-600: #334155;
+  --color-slate-600: #0F172A;
   --color-slate-900: #0B2545;
   --color-gray-500: #64748B;
-  --color-gray-600: #334155;
+  --color-gray-600: #0F172A;
   --color-gray-200: #E2E8F0;
   --color-slate-200: #E2E8F0;
 }
 
 :root {
-  --color-brand-blue-dark: #0B2545;
-  --color-brand-blue-primary: #134074;
-  --color-brand-blue-light: #EEF4F8;
-  --color-gold-primary: #D97706;
-  --color-gold-hover: #B45309;
-  --color-gold-light: #FEF3C7;
-  --color-gold-text: #92400E;
-  --bg-main: #FFFFFF;
-  --bg-secondary: #F8FAFC;
-  --text-heading: #0B2545;
-  --text-body: #334155;
+  --color-accent-gold: #F05A24;
+  --color-accent-gold-hover: #D84815;
+  --color-accent-gold-subtle: #FFF1EB;
+  --color-navy-dark: #0B2545;
+  --color-navy-primary: #134074;
+  --color-navy-light: #F0F4F8;
+  --bg-page: #FFFFFF;
+  --bg-subtle: #F8FAFC;
+  --text-primary: #0F172A;
   --text-muted: #64748B;
-  --border-subtle: #E2E8F0;
+  --border-light: #E2E8F0;
 
   --background: #FFFFFF;
-  --foreground: #334155;
+  --foreground: #0F172A;
 }
 
 @theme inline {
@@ -43,7 +41,7 @@
   --shadow-soft: 0px 8px 30px rgba(19, 64, 116, 0.04);
   --shadow-hover: 0px 15px 40px rgba(19, 64, 116, 0.08);
   --shadow-card: 0px 4px 20px rgba(0, 0, 0, 0.03);
-  --shadow-card-hover: 0px 12px 30px rgba(217, 119, 6, 0.15);
+  --shadow-card-hover: 0px 12px 30px rgba(240, 90, 36, 0.15);
 }
 
 @layer base {
@@ -62,14 +60,14 @@
     font-family: var(--font-outfit), sans-serif;
     letter-spacing: -1.5px;
     line-height: 1.1;
-    color: var(--text-heading);
+    color: var(--color-navy-dark);
   }
 
   h2 {
     font-family: var(--font-outfit), sans-serif;
     letter-spacing: -0.75px;
     line-height: 1.2;
-    color: var(--text-heading);
+    color: var(--color-navy-dark);
   }
 
   h3,
@@ -79,7 +77,7 @@
   .font-heading {
     font-family: var(--font-outfit), sans-serif;
     letter-spacing: -0.25px;
-    color: var(--text-heading);
+    color: var(--color-navy-dark);
   }
 }
 
@@ -90,14 +88,14 @@
 }
 
 body {
-  background: var(--bg-main);
-  color: var(--text-body);
+  background: var(--bg-page);
+  color: var(--text-primary);
   font-family: var(--font-inter), Arial, Helvetica, sans-serif;
   @apply antialiased;
 }
 
 /* ==========================================================================
-   UI COMPONENT CUSTOM OVERRIDES (BLUE & GOLD RESTORATION)
+   UI COMPONENT CUSTOM OVERRIDES (DEEP NAVY & WARM AMBER RESTORATION)
    ========================================================================== */
 
 /* A. HEADER & NAVIGATION */
@@ -115,24 +113,24 @@ header nav div.cursor-pointer {
 header nav a:hover, 
 header nav button:hover, 
 header nav div.cursor-pointer:hover {
-  color: #D97706 !important;
+  color: #F05A24 !important;
 }
 
 header nav svg:hover,
 header nav .group:hover svg {
-  color: #D97706 !important;
+  color: #F05A24 !important;
 }
 
-/* Header Quote Button styling: Signature Gold pill button, white text, deep warm gold hover */
+/* Header Quote Button styling: Warm Amber-Gold pill button, white text, deeper hover */
 header a[href="/contact"] {
-  background-color: #D97706 !important;
+  background-color: #F05A24 !important;
   color: #FFFFFF !important;
   border-radius: 9999px !important;
 }
 
 header a[href="/contact"]:hover {
-  background-color: #B45309 !important;
-  box-shadow: 0 0 12px rgba(217, 119, 6, 0.2) !important;
+  background-color: #D84815 !important;
+  box-shadow: 0 0 12px rgba(240, 90, 36, 0.2) !important;
 }
 
 /* B. HERO SECTIONS & BADGES */
@@ -142,13 +140,13 @@ section.bg-navy {
   color: #FFFFFF !important;
 }
 
-/* Restore overlays in hero sections */
+/* Overlays in hero sections */
 section.bg-navy > .absolute.bg-black\/60,
 section.bg-navy > .absolute.inset-0.bg-black\/60 {
   display: block !important;
 }
 
-/* Restore hero text overlay colors to bold white for readability against dark gradient */
+/* Hero text overlay colors to bold white for readability against dark gradient */
 section.bg-navy h1, 
 section.bg-navy h1 span,
 section.bg-navy p.text-gray-100 {
@@ -157,15 +155,15 @@ section.bg-navy p.text-gray-100 {
 }
 
 section.bg-navy p.text-gray-300 {
-  color: #EEF4F8 !important;
+  color: #F0F4F8 !important;
 }
 
-/* Location Badges / Trust Badges: Soft Gold background, dark gold border, dark gold text */
+/* Location Badges / Trust Badges: Light Amber background (#FFF1EB), subtle border, dark amber text */
 .bg-slate-900\/90, 
 [class*="bg-slate-900"] {
-  background-color: #FEF3C7 !important;
-  border: 1px solid #D97706 !important;
-  color: #92400E !important;
+  background-color: #FFF1EB !important;
+  border: 1px solid #F05A24 !important;
+  color: #D84815 !important;
   box-shadow: none !important;
 }
 
@@ -178,21 +176,21 @@ section.bg-navy p.text-gray-300 {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
 
-/* Icon / Feature Accents: Gold circular badges (#FEF3C7 background with #D97706 icons) */
+/* Icon / Feature Accents: Light Amber circular badges (#FFF1EB background with #F05A24 icons) */
 .bg-gold\/10, 
 .bg-navy\/5, 
 .bg-slate-100 {
-  background-color: #FEF3C7 !important;
+  background-color: #FFF1EB !important;
 }
 
 .text-gold, 
 .text-navy, 
 .text-blue-500, 
 .text-blue-600 {
-  color: #D97706 !important;
+  color: #F05A24 !important;
 }
 
-/* Hover state for cards: 2px border transition to Primary Navy (#134074) with subtle card lift */
+/* Hover state for cards: border transition to Primary Navy (#134074) with subtle card lift */
 .bg-white:hover, 
 .bg-white\/95:hover {
   border-color: #134074 !important;
@@ -216,7 +214,7 @@ form textarea,
 form select {
   background-color: #F8FAFC !important;
   border: 1px solid #E2E8F0 !important;
-  color: #334155 !important;
+  color: #0F172A !important;
   transition: all 0.2s ease-in-out !important;
 }
 
@@ -226,15 +224,15 @@ form select {
 form input:focus, 
 form textarea:focus, 
 form select:focus {
-  border-color: #134074 !important;
+  border-color: #F05A24 !important;
   outline: none !important;
-  box-shadow: 0 0 0 2px rgba(19, 64, 116, 0.15) !important;
+  box-shadow: 0 0 0 2px rgba(240, 90, 36, 0.15) !important;
 }
 
-/* Submit Button Override: Full-width Signature Gold button with crisp white text */
+/* Submit Button Override: Signature Warm Amber-Gold button with crisp white text */
 #quote-form button[type="submit"],
 form button[type="submit"] {
-  background-color: #D97706 !important;
+  background-color: #F05A24 !important;
   color: #FFFFFF !important;
   width: 100% !important;
   font-weight: 800 !important;
@@ -243,13 +241,13 @@ form button[type="submit"] {
 
 #quote-form button[type="submit"]:hover,
 form button[type="submit"]:hover {
-  background-color: #B45309 !important;
+  background-color: #D84815 !important;
 }
 
 /* E. FOOTER SECTION */
 footer {
   background-color: #0B2545 !important;
-  border-top: 1px solid rgba(217, 119, 6, 0.15) !important;
+  border-top: 1px solid rgba(240, 90, 36, 0.15) !important;
 }
 
 footer h2,
@@ -258,13 +256,13 @@ footer h3 {
   position: relative;
 }
 
-/* Underline accent on footer headings */
+/* Underline accent on footer headings: Warm Amber */
 footer h3::after {
   content: "";
   display: block;
   width: 2rem;
   height: 2px;
-  background-color: #D97706;
+  background-color: #F05A24;
   margin-top: 0.5rem;
 }
 
@@ -276,14 +274,14 @@ footer span {
 }
 
 footer a:hover {
-  color: #D97706 !important;
+  color: #FFFFFF !important;
 }
 
 /* Footer copyright ribbon & divider styling */
 footer > div:last-child,
 .bg-navy.py-6.border-t {
   background-color: #061527 !important;
-  border-top: 1px solid rgba(217, 119, 6, 0.15) !important;
+  border-top: 1px solid rgba(240, 90, 36, 0.15) !important;
 }
 
 /* F. MOBILE FLOATING ACTION BAR */
@@ -300,9 +298,9 @@ footer > div:last-child,
   border: none !important;
 }
 
-/* Get Instant Quote: Signature Gold button (#D97706) */
+/* Get Instant Quote: Signature Warm Amber-Gold button (#F05A24) */
 .fixed.bottom-0.left-0.right-0 a[href="/contact"] {
-  background-color: #D97706 !important;
+  background-color: #F05A24 !important;
   color: #FFFFFF !important;
   border: none !important;
 }
@@ -322,7 +320,7 @@ footer > div:last-child,
 }
 
 .text-\[\#353738\] {
-  color: #334155 !important;
+  color: #0F172A !important;
 }
 
 .bg-\[\#F8FAFC\] {
