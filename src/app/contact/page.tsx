@@ -12,7 +12,12 @@ export const metadata: Metadata = {
 export default function ContactPage() {
     return (
         <main className="min-h-screen bg-slate-50 pb-20 text-navy">
-            <Hero h1="Contact Our Team" description="We're ready to provide crystal clear service for your property. Fill out the form or visit our storefront for a custom quote." />
+            <Hero 
+                bgImage="/images/portfolio/window-cleaning.webp" 
+                bgImageAlt="Valley Property Services professional window cleaning"
+                h1="Contact Our Team" 
+                description="We're ready to provide crystal clear service for your property. Fill out the form or visit our storefront for a custom quote." 
+            />
 
             {/* Quick Contact Info Cards */}
             <div className="container mx-auto max-w-6xl px-4 mt-16 relative z-20">
