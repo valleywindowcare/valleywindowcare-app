@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import Hero from '@/components/Hero';
 import { ExternalLink, MapPin, ArrowRight } from 'lucide-react';
 
@@ -15,6 +16,7 @@ interface Partner {
     websiteUrl: string;
     description: string;
     logoPlaceholderText: string;
+    logoUrl?: string;
 }
 
 const partners: Partner[] = [
@@ -24,7 +26,8 @@ const partners: Partner[] = [
         location: "Fox Valley / Northeast WI",
         websiteUrl: "https://www.diamond-tinting.com/",
         description: "When our clients ask for the best automotive protection and vehicle care in the region, we proudly recommend Diamond Detail & Tint. From precision window tinting and paint correction to durable ceramic coatings and interior detailing, their team delivers exceptional craftsmanship and attention to detail.",
-        logoPlaceholderText: "DDT"
+        logoPlaceholderText: "DDT",
+        logoUrl: "/images/partners/diamond-detail-tint.webp"
     }
 ];
 
@@ -51,11 +54,24 @@ export default function TrustedPartnersPage() {
                             key={partner.name} 
                             className="bg-white rounded-3xl border border-gray-200/80 p-6 md:p-8 shadow-sm hover:shadow-md transition-shadow grid md:grid-cols-12 gap-6 items-center"
                         >
-                            {/* Logo Placeholder */}
+                            {/* Logo */}
                             <div className="md:col-span-3 flex justify-center">
-                                <div className="w-32 h-32 md:w-36 md:h-36 rounded-2xl bg-gradient-to-br from-navy to-blue-700 flex items-center justify-center text-white text-3xl font-black shadow-inner">
-                                    {partner.logoPlaceholderText}
-                                </div>
+                                {partner.logoUrl ? (
+                                    <div className="w-32 h-32 md:w-36 md:h-36 rounded-2xl bg-slate-900 flex items-center justify-center p-3 shadow-inner relative">
+                                        <div className="w-full h-full relative">
+                                            <Image 
+                                                src={partner.logoUrl} 
+                                                alt={`${partner.name} Logo`} 
+                                                fill 
+                                                className="object-contain"
+                                            />
+                                        </div>
+                                    </div>
+                                ) : (
+                                    <div className="w-32 h-32 md:w-36 md:h-36 rounded-2xl bg-gradient-to-br from-navy to-blue-700 flex items-center justify-center text-white text-3xl font-black shadow-inner">
+                                        {partner.logoPlaceholderText}
+                                    </div>
+                                )}
                             </div>
 
                             {/* Details */}
