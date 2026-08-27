@@ -1,5 +1,5 @@
+import { MapPin, Phone, Clock } from 'lucide-react';
 import Link from 'next/link';
-import { MapPin } from 'lucide-react';
 
 import ReviewSlider from '@/components/ReviewSlider';
 
@@ -50,8 +50,50 @@ export default function ServiceAreasPage() {
                         </Link>
                     ))}
                 </div>
-    <ReviewSlider />
-</div>
+
+                {/* Our Service Hub & Headquarters Section */}
+                <div className="bg-white py-16 border-t border-gray-200 mt-20 rounded-3xl p-8 md:p-12 shadow-sm border border-gray-100 max-w-6xl mx-auto">
+                    <div className="grid md:grid-cols-12 gap-8 items-center">
+                        <div className="md:col-span-5 space-y-6 text-left">
+                            <h2 className="text-3xl font-bold text-navy">Our Service Hub & Headquarters</h2>
+                            <p className="text-gray-600 leading-relaxed">
+                                While we dispatch our specialized exterior cleaning rigs daily throughout all service areas in Northeast Wisconsin, our physical storefront and administrative headquarters are located in De Pere.
+                            </p>
+                            <div className="bg-slate-50 p-6 rounded-2xl border border-gray-100 space-y-3 text-gray-600 font-medium">
+                                <p className="flex items-start gap-2">
+                                    <MapPin className="text-gold shrink-0 mt-1" size={18} />
+                                    <span>Valley Property Services<br />462 S Good Hope Rd<br />De Pere, WI 54115</span>
+                                </p>
+                                <p className="flex items-center gap-2">
+                                    <Phone className="text-gold shrink-0" size={18} />
+                                    <a href="tel:920-609-7085" className="hover:text-gold transition-colors">(920) 609-7085</a>
+                                </p>
+                                <p className="flex items-start gap-2">
+                                    <Clock className="text-gold shrink-0 mt-1" size={18} />
+                                    <span>Monday – Sunday: 8:00 AM – 8:00 PM</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div className="md:col-span-7">
+                            <div className="w-full h-[320px] sm:h-[350px] rounded-3xl overflow-hidden shadow-lg border border-gray-200 bg-slate-50 relative">
+                                <iframe 
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d965.0151754639163!2d-88.06446349282405!3d44.433056645497985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8802f7860e31a465%3A0xc422a0d3f9df71ea!2sValley%20Property%20Services!5e0!3m2!1sen!2sus!4v1787846763291!5m2!1sen!2sus" 
+                                    width="100%" 
+                                    height="100%" 
+                                    style={{ border: 0 }} 
+                                    allowFullScreen={true} 
+                                    loading="lazy" 
+                                    referrerPolicy="strict-origin-when-cross-origin"
+                                    title="Valley Property Services Storefront Google Map Location"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <ReviewSlider />
+            </div>
         </section>
     );
 }

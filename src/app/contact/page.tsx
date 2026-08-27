@@ -1,21 +1,22 @@
 import type { Metadata } from 'next';
 import Hero from "@/components/Hero";
-import { Phone, Mail, MapPin } from "lucide-react";
-
+import HeroForm from "@/components/HeroForm";
+import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import ReviewSlider from '@/components/ReviewSlider';
 
 export const metadata: Metadata = {
-    title: "Contact Us",
-    description: "Get a free quote for pressure washing, window cleaning, and exterior maintenance in Northeast Wisconsin.",
+    title: "Contact Us | Valley Property Services",
+    description: "Get a free quote for pressure washing, window cleaning, and soft wash siding cleaning in Northeast Wisconsin. Contact our De Pere storefront team today.",
 };
 
 export default function ContactPage() {
     return (
-        <main className="min-h-screen bg-slate-50 pb-20">
-            <Hero h1="Contact Our Team" description="We're ready to provide crystal clear service for your property. Fill out the form to get started." />
+        <main className="min-h-screen bg-slate-50 pb-20 text-navy">
+            <Hero h1="Contact Our Team" description="We're ready to provide crystal clear service for your property. Fill out the form or visit our storefront for a custom quote." />
 
-            <div className="container mx-auto max-w-6xl px-4 mt-20 relative z-20">
-                <div className="grid md:grid-cols-3 gap-8">
+            {/* Quick Contact Info Cards */}
+            <div className="container mx-auto max-w-6xl px-4 mt-16 relative z-20">
+                <div className="grid md:grid-cols-3 gap-8 mb-12">
                     <div className="bg-white p-8 rounded-3xl shadow-sm text-center border border-gray-100 hover:shadow-md transition-shadow">
                         <div className="bg-gold/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-gold">
                             <Phone size={28} />
@@ -39,17 +40,66 @@ export default function ContactPage() {
                     </div>
                 </div>
 
-                <div className="w-full h-80 md:h-96 rounded-xl overflow-hidden shadow-lg mt-8 border border-gray-200/20">
-                  <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d900.5056045384954!2d-88.06395880642742!3d44.43266399605391!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8802f7860e31a465%3A0xc422a0d3f9df71ea!2sValley%20Property%20Services!5e0!3m2!1sen!2sus!4v1787425054243!5m2!1sen!2sus" 
-                    width="100%" 
-                    height="100%" 
-                    style={{ border: 0 }} 
-                    allowFullScreen={true} 
-                    loading="lazy" 
-                    referrerPolicy="strict-origin-when-cross-origin"
-                    title="Google Maps Location for Valley Property Services"
-                  />
+                {/* Primary Content Grid: Form vs Map/NAP */}
+                <div className="grid lg:grid-cols-12 gap-12 items-start mt-8">
+                    {/* Left Column: Quote Form */}
+                    <div className="lg:col-span-7 bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden">
+                        <HeroForm idPrefix="contact-page" />
+                    </div>
+
+                    {/* Right Column: Map Embed and NAP Details */}
+                    <div className="lg:col-span-5 space-y-8">
+                        {/* Storefront & NAP Info Card */}
+                        <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 space-y-6">
+                            <h2 className="text-2xl font-bold text-navy">Storefront Headquarters</h2>
+                            <div className="space-y-4 text-gray-600 font-medium">
+                                <div className="flex items-start gap-3">
+                                    <MapPin className="text-gold shrink-0 mt-1" size={20} />
+                                    <div>
+                                        <p className="font-semibold text-navy">Business Name &amp; Address</p>
+                                        <p>Valley Property Services</p>
+                                        <p>462 S Good Hope Rd</p>
+                                        <p>De Pere, WI 54115</p>
+                                    </div>
+                                </div>
+                                <div className="flex items-start gap-3">
+                                    <Phone className="text-gold shrink-0 mt-1" size={20} />
+                                    <div>
+                                        <p className="font-semibold text-navy">Phone</p>
+                                        <a href="tel:920-609-7085" className="hover:text-gold transition-colors">(920) 609-7085</a>
+                                    </div>
+                                </div>
+                                <div className="flex items-start gap-3">
+                                    <Mail className="text-gold shrink-0 mt-1" size={20} />
+                                    <div>
+                                        <p className="font-semibold text-navy">Email</p>
+                                        <a href="mailto:info@valleyexteriorpros.com" className="hover:text-gold transition-colors">info@valleyexteriorpros.com</a>
+                                    </div>
+                                </div>
+                                <div className="flex items-start gap-3">
+                                    <Clock className="text-gold shrink-0 mt-1" size={20} />
+                                    <div>
+                                        <p className="font-semibold text-navy">Hours of Operation</p>
+                                        <p>Monday – Sunday: 8:00 AM – 8:00 PM</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Verified Location Google Map Embed */}
+                        <div className="w-full h-[320px] sm:h-[350px] lg:h-[450px] rounded-2xl overflow-hidden shadow-md border border-gray-200 relative bg-slate-100">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d965.0151754639163!2d-88.06446349282405!3d44.433056645497985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8802f7860e31a465%3A0xc422a0d3f9df71ea!2sValley%20Property%20Services!5e0!3m2!1sen!2sus!4v1787846763291!5m2!1sen!2sus" 
+                                width="100%" 
+                                height="100%" 
+                                style={{ border: 0 }} 
+                                allowFullScreen={true} 
+                                loading="lazy" 
+                                referrerPolicy="strict-origin-when-cross-origin"
+                                title="Valley Property Services Storefront Google Map Location"
+                            />
+                        </div>
+                    </div>
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-8 mt-12 bg-white p-8 md:p-12 rounded-3xl border border-gray-100 shadow-sm">

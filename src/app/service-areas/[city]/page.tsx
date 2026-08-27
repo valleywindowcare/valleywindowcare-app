@@ -24,7 +24,7 @@ function getDeterministicHero(seed: string): string {
 import Link from 'next/link';
 import Image from 'next/image';
 import SafeHeroImage from '@/components/SafeHeroImage';
-import { ChevronRight, ShieldCheck, MapPin, ArrowRight, Phone, CheckCircle2, CreditCard } from 'lucide-react';
+import { ChevronRight, ShieldCheck, MapPin, ArrowRight, Phone, CheckCircle2, CreditCard, Mail, Clock } from 'lucide-react';
 import PricingMatrix from '@/components/PricingMatrix';
 import ReviewSlider from '@/components/ReviewSlider';
 import ServiceGrid from '@/components/ServiceGrid';
@@ -587,6 +587,59 @@ export default async function CityHubPage({ params }: PageProps) {
 
                 <VanillaMapClient city={cityName} />
             </div>
+
+            {/* Our Service Hub & Headquarters Section */}
+            <section className="bg-white py-16 border-t border-gray-200">
+                <div className="container mx-auto px-4 max-w-6xl">
+                    <div className="text-center max-w-3xl mx-auto mb-12">
+                        <h2 className="text-3xl font-bold text-navy">Our Service Hub & Headquarters</h2>
+                        <p className="text-gray-600 mt-4 leading-relaxed">
+                            While we dispatch our specialized exterior cleaning rigs daily throughout {cityName} and the wider Fox Valley region, our physical storefront and administrative headquarters are located in De Pere.
+                        </p>
+                    </div>
+
+                    <div className="grid md:grid-cols-12 gap-8 items-center">
+                        <div className="md:col-span-5 space-y-6">
+                            <div className="bg-slate-50 p-8 rounded-3xl border border-gray-105 space-y-4">
+                                <h3 className="text-xl font-bold text-navy">Valley Property Services</h3>
+                                <div className="space-y-3 text-gray-600 font-medium text-sm sm:text-base">
+                                    <p className="flex items-start gap-2">
+                                        <MapPin className="text-gold shrink-0 mt-1" size={18} />
+                                        <span>462 S Good Hope Rd<br />De Pere, WI 54115</span>
+                                    </p>
+                                    <p className="flex items-center gap-2">
+                                        <Phone className="text-gold shrink-0" size={18} />
+                                        <a href="tel:920-609-7085" className="hover:text-gold transition-colors">(920) 609-7085</a>
+                                    </p>
+                                    <p className="flex items-center gap-2">
+                                        <Mail className="text-gold shrink-0" size={18} />
+                                        <a href="mailto:info@valleyexteriorpros.com" className="hover:text-gold transition-colors">info@valleyexteriorpros.com</a>
+                                    </p>
+                                    <p className="flex items-start gap-2">
+                                        <Clock className="text-gold shrink-0 mt-1" size={18} />
+                                        <span>Monday – Sunday: 8:00 AM – 8:00 PM</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="md:col-span-7">
+                            <div className="w-full h-[320px] sm:h-[350px] rounded-3xl overflow-hidden shadow-lg border border-gray-200 bg-slate-50 relative">
+                                <iframe 
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d965.0151754639163!2d-88.06446349282405!3d44.433056645497985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8802f7860e31a465%3A0xc422a0d3f9df71ea!2sValley%20Property%20Services!5e0!3m2!1sen!2sus!4v1787846763291!5m2!1sen!2sus" 
+                                    width="100%" 
+                                    height="100%" 
+                                    style={{ border: 0 }} 
+                                    allowFullScreen={true} 
+                                    loading="lazy" 
+                                    referrerPolicy="strict-origin-when-cross-origin"
+                                    title="Valley Property Services Storefront Google Map Location"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             {/* MASSIVE REVIEW SLIDER INJECTION LOGIC */}
             <div className="bg-slate-50 pt-20">
