@@ -2,34 +2,35 @@
 @plugin "@tailwindcss/typography";
 
 @theme {
-  --color-navy: #134074;
-  --color-navy-dark: #0B2545;
-  --color-gold: #F05A24;
-  --color-gold-light: #D84815;
+  --color-navy: #005C9E;
+  --color-navy-dark: #0A192F;
+  --color-gold: #005C9E;
+  --color-gold-light: #0A192F;
   --color-slate-50: #FFFFFF;
-  --color-slate-600: #0F172A;
-  --color-slate-900: #0B2545;
+  --color-slate-600: #334155;
+  --color-slate-900: #0A192F;
   --color-gray-500: #64748B;
-  --color-gray-600: #0F172A;
+  --color-gray-600: #334155;
   --color-gray-200: #E2E8F0;
   --color-slate-200: #E2E8F0;
 }
 
 :root {
-  --color-accent-gold: #F05A24;
-  --color-accent-gold-hover: #D84815;
-  --color-accent-gold-subtle: #FFF1EB;
-  --color-navy-dark: #0B2545;
-  --color-navy-primary: #134074;
-  --color-navy-light: #F0F4F8;
+  --color-vps-blue: #005C9E;
+  --color-vps-navy: #0A192F;
+  --color-vps-electric: #0284C7;
+  --color-vps-ice: #F0F7FD;
   --bg-page: #FFFFFF;
-  --bg-subtle: #F8FAFC;
-  --text-primary: #0F172A;
-  --text-muted: #64748B;
-  --border-light: #E2E8F0;
+  --bg-card: #FFFFFF;
+  --text-heading: #0A192F;
+  --text-body: #334155;
+  --border-clean: #E2E8F0;
+  --cta-primary-bg: #005C9E;
+  --cta-primary-text: #FFFFFF;
+  --cta-primary-hover: #0A192F;
 
   --background: #FFFFFF;
-  --foreground: #0F172A;
+  --foreground: #334155;
 }
 
 @theme inline {
@@ -38,10 +39,10 @@
   --font-sans: var(--font-outfit), sans-serif;
   --font-inter: var(--font-inter), sans-serif;
   --font-outfit: var(--font-outfit), sans-serif;
-  --shadow-soft: 0px 8px 30px rgba(19, 64, 116, 0.04);
-  --shadow-hover: 0px 15px 40px rgba(19, 64, 116, 0.08);
+  --shadow-soft: 0px 8px 30px rgba(0, 92, 158, 0.04);
+  --shadow-hover: 0px 15px 40px rgba(0, 92, 158, 0.08);
   --shadow-card: 0px 4px 20px rgba(0, 0, 0, 0.03);
-  --shadow-card-hover: 0px 12px 30px rgba(240, 90, 36, 0.15);
+  --shadow-card-hover: 0px 12px 30px rgba(2, 132, 199, 0.15);
 }
 
 @layer base {
@@ -60,14 +61,14 @@
     font-family: var(--font-outfit), sans-serif;
     letter-spacing: -1.5px;
     line-height: 1.1;
-    color: var(--color-navy-dark);
+    color: var(--text-heading);
   }
 
   h2 {
     font-family: var(--font-outfit), sans-serif;
     letter-spacing: -0.75px;
     line-height: 1.2;
-    color: var(--color-navy-dark);
+    color: var(--text-heading);
   }
 
   h3,
@@ -77,7 +78,7 @@
   .font-heading {
     font-family: var(--font-outfit), sans-serif;
     letter-spacing: -0.25px;
-    color: var(--color-navy-dark);
+    color: var(--text-heading);
   }
 }
 
@@ -89,13 +90,13 @@
 
 body {
   background: var(--bg-page);
-  color: var(--text-primary);
+  color: var(--text-body);
   font-family: var(--font-inter), Arial, Helvetica, sans-serif;
   @apply antialiased;
 }
 
 /* ==========================================================================
-   UI COMPONENT CUSTOM OVERRIDES (DEEP NAVY & WARM AMBER RESTORATION)
+   UI COMPONENT CUSTOM OVERRIDES (VPS LOGO PURE-WATER CLEAN HARMONY)
    ========================================================================== */
 
 /* A. HEADER & NAVIGATION */
@@ -107,36 +108,36 @@ header {
 header nav a, 
 header nav button, 
 header nav div.cursor-pointer {
-  color: #0B2545 !important;
+  color: #0A192F !important;
 }
 
 header nav a:hover, 
 header nav button:hover, 
 header nav div.cursor-pointer:hover {
-  color: #F05A24 !important;
+  color: #005C9E !important;
 }
 
 header nav svg:hover,
 header nav .group:hover svg {
-  color: #F05A24 !important;
+  color: #005C9E !important;
 }
 
-/* Header Quote Button styling: Warm Amber-Gold pill button, white text, deeper hover */
+/* Header Quote Button styling: VPS Blue pill button, white text, deep navy hover */
 header a[href="/contact"] {
-  background-color: #F05A24 !important;
+  background-color: #005C9E !important;
   color: #FFFFFF !important;
   border-radius: 9999px !important;
 }
 
 header a[href="/contact"]:hover {
-  background-color: #D84815 !important;
-  box-shadow: 0 0 12px rgba(240, 90, 36, 0.2) !important;
+  background-color: #0A192F !important;
+  box-shadow: 0 0 12px rgba(0, 92, 158, 0.2) !important;
 }
 
 /* B. HERO SECTIONS & BADGES */
 section.bg-navy {
-  background: #0B2545 !important;
-  background-image: radial-gradient(circle at center, #134074 0%, #0B2545 100%) !important;
+  background: #0A192F !important;
+  background-image: radial-gradient(circle at center, #005C9E 0%, #0A192F 100%) !important;
   color: #FFFFFF !important;
 }
 
@@ -155,15 +156,15 @@ section.bg-navy p.text-gray-100 {
 }
 
 section.bg-navy p.text-gray-300 {
-  color: #F0F4F8 !important;
+  color: #F0F7FD !important;
 }
 
-/* Location Badges / Trust Badges: Light Amber background (#FFF1EB), subtle border, dark amber text */
+/* Location Badges: Ice Blue background (#F0F7FD), 1px border in (#0284C7), and VPS Blue text (#005C9E) */
 .bg-slate-900\/90, 
 [class*="bg-slate-900"] {
-  background-color: #FFF1EB !important;
-  border: 1px solid #F05A24 !important;
-  color: #D84815 !important;
+  background-color: #F0F7FD !important;
+  border: 1px solid #0284C7 !important;
+  color: #005C9E !important;
   box-shadow: none !important;
 }
 
@@ -172,38 +173,38 @@ section.bg-navy p.text-gray-300 {
 .bg-white\/95 {
   background-color: #FFFFFF !important;
   border: 1px solid #E2E8F0 !important;
-  box-shadow: 0 4px 20px -2px rgba(11, 37, 69, 0.03) !important;
+  box-shadow: 0 4px 20px -2px rgba(10, 25, 47, 0.03) !important;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
 
-/* Icon / Feature Accents: Light Amber circular badges (#FFF1EB background with #F05A24 icons) */
+/* Icon / Feature Accents: Ice Blue circular badges (#F0F7FD background with #005C9E icons) */
 .bg-gold\/10, 
 .bg-navy\/5, 
 .bg-slate-100 {
-  background-color: #FFF1EB !important;
+  background-color: #F0F7FD !important;
 }
 
 .text-gold, 
 .text-navy, 
 .text-blue-500, 
 .text-blue-600 {
-  color: #F05A24 !important;
+  color: #005C9E !important;
 }
 
-/* Hover state for cards: border transition to Primary Navy (#134074) with subtle card lift */
+/* Hover state for cards: border transition to Primary Navy (#005C9E) with subtle card lift */
 .bg-white:hover, 
 .bg-white\/95:hover {
-  border-color: #134074 !important;
+  border-color: #005C9E !important;
   border-width: 2px !important;
   transform: translateY(-4px) !important;
-  box-shadow: 0 10px 25px -5px rgba(19, 64, 116, 0.1) !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 92, 158, 0.1) !important;
 }
 
 /* D. LEAD CAPTURE & QUOTE FORMS */
 #quote-form, 
 form {
   background-color: #FFFFFF !important;
-  border-top: 4px solid #134074 !important; /* Navy header accent */
+  border-top: 4px solid #005C9E !important; /* Navy header accent */
 }
 
 #quote-form input, 
@@ -214,7 +215,7 @@ form textarea,
 form select {
   background-color: #F8FAFC !important;
   border: 1px solid #E2E8F0 !important;
-  color: #0F172A !important;
+  color: #334155 !important;
   transition: all 0.2s ease-in-out !important;
 }
 
@@ -224,15 +225,15 @@ form select {
 form input:focus, 
 form textarea:focus, 
 form select:focus {
-  border-color: #F05A24 !important;
+  border-color: #0284C7 !important;
   outline: none !important;
-  box-shadow: 0 0 0 2px rgba(240, 90, 36, 0.15) !important;
+  box-shadow: 0 0 0 2px rgba(2, 132, 201, 0.15) !important;
 }
 
-/* Submit Button Override: Signature Warm Amber-Gold button with crisp white text */
+/* Submit Button Override: Full-width VPS Blue button with crisp white text */
 #quote-form button[type="submit"],
 form button[type="submit"] {
-  background-color: #F05A24 !important;
+  background-color: #005C9E !important;
   color: #FFFFFF !important;
   width: 100% !important;
   font-weight: 800 !important;
@@ -241,13 +242,13 @@ form button[type="submit"] {
 
 #quote-form button[type="submit"]:hover,
 form button[type="submit"]:hover {
-  background-color: #D84815 !important;
+  background-color: #0A192F !important;
 }
 
 /* E. FOOTER SECTION */
 footer {
-  background-color: #0B2545 !important;
-  border-top: 1px solid rgba(240, 90, 36, 0.15) !important;
+  background-color: #0A192F !important;
+  border-top: 1px solid rgba(0, 92, 158, 0.15) !important;
 }
 
 footer h2,
@@ -256,13 +257,13 @@ footer h3 {
   position: relative;
 }
 
-/* Underline accent on footer headings: Warm Amber */
+/* Underline accent on footer headings: VPS Blue */
 footer h3::after {
   content: "";
   display: block;
   width: 2rem;
   height: 2px;
-  background-color: #F05A24;
+  background-color: #005C9E;
   margin-top: 0.5rem;
 }
 
@@ -274,14 +275,14 @@ footer span {
 }
 
 footer a:hover {
-  color: #FFFFFF !important;
+  color: #F0F7FD !important;
 }
 
 /* Footer copyright ribbon & divider styling */
 footer > div:last-child,
 .bg-navy.py-6.border-t {
-  background-color: #061527 !important;
-  border-top: 1px solid rgba(240, 90, 36, 0.15) !important;
+  background-color: #06101f !important;
+  border-top: 1px solid rgba(0, 92, 158, 0.15) !important;
 }
 
 /* F. MOBILE FLOATING ACTION BAR */
@@ -290,17 +291,17 @@ footer > div:last-child,
   border-top: 1px solid #E2E8F0 !important;
 }
 
-/* Call / Text Us: Deep Navy button (#134074) */
+/* Call / Text Us: Deep Navy button (#005C9E / #0A192F) */
 .fixed.bottom-0.left-0.right-0 a[href^="tel:"],
 .fixed.bottom-0.left-0.right-0 a[href^="sms:"] {
-  background-color: #134074 !important;
+  background-color: #0A192F !important;
   color: #FFFFFF !important;
   border: none !important;
 }
 
-/* Get Instant Quote: Signature Warm Amber-Gold button (#F05A24) */
+/* Get Instant Quote: VPS Blue button (#005C9E) */
 .fixed.bottom-0.left-0.right-0 a[href="/contact"] {
-  background-color: #F05A24 !important;
+  background-color: #005C9E !important;
   color: #FFFFFF !important;
   border: none !important;
 }
@@ -308,7 +309,7 @@ footer > div:last-child,
 /* Hardcoded color class overrides redirected to restored system colors */
 .bg-\[\#1B365D\], 
 .bg-\[\#1E2B3C\] {
-  background-color: #134074 !important;
+  background-color: #005C9E !important;
 }
 
 .text-\[\#1E2B3C\],
@@ -316,11 +317,11 @@ footer > div:last-child,
 .prose-headings\:text-\[\#1E2B3C\] h2,
 .prose-headings\:text-\[\#1E2B3C\] h3,
 .prose-headings\:text-\[\#1E2B3C\] h4 {
-  color: #0B2545 !important;
+  color: #0A192F !important;
 }
 
 .text-\[\#353738\] {
-  color: #0F172A !important;
+  color: #334155 !important;
 }
 
 .bg-\[\#F8FAFC\] {
