@@ -3,12 +3,12 @@
 
 @theme {
   --color-navy: #005C9E;
-  --color-navy-dark: #0A192F;
-  --color-gold: #005C9E;
-  --color-gold-light: #0A192F;
+  --color-navy-dark: #0B192C;
+  --color-gold: #E65100;
+  --color-gold-light: #BF360C;
   --color-slate-50: #FFFFFF;
   --color-slate-600: #334155;
-  --color-slate-900: #0A192F;
+  --color-slate-900: #0B192C;
   --color-gray-500: #64748B;
   --color-gray-600: #334155;
   --color-gray-200: #E2E8F0;
@@ -16,18 +16,25 @@
 }
 
 :root {
-  --color-vps-blue: #005C9E;
-  --color-vps-navy: #0A192F;
-  --color-vps-electric: #0284C7;
-  --color-vps-ice: #F0F7FD;
   --bg-page: #FFFFFF;
+  --bg-subtle: #F8FAFC;
   --bg-card: #FFFFFF;
-  --text-heading: #0A192F;
+  --bg-dark-section: #0B192C;
+
+  --color-vps-blue: #005C9E;
+  --color-vps-navy: #0B192C;
+  --color-vps-ice: #EFF6FF;
+
+  --color-cta-orange: #E65100;
+  --color-cta-orange-hover: #BF360C;
+
+  --text-main: #0B192C;
   --text-body: #334155;
-  --border-clean: #E2E8F0;
-  --cta-primary-bg: #005C9E;
-  --cta-primary-text: #FFFFFF;
-  --cta-primary-hover: #0A192F;
+  --text-muted: #64748B;
+  --text-inverse: #FFFFFF;
+
+  --border-light: #E2E8F0;
+  --shadow-card: 0 4px 12px -2px rgba(11, 25, 44, 0.08);
 
   --background: #FFFFFF;
   --foreground: #334155;
@@ -42,7 +49,7 @@
   --shadow-soft: 0px 8px 30px rgba(0, 92, 158, 0.04);
   --shadow-hover: 0px 15px 40px rgba(0, 92, 158, 0.08);
   --shadow-card: 0px 4px 20px rgba(0, 0, 0, 0.03);
-  --shadow-card-hover: 0px 12px 30px rgba(2, 132, 199, 0.15);
+  --shadow-card-hover: 0px 12px 30px rgba(230, 81, 0, 0.15);
 }
 
 @layer base {
@@ -61,14 +68,14 @@
     font-family: var(--font-outfit), sans-serif;
     letter-spacing: -1.5px;
     line-height: 1.1;
-    color: var(--text-heading);
+    color: var(--text-main);
   }
 
   h2 {
     font-family: var(--font-outfit), sans-serif;
     letter-spacing: -0.75px;
     line-height: 1.2;
-    color: var(--text-heading);
+    color: var(--text-main);
   }
 
   h3,
@@ -78,7 +85,7 @@
   .font-heading {
     font-family: var(--font-outfit), sans-serif;
     letter-spacing: -0.25px;
-    color: var(--text-heading);
+    color: var(--text-main);
   }
 }
 
@@ -96,10 +103,180 @@ body {
 }
 
 /* ==========================================================================
-   UI COMPONENT CUSTOM OVERRIDES (VPS LOGO PURE-WATER CLEAN HARMONY)
+   UI COMPONENT CUSTOM OVERRIDES (HIGH CONTRAST & ACCESSIBILITY)
    ========================================================================== */
 
-/* A. HEADER & NAVIGATION */
+/* A. REMOVE BROKEN OUTLINES & FOCUS STATE DECORATIONS */
+button, 
+input, 
+textarea, 
+select, 
+a {
+  outline: none !important;
+}
+
+button:focus,
+a:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none !important;
+  box-shadow: 0 0 0 2px var(--color-vps-blue) !important;
+}
+
+/* Explicit button styling rules for clean borders */
+button,
+a.bg-gold,
+a[class*="bg-gold"],
+a.bg-navy,
+a[class*="bg-navy"] {
+  border: none !important;
+  font-weight: 700 !important;
+  cursor: pointer !important;
+}
+
+/* B. FIX "PROTECT YOUR INVESTMENT" & DARK CALLOUT BANNERS */
+section.bg-navy,
+.bg-navy {
+  background: var(--bg-dark-section) !important;
+  color: var(--text-inverse) !important;
+}
+
+/* Remove dark overlays in hero/callout sections to keep content readable */
+section.bg-navy > .absolute.bg-black\/60,
+section.bg-navy > .absolute.inset-0.bg-black\/60 {
+  display: block !important;
+}
+
+/* Ensure banner texts are pure white */
+.bg-navy h1,
+.bg-navy h2,
+.bg-navy h3,
+.bg-navy p {
+  color: var(--text-inverse) !important;
+  text-shadow: none !important;
+}
+
+/* Phone & CTA Button: Solid Amber-Orange with white text and NO interior border box */
+.bg-navy a.inline-flex.items-center.justify-center.gap-3.rounded-full,
+.bg-navy a[href^="tel:"],
+.bg-navy a[href^="sms:"] {
+  background-color: var(--color-cta-orange) !important;
+  color: var(--text-inverse) !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 9999px !important;
+}
+
+.bg-navy a.inline-flex.items-center.justify-center.gap-3.rounded-full:hover,
+.bg-navy a[href^="tel:"]:hover,
+.bg-navy a[href^="sms:"]:hover {
+  background-color: var(--color-cta-orange-hover) !important;
+}
+
+/* C. FIX "APPLETON PRICING EXPECTATIONS" & LIGHT CARDS */
+.bg-white, 
+.bg-white\/95,
+[class*="bg-white"] {
+  background-color: var(--bg-card) !important;
+  border: 1px solid var(--border-light) !important;
+  box-shadow: var(--shadow-card) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Ensure headings inside white cards are Deep Navy */
+.bg-white h1, 
+.bg-white h2, 
+.bg-white h3, 
+.bg-white h4,
+.bg-white .text-navy,
+.bg-white .text-slate-900,
+.bg-white .text-navy-dark {
+  color: var(--color-vps-navy) !important;
+}
+
+/* Ensure card content texts are Slate Charcoal */
+.bg-white p, 
+.bg-white span, 
+.bg-white li,
+.bg-white .text-gray-600,
+.bg-white .text-slate-600 {
+  color: var(--text-body) !important;
+}
+
+/* Category Badges & Icon Containers */
+.bg-gold\/10, 
+.bg-navy\/5, 
+.bg-slate-100 {
+  background-color: var(--color-vps-ice) !important;
+}
+
+.text-gold, 
+.text-navy, 
+.text-blue-500, 
+.text-blue-600 {
+  color: var(--color-vps-blue) !important;
+}
+
+/* Card hover border & lift */
+.bg-white:hover, 
+.bg-white\/95:hover {
+  border-color: var(--color-vps-blue) !important;
+  transform: translateY(-4px) !important;
+}
+
+/* D. FLOATING ESTIMATE FORMS */
+#quote-form, 
+form,
+.hero-form-container {
+  background-color: var(--bg-card) !important;
+  border: 1px solid var(--border-light) !important;
+  box-shadow: var(--shadow-card) !important;
+  border-radius: 24px !important;
+}
+
+#quote-form input, 
+#quote-form textarea, 
+#quote-form select,
+form input, 
+form textarea, 
+form select {
+  background-color: #FFFFFF !important;
+  border: 1px solid #CBD5E1 !important;
+  color: var(--text-main) !important;
+  border-radius: 8px !important;
+  outline: none !important;
+  transition: all 0.2s ease-in-out !important;
+}
+
+#quote-form input:focus, 
+#quote-form textarea:focus, 
+#quote-form select:focus,
+form input:focus, 
+form textarea:focus, 
+form select:focus {
+  border-color: var(--color-cta-orange) !important;
+  box-shadow: 0 0 0 2px rgba(230, 81, 0, 0.15) !important;
+}
+
+/* Submit Button: Full-width Amber-Orange with crisp white text */
+#quote-form button[type="submit"],
+form button[type="submit"] {
+  background-color: var(--color-cta-orange) !important;
+  color: var(--text-inverse) !important;
+  width: 100% !important;
+  font-weight: 700 !important;
+  border: none !important;
+  border-radius: 9999px !important;
+  cursor: pointer !important;
+}
+
+#quote-form button[type="submit"]:hover,
+form button[type="submit"]:hover {
+  background-color: var(--color-cta-orange-hover) !important;
+}
+
+/* E. HEADER & NAVIGATION */
 header {
   background-color: #FFFFFF !important;
   border-bottom: 1px solid #E2E8F0 !important;
@@ -108,7 +285,7 @@ header {
 header nav a, 
 header nav button, 
 header nav div.cursor-pointer {
-  color: #0A192F !important;
+  color: #0B192C !important;
 }
 
 header nav a:hover, 
@@ -122,133 +299,23 @@ header nav .group:hover svg {
   color: #005C9E !important;
 }
 
-/* Header Quote Button styling: VPS Blue pill button, white text, deep navy hover */
+/* GET A QUOTE Button: Solid Amber-Orange with bold white text */
 header a[href="/contact"] {
-  background-color: #005C9E !important;
+  background-color: #E65100 !important;
   color: #FFFFFF !important;
+  border: none !important;
   border-radius: 9999px !important;
+  font-weight: 700 !important;
 }
 
 header a[href="/contact"]:hover {
-  background-color: #0A192F !important;
-  box-shadow: 0 0 12px rgba(0, 92, 158, 0.2) !important;
+  background-color: #BF360C !important;
 }
 
-/* B. HERO SECTIONS & BADGES */
-section.bg-navy {
-  background: #0A192F !important;
-  background-image: radial-gradient(circle at center, #005C9E 0%, #0A192F 100%) !important;
-  color: #FFFFFF !important;
-}
-
-/* Overlays in hero sections */
-section.bg-navy > .absolute.bg-black\/60,
-section.bg-navy > .absolute.inset-0.bg-black\/60 {
-  display: block !important;
-}
-
-/* Hero text overlay colors to bold white for readability against dark gradient */
-section.bg-navy h1, 
-section.bg-navy h1 span,
-section.bg-navy p.text-gray-100 {
-  color: #FFFFFF !important;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.4) !important;
-}
-
-section.bg-navy p.text-gray-300 {
-  color: #F0F7FD !important;
-}
-
-/* Location Badges: Ice Blue background (#F0F7FD), 1px border in (#0284C7), and VPS Blue text (#005C9E) */
-.bg-slate-900\/90, 
-[class*="bg-slate-900"] {
-  background-color: #F0F7FD !important;
-  border: 1px solid #0284C7 !important;
-  color: #005C9E !important;
-  box-shadow: none !important;
-}
-
-/* C. CARDS & SERVICE MATRICES */
-.bg-white, 
-.bg-white\/95 {
-  background-color: #FFFFFF !important;
-  border: 1px solid #E2E8F0 !important;
-  box-shadow: 0 4px 20px -2px rgba(10, 25, 47, 0.03) !important;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
-}
-
-/* Icon / Feature Accents: Ice Blue circular badges (#F0F7FD background with #005C9E icons) */
-.bg-gold\/10, 
-.bg-navy\/5, 
-.bg-slate-100 {
-  background-color: #F0F7FD !important;
-}
-
-.text-gold, 
-.text-navy, 
-.text-blue-500, 
-.text-blue-600 {
-  color: #005C9E !important;
-}
-
-/* Hover state for cards: border transition to Primary Navy (#005C9E) with subtle card lift */
-.bg-white:hover, 
-.bg-white\/95:hover {
-  border-color: #005C9E !important;
-  border-width: 2px !important;
-  transform: translateY(-4px) !important;
-  box-shadow: 0 10px 25px -5px rgba(0, 92, 158, 0.1) !important;
-}
-
-/* D. LEAD CAPTURE & QUOTE FORMS */
-#quote-form, 
-form {
-  background-color: #FFFFFF !important;
-  border-top: 4px solid #005C9E !important; /* Navy header accent */
-}
-
-#quote-form input, 
-#quote-form textarea, 
-#quote-form select,
-form input, 
-form textarea, 
-form select {
-  background-color: #F8FAFC !important;
-  border: 1px solid #E2E8F0 !important;
-  color: #334155 !important;
-  transition: all 0.2s ease-in-out !important;
-}
-
-#quote-form input:focus, 
-#quote-form textarea:focus, 
-#quote-form select:focus,
-form input:focus, 
-form textarea:focus, 
-form select:focus {
-  border-color: #0284C7 !important;
-  outline: none !important;
-  box-shadow: 0 0 0 2px rgba(2, 132, 201, 0.15) !important;
-}
-
-/* Submit Button Override: Full-width VPS Blue button with crisp white text */
-#quote-form button[type="submit"],
-form button[type="submit"] {
-  background-color: #005C9E !important;
-  color: #FFFFFF !important;
-  width: 100% !important;
-  font-weight: 800 !important;
-  transition: background-color 0.2s ease-in-out !important;
-}
-
-#quote-form button[type="submit"]:hover,
-form button[type="submit"]:hover {
-  background-color: #0A192F !important;
-}
-
-/* E. FOOTER SECTION */
+/* F. FOOTER */
 footer {
-  background-color: #0A192F !important;
-  border-top: 1px solid rgba(0, 92, 158, 0.15) !important;
+  background-color: #0B192C !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
 }
 
 footer h2,
@@ -271,37 +338,37 @@ footer p,
 footer li, 
 footer a, 
 footer span {
-  color: #BACEDF !important;
+  color: #94A3B8 !important;
 }
 
 footer a:hover {
-  color: #F0F7FD !important;
+  color: #FFFFFF !important;
 }
 
-/* Footer copyright ribbon & divider styling */
+/* Footer copyright ribbon */
 footer > div:last-child,
 .bg-navy.py-6.border-t {
-  background-color: #06101f !important;
-  border-top: 1px solid rgba(0, 92, 158, 0.15) !important;
+  background-color: #06101c !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
 }
 
-/* F. MOBILE FLOATING ACTION BAR */
+/* G. MOBILE FLOATING ACTION BAR */
 .fixed.bottom-0.left-0.right-0 {
   background-color: rgba(255, 255, 255, 0.95) !important;
   border-top: 1px solid #E2E8F0 !important;
 }
 
-/* Call / Text Us: Deep Navy button (#005C9E / #0A192F) */
+/* Call / Text Us: Deep Navy button (#134074) */
 .fixed.bottom-0.left-0.right-0 a[href^="tel:"],
 .fixed.bottom-0.left-0.right-0 a[href^="sms:"] {
-  background-color: #0A192F !important;
+  background-color: #134074 !important;
   color: #FFFFFF !important;
   border: none !important;
 }
 
-/* Get Instant Quote: VPS Blue button (#005C9E) */
+/* Get Instant Quote: Signature Gold button (#D97706) */
 .fixed.bottom-0.left-0.right-0 a[href="/contact"] {
-  background-color: #005C9E !important;
+  background-color: #D97706 !important;
   color: #FFFFFF !important;
   border: none !important;
 }
@@ -309,7 +376,7 @@ footer > div:last-child,
 /* Hardcoded color class overrides redirected to restored system colors */
 .bg-\[\#1B365D\], 
 .bg-\[\#1E2B3C\] {
-  background-color: #005C9E !important;
+  background-color: #134074 !important;
 }
 
 .text-\[\#1E2B3C\],
@@ -317,7 +384,7 @@ footer > div:last-child,
 .prose-headings\:text-\[\#1E2B3C\] h2,
 .prose-headings\:text-\[\#1E2B3C\] h3,
 .prose-headings\:text-\[\#1E2B3C\] h4 {
-  color: #0A192F !important;
+  color: #0B192C !important;
 }
 
 .text-\[\#353738\] {
