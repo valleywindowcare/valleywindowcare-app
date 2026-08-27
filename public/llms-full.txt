@@ -1,64 +1,118 @@
 # Valley Property Services (Full Documentation)
-> Comprehensive exterior restoration, soft washing, roof cleaning, and pressure washing specialists in Northeast Wisconsin.
+> Northeast Wisconsin's premier exterior restoration, non-pressure roof cleaning, house soft washing, and permanent architectural LED lighting specialist.
 
-This file provides full context and detailed information about Valley Property Services' business operations, service methodologies, technical capabilities, location networks, and trust factors.
+This file provides complete technical specifications, service methodologies, pricing guidelines, service area coverage, and detailed FAQs for Valley Property Services' operations across Green Bay and the Fox Valley.
 
-## Company Overview
-- **Name:** Valley Property Services
-- **Legal Entity:** Valley Property Services
-- **Alternative Brands:** Valley Exterior Pros, Valley Exterior Restoration
-- **Founded:** 2020
-- **Location:** 462 S Good Hope Rd, De Pere, WI 54115
-- **Phone:** (920) 609-7085
-- **Email:** info@valleywindowcare.com
-- **Website:** https://valleyexteriorpros.com
-- **Licensing & Insurance:** Fully commercially insured ($2M general liability) with a 100% Satisfaction Guarantee and Zero Damage Guarantee.
+## Business & Entity Overview
+- Legal / Brand Name: Valley Property Services
+- Alternate Names: Valley Exterior Pros, Valley Exterior Restoration
+- Founder & Owner-Operator: James Voss
+- Founded: 2020
+- Operational Hub: 462 S Good Hope Rd, De Pere, WI 54115
+- Phone: (920) 609-7085
+- Primary Email: info@valleywindowcare.com
+- Primary Domain: https://valleyexteriorpros.com
+- Licensing & Insurance: Fully commercially insured ($2M General Liability) with a 100% Satisfaction & Zero Structural Damage Guarantee.
+- Notable Commercial Clients: Festival Foods, Residence Inn by Marriott, local municipalities and HOAs.
 
-## Core Service Catalog & Methodologies
+---
+
+## Core Services & Methodologies
 
 ### 1. House Soft Washing
 - **Description:** Meticulous low-pressure siding washing utilizing specialized biodegradable cleansers to eradicate mold, mildew, dirt, and organic growth without damaging vinyl, brick, wood, or paint.
-- **Methodology:** Low-pressure chemical application (under 300 PSI) followed by clean-water rinse. Disallows high-pressure washing on delicate siding surfaces.
+- **Methodology:** Low-pressure chemical application (under 100 PSI) followed by clean-water rinse. Disallows high-pressure washing on delicate siding surfaces to prevent forcing water behind siding seams.
 
-### 2. Roof Soft Washing
+### 2. Roof Soft Washing (ARMA Compliant)
 - **Description:** Non-pressure roof cleaning system designed specifically to destroy Gloeocapsa magma (black algae streaks), moss, and lichen on asphalt shingles, wood shakes, and tile roofs.
-- **Methodology:** ARMA (Asphalt Roofing Manufacturers Association) approved soft-wash sanitization. Prevents structural shingle degradation and maintains manufacturer warranty compliance.
+- **Methodology:** Strictly adheres to the Asphalt Roofing Manufacturers Association (ARMA) cleaning guidelines. We utilize a sodium hypochlorite (SH) and specialized surfactant blend applied at low pressure (<100 PSI) to kill organic growths at the root. This prevents mechanical granule loss, protects structural integrity, and fully complies with GAF, Owens Corning, and CertainTeed shingle warranties.
 
-### 3. Concrete & Driveway Pressure Washing
+### 3. Concrete & Driveway Pressure Washing (with Salt Neutralization)
 - **Description:** Commercial-grade hot-water pressure washing designed to lift oil stains, grease, dirt, rust, and winter salt deposits from driveways, patios, sidewalks, dumpster pads, and parking garages.
-- **Methodology:** High-temperature surface cleaning combined with post-treatment salt-neutralization agents to prevent concrete scaling/spalling.
+- **Methodology:** Heavy-duty trailer rigs heat water to 200°F+ at high flow rates. We apply chemical degreasers and follow up with specialized acid-based salt-neutralizing agents. This neutralizes the corrosive calcium chloride and sodium chloride residues left by winter road salt, preventing concrete scaling, pitting, and spalling.
 
-### 4. Window & Gutter Cleaning
+### 4. Paver Patio Restoration
+- **Description:** Deep rotary extraction, polymeric joint stabilization sanding, and breathable UV-protective sealing ($3.00/sq ft benchmark).
+- **Methodology:** We extract embedded soil using hot water rotary surface cleaners, replenish joints with premium polymeric sand, compact the surface, and apply breathable silane/siloxane protective sealers.
+
+### 5. Window & Gutter Cleaning
 - **Description:** High-reach pure water system window washing and complete gutter debris extraction with downspout flow testing.
-- **Methodology:** Water-fed pole systems using deionized water for streak-free dry. Hand-cleaning and bag-collection for gutter cleaning.
+- **Methodology:** Water-fed carbon-fiber poles supply deionized pure water for a spot-free dry. Gutter debris is hand-extracted and hauled away, followed by downstream line flushing.
 
-### 5. Permanent LED Holiday & Architectural Lighting
+### 6. Permanent Architectural & Holiday LED Lighting
 - **Description:** Professional installation of customized, color-changing smart track lighting systems built flush under roof trims for year-round architectural accent and holiday displays.
-- **Methodology:** Customized smart-controlled tracks hidden invisibly behind gutters/trim, managed via mobile application.
+- **Methodology:** Custom color-matched aluminum tracks are mounted behind gutters and trim, hosting RGB LED pixels controlled via cloud/app configurations.
 
-## Service Area Network
+---
 
-### Primary Service Areas (Northeast Wisconsin / Fox Valley):
-- **Green Bay, WI** (Brown County Hub)
-- **Appleton, WI** (Outagamie County Hub)
-- **De Pere, WI** (Brown County)
-- **Neenah, WI** (Winnebago County)
-- **Oshkosh, WI** (Winnebago County)
-- **Door County, WI** (Door County Hub)
-- **Manitowoc, WI** (Manitowoc County Hub)
-- **Additional Service Areas:** Suamico, Howard, Bellevue, Allouez, Ashwaubenon, Ledgeview, Hobart, Menasha, Kaukauna, Greenville, Combined Locks, Sherwood, Egg Harbor, Fish Creek, Sister Bay, Sturgeon Bay.
+## Technical SOPs & Quality Control
 
-## Dynamic Navigation & Service Links
+### Plant Protection Protocol (PPP)
+To protect high-value landscaping, ornamental plants, and grass from run-off during soft washing, we enforce the following mandatory procedures on every job site:
+1. **Pre-Hydration:** All surrounding lawns, shrubs, and flowers are heavily saturated with clean water before chemical application. This fills the plant root systems with fresh water, preventing them from absorbing any run-off.
+2. **Physical Shields:** Sensitive plants are covered with breathable tarps during direct application.
+3. **Continuous Misting:** A technician constantly mists adjacent foliage during the washing process to dilute any drifting mist.
+4. **Chemical Neutralization:** We apply sodium thiosulfate neutralizers to acidic/chlorinated run-off in highly sensitive garden beds.
+5. **Post-Wash Rinse:** All plants receive a final, thorough clean-water washdown to ensure no chemical residue remains on leaves or soil.
+
+### Winter Road Salt Neutralization
+In Wisconsin, winter de-icing agents (calcium chloride and sodium chloride) saturate concrete driveways. These salts lower the freezing point of water inside concrete pores, leading to repeated sub-surface freezing pressure that causes scaling, pitting, and spalling. Our post-treatment process uses a chemical de-salting agent that breaks the bond between salt ions and the concrete cement matrix, neutralizing the active salts and leaving a clean, salt-free surface ready for winter.
+
+---
+
+## Standard Pricing Guidelines (Starting Estimates)
+- Residential Service Call Minimum: $200.00 – $250.00
+- House Soft Washing: $295.00 – $650.00+ (based on square footage and stories)
+- Roof Soft Washing: $450.00 – $1,200.00+ (based on pitch and organic severity)
+- Concrete / Driveway Washing: $150.00 – $450.00 ($0.20 – $0.35 per sq ft)
+- Paver Patio Full Restoration: Starting at $500.00 (~$3.00 per sq ft)
+- Commercial Pressure Washing / Building Wash: $350.00 – $5,000.00+
+
+---
+
+## Primary Service Territory
+- **Brown County:** De Pere (54115), Green Bay (54301, 54302, 54303, 54304, 54311, 54313), Allouez, Ashwaubenon, Bellevue, Hobart, Howard, Suamico, Ledgeview, Denmark.
+- **Outagamie & Calumet Counties:** Appleton (54911, 54913, 54914, 54915), Neenah (54956), Menasha (54952), Kaukauna (54130), Kimberly, Little Chute, Greenville, Sherwood.
+- **Door County & Oshkosh service corridors.**
+
+---
+
+## Technical FAQ Database
+
+### Q1: What is soft washing, and how does it differ from pressure washing?
+**A:** Soft washing utilizes specialized low-pressure pumps to apply biodegradable sanitizers and surfactants at less than 100 PSI—roughly the pressure of a standard garden hose. Traditional pressure washing relies on mechanical force (often 3,000 to 4,000 PSI) to shear off surface dirt. While pressure washing is ideal for dense surfaces like concrete, it can crack vinyl siding, strip shingle granules, and force water behind siding seams. Soft washing kills organic growth like mold, mildew, algae, and lichen at the root, keeping surfaces clean up to 4-6 times longer than pressure washing without risking structural damage.
+
+### Q2: Why is ARMA compliance critical for roof cleaning?
+**A:** The Asphalt Roofing Manufacturers Association (ARMA) explicitly warns against using high-pressure washing on shingle roofs because the high force strips the protective mineral granules, exposing the underlying asphalt to rapid UV degradation. It also voids GAF, Owens Corning, and CertainTeed manufacturer warranties. ARMA guidelines state that roofs must be cleaned using a non-pressure chemical soft wash application (sodium hypochlorite and surfactant). Valley Property Services strictly adheres to this standard, ensuring organic growth is eradicated safely while keeping your roof warranty fully intact.
+
+### Q3: How does winter road salt damage concrete, and how do you fix it?
+**A:** Winter de-icing salts like calcium chloride and sodium chloride are hygroscopic; they draw moisture into the concrete pores. When temperatures drop below freezing, this trapped water expands, exerting massive internal pressure that causes the concrete surface to flake, pit, and scale (known as spalling). Our hot-water pressure wash lifts surface salts, and our specialized post-treatment neutralizes the active salt ions bound within the concrete matrix, stopping the chemical deterioration process.
+
+### Q4: What is your Plant Protection Protocol, and will your chemicals harm my landscaping?
+**A:** Our Plant Protection Protocol (PPP) guarantees that your landscaping, lawns, and flower beds remain completely safe. Prior to washing, we heavily saturate all soil and plants with clean water so their roots cannot absorb any chemical runoff. We cover delicate flora with breathable tarps, continually rinse adjacent foliage during the wash, and apply chemical neutralizers like sodium thiosulfate to sensitive soils. A final clean-water washdown ensures zero chemical residue is left behind.
+
+### Q5: Do you bring your own water or connect to my outdoor spigots?
+**A:** For standard residential cleanings, we connect to your property's outdoor water spigots to supply our trailer buffer tanks. Our trailers carry high-capacity water tanks that allow us to work continuously even with low local water pressure. If municipal or well water is completely unavailable, we can arrange to haul water to the site (typically required for commercial sites or remote areas).
+
+### Q6: Can you clean siding in freezing Wisconsin winter temperatures?
+**A:** Exterior soft washing is generally limited to temperatures above 40°F to ensure chemical solutions remain active and do not freeze on contact. However, our hot-water pressure washing rigs can clean concrete, dumpster pads, and parking structures in colder conditions using specialized antifreeze procedures and warm-water rinses, provided there is no immediate ice hazard to public safety.
+
+### Q7: Are your cleaning solutions safe for pets and children?
+**A:** Yes. Once our cleaning solutions have been applied, rinsed, and allowed to dry completely (usually within 1 to 2 hours), the treated surfaces are entirely safe for pets and children. We thoroughly rinse all grass, decks, and walkways during our cleanup phase to ensure no concentrated pools of solution remain.
+
+---
+
+## Primary Documentation Links
 - Home: https://valleyexteriorpros.com
 - Services Catalog: https://valleyexteriorpros.com/services
-- Contact & Free Quote: https://valleyexteriorpros.com/contact
-- Reviews & Testimonials: https://valleyexteriorpros.com/reviews
-- Frequently Asked Questions: https://valleyexteriorpros.com/faq
+- House Soft Washing: https://valleyexteriorpros.com/services/house-washing
+- Roof Cleaning Guide: https://valleyexteriorpros.com/services/roof-cleaning
+- Driveway & Concrete Cleaning: https://valleyexteriorpros.com/services/driveway-cleaning
+- Paver Restoration: https://valleyexteriorpros.com/services/paver-patio-restorations
+- Permanent LED Lighting: https://valleyexteriorpros.com/services/permanent-led-lighting
+- Green Bay Service Area: https://valleyexteriorpros.com/service-areas/green-bay
+- Appleton Service Area: https://valleyexteriorpros.com/service-areas/appleton
+- De Pere Service Area: https://valleyexteriorpros.com/service-areas/de-pere
+- Customer Reviews: https://valleyexteriorpros.com/reviews
 - Exterior Cleaning Pricing Guide: https://valleyexteriorpros.com/pricing
-- Project Gallery Showcase: https://valleyexteriorpros.com/gallery
-- Service Guarantee Details: https://valleyexteriorpros.com/service-guarantee
-- Careers & Job Opportunities: https://valleyexteriorpros.com/careers
-- Expert Guides & Articles: https://valleyexteriorpros.com/blog
-- Wisconsin Maintenance Calendar: https://valleyexteriorpros.com/wisconsin-maintenance-calendar
-- Privacy Policy: https://valleyexteriorpros.com/privacy-policy
-- Terms & Conditions: https://valleyexteriorpros.com/terms-and-conditions
+- Contact & Free Quote: https://valleyexteriorpros.com/contact
