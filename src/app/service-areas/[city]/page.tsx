@@ -65,12 +65,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
             description: "Expert pressure washing in De Pere, WI. Specializing in commercial hood cleaning De Pere / Green Bay, soft wash siding cleaning Green Bay WI area, and masonry restoration."
         },
         "green-bay": {
-            title: "Pressure Washing Green Bay WI | House Washing & Roof Stain Removal",
-            description: "Top-rated pressure washing Green Bay WI, house washing Green Bay, and soft wash siding cleaning Green Bay WI. Remove roof stains and clean driveways."
+            title: "Pressure Washing & Roof Cleaning Green Bay WI | Valley Property Services",
+            description: "Professional house washing, roof soft washing, driveway pressure washing & window cleaning in Green Bay & De Pere, WI. 100% satisfaction guarantee."
         },
         "appleton": {
-            title: "Pressure Washing Appleton WI | House Washing & Permanent LED Lights",
-            description: "Expert pressure washing Appleton WI, house washing Appleton WI, and roof soft washing Appleton. Concrete pressure washing Appleton and permanent LED holiday lighting installer Appleton WI."
+            title: "Exterior Cleaning & Pressure Washing Appleton WI | Valley Property Services",
+            description: "Top-rated exterior cleaning in Appleton & Fox Valley. Non-pressure roof cleaning, house soft washing, paver restoration & permanent LED lighting. Get a free quote!"
         }
     };
 

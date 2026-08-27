@@ -88,9 +88,10 @@ export default function RootLayout({
               "@type": "HomeAndConstructionBusiness",
               "@id": "https://valleyexteriorpros.com/#organization",
               "name": "Valley Property Services",
-              "alternateName": ["Valley Exterior Pros", "Valley Exterior Restoration"],
+              "alternateName": ["Valley Exterior Pros", "Valley Exterior Restoration", "VPS"],
               "legalName": "Valley Property Services",
               "url": "https://valleyexteriorpros.com",
+              "image": "https://valleyexteriorpros.com/wp-content/uploads/logo.png",
               "sameAs": [
                 "https://www.facebook.com/valleywindowcare",
                 "https://www.instagram.com/valleywindowcare",
@@ -110,16 +111,44 @@ export default function RootLayout({
               },
               "geo": {
                 "@type": "GeoCoordinates",
-                "latitude": 44.4287,
-                "longitude": -88.0289
+                "latitude": 44.433056,
+                "longitude": -88.064463
               },
-              "areaServed": [
-                {"@type": "City", "name": "De Pere"},
-                {"@type": "City", "name": "Green Bay"},
-                {"@type": "City", "name": "Appleton"},
-                {"@type": "City", "name": "Neenah"},
-                {"@type": "City", "name": "Fox Valley"}
+              "openingHoursSpecification": [
+                {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday",
+                    "Saturday",
+                    "Sunday"
+                  ],
+                  "opens": "08:00",
+                  "closes": "20:00"
+                }
               ],
+              "areaServed": [
+                { "@type": "City", "name": "De Pere" },
+                { "@type": "City", "name": "Green Bay" },
+                { "@type": "City", "name": "Appleton" },
+                { "@type": "City", "name": "Neenah" },
+                { "@type": "City", "name": "Menasha" },
+                { "@type": "City", "name": "Howard" },
+                { "@type": "City", "name": "Suamico" },
+                { "@type": "AdministrativeArea", "name": "Brown County" },
+                { "@type": "AdministrativeArea", "name": "Outagamie County" },
+                { "@type": "AdministrativeArea", "name": "Door County" }
+              ],
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.9",
+                "reviewCount": "119",
+                "bestRating": "5",
+                "worstRating": "1"
+              },
               "knowsAbout": [
                 "Pressure Washing",
                 "Soft-Wash Roof Cleaning",

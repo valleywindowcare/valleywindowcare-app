@@ -8,8 +8,8 @@ import ReviewSlider from '@/components/ReviewSlider';
 import FAQSchema from '@/components/FAQSchema';
 
 export const metadata = {
-    title: "Professional Paver Patio Restoration in Green Bay & Appleton",
-    description: "Expert brick paver cleaning, polymeric sanding, and sealing services. Valley Property Services restores and protects patios, driveways, and plazas in Northeast Wisconsin.",
+    title: "Paver Patio Restoration, Cleaning & Sealing | Green Bay & Appleton",
+    description: "Expert paver cleaning, polymeric sand stabilization, and protective sealing across Northeast WI. Restore color and stop weeds. Free estimates!",
 };
 
 const faqs = [
