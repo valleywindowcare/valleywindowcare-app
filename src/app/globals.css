@@ -291,3 +291,29 @@ footer > div:last-child,
   color: var(--text-primary) !important;
   border: none !important;
 }
+
+/* Hardcoded color class overrides for absolute consistency */
+.bg-\[\#1B365D\], 
+.bg-\[\#1E2B3C\] {
+  background-color: var(--cta-primary-bg) !important;
+}
+
+.text-\[\#1E2B3C\],
+.prose-headings\:text-\[\#1E2B3C\] h1,
+.prose-headings\:text-\[\#1E2B3C\] h2,
+.prose-headings\:text-\[\#1E2B3C\] h3,
+.prose-headings\:text-\[\#1E2B3C\] h4 {
+  color: var(--text-primary) !important;
+}
+
+.text-\[\#353738\] {
+  color: var(--text-secondary) !important;
+}
+
+.bg-\[\#F8FAFC\] {
+  background-color: var(--bg-main) !important;
+}
+
+.bg-\[\#FFFFFF\] {
+  background-color: var(--bg-surface) !important;
+}
