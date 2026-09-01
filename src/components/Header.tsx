@@ -24,6 +24,7 @@ export default function Header() {
                     <Link href="/reviews" className="hover:text-gold transition-colors items-center flex h-full">Reviews</Link>
                     <Link href="/pricing#calculator-hub" className="hover:text-gold transition-colors items-center flex h-full">Pricing</Link>
                     <Link href="/blog" className="hover:text-gold transition-colors items-center flex h-full">Expert Guides</Link>
+                    <Link href="/online-booking" className="hover:text-gold transition-colors items-center flex h-full font-black text-gold border-l border-white/20 pl-4">Book Online</Link>
                 </div>
             </div>
 
@@ -114,19 +115,24 @@ export default function Header() {
                     <Link href="/services/paver-patio-restorations" className="hover:text-gold transition-colors uppercase whitespace-nowrap shrink-0">PAVER SEALING</Link>
                     <Link href="/services/house-washing" className="hover:text-gold transition-colors uppercase whitespace-nowrap shrink-0">HOUSE WASHING</Link>
                     <Link href="/services/pressure-washing" className="hover:text-gold transition-colors uppercase whitespace-nowrap shrink-0">PRESSURE WASHING</Link>
+                    <Link href="/online-booking" className="hover:text-gold transition-colors uppercase text-gold font-black whitespace-nowrap shrink-0">BOOK ONLINE</Link>
 
                     <Link href="/contact" className="hover:text-gold transition-colors uppercase mr-4 xl:mr-8 whitespace-nowrap shrink-0">CONTACT</Link>
                 </nav>
 
                 {/* Call to Action Desktop */}
-                <div className="hidden lg:flex items-center ml-auto shrink-0 pr-1">
-                    <a href="tel:920-609-7085" className="flex items-center gap-2 text-navy font-bold hover:text-gold transition-colors shrink-0 mr-4 xl:mr-6" rel="nofollow" aria-label="Call Valley Property Services">
-                        <span className="hidden xl:inline font-black text-navy-dark text-lg xl:text-xl break-words leading-tight tracking-tight">(920) 609-7085</span>
-                        <Phone size={22} className="text-gold shrink-0 xl:hidden" aria-label="Phone Icon" />
-                        <Phone size={18} className="hidden xl:block text-gold shrink-0" />
+                <div className="hidden lg:flex items-center ml-auto shrink-0 pr-1 gap-2 xl:gap-3">
+                    <a href="tel:920-609-7085" className="flex items-center gap-2 text-navy font-bold hover:text-gold transition-colors shrink-0 mr-2 xl:mr-3" rel="nofollow" aria-label="Call Valley Property Services">
+                        <span className="hidden 2xl:inline font-black text-navy-dark text-lg break-words leading-tight tracking-tight">(920) 609-7085</span>
+                        <Phone size={20} className="text-gold shrink-0 2xl:hidden" aria-label="Phone Icon" />
+                        <Phone size={18} className="hidden 2xl:block text-gold shrink-0" />
                     </a>
                     
-                    <Link href="/contact" className="bg-gold hover:bg-gold-light text-navy-dark px-4 py-2 xl:px-6 xl:py-2.5 rounded-full font-black btn-hover-fx shadow-md whitespace-nowrap text-[12px] xl:text-[14px] shrink-0 uppercase tracking-widest" aria-label="Request a free property exterior cleaning quote">
+                    <Link href="/online-booking" className="bg-navy hover:bg-navy-dark text-white border border-gold/40 px-3.5 py-2 xl:px-5 xl:py-2.5 rounded-full font-bold btn-hover-fx shadow-sm whitespace-nowrap text-[11px] xl:text-[13px] shrink-0 uppercase tracking-wider" aria-label="Book online automated quote">
+                        BOOK ONLINE
+                    </Link>
+
+                    <Link href="/contact" className="bg-gold hover:bg-gold-light text-navy-dark px-4 py-2 xl:px-6 xl:py-2.5 rounded-full font-black btn-hover-fx shadow-md whitespace-nowrap text-[11px] xl:text-[13px] shrink-0 uppercase tracking-widest" aria-label="Request a free property exterior cleaning quote">
                         GET A QUOTE
                     </Link>
                 </div>
@@ -179,6 +185,10 @@ export default function Header() {
                         </div>
 
                         {/* Top-Level Secondary Mobile Links */}
+                        <Link onClick={() => setIsMobileMenuOpen(false)} href="/online-booking" className="uppercase py-4 border-b border-gray-100 font-black text-gold flex items-center justify-between">
+                            <span>BOOK ONLINE (INSTANT QUOTE)</span>
+                            <span className="text-[10px] bg-gold/10 text-gold px-2.5 py-1 rounded-full uppercase tracking-widest font-black">Instant</span>
+                        </Link>
                         <Link onClick={() => setIsMobileMenuOpen(false)} href="/service-areas" className="uppercase py-4 border-b border-gray-100 font-black text-navy-dark hover:text-gold transition-colors">SERVICE AREAS</Link>
                         <Link onClick={() => setIsMobileMenuOpen(false)} href="/gallery" className="uppercase py-4 border-b border-gray-100 hover:text-gold transition-colors">GALLERY</Link>
                         <Link onClick={() => setIsMobileMenuOpen(false)} href="/reviews" className="uppercase py-4 border-b border-gray-100 hover:text-gold transition-colors">REVIEWS</Link>
@@ -193,11 +203,14 @@ export default function Header() {
                                     Fully Licensed & Insured
                                 </span>
                             </div>
-                            <a href="sms:9206097085" className="flex items-center justify-center gap-2 w-full text-center bg-navy hover:bg-navy-light text-white px-6 py-4 rounded-xl font-bold shadow-md transition-colors">
-                                <MessageSquare size={20} /> Text Us for a Fast Quote
+                            <Link onClick={() => setIsMobileMenuOpen(false)} href="/online-booking" className="block w-full text-center bg-navy hover:bg-navy-dark text-white px-6 py-4 rounded-xl font-bold shadow-md transition-colors uppercase tracking-wider text-sm">
+                                📅 BOOK ONLINE / AUTOMATED ESTIMATE
+                            </Link>
+                            <a href="sms:9206097085" className="flex items-center justify-center gap-2 w-full text-center bg-slate-100 hover:bg-slate-200 text-navy px-6 py-3.5 rounded-xl font-bold shadow-sm transition-colors text-sm">
+                                <MessageSquare size={20} className="text-gold" /> Text Us for a Fast Quote
                             </a>
-                            <Link onClick={() => setIsMobileMenuOpen(false)} href="/contact" className="block w-full text-center bg-gold hover:bg-gold-light text-white px-6 py-4 rounded-xl font-bold shadow-md transition-colors">
-                                GET A FREE QUOTE
+                            <Link onClick={() => setIsMobileMenuOpen(false)} href="/contact" className="block w-full text-center bg-gold hover:bg-gold-light text-navy-dark px-6 py-4 rounded-xl font-black shadow-md transition-colors uppercase tracking-wider text-sm">
+                                GET A CUSTOM QUOTE
                             </Link>
                         </div>
                     </nav>

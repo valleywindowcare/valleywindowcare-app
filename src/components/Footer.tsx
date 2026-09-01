@@ -168,6 +168,12 @@ export default function Footer() {
                                 </Link>
                             </li>
                             <li>
+                                <Link href="/online-booking" className="hover:text-gold transition-colors inline-block relative group text-gold font-bold">
+                                    Online Booking &amp; Estimate
+                                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
+                                </Link>
+                            </li>
+                            <li>
                                 <Link href="/faq" className="hover:text-gold transition-colors inline-block relative group">
                                     Frequently Asked Questions
                                     <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>

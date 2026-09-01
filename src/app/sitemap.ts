@@ -84,7 +84,8 @@ const coreRoutesList = [
     "/service-guarantee",
     "/trusted-partners",
     "/wisconsin-maintenance-calendar",
-    "/quote"
+    "/quote",
+    "/online-booking"
 ];
 
 // Active services dynamically mapped from services/[service]/page.tsx array (36 services) + 6 static services
