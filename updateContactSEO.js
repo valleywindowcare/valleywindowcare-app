@@ -20,7 +20,7 @@ walk(srcPath, (filePath) => {
 
     // Contact Page Email Update
     if (filePath.includes('contact/page.tsx') || filePath.includes('contact/ContactForm.tsx')) {
-        content = content.replace(/James@ValleyWindowCare\.com/g, 'info@valleywindowcare.com');
+        content = content.replace(/James@ValleyWindowCare\.com/g, 'info@valleyexteriorpros.com');
     }
 
     // Add rel="nofollow" to <a href="tel:..."> and <a href="mailto:...">

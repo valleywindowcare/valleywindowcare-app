@@ -56,7 +56,8 @@ export default function HeroForm({ idPrefix = "" }: { idPrefix?: string }) {
             const web3Payload = {
                 access_key: "c8727880-065b-4c99-9190-7f4a13170752", 
                 subject: `🚨 NEW WEBSITE LEAD: ${safeName} - Valley Property Services`,
-                from_name: "Website Quote Form",
+                from_name: "Valley Property Services Lead Form",
+                replyto: safeEmail || "info@valleyexteriorpros.com",
                 name: safeName,
                 email: safeEmail,
                 phone: safePhone,

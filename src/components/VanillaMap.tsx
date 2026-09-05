@@ -87,7 +87,7 @@ export default function VanillaMap({ city }: { city?: string }) {
                 // 1. Dotted City Boundary via Nominatim Data Layer injection
                 var nominatimUrl = "https://nominatim.openstreetmap.org/search?q=" + encodeURIComponent(currentCity + ", WI") + "&polygon_geojson=1&format=json&limit=1";
 
-                fetch(nominatimUrl, { headers: { 'User-Agent': 'ValleyWindowCareSEO' } })
+                fetch(nominatimUrl, { headers: { 'User-Agent': 'ValleyPropertyServicesSEO' } })
                     .then(response => response.json())
                     .then(data => {
                         if (data && data.length > 0) {

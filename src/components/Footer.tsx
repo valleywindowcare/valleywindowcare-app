@@ -29,7 +29,7 @@ export default function Footer() {
                             <a href="https://www.instagram.com/valleywindowcare" target="_blank" rel="noopener noreferrer" aria-label="Visit Valley Property Services on Instagram" className="w-10 h-10 rounded-full bg-navy text-white flex items-center justify-center hover:bg-gold transition-colors hover:scale-110 active:scale-95 duration-200">
                                 <Instagram size={18} />
                             </a>
-                            <a href="https://www.youtube.com/@valleywindowcare" target="_blank" rel="noopener noreferrer" aria-label="Visit Valley Property Services on YouTube" className="w-10 h-10 rounded-full bg-navy text-white flex items-center justify-center hover:bg-gold transition-colors hover:scale-110 active:scale-95 duration-200">
+                            <a href="https://www.youtube.com/@valleypropertywash" target="_blank" rel="noopener noreferrer" aria-label="Visit Valley Property Services on YouTube" className="w-10 h-10 rounded-full bg-navy text-white flex items-center justify-center hover:bg-gold transition-colors hover:scale-110 active:scale-95 duration-200">
                                 <Youtube size={18} />
                             </a>
                         </div>
@@ -253,6 +253,9 @@ export default function Footer() {
             {/* Proudly Serving Section (Natural Language SEO) */}
             <div className="border-t border-gray-200 py-8 text-center mt-4 bg-white">
                 <div className="container mx-auto px-4 max-w-4xl">
+                    <p className="text-xs sm:text-sm font-bold text-navy mb-2">
+                        Valley Property Services | 462 S Good Hope Rd, De Pere, WI 54115 | (920) 609-7085 | <a href="mailto:info@valleyexteriorpros.com" className="hover:text-gold transition-colors">info@valleyexteriorpros.com</a>
+                    </p>
                     <p className="text-sm text-gray-500 leading-relaxed max-w-3xl mx-auto">
                         Proudly providing expert pressure washing, advanced roof soft washing, and environmental surface restoration solutions to residential and commercial properties throughout De Pere, Green Bay, the Fox Valley, and surrounding Northeast Wisconsin communities.
                     </p>

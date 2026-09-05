@@ -22,13 +22,13 @@ const CONTACT_FORM_HTML = `
                         <p class="font-bold text-sm text-white text-center w-full">(920) 609-7085</p>
                     </div>
                 </a>
-                <a href="mailto:info@valleywindowcare.com" class="flex flex-col items-center gap-2 hover:text-gold transition-colors group text-center w-full md:w-1/2 overflow-hidden md:border-l md:border-white/10 md:pl-4">
+                <a href="mailto:info@valleyexteriorpros.com" class="flex flex-col items-center gap-2 hover:text-gold transition-colors group text-center w-full md:w-1/2 overflow-hidden md:border-l md:border-white/10 md:pl-4">
                     <div class="bg-white/20 p-3 rounded-2xl group-hover:bg-gold/30 transition-colors">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gold mx-auto"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
                     </div>
                     <div>
                         <p class="text-xs text-gray-300 font-bold mb-1 tracking-wider uppercase text-center w-full">Email Us</p>
-                        <p class="font-bold text-xs sm:text-sm text-white break-all text-center w-full">info@valleywindowcare.com</p>
+                        <p class="font-bold text-xs sm:text-sm text-white break-all text-center w-full">info@valleyexteriorpros.com</p>
                     </div>
                 </a>
             </div>
