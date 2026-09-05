@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import MobileFooter from "@/components/MobileFooter";
 import CanonicalURL from "@/components/CanonicalURL";
+import LocalBusinessSchema from "@/components/LocalBusinessSchema";
 import PromoModal from "@/components/PromoModal";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
@@ -81,127 +82,7 @@ export default function RootLayout({
              })(window,document,'script','dataLayer','GTM-MC25G2RK');`,
           }}
         />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "HomeAndConstructionBusiness",
-              "@id": "https://valleyexteriorpros.com/#organization",
-              "name": "Valley Property Services",
-              "alternateName": ["Valley Exterior Pros", "Valley Exterior Restoration", "VPS"],
-              "legalName": "Valley Property Services",
-              "url": "https://valleyexteriorpros.com",
-              "image": "https://valleyexteriorpros.com/wp-content/uploads/logo.png",
-              "sameAs": [
-                "https://www.facebook.com/valleywindowcare",
-                "https://www.instagram.com/valleywindowcare",
-                "https://www.youtube.com/@valleypropertywash",
-                "https://www.google.com/maps?cid=14133068595604156906"
-              ],
-              "telephone": "+1-920-609-7085",
-              "email": "info@valleyexteriorpros.com",
-              "priceRange": "$$",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "462 S Good Hope Rd",
-                "addressLocality": "De Pere",
-                "addressRegion": "WI",
-                "postalCode": "54115",
-                "addressCountry": "US"
-              },
-              "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": 44.433056,
-                "longitude": -88.064463
-              },
-              "openingHoursSpecification": [
-                {
-                  "@type": "OpeningHoursSpecification",
-                  "dayOfWeek": [
-                    "Monday",
-                    "Tuesday",
-                    "Wednesday",
-                    "Thursday",
-                    "Friday",
-                    "Saturday",
-                    "Sunday"
-                  ],
-                  "opens": "08:00",
-                  "closes": "20:00"
-                }
-              ],
-              "areaServed": [
-                { "@type": "City", "name": "De Pere" },
-                { "@type": "City", "name": "Green Bay" },
-                { "@type": "City", "name": "Appleton" },
-                { "@type": "City", "name": "Neenah" },
-                { "@type": "City", "name": "Menasha" },
-                { "@type": "City", "name": "Howard" },
-                { "@type": "City", "name": "Suamico" },
-                { "@type": "AdministrativeArea", "name": "Brown County" },
-                { "@type": "AdministrativeArea", "name": "Outagamie County" },
-                { "@type": "AdministrativeArea", "name": "Door County" }
-              ],
-              "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "4.9",
-                "reviewCount": "119",
-                "bestRating": "5",
-                "worstRating": "1"
-              },
-              "knowsAbout": [
-                "Pressure Washing",
-                "Soft-Wash Roof Cleaning",
-                "Paver Sealing",
-                "Window Cleaning",
-                "Commercial Hood Cleaning",
-                "Permanent LED Lighting"
-              ],
-              "hasOfferCatalog": {
-                "@type": "OfferCatalog",
-                "name": "Exterior Restoration Services",
-                "itemListElement": [
-                  {
-                    "@type": "Offer",
-                    "itemOffered": {
-                      "@type": "Service",
-                      "name": "Premium Pressure Washing"
-                    }
-                  },
-                  {
-                    "@type": "Offer",
-                    "itemOffered": {
-                      "@type": "Service",
-                      "name": "Safe Soft-Wash Roof Restoration"
-                    }
-                  },
-                  {
-                    "@type": "Offer",
-                    "itemOffered": {
-                      "@type": "Service",
-                      "name": "Paver Restoration & Sealing"
-                    }
-                  },
-                  {
-                    "@type": "Offer",
-                    "itemOffered": {
-                      "@type": "Service",
-                      "name": "Commercial Hood Cleaning"
-                    }
-                  },
-                  {
-                    "@type": "Offer",
-                    "itemOffered": {
-                      "@type": "Service",
-                      "name": "Permanent LED Lighting Installation"
-                    }
-                  }
-                ]
-              }
-            }).replace(/</g, '\\u003c')
-          }}
-        />
+        <LocalBusinessSchema />
       </head>
       <body
         className={`${outfit.variable} ${inter.variable} font-inter tracking-wide leading-relaxed antialiased min-h-screen flex flex-col relative pb-16 md:pb-0 bg-slate-50 text-[#353738]`}

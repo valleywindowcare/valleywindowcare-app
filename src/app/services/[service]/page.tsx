@@ -548,8 +548,15 @@ export default async function ServiceGenericPage({ params }: PageProps) {
                                 "@id": "https://valleyexteriorpros.com/#organization",
                                 "name": "Valley Property Services",
                                 "image": "https://valleyexteriorpros.com/images/portfolio/house-wash-before-after.webp",
-                                "telephone": "(920) 609-7085",
+                                "telephone": "920-609-7085",
                                 "url": `https://valleyexteriorpros.com/services/${service}`,
+                                "address": {
+                                    "@type": "PostalAddress",
+                                    "streetAddress": "462 S Good Hope Rd",
+                                    "addressLocality": "De Pere",
+                                    "addressRegion": "WI",
+                                    "postalCode": "54115"
+                                },
                                 "keywords": [
                                     "pressure washing Green Bay WI", "pressure washing Appleton WI", "house washing Green Bay", "house washing Appleton WI",
                                     "soft wash siding cleaning Green Bay WI", "roof soft washing Appleton", "roof stain removal Green Bay",

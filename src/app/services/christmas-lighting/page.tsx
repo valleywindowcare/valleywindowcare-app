@@ -55,10 +55,13 @@ export default function ChristmasLightingPage() {
             "@type": "HomeAndConstructionBusiness",
             "@id": "https://valleyexteriorpros.com/#organization",
             "name": "Valley Property Services",
+            "telephone": "920-609-7085",
             "address": {
                 "@type": "PostalAddress",
-                "addressLocality": "Appleton",
-                "addressRegion": "WI"
+                "streetAddress": "462 S Good Hope Rd",
+                "addressLocality": "De Pere",
+                "addressRegion": "WI",
+                "postalCode": "54115"
             }
         },
         "areaServed": ["Appleton", "Green Bay", "De Pere", "Northeast Wisconsin"],

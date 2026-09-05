@@ -49,17 +49,25 @@ export default function CommercialHoodCleaningPage() {
         "@context": "https://schema.org",
         "@type": "Service",
         "name": "Commercial Kitchen Hood Cleaning Services",
+        "serviceType": "Commercial Kitchen Exhaust Cleaning",
         "provider": {
             "@type": "HomeAndConstructionBusiness",
             "@id": "https://valleyexteriorpros.com/#organization",
             "name": "Valley Property Services",
+            "telephone": "920-609-7085",
             "address": {
                 "@type": "PostalAddress",
-                "addressLocality": "Appleton",
-                "addressRegion": "WI"
+                "streetAddress": "462 S Good Hope Rd",
+                "addressLocality": "De Pere",
+                "addressRegion": "WI",
+                "postalCode": "54115"
             }
         },
-        "areaServed": ["Appleton", "Green Bay", "De Pere", "Northeast Wisconsin"],
+        "areaServed": [
+            { "@type": "City", "name": "Green Bay" },
+            { "@type": "City", "name": "Appleton" },
+            { "@type": "City", "name": "De Pere" }
+        ],
         "offers": {
             "@type": "AggregateOffer",
             "priceCurrency": "USD",
