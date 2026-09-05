@@ -61,21 +61,21 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
     const uniqueMeta: Record<string, { title: string, description: string }> = {
         "de-pere": {
-            title: "Pressure Washing De Pere WI | Commercial Hood Cleaning De Pere",
-            description: "Expert pressure washing in De Pere, WI. Specializing in commercial hood cleaning De Pere / Green Bay, soft wash siding cleaning Green Bay WI area, and masonry restoration."
+            title: "Power & Pressure Washing De Pere, WI | Commercial Hood Cleaning De Pere",
+            description: "Expert power & pressure washing in De Pere, WI. Specializing in commercial hood cleaning De Pere / Green Bay, soft wash siding cleaning Green Bay WI area, and masonry restoration."
         },
         "green-bay": {
-            title: "Pressure Washing & Roof Cleaning Green Bay WI | Valley Property Services",
-            description: "Professional house washing, roof soft washing, driveway pressure washing & window cleaning in Green Bay & De Pere, WI. 100% satisfaction guarantee."
+            title: "Power & Pressure Washing Green Bay, WI – Valley Property Services",
+            description: "Professional power & pressure washing, house washing, roof soft washing, driveway cleaning & window cleaning in Green Bay & De Pere, WI. 100% satisfaction guarantee."
         },
         "appleton": {
-            title: "Exterior Cleaning & Pressure Washing Appleton WI | Valley Property Services",
-            description: "Top-rated exterior cleaning in Appleton & Fox Valley. Non-pressure roof cleaning, house soft washing, paver restoration & permanent LED lighting. Get a free quote!"
+            title: "Power & Pressure Washing Appleton, WI | Valley Property Services",
+            description: "Top-rated power & pressure washing in Appleton & Fox Valley. Non-pressure roof cleaning, house soft washing, paver restoration & permanent LED lighting. Get a free quote!"
         }
     };
 
     const metaMatch = uniqueMeta[city];
-    const generatedTitle = metaMatch ? metaMatch.title : `Elite Exterior Restoration & Pressure Washing in ${content.city}`;
+    const generatedTitle = metaMatch ? metaMatch.title : `Elite Power & Pressure Washing in ${content.city}, WI`;
     const seoDescription = metaMatch ? metaMatch.description : `Top-rated exterior cleaning services dedicated to properties in ${content.city}, Wisconsin.`;
 
     return {
@@ -195,7 +195,7 @@ export default async function CityHubPage({ params }: PageProps) {
                         Serving {cityName}, WI
                     </div>
                     <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 tracking-tight leading-tight">
-                        Elite Exterior Restoration & Pressure Washing in {cityName}
+                        Elite Power &amp; Pressure Washing in {cityName}
                     </h1>
                     <p className="text-lg md:text-2xl text-slate-300 font-light mb-10 max-w-3xl mx-auto leading-relaxed">
                         Expert roof washing, window cleaning, and power washing services.

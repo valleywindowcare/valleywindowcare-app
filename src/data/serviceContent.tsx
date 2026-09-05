@@ -439,6 +439,46 @@ export const serviceContentMap: Record<string, { pageH1?: string, description: R
           }
         ]
     },
+    "power-washing": {
+        pageH1: "Expert Power Washing Services in Green Bay & Appleton",
+        description: (
+            <section className="eeat-service-block">
+                <p className="mb-4">Power washing utilizes heavy-duty commercial equipment to deliver heated, high-pressure water streams to eliminate embedded grime, oil stains, and biological growth from durable exterior surfaces. We provide high-performance power washing across Green Bay, Appleton, and De Pere.</p>
+            </section>
+        ),
+        benefits: [
+            "Hot-Water Oil Emulsification: Heats water up to 200°F to lift tough motor oil, grease, and vehicle fluid stains.",
+            "Winter Salt & Spalling Defense: Blasts away corrosive deicing salts before freeze-thaw cycles cause concrete cracking.",
+            "High-PSI Uniform Restoration: Industrial rotary surface cleaners eliminate streaks and zebra striping."
+        ],
+        process: [
+            "1. Site Walkthrough & Prep: Comprehensive inspection of concrete flatwork, masonry, and pre-hydrating surrounding vegetation.",
+            "2. High-Pressure Power Wash Execution: Deploying commercial hot-water surface cleaners and targeted high-PSI nozzles.",
+            "3. Final Inspection & Rinse: Thorough post-wash rinse and owner walkthrough to ensure 100% satisfaction."
+        ],
+        pricing: {
+            title: "Transparent Power Washing Pricing",
+            description: "We provide upfront, honest pricing calculated on exact square footage and contamination severity.",
+            rateTitle: "Flatwork Rate",
+            ratePrice: "$0.18 - $0.35 / Sq. Ft.",
+            rateDetails: "Calculated based on the square footage of concrete or masonry flatwork.",
+            minimumPrice: "$200.00",
+            minimumDetails: "Baseline mobilization rate for commercial hot-water trailer rigs.",
+            variableTitle: "Cost Variables",
+            variableDetails: "Heavy motor oil extraction, chewing gum removal, and commercial water reclamation."
+        },
+        image: "/images/portfolio/pressure-washing.webp",
+        faqs: [
+            {
+                "question": "What is the difference between power washing and soft washing?",
+                "answer": "Power washing uses high water pressure and hot water for durable surfaces like concrete driveways and commercial dumpster pads. Soft washing uses low pressure and biodegradable sanitizers for delicate siding and roof shingles."
+            },
+            {
+                "question": "How often should power washing be done in Wisconsin?",
+                "answer": "Due to summer humidity and winter road salt applications, residential driveways and commercial walkways in Green Bay and Appleton should be power washed once to twice per year."
+            }
+        ]
+    },
     "residential-permanent-led-lighting": {
         description: (
             <section className="eeat-service-block">

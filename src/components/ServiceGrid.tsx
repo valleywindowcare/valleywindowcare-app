@@ -31,6 +31,7 @@ const DEFAULT_SERVICES = [
     { name: "Window Cleaning", slug: "window-cleaning" },
     { name: "Christmas Lighting", slug: "christmas-lighting" },
     { name: "Pressure Washing", slug: "pressure-washing" },
+    { name: "Power Washing", slug: "power-washing" },
     { name: "Residential Permanent LED Lighting", slug: "residential-permanent-led-lighting" },
     { name: "Fence Cleaning", slug: "fence-cleaning" },
     { name: "Deck Cleaning", slug: "deck-cleaning" },

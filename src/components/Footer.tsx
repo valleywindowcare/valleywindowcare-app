@@ -46,6 +46,12 @@ export default function Footer() {
                                 </Link>
                             </li>
                             <li>
+                                <Link href="/services/power-washing" className="hover:text-gold transition-colors inline-block relative group">
+                                    Power Washing Service
+                                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
+                                </Link>
+                            </li>
+                            <li>
                                 <Link href="/services/house-washing" className="hover:text-gold transition-colors inline-block relative group">
                                     House Washing
                                     <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>

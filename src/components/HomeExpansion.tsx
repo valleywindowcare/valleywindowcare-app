@@ -46,7 +46,7 @@ export default function HomeExpansion() {
                             </h2>
                         </div>
                         <p className="text-gray-600 text-lg leading-relaxed">
-                            If you aren’t absolutely thrilled with the curb appeal of your home, we will come back and make it right. No questions asked. We utilize advanced soft washing and professional power washing techniques designed specifically to safely eradicate dirt, grime, moss, and algae without causing structural damage.
+                            If you aren’t absolutely thrilled with the curb appeal of your home, we will come back and make it right. No questions asked. We utilize advanced soft washing and professional <Link href="/services/power-washing" className="text-navy font-bold hover:text-gold underline decoration-gold/60">Power Washing Service</Link> techniques designed specifically to safely eradicate dirt, grime, moss, and algae without causing structural damage.
                         </p>
                         <div className="pt-4">
                             <Link href="/contact" className="inline-block bg-gold hover:bg-gold-light text-white font-bold py-4 px-10 rounded-full shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 uppercase tracking-wider text-sm" aria-label="Request a free diagnostic estimate for exterior cleaning">

@@ -81,6 +81,7 @@ export default function Header() {
                                         <Link href="/services/roof-cleaning" className="px-4 py-2 hover:bg-slate-50 rounded-xl text-navy-dark hover:text-gold transition-colors font-semibold">Roof Cleaning</Link>
                                         <Link href="/services/house-washing" className="px-4 py-2 hover:bg-slate-50 rounded-xl text-navy-dark hover:text-gold transition-colors font-semibold">House Washing</Link>
                                         <Link href="/services/pressure-washing" className="px-4 py-2 hover:bg-slate-50 rounded-xl text-navy-dark hover:text-gold transition-colors font-semibold">Pressure Washing</Link>
+                                        <Link href="/services/power-washing" className="px-4 py-2 hover:bg-slate-50 rounded-xl text-navy-dark hover:text-gold transition-colors font-semibold">Power Washing Service</Link>
                                         <Link href="/services/paver-patio-restorations" className="px-4 py-2 hover:bg-slate-50 rounded-xl text-navy-dark hover:text-gold transition-colors font-semibold">Paver Patio Restorations</Link>
                                         <Link href="/services/residential-permanent-led-lighting" className="px-4 py-2 hover:bg-slate-50 rounded-xl text-navy-dark hover:text-gold transition-colors font-semibold">Permanent LED Lighting</Link>
                                     </div>
@@ -162,6 +163,7 @@ export default function Header() {
                                         <Link onClick={() => setIsMobileMenuOpen(false)} href="/services/roof-cleaning" className="block py-2 hover:text-gold transition-colors">Roof Cleaning</Link>
                                         <Link onClick={() => setIsMobileMenuOpen(false)} href="/services/house-washing" className="block py-2 hover:text-gold transition-colors">House Washing</Link>
                                         <Link onClick={() => setIsMobileMenuOpen(false)} href="/services/pressure-washing" className="block py-2 hover:text-gold transition-colors">Pressure Washing</Link>
+                                        <Link onClick={() => setIsMobileMenuOpen(false)} href="/services/power-washing" className="block py-2 hover:text-gold transition-colors">Power Washing Service</Link>
                                         <Link onClick={() => setIsMobileMenuOpen(false)} href="/services/paver-patio-restorations" className="block py-2 hover:text-gold transition-colors">Paver Patio Restorations</Link>
                                         <Link onClick={() => setIsMobileMenuOpen(false)} href="/services/residential-permanent-led-lighting" className="block py-2 hover:text-gold transition-colors">Permanent LED Lighting</Link>
                                     </div>

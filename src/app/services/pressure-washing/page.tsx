@@ -10,8 +10,8 @@ import PricingMatrix from "@/components/PricingMatrix";
 import FAQSchema from "@/components/FAQSchema";
 
 export const metadata = {
-    title: "Professional Pressure Washing Company | Green Bay & Fox Valley",
-    description: "Northeast Wisconsin's 5-star professional pressure washing company. Residential house washing, concrete, and commercial soft wash experts.",
+    title: "Power & Pressure Washing Green Bay, WI | Valley Property Services",
+    description: "Northeast Wisconsin's 5-star power & pressure washing company. Residential house washing, concrete flatwork, and commercial soft wash experts across Green Bay & Fox Valley.",
 };
 
 export default function PressureWashingPage() {
@@ -130,8 +130,8 @@ export default function PressureWashingPage() {
                 <div className="container mx-auto px-4 relative z-20 flex flex-col items-center justify-center text-center">
                     <div className="max-w-4xl mb-12">
                         <h1 className={`text-4xl md:text-5xl lg:text-7xl font-extrabold leading-tight mb-6 tracking-tight drop-shadow-lg mx-auto text-white`}>
-                            Professional <span className="text-gold">Pressure Washing Company</span><br />
-                            <span className="text-2xl md:text-3xl mt-4 block">Green Bay & Northeast Wisconsin</span>
+                            Professional <span className="text-gold">Power &amp; Pressure Washing</span><br />
+                            <span className="text-2xl md:text-3xl mt-4 block">Green Bay &amp; Fox Valley</span>
                         </h1>
                         <p className="text-lg md:text-xl text-gray-100 mb-6 font-semibold leading-relaxed drop-shadow-md">
                             Valley Property Services provides premium pressure washing services to enhance your property's value.
