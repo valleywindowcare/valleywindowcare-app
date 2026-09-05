@@ -3,7 +3,7 @@ slug: 'can-i-clean-my-windows-with-tap-water'
 title: "Can I Clean My Windows with Tap Water?"
 date: "2025-03-26T06:11:05"
 category: "General Service"
-image: "/assets/blog/blog-feature-15-1772511234913.jpg"
+image: "/assets/blog/blog-feature-15-1772511234913.webp"
 ---
 
 **[Valley Property Services](/service-areas/green-bay) provides expert [window cleaning](/services/window-cleaning) services securely engineered to protect your property. Operating across Northeast Wisconsin, including [Appleton, WI](/service-areas/appleton), our fully certified teams deliver spotless, long-lasting results that elevate curb appeal instantly.**

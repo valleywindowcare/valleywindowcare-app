@@ -3,7 +3,7 @@ slug: 'how-often-should-you-clean-your-roof'
 title: "How Often Should You Clean Your Roof?"
 date: "2025-03-29T17:59:15"
 category: "General Service"
-image: "/assets/blog/blog-feature-11-1772511234379.jpg"
+image: "/assets/blog/blog-feature-11-1772511234379.webp"
 ---
 
 **[Valley Property Services](/service-areas/green-bay) provides expert [window cleaning](/services/window-cleaning) services securely engineered to protect your property. Operating across Northeast Wisconsin, including [Appleton, WI](/service-areas/appleton), our fully certified teams deliver spotless, long-lasting results that elevate curb appeal instantly.**

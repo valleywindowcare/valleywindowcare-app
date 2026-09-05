@@ -3,7 +3,7 @@ slug: 'pressure-washing-a-deck-the-dos-and-donts'
 title: "Pressure Washing A Deck: The Dos and Dont's"
 date: "2025-03-26T05:04:09"
 category: "General Service"
-image: "/assets/blog/blog-feature-20-1772511235753.jpg"
+image: "/assets/blog/blog-feature-20-1772511235753.webp"
 ---
 
 **[Valley Property Services](/service-areas/green-bay) provides expert [window cleaning](/services/window-cleaning) services securely engineered to protect your property. Operating across Northeast Wisconsin, including [Appleton, WI](/service-areas/appleton), our fully certified teams deliver spotless, long-lasting results that elevate curb appeal instantly.**

@@ -119,7 +119,7 @@ export default function ServicePage() {
                             Valley Property Services is a fully insured exterior cleaning company providing professional pure-water window cleaning in <Link href="/service-areas/appleton" className="text-blue-600 hover:text-gold font-semibold transition-colors">Appleton</Link>, <Link href="/service-areas/green-bay" className="text-blue-600 hover:text-gold font-semibold transition-colors">Green Bay</Link>, and <Link href="/service-areas/door-county" className="text-blue-600 hover:text-gold font-semibold transition-colors">Door County</Link>, WI.
                         </div>
                         <div className="relative w-full h-64 md:h-96 rounded-2xl overflow-hidden shadow-lg mb-8">
-                            <Image src="/assets/window-cleaning-8.jpg"
+                            <Image src="/assets/window-cleaning-8.webp"
                                 alt="Professional window cleaning in Green Bay WI"
                                 fill
                                 className="object-cover"

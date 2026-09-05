@@ -181,7 +181,7 @@ export default function PermanentLEDLightingPage() {
                     {/* Omni Certified Installer Block */}
                     <div className="mb-16 max-w-4xl mx-auto text-center bg-slate-50 p-8 rounded-3xl border border-gray-100 shadow-sm not-prose">
                         <div className="flex justify-center mb-6 bg-[#1B365D] p-6 rounded-2xl max-w-xs mx-auto shadow-md">
-                            <Image src="/images/portfolio/Omni Certified Installer Logo (1).png" alt="Powered By Omni" width={250} height={100} className="object-contain" />
+                            <Image src="/images/portfolio/Omni Certified Installer Logo (1).webp" alt="Powered By Omni" width={250} height={100} className="object-contain" />
                         </div>
                         <p className="text-gray-700 text-lg leading-relaxed font-medium text-left max-w-2xl mx-auto">
                             Say goodbye to ladders and tangled strands forever. If you are searching for an <strong>Oelo and Trimlight Authorized Installer</strong> in Green Bay or Appleton, Valley Property Services serves as your elite alternative. We are proud to exclusively deploy Omni Permanent Lighting. Designed to be virtually invisible by day and spectacular by night, our track-based LED system provides elegant architectural lighting and vibrant holiday displays year-round.

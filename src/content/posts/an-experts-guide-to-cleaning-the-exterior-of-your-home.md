@@ -3,7 +3,7 @@ slug: 'an-experts-guide-to-cleaning-the-exterior-of-your-home'
 title: "An Expert’s Guide to Cleaning the Exterior of Your Home"
 date: "2025-03-29T17:17:21"
 category: "General Service"
-image: "/assets/blog/blog-feature-13-1772511234664.jpg"
+image: "/assets/blog/blog-feature-13-1772511234664.webp"
 ---
 
 **[Valley Property Services](/service-areas/green-bay) provides expert [window cleaning](/services/window-cleaning) services securely engineered to protect your property. Operating across Northeast Wisconsin, including [Appleton, WI](/service-areas/appleton), our fully certified teams deliver spotless, long-lasting results that elevate curb appeal instantly.**

@@ -3,7 +3,7 @@ slug: 'is-your-green-bay-home-begging-for-a-power-wash'
 title: "Is Your Green Bay Home Begging for a Power Wash?"
 date: "2025-04-14T01:21:18"
 category: "General Service"
-image: "/assets/blog/blog-feature-10-1772511234205.jpg"
+image: "/assets/blog/blog-feature-10-1772511234205.webp"
 ---
 
 **[Valley Property Services](/service-areas/green-bay) provides expert [window cleaning](/services/window-cleaning) services securely engineered to protect your property. Operating across Northeast Wisconsin, including [Appleton, WI](/service-areas/appleton), our fully certified teams deliver spotless, long-lasting results that elevate curb appeal instantly.**

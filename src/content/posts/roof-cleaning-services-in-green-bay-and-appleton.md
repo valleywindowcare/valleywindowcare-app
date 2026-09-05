@@ -3,7 +3,7 @@ slug: 'roof-cleaning-services-in-green-bay-and-appleton'
 title: "Roof Cleaning Services in Green Bay and Appleton"
 date: "2025-03-23T21:17:08"
 category: "General Service"
-image: "/assets/blog/blog-feature-24-1772511236333.jpg"
+image: "/assets/blog/blog-feature-24-1772511236333.webp"
 ---
 
 **[Valley Property Services](/service-areas/green-bay) provides expert [window cleaning](/services/window-cleaning) services securely engineered to protect your property. Operating across Northeast Wisconsin, including [Appleton, WI](/service-areas/appleton), our fully certified teams deliver spotless, long-lasting results that elevate curb appeal instantly.**

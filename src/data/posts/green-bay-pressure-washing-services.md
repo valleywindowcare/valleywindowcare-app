@@ -3,7 +3,7 @@ slug: 'green-bay-pressure-washing-services'
 title: "Green Bay Pressure Washing Services"
 date: "2025-03-23T21:14:58"
 category: "General Service"
-image: "/assets/blog/blog-feature-25-1772511236473.jpg"
+image: "/assets/blog/blog-feature-25-1772511236473.webp"
 ---
 
 **[Valley Property Services](/service-areas/green-bay) provides expert [window cleaning](/services/window-cleaning) services securely engineered to protect your property. Operating across Northeast Wisconsin, including [Appleton, WI](/service-areas/appleton), our fully certified teams deliver spotless, long-lasting results that elevate curb appeal instantly.**

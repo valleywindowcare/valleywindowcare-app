@@ -43,7 +43,7 @@ export default function PromoModal() {
                 {/* Left/Top visual column */}
                 <div className="relative w-full md:w-1/2 h-56 md:h-auto min-h-[320px]">
                     <Image
-                        src="/images/portfolio/lightpopup.JPG"
+                        src="/images/portfolio/lightpopup.webp"
                         alt="Holiday & Permanent Lighting display - Valley Property Services"
                         fill
                         className="object-cover"

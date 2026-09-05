@@ -94,7 +94,7 @@ export default function HomeExpansion() {
                     {/* Huge Action Image + Experience Badge */}
                     <div className="relative w-full aspect-square lg:aspect-auto lg:h-[700px] rounded-3xl overflow-hidden shadow-2xl order-1 lg:order-2">
                         <Image
-                            src="/assets/House-washing-company-in-suamico-wi-1-scaled.jpg"
+                            src="/assets/House-washing-company-in-suamico-wi-1-scaled.webp"
                             alt="Valley Property Services crew serving Northeast Wisconsin"
                             fill
                             loading="lazy"

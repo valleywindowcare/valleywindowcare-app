@@ -295,18 +295,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
         // Cities:
         if (routePath.startsWith("/service-areas/") && !routePath.includes("/", 15)) {
             const city = routePath.split("/")[2];
-            const redirects: Record<string, string> = {
-                "de-pere": "green-bay",
-                "howard": "green-bay",
-                "suamico": "green-bay",
-                "sturgeon-bay": "door-county",
-                "egg-harbor": "door-county",
-                "fish-creek": "door-county",
-                "sister-bay": "door-county"
-            };
-            if (city in redirects) {
-                return `https://valleyexteriorpros.com/service-areas/${redirects[city]}`;
-            }
             return `https://valleyexteriorpros.com/service-areas/${city}`;
         }
 

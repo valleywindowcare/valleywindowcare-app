@@ -3,7 +3,7 @@ slug: 'permanent-led-smart-lighting-solutions-in-green-bay-wi'
 title: "Permanent LED Smart Lighting Solutions in Green Bay, WI"
 date: "2025-03-23T21:26:57"
 category: "General Service"
-image: "/assets/blog/blog-feature-21-1772511235880.jpg"
+image: "/assets/blog/blog-feature-21-1772511235880.webp"
 ---
 
 **[Valley Property Services](/service-areas/green-bay) provides expert [window cleaning](/services/window-cleaning) services securely engineered to protect your property. Operating across Northeast Wisconsin, including [Appleton, WI](/service-areas/appleton), our fully certified teams deliver spotless, long-lasting results that elevate curb appeal instantly.**

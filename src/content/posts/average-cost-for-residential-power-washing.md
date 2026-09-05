@@ -3,7 +3,7 @@ slug: 'average-cost-for-residential-power-washing'
 title: "Average cost for residential power washing"
 date: "2026-01-30T21:48:25"
 category: "General Service"
-image: "/assets/blog/blog-feature-6-1772511233586.jpg"
+image: "/assets/blog/blog-feature-6-1772511233586.webp"
 ---
 
 **[Valley Property Services](/service-areas/green-bay) provides expert [window cleaning](/services/window-cleaning) services securely engineered to protect your property. Operating across Northeast Wisconsin, including [Appleton, WI](/service-areas/appleton), our fully certified teams deliver spotless, long-lasting results that elevate curb appeal instantly.**

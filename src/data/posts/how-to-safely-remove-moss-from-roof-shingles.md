@@ -3,7 +3,7 @@ slug: 'how-to-safely-remove-moss-from-roof-shingles'
 title: "How to safely remove moss from roof shingles?"
 date: "2026-01-30T22:20:10"
 category: "General Service"
-image: "/assets/blog/blog-feature-5-1772511233437.jpg"
+image: "/assets/blog/blog-feature-5-1772511233437.webp"
 ---
 
 **[Valley Property Services](/service-areas/green-bay) provides expert [window cleaning](/services/window-cleaning) services securely engineered to protect your property. Operating across Northeast Wisconsin, including [Appleton, WI](/service-areas/appleton), our fully certified teams deliver spotless, long-lasting results that elevate curb appeal instantly.**
