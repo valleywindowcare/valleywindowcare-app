@@ -10,22 +10,22 @@ export const CITIES = [
 ];
 
 const SURROUNDING_COMMUNITIES = [
-    { name: "Howard", hub: "/service-areas/green-bay", region: "Greater Green Bay" },
-    { name: "Suamico", hub: "/service-areas/green-bay", region: "Greater Green Bay" },
-    { name: "Ashwaubenon", hub: "/service-areas/green-bay", region: "Greater Green Bay" },
-    { name: "Allouez", hub: "/service-areas/green-bay", region: "Greater Green Bay" },
-    { name: "Bellevue", hub: "/service-areas/green-bay", region: "Greater Green Bay" },
-    { name: "Hobart", hub: "/service-areas/green-bay", region: "Greater Green Bay" },
-    { name: "Ledgeview", hub: "/service-areas/green-bay", region: "Greater Green Bay" },
-    { name: "Menasha", hub: "/service-areas/appleton", region: "Fox Cities" },
-    { name: "Kaukauna", hub: "/service-areas/appleton", region: "Fox Cities" },
-    { name: "Greenville", hub: "/service-areas/appleton", region: "Fox Cities" },
-    { name: "Combined Locks", hub: "/service-areas/appleton", region: "Fox Cities" },
-    { name: "Sherwood", hub: "/service-areas/appleton", region: "Fox Cities" },
-    { name: "Sturgeon Bay", hub: "/service-areas/door-county", region: "Door County" },
-    { name: "Fish Creek", hub: "/service-areas/door-county", region: "Door County" },
-    { name: "Egg Harbor", hub: "/service-areas/door-county", region: "Door County" },
-    { name: "Sister Bay", hub: "/service-areas/door-county", region: "Door County" }
+    { name: "Howard", hub: "/service-areas/howard", region: "Greater Green Bay" },
+    { name: "Suamico", hub: "/service-areas/suamico", region: "Greater Green Bay" },
+    { name: "Ashwaubenon", hub: "/service-areas/ashwaubenon", region: "Greater Green Bay" },
+    { name: "Allouez", hub: "/service-areas/allouez", region: "Greater Green Bay" },
+    { name: "Bellevue", hub: "/service-areas/bellevue", region: "Greater Green Bay" },
+    { name: "Hobart", hub: "/service-areas/hobart", region: "Greater Green Bay" },
+    { name: "Ledgeview", hub: "/service-areas/ledgeview", region: "Greater Green Bay" },
+    { name: "Menasha", hub: "/service-areas/menasha", region: "Fox Cities" },
+    { name: "Kaukauna", hub: "/service-areas/kaukauna", region: "Fox Cities" },
+    { name: "Greenville", hub: "/service-areas/greenville", region: "Fox Cities" },
+    { name: "Combined Locks", hub: "/service-areas/combined-locks", region: "Fox Cities" },
+    { name: "Sherwood", hub: "/service-areas/sherwood", region: "Fox Cities" },
+    { name: "Sturgeon Bay", hub: "/service-areas/sturgeon-bay", region: "Door County" },
+    { name: "Fish Creek", hub: "/service-areas/fish-creek", region: "Door County" },
+    { name: "Egg Harbor", hub: "/service-areas/egg-harbor", region: "Door County" },
+    { name: "Sister Bay", hub: "/service-areas/sister-bay", region: "Door County" }
 ];
 
 const generateSlug = (city: string) => city.toLowerCase().replace(/ /g, '-');

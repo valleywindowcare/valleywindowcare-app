@@ -54,7 +54,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         return { title: 'Service Area Not Found' };
     }
 
-    const distantCities = ['wausau', 'stevens-point', 'wisconsin-rapids', 'marshfield', 'rhinelander', 'marinette', 'peshtigo', 'oconto', 'shawano', 'clintonville', 'new-london', 'waupaca', 'wautoma', 'berlin', 'ripon', 'markesan', 'green-lake', 'princeton', 'montello', 'westfield', 'adams', 'friendship', 'mauston', 'new-lisbon', 'necedah', 'tomah', 'sparta', 'black-river-falls', 'neillsville', 'abbotsford', 'medford', 'merrill', 'tomahawk', 'minocqua', 'woodruff', 'eagle-river', 'three-lakes', 'crandon', 'laona', 'wabeno', 'crivitz', 'wausaukee', 'pembine', 'niagara', 'florence', 'iron-mountain', 'kingsford', 'norway', 'escanaba', 'gladstone', 'manistique', 'munising', 'marquette', 'negaunee', 'ishpeming', 'gwinn', 'ironwood', 'hurley', 'mercer', 'manitowish-waters', 'boulder-junction', 'presque-isle', 'land-o-lakes'];
+    const distantCities = ['wausau', 'stevens-point', 'wisconsin-rapids', 'marshfield', 'rhinelander', 'marinette', 'peshtigo', 'oconto', 'clintonville', 'new-london', 'waupaca', 'wautoma', 'berlin', 'ripon', 'markesan', 'green-lake', 'princeton', 'montello', 'westfield', 'adams', 'friendship', 'mauston', 'new-lisbon', 'necedah', 'tomah', 'sparta', 'black-river-falls', 'neillsville', 'abbotsford', 'medford', 'merrill', 'tomahawk', 'minocqua', 'woodruff', 'eagle-river', 'three-lakes', 'crandon', 'laona', 'wabeno', 'crivitz', 'wausaukee', 'pembine', 'niagara', 'florence', 'iron-mountain', 'kingsford', 'norway', 'escanaba', 'gladstone', 'manistique', 'munising', 'marquette', 'negaunee', 'ishpeming', 'gwinn', 'ironwood', 'hurley', 'mercer', 'manitowish-waters', 'boulder-junction', 'presque-isle', 'land-o-lakes'];
 
     const urlPath = `/service-areas/${city}`;
     const shouldNoindex = distantCities.includes(city) && !isRedirectDestination(urlPath);
@@ -75,8 +75,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     };
 
     const metaMatch = uniqueMeta[city];
-    const generatedTitle = metaMatch ? metaMatch.title : `Elite Power & Pressure Washing in ${content.city}, WI`;
-    const seoDescription = metaMatch ? metaMatch.description : `Top-rated exterior cleaning services dedicated to properties in ${content.city}, Wisconsin.`;
+    const generatedTitle = metaMatch ? metaMatch.title : `${content.title || `Professional Window Cleaning & Soft Washing in ${content.city}, WI`} | Valley Property Services`;
+    const seoDescription = metaMatch ? metaMatch.description : `Top-rated pure water window cleaning, house soft washing, and roof & gutter maintenance in ${content.city}, WI. Fully insured, 100% satisfaction guarantee.`;
 
     return {
         title: generatedTitle,
@@ -161,8 +161,9 @@ export default async function CityHubPage({ params }: PageProps) {
 
     // Local Geo-Context Mapping Engine
     const countyMap: Record<string, string> = {
-        "green-bay": "Brown", "wrightstown": "Brown", "de-pere": "Brown", 
-        "appleton": "Outagamie", "kaukauna": "Outagamie", "little-chute": "Outagamie", "kimberly": "Outagamie",
+        "green-bay": "Brown", "wrightstown": "Brown", "de-pere": "Brown", "howard": "Brown", "suamico": "Brown", "ashwaubenon": "Brown", "allouez": "Brown", "bellevue": "Brown", "hobart": "Brown", "ledgeview": "Brown",
+        "appleton": "Outagamie", "kaukauna": "Outagamie", "little-chute": "Outagamie", "kimberly": "Outagamie", "greenville": "Outagamie", "combined-locks": "Outagamie",
+        "sherwood": "Calumet",
         "neenah": "Winnebago", "oshkosh": "Winnebago", "menasha": "Winnebago",
         "door-county": "Door", "sturgeon-bay": "Door", "egg-harbor": "Door", "fish-creek": "Door", "sister-bay": "Door",
         "shawano": "Shawano",

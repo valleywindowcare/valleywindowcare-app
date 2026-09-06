@@ -443,21 +443,32 @@ export default async function ServiceGenericPage({ params }: PageProps) {
                     {/* Alphabetized Canonical Routing Grid */}
                     <div className="grid grid-cols-2 lg:grid-cols-3 gap-y-3 gap-x-2 md:gap-x-6 border-t border-gray-100 pt-6">
                         {[
-                            { name: "Allouez", url: "/service-areas/green-bay" },
+                            { name: "Allouez", url: "/service-areas/allouez" },
                             { name: "Appleton", url: "/service-areas/appleton" },
-                            { name: "Ashwaubenon", url: "/service-areas/green-bay" },
-                            { name: "Bellevue", url: "/service-areas/green-bay" },
-                            { name: "De Pere", url: "/service-areas/green-bay" },
-                            { name: "Fish Creek", url: "/service-areas/door-county" },
+                            { name: "Ashwaubenon", url: "/service-areas/ashwaubenon" },
+                            { name: "Bellevue", url: "/service-areas/bellevue" },
+                            { name: "Combined Locks", url: "/service-areas/combined-locks" },
+                            { name: "De Pere", url: "/service-areas/de-pere" },
+                            { name: "Door County", url: "/service-areas/door-county" },
+                            { name: "Egg Harbor", url: "/service-areas/egg-harbor" },
+                            { name: "Fish Creek", url: "/service-areas/fish-creek" },
                             { name: "Green Bay", url: "/service-areas/green-bay" },
-                            { name: "Howard", url: "/service-areas/green-bay" },
-                            { name: "Kaukauna", url: "/service-areas/appleton" },
-                            { name: "Menasha", url: "/service-areas/appleton" },
-                            { name: "Neenah", url: "/service-areas/appleton" },
+                            { name: "Greenville", url: "/service-areas/greenville" },
+                            { name: "Hobart", url: "/service-areas/hobart" },
+                            { name: "Howard", url: "/service-areas/howard" },
+                            { name: "Kaukauna", url: "/service-areas/kaukauna" },
+                            { name: "Kimberly", url: "/service-areas/kimberly" },
+                            { name: "Ledgeview", url: "/service-areas/ledgeview" },
+                            { name: "Little Chute", url: "/service-areas/little-chute" },
+                            { name: "Manitowoc", url: "/service-areas/manitowoc" },
+                            { name: "Menasha", url: "/service-areas/menasha" },
+                            { name: "Neenah", url: "/service-areas/neenah" },
                             { name: "Oshkosh", url: "/service-areas/oshkosh" },
                             { name: "Shawano", url: "/service-areas/shawano" },
-                            { name: "Sturgeon Bay", url: "/service-areas/door-county" },
-                            { name: "Suamico", url: "/service-areas/green-bay" }
+                            { name: "Sherwood", url: "/service-areas/sherwood" },
+                            { name: "Sister Bay", url: "/service-areas/sister-bay" },
+                            { name: "Sturgeon Bay", url: "/service-areas/sturgeon-bay" },
+                            { name: "Suamico", url: "/service-areas/suamico" }
                         ].map((loc, idx) => (
                             <Link key={idx} href={loc.url} className="text-blue-600 hover:text-gold font-semibold transition-all flex items-center justify-between group p-3 hover:bg-slate-50/80 rounded-xl border border-transparent hover:border-gray-100 shadow-sm hover:shadow-md">
                                 <span className="truncate pr-2 capitalize">{loc.name} {service.replace(/-/g, ' ')}</span>

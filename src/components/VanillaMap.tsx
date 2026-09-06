@@ -49,7 +49,15 @@ export default function VanillaMap({ city }: { city?: string }) {
                     "Hobart": { lat: 44.4870, lng: -88.1362 },
                     "Green Bay": { lat: 44.5192, lng: -88.0198 },
                     "Shawano": { lat: 44.7822, lng: -88.6062 },
-                    "Ledgeview": { lat: 44.4317, lng: -88.0065 }
+                    "Ledgeview": { lat: 44.4317, lng: -88.0065 },
+                    "Algoma": { lat: 44.6083, lng: -87.4334 },
+                    "Kewaunee": { lat: 44.4578, lng: -87.5020 },
+                    "Two Rivers": { lat: 44.1539, lng: -87.5692 },
+                    "Wrightstown": { lat: 44.3267, lng: -88.1637 },
+                    "Combined Locks": { lat: 44.2708, lng: -88.3126 },
+                    "Sturgeon Bay": { lat: 44.8342, lng: -87.3770 },
+                    "Egg Harbor": { lat: 45.0489, lng: -87.2798 },
+                    "Sister Bay": { lat: 45.1878, lng: -87.1209 }
                 };
 
                 var initialCenter = fallbackCoords[currentCity] || { lat: 44.5192, lng: -88.0198 };

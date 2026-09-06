@@ -33,22 +33,22 @@ export default function WisconsinCoverageMatrix() {
                         </h2>
                         <ul className="space-y-3 font-medium text-gray-600 text-lg">
                             <li className="flex items-center gap-2">
-                                <div className="w-2 h-2 bg-navy rounded-full"></div> Allouez
+                                <div className="w-2 h-2 bg-navy rounded-full"></div> <Link href="/service-areas/allouez" className="hover:text-gold underline decoration-gray-300 underline-offset-4">Allouez</Link>
                             </li>
                             <li className="flex items-center gap-2">
-                                <div className="w-2 h-2 bg-navy rounded-full"></div> Howard
+                                <div className="w-2 h-2 bg-navy rounded-full"></div> <Link href="/service-areas/howard" className="hover:text-gold underline decoration-gray-300 underline-offset-4">Howard</Link>
                             </li>
                             <li className="flex items-center gap-2">
                                 <div className="w-2 h-2 bg-navy rounded-full"></div> <Link href="/service-areas/de-pere" className="hover:text-gold underline decoration-gray-300 underline-offset-4">De Pere</Link>
                             </li>
                             <li className="flex items-center gap-2">
-                                <div className="w-2 h-2 bg-navy rounded-full"></div> Ashwaubenon
+                                <div className="w-2 h-2 bg-navy rounded-full"></div> <Link href="/service-areas/ashwaubenon" className="hover:text-gold underline decoration-gray-300 underline-offset-4">Ashwaubenon</Link>
                             </li>
                             <li className="flex items-center gap-2">
-                                <div className="w-2 h-2 bg-navy rounded-full"></div> Suamico
+                                <div className="w-2 h-2 bg-navy rounded-full"></div> <Link href="/service-areas/suamico" className="hover:text-gold underline decoration-gray-300 underline-offset-4">Suamico</Link>
                             </li>
                             <li className="flex items-center gap-2">
-                                <div className="w-2 h-2 bg-navy rounded-full"></div> Bellevue
+                                <div className="w-2 h-2 bg-navy rounded-full"></div> <Link href="/service-areas/bellevue" className="hover:text-gold underline decoration-gray-300 underline-offset-4">Bellevue</Link>
                             </li>
                         </ul>
                     </div>
@@ -65,19 +65,19 @@ export default function WisconsinCoverageMatrix() {
                                 <div className="w-2 h-2 bg-navy rounded-full"></div> <Link href="/service-areas/little-chute" className="hover:text-gold underline decoration-gray-300 underline-offset-4">Little Chute</Link>
                             </li>
                             <li className="flex items-center gap-2">
-                                <div className="w-2 h-2 bg-navy rounded-full"></div> Menasha
+                                <div className="w-2 h-2 bg-navy rounded-full"></div> <Link href="/service-areas/menasha" className="hover:text-gold underline decoration-gray-300 underline-offset-4">Menasha</Link>
                             </li>
                             <li className="flex items-center gap-2">
-                                <div className="w-2 h-2 bg-navy rounded-full"></div> Kaukauna
+                                <div className="w-2 h-2 bg-navy rounded-full"></div> <Link href="/service-areas/kaukauna" className="hover:text-gold underline decoration-gray-300 underline-offset-4">Kaukauna</Link>
                             </li>
                             <li className="flex items-center gap-2">
                                 <div className="w-2 h-2 bg-navy rounded-full"></div> <Link href="/service-areas/neenah" className="hover:text-gold underline decoration-gray-300 underline-offset-4">Neenah</Link>
                             </li>
                             <li className="flex items-center gap-2">
-                                <div className="w-2 h-2 bg-navy rounded-full"></div> Grand Chute
+                                <div className="w-2 h-2 bg-navy rounded-full"></div> <Link href="/service-areas/greenville" className="hover:text-gold underline decoration-gray-300 underline-offset-4">Greenville</Link>
                             </li>
                             <li className="flex items-center gap-2">
-                                <div className="w-2 h-2 bg-navy rounded-full"></div> Kimberly
+                                <div className="w-2 h-2 bg-navy rounded-full"></div> <Link href="/service-areas/kimberly" className="hover:text-gold underline decoration-gray-300 underline-offset-4">Kimberly</Link>
                             </li>
                         </ul>
                     </div>
@@ -91,16 +91,16 @@ export default function WisconsinCoverageMatrix() {
                         </h2>
                         <ul className="space-y-3 font-medium text-gray-600 text-lg">
                             <li className="flex items-center gap-2">
-                                <div className="w-2 h-2 bg-navy rounded-full"></div> Sturgeon Bay
+                                <div className="w-2 h-2 bg-navy rounded-full"></div> <Link href="/service-areas/sturgeon-bay" className="hover:text-gold underline decoration-gray-300 underline-offset-4">Sturgeon Bay</Link>
                             </li>
                             <li className="flex items-center gap-2">
-                                <div className="w-2 h-2 bg-navy rounded-full"></div> Egg Harbor
+                                <div className="w-2 h-2 bg-navy rounded-full"></div> <Link href="/service-areas/egg-harbor" className="hover:text-gold underline decoration-gray-300 underline-offset-4">Egg Harbor</Link>
                             </li>
                             <li className="flex items-center gap-2">
-                                <div className="w-2 h-2 bg-navy rounded-full"></div> Fish Creek
+                                <div className="w-2 h-2 bg-navy rounded-full"></div> <Link href="/service-areas/fish-creek" className="hover:text-gold underline decoration-gray-300 underline-offset-4">Fish Creek</Link>
                             </li>
                             <li className="flex items-center gap-2">
-                                <div className="w-2 h-2 bg-navy rounded-full"></div> Sister Bay
+                                <div className="w-2 h-2 bg-navy rounded-full"></div> <Link href="/service-areas/sister-bay" className="hover:text-gold underline decoration-gray-300 underline-offset-4">Sister Bay</Link>
                             </li>
                             <li className="flex items-center gap-2">
                                 <div className="w-2 h-2 bg-navy rounded-full"></div> Ephraim

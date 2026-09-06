@@ -327,31 +327,13 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
-        source: `/service-areas/:city(algoma|de-pere|door-county|kewaunee|kimberly|little-chute|manitowoc|neenah|oshkosh|shawano|two-rivers|wrightstown|sturgeon-bay|egg-harbor|fish-creek|sister-bay|howard|suamico)/:service${validServicesRegex}`,
+        source: `/service-areas/:city(algoma|de-pere|door-county|kewaunee|kimberly|little-chute|manitowoc|neenah|oshkosh|shawano|two-rivers|wrightstown|howard|suamico|ashwaubenon|allouez|bellevue|hobart|ledgeview|menasha|kaukauna|greenville|combined-locks|sherwood|sturgeon-bay|fish-creek|egg-harbor|sister-bay)/:service${validServicesRegex}`,
         destination: '/services/:service',
         permanent: true,
       },
-
       {
-        // Phase 8: Green Bay Regional Hub Consolidation
-        source: '/service-areas/:city(howard|suamico|allouez|ashwaubenon|bellevue|ledgeview|hobart)',
-        destination: '/service-areas/green-bay',
-        permanent: true,
-      },
-      {
-        // Phase 8: Appleton Regional Hub Consolidation
-        source: '/service-areas/:city(menasha|kaukauna|greenville|sherwood|combined-locks)',
-        destination: '/service-areas/appleton',
-        permanent: true,
-      },
-      {
-        // Phase 2: Door County Consolidation Redirect
-        source: '/service-areas/:city(egg-harbor|sturgeon-bay|fish-creek|sister-bay|ephraim)/:path*',
-        destination: '/service-areas/door-county',
-        permanent: true,
-      },
-      {
-        source: '/service-areas/:city(egg-harbor|sturgeon-bay|fish-creek|sister-bay|ephraim)',
+        // Phase 2: Ephraim Satellite Redirect to Door County
+        source: '/service-areas/ephraim',
         destination: '/service-areas/door-county',
         permanent: true,
       },

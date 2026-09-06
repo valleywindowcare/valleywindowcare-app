@@ -122,7 +122,7 @@ const validServices = [
     "hoa-services"
 ];
 
-// 14 city hub routes in validLocations
+// 30 city hub routes in validLocations
 const validLocations = [
     "appleton",
     "green-bay",
@@ -137,7 +137,23 @@ const validLocations = [
     "little-chute",
     "two-rivers",
     "wrightstown",
-    "shawano"
+    "shawano",
+    "howard",
+    "suamico",
+    "ashwaubenon",
+    "allouez",
+    "bellevue",
+    "hobart",
+    "ledgeview",
+    "menasha",
+    "kaukauna",
+    "greenville",
+    "combined-locks",
+    "sherwood",
+    "sturgeon-bay",
+    "fish-creek",
+    "egg-harbor",
+    "sister-bay"
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -271,9 +287,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const getDeclaredCanonical = (routePath: string): string => {
         // Special case: /quote/success is noindexed and not self-canonical
         if (routePath === "/quote/success") return "";
-
-        // Special case: shawano is noindexed and not self-canonical
-        if (routePath === "/service-areas/shawano") return "";
 
         // Special case: duplicate routes
         if (routePath === "/services/blog") return "https://valleyexteriorpros.com/blog";
