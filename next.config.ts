@@ -332,7 +332,7 @@ const nextConfig: NextConfig = {
 
       {
         // Phase 8: Green Bay Regional Hub Consolidation
-        source: '/service-areas/:city(de-pere|howard|suamico|allouez|ashwaubenon|bellevue|ledgeview|hobart)',
+        source: '/service-areas/:city(howard|suamico|allouez|ashwaubenon|bellevue|ledgeview|hobart)',
         destination: '/service-areas/green-bay',
         permanent: true,
       },

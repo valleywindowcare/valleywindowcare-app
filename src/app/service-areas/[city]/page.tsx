@@ -61,8 +61,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
     const uniqueMeta: Record<string, { title: string, description: string }> = {
         "de-pere": {
-            title: "Power & Pressure Washing De Pere, WI | Commercial Hood Cleaning De Pere",
-            description: "Expert power & pressure washing in De Pere, WI. Specializing in commercial hood cleaning De Pere / Green Bay, soft wash siding cleaning Green Bay WI area, and masonry restoration."
+            title: "Exterior Cleaning, Window Cleaning & Soft Washing De Pere, WI | Valley Property Services",
+            description: "Top-rated exterior cleaning in De Pere, WI. Headquartered in De Pere at 462 S Good Hope Rd, Valley Property Services specializes in window cleaning, soft washing, and roof & gutter cleaning."
         },
         "green-bay": {
             title: "Power & Pressure Washing Green Bay, WI – Valley Property Services",
@@ -195,10 +195,10 @@ export default async function CityHubPage({ params }: PageProps) {
                         Serving {cityName}, WI
                     </div>
                     <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 tracking-tight leading-tight">
-                        Elite Power &amp; Pressure Washing in {cityName}
+                        {content.citySlug === 'de-pere' ? 'Premier Exterior Cleaning & Soft Washing in De Pere' : `Elite Power & Pressure Washing in ${cityName}`}
                     </h1>
                     <p className="text-lg md:text-2xl text-slate-300 font-light mb-10 max-w-3xl mx-auto leading-relaxed">
-                        Expert roof washing, window cleaning, and power washing services.
+                        {content.citySlug === 'de-pere' ? 'Headquartered in De Pere, WI — Expert window cleaning, soft washing, and roof & gutter restoration.' : 'Expert roof washing, window cleaning, and power washing services.'}
                     </p>
                 </div>
             </section>
@@ -240,15 +240,23 @@ export default async function CityHubPage({ params }: PageProps) {
             <section className="py-20 lg:py-32 bg-white">
                 <div className="container mx-auto px-4 max-w-4xl">
                     {/* DYNAMIC EXACT-MATCH 'NEAR ME' H2 INJECTION */}
-                    {['green-bay', 'appleton', 'neenah'].includes(content.citySlug) && (
+                    {['green-bay', 'appleton', 'neenah', 'de-pere'].includes(content.citySlug) && (
                         <h2 className="text-3xl md:text-4xl font-extrabold text-navy mb-8 tracking-tight">
-                            Top-Rated Pressure Washing Service Near You in {cityName}
+                            {content.citySlug === 'de-pere' ? 'Top-Rated Exterior Cleaning & Soft Washing in De Pere, WI' : `Top-Rated Pressure Washing Service Near You in ${cityName}`}
                         </h2>
                     )}
 
                     {/* DYNAMIC ENTITY CAPSULE INJECTION with Internal Pillar Links */}
                     <div className="text-lg leading-relaxed mb-8 font-bold text-navy">
-                        Valley Property Services is a fully insured exterior cleaning company providing professional, low-pressure roof washing, window cleaning, and high-ticket <Link href="/services/paver-patio-restorations" className="text-blue-600 hover:text-gold font-semibold transition-colors underline decoration-blue-200 underline-offset-4">expert paver restoration</Link> in <Link href="/service-areas/appleton" className="text-blue-600 hover:text-gold font-semibold transition-colors">Appleton</Link>, <Link href="/service-areas/green-bay" className="text-blue-600 hover:text-gold font-semibold transition-colors">Green Bay</Link>, and <Link href="/service-areas/door-county" className="text-blue-600 hover:text-gold font-semibold transition-colors">Door County</Link>, WI. We specialize in delicate <Link href="/services/roof-cleaning" className="text-blue-600 hover:text-gold font-semibold transition-colors underline decoration-blue-200 underline-offset-4">soft-wash roof treatments</Link> that destroy organic material without extreme water pressure.
+                        {content.citySlug === 'de-pere' ? (
+                            <>
+                                Headquartered right here in De Pere, WI (462 S Good Hope Rd), Valley Property Services delivers elite exterior maintenance. We specialize in streak-free <Link href="/services/window-cleaning" className="text-blue-600 hover:text-gold font-semibold transition-colors underline decoration-blue-200 underline-offset-4">pure-water window cleaning</Link>, safe low-pressure <Link href="/services/soft-wash" className="text-blue-600 hover:text-gold font-semibold transition-colors underline decoration-blue-200 underline-offset-4">house soft washing</Link>, ARMA-compliant <Link href="/services/roof-cleaning" className="text-blue-600 hover:text-gold font-semibold transition-colors underline decoration-blue-200 underline-offset-4">roof soft washing</Link>, and high-flow <Link href="/services/gutter-cleaning" className="text-blue-600 hover:text-gold font-semibold transition-colors underline decoration-blue-200 underline-offset-4">gutter cleaning</Link> for homeowners and commercial properties across De Pere and Brown County.
+                            </>
+                        ) : (
+                            <>
+                                Valley Property Services is a fully insured exterior cleaning company providing professional, low-pressure roof washing, window cleaning, and high-ticket <Link href="/services/paver-patio-restorations" className="text-blue-600 hover:text-gold font-semibold transition-colors underline decoration-blue-200 underline-offset-4">expert paver restoration</Link> in <Link href="/service-areas/appleton" className="text-blue-600 hover:text-gold font-semibold transition-colors">Appleton</Link>, <Link href="/service-areas/green-bay" className="text-blue-600 hover:text-gold font-semibold transition-colors">Green Bay</Link>, and <Link href="/service-areas/door-county" className="text-blue-600 hover:text-gold font-semibold transition-colors">Door County</Link>, WI. We specialize in delicate <Link href="/services/roof-cleaning" className="text-blue-600 hover:text-gold font-semibold transition-colors underline decoration-blue-200 underline-offset-4">soft-wash roof treatments</Link> that destroy organic material without extreme water pressure.
+                            </>
+                        )}
                     </div>
 
                     {/* ENFORCED ARRAY MAPPING FOR BESPOKE INTRODUCTIONS */}
@@ -262,7 +270,20 @@ export default async function CityHubPage({ params }: PageProps) {
                         </div>
                     )}
 
-            {/* DYNAMIC LANDMARK SATURATION INJECTION (NEENAH POWER HUB) */}
+                    {/* DYNAMIC LANDMARK SATURATION INJECTION (DE PERE HEADQUARTERS HUB) */}
+                    {content.citySlug === 'de-pere' && (
+                        <div className="mb-10 p-8 bg-blue-50/50 border-l-4 border-gold rounded-r-2xl shadow-sm">
+                            <h3 className="text-2xl font-bold text-navy mb-3 flex items-center gap-2">
+                                <MapPin className="text-gold" />
+                                Our Hometown Storefront &amp; Operational Headquarters
+                            </h3>
+                            <p className="text-lg text-slate-700 leading-relaxed font-medium">
+                                Valley Property Services is physically headquartered right here in De Pere at <strong>462 S Good Hope Rd, De Pere, WI 54115</strong>. From Broadway to West De Pere, Voyageur Park, and St. Norbert College neighborhoods, we are proud to provide our community with premier window cleaning, siding soft washing, and roof/gutter preservation.
+                            </p>
+                        </div>
+                    )}
+
+                    {/* DYNAMIC LANDMARK SATURATION INJECTION (NEENAH POWER HUB) */}
                     {content.citySlug === 'neenah' && (
                         <div className="mb-10 p-8 bg-blue-50/50 border-l-4 border-navy rounded-r-2xl shadow-sm">
                             <h3 className="text-2xl font-bold text-navy mb-4 flex items-center gap-2">

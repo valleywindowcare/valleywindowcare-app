@@ -257,7 +257,7 @@ export default function Footer() {
                         Valley Property Services | 462 S Good Hope Rd, De Pere, WI 54115 | (920) 609-7085 | <a href="mailto:info@valleyexteriorpros.com" className="hover:text-gold transition-colors">info@valleyexteriorpros.com</a>
                     </p>
                     <p className="text-sm text-gray-500 leading-relaxed max-w-3xl mx-auto">
-                        Proudly providing expert pressure washing, advanced roof soft washing, and environmental surface restoration solutions to residential and commercial properties throughout De Pere, Green Bay, the Fox Valley, and surrounding Northeast Wisconsin communities.
+                        Proudly providing expert pressure washing, advanced roof soft washing, and environmental surface restoration solutions to residential and commercial properties throughout <Link href="/service-areas/de-pere" className="hover:text-gold underline decoration-gray-300 underline-offset-4">De Pere</Link>, <Link href="/service-areas/green-bay" className="hover:text-gold underline decoration-gray-300 underline-offset-4">Green Bay</Link>, <Link href="/service-areas/appleton" className="hover:text-gold underline decoration-gray-300 underline-offset-4">the Fox Valley</Link>, and surrounding Northeast Wisconsin communities.
                     </p>
                 </div>
             </div>

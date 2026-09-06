@@ -57,7 +57,7 @@ export default function ServiceAreasPage() {
                         <div className="md:col-span-5 space-y-6 text-left">
                             <h2 className="text-3xl font-bold text-navy">Our Service Hub & Headquarters</h2>
                             <p className="text-gray-600 leading-relaxed">
-                                While we dispatch our specialized exterior cleaning rigs daily throughout all service areas in Northeast Wisconsin, our physical storefront and administrative headquarters are located in De Pere.
+                                While we dispatch our specialized exterior cleaning rigs daily throughout all service areas in Northeast Wisconsin, our physical storefront and administrative headquarters are located in <Link href="/service-areas/de-pere" className="text-navy font-bold hover:text-gold underline decoration-gold/50 underline-offset-4">De Pere, WI</Link>.
                             </p>
                             <div className="bg-slate-50 p-6 rounded-2xl border border-gray-100 space-y-3 text-gray-600 font-medium">
                                 <p className="flex items-start gap-2">
