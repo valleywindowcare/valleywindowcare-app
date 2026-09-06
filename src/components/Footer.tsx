@@ -88,8 +88,8 @@ export default function Footer() {
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/services/oxidation-removal" className="hover:text-gold transition-colors inline-block relative group">
-                                    Oxidation Removal
+                                <Link href="/services/rust-removal" className="hover:text-gold transition-colors inline-block relative group">
+                                    Oxidation & Rust Removal
                                     <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
                                 </Link>
                             </li>
@@ -100,13 +100,13 @@ export default function Footer() {
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/services/residential-permanent-led-lighting" className="hover:text-gold transition-colors inline-block relative group">
+                                <Link href="/services/permanent-led-lighting" className="hover:text-gold transition-colors inline-block relative group">
                                     Residential Permanent LED Lighting
                                     <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/services/hoa-multi-unit-cleaning" className="hover:text-gold transition-colors inline-block relative group">
+                                <Link href="/services/hoa-services" className="hover:text-gold transition-colors inline-block relative group">
                                     HOA / Multi-Unit Cleaning
                                     <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
                                 </Link>
@@ -238,10 +238,10 @@ export default function Footer() {
                             <Link href="/services/house-washing" aria-label="View House Washing" className="relative aspect-square rounded-lg overflow-hidden group block">
                                 <FooterGalleryImage src="/images/portfolio/house-washing.webp" alt="House Washing Results - Valley Property Services" />
                             </Link>
-                            <Link href="/services/commercial-exterior-cleaning" aria-label="View Commercial Pressure Washing" className="relative aspect-square rounded-lg overflow-hidden group block">
+                            <Link href="/services/commercial-pressure-washing" aria-label="View Commercial Pressure Washing" className="relative aspect-square rounded-lg overflow-hidden group block">
                                 <FooterGalleryImage src="/images/portfolio/pressure-washing.webp" alt="Pressure Washing Results - Valley Property Services" />
                             </Link>
-                            <Link href="/services/permanent-holiday-lighting" aria-label="View Permanent LED Lighting" className="relative aspect-square rounded-lg overflow-hidden group block">
+                            <Link href="/services/permanent-led-lighting" aria-label="View Permanent LED Lighting" className="relative aspect-square rounded-lg overflow-hidden group block">
                                 <FooterGalleryImage src="/images/portfolio/permanent-lighting.webp" alt="Permanent LED Lighting Results - Valley Property Services" />
                             </Link>
                         </div>

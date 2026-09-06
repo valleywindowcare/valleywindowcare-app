@@ -82,7 +82,7 @@ export default function Header() {
                                         <Link href="/services/house-washing" className="px-4 py-2 hover:bg-slate-50 rounded-xl text-navy-dark hover:text-gold transition-colors font-semibold">House Washing</Link>
                                         <Link href="/services/pressure-washing" className="px-4 py-2 hover:bg-slate-50 rounded-xl text-navy-dark hover:text-gold transition-colors font-semibold">Power &amp; Pressure Washing</Link>
                                         <Link href="/services/paver-patio-restorations" className="px-4 py-2 hover:bg-slate-50 rounded-xl text-navy-dark hover:text-gold transition-colors font-semibold">Paver Patio Restorations</Link>
-                                        <Link href="/services/residential-permanent-led-lighting" className="px-4 py-2 hover:bg-slate-50 rounded-xl text-navy-dark hover:text-gold transition-colors font-semibold">Permanent LED Lighting</Link>
+                                        <Link href="/services/permanent-led-lighting" className="px-4 py-2 hover:bg-slate-50 rounded-xl text-navy-dark hover:text-gold transition-colors font-semibold">Permanent LED Lighting</Link>
                                     </div>
                                 </div>
 
@@ -93,9 +93,9 @@ export default function Header() {
                                         <Link href="/services/building-washing" className="px-4 py-2 hover:bg-slate-50 rounded-xl text-navy-dark hover:text-gold transition-colors font-semibold">Building Washing</Link>
                                         <Link href="/services/commercial-roof-cleaning" className="px-4 py-2 hover:bg-slate-50 rounded-xl text-navy-dark hover:text-gold transition-colors font-semibold">Commercial Roof Cleaning</Link>
                                         <Link href="/services/dumpster-pad-cleaning" className="px-4 py-2 hover:bg-slate-50 rounded-xl text-navy-dark hover:text-gold transition-colors font-semibold">Dumpster Pad Cleaning</Link>
-                                        <Link href="/services/hoa-multi-unit-cleaning" className="px-4 py-2 hover:bg-slate-50 rounded-xl text-navy-dark hover:text-gold transition-colors font-semibold">Multi-Unit / HOA Services</Link>
-                                        <Link href="/services/apartment-exterior-cleaning" className="px-4 py-2 hover:bg-slate-50 rounded-xl text-navy-dark hover:text-gold transition-colors font-semibold">Apartment Exterior Cleaning</Link>
-                                        <Link href="/services/permanent-holiday-lighting" className="px-4 py-2 hover:bg-slate-50 rounded-xl text-navy-dark hover:text-gold transition-colors font-semibold">Permanent LED Lighting</Link>
+                                        <Link href="/services/hoa-services" className="px-4 py-2 hover:bg-slate-50 rounded-xl text-navy-dark hover:text-gold transition-colors font-semibold">Multi-Unit / HOA Services</Link>
+                                        <Link href="/services/hoa-services" className="px-4 py-2 hover:bg-slate-50 rounded-xl text-navy-dark hover:text-gold transition-colors font-semibold">Apartment Exterior Cleaning</Link>
+                                        <Link href="/services/permanent-led-lighting" className="px-4 py-2 hover:bg-slate-50 rounded-xl text-navy-dark hover:text-gold transition-colors font-semibold">Permanent LED Lighting</Link>
                                         <Link href="/services/winter-salt-removal" className="px-4 py-2 hover:bg-slate-50 rounded-xl text-navy-dark hover:text-gold transition-colors font-semibold">Winter Salt Removal</Link>
                                     </div>
                                 </div>
@@ -124,7 +124,7 @@ export default function Header() {
                 <div className="hidden lg:flex items-center ml-auto shrink-0 pr-1 gap-2 xl:gap-3">
                     <a href="tel:920-609-7085" className="flex items-center gap-2 text-navy font-bold hover:text-gold transition-colors shrink-0 mr-2 xl:mr-3" rel="nofollow" aria-label="Call Valley Property Services">
                         <span className="hidden 2xl:inline font-black text-navy-dark text-lg break-words leading-tight tracking-tight">(920) 609-7085</span>
-                        <Phone size={20} className="text-gold shrink-0 2xl:hidden" aria-label="Phone Icon" />
+                        <Phone size={20} className="fill-current" />
                         <Phone size={18} className="hidden 2xl:block text-gold shrink-0" />
                     </a>
                     
@@ -163,16 +163,16 @@ export default function Header() {
                                         <Link onClick={() => setIsMobileMenuOpen(false)} href="/services/house-washing" className="block py-2 hover:text-gold transition-colors">House Washing</Link>
                                         <Link onClick={() => setIsMobileMenuOpen(false)} href="/services/pressure-washing" className="block py-2 hover:text-gold transition-colors">Power &amp; Pressure Washing</Link>
                                         <Link onClick={() => setIsMobileMenuOpen(false)} href="/services/paver-patio-restorations" className="block py-2 hover:text-gold transition-colors">Paver Patio Restorations</Link>
-                                        <Link onClick={() => setIsMobileMenuOpen(false)} href="/services/residential-permanent-led-lighting" className="block py-2 hover:text-gold transition-colors">Permanent LED Lighting</Link>
+                                        <Link onClick={() => setIsMobileMenuOpen(false)} href="/services/permanent-led-lighting" className="block py-2 hover:text-gold transition-colors">Permanent LED Lighting</Link>
                                     </div>
                                     <div className="space-y-2 pt-2 border-t border-gray-50">
                                         <h4 className="text-gold text-xs tracking-widest uppercase mb-2">Commercial</h4>
                                         <Link onClick={() => setIsMobileMenuOpen(false)} href="/services/building-washing" className="block py-2 hover:text-gold transition-colors">Building Washing</Link>
                                         <Link onClick={() => setIsMobileMenuOpen(false)} href="/services/commercial-roof-cleaning" className="block py-2 hover:text-gold transition-colors">Commercial Roof Cleaning</Link>
                                         <Link onClick={() => setIsMobileMenuOpen(false)} href="/services/dumpster-pad-cleaning" className="block py-2 hover:text-gold transition-colors">Dumpster Pad Cleaning</Link>
-                                        <Link onClick={() => setIsMobileMenuOpen(false)} href="/services/hoa-multi-unit-cleaning" className="block py-2 hover:text-gold transition-colors">Multi-Unit / HOA Services</Link>
-                                        <Link onClick={() => setIsMobileMenuOpen(false)} href="/services/apartment-exterior-cleaning" className="block py-2 hover:text-gold transition-colors">Apartment Exterior Cleaning</Link>
-                                        <Link onClick={() => setIsMobileMenuOpen(false)} href="/services/permanent-holiday-lighting" className="block py-2 hover:text-gold transition-colors">Permanent LED Lighting</Link>
+                                        <Link onClick={() => setIsMobileMenuOpen(false)} href="/services/hoa-services" className="block py-2 hover:text-gold transition-colors">Multi-Unit / HOA Services</Link>
+                                        <Link onClick={() => setIsMobileMenuOpen(false)} href="/services/hoa-services" className="block py-2 hover:text-gold transition-colors">Apartment Exterior Cleaning</Link>
+                                        <Link onClick={() => setIsMobileMenuOpen(false)} href="/services/permanent-led-lighting" className="block py-2 hover:text-gold transition-colors">Permanent LED Lighting</Link>
                                         <Link onClick={() => setIsMobileMenuOpen(false)} href="/services/winter-salt-removal" className="block py-2 hover:text-gold transition-colors">Winter Salt Removal</Link>
                                     </div>
                                     <div className="pt-2 border-t border-gray-50">

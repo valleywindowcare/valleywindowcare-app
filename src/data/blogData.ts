@@ -310,7 +310,7 @@ If you live in Northeast Wisconsin, you know the toll the environment takes on y
 
 Many homeowners and amateur exterior cleaners reach straight for the pressure washer when they see green algae or black mold. This is a critical mistake. High-pressure water can easily blast underneath overlapping siding panels, trapping moisture against the wood framework and causing hidden rot. Furthermore, aggressive pressure can permanently scar the vinyl or blast away the UV-protective coating, voiding the manufacturer's warranty. 
 
-Instead, [our Green Bay soft washing services](/services/soft-wash-green-bay) utilize a dedicated 12V low-voltage agricultural pump system. This delivers our proprietary, eco-friendly cleaning detergents at a pressure no stronger than a standard garden hose. The specialized solution does the heavy lifting, actively neutralizing mold spores, algae, and oxidation at the root level before being gently rinsed away. 
+Instead, [our Green Bay soft washing services](/services/house-washing) utilize a dedicated 12V low-voltage agricultural pump system. This delivers our proprietary, eco-friendly cleaning detergents at a pressure no stronger than a standard garden hose. The specialized solution does the heavy lifting, actively neutralizing mold spores, algae, and oxidation at the root level before being gently rinsed away. 
 
 ## The Wisconsin Climate Factor: Algae, Mold, and Salt
 
@@ -349,7 +349,7 @@ Yes, our soft washing process is entirely safe for your property. We take extens
 For most homes in the Appleton and Green Bay areas, a professional soft wash is recommended every 1 to 2 years. Properties with heavy tree coverage, high humidity, or those located directly on the lakefront in Door County may require annual cleanings to keep organic growth and spider webs fully at bay.
 
 **Can you use a water-fed pole to clean the exterior?**
-A purified water-fed pole is the industry standard for our [residential window cleaning services](/services/window-cleaning-green-bay), delivering a spot-free, brilliant shine to the glass. However, for siding and structural cleaning, our dedicated low-voltage soft wash pump system is required to appropriately apply the detergents and achieve a true deep clean.
+A purified water-fed pole is the industry standard for our [residential window cleaning services](/services/window-cleaning), delivering a spot-free, brilliant shine to the glass. However, for siding and structural cleaning, our dedicated low-voltage soft wash pump system is required to appropriately apply the detergents and achieve a true deep clean.
 
 ---
 
@@ -801,7 +801,7 @@ If you want to permanently solve your exterior lighting layout, professional sys
 Never. Our system utilizes a custom, heavy-gauge rigid aluminum track that perfectly matches your underlying trim color. The system completely camouflages into the roofline geometry during the bright daylight hours.
 
 **Can I use the Christmas lights for other holidays throughout the year?**
-Yes. Through the highly secure smartphone app, you can flawlessly transition your whole home exterior to green for St. Patrick's Day, red and blue for the 4th of July, or simply project a stunning warm-white architectural glow to increase nightly security around your [permanent lighting in Green Bay](/services/permanent-lighting-green-bay-wi).
+Yes. Through the highly secure smartphone app, you can flawlessly transition your whole home exterior to green for St. Patrick's Day, red and blue for the 4th of July, or simply project a stunning warm-white architectural glow to increase nightly security around your [permanent lighting in Green Bay](/services/permanent-led-lighting).
 
 <!-- 
 📸 Image Recommendations:
@@ -1414,7 +1414,7 @@ Stop spending entirely massive amounts of highly miserable hours incredibly free
 
 ## Frequently Asked Questions About Digital Roof Lights
 **Will you aggressively remove all of my old severely broken lights first?**
-Yes. Once we are entirely secured safely high up on your intensely steep roofline via our incredible commercial harness setups, we comprehensively pull the entire nightmare of temporary tangled string down before we [install your permanent holiday lighting solution in Green Bay](/services/permanent-lighting-green-bay-wi). 
+Yes. Once we are entirely secured safely high up on your intensely steep roofline via our incredible commercial harness setups, we comprehensively pull the entire nightmare of temporary tangled string down before we [install your permanent holiday lighting solution in Green Bay](/services/permanent-led-lighting). 
 
 **Can I actively program an incredibly scary completely custom Halloween sequence?**
 Absolutely. The incredibly powerful lighting hub natively integrates hundreds of aggressively stunning holiday sequences. You can easily drag extremely vibrant deep purples, entirely sickly glowing toxic greens, and massive flashing orange patterns flawlessly down the track for an incredible October display against your clean [soft washed house](/services/house-washing).

@@ -101,7 +101,7 @@ export default function FAQPage() {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/services/soft-washing-company-in-green-bay-wisconsin" className="text-gray-600 hover:text-gold transition-colors flex items-center gap-2 group">
+                                    <Link href="/services/house-washing" className="text-gray-600 hover:text-gold transition-colors flex items-center gap-2 group">
                                         <ArrowRight size={14} className="text-gray-300 group-hover:text-gold transition-colors" /> Soft Washing
                                     </Link>
                                 </li>
@@ -111,7 +111,7 @@ export default function FAQPage() {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/services/deck-restoration" className="text-gray-600 hover:text-gold transition-colors flex items-center gap-2 group">
+                                    <Link href="/services/deck-cleaning" className="text-gray-600 hover:text-gold transition-colors flex items-center gap-2 group">
                                         <ArrowRight size={14} className="text-gray-300 group-hover:text-gold transition-colors" /> Deck Restoration
                                     </Link>
                                 </li>
@@ -180,13 +180,13 @@ export default function FAQPage() {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/service-areas/howard" className="text-gray-600 hover:text-gold transition-colors flex items-center gap-2 group">
-                                        <ArrowRight size={14} className="text-gray-300 group-hover:text-gold transition-colors" /> Howard, WI
+                                    <Link href="/service-areas/neenah" className="text-gray-600 hover:text-gold transition-colors flex items-center gap-2 group">
+                                        <ArrowRight size={14} className="text-gray-300 group-hover:text-gold transition-colors" /> Neenah, WI
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/service-areas/suamico" className="text-gray-600 hover:text-gold transition-colors flex items-center gap-2 group">
-                                        <ArrowRight size={14} className="text-gray-300 group-hover:text-gold transition-colors" /> Suamico, WI
+                                    <Link href="/service-areas/manitowoc" className="text-gray-600 hover:text-gold transition-colors flex items-center gap-2 group">
+                                        <ArrowRight size={14} className="text-gray-300 group-hover:text-gold transition-colors" /> Manitowoc, WI
                                     </Link>
                                 </li>
                                 <li>

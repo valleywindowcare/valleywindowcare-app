@@ -349,7 +349,7 @@ export default async function CityHubPage({ params }: PageProps) {
                                 <Image src={'/images/portfolio/rust-removal-before-after.webp'} alt={`Professional rust removal and mineral extraction in ${cityName}, ${targetCounty} County`} fill className="object-cover" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" loading="lazy" />
                             </div>
                             <div className="w-full md:w-1/2 prose prose-slate lg:prose-xl max-w-none">
-                                <Link href="/services/residential-rust-removal" className="no-underline hover:text-gold transition-colors">
+                                <Link href="/services/rust-removal" className="no-underline hover:text-gold transition-colors">
                                     <h3 className="text-3xl font-black tracking-tight text-navy mt-0 text-left">Rust Removal</h3>
                                 </Link>
                                 <p className="font-semibold text-gray-700">{vRust.subtitle}</p>

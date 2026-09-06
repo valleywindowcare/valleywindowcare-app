@@ -56,7 +56,7 @@ export default function Home() {
             <Link href="/services/pressure-washing" className="bg-gold text-navy border-2 border-gold font-black text-lg px-8 py-4 rounded-xl shadow-xl hover:bg-transparent hover:text-gold hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-3">
               Power Washing Service <span className="text-xl">&rarr;</span>
             </Link>
-            <Link href="/paver-patio-restorations" className="bg-gold text-navy border-2 border-gold font-black text-lg px-8 py-4 rounded-xl shadow-xl hover:bg-transparent hover:text-gold hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-3">
+            <Link href="/services/paver-patio-restorations" className="bg-gold text-navy border-2 border-gold font-black text-lg px-8 py-4 rounded-xl shadow-xl hover:bg-transparent hover:text-gold hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-3">
               Explore Paver Restoration <span className="text-xl">&rarr;</span>
             </Link>
             <Link href="/services/permanent-led-lighting" className="bg-gold text-navy border-2 border-gold font-black text-lg px-8 py-4 rounded-xl shadow-xl hover:bg-transparent hover:text-gold hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-3">
@@ -73,7 +73,7 @@ export default function Home() {
           <h2 className="text-3xl font-extrabold text-navy mb-8">Featured Service Areas</h2>
           <div className="flex flex-wrap justify-center gap-4">
             {[
-              "Green Bay", "Appleton", "Neenah", "De Pere", "Howard"
+              "Green Bay", "Appleton", "Neenah", "De Pere", "Door County"
             ].map((city) => (
               <Link
                 key={city}

@@ -4,12 +4,28 @@ import Link from 'next/link';
 import ReviewSlider from '@/components/ReviewSlider';
 
 export const CITIES = [
-    "Green Bay", "Appleton", "De Pere", "Neenah", "Menasha",
-    "Kaukauna", "Oshkosh", "Howard", "Suamico", "Allouez",
-    "Ashwaubenon", "Bellevue", "Door County", "Fish Creek",
-    "Sturgeon Bay", "Shawano", "Manitowoc", "Ledgeview",
-    "Hobart", "Egg Harbor", "Sister Bay", "Greenville",
-    "Sherwood", "Combined Locks"
+    "Green Bay", "Appleton", "De Pere", "Door County", "Neenah",
+    "Oshkosh", "Manitowoc", "Algoma", "Kewaunee", "Kimberly",
+    "Little Chute", "Two Rivers", "Wrightstown", "Shawano"
+];
+
+const SURROUNDING_COMMUNITIES = [
+    { name: "Howard", hub: "/service-areas/green-bay", region: "Greater Green Bay" },
+    { name: "Suamico", hub: "/service-areas/green-bay", region: "Greater Green Bay" },
+    { name: "Ashwaubenon", hub: "/service-areas/green-bay", region: "Greater Green Bay" },
+    { name: "Allouez", hub: "/service-areas/green-bay", region: "Greater Green Bay" },
+    { name: "Bellevue", hub: "/service-areas/green-bay", region: "Greater Green Bay" },
+    { name: "Hobart", hub: "/service-areas/green-bay", region: "Greater Green Bay" },
+    { name: "Ledgeview", hub: "/service-areas/green-bay", region: "Greater Green Bay" },
+    { name: "Menasha", hub: "/service-areas/appleton", region: "Fox Cities" },
+    { name: "Kaukauna", hub: "/service-areas/appleton", region: "Fox Cities" },
+    { name: "Greenville", hub: "/service-areas/appleton", region: "Fox Cities" },
+    { name: "Combined Locks", hub: "/service-areas/appleton", region: "Fox Cities" },
+    { name: "Sherwood", hub: "/service-areas/appleton", region: "Fox Cities" },
+    { name: "Sturgeon Bay", hub: "/service-areas/door-county", region: "Door County" },
+    { name: "Fish Creek", hub: "/service-areas/door-county", region: "Door County" },
+    { name: "Egg Harbor", hub: "/service-areas/door-county", region: "Door County" },
+    { name: "Sister Bay", hub: "/service-areas/door-county", region: "Door County" }
 ];
 
 const generateSlug = (city: string) => city.toLowerCase().replace(/ /g, '-');
@@ -32,7 +48,7 @@ export default function ServiceAreasPage() {
                         <strong>Valley Property Services is proud to deploy specialized local exterior-cleaning fleets across every major city in Northeast Wisconsin. Whether you require meticulous residential window cleaning or large-scale commercial pressure washing, our technicians mobilize rapidly to provide unparalleled property restoration throughout our entire service network.</strong>
                     </p>
                     <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                        Select your city below to see specialized services.
+                        Select your primary service hub below:
                     </p>
                 </div>
 
@@ -49,6 +65,25 @@ export default function ServiceAreasPage() {
                             <span className="text-lg font-bold text-navy group-hover:text-gold transition-colors">{city}</span>
                         </Link>
                     ))}
+                </div>
+
+                {/* Additional Surrounding Communities */}
+                <div className="mt-16 bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-gray-100">
+                    <h2 className="text-2xl font-bold text-navy mb-4 text-center">Surrounding Communities & Neighborhoods</h2>
+                    <p className="text-gray-600 text-center max-w-2xl mx-auto mb-8">
+                        We also provide full mobile dispatch and exterior cleaning services to all surrounding towns and suburbs across Northeast Wisconsin:
+                    </p>
+                    <div className="flex flex-wrap justify-center gap-3">
+                        {SURROUNDING_COMMUNITIES.map((comm) => (
+                            <Link
+                                key={comm.name}
+                                href={comm.hub}
+                                className="px-4 py-2 bg-slate-50 hover:bg-gold/10 text-navy hover:text-gold font-medium rounded-full text-sm border border-gray-200 transition-colors"
+                            >
+                                {comm.name} ({comm.region})
+                            </Link>
+                        ))}
+                    </div>
                 </div>
 
                 {/* Our Service Hub & Headquarters Section */}

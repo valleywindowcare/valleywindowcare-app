@@ -42,7 +42,7 @@ export default function WisconsinCoverageMatrix() {
                                 <div className="w-2 h-2 bg-navy rounded-full"></div> <Link href="/service-areas/de-pere" className="hover:text-gold underline decoration-gray-300 underline-offset-4">De Pere</Link>
                             </li>
                             <li className="flex items-center gap-2">
-                                <div className="w-2 h-2 bg-navy rounded-full"></div> <Link href="/service-areas/ashwaubenon" className="hover:text-gold underline decoration-gray-300 underline-offset-4">Ashwaubenon</Link>
+                                <div className="w-2 h-2 bg-navy rounded-full"></div> Ashwaubenon
                             </li>
                             <li className="flex items-center gap-2">
                                 <div className="w-2 h-2 bg-navy rounded-full"></div> Suamico
@@ -62,13 +62,13 @@ export default function WisconsinCoverageMatrix() {
                         </h2>
                         <ul className="space-y-3 font-medium text-gray-600 text-lg">
                             <li className="flex items-center gap-2">
-                                <div className="w-2 h-2 bg-navy rounded-full"></div> Little Chute
+                                <div className="w-2 h-2 bg-navy rounded-full"></div> <Link href="/service-areas/little-chute" className="hover:text-gold underline decoration-gray-300 underline-offset-4">Little Chute</Link>
                             </li>
                             <li className="flex items-center gap-2">
                                 <div className="w-2 h-2 bg-navy rounded-full"></div> Menasha
                             </li>
                             <li className="flex items-center gap-2">
-                                <div className="w-2 h-2 bg-navy rounded-full"></div> <Link href="/service-areas/kaukauna" className="hover:text-gold underline decoration-gray-300 underline-offset-4">Kaukauna</Link>
+                                <div className="w-2 h-2 bg-navy rounded-full"></div> Kaukauna
                             </li>
                             <li className="flex items-center gap-2">
                                 <div className="w-2 h-2 bg-navy rounded-full"></div> <Link href="/service-areas/neenah" className="hover:text-gold underline decoration-gray-300 underline-offset-4">Neenah</Link>

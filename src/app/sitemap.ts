@@ -122,7 +122,7 @@ const validServices = [
     "hoa-services"
 ];
 
-// 19 city hub routes in validLocations
+// 14 city hub routes in validLocations
 const validLocations = [
     "appleton",
     "green-bay",
@@ -137,12 +137,7 @@ const validLocations = [
     "little-chute",
     "two-rivers",
     "wrightstown",
-    "sturgeon-bay",
-    "egg-harbor",
-    "fish-creek",
-    "sister-bay",
-    "howard",
-    "suamico"
+    "shawano"
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
