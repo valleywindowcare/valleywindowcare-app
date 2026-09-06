@@ -90,6 +90,8 @@ const legacyToNestedMap: Record<string, string> = {
   "/led-smart-lighting-solutions-green-bay-wi": "/services/permanent-led-lighting",
   "/window-cleaning": "/services/window-cleaning",
   "/pressure-washing": "/services/pressure-washing",
+  "/power-washing": "/services/pressure-washing",
+  "/services/power-washing": "/services/pressure-washing",
   "/roof-cleaning": "/services/roof-cleaning",
   "/gutter-cleaning": "/services/gutter-cleaning",
   "/paver-restoration": "/services/paver-patio-restorations",

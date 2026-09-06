@@ -53,7 +53,7 @@ export default function Home() {
           <h2 className="text-2xl md:text-3xl font-extrabold text-white mb-6 tracking-tight drop-shadow-md">Specialty Seasonal Services</h2>
           <p className="text-gray-300 font-semibold mb-8 max-w-2xl mx-auto text-lg leading-relaxed">Fast-track to our most requested premium preservation and architectural lighting installations.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-6">
-            <Link href="/services/power-washing" className="bg-gold text-navy border-2 border-gold font-black text-lg px-8 py-4 rounded-xl shadow-xl hover:bg-transparent hover:text-gold hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-3">
+            <Link href="/services/pressure-washing" className="bg-gold text-navy border-2 border-gold font-black text-lg px-8 py-4 rounded-xl shadow-xl hover:bg-transparent hover:text-gold hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-3">
               Power Washing Service <span className="text-xl">&rarr;</span>
             </Link>
             <Link href="/paver-patio-restorations" className="bg-gold text-navy border-2 border-gold font-black text-lg px-8 py-4 rounded-xl shadow-xl hover:bg-transparent hover:text-gold hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-3">

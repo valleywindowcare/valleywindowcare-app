@@ -44,7 +44,6 @@ const validServices = [
     "concrete-cleaning",
     "window-cleaning",
     "pressure-washing",
-    "power-washing",
     "fence-cleaning",
     "deck-cleaning",
     "soft-wash",
