@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -8,9 +9,27 @@ import { ShieldCheck, CheckCircle, ArrowRight, MapPin, Phone, Mail } from 'lucid
 import ReviewSlider from '@/components/ReviewSlider';
 import FAQSchema from '@/components/FAQSchema';
 
-export const metadata = {
-    title: "Post-Construction Exterior Cleanup | Green Bay & Appleton",
+export const metadata: Metadata = {
+    title: {
+        absolute: "Post-Construction Exterior Cleanup | Green Bay & Appleton",
+    },
     description: "Northeast Wisconsin's leading post-construction exterior cleanup company. Specialized removal of mortar haze, concrete splatter, paint, and drywall dust.",
+    alternates: {
+        canonical: "https://valleyexteriorpros.com/services/post-construction-cleanup",
+    },
+    openGraph: {
+        title: "Post-Construction Exterior Cleanup | Green Bay & Appleton",
+        description: "Northeast Wisconsin's leading post-construction exterior cleanup company. Specialized removal of mortar haze, concrete splatter, paint, and drywall dust.",
+        url: "https://valleyexteriorpros.com/services/post-construction-cleanup",
+        siteName: "Valley Property Services",
+        locale: "en_US",
+        type: "website",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Post-Construction Exterior Cleanup | Green Bay & Appleton",
+        description: "Northeast Wisconsin's leading post-construction exterior cleanup company. Specialized removal of mortar haze, concrete splatter, paint, and drywall dust.",
+    },
 };
 
 const faqs = [

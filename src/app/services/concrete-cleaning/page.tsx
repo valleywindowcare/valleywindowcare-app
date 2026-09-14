@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -7,9 +8,27 @@ import { ShieldCheck, CheckCircle, ArrowRight, MapPin } from 'lucide-react';
 import ReviewSlider from '@/components/ReviewSlider';
 import FAQSchema from '@/components/FAQSchema';
 
-export const metadata = {
-    title: "Concrete Cleaning & Pressure Washing in Green Bay & Appleton",
+export const metadata: Metadata = {
+    title: {
+        absolute: "Concrete Cleaning & Pressure Washing | Green Bay & Appleton",
+    },
     description: "Professional concrete pressure washing and driveway cleaning services. Valley Property Services removes road salt, mold, and oil stains across Northeast Wisconsin.",
+    alternates: {
+        canonical: "https://valleyexteriorpros.com/services/concrete-cleaning",
+    },
+    openGraph: {
+        title: "Concrete Cleaning & Pressure Washing | Green Bay & Appleton",
+        description: "Professional concrete pressure washing and driveway cleaning services. Valley Property Services removes road salt, mold, and oil stains across Northeast Wisconsin.",
+        url: "https://valleyexteriorpros.com/services/concrete-cleaning",
+        siteName: "Valley Property Services",
+        locale: "en_US",
+        type: "website",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Concrete Cleaning & Pressure Washing | Green Bay & Appleton",
+        description: "Professional concrete pressure washing and driveway cleaning services. Valley Property Services removes road salt, mold, and oil stains across Northeast Wisconsin.",
+    },
 };
 
 const faqs = [

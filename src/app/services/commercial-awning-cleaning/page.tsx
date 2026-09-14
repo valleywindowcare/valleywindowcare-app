@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -8,9 +9,27 @@ import { ShieldCheck, CheckCircle, ArrowRight, MapPin, Phone, Mail } from 'lucid
 import ReviewSlider from '@/components/ReviewSlider';
 import FAQSchema from '@/components/FAQSchema';
 
-export const metadata = {
-    title: "Commercial Awning Cleaning | Green Bay & Appleton",
+export const metadata: Metadata = {
+    title: {
+        absolute: "Commercial Awning Cleaning | Green Bay & Appleton",
+    },
     description: "Northeast Wisconsin's leading commercial awning cleaning company. Specialized low-pressure soft washing and UV sealants for fabric and vinyl awnings.",
+    alternates: {
+        canonical: "https://valleyexteriorpros.com/services/commercial-awning-cleaning",
+    },
+    openGraph: {
+        title: "Commercial Awning Cleaning | Green Bay & Appleton",
+        description: "Northeast Wisconsin's leading commercial awning cleaning company. Specialized low-pressure soft washing and UV sealants for fabric and vinyl awnings.",
+        url: "https://valleyexteriorpros.com/services/commercial-awning-cleaning",
+        siteName: "Valley Property Services",
+        locale: "en_US",
+        type: "website",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Commercial Awning Cleaning | Green Bay & Appleton",
+        description: "Northeast Wisconsin's leading commercial awning cleaning company. Specialized low-pressure soft washing and UV sealants for fabric and vinyl awnings.",
+    },
 };
 
 const faqs = [

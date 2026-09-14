@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -8,9 +9,27 @@ import { ShieldCheck, CheckCircle, ArrowRight, MapPin, Phone, Mail } from 'lucid
 import ReviewSlider from '@/components/ReviewSlider';
 import FAQSchema from '@/components/FAQSchema';
 
-export const metadata = {
-    title: "Commercial Kitchen Hood Cleaning | Green Bay & Appleton",
+export const metadata: Metadata = {
+    title: {
+        absolute: "Commercial Kitchen Hood Cleaning | Green Bay & Appleton",
+    },
     description: "Northeast Wisconsin's leading NFPA 96-compliant commercial kitchen hood exhaust cleaning company. Professional steam cleaning and grease extraction.",
+    alternates: {
+        canonical: "https://valleyexteriorpros.com/services/commercial-hood-cleaning",
+    },
+    openGraph: {
+        title: "Commercial Kitchen Hood Cleaning | Green Bay & Appleton",
+        description: "Northeast Wisconsin's leading NFPA 96-compliant commercial kitchen hood exhaust cleaning company. Professional steam cleaning and grease extraction.",
+        url: "https://valleyexteriorpros.com/services/commercial-hood-cleaning",
+        siteName: "Valley Property Services",
+        locale: "en_US",
+        type: "website",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Commercial Kitchen Hood Cleaning | Green Bay & Appleton",
+        description: "Northeast Wisconsin's leading NFPA 96-compliant commercial kitchen hood exhaust cleaning company. Professional steam cleaning and grease extraction.",
+    },
 };
 
 const faqs = [

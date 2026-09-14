@@ -61,9 +61,8 @@ export const localBusinessSchemaData = {
     }
   ],
   "sameAs": [
-    "https://www.facebook.com/valleywindowcare",
-    "https://www.instagram.com/valleywindowcare",
-    "https://www.youtube.com/@valleypropertywash",
+    "https://www.facebook.com/Valleypropertyservice",
+    "https://www.instagram.com/valleypropertyservice",
     "https://www.google.com/maps?cid=14133068595604156906"
   ],
   "aggregateRating": {

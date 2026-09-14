@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -7,9 +8,27 @@ import { ShieldCheck, CheckCircle, ArrowRight, MapPin } from 'lucide-react';
 import ReviewSlider from '@/components/ReviewSlider';
 import FAQSchema from '@/components/FAQSchema';
 
-export const metadata = {
-    title: "Commercial Pressure Washing & Building Washing | Green Bay",
+export const metadata: Metadata = {
+    title: {
+        absolute: "Commercial Pressure Washing & Building Washing | Green Bay",
+    },
     description: "Northeast Wisconsin's leading commercial pressure washing experts. Fully EPA-compliant, hot-water surface cleaning for buildings, plazas, and dumpster pads.",
+    alternates: {
+        canonical: "https://valleyexteriorpros.com/services/commercial-pressure-washing",
+    },
+    openGraph: {
+        title: "Commercial Pressure Washing & Building Washing | Green Bay",
+        description: "Northeast Wisconsin's leading commercial pressure washing experts. Fully EPA-compliant, hot-water surface cleaning for buildings, plazas, and dumpster pads.",
+        url: "https://valleyexteriorpros.com/services/commercial-pressure-washing",
+        siteName: "Valley Property Services",
+        locale: "en_US",
+        type: "website",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Commercial Pressure Washing & Building Washing | Green Bay",
+        description: "Northeast Wisconsin's leading commercial pressure washing experts. Fully EPA-compliant, hot-water surface cleaning for buildings, plazas, and dumpster pads.",
+    },
 };
 
 const faqs = [

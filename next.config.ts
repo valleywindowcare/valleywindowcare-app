@@ -58,7 +58,7 @@ function getCsvRedirects() {
 
 // Generate the regex string for matching valid services
 // Generate the regex string for matching valid services
-const validServicesRegex = `(roof-cleaning|house-washing|gutter-cleaning|concrete-cleaning|window-cleaning|christmas-lighting|pressure-washing|residential-permanent-led-lighting|fence-cleaning|deck-cleaning|oxidation-removal|soft-wash|driveway-cleaning|solar-panel-cleaning|rust-removal|building-washing|dumpster-pad-cleaning|permanent-led-lighting|commercial-roof-cleaning|commercial-pressure-washing|graffiti-removal|hoa-multi-unit-cleaning|storefront-cleaning|premium-drive-thru-cleaning|parking-lot-and-garage-cleaning|chewing-gum-removal|commercial-awning-cleaning|gas-station-cleaning|post-construction-cleanup|paver-patio-restorations|commercial-hood-cleaning|apartment-exterior-cleaning|winter-salt-removal)`;
+const validServicesRegex = `(roof-cleaning|house-washing|gutter-cleaning|concrete-cleaning|window-cleaning|christmas-lighting|pressure-washing|residential-permanent-led-lighting|fence-cleaning|deck-cleaning|oxidation-removal|soft-wash|driveway-cleaning|solar-panel-cleaning|rust-removal|building-washing|dumpster-pad-cleaning|permanent-led-lighting|commercial-roof-cleaning|commercial-pressure-washing|graffiti-removal|hoa-multi-unit-cleaning|storefront-cleaning|premium-drive-thru-cleaning|parking-lot-and-garage-cleaning|chewing-gum-removal|commercial-awning-cleaning|gas-station-cleaning|post-construction-cleanup|paver-patio-restorations|commercial-hood-cleaning|apartment-exterior-cleaning|winter-salt-removal|hoa-services|hood-vent-cleaning|holiday-lighting)`;
 
 const legacyToNestedMap: Record<string, string> = {
   "/blog/exterior-house-cleaning-checklist": "/blog/an-experts-guide-to-cleaning-the-exterior-of-your-home",
@@ -79,9 +79,13 @@ const legacyToNestedMap: Record<string, string> = {
   "/services/hoa-multi-unit-cleaning": "/services/hoa-services",
   "/services/apartment-exterior-cleaning": "/services/hoa-services",
   "/services/apartment-hoa-cleaning": "/services/hoa-services",
+  "/hoa-services": "/services/hoa-services",
   "/services/residential-permanent-led-lighting": "/services/permanent-led-lighting",
   "/services/permanent-holiday-lighting": "/services/permanent-led-lighting",
+  "/holiday-lighting": "/services/christmas-lighting",
+  "/services/holiday-lighting": "/services/christmas-lighting",
   "/services/building-wash": "/services/building-washing",
+  "/hood-vent-cleaning": "/services/commercial-hood-cleaning",
   "/services/hood-vent-cleaning": "/services/commercial-hood-cleaning",
   "/services/deck-restoration": "/services/deck-cleaning",
   "/services/professional-awning-cleaning-in-green-bay-wisconsin": "/services/commercial-awning-cleaning",
@@ -190,12 +194,13 @@ const legacyToNestedMap: Record<string, string> = {
   "/gutter-cleaning-company-in-green-bay-wisconsin": "/services/gutter-cleaning",
   "/blog/category-property-washing": "/blog",
   "/commercial-pressure-washing-company-in-green-bay-wisconsin": "/services/commercial-pressure-washing",
-  "/concrete-cleaning-company-in-green-bay-wisconsin": "/service-areas/green-bay",
+  "/concrete-cleaning-company-in-green-bay-wisconsin": "/services/concrete-cleaning",
   "/permanent-lighting-solutions-green-bay-wi": "/services/residential-permanent-led-lighting",
   "/driveway-cleaning-company-in-green-bay-wisconsin": "/services/driveway-cleaning",
   "/services/driveway-cleaning-green-bay": "/services/driveway-cleaning",
-  "/professional-awning-cleaning-in-green-bay-wisconsin": "/services/commercial-awning-cleaning-green-bay",
-  "/commercial-vent-hood-cleaning-in-green-bay-appleton-wiay-wi": "/services/commercial-hood-cleaning",
+  "/professional-awning-cleaning-in-green-bay-wisconsin": "/services/commercial-awning-cleaning",
+  "/commercial-vent-hood-cleaning-in-green-bay-appleton-wi": "/services/commercial-pressure-washing",
+  "/commercial-vent-hood-cleaning-in-green-bay-appleton-wiay-wi": "/services/commercial-pressure-washing",
   "/expert-hood-vent-cleaning-green-bay-hhood-vent-cleaning-green-bay": "/services/commercial-hood-cleaning",
   "/blog/permanent-lighting-green-bay-wi": "/blog",
   "/blog/how-to-restore-and-maintain-your-pavers-a-complete-guide-to-paver-cleaning-and-sealing-cloned": "/blog/how-to-restore-and-maintain-your-pavers-a-complete-guide-to-paver-cleaning-and-sealing",
@@ -271,6 +276,25 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async headers() {
+    return [
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'valleywindowcare-app.vercel.app',
+          },
+        ],
+        headers: [
+          {
+            key: 'X-Robots-Tag',
+            value: 'noindex, nofollow',
+          },
+        ],
+      },
+    ];
+  },
   async redirects() {
     const staticRedirects = Object.entries(legacyToNestedMap).map(([source, destination]) => ({
       source,
@@ -305,6 +329,24 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        // Category Catch-all redirect
+        source: '/category/:path*',
+        destination: '/services',
+        permanent: true,
+      },
+      {
+        // Direct alias for hood vent cleaning across cities
+        source: '/service-areas/:city/hood-vent-cleaning',
+        destination: '/services/commercial-hood-cleaning',
+        permanent: true,
+      },
+      {
+        // Direct alias for holiday lighting across cities
+        source: '/service-areas/:city/holiday-lighting',
+        destination: '/services/christmas-lighting',
+        permanent: true,
+      },
+      {
         // Matches /appleton-roof-cleaning -> /services/roof-cleaning
         source: `/:city-:service${validServicesRegex}`,
         destination: '/services/:service',
@@ -317,17 +359,20 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
-        source: `/service-areas/green-bay/:service(house-washing|gutter-cleaning|concrete-cleaning|window-cleaning|christmas-lighting|residential-permanent-led-lighting|fence-cleaning|deck-cleaning|oxidation-removal|soft-wash|driveway-cleaning|solar-panel-cleaning|rust-removal|building-washing|dumpster-pad-cleaning|permanent-led-lighting|commercial-roof-cleaning|commercial-pressure-washing|graffiti-removal|hoa-multi-unit-cleaning|storefront-cleaning|premium-drive-thru-cleaning|parking-lot-and-garage-cleaning|chewing-gum-removal|commercial-awning-cleaning|gas-station-cleaning|post-construction-cleanup|paver-patio-restorations|commercial-hood-cleaning|apartment-exterior-cleaning|winter-salt-removal)`,
+        // Green Bay services wildcard redirect (leaving pressure-washing and roof-cleaning untouched)
+        source: '/service-areas/green-bay/:service((?!pressure-washing|roof-cleaning)[^/]+)',
         destination: '/services/:service',
         permanent: true,
       },
       {
-        source: `/service-areas/appleton/:service(roof-cleaning|gutter-cleaning|concrete-cleaning|window-cleaning|christmas-lighting|residential-permanent-led-lighting|fence-cleaning|deck-cleaning|oxidation-removal|soft-wash|driveway-cleaning|solar-panel-cleaning|rust-removal|building-washing|dumpster-pad-cleaning|permanent-led-lighting|commercial-roof-cleaning|commercial-pressure-washing|graffiti-removal|hoa-multi-unit-cleaning|storefront-cleaning|premium-drive-thru-cleaning|parking-lot-and-garage-cleaning|chewing-gum-removal|commercial-awning-cleaning|gas-station-cleaning|post-construction-cleanup|paver-patio-restorations|commercial-hood-cleaning|apartment-exterior-cleaning|winter-salt-removal)`,
+        // Appleton services wildcard redirect (leaving pressure-washing untouched)
+        source: '/service-areas/appleton/:service((?!pressure-washing)[^/]+)',
         destination: '/services/:service',
         permanent: true,
       },
       {
-        source: `/service-areas/:city(algoma|de-pere|door-county|kewaunee|kimberly|little-chute|manitowoc|neenah|oshkosh|shawano|two-rivers|wrightstown|howard|suamico|ashwaubenon|allouez|bellevue|hobart|ledgeview|menasha|kaukauna|greenville|combined-locks|sherwood|sturgeon-bay|fish-creek|egg-harbor|sister-bay)/:service${validServicesRegex}`,
+        // Wildcard mapping for all other cities to /services/:service
+        source: '/service-areas/:city((?!green-bay|appleton)[^/]+)/:service',
         destination: '/services/:service',
         permanent: true,
       },
@@ -413,7 +458,7 @@ const nextConfig: NextConfig = {
             value: 'valleywindowcare.com',
           },
         ],
-        destination: 'https://valleyexteriorpros.com/service-areas/green-bay',
+        destination: 'https://valleyexteriorpros.com/services/concrete-cleaning',
         permanent: true,
       },
       {
@@ -424,7 +469,7 @@ const nextConfig: NextConfig = {
             value: 'www.valleywindowcare.com',
           },
         ],
-        destination: 'https://valleyexteriorpros.com/service-areas/green-bay',
+        destination: 'https://valleyexteriorpros.com/services/concrete-cleaning',
         permanent: true,
       },
 

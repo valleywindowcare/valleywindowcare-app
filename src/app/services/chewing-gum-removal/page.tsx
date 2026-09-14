@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -7,9 +8,27 @@ import { ShieldCheck, CheckCircle, ArrowRight, MapPin } from 'lucide-react';
 import ReviewSlider from '@/components/ReviewSlider';
 import FAQSchema from '@/components/FAQSchema';
 
-export const metadata = {
-    title: "Commercial Chewing Gum Removal in Green Bay & Appleton",
+export const metadata: Metadata = {
+    title: {
+        absolute: "Commercial Chewing Gum Removal in Green Bay & Appleton",
+    },
     description: "Eliminate chewing gum stains from commercial walkways, entrances, and drive-thrus. Valley Property Services provides hot-water steam gum removal across Northeast Wisconsin.",
+    alternates: {
+        canonical: "https://valleyexteriorpros.com/services/chewing-gum-removal",
+    },
+    openGraph: {
+        title: "Commercial Chewing Gum Removal in Green Bay & Appleton",
+        description: "Eliminate chewing gum stains from commercial walkways, entrances, and drive-thrus. Valley Property Services provides hot-water steam gum removal across Northeast Wisconsin.",
+        url: "https://valleyexteriorpros.com/services/chewing-gum-removal",
+        siteName: "Valley Property Services",
+        locale: "en_US",
+        type: "website",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Commercial Chewing Gum Removal in Green Bay & Appleton",
+        description: "Eliminate chewing gum stains from commercial walkways, entrances, and drive-thrus. Valley Property Services provides hot-water steam gum removal across Northeast Wisconsin.",
+    },
 };
 
 const faqs = [

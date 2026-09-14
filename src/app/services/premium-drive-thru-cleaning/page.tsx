@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -8,9 +9,27 @@ import { ShieldCheck, CheckCircle, ArrowRight, MapPin, Phone, Mail } from 'lucid
 import ReviewSlider from '@/components/ReviewSlider';
 import FAQSchema from '@/components/FAQSchema';
 
-export const metadata = {
-    title: "Premium Drive-Thru Cleaning | Green Bay & Appleton",
+export const metadata: Metadata = {
+    title: {
+        absolute: "Premium Drive-Thru Cleaning | Green Bay & Appleton",
+    },
     description: "Northeast Wisconsin's leading commercial drive-thru pressure washing company. Hot-water grease removal, chewing gum extraction, and facade cleaning.",
+    alternates: {
+        canonical: "https://valleyexteriorpros.com/services/premium-drive-thru-cleaning",
+    },
+    openGraph: {
+        title: "Premium Drive-Thru Cleaning | Green Bay & Appleton",
+        description: "Northeast Wisconsin's leading commercial drive-thru pressure washing company. Hot-water grease removal, chewing gum extraction, and facade cleaning.",
+        url: "https://valleyexteriorpros.com/services/premium-drive-thru-cleaning",
+        siteName: "Valley Property Services",
+        locale: "en_US",
+        type: "website",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Premium Drive-Thru Cleaning | Green Bay & Appleton",
+        description: "Northeast Wisconsin's leading commercial drive-thru pressure washing company. Hot-water grease removal, chewing gum extraction, and facade cleaning.",
+    },
 };
 
 const faqs = [

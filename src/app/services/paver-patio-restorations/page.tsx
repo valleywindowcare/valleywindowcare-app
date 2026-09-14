@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -7,9 +8,27 @@ import { ShieldCheck, CheckCircle, ArrowRight, MapPin } from 'lucide-react';
 import ReviewSlider from '@/components/ReviewSlider';
 import FAQSchema from '@/components/FAQSchema';
 
-export const metadata = {
-    title: "Paver Patio Restoration, Cleaning & Sealing | Green Bay & Appleton",
+export const metadata: Metadata = {
+    title: {
+        absolute: "Paver Patio Restoration | Green Bay & Appleton",
+    },
     description: "Expert paver cleaning, polymeric sand stabilization, and protective sealing across Northeast WI. Restore color and stop weeds. Free estimates!",
+    alternates: {
+        canonical: "https://valleyexteriorpros.com/services/paver-patio-restorations",
+    },
+    openGraph: {
+        title: "Paver Patio Restoration | Green Bay & Appleton",
+        description: "Expert paver cleaning, polymeric sand stabilization, and protective sealing across Northeast WI. Restore color and stop weeds. Free estimates!",
+        url: "https://valleyexteriorpros.com/services/paver-patio-restorations",
+        siteName: "Valley Property Services",
+        locale: "en_US",
+        type: "website",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Paver Patio Restoration | Green Bay & Appleton",
+        description: "Expert paver cleaning, polymeric sand stabilization, and protective sealing across Northeast WI. Restore color and stop weeds. Free estimates!",
+    },
 };
 
 const faqs = [

@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -8,9 +9,27 @@ import { ShieldCheck, CheckCircle, ArrowRight, MapPin, Phone, Mail } from 'lucid
 import ReviewSlider from '@/components/ReviewSlider';
 import FAQSchema from '@/components/FAQSchema';
 
-export const metadata = {
-    title: "Commercial Roof Cleaning | Green Bay & Appleton",
+export const metadata: Metadata = {
+    title: {
+        absolute: "Commercial Roof Cleaning | Green Bay & Appleton",
+    },
     description: "Northeast Wisconsin's leading commercial roof cleaning company. ARMA-approved low-pressure soft washing for metal, TPO, EPDM, and asphalt shingle roofs.",
+    alternates: {
+        canonical: "https://valleyexteriorpros.com/services/commercial-roof-cleaning",
+    },
+    openGraph: {
+        title: "Commercial Roof Cleaning | Green Bay & Appleton",
+        description: "Northeast Wisconsin's leading commercial roof cleaning company. ARMA-approved low-pressure soft washing for metal, TPO, EPDM, and asphalt shingle roofs.",
+        url: "https://valleyexteriorpros.com/services/commercial-roof-cleaning",
+        siteName: "Valley Property Services",
+        locale: "en_US",
+        type: "website",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Commercial Roof Cleaning | Green Bay & Appleton",
+        description: "Northeast Wisconsin's leading commercial roof cleaning company. ARMA-approved low-pressure soft washing for metal, TPO, EPDM, and asphalt shingle roofs.",
+    },
 };
 
 const faqs = [

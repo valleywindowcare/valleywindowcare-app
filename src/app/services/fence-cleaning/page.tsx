@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -7,9 +8,27 @@ import { ShieldCheck, CheckCircle, ArrowRight, MapPin } from 'lucide-react';
 import ReviewSlider from '@/components/ReviewSlider';
 import FAQSchema from '@/components/FAQSchema';
 
-export const metadata = {
-    title: "Professional Fence Cleaning & Restoration in Green Bay & Appleton",
+export const metadata: Metadata = {
+    title: {
+        absolute: "Fence Cleaning & Restoration | Green Bay & Appleton",
+    },
     description: "Expert wood and vinyl fence pressure washing and soft washing services. Valley Property Services restores properties across Northeast Wisconsin.",
+    alternates: {
+        canonical: "https://valleyexteriorpros.com/services/fence-cleaning",
+    },
+    openGraph: {
+        title: "Fence Cleaning & Restoration | Green Bay & Appleton",
+        description: "Expert wood and vinyl fence pressure washing and soft washing services. Valley Property Services restores properties across Northeast Wisconsin.",
+        url: "https://valleyexteriorpros.com/services/fence-cleaning",
+        siteName: "Valley Property Services",
+        locale: "en_US",
+        type: "website",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Fence Cleaning & Restoration | Green Bay & Appleton",
+        description: "Expert wood and vinyl fence pressure washing and soft washing services. Valley Property Services restores properties across Northeast Wisconsin.",
+    },
 };
 
 const faqs = [

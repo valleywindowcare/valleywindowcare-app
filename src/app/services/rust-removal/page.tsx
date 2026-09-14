@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -7,9 +8,27 @@ import { ShieldCheck, CheckCircle, ArrowRight, MapPin } from 'lucide-react';
 import ReviewSlider from '@/components/ReviewSlider';
 import FAQSchema from '@/components/FAQSchema';
 
-export const metadata = {
-    title: "Professional Rust Removal Services in Green Bay & Appleton",
+export const metadata: Metadata = {
+    title: {
+        absolute: "Professional Rust Removal Services in Green Bay & Appleton",
+    },
     description: "Safely eliminate rust, fertilizer stains, and battery acid burns from concrete, siding, and brick. Valley Property Services provides expert stain neutralization in Northeast Wisconsin.",
+    alternates: {
+        canonical: "https://valleyexteriorpros.com/services/rust-removal",
+    },
+    openGraph: {
+        title: "Professional Rust Removal Services in Green Bay & Appleton",
+        description: "Safely eliminate rust, fertilizer stains, and battery acid burns from concrete, siding, and brick. Valley Property Services provides expert stain neutralization in Northeast Wisconsin.",
+        url: "https://valleyexteriorpros.com/services/rust-removal",
+        siteName: "Valley Property Services",
+        locale: "en_US",
+        type: "website",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Professional Rust Removal Services in Green Bay & Appleton",
+        description: "Safely eliminate rust, fertilizer stains, and battery acid burns from concrete, siding, and brick. Valley Property Services provides expert stain neutralization in Northeast Wisconsin.",
+    },
 };
 
 const faqs = [

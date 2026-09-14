@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -10,9 +11,27 @@ import FAQSchema from '@/components/FAQSchema';
 import PricingMatrix from '@/components/PricingMatrix';
 import VanillaMapClient from '@/components/VanillaMapClient';
 
-export const metadata = {
-    title: "Permanent LED Lighting Installers | Green Bay & Appleton",
+export const metadata: Metadata = {
+    title: {
+        absolute: "Permanent LED Lighting Installers | Green Bay & Appleton",
+    },
     description: "Northeast Wisconsin's certified Omni permanent holiday and architectural lighting installers. Low-profile smart track systems for homes and businesses.",
+    alternates: {
+        canonical: "https://valleyexteriorpros.com/services/permanent-led-lighting",
+    },
+    openGraph: {
+        title: "Permanent LED Lighting Installers | Green Bay & Appleton",
+        description: "Northeast Wisconsin's certified Omni permanent holiday and architectural lighting installers. Low-profile smart track systems for homes and businesses.",
+        url: "https://valleyexteriorpros.com/services/permanent-led-lighting",
+        siteName: "Valley Property Services",
+        locale: "en_US",
+        type: "website",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Permanent LED Lighting Installers | Green Bay & Appleton",
+        description: "Northeast Wisconsin's certified Omni permanent holiday and architectural lighting installers. Low-profile smart track systems for homes and businesses.",
+    },
 };
 
 const faqs = [

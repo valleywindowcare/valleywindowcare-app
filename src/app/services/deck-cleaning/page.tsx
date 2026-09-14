@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -7,9 +8,27 @@ import { ShieldCheck, CheckCircle, ArrowRight, MapPin } from 'lucide-react';
 import ReviewSlider from '@/components/ReviewSlider';
 import FAQSchema from '@/components/FAQSchema';
 
-export const metadata = {
-    title: "Professional Deck Cleaning & Restoration in Green Bay & Appleton",
+export const metadata: Metadata = {
+    title: {
+        absolute: "Deck Cleaning & Restoration | Green Bay & Appleton",
+    },
     description: "Expert wood and composite deck cleaning and soft washing services. Valley Property Services restores cedar, pressure-treated, and Trex decks across Northeast Wisconsin.",
+    alternates: {
+        canonical: "https://valleyexteriorpros.com/services/deck-cleaning",
+    },
+    openGraph: {
+        title: "Deck Cleaning & Restoration | Green Bay & Appleton",
+        description: "Expert wood and composite deck cleaning and soft washing services. Valley Property Services restores cedar, pressure-treated, and Trex decks across Northeast Wisconsin.",
+        url: "https://valleyexteriorpros.com/services/deck-cleaning",
+        siteName: "Valley Property Services",
+        locale: "en_US",
+        type: "website",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Deck Cleaning & Restoration | Green Bay & Appleton",
+        description: "Expert wood and composite deck cleaning and soft washing services. Valley Property Services restores cedar, pressure-treated, and Trex decks across Northeast Wisconsin.",
+    },
 };
 
 const faqs = [

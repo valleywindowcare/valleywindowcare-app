@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -8,9 +9,27 @@ import { ShieldCheck, CheckCircle, ArrowRight, MapPin, Phone, Mail } from 'lucid
 import ReviewSlider from '@/components/ReviewSlider';
 import FAQSchema from '@/components/FAQSchema';
 
-export const metadata = {
-    title: "Commercial Graffiti Removal | Green Bay & Appleton",
+export const metadata: Metadata = {
+    title: {
+        absolute: "Commercial Graffiti Removal | Green Bay & Appleton",
+    },
     description: "Northeast Wisconsin's leading commercial graffiti removal company. Fast, safe chemical paint extraction from brick, concrete, stone, and metal.",
+    alternates: {
+        canonical: "https://valleyexteriorpros.com/services/graffiti-removal",
+    },
+    openGraph: {
+        title: "Commercial Graffiti Removal | Green Bay & Appleton",
+        description: "Northeast Wisconsin's leading commercial graffiti removal company. Fast, safe chemical paint extraction from brick, concrete, stone, and metal.",
+        url: "https://valleyexteriorpros.com/services/graffiti-removal",
+        siteName: "Valley Property Services",
+        locale: "en_US",
+        type: "website",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Commercial Graffiti Removal | Green Bay & Appleton",
+        description: "Northeast Wisconsin's leading commercial graffiti removal company. Fast, safe chemical paint extraction from brick, concrete, stone, and metal.",
+    },
 };
 
 const faqs = [

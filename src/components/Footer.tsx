@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Phone, Mail, MapPin, Facebook, Instagram, Youtube } from "lucide-react";
+import { Phone, Mail, MapPin, Facebook, Instagram } from "lucide-react";
 import FooterGalleryImage from "./FooterGalleryImage";
 
 export default function Footer() {
@@ -23,14 +23,11 @@ export default function Footer() {
                             Discover why Valley Property Services is the trusted name in Wisconsin for professional pressure washing, soft-washing, and paver sealing services.
                         </p>
                         <div className="flex items-center gap-4">
-                            <a href="https://www.facebook.com/valleywindowcare" target="_blank" rel="noopener noreferrer" aria-label="Visit Valley Property Services on Facebook" className="w-10 h-10 rounded-full bg-navy text-white flex items-center justify-center hover:bg-gold transition-colors hover:scale-110 active:scale-95 duration-200">
+                            <a href="https://www.facebook.com/Valleypropertyservice" target="_blank" rel="noopener noreferrer" aria-label="Visit Valley Property Services on Facebook" className="w-10 h-10 rounded-full bg-navy text-white flex items-center justify-center hover:bg-gold transition-colors hover:scale-110 active:scale-95 duration-200">
                                 <Facebook size={18} />
                             </a>
-                            <a href="https://www.instagram.com/valleywindowcare" target="_blank" rel="noopener noreferrer" aria-label="Visit Valley Property Services on Instagram" className="w-10 h-10 rounded-full bg-navy text-white flex items-center justify-center hover:bg-gold transition-colors hover:scale-110 active:scale-95 duration-200">
+                            <a href="https://www.instagram.com/valleypropertyservice" target="_blank" rel="noopener noreferrer" aria-label="Visit Valley Property Services on Instagram" className="w-10 h-10 rounded-full bg-navy text-white flex items-center justify-center hover:bg-gold transition-colors hover:scale-110 active:scale-95 duration-200">
                                 <Instagram size={18} />
-                            </a>
-                            <a href="https://www.youtube.com/@valleypropertywash" target="_blank" rel="noopener noreferrer" aria-label="Visit Valley Property Services on YouTube" className="w-10 h-10 rounded-full bg-navy text-white flex items-center justify-center hover:bg-gold transition-colors hover:scale-110 active:scale-95 duration-200">
-                                <Youtube size={18} />
                             </a>
                         </div>
                     </div>

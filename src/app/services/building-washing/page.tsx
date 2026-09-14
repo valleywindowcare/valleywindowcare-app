@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -8,9 +9,27 @@ import { ShieldCheck, CheckCircle, ArrowRight, MapPin, Phone, Mail } from 'lucid
 import ReviewSlider from '@/components/ReviewSlider';
 import FAQSchema from '@/components/FAQSchema';
 
-export const metadata = {
-    title: "Commercial Building Washing | Green Bay & Appleton",
+export const metadata: Metadata = {
+    title: {
+        absolute: "Commercial Building Washing | Green Bay & Appleton",
+    },
     description: "Northeast Wisconsin's leading commercial building washing company. Safe low-pressure soft washing for office buildings, retail centers, and industrial facilities.",
+    alternates: {
+        canonical: "https://valleyexteriorpros.com/services/building-washing",
+    },
+    openGraph: {
+        title: "Commercial Building Washing | Green Bay & Appleton",
+        description: "Northeast Wisconsin's leading commercial building washing company. Safe low-pressure soft washing for office buildings, retail centers, and industrial facilities.",
+        url: "https://valleyexteriorpros.com/services/building-washing",
+        siteName: "Valley Property Services",
+        locale: "en_US",
+        type: "website",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Commercial Building Washing | Green Bay & Appleton",
+        description: "Northeast Wisconsin's leading commercial building washing company. Safe low-pressure soft washing for office buildings, retail centers, and industrial facilities.",
+    },
 };
 
 const faqs = [

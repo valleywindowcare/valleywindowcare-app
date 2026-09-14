@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -10,9 +11,27 @@ import FAQSchema from '@/components/FAQSchema';
 import PricingMatrix from '@/components/PricingMatrix';
 import VanillaMapClient from '@/components/VanillaMapClient';
 
-export const metadata = {
-    title: "Professional Christmas Light Installation | Green Bay & Fox Valley",
+export const metadata: Metadata = {
+    title: {
+        absolute: "Christmas Light Installation | Green Bay & Fox Valley",
+    },
     description: "Hang your holiday lights safely with Northeast Wisconsin's premier Christmas light installers. Custom-cut commercial-grade LED design, maintenance, removal, and storage.",
+    alternates: {
+        canonical: "https://valleyexteriorpros.com/services/christmas-lighting",
+    },
+    openGraph: {
+        title: "Christmas Light Installation | Green Bay & Fox Valley",
+        description: "Hang your holiday lights safely with Northeast Wisconsin's premier Christmas light installers. Custom-cut commercial-grade LED design, maintenance, removal, and storage.",
+        url: "https://valleyexteriorpros.com/services/christmas-lighting",
+        siteName: "Valley Property Services",
+        locale: "en_US",
+        type: "website",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Christmas Light Installation | Green Bay & Fox Valley",
+        description: "Hang your holiday lights safely with Northeast Wisconsin's premier Christmas light installers. Custom-cut commercial-grade LED design, maintenance, removal, and storage.",
+    },
 };
 
 const faqs = [

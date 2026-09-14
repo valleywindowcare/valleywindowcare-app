@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -7,9 +8,27 @@ import { ShieldCheck, CheckCircle, ArrowRight, MapPin } from 'lucide-react';
 import ReviewSlider from '@/components/ReviewSlider';
 import FAQSchema from '@/components/FAQSchema';
 
-export const metadata = {
-    title: "Siding Soft Washing Guide | Green Bay & Appleton",
+export const metadata: Metadata = {
+    title: {
+        absolute: "Siding Soft Washing Guide | Green Bay & Appleton",
+    },
     description: "The definitive guide to low-pressure soft washing. Learn how sodium hypochlorite chemistry, surfactant science, and ARMA-compliant methods restore siding.",
+    alternates: {
+        canonical: "https://valleyexteriorpros.com/services/soft-wash",
+    },
+    openGraph: {
+        title: "Siding Soft Washing Guide | Green Bay & Appleton",
+        description: "The definitive guide to low-pressure soft washing. Learn how sodium hypochlorite chemistry, surfactant science, and ARMA-compliant methods restore siding.",
+        url: "https://valleyexteriorpros.com/services/soft-wash",
+        siteName: "Valley Property Services",
+        locale: "en_US",
+        type: "website",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Siding Soft Washing Guide | Green Bay & Appleton",
+        description: "The definitive guide to low-pressure soft washing. Learn how sodium hypochlorite chemistry, surfactant science, and ARMA-compliant methods restore siding.",
+    },
 };
 
 const faqs = [

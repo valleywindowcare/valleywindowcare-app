@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -8,9 +9,27 @@ import { ShieldCheck, CheckCircle, ArrowRight, MapPin, Phone, Mail } from 'lucid
 import ReviewSlider from '@/components/ReviewSlider';
 import FAQSchema from '@/components/FAQSchema';
 
-export const metadata = {
-    title: "Commercial Dumpster Pad Cleaning | Green Bay & Appleton",
+export const metadata: Metadata = {
+    title: {
+        absolute: "Commercial Dumpster Pad Cleaning | Green Bay & Appleton",
+    },
     description: "Northeast Wisconsin's leading commercial dumpster pad pressure washing company. Hot-water concrete cleaning, degreasing, and sanitization.",
+    alternates: {
+        canonical: "https://valleyexteriorpros.com/services/dumpster-pad-cleaning",
+    },
+    openGraph: {
+        title: "Commercial Dumpster Pad Cleaning | Green Bay & Appleton",
+        description: "Northeast Wisconsin's leading commercial dumpster pad pressure washing company. Hot-water concrete cleaning, degreasing, and sanitization.",
+        url: "https://valleyexteriorpros.com/services/dumpster-pad-cleaning",
+        siteName: "Valley Property Services",
+        locale: "en_US",
+        type: "website",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Commercial Dumpster Pad Cleaning | Green Bay & Appleton",
+        description: "Northeast Wisconsin's leading commercial dumpster pad pressure washing company. Hot-water concrete cleaning, degreasing, and sanitization.",
+    },
 };
 
 const faqs = [

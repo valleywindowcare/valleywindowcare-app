@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -8,9 +9,27 @@ import { ShieldCheck, CheckCircle, ArrowRight, MapPin, Phone, Mail } from 'lucid
 import ReviewSlider from '@/components/ReviewSlider';
 import FAQSchema from '@/components/FAQSchema';
 
-export const metadata = {
-    title: "Winter Salt Removal Services | Green Bay & Appleton",
+export const metadata: Metadata = {
+    title: {
+        absolute: "Winter Salt Removal Services | Green Bay & Appleton",
+    },
     description: "Northeast Wisconsin's leading winter salt removal and concrete neutralization company. Safe chemical extraction of corrosive road salt from concrete, brick, and siding.",
+    alternates: {
+        canonical: "https://valleyexteriorpros.com/services/winter-salt-removal",
+    },
+    openGraph: {
+        title: "Winter Salt Removal Services | Green Bay & Appleton",
+        description: "Northeast Wisconsin's leading winter salt removal and concrete neutralization company. Safe chemical extraction of corrosive road salt from concrete, brick, and siding.",
+        url: "https://valleyexteriorpros.com/services/winter-salt-removal",
+        siteName: "Valley Property Services",
+        locale: "en_US",
+        type: "website",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Winter Salt Removal Services | Green Bay & Appleton",
+        description: "Northeast Wisconsin's leading winter salt removal and concrete neutralization company. Safe chemical extraction of corrosive road salt from concrete, brick, and siding.",
+    },
 };
 
 const faqs = [

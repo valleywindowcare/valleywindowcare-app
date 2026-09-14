@@ -8,15 +8,40 @@ import SEOAuthorityEngine from "@/components/SEOAuthorityEngine";
 import VanillaMapClient from "@/components/VanillaMapClient";
 import PricingMatrix from "@/components/PricingMatrix";
 import FAQSchema from "@/components/FAQSchema";
+import { Metadata } from "next";
 import dynamic from "next/dynamic";
 
 const ReviewSlider = dynamic(() => import("@/components/ReviewSlider"));
 
-export const metadata = {
-    title: "Power & Pressure Washing Green Bay, WI | Valley Property Services",
+export const metadata: Metadata = {
+    title: {
+        absolute: "Power & Pressure Washing | Green Bay & Fox Valley WI",
+    },
     description: "Northeast Wisconsin's 5-star power & pressure washing company. Residential house washing, concrete flatwork, and commercial soft wash experts across Green Bay & Fox Valley.",
     alternates: {
         canonical: "https://valleyexteriorpros.com/services/pressure-washing",
+    },
+    openGraph: {
+        title: "Power & Pressure Washing | Green Bay & Fox Valley WI",
+        description: "Northeast Wisconsin's 5-star power & pressure washing company. Residential house washing, concrete flatwork, and commercial soft wash experts across Green Bay & Fox Valley.",
+        url: "https://valleyexteriorpros.com/services/pressure-washing",
+        siteName: "Valley Property Services",
+        locale: "en_US",
+        type: "website",
+        images: [
+            {
+                url: "https://valleyexteriorpros.com/images/portfolio/pressure-washing.webp",
+                width: 1200,
+                height: 630,
+                alt: "Power and Pressure Washing Services in Green Bay",
+            }
+        ]
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Power & Pressure Washing | Green Bay & Fox Valley WI",
+        description: "Northeast Wisconsin's 5-star power & pressure washing company. Residential house washing, concrete flatwork, and commercial soft wash experts across Green Bay & Fox Valley.",
+        images: ["https://valleyexteriorpros.com/images/portfolio/pressure-washing.webp"],
     },
 };
 

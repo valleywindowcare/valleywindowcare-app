@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -8,9 +9,27 @@ import { ShieldCheck, CheckCircle, ArrowRight, MapPin, Phone, Mail } from 'lucid
 import ReviewSlider from '@/components/ReviewSlider';
 import FAQSchema from '@/components/FAQSchema';
 
-export const metadata = {
-    title: "Storefront Cleaning & Pressure Washing | Green Bay & Appleton",
+export const metadata: Metadata = {
+    title: {
+        absolute: "Storefront Cleaning | Green Bay & Appleton WI",
+    },
     description: "Northeast Wisconsin's leading commercial storefront washing company. Hot-water concrete pressure washing, chewing gum removal, and window cleaning.",
+    alternates: {
+        canonical: "https://valleyexteriorpros.com/services/storefront-cleaning",
+    },
+    openGraph: {
+        title: "Storefront Cleaning | Green Bay & Appleton WI",
+        description: "Northeast Wisconsin's leading commercial storefront washing company. Hot-water concrete pressure washing, chewing gum removal, and window cleaning.",
+        url: "https://valleyexteriorpros.com/services/storefront-cleaning",
+        siteName: "Valley Property Services",
+        locale: "en_US",
+        type: "website",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Storefront Cleaning | Green Bay & Appleton WI",
+        description: "Northeast Wisconsin's leading commercial storefront washing company. Hot-water concrete pressure washing, chewing gum removal, and window cleaning.",
+    },
 };
 
 const faqs = [

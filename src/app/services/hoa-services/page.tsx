@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -7,9 +8,27 @@ import { ShieldCheck, CheckCircle, ArrowRight, MapPin } from 'lucide-react';
 import ReviewSlider from '@/components/ReviewSlider';
 import FAQSchema from '@/components/FAQSchema';
 
-export const metadata = {
-    title: "HOA & Multi-Unit Exterior Cleaning Services in Green Bay & Appleton",
+export const metadata: Metadata = {
+    title: {
+        absolute: "HOA & Multi-Unit Cleaning | Green Bay & Appleton",
+    },
     description: "Low-pressure soft washing and exterior property maintenance for condominium complexes, townhomes, and HOA residential communities in Northeast Wisconsin.",
+    alternates: {
+        canonical: "https://valleyexteriorpros.com/services/hoa-services",
+    },
+    openGraph: {
+        title: "HOA & Multi-Unit Cleaning | Green Bay & Appleton",
+        description: "Low-pressure soft washing and exterior property maintenance for condominium complexes, townhomes, and HOA residential communities in Northeast Wisconsin.",
+        url: "https://valleyexteriorpros.com/services/hoa-services",
+        siteName: "Valley Property Services",
+        locale: "en_US",
+        type: "website",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "HOA & Multi-Unit Cleaning | Green Bay & Appleton",
+        description: "Low-pressure soft washing and exterior property maintenance for condominium complexes, townhomes, and HOA residential communities in Northeast Wisconsin.",
+    },
 };
 
 const faqs = [

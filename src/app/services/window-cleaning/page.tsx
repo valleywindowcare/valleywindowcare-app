@@ -7,10 +7,38 @@ import { ShieldCheck, CheckCircle, ArrowRight, MapPin } from 'lucide-react';
 import ReviewSlider from '@/components/ReviewSlider';
 import PricingMatrix from '@/components/PricingMatrix';
 import FAQSchema from '@/components/FAQSchema';
+import { Metadata } from 'next';
 
-export const metadata = {
-    title: "Window Cleaning Services in Northeast Wisconsin",
+export const metadata: Metadata = {
+    title: {
+        absolute: "Window Cleaning | Green Bay, De Pere & Appleton WI",
+    },
     description: "Professional window cleaning services. Valley Property Services delivers pure-water glass maintenance solutions across Northeast Wisconsin.",
+    alternates: {
+        canonical: "https://valleyexteriorpros.com/services/window-cleaning",
+    },
+    openGraph: {
+        title: "Window Cleaning | Green Bay, De Pere & Appleton WI",
+        description: "Professional window cleaning services. Valley Property Services delivers pure-water glass maintenance solutions across Northeast Wisconsin.",
+        url: "https://valleyexteriorpros.com/services/window-cleaning",
+        siteName: "Valley Property Services",
+        locale: "en_US",
+        type: "website",
+        images: [
+            {
+                url: "https://valleyexteriorpros.com/images/portfolio/window-cleaning-before-after.JPG.webp",
+                width: 1200,
+                height: 630,
+                alt: "Window Cleaning Services in Green Bay",
+            }
+        ]
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Window Cleaning | Green Bay, De Pere & Appleton WI",
+        description: "Professional window cleaning services. Valley Property Services delivers pure-water glass maintenance solutions across Northeast Wisconsin.",
+        images: ["https://valleyexteriorpros.com/images/portfolio/window-cleaning-before-after.JPG.webp"],
+    },
 };
 
 export default function ServicePage() {

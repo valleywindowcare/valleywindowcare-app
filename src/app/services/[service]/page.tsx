@@ -139,7 +139,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
     const serviceMetaMap: Record<string, { title: string, description: string }> = {
         "pressure-washing": {
-            title: "Pressure Washing Green Bay WI & Appleton | Power Washing",
+            title: "Pressure Washing | Green Bay & Fox Valley WI",
             description: "Premier pressure washing Green Bay WI, power washing Appleton WI, and commercial pressure washing Fox Valley. Restoring driveways and siding safely."
         },
         "house-washing": {
@@ -151,31 +151,31 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
             description: "Specializing in Gloeocapsa magma roof cleaning Green Bay and non pressure roof cleaning Appleton WI. Restore your shingles and remove moss safely."
         },
         "concrete-cleaning": {
-            title: "Concrete Pressure Washing Appleton & Driveway Cleaning Green Bay",
+            title: "Concrete Cleaning & Pressure Washing | Green Bay & Appleton",
             description: "Safe driveway cleaning Green Bay and concrete pressure washing Appleton. Clean winter road salt concrete damage and remove oil stains."
         },
         "driveway-cleaning": {
-            title: "Driveway Cleaning Green Bay & Concrete Washing Appleton",
+            title: "Driveway Cleaning & Concrete Washing | Green Bay & Appleton",
             description: "Safe driveway cleaning Green Bay and concrete pressure washing Appleton. Clean winter road salt concrete damage and remove oil stains."
         },
         "rust-removal": {
-            title: "Rust Stain Removal Pressure Washer Appleton & Green Bay",
+            title: "Rust Stain Removal Pressure Washer | Appleton & Green Bay",
             description: "Elite rust stain removal pressure washer Appleton and Green Bay. Remove irrigation, battery, and metal rust stains safely."
         },
         "dumpster-pad-cleaning": {
-            title: "Dumpster Pad Hot Water Steam Cleaning Green Bay & Appleton",
+            title: "Dumpster Pad Hot Water Steam Cleaning | Green Bay & Appleton",
             description: "Premium dumpster pad hot water steam cleaning Green Bay and Fox Valley. Eliminate grease, odors, and sanitize commercial pads."
         },
         "commercial-hood-cleaning": {
-            title: "Commercial Hood Cleaning De Pere & Green Bay | Restaurant Exhaust",
+            title: "Commercial Hood Cleaning | De Pere & Green Bay WI",
             description: "Certified commercial hood cleaning De Pere / Green Bay. NFPA 96 exhaust system cleaning, steam washing, and grease extraction for commercial kitchens."
         },
         "permanent-led-lighting": {
-            title: "Permanent LED Holiday Lighting Installer Appleton WI & Green Bay",
+            title: "Permanent LED Holiday Lighting | Appleton & Green Bay WI",
             description: "Professional permanent LED holiday lighting installer Appleton WI and Green Bay. Custom color-changing smart track lights for homes and businesses."
         },
         "residential-permanent-led-lighting": {
-            title: "Permanent LED Holiday Lighting Installer Appleton WI & Green Bay",
+            title: "Permanent LED Holiday Lighting | Appleton & Green Bay WI",
             description: "Professional permanent LED holiday lighting installer Appleton WI and Green Bay. Custom color-changing smart track lights for homes and businesses."
         }
     };
@@ -192,8 +192,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     const seoImage = categoryFallbacks[service] || "/images/portfolio/house-washing.webp";
 
     return {
-        title: seoTitle,
+        title: {
+            absolute: seoTitle,
+        },
         description: seoDescription,
+        alternates: {
+            canonical: `https://valleyexteriorpros.com/services/${service}`,
+        },
         openGraph: {
             title: seoTitle,
             description: seoDescription,
@@ -208,6 +213,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
                 }
             ],
             type: 'website',
+        },
+        twitter: {
+            card: 'summary_large_image',
+            title: seoTitle,
+            description: seoDescription,
+            images: [`https://valleyexteriorpros.com${seoImage}`],
         }
     };
 }

@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -7,9 +8,27 @@ import { ShieldCheck, CheckCircle, ArrowRight, MapPin } from 'lucide-react';
 import ReviewSlider from '@/components/ReviewSlider';
 import FAQSchema from '@/components/FAQSchema';
 
-export const metadata = {
-    title: "Gas Station & Convenience Store Cleaning in Green Bay & Appleton",
+export const metadata: Metadata = {
+    title: {
+        absolute: "Gas Station Cleaning | Green Bay & Appleton WI",
+    },
     description: "Deep-cleaning and grease removal for fuel canopies, pump islands, and convenience store concrete. Valley Property Services provides EPA-compliant cleaning in Northeast Wisconsin.",
+    alternates: {
+        canonical: "https://valleyexteriorpros.com/services/gas-station-cleaning",
+    },
+    openGraph: {
+        title: "Gas Station Cleaning | Green Bay & Appleton WI",
+        description: "Deep-cleaning and grease removal for fuel canopies, pump islands, and convenience store concrete. Valley Property Services provides EPA-compliant cleaning in Northeast Wisconsin.",
+        url: "https://valleyexteriorpros.com/services/gas-station-cleaning",
+        siteName: "Valley Property Services",
+        locale: "en_US",
+        type: "website",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Gas Station Cleaning | Green Bay & Appleton WI",
+        description: "Deep-cleaning and grease removal for fuel canopies, pump islands, and convenience store concrete. Valley Property Services provides EPA-compliant cleaning in Northeast Wisconsin.",
+    },
 };
 
 const faqs = [
