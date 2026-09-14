@@ -15,6 +15,18 @@ declare global {
   }
 }
 
+export interface LeadSubmissionPayload {
+    name: string;
+    phone: string;
+    email: string;
+    address: string;
+    squareFootage?: string;
+    zip?: string;
+    projectDetails: string;
+    servicesRequested: string;
+    eventId?: string;
+}
+
 export default function HeroForm({ idPrefix = "" }: { idPrefix?: string }) {
     const router = useRouter();
     const [isSubmitted, setIsSubmitted] = useState(false);
@@ -34,16 +46,25 @@ export default function HeroForm({ idPrefix = "" }: { idPrefix?: string }) {
         const safeName = formData.get("name")?.toString().trim() || "Unknown User";
         const safePhone = formData.get("phone")?.toString().trim() || "Not Provided";
         const safeEmail = formData.get("email")?.toString().trim() || "";
+        const safeAddress = formData.get("address")?.toString().trim() || "";
         const safeSqFt = formData.get("squareFootage")?.toString().trim() || "Not Provided";
         const safeZip = formData.get("zip")?.toString().trim() || "";
         const safeDetails = formData.get("projectDetails")?.toString().trim() || "No details provided.";
         const safeServices = selectedServices || "No specific services selected";
 
-        const payload = {
+        if (!safeAddress) {
+            alert("Property address is required to provide an accurate estimate.");
+            setIsLoading(false);
+            return;
+        }
+
+        const payload: LeadSubmissionPayload = {
             name: safeName,
             phone: safePhone,
             email: safeEmail,
+            address: safeAddress,
             squareFootage: safeSqFt,
+            zip: safeZip,
             projectDetails: safeDetails,
             servicesRequested: safeServices
         };
@@ -55,12 +76,14 @@ export default function HeroForm({ idPrefix = "" }: { idPrefix?: string }) {
             // 1. Fire Web3Forms directly from the browser to bypass Cloudflare Bot Management on Vercel IPs
             const web3Payload = {
                 access_key: "c8727880-065b-4c99-9190-7f4a13170752", 
-                subject: `🚨 NEW WEBSITE LEAD: ${safeName} - Valley Property Services`,
+                subject: `🚨 NEW WEBSITE LEAD: ${safeName} (${safeAddress}) - Valley Property Services`,
                 from_name: "Valley Property Services Lead Form",
                 replyto: safeEmail || "info@valleyexteriorpros.com",
                 name: safeName,
                 email: safeEmail,
                 phone: safePhone,
+                address: safeAddress,
+                property_address: safeAddress,
                 square_footage: safeSqFt,
                 zip_code: safeZip,
                 message: safeDetails,
@@ -120,6 +143,7 @@ export default function HeroForm({ idPrefix = "" }: { idPrefix?: string }) {
                      value: 350.00,
                      email: safeEmail,
                      phone: safePhone,
+                     address: safeAddress,
                      firstName: safeName.split(' ')[0] || safeName,
                      lastName: safeName.includes(' ') ? safeName.substring(safeName.indexOf(' ') + 1) : '',
                      country: 'US',
@@ -188,6 +212,19 @@ export default function HeroForm({ idPrefix = "" }: { idPrefix?: string }) {
                             />
                         </div>
                     </div>
+                    <div>
+                        <label className="sr-only" htmlFor={`${prefix}address`}>Property Address</label>
+                        <input
+                            type="text"
+                            id={`${prefix}address`}
+                            name="address"
+                            required
+                            aria-label="Property Address"
+                            autoComplete="street-address"
+                            placeholder="Street address, City, Zip (e.g., 123 Main St, De Pere, WI)"
+                            className="w-full px-4 py-2 sm:px-5 sm:py-4 rounded-xl sm:rounded-[28px] border border-gray-200 bg-white/90 focus:bg-white/90 focus:outline-none focus:ring-2 focus:ring-navy transition-all text-sm sm:text-base shadow-inner"
+                        />
+                    </div>
                     <div className="!flex !flex-row !gap-2 !w-full mt-2">
                         <div className="flex-1">
                             <label className="sr-only" htmlFor={`${prefix}squareFootage`}>Approximate Square Footage</label>
@@ -215,14 +252,14 @@ export default function HeroForm({ idPrefix = "" }: { idPrefix?: string }) {
                         </div>
                     </div>
                     <div>
-                        <label className="sr-only" htmlFor={`${prefix}projectDetails`}>Project Details & Service Address</label>
+                        <label className="sr-only" htmlFor={`${prefix}projectDetails`}>Project Details</label>
                         <textarea
                             id={`${prefix}projectDetails`}
                             name="projectDetails"
                             rows={4}
                             required
                             aria-label="Project Details"
-                            placeholder="Tell us about your project (e.g., number of windows, roof type) and provide the service address for an accurate quote"
+                            placeholder="Tell us about your project (e.g., number of windows, roof type, special requests)"
                             className="!w-full !mt-2 sm:!mt-4 px-4 py-2 sm:px-5 sm:py-4 rounded-xl sm:rounded-[28px] border border-gray-200 bg-white/90 focus:bg-white/90 focus:outline-none focus:ring-2 focus:ring-navy transition-all text-sm sm:text-base resize-y min-h-[60px] sm:min-h-[100px] shadow-inner"
                         />
                     </div>

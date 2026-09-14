@@ -10,14 +10,20 @@ export async function POST(request: Request) {
             name,
             email,
             phone,
+            address,
             squareFootage,
             projectDetails,
             servicesRequested,
             eventId
         } = body;
-        
 
-
+        // Server-side validation for required property address
+        if (!address || typeof address !== 'string' || !address.trim()) {
+            return NextResponse.json(
+                { success: false, message: "Property address is required to provide an accurate estimate." },
+                { status: 400 }
+            );
+        }
         // --- 2. FIRE META CONVERSIONS API (CAPI) LEAD EVENT ---
         // Ensure tokens are present in the server environment
         const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID;
