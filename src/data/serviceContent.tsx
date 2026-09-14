@@ -874,7 +874,7 @@ export const serviceContentMap: Record<string, { pageH1?: string, description: R
             variableTitle: "Cost Variables",
             variableDetails: "Final price depends on total size, location logistics, and severity of cleaning required."
         },
-        image: "/images/portfolio/commerical-pressure-wash.webp",
+        image: "/images/portfolio/commercial-pressure-washing.webp",
         faqs: [
           {
                     "question": "Why is regular dumpster pad cleaning important for my Wisconsin business?",
@@ -1003,7 +1003,7 @@ export const serviceContentMap: Record<string, { pageH1?: string, description: R
             variableTitle: "Cost Variables",
             variableDetails: "Final price depends on total size, location logistics, and severity of cleaning required."
         },
-        image: "/images/portfolio/commerical-pressure-wash.webp",
+        image: "/images/portfolio/commercial-pressure-washing.webp",
         faqs: [
           {
                     "question": "What are the benefits of professional commercial pressure washing in Northeast Wisconsin?",

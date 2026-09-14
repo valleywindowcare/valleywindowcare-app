@@ -141,6 +141,7 @@ export default function DumpsterPadCleaningPage() {
                 }
                 description="Eradicate bad odors, rodent attraction, and grease leaks. EPA-compliant hot-water pressure washing and chemical sanitization for dumpster pads."
                 bgImage="/images/portfolio/commercial-pressure-washing.webp"
+                bgImageAlt="Commercial dumpster pad pressure washing and degreasing"
                 showTrustBadges={true}
             />
 

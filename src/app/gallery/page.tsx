@@ -12,7 +12,7 @@ const DYNAMIC_PORTFOLIO_MAPPING = [
     { src: "/images/portfolio/awning-cleaning.webp", title: "Commercial Awning Cleaning", category: "Commercial", alt: "Commercial exterior awning cleaning in Northeast Wisconsin" },
     { src: "/images/portfolio/building-wash.webp", title: "Commercial Building Soft Wash", category: "Commercial", alt: "Soft washing a commercial building exterior" },
     { src: "/images/portfolio/building-washing.webp", title: "Large Scale Building Washing", category: "Commercial", alt: "Large scale commercial building pressure washing" },
-    { src: "/images/portfolio/commerical-pressure-wash.webp", title: "Commercial Pressure Washing", category: "Commercial", alt: "High power commercial pressure washing" },
+    { src: "/images/portfolio/commercial-pressure-washing.webp", title: "Commercial Pressure Washing", category: "Commercial", alt: "High power commercial pressure washing" },
     { src: "/images/portfolio/concrete-cleaning.webp", title: "Concrete & Driveway Cleaning", category: "Concrete Cleaning", alt: "Before and after concrete and driveway pressure washing" },
     { src: "/images/portfolio/deck-cleaning.webp", title: "Wood Deck Restoration & Cleaning", category: "House Washing", alt: "Professional wood deck cleaning and restoration" },
     { src: "/images/portfolio/drive-way-cleaning.webp", title: "Driveway Pressure Washing", category: "Concrete Cleaning", alt: "Concrete driveway power washing" },

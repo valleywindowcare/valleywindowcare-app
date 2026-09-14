@@ -146,6 +146,7 @@ export default function CommercialHoodCleaningPage() {
                 }
                 description="NFPA 96-compliant kitchen exhaust steam cleaning. Bare-metal restoration for commercial kitchen hoods, ductwork, and rooftop fans."
                 bgImage="/images/portfolio/commercial-pressure-washing.webp"
+                bgImageAlt="Commercial kitchen hood and exhaust steam cleaning"
                 showTrustBadges={true}
             />
 

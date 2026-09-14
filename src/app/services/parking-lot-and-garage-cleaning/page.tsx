@@ -141,6 +141,7 @@ export default function ParkingLotGarageCleaningPage() {
                 }
                 description="Eradicate vehicle oil leaks, tire marks, and winter road salt buildup. EPA-compliant hot-water concrete pressure washing for parking garages and lots."
                 bgImage="/images/portfolio/commercial-pressure-washing.webp"
+                bgImageAlt="Commercial parking lot and garage concrete pressure washing"
                 showTrustBadges={true}
             />
 
