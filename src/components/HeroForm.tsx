@@ -139,6 +139,7 @@ export default function HeroForm({ idPrefix = "", defaultServices = [] }: { idPr
                  window.dataLayer = window.dataLayer || [];
                  window.dataLayer.push({
                      event: "generate_lead",
+                     event_id: generatedEventId,
                      currency: "USD",
                      value: 350.00,
                      email: safeEmail,
@@ -146,15 +147,15 @@ export default function HeroForm({ idPrefix = "", defaultServices = [] }: { idPr
                      address: safeAddress,
                      firstName: safeName.split(' ')[0] || safeName,
                      lastName: safeName.includes(' ') ? safeName.substring(safeName.indexOf(' ') + 1) : '',
-                     country: 'US',
                      postalCode: safeZip,
+                     country: 'US',
                      services: safeServices
                  });
                  window.dataLayer.push({ event: "ads_conversion_Form_1" });
             }
 
             // Immediately explicitly fire the trackLeadConversion helper
-            trackLeadConversion();
+            trackLeadConversion(generatedEventId);
 
             // Redirect to success page to ensure GTM pageview triggers fire reliably
             router.push('/quote/success');
