@@ -9,6 +9,7 @@ const CANNIBALIZATION_REDIRECTS: Record<string, string> = {
   '/blog/when-to-hire-someone-to-clean-your-gutters': 'https://valleyexteriorpros.com/services/gutter-cleaning',
   '/blog/gutter-cleaning-services-in-green-bay-wisconsin': 'https://valleyexteriorpros.com/services/gutter-cleaning',
   '/services/permanent-holiday-lighting': 'https://valleyexteriorpros.com/services/permanent-led-lighting',
+  '/services/power-washing': 'https://valleyexteriorpros.com/services/pressure-washing',
 };
 
 export function middleware(request: NextRequest) {
