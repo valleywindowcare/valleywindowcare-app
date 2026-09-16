@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight, ChevronRight, Home } from 'lucide-react';
 import SafeHeroImage from '@/components/SafeHeroImage';
-import { blogData } from '@/data/blogData';
+import { blogData, REDIRECTED_BLOG_SLUGS } from '@/data/blogData';
 import BlogFilterGrid from '@/components/BlogFilterGrid';
 
 import ReviewSlider from '@/components/ReviewSlider';
@@ -74,7 +74,7 @@ export default function BlogIndexPage() {
                         </p>
                     </div>
 
-                    <BlogFilterGrid initialPosts={blogData} />
+                    <BlogFilterGrid initialPosts={blogData.filter(post => !REDIRECTED_BLOG_SLUGS.includes(post.slug))} />
                 </div>
             </section>
             

@@ -27,6 +27,25 @@ export type BlogPost = {
     authorBio?: string;
 };
 
+export const REDIRECTED_BLOG_SLUGS = [
+    "window-cleaning",
+    "permanent-lighting-green-bay-wi",
+    "how-to-restore-and-maintain-your-pavers-a-complete-guide-to-paver-cleaning-and-sealing-cloned",
+    "eco-friendly-exterior-cleaning-in-green-bay",
+    "how-to-safely-decorate-your-roof-for-christmas-diy-tips-for-a-festive-038-stylish-holiday-home",
+    "can-i-clean-my-windows-with-tap-water",
+    "hiring-window-cleaners-what-you-should-know",
+    "how-to-measure-your-windows-for-blinds",
+    "exterior-house-cleaning-checklist",
+    // Cannibalization Resolution Slugs
+    "average-cost-for-residential-power-washing",
+    "what-does-pressure-washing-cost-in-wisconsin",
+    "power-washing-green-bay",
+    "green-bay-pressure-washing-services",
+    "when-to-hire-someone-to-clean-your-gutters",
+    "gutter-cleaning-services-in-green-bay-wisconsin"
+];
+
 export const blogData: BlogPost[] = [
   {
     id: "science-of-gloeocapsa-magma-wisconsin-roofs",

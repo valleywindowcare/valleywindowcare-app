@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next';
-import { blogData } from '@/data/blogData';
+import { blogData, REDIRECTED_BLOG_SLUGS } from '@/data/blogData';
 import serviceData from '@/data/serviceAreasContent.json';
 import fs from 'fs';
 import path from 'path';
@@ -256,17 +256,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }));
 
     // 5. Blog Posts (programmatically map active slugs from blogData)
-    const redirectedSlugs = [
-        "window-cleaning",
-        "permanent-lighting-green-bay-wi",
-        "how-to-restore-and-maintain-your-pavers-a-complete-guide-to-paver-cleaning-and-sealing-cloned",
-        "eco-friendly-exterior-cleaning-in-green-bay",
-        "how-to-safely-decorate-your-roof-for-christmas-diy-tips-for-a-festive-038-stylish-holiday-home",
-        "can-i-clean-my-windows-with-tap-water",
-        "hiring-window-cleaners-what-you-should-know",
-        "how-to-measure-your-windows-for-blinds",
-        "exterior-house-cleaning-checklist"
-    ];
+    const redirectedSlugs = REDIRECTED_BLOG_SLUGS;
 
     const blogRoutes: MetadataRoute.Sitemap = blogData
         .filter((post) => post.slug && !redirectedSlugs.includes(post.slug))

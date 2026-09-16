@@ -186,67 +186,66 @@ export const serviceContentMap: Record<string, { pageH1?: string, description: R
         ]
     },
     "gutter-cleaning": {
+        pageH1: "Professional Gutter Cleaning & Downspout Flushing in Green Bay & Fox Valley",
         description: (
             <section className="eeat-service-block">
-                <p className="mb-4">Restoring the gutter cleaning of your property requires scientifically backed methods. We deploy professional-grade equipment to eliminate specific grime targets safely.</p>
+                <p className="mb-4">
+                    Protect your Northeast Wisconsin property from winter ice dams, stubborn pine needle blockages, and destructive basement water intrusion with Valley Property Services. Operating from De Pere, our certified technicians deliver comprehensive hand clearing, pure water downspout flushing, and 100% bagged mess-free debris removal across Green Bay, Appleton, Howard, and the entire Fox Valley.
+                </p>
+                <p className="mb-4">
+                    When heavy seasonal precipitation hits Northeast Wisconsin, overflowing gutters saturate regional clay soils and exert immense hydrostatic pressure against concrete foundation walls. Our systematic cleanout protocol safeguards your roofline, protects your structural foundation, and keeps downspouts flowing freely year-round.
+                </p>
             </section>
         ),
         benefits: [
-            "Long-Lasting Results: Our process gets surfaces cleaner and keeps them protected longer.",
-            "Enhanced Safety: Eliminates slippery molds and toxic bacterial colonies.",
-            "No Damage Guarantee: We use the exact pressure required—often zero—to protect property integrity."
+            "Winter Ice Dam Prevention: Eliminates trapped sludge and standing water that freezes into heavy ice dams, protecting roof sheathing, shingles, and fascia boards.",
+            "Pine Needle & Debris Elimination: Completely extracts dense white pine needles and spring seed tassels that form felt-like mats over downspout drop outlets.",
+            "Foundation & Basement Protection: Prevents torrential roof runoff from cascading against exterior foundation walls, eliminating basement seepage and soil erosion."
         ],
         process: [
-            "1. Site Inspection & Prep: We conduct a thorough exterior evaluation and meticulously protect all landscaping and delicate surfaces.",
-            "2. Deep Cleaning Execution: Utilizing specialized proprietary chemical blends and precise water pressure to obliterate stains at a molecular level.",
-            "3. Final Quality Check: A rigorous post-wash inspection alongside the property owner to guarantee flawless 100% satisfaction."
+            "1. Padded Ladder Standoff Setup: We mount heavy-duty stabilizer arms resting against the roof deck to guarantee your fragile aluminum gutters are never dented or warped.",
+            "2. Meticulous Hand Clearing: Technicians systematically hand-scoop all decomposing sludge, leaves, and shingle grit directly into heavy-duty collection bags at roof height.",
+            "3. Pure Water Downspout Flushing: We verify unimpeded drainage by running pressurized water down every vertical downspout to clear elbow jams and test subterranean exits.",
+            "4. 100% Mess-Free Clean-up: All bagged organic debris is hauled away for off-site composting, leaving your siding, windows, walkways, and flowerbeds spotless."
         ],
         protectionProtocols: [
             {
                 title: "Protective Ladder Arm Standoffs",
-                description: "We utilize protective padded standoff arms that rest the weight of the ladder firmly against the solid roof, ensuring your fragile aluminum gutters are never dented or crushed."
+                description: "We utilize protective padded standoff arms that rest the weight of the ladder firmly against the solid roof deck, ensuring your fragile aluminum gutters are never dented, bent, or scratched."
             },
             {
                 title: "Complete Downspout Flow Verification",
-                description: "We don't just remove the surface leaves. We guarantee structural safety by aggressively flushing every single downpipe to verify clear water flow, preventing invisible subterranean backups."
+                description: "We don't just remove surface leaves. We guarantee structural safety by aggressively flushing every single downpipe with pure water to verify clear flow, clearing elbow obstructions and testing underground exit lines."
             },
             {
-                title: "Strict Perimeter Cleanup",
-                description: "All pulled debris, sludge, and heavy organic matter is carefully bagged and completely removed from your property. We never fling gutter debris down into your landscaping or walkways."
+                title: "Strict Perimeter Mess-Free Cleanup",
+                description: "All pulled debris, sludge, and heavy organic matter is carefully bagged at the roofline and completely removed from your property. We never fling or blow gutter debris down into your landscaping, siding, or walkways."
             }
         ],
         pricing: {
             title: "Transparent Gutter Cleaning Pricing",
-            description: "Gutter cleaning quotes are strictly determined by linear footage, height of gutters, and presence of guards.",
+            description: "Gutter cleaning quotes are strictly determined by linear footage, height of gutters, and roof pitch complexity.",
             rateTitle: "Per Linear Foot Rate",
             ratePrice: "$1.00 - $2.50 / Ln. Ft.",
             rateDetails: "Calculated based on the exact linear length of your gutter system.",
-            minimumPrice: "$350.00",
-            minimumDetails: "Our baseline rate for bringing specialized ladders, standoffs, and debris removal equipment to your home.",
+            minimumPrice: "$150.00",
+            minimumDetails: "Our baseline setup rate for bringing specialized ladders, standoffs, and pure water flushing equipment to your home.",
             variableTitle: "Cost Variables",
-            variableDetails: "Final price depends on total stories, severely packed downspouts, underground drain flushing, or removing existing failed gutter guards."
+            variableDetails: "Final price depends on total stories, steep roof pitch, underground drain unclogging, or removing existing failed gutter guards."
         },
         image: "/images/portfolio/gutter-cleaning.webp",
         faqs: [
             {
-                "question": "How often should Northeast Wisconsin residents clean their gutters?",
-                "answer": "With the heavy seasonal foliage in the Fox Valley, we recommend clearing your gutters at least twice a year—once in late spring to remove oak tassels, seed pods, and pine needles, and once in late autumn after the leaves fall to prepare for winter."
+                "question": "How often should gutters be cleaned in Wisconsin?",
+                "answer": "In Wisconsin, gutters should be professionally cleaned at least twice a year to handle the state's extreme seasonal foliage and climate shifts. The first critical service is late-spring seed drop (late May to June), when heavy oak tassels, helicopter maple seeds, and spring blossom debris choke downspout entry points. The second, and most vital, cleanout is late-autumn oak and pine cleanout (late October to November), once mature deciduous trees shed their leaves and evergreens drop needles. Cleaning gutters thoroughly before the first sustained winter freeze ensures melting snow can drain freely, preventing catastrophic ice dams from forming along your roofline."
             },
             {
-                "question": "Can clogged gutters cause foundation damage or basement leaks?",
-                "answer": "Yes, absolutely. Blocked gutters force rainwater to overflow straight down your siding. This water pools directly around your foundation, potentially causing basement cracks, crawlspace dampness, or winter soil heaving that compromises structural integrity."
+                "question": "Do you flush the downspouts as well?",
+                "answer": "Yes, absolutely. Clearing the horizontal gutter troughs is only half the job. Every Valley Property Services gutter cleaning service includes comprehensive downspout flow verification. Our crew conducts complete ground-level line checks and flushes every vertical downpipe with pressurized pure water to verify unrestricted flow. We clear stubborn debris jammed in tight downspout elbow joints and verify discharge through ground-level splash blocks or underground storm drain exits, ensuring roof water is safely channeled away from your foundation."
             },
             {
-                "question": "What safety equipment and standoffs do you use to protect my property?",
-                "answer": "We prioritize property protection. We exclusively use padded ladder stand-off arms that rest the weight of our ladders directly against your roof deck rather than resting them against your delicate aluminum gutter lips, guaranteeing zero gutter denting."
-            },
-            {
-                "question": "Do you clear and verify the flow of downspouts?",
-                "answer": "Yes! Every standard gutter cleaning includes full vertical flushing of all downspouts. We clear any elbows of packed organic sludge and verify clear water flow all the way to ground level or underground drain exits."
-            },
-            {
-                "question": "Is it necessary to be home during the gutter cleaning service?",
-                "answer": "No, you do not need to be home. As long as we have exterior access to all sides of the property, gates are unlocked, and pets are safely indoors, our technicians can perform the service and send you before-and-after photos."
+                "question": "Do I need to be home for gutter cleaning?",
+                "answer": "No, you do not need to be home during your gutter cleaning service. We provide a seamless outside-only service designed for total homeowner convenience. As long as our technicians have exterior perimeter access, outdoor spigots are operational, and pets remain indoors, we can execute the full cleanout while you are away. Upon completion, we provide complete transparency by emailing you detailed digital before-and-after photos alongside a digital invoice with secure online payment options."
             },
             {
                 "question": "Do you clean the outside of the gutters (gutter brightening)?",

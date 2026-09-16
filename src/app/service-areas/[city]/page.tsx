@@ -247,18 +247,78 @@ export default async function CityHubPage({ params }: PageProps) {
                         </h2>
                     )}
 
-                    {/* DYNAMIC ENTITY CAPSULE INJECTION with Internal Pillar Links */}
-                    <div className="text-lg leading-relaxed mb-8 font-bold text-navy">
-                        {content.citySlug === 'de-pere' ? (
-                            <>
-                                Headquartered right here in De Pere, WI (462 S Good Hope Rd), Valley Property Services delivers elite exterior maintenance. We specialize in streak-free <Link href="/services/window-cleaning" className="text-blue-600 hover:text-gold font-semibold transition-colors underline decoration-blue-200 underline-offset-4">pure-water window cleaning</Link>, safe low-pressure <Link href="/services/soft-wash" className="text-blue-600 hover:text-gold font-semibold transition-colors underline decoration-blue-200 underline-offset-4">house soft washing</Link>, ARMA-compliant <Link href="/services/roof-cleaning" className="text-blue-600 hover:text-gold font-semibold transition-colors underline decoration-blue-200 underline-offset-4">roof soft washing</Link>, and high-flow <Link href="/services/gutter-cleaning" className="text-blue-600 hover:text-gold font-semibold transition-colors underline decoration-blue-200 underline-offset-4">gutter cleaning</Link> for homeowners and commercial properties across De Pere and Brown County.
-                            </>
-                        ) : (
-                            <>
-                                Valley Property Services is a fully insured exterior cleaning company providing professional, low-pressure roof washing, window cleaning, and high-ticket <Link href="/services/paver-patio-restorations" className="text-blue-600 hover:text-gold font-semibold transition-colors underline decoration-blue-200 underline-offset-4">expert paver restoration</Link> in <Link href="/service-areas/appleton" className="text-blue-600 hover:text-gold font-semibold transition-colors">Appleton</Link>, <Link href="/service-areas/green-bay" className="text-blue-600 hover:text-gold font-semibold transition-colors">Green Bay</Link>, and <Link href="/service-areas/door-county" className="text-blue-600 hover:text-gold font-semibold transition-colors">Door County</Link>, WI. We specialize in delicate <Link href="/services/roof-cleaning" className="text-blue-600 hover:text-gold font-semibold transition-colors underline decoration-blue-200 underline-offset-4">soft-wash roof treatments</Link> that destroy organic material without extreme water pressure.
-                            </>
-                        )}
-                    </div>
+                    {/* DYNAMIC CONTEXTUAL SERVICE OVERVIEW BLOCK FOR PRIMARY CITY LANDING PAGES */}
+                    {['green-bay', 'appleton', 'de-pere'].includes(content.citySlug) ? (
+                        <div className="mb-10 p-6 sm:p-8 bg-slate-50/80 border-l-4 border-gold rounded-r-2xl shadow-sm">
+                            <h3 className="text-xl sm:text-2xl font-extrabold text-navy mb-4 flex items-center gap-2">
+                                <span className="w-2.5 h-2.5 bg-gold rounded-full shrink-0"></span>
+                                Professional Exterior Service Overview in {cityName}, WI
+                            </h3>
+                            <div className="space-y-4 text-base sm:text-lg text-slate-700 leading-relaxed font-medium">
+                                {content.citySlug === 'green-bay' && (
+                                    <>
+                                        <p>
+                                            For homeowners and commercial property managers across Green Bay, our specialized <Link href="/services/pressure-washing" className="text-blue-600 hover:text-gold font-bold underline decoration-blue-300 underline-offset-4 transition-colors">exterior pressure washing and soft washing</Link> services eliminate stubborn organic staining, lake-effect humidity grime, and abrasive winter road salt from siding, walkways, and masonry.
+                                        </p>
+                                        <p>
+                                            To protect Green Bay foundations and rooflines from Wisconsin&apos;s intense freeze-thaw cycles, we deliver comprehensive <Link href="/services/gutter-cleaning" className="text-blue-600 hover:text-gold font-bold underline decoration-blue-300 underline-offset-4 transition-colors">gutter cleaning and downspout flushing</Link> that prevents water backup and basement seepage.
+                                        </p>
+                                        <p>
+                                            When black Gloeocapsa Magma algae and damp shade threaten Green Bay roof shingles, our non-pressure <Link href="/services/roof-cleaning" className="text-blue-600 hover:text-gold font-bold underline decoration-blue-300 underline-offset-4 transition-colors">roof moss removal and soft wash roof cleaning</Link> treatments safely eradicate active fungal spores without voiding manufacturer shingle warranties.
+                                        </p>
+                                        <p>
+                                            Property owners in Green Bay seeking year-round curb appeal and customized security illumination can upgrade to our low-profile <Link href="/services/permanent-led-lighting" className="text-blue-600 hover:text-gold font-bold underline decoration-blue-300 underline-offset-4 transition-colors">permanent architectural LED lighting</Link> systems, seamlessly integrated beneath your roofline for invisible daytime aesthetics and brilliant nighttime color.
+                                        </p>
+                                        <p>
+                                            Finally, we provide crystal-clear, streak-free clarity for Green Bay residential windows using advanced multi-stage <Link href="/services/window-cleaning" className="text-blue-600 hover:text-gold font-bold underline decoration-blue-300 underline-offset-4 transition-colors">pure water window cleaning</Link> technology that leaves glass, sills, and screens spotless without chemical residue.
+                                        </p>
+                                    </>
+                                )}
+                                {content.citySlug === 'appleton' && (
+                                    <>
+                                        <p>
+                                            For homeowners and commercial facility managers throughout Appleton, our professional <Link href="/services/pressure-washing" className="text-blue-600 hover:text-gold font-bold underline decoration-blue-300 underline-offset-4 transition-colors">exterior pressure washing and soft washing</Link> treatments safely remove deep-set Fox Valley grime, mildew, and surface contaminants from vinyl siding, concrete flatwork, and brickwork.
+                                        </p>
+                                        <p>
+                                            With Appleton properties surrounded by dense mature tree canopies, regular <Link href="/services/gutter-cleaning" className="text-blue-600 hover:text-gold font-bold underline decoration-blue-300 underline-offset-4 transition-colors">gutter cleaning and downspout flushing</Link> is critical to ensure unimpeded storm drainage and avoid costly roofline moisture damage.
+                                        </p>
+                                        <p>
+                                            To safeguard local roofing materials against biological decay, our Appleton specialists utilize gentle, ARMA-compliant <Link href="/services/roof-cleaning" className="text-blue-600 hover:text-gold font-bold underline decoration-blue-300 underline-offset-4 transition-colors">roof moss removal and soft wash roof cleaning</Link> techniques that neutralize stubborn lichen and algae at the root.
+                                        </p>
+                                        <p>
+                                            We also help Appleton homeowners elevate their exterior aesthetics every evening with app-controlled <Link href="/services/permanent-led-lighting" className="text-blue-600 hover:text-gold font-bold underline decoration-blue-300 underline-offset-4 transition-colors">permanent architectural LED lighting</Link> engineered to withstand harsh Northeast Wisconsin winters while providing versatile holiday lighting.
+                                        </p>
+                                        <p>
+                                            To complete your home&apos;s transformation, our Appleton team delivers sparkling views through deionized <Link href="/services/window-cleaning" className="text-blue-600 hover:text-gold font-bold underline decoration-blue-300 underline-offset-4 transition-colors">pure water window cleaning</Link>, ensuring spot-free glass and thoroughly detailed sills without detergent residue.
+                                        </p>
+                                    </>
+                                )}
+                                {content.citySlug === 'de-pere' && (
+                                    <>
+                                        <p>
+                                            Headquartered right here in De Pere on Good Hope Road, we provide homeowners and local commercial facilities with premier <Link href="/services/pressure-washing" className="text-blue-600 hover:text-gold font-bold underline decoration-blue-300 underline-offset-4 transition-colors">exterior pressure washing and soft washing</Link> to lift river-corridor grime, algae, and road salt from all exterior surfaces.
+                                        </p>
+                                        <p>
+                                            For properties in De Pere managing heavy fall leaves and seasonal precipitation, our thorough <Link href="/services/gutter-cleaning" className="text-blue-600 hover:text-gold font-bold underline decoration-blue-300 underline-offset-4 transition-colors">gutter cleaning and downspout flushing</Link> guarantees free-flowing gutters that safeguard roof eaves and foundations.
+                                        </p>
+                                        <p>
+                                            When heavy shade along the Fox River fosters shingle discoloration, our De Pere crew applies gentle <Link href="/services/roof-cleaning" className="text-blue-600 hover:text-gold font-bold underline decoration-blue-300 underline-offset-4 transition-colors">roof moss removal and soft wash roof cleaning</Link> solutions that restore asphalt shingle health without harmful high pressure.
+                                        </p>
+                                        <p>
+                                            Transform your De Pere residence for every holiday and season with custom-fit <Link href="/services/permanent-led-lighting" className="text-blue-600 hover:text-gold font-bold underline decoration-blue-300 underline-offset-4 transition-colors">permanent architectural LED lighting</Link> built for seamless, invisible daylight integration and vibrant nighttime brilliance.
+                                        </p>
+                                        <p>
+                                            Our De Pere exterior specialists finish every project with streak-free <Link href="/services/window-cleaning" className="text-blue-600 hover:text-gold font-bold underline decoration-blue-300 underline-offset-4 transition-colors">pure water window cleaning</Link>, leaving your home&apos;s glass, screens, and frames crystal clear without harsh chemical runoff.
+                                        </p>
+                                    </>
+                                )}
+                            </div>
+                        </div>
+                    ) : (
+                        <div className="text-lg leading-relaxed mb-8 font-bold text-navy">
+                            Valley Property Services is a fully insured exterior cleaning company providing professional, low-pressure roof washing, window cleaning, and high-ticket <Link href="/services/paver-patio-restorations" className="text-blue-600 hover:text-gold font-semibold transition-colors underline decoration-blue-200 underline-offset-4">expert paver restoration</Link> in <Link href="/service-areas/appleton" className="text-blue-600 hover:text-gold font-semibold transition-colors">Appleton</Link>, <Link href="/service-areas/green-bay" className="text-blue-600 hover:text-gold font-semibold transition-colors">Green Bay</Link>, and <Link href="/service-areas/door-county" className="text-blue-600 hover:text-gold font-semibold transition-colors">Door County</Link>, WI. We specialize in delicate <Link href="/services/roof-cleaning" className="text-blue-600 hover:text-gold font-semibold transition-colors underline decoration-blue-200 underline-offset-4">soft-wash roof treatments</Link> that destroy organic material without extreme water pressure.
+                        </div>
+                    )}
 
                     {/* ENFORCED ARRAY MAPPING FOR BESPOKE INTRODUCTIONS */}
                     {content.introParagraphs && (
@@ -289,7 +349,7 @@ export default async function CityHubPage({ params }: PageProps) {
                         <div className="mb-10 p-8 bg-blue-50/50 border-l-4 border-navy rounded-r-2xl shadow-sm">
                             <h3 className="text-2xl font-bold text-navy mb-4 flex items-center gap-2">
                                 <MapPin className="text-gold" />
-                                Protecting Neenah's Local Landmarks
+                                Protecting Neenah&apos;s Local Landmarks
                             </h3>
                             <p className="text-lg text-slate-700 leading-relaxed font-medium">
                                 We proudly serve all of Neenah, from the historic properties on Doty Island to the areas surrounding the Kimberly Point Lighthouse.
@@ -322,15 +382,21 @@ export default async function CityHubPage({ params }: PageProps) {
             </section>
 
             {/* DYNAMIC PRICING EXPECTATIONS INJECTION */}
-            <section className="py-16 bg-gradient-to-br from-[#0b2341] via-[#1a365d] to-[#2c5282] text-white border-t border-navy-light relative overflow-hidden">
-                <div className="container mx-auto px-4 max-w-4xl relative z-10">
-                    <div className="bg-white/95 p-8 md:p-12 rounded-[32px] border border-white/20 shadow-[0_20px_50px_rgba(0,0,0,0.3)]">
-                        <h2 className="text-3xl md:text-4xl font-black mb-6 text-gold border-b border-white/20 pb-6 tracking-tight">
+            <section className="py-8 bg-slate-50 border-t border-gray-100">
+                <div className="container mx-auto px-4">
+                    <div className="bg-slate-900 text-white p-8 md:p-10 rounded-2xl shadow-xl my-10 text-center max-w-4xl mx-auto border border-slate-800">
+                        <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 tracking-tight">
                             {cityName} Pricing Expectations
                         </h2>
-                        <div className="text-xl text-gray-200 leading-relaxed font-medium">
-                            Professional exterior cleaning prices vary based on total square footage, building height, and the severity of the organic buildup. We provide exact, transparent quotes before any work begins on your {cityName} property. <Link href="/contact" className="text-gold font-bold hover:text-white transition-colors underline decoration-gold/50 underline-offset-4 tracking-wide">Request your free quote today.</Link>
-                        </div>
+                        <p className="text-slate-300 text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-6">
+                            Professional exterior cleaning prices vary based on total square footage, building height, and the severity of the organic buildup. We provide exact, transparent quotes before any work begins on your {cityName} property.
+                        </p>
+                        <Link
+                            href="/contact"
+                            className="inline-block text-amber-400 hover:text-amber-300 font-semibold underline underline-offset-4 transition-colors cursor-pointer"
+                        >
+                            Request your free quote today.
+                        </Link>
                     </div>
                 </div>
             </section>

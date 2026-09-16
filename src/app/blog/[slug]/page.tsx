@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { ChevronRight, Home, ArrowLeft } from 'lucide-react';
 import SafeHeroImage from '@/components/SafeHeroImage';
-import { blogData } from '@/data/blogData';
+import { blogData, REDIRECTED_BLOG_SLUGS } from '@/data/blogData';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
@@ -14,9 +14,11 @@ import Script from 'next/script';
 import ReviewSlider from '@/components/ReviewSlider';
 
 export function generateStaticParams() {
-    return blogData.map((post) => ({
-        slug: post.slug,
-    }));
+    return blogData
+        .filter((post) => !REDIRECTED_BLOG_SLUGS.includes(post.slug))
+        .map((post) => ({
+            slug: post.slug,
+        }));
 }
 
 // Intercept Localized SEO Schemas
@@ -44,8 +46,8 @@ export default async function BlogPostTemplate({ params }: Props) {
     const resolvedParams = await params;
     const post = blogData.find((p) => p.slug === resolvedParams.slug);
 
-    // Hard fallback if the requested URL isn't natively supported in our array
-    if (!post) {
+    // Hard fallback if the requested URL isn't natively supported in our array or is redirected
+    if (!post || REDIRECTED_BLOG_SLUGS.includes(resolvedParams.slug)) {
         notFound();
     }
 

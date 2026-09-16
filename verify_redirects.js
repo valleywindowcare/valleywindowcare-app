@@ -19,8 +19,8 @@ const redirectsToTest = [];
 lines.forEach(line => {
     const parts = line.split(',');
     if (parts.length >= 3) {
-        let oldUrl = parts[0].trim().replace('https://valleywindowcare.com', '');
-        let newUrl = parts[1].trim().replace('http://localhost:3000', '').replace('http://localhost:3006', '');
+        let oldUrl = parts[0].trim().replace('https://valleywindowcare.com', '').replace('https://valleyexteriorpros.com', '');
+        let newUrl = parts[1].trim().replace('https://valleyexteriorpros.com', '').replace('http://localhost:3000', '').replace('http://localhost:3006', '');
 
         if (!oldUrl.startsWith('/')) oldUrl = '/' + oldUrl;
         if (!newUrl.startsWith('/')) newUrl = '/' + newUrl;

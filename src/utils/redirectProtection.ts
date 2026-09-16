@@ -20,6 +20,7 @@ export function isRedirectDestination(urlPath: string): boolean {
         "/services/permanent-led-lighting",
         "/faq",
         "/service-areas",
+        "/service-areas/green-bay",
         "/service-areas/green-bay/pressure-washing",
         "/services/rust-removal-green-bay",
         "/service-areas/green-bay/paver-patio-restorations",
@@ -55,12 +56,10 @@ export function isRedirectDestination(urlPath: string): boolean {
         "/service-areas/appleton/pressure-washing",
         "/blog/an-experts-guide-to-cleaning-the-exterior-of-your-home",
         "/blog/diy-paver-patio-cleaning-solutions-with-household-products",
-        "/blog/average-cost-for-residential-power-washing",
         "/blog/paver-restoration-services-in-green-bay-wisconsin",
         "/blog/roof-cleaning-prices-near-you",
         "/blog/how-to-safely-remove-moss-from-roof-shingles",
         "/blog/pressure-washing-services-near-you",
-        "/blog/gutter-cleaning-services-in-green-bay-wisconsin",
         "/blog/green-bay-power-washing-signs",
         "/blog/eco-friendly-exterior-cleaning-in-green-bay",
         "/blog/how-often-should-you-clean-your-roof",
@@ -70,7 +69,6 @@ export function isRedirectDestination(urlPath: string): boolean {
         "/blog/hiring-window-cleaners-what-you-should-know",
         "/blog/how-to-measure-windows-for-blinds",
         "/blog/what-are-gutter-guards-and-do-they-work",
-        "/blog/when-to-hire-someone-to-clean-your-gutters",
         "/blog/pressure-washing-a-deck-the-dos-and-donts"
     ];
     legacyDestinations.forEach(d => destinations.add(d));
@@ -83,14 +81,14 @@ export function isRedirectDestination(urlPath: string): boolean {
             lines.slice(1).forEach(line => {
                 const parts = line.split(',');
                 if (parts.length >= 2) {
-                    let destUrl = parts[1].trim();
+                    const destUrl = parts[1].trim();
                     try {
                         const destPath = new URL(destUrl, 'https://dummy.com').pathname;
                         const normalizedDest = destPath.endsWith('/') && destPath.length > 1 ? destPath.slice(0, -1) : destPath;
                         if (normalizedDest) {
                             destinations.add(normalizedDest);
                         }
-                    } catch (e) { }
+                    } catch { }
                 }
             });
         }

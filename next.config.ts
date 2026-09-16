@@ -14,8 +14,8 @@ function getCsvRedirects() {
     const rawRedirects = lines.slice(1).map(line => {
       const parts = line.split(',');
       if (parts.length >= 2) {
-        let sourceUrl = parts[0].trim();
-        let destUrl = parts[1].trim();
+        const sourceUrl = parts[0].trim();
+        const destUrl = parts[1].trim();
 
         try {
           // Robust URL parsing handling both absolute & relative CSV values
@@ -33,7 +33,7 @@ function getCsvRedirects() {
               permanent: true,
             };
           }
-        } catch (e) {
+        } catch {
           return null;
         }
       }
@@ -82,6 +82,7 @@ const legacyToNestedMap: Record<string, string> = {
   "/hoa-services": "/services/hoa-services",
   "/services/residential-permanent-led-lighting": "/services/permanent-led-lighting",
   "/services/permanent-holiday-lighting": "/services/permanent-led-lighting",
+  "/permanent-holiday-lighting": "/services/permanent-led-lighting",
   "/holiday-lighting": "/services/christmas-lighting",
   "/services/holiday-lighting": "/services/christmas-lighting",
   "/services/building-wash": "/services/building-washing",
@@ -225,20 +226,20 @@ const legacyToNestedMap: Record<string, string> = {
   "/blog-exterior-home-cleaning-guide": "/blog/an-experts-guide-to-cleaning-the-exterior-of-your-home",
   "/smart-lighting-popup-content-draft-only": "/services/residential-permanent-led-lighting",
   "/diy-paver-patio-cleaning-solutions-with-household-products": "/blog/diy-paver-patio-cleaning-solutions-with-household-products",
-  "/what-does-pressure-washing-cost-in-wisconsin": "/blog/average-cost-for-residential-power-washing",
-  "/who-offers-pressure-washing-services-near-you": "/blog/average-cost-for-residential-power-washing",
+  "/what-does-pressure-washing-cost-in-wisconsin": "/services/pressure-washing",
+  "/who-offers-pressure-washing-services-near-you": "/services/pressure-washing",
   "/how-to-restore-and-maintain-your-pavers-a-complete-guide-to-paver-cleaning-and-sealing-cloned": "/blog/paver-restoration-services-in-green-bay-wisconsin",
   "/roof-cleaning-prices-near-you": "/blog/roof-cleaning-prices-near-you",
   "/how-to-safely-remove-moss-from-roof-shingles": "/blog/how-to-safely-remove-moss-from-roof-shingles",
-  "/average-cost-for-residential-power-washing": "/blog/average-cost-for-residential-power-washing",
+  "/average-cost-for-residential-power-washing": "/services/pressure-washing",
   "/pressure-washing-services-near-you": "/blog/pressure-washing-services-near-you",
-  "/gutter-cleaning-green-bay-home-maintenance": "/blog/gutter-cleaning-services-in-green-bay-wisconsin",
+  "/gutter-cleaning-green-bay-home-maintenance": "/services/gutter-cleaning",
   "/green-bay-power-washing-signs": "/blog/green-bay-power-washing-signs",
   "/eco-friendly-exterior-cleaning-green-bay": "/blog/eco-friendly-exterior-cleaning-in-green-bay",
   "/how-often-should-you-clean-your-roof": "/blog/how-often-should-you-clean-your-roof",
   "/the-best-way-to-clean-outside-windows-in-5-steps": "/blog/the-best-way-to-clean-outside-windows-in-5-steps",
   "/exterior-house-cleaning-checklist": "/blog/an-experts-guide-to-cleaning-the-exterior-of-your-home",
-  "/gutter-cleaning-services-in-green-bay-wisconsin": "/blog/gutter-cleaning-green-bay-home-maintenance",
+  "/gutter-cleaning-services-in-green-bay-wisconsin": "/services/gutter-cleaning",
   "/roof-cleaning-services-in-green-bay-and-appleton": "/blog/how-often-should-you-clean-your-roof",
   "/paver-restoration-services-in-green-bay-wisconsin": "/services/paver-patio-restorations",
   "/permanent-led-smart-lighting-solutions-in-green-bay-wi": "/services/residential-permanent-led-lighting",
@@ -248,10 +249,18 @@ const legacyToNestedMap: Record<string, string> = {
   "/how-to-measure-windows-for-blinds": "/blog/how-to-measure-windows-for-blinds",
   "/professional-window-cleaning-services-in-green-bay-wi": "/services/window-cleaning",
   "/what-are-gutter-guards-and-do-they-work": "/blog/what-are-gutter-guards-and-do-they-work",
-  "/when-to-hire-someone-to-clean-your-gutters": "/blog/when-to-hire-someone-to-clean-your-gutters",
-  "/green-bay-pressure-washing-services": "/services/pressure-washing",
+  "/when-to-hire-someone-to-clean-your-gutters": "/services/gutter-cleaning",
+  "/green-bay-pressure-washing-services": "/service-areas/green-bay",
   "/pressure-washing-a-deck-the-dos-and-donts": "/blog/pressure-washing-a-deck-the-dos-and-donts",
-  "/power-washing-green-bay": "/services/pressure-washing",
+  "/power-washing-green-bay": "/service-areas/green-bay",
+
+  // 301 Redirects to resolve active GSC keyword cannibalization
+  "/blog/average-cost-for-residential-power-washing": "/services/pressure-washing",
+  "/blog/what-does-pressure-washing-cost-in-wisconsin": "/services/pressure-washing",
+  "/blog/power-washing-green-bay": "/service-areas/green-bay",
+  "/blog/green-bay-pressure-washing-services": "/service-areas/green-bay",
+  "/blog/when-to-hire-someone-to-clean-your-gutters": "/services/gutter-cleaning",
+  "/blog/gutter-cleaning-services-in-green-bay-wisconsin": "/services/gutter-cleaning",
 };
 
 const nextConfig: NextConfig = {
@@ -292,6 +301,14 @@ const nextConfig: NextConfig = {
             value: 'noindex, nofollow',
           },
         ],
+      },
+    ];
+  },
+  async rewrites() {
+    return [
+      {
+        source: '/areas/:path*',
+        destination: '/service-areas/:path*',
       },
     ];
   },
