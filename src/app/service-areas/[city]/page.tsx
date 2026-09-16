@@ -21,6 +21,7 @@ function getDeterministicHero(seed: string): string {
     // Return the image based on the modulo of the sum
     return imagePool[sum % imagePool.length];
 }
+import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import SafeHeroImage from '@/components/SafeHeroImage';
@@ -61,32 +62,65 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
     const uniqueMeta: Record<string, { title: string, description: string }> = {
         "de-pere": {
-            title: "Exterior Cleaning, Window Cleaning & Soft Washing De Pere, WI | Valley Property Services",
+            title: "Exterior Cleaning & Soft Washing De Pere, WI | Valley Pro",
             description: "Top-rated exterior cleaning in De Pere, WI. Headquartered in De Pere at 462 S Good Hope Rd, Valley Property Services specializes in window cleaning, soft washing, and roof & gutter cleaning."
         },
         "green-bay": {
-            title: "Power & Pressure Washing Green Bay, WI – Valley Property Services",
+            title: "Power & Pressure Washing Green Bay, WI | Valley Pro",
             description: "Professional power & pressure washing, house washing, roof soft washing, driveway cleaning & window cleaning in Green Bay & De Pere, WI. 100% satisfaction guarantee."
         },
         "appleton": {
-            title: "Power & Pressure Washing Appleton, WI | Valley Property Services",
+            title: "Power & Pressure Washing Appleton, WI | Valley Pro",
             description: "Top-rated power & pressure washing in Appleton & Fox Valley. Non-pressure roof cleaning, house soft washing, paver restoration & permanent LED lighting. Get a free quote!"
         }
     };
 
     const metaMatch = uniqueMeta[city];
-    const generatedTitle = metaMatch ? metaMatch.title : `${content.title || `Professional Window Cleaning & Soft Washing in ${content.city}, WI`} | Valley Property Services`;
+    const generatedTitle = metaMatch ? metaMatch.title : `${content.title || `Professional Window Cleaning & Soft Washing in ${content.city}, WI`} | Valley Pro`;
     const seoDescription = metaMatch ? metaMatch.description : `Top-rated pure water window cleaning, house soft washing, and roof & gutter maintenance in ${content.city}, WI. Fully insured, 100% satisfaction guarantee.`;
 
     return {
-        title: generatedTitle,
+        title: {
+            absolute: generatedTitle
+        },
         description: seoDescription,
         robots: shouldNoindex ? { index: false, follow: true } : { index: true, follow: true },
         alternates: {
             canonical: `https://valleyexteriorpros.com/service-areas/${city}`
+        },
+        openGraph: {
+            title: generatedTitle,
+            description: seoDescription,
+            url: `https://valleyexteriorpros.com/service-areas/${city}`,
+            siteName: "Valley Property Services",
+            locale: "en_US",
+            type: "website",
+        },
+        twitter: {
+            card: "summary_large_image",
+            title: generatedTitle,
+            description: seoDescription,
         }
     };
 }
+
+const cityEditorialOverviews: Record<string, React.ReactNode> = {
+    'green-bay': (
+        <p className="text-slate-700 leading-relaxed text-base md:text-lg mb-8 max-w-4xl">
+            Green Bay&apos;s freeze-thaw winters grind chloride residue into concrete and leave a gray-green film across every shaded elevation, which is why most local jobs start with <Link href="/services/pressure-washing" className="text-blue-600 hover:underline font-medium">surface-cleaning driveways and siding each spring</Link> and <Link href="/services/gutter-cleaning" className="text-blue-600 hover:underline font-medium">clearing the gutter runs</Link> that carried four months of meltwater. Homes under the mature canopy in Allouez, Bellevue, and the older east side usually need <Link href="/services/roof-cleaning" className="text-blue-600 hover:underline font-medium">the black streaking treated off their north-facing roof slopes</Link> at the same time, with <Link href="/services/window-cleaning" className="text-blue-600 hover:underline font-medium">glass cleaned</Link> once the siding has been rinsed and dried. It&apos;s also common to close out the season with <Link href="/services/permanent-led-lighting" className="text-blue-600 hover:underline font-medium">LED lighting run permanently along the roofline</Link>, so nobody is on a ladder in December.
+        </p>
+    ),
+    'appleton': (
+        <p className="text-slate-700 leading-relaxed text-base md:text-lg mb-8 max-w-4xl">
+            Fox Valley properties take a harder spring hit than the rest of the region — oak tassels drop in volumes that overwhelm gutter guards, which makes <Link href="/services/gutter-cleaning" className="text-blue-600 hover:underline font-medium">a late-May gutter clearing</Link> the single most useful thing most Appleton homeowners do all year. From there it&apos;s typically <Link href="/services/pressure-washing" className="text-blue-600 hover:underline font-medium">low-pressure siding washing and concrete surface cleaning</Link> through the summer, <Link href="/services/roof-cleaning" className="text-blue-600 hover:underline font-medium">non-pressure treatment for roof algae</Link> on shaded elevations, and <Link href="/services/window-cleaning" className="text-blue-600 hover:underline font-medium">storefront and residential glass detailing</Link> along the commercial corridors. We install <Link href="/services/permanent-led-lighting" className="text-blue-600 hover:underline font-medium">architectural LED lighting that stays up year-round</Link> across Appleton, Neenah, Menasha, and Kaukauna.
+        </p>
+    ),
+    'de-pere': (
+        <p className="text-slate-700 leading-relaxed text-base md:text-lg mb-8 max-w-4xl">
+            De Pere is home — our shop sits on South Good Hope Road, which means short drive times and same-week scheduling for everything from <Link href="/services/pressure-washing" className="text-blue-600 hover:underline font-medium">power washing the original concrete in the older river district</Link> to <Link href="/services/gutter-cleaning" className="text-blue-600 hover:underline font-medium">flushing gutters and downspouts</Link> in the newer subdivisions south of town. The downtown mix of mature trees and painted wood trim means a good share of these properties need <Link href="/services/roof-cleaning" className="text-blue-600 hover:underline font-medium">a non-pressure roof wash</Link> and <Link href="/services/window-cleaning" className="text-blue-600 hover:underline font-medium">careful glass work</Link> rather than anything aggressive. We also handle <Link href="/services/permanent-led-lighting" className="text-blue-600 hover:underline font-medium">permanent LED lighting along rooflines and soffits</Link> throughout De Pere and neighboring Ledgeview and Hobart.
+        </p>
+    )
+};
 
 export default async function CityHubPage({ params }: PageProps) {
     const { city } = await params;
@@ -527,6 +561,11 @@ export default async function CityHubPage({ params }: PageProps) {
 
             {/* SERVICES GRID (6-Grid Bottom Injection Hook) */}
             <div className="bg-slate-50 border-t border-gray-200">
+                {cityEditorialOverviews[content.citySlug] && (
+                    <div className="container mx-auto px-4 max-w-5xl pt-16 -mb-12 relative z-20 flex justify-center text-left">
+                        {cityEditorialOverviews[content.citySlug]}
+                    </div>
+                )}
                 <ServiceGrid city={cityName} />
             </div>
 
