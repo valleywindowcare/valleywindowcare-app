@@ -62,8 +62,7 @@ export const localBusinessSchemaData = {
   ],
   "sameAs": [
     "https://www.facebook.com/Valleypropertyservice",
-    "https://www.instagram.com/valleypropertyservice",
-    "https://www.google.com/maps?cid=14133068595604156906"
+    "https://www.instagram.com/valleypropertyservice"
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
