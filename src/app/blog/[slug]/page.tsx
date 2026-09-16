@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { notFound } from 'next/navigation';
+import { notFound, permanentRedirect } from 'next/navigation';
 import { ChevronRight, Home, ArrowLeft } from 'lucide-react';
 import SafeHeroImage from '@/components/SafeHeroImage';
 import { blogData, REDIRECTED_BLOG_SLUGS } from '@/data/blogData';
@@ -9,6 +9,15 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
 import Script from 'next/script';
+
+const CANNIBALIZATION_REDIRECTS: Record<string, string> = {
+    'average-cost-for-residential-power-washing': 'https://valleyexteriorpros.com/services/pressure-washing',
+    'what-does-pressure-washing-cost-in-wisconsin': 'https://valleyexteriorpros.com/services/pressure-washing',
+    'power-washing-green-bay': 'https://valleyexteriorpros.com/service-areas/green-bay',
+    'green-bay-pressure-washing-services': 'https://valleyexteriorpros.com/service-areas/green-bay',
+    'when-to-hire-someone-to-clean-your-gutters': 'https://valleyexteriorpros.com/services/gutter-cleaning',
+    'gutter-cleaning-services-in-green-bay-wisconsin': 'https://valleyexteriorpros.com/services/gutter-cleaning',
+};
 
 // Generate Static Params for all 15 active CSV mappings
 import ReviewSlider from '@/components/ReviewSlider';
@@ -28,6 +37,11 @@ type Props = {
 
 export async function generateMetadata({ params }: Props) {
     const resolvedParams = await params;
+
+    if (CANNIBALIZATION_REDIRECTS[resolvedParams.slug]) {
+        permanentRedirect(CANNIBALIZATION_REDIRECTS[resolvedParams.slug]);
+    }
+
     const post = blogData.find((p) => p.slug === resolvedParams.slug);
 
     if (!post) {
@@ -44,6 +58,11 @@ export async function generateMetadata({ params }: Props) {
 
 export default async function BlogPostTemplate({ params }: Props) {
     const resolvedParams = await params;
+
+    if (CANNIBALIZATION_REDIRECTS[resolvedParams.slug]) {
+        permanentRedirect(CANNIBALIZATION_REDIRECTS[resolvedParams.slug]);
+    }
+
     const post = blogData.find((p) => p.slug === resolvedParams.slug);
 
     // Hard fallback if the requested URL isn't natively supported in our array or is redirected

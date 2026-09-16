@@ -18,6 +18,7 @@ function getDeterministicHero(seed: string): string {
     return images[sum % images.length];
 }
 import { Metadata } from 'next';
+import { permanentRedirect } from 'next/navigation';
 import Hero from "@/components/Hero";
 import Process from "@/components/Process";
 import dynamic from "next/dynamic";
@@ -105,6 +106,9 @@ type PageProps = {
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
     const { service } = await params;
+    if (service === 'permanent-holiday-lighting') {
+        permanentRedirect('https://valleyexteriorpros.com/services/permanent-led-lighting');
+    }
     const formattedName = formatTitle(service);
 
     const isCommercial = commercialServices.includes(service);
@@ -225,6 +229,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function ServiceGenericPage({ params }: PageProps) {
     const { service } = await params;
+    if (service === 'permanent-holiday-lighting') {
+        permanentRedirect('https://valleyexteriorpros.com/services/permanent-led-lighting');
+    }
     const formattedName = formatTitle(service);
 
     const content = serviceContentMap[service] || {

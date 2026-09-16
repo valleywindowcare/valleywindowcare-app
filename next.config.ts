@@ -81,8 +81,8 @@ const legacyToNestedMap: Record<string, string> = {
   "/services/apartment-hoa-cleaning": "/services/hoa-services",
   "/hoa-services": "/services/hoa-services",
   "/services/residential-permanent-led-lighting": "/services/permanent-led-lighting",
-  "/services/permanent-holiday-lighting": "/services/permanent-led-lighting",
-  "/permanent-holiday-lighting": "/services/permanent-led-lighting",
+  "/services/permanent-holiday-lighting": "https://valleyexteriorpros.com/services/permanent-led-lighting",
+  "/permanent-holiday-lighting": "https://valleyexteriorpros.com/services/permanent-led-lighting",
   "/holiday-lighting": "/services/christmas-lighting",
   "/services/holiday-lighting": "/services/christmas-lighting",
   "/services/building-wash": "/services/building-washing",
@@ -255,12 +255,19 @@ const legacyToNestedMap: Record<string, string> = {
   "/power-washing-green-bay": "/service-areas/green-bay",
 
   // 301 Redirects to resolve active GSC keyword cannibalization
-  "/blog/average-cost-for-residential-power-washing": "/services/pressure-washing",
-  "/blog/what-does-pressure-washing-cost-in-wisconsin": "/services/pressure-washing",
-  "/blog/power-washing-green-bay": "/service-areas/green-bay",
-  "/blog/green-bay-pressure-washing-services": "/service-areas/green-bay",
-  "/blog/when-to-hire-someone-to-clean-your-gutters": "/services/gutter-cleaning",
-  "/blog/gutter-cleaning-services-in-green-bay-wisconsin": "/services/gutter-cleaning",
+  "/blog/average-cost-for-residential-power-washing": "https://valleyexteriorpros.com/services/pressure-washing",
+  "/blog/average-cost-for-residential-power-washing/": "https://valleyexteriorpros.com/services/pressure-washing",
+  "/blog/what-does-pressure-washing-cost-in-wisconsin": "https://valleyexteriorpros.com/services/pressure-washing",
+  "/blog/what-does-pressure-washing-cost-in-wisconsin/": "https://valleyexteriorpros.com/services/pressure-washing",
+  "/blog/power-washing-green-bay": "https://valleyexteriorpros.com/service-areas/green-bay",
+  "/blog/power-washing-green-bay/": "https://valleyexteriorpros.com/service-areas/green-bay",
+  "/blog/green-bay-pressure-washing-services": "https://valleyexteriorpros.com/service-areas/green-bay",
+  "/blog/green-bay-pressure-washing-services/": "https://valleyexteriorpros.com/service-areas/green-bay",
+  "/blog/when-to-hire-someone-to-clean-your-gutters": "https://valleyexteriorpros.com/services/gutter-cleaning",
+  "/blog/when-to-hire-someone-to-clean-your-gutters/": "https://valleyexteriorpros.com/services/gutter-cleaning",
+  "/blog/gutter-cleaning-services-in-green-bay-wisconsin": "https://valleyexteriorpros.com/services/gutter-cleaning",
+  "/blog/gutter-cleaning-services-in-green-bay-wisconsin/": "https://valleyexteriorpros.com/services/gutter-cleaning",
+  "/services/permanent-holiday-lighting/": "https://valleyexteriorpros.com/services/permanent-led-lighting",
 };
 
 const nextConfig: NextConfig = {
