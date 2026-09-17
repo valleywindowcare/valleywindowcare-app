@@ -40,7 +40,7 @@ const DEFAULT_SERVICES = [
     { name: "Permanent LED Lighting", slug: "permanent-led-lighting" },
     { name: "Commercial Roof Cleaning", slug: "commercial-roof-cleaning" },
     { name: "Commercial Pressure Washing", slug: "commercial-pressure-washing" },
-    { name: "Barn Cleaning & Restoration", slug: "barn-cleaning" },
+    { name: "Barn & Agricultural Cleaning", slug: "barn-cleaning" },
     { name: "Commercial Fleet Washing", slug: "fleet-washing" },
     { name: "Graffiti Removal", slug: "graffiti-removal" },
     { name: "HOA Services", slug: "hoa-services" },

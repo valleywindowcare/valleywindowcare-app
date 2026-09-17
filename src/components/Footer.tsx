@@ -122,7 +122,7 @@ export default function Footer() {
                             </li>
                             <li>
                                 <Link href="/services/barn-cleaning" className="hover:text-gold transition-colors inline-block relative group">
-                                    Barn Cleaning &amp; Restoration
+                                    Barn &amp; Agricultural Cleaning
                                     <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
                                 </Link>
                             </li>

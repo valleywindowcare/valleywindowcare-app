@@ -444,7 +444,14 @@ export default function PressureWashingPage() {
                                 Appleton, Neenah, Menasha, Kaukauna, and Oshkosh are where our commercial work concentrates — retail strips, restaurant entryways, apartment complexes, office parks, and industrial pads.
                             </p>
                             <p>
-                                Commercial exterior cleaning is a different discipline from residential. Entryway concrete at a restaurant needs degreasing on a schedule, not once a year. Dumpster pads need hot water and containment. Storefronts get cleaned in early-morning windows so you don&apos;t lose foot traffic. And property managers need documented visit records and a certificate of insurance on file before anyone shows up.
+                                Commercial exterior cleaning is a different discipline from residential. Entryway concrete at a restaurant needs degreasing on a schedule, not once a year. Dumpster pads need hot water and containment. Storefronts get cleaned in early-morning windows so you don&apos;t lose foot traffic. And property managers need documented visit records and a certificate of insurance on file before anyone shows up. For agribusinesses, dairy facilities, and rural estates statewide, our mobile hot-water rigs also provide dedicated{" "}
+                                <Link
+                                    href="/services/barn-cleaning"
+                                    className="text-blue-600 hover:text-navy font-bold underline decoration-blue-300 underline-offset-4 transition-colors"
+                                >
+                                    commercial barn washouts
+                                </Link>
+                                , parlor sanitation, and high-reach rafter cleaning.
                             </p>
                             <p>
                                 Residential Fox Valley work runs the same as Green Bay — soft wash the house, surface-clean the flatwork — with one regional difference: oak and cottonwood cover through the Fox corridor means more organic staining on north elevations and more debris ground into patios.

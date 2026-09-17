@@ -352,7 +352,7 @@ export default async function ServiceGenericPage({ params }: PageProps) {
                         <div>
                             <h3 className="text-xl md:text-2xl font-bold text-navy-dark mb-2">The Valley Property Services Difference</h3>
                             <p className="text-gray-700 leading-relaxed font-medium text-lg">
-                                Valley Property Services provides ARMA-compliant roof soft washing across Green Bay, Appleton, and the Fox Valley. We do not use damaging high pressure. We apply specialized, eco-friendly treatments that safely eradicate Gloeocapsa magma (black streaks) and moss at the root without voiding your shingle warranty.
+                                Valley Property Services provides ARMA-compliant roof soft washing across Green Bay, Appleton, and the Fox Valley. We do not use damaging high pressure. We apply specialized, eco-friendly treatments that safely eradicate Gloeocapsa magma (black streaks) and moss at the root without voiding your shingle warranty. For rural estates, pole buildings, and dairy operations across Wisconsin, our mobile crews also specialize in dedicated <Link href="/services/barn-cleaning" className="text-gold hover:text-navy font-bold underline decoration-gold/50 underline-offset-4 transition-colors">agricultural barn roof cleaning</Link> using chemical soft wash systems.
                             </p>
                         </div>
                     </div>
