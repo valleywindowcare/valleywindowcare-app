@@ -27,11 +27,34 @@ export interface LeadSubmissionPayload {
     eventId?: string;
 }
 
+export const SERVICE_LABEL_MAP: Record<string, string> = {
+    "house-washing": "House Washing",
+    "roof-cleaning": "Roof Cleaning",
+    "window-cleaning": "Window Cleaning",
+    "gutter-cleaning": "Gutter Cleaning",
+    "concrete-cleaning": "Concrete Cleaning",
+    "pressure-washing": "Pressure Washing",
+    "permanent-led-lighting": "Permanent LED Lighting",
+    "commercial-services": "Commercial Services",
+    "paver-patio-restorations": "Paver Patio Restorations",
+    "barn-cleaning": "Barn & Agricultural Cleaning",
+    "fleet-washing": "Mobile Fleet Washing",
+};
+
 export default function HeroForm({ idPrefix = "", defaultServices = [] }: { idPrefix?: string; defaultServices?: string[] }) {
     const router = useRouter();
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
     const prefix = idPrefix ? `${idPrefix}-` : "";
+
+    const isDefaultSelected = (key: string) => {
+        const cleanKey = key.toLowerCase().replace(/[^a-z0-9]/g, "");
+        return defaultServices.some((s) => {
+            const cleanS = s.toLowerCase().replace(/[^a-z0-9]/g, "");
+            const cleanLabel = (SERVICE_LABEL_MAP[key] || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+            return cleanS === cleanKey || cleanS === cleanLabel;
+        });
+    };
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -39,8 +62,10 @@ export default function HeroForm({ idPrefix = "", defaultServices = [] }: { idPr
 
         const formData = new FormData(e.currentTarget);
         
-        // Capture all selected checkboxes into a comma-separated string
-        const selectedServices = formData.getAll("service").join(", ");
+        // Capture all selected checkboxes into human-readable formatted services
+        const rawServices = formData.getAll("service").map((s) => s.toString());
+        const friendlyServices = rawServices.map((s) => SERVICE_LABEL_MAP[s] || s);
+        const selectedServices = friendlyServices.join(", ");
         
         // Safe Fallbacks to prevent Web3Forms API rejection
         const safeName = formData.get("name")?.toString().trim() || "Unknown User";
@@ -73,10 +98,14 @@ export default function HeroForm({ idPrefix = "", defaultServices = [] }: { idPr
             // Generate a secure UUID for Meta Event Deduplication
             const generatedEventId = crypto.randomUUID();
 
+            const isAgLead = rawServices.includes("barn-cleaning");
+
             // 1. Fire Web3Forms directly from the browser to bypass Cloudflare Bot Management on Vercel IPs
             const web3Payload = {
                 access_key: "c8727880-065b-4c99-9190-7f4a13170752", 
-                subject: `🚨 NEW WEBSITE LEAD: ${safeName} (${safeAddress}) - Valley Property Services`,
+                subject: isAgLead
+                    ? `🚨 [AGRICULTURAL / BARN] NEW LEAD: ${safeName} (${safeAddress}) - Valley Property Services`
+                    : `🚨 NEW WEBSITE LEAD: ${safeName} (${safeAddress}) - Valley Property Services`,
                 from_name: "Valley Property Services Lead Form",
                 replyto: safeEmail || "info@valleyexteriorpros.com",
                 name: safeName,
@@ -269,28 +298,31 @@ export default function HeroForm({ idPrefix = "", defaultServices = [] }: { idPr
                             <legend className="text-sm font-bold text-navy mb-2">Services Needed</legend>
                             <div className="grid grid-cols-2 gap-3 mt-1 text-sm text-gray-700">
                                 <label htmlFor={`${prefix}chk-house-washing`} className="flex items-center gap-2 cursor-pointer hover:text-gold transition-colors">
-                                    <input id={`${prefix}chk-house-washing`} aria-label="House Washing" type="checkbox" name="service" value="house-washing" defaultChecked={defaultServices.includes("house-washing")} className="accent-gold w-4 h-4 cursor-pointer" /> House Washing
+                                    <input id={`${prefix}chk-house-washing`} aria-label="House Washing" type="checkbox" name="service" value="house-washing" defaultChecked={isDefaultSelected("house-washing")} className="accent-gold w-4 h-4 cursor-pointer" /> House Washing
                                 </label>
                                 <label htmlFor={`${prefix}chk-roof-cleaning`} className="flex items-center gap-2 cursor-pointer hover:text-gold transition-colors">
-                                    <input id={`${prefix}chk-roof-cleaning`} aria-label="Roof Cleaning" type="checkbox" name="service" value="roof-cleaning" defaultChecked={defaultServices.includes("roof-cleaning")} className="accent-gold w-4 h-4 cursor-pointer" /> Roof Cleaning
+                                    <input id={`${prefix}chk-roof-cleaning`} aria-label="Roof Cleaning" type="checkbox" name="service" value="roof-cleaning" defaultChecked={isDefaultSelected("roof-cleaning")} className="accent-gold w-4 h-4 cursor-pointer" /> Roof Cleaning
                                 </label>
                                 <label htmlFor={`${prefix}chk-window-cleaning`} className="flex items-center gap-2 cursor-pointer hover:text-gold transition-colors">
-                                    <input id={`${prefix}chk-window-cleaning`} aria-label="Window Cleaning" type="checkbox" name="service" value="window-cleaning" defaultChecked={defaultServices.includes("window-cleaning")} className="accent-gold w-4 h-4 cursor-pointer" /> Window Cleaning
+                                    <input id={`${prefix}chk-window-cleaning`} aria-label="Window Cleaning" type="checkbox" name="service" value="window-cleaning" defaultChecked={isDefaultSelected("window-cleaning")} className="accent-gold w-4 h-4 cursor-pointer" /> Window Cleaning
                                 </label>
                                 <label htmlFor={`${prefix}chk-gutter-cleaning`} className="flex items-center gap-2 cursor-pointer hover:text-gold transition-colors">
-                                    <input id={`${prefix}chk-gutter-cleaning`} aria-label="Gutter Cleaning" type="checkbox" name="service" value="gutter-cleaning" defaultChecked={defaultServices.includes("gutter-cleaning")} className="accent-gold w-4 h-4 cursor-pointer" /> Gutter Cleaning
+                                    <input id={`${prefix}chk-gutter-cleaning`} aria-label="Gutter Cleaning" type="checkbox" name="service" value="gutter-cleaning" defaultChecked={isDefaultSelected("gutter-cleaning")} className="accent-gold w-4 h-4 cursor-pointer" /> Gutter Cleaning
                                 </label>
                                 <label htmlFor={`${prefix}chk-concrete-cleaning`} className="flex items-center gap-2 cursor-pointer hover:text-gold transition-colors">
-                                    <input id={`${prefix}chk-concrete-cleaning`} aria-label="Concrete Cleaning" type="checkbox" name="service" value="concrete-cleaning" defaultChecked={defaultServices.includes("concrete-cleaning")} className="accent-gold w-4 h-4 cursor-pointer" /> Concrete Cleaning
+                                    <input id={`${prefix}chk-concrete-cleaning`} aria-label="Concrete Cleaning" type="checkbox" name="service" value="concrete-cleaning" defaultChecked={isDefaultSelected("concrete-cleaning")} className="accent-gold w-4 h-4 cursor-pointer" /> Concrete Cleaning
                                 </label>
                                 <label htmlFor={`${prefix}chk-permanent-led`} className="flex items-center gap-2 cursor-pointer hover:text-gold transition-colors">
-                                    <input id={`${prefix}chk-permanent-led`} aria-label="Permanent LED Lighting" type="checkbox" name="service" value="permanent-led-lighting" defaultChecked={defaultServices.includes("permanent-led-lighting")} className="accent-gold w-4 h-4 cursor-pointer" /> Permanent LED Lighting
+                                    <input id={`${prefix}chk-permanent-led`} aria-label="Permanent LED Lighting" type="checkbox" name="service" value="permanent-led-lighting" defaultChecked={isDefaultSelected("permanent-led-lighting")} className="accent-gold w-4 h-4 cursor-pointer" /> Permanent LED Lighting
                                 </label>
                                 <label htmlFor={`${prefix}chk-commercial`} className="flex items-center gap-2 cursor-pointer hover:text-gold transition-colors">
-                                    <input id={`${prefix}chk-commercial`} aria-label="Commercial Services" type="checkbox" name="service" value="commercial-services" defaultChecked={defaultServices.includes("commercial-services")} className="accent-gold w-4 h-4 cursor-pointer" /> Commercial Services
+                                    <input id={`${prefix}chk-commercial`} aria-label="Commercial Services" type="checkbox" name="service" value="commercial-services" defaultChecked={isDefaultSelected("commercial-services")} className="accent-gold w-4 h-4 cursor-pointer" /> Commercial Services
                                 </label>
                                 <label htmlFor={`${prefix}chk-paver-patio-restorations`} className="flex items-center gap-2 cursor-pointer hover:text-gold transition-colors">
-                                    <input id={`${prefix}chk-paver-patio-restorations`} aria-label="Paver Patio Restorations" type="checkbox" name="service" value="paver-patio-restorations" defaultChecked={defaultServices.includes("paver-patio-restorations")} className="accent-gold w-4 h-4 cursor-pointer" /> Paver Patio Restorations
+                                    <input id={`${prefix}chk-paver-patio-restorations`} aria-label="Paver Patio Restorations" type="checkbox" name="service" value="paver-patio-restorations" defaultChecked={isDefaultSelected("paver-patio-restorations")} className="accent-gold w-4 h-4 cursor-pointer" /> Paver Patio Restorations
+                                </label>
+                                <label htmlFor={`${prefix}chk-barn-cleaning`} className="flex items-center gap-2 cursor-pointer hover:text-gold transition-colors">
+                                    <input id={`${prefix}chk-barn-cleaning`} aria-label="Barn & Agricultural Cleaning" type="checkbox" name="service" value="barn-cleaning" defaultChecked={isDefaultSelected("barn-cleaning")} className="accent-gold w-4 h-4 cursor-pointer" /> Barn &amp; Agricultural Cleaning
                                 </label>
                             </div>
                         </fieldset>

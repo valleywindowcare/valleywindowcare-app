@@ -6,7 +6,14 @@ export const metadata = {
   description: "Request a custom quote for our professional exterior restoration, siding soft washing, and window cleaning services in Green Bay & Appleton.",
 };
 
-export default function QuotePage() {
+export default async function QuotePage({
+  searchParams,
+}: {
+  searchParams?: Promise<{ service?: string }>;
+}) {
+  const resolvedParams = searchParams ? await searchParams : undefined;
+  const initialServices = resolvedParams?.service ? [resolvedParams.service] : [];
+
   return (
     <div className="min-h-screen bg-slate-50 py-20 px-4 flex flex-col items-center">
       <div className="max-w-4xl text-center mb-12 mt-10">
@@ -19,7 +26,7 @@ export default function QuotePage() {
       </div>
       
       <div className="w-full max-w-xl mx-auto bg-white rounded-3xl shadow-xl border border-gray-200 overflow-hidden">
-        <HeroForm />
+        <HeroForm defaultServices={initialServices} />
       </div>
       
     </div>

@@ -276,7 +276,7 @@ export default function BarnCleaningPage() {
                     {/* CTAs */}
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
                         <Link
-                            href="/quote"
+                            href="/quote?service=barn-cleaning"
                             className="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-gold hover:bg-gold-light text-navy font-black text-base sm:text-lg px-8 py-4 rounded-full shadow-xl transition-all transform hover:-translate-y-0.5 uppercase tracking-wider"
                         >
                             <span>Get a Statewide Barn Estimate</span>
@@ -610,7 +610,7 @@ export default function BarnCleaningPage() {
                     </p>
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
                         <Link
-                            href="/quote"
+                            href="/quote?service=barn-cleaning"
                             className="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-gold hover:bg-gold-light text-navy font-black text-base sm:text-lg px-8 py-4 rounded-full shadow-xl transition-all transform hover:-translate-y-0.5 uppercase tracking-wider"
                         >
                             <span>Get a Statewide Barn Estimate</span>
