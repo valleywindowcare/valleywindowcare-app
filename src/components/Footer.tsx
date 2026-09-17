@@ -120,6 +120,12 @@ export default function Footer() {
                                     <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
                                 </Link>
                             </li>
+                            <li>
+                                <Link href="/services/barn-cleaning" className="hover:text-gold transition-colors inline-block relative group">
+                                    Barn Cleaning &amp; Restoration
+                                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
+                                </Link>
+                            </li>
                         </ul>
                     </div>
 

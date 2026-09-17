@@ -119,7 +119,8 @@ const validServices = [
     "paver-patio-restorations",
     "commercial-hood-cleaning",
     "winter-salt-removal",
-    "hoa-services"
+    "hoa-services",
+    "barn-cleaning"
 ];
 
 // 30 city hub routes in validLocations
