@@ -120,7 +120,8 @@ const validServices = [
     "commercial-hood-cleaning",
     "winter-salt-removal",
     "hoa-services",
-    "barn-cleaning"
+    "barn-cleaning",
+    "fleet-washing"
 ];
 
 // 30 city hub routes in validLocations

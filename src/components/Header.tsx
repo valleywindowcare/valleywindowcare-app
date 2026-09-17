@@ -92,6 +92,7 @@ export default function Header() {
                                     <div className="flex flex-col gap-1">
                                         <Link href="/services/building-washing" className="px-4 py-2 hover:bg-slate-50 rounded-xl text-navy-dark hover:text-gold transition-colors font-semibold">Building Washing</Link>
                                         <Link href="/services/commercial-roof-cleaning" className="px-4 py-2 hover:bg-slate-50 rounded-xl text-navy-dark hover:text-gold transition-colors font-semibold">Commercial Roof Cleaning</Link>
+                                        <Link href="/services/fleet-washing" className="px-4 py-2 hover:bg-slate-50 rounded-xl text-navy-dark hover:text-gold transition-colors font-semibold">Fleet Washing</Link>
                                         <Link href="/services/barn-cleaning" className="px-4 py-2 hover:bg-slate-50 rounded-xl text-navy-dark hover:text-gold transition-colors font-semibold">Barn Cleaning &amp; Restoration</Link>
                                         <Link href="/services/dumpster-pad-cleaning" className="px-4 py-2 hover:bg-slate-50 rounded-xl text-navy-dark hover:text-gold transition-colors font-semibold">Dumpster Pad Cleaning</Link>
                                         <Link href="/services/hoa-services" className="px-4 py-2 hover:bg-slate-50 rounded-xl text-navy-dark hover:text-gold transition-colors font-semibold">Multi-Unit / HOA Services</Link>
@@ -170,6 +171,7 @@ export default function Header() {
                                         <h4 className="text-gold text-xs tracking-widest uppercase mb-2">Commercial</h4>
                                         <Link onClick={() => setIsMobileMenuOpen(false)} href="/services/building-washing" className="block py-2 hover:text-gold transition-colors">Building Washing</Link>
                                         <Link onClick={() => setIsMobileMenuOpen(false)} href="/services/commercial-roof-cleaning" className="block py-2 hover:text-gold transition-colors">Commercial Roof Cleaning</Link>
+                                        <Link onClick={() => setIsMobileMenuOpen(false)} href="/services/fleet-washing" className="block py-2 hover:text-gold transition-colors">Fleet Washing</Link>
                                         <Link onClick={() => setIsMobileMenuOpen(false)} href="/services/barn-cleaning" className="block py-2 hover:text-gold transition-colors">Barn Cleaning &amp; Restoration</Link>
                                         <Link onClick={() => setIsMobileMenuOpen(false)} href="/services/dumpster-pad-cleaning" className="block py-2 hover:text-gold transition-colors">Dumpster Pad Cleaning</Link>
                                         <Link onClick={() => setIsMobileMenuOpen(false)} href="/services/hoa-services" className="block py-2 hover:text-gold transition-colors">Multi-Unit / HOA Services</Link>

@@ -19,7 +19,7 @@ interface ServiceGridProps {
 
 const isCommercial = (name: string) => {
     if (name === "Residential Permanent LED Lighting") return false;
-    const commercialKeywords = ['Commercial', 'Building', 'Dumpster', 'Graffiti', 'HOA', 'Storefront', 'Drive-Thru', 'Parking Lot', 'Awning', 'Gas Station', 'Post Construction', 'Chewing Gum', 'Hood', 'Apartment', 'Permanent LED Lighting', 'Barn'];
+    const commercialKeywords = ['Commercial', 'Building', 'Dumpster', 'Graffiti', 'HOA', 'Storefront', 'Drive-Thru', 'Parking Lot', 'Awning', 'Gas Station', 'Post Construction', 'Chewing Gum', 'Hood', 'Apartment', 'Permanent LED Lighting', 'Barn', 'Fleet'];
     return commercialKeywords.some(keyword => name.includes(keyword));
 };
 
@@ -41,6 +41,7 @@ const DEFAULT_SERVICES = [
     { name: "Commercial Roof Cleaning", slug: "commercial-roof-cleaning" },
     { name: "Commercial Pressure Washing", slug: "commercial-pressure-washing" },
     { name: "Barn Cleaning & Restoration", slug: "barn-cleaning" },
+    { name: "Commercial Fleet Washing", slug: "fleet-washing" },
     { name: "Graffiti Removal", slug: "graffiti-removal" },
     { name: "HOA Services", slug: "hoa-services" },
     { name: "Storefront Cleaning", slug: "storefront-cleaning" },
