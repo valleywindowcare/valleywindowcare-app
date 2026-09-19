@@ -776,7 +776,7 @@ export default function GutterCleaningPage() {
                                 Do I still need gutter cleaning if I have gutter guards?
                             </h3>
                             <p className="text-slate-700 text-sm sm:text-base leading-relaxed">
-                                Yes, though usually less often. Gutter guards are effective at keeping out whole leaves, but pine needles, oak tassels, shingle grit, and pollen are small enough to pass through most guard systems and accumulate underneath. Debris also builds up on top of the guards themselves, where it blocks water from entering the gutter at all. We remove the guards, clean the trough and downspouts, clear the guard surface, and reinstall. Most guarded homes in our area do well on an annual schedule instead of twice yearly.
+                                Yes, though usually less often unless you have commercial-grade <Link href="/services/gutter-guards" className="text-navy font-bold hover:underline">stainless steel micro-mesh gutter guards</Link>. Standard big-box plastic or slotted covers are effective at keeping out whole leaves, but pine needles, oak tassels, shingle grit, and pollen are small enough to pass through most generic guard systems and accumulate underneath. Debris also builds up on top of the guards themselves, where it blocks water from entering the gutter at all. We remove the guards, clean the trough and downspouts, clear the guard surface, and reinstall. Most guarded homes in our area do well on an annual schedule instead of twice yearly.
                             </p>
                         </div>
                     </div>

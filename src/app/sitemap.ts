@@ -121,7 +121,8 @@ const validServices = [
     "winter-salt-removal",
     "hoa-services",
     "barn-cleaning",
-    "fleet-washing"
+    "fleet-washing",
+    "gutter-guards"
 ];
 
 // 30 city hub routes in validLocations

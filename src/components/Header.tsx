@@ -80,6 +80,8 @@ export default function Header() {
                                     <div className="flex flex-col gap-1">
                                         <Link href="/services/roof-cleaning" className="px-4 py-2 hover:bg-slate-50 rounded-xl text-navy-dark hover:text-gold transition-colors font-semibold">Roof Cleaning</Link>
                                         <Link href="/services/house-washing" className="px-4 py-2 hover:bg-slate-50 rounded-xl text-navy-dark hover:text-gold transition-colors font-semibold">House Washing</Link>
+                                        <Link href="/services/gutter-cleaning" className="px-4 py-2 hover:bg-slate-50 rounded-xl text-navy-dark hover:text-gold transition-colors font-semibold">Gutter Cleaning</Link>
+                                        <Link href="/services/gutter-guards" className="px-4 py-2 hover:bg-slate-50 rounded-xl text-navy-dark hover:text-gold transition-colors font-semibold">Gutter Guard Installation</Link>
                                         <Link href="/services/pressure-washing" className="px-4 py-2 hover:bg-slate-50 rounded-xl text-navy-dark hover:text-gold transition-colors font-semibold">Power &amp; Pressure Washing</Link>
                                         <Link href="/services/paver-patio-restorations" className="px-4 py-2 hover:bg-slate-50 rounded-xl text-navy-dark hover:text-gold transition-colors font-semibold">Paver Patio Restorations</Link>
                                         <Link href="/services/permanent-led-lighting" className="px-4 py-2 hover:bg-slate-50 rounded-xl text-navy-dark hover:text-gold transition-colors font-semibold">Permanent LED Lighting</Link>
@@ -163,6 +165,8 @@ export default function Header() {
                                         <h4 className="text-gold text-xs tracking-widest uppercase mb-2">Residential</h4>
                                         <Link onClick={() => setIsMobileMenuOpen(false)} href="/services/roof-cleaning" className="block py-2 hover:text-gold transition-colors">Roof Cleaning</Link>
                                         <Link onClick={() => setIsMobileMenuOpen(false)} href="/services/house-washing" className="block py-2 hover:text-gold transition-colors">House Washing</Link>
+                                        <Link onClick={() => setIsMobileMenuOpen(false)} href="/services/gutter-cleaning" className="block py-2 hover:text-gold transition-colors">Gutter Cleaning</Link>
+                                        <Link onClick={() => setIsMobileMenuOpen(false)} href="/services/gutter-guards" className="block py-2 hover:text-gold transition-colors">Gutter Guard Installation</Link>
                                         <Link onClick={() => setIsMobileMenuOpen(false)} href="/services/pressure-washing" className="block py-2 hover:text-gold transition-colors">Power &amp; Pressure Washing</Link>
                                         <Link onClick={() => setIsMobileMenuOpen(false)} href="/services/paver-patio-restorations" className="block py-2 hover:text-gold transition-colors">Paver Patio Restorations</Link>
                                         <Link onClick={() => setIsMobileMenuOpen(false)} href="/services/permanent-led-lighting" className="block py-2 hover:text-gold transition-colors">Permanent LED Lighting</Link>

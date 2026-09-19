@@ -32,6 +32,7 @@ export const SERVICE_LABEL_MAP: Record<string, string> = {
     "roof-cleaning": "Roof Cleaning",
     "window-cleaning": "Window Cleaning",
     "gutter-cleaning": "Gutter Cleaning",
+    "gutter-guards": "Gutter Guards",
     "concrete-cleaning": "Concrete Cleaning",
     "pressure-washing": "Pressure Washing",
     "permanent-led-lighting": "Permanent LED Lighting",
@@ -308,6 +309,9 @@ export default function HeroForm({ idPrefix = "", defaultServices = [] }: { idPr
                                 </label>
                                 <label htmlFor={`${prefix}chk-gutter-cleaning`} className="flex items-center gap-2 cursor-pointer hover:text-gold transition-colors">
                                     <input id={`${prefix}chk-gutter-cleaning`} aria-label="Gutter Cleaning" type="checkbox" name="service" value="gutter-cleaning" defaultChecked={isDefaultSelected("gutter-cleaning")} className="accent-gold w-4 h-4 cursor-pointer" /> Gutter Cleaning
+                                </label>
+                                <label htmlFor={`${prefix}chk-gutter-guards`} className="flex items-center gap-2 cursor-pointer hover:text-gold transition-colors">
+                                    <input id={`${prefix}chk-gutter-guards`} aria-label="Gutter Guards" type="checkbox" name="service" value="gutter-guards" defaultChecked={isDefaultSelected("gutter-guards")} className="accent-gold w-4 h-4 cursor-pointer" /> Gutter Guards
                                 </label>
                                 <label htmlFor={`${prefix}chk-concrete-cleaning`} className="flex items-center gap-2 cursor-pointer hover:text-gold transition-colors">
                                     <input id={`${prefix}chk-concrete-cleaning`} aria-label="Concrete Cleaning" type="checkbox" name="service" value="concrete-cleaning" defaultChecked={isDefaultSelected("concrete-cleaning")} className="accent-gold w-4 h-4 cursor-pointer" /> Concrete Cleaning
