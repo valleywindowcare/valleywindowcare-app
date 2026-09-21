@@ -22,7 +22,7 @@ export function isRedirectDestination(urlPath: string): boolean {
         "/service-areas",
         "/service-areas/green-bay",
         "/service-areas/green-bay/pressure-washing",
-        "/services/rust-removal-green-bay",
+        "/services/rust-removal",
         "/service-areas/green-bay/paver-patio-restorations",
         "/service-areas/green-bay/apartment-exterior-cleaning",
         "/service-areas/green-bay/hoa-services",

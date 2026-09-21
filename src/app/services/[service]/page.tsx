@@ -112,6 +112,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     if (service === 'power-washing') {
         permanentRedirect('https://valleyexteriorpros.com/services/pressure-washing');
     }
+    if (service === 'rust-removal-green-bay') {
+        permanentRedirect('https://valleyexteriorpros.com/services/rust-removal');
+    }
     const formattedName = formatTitle(service);
 
     const isCommercial = commercialServices.includes(service);
@@ -237,6 +240,9 @@ export default async function ServiceGenericPage({ params }: PageProps) {
     }
     if (service === 'power-washing') {
         permanentRedirect('https://valleyexteriorpros.com/services/pressure-washing');
+    }
+    if (service === 'rust-removal-green-bay') {
+        permanentRedirect('https://valleyexteriorpros.com/services/rust-removal');
     }
     const formattedName = formatTitle(service);
 

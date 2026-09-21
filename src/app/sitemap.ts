@@ -195,12 +195,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
         ...validServices,
         ...dynamicServicesList,
         ...Array.from(staticServices)
-    ]));
+    ])).filter((service) => service !== 'rust-removal-green-bay');
 
     // 2. Services Routes
+    const today = new Date('2026-09-20T00:00:00.000Z');
+    const recentlyUpdatedServices = new Set(['fleet-washing', 'barn-cleaning']);
+
     const serviceRoutes: MetadataRoute.Sitemap = allServices.map((service) => ({
         url: `${baseUrl}/services/${service}`,
-        lastModified: new Date(),
+        lastModified: recentlyUpdatedServices.has(service) ? today : new Date(),
         changeFrequency: 'weekly',
         priority: 0.9,
     }));
@@ -249,6 +252,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     dynamicIntersections.forEach((route) => {
         intersectionPaths.add(route);
     });
+    intersectionPaths.delete("/service-areas/appleton/house-washing");
 
     const intersectionRoutes: MetadataRoute.Sitemap = Array.from(intersectionPaths).map((route) => ({
         url: `${baseUrl}${route}`,
@@ -328,6 +332,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     return allRoutes.filter((route) => {
         const routePath = route.url.replace(baseUrl, "");
+        if (routePath === "/service-areas/appleton/house-washing" || routePath === "/services/rust-removal-green-bay") {
+            return false;
+        }
         const declaredCanonical = getDeclaredCanonical(routePath);
         return isSelfCanonical(routePath, declaredCanonical);
     });

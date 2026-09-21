@@ -79,6 +79,7 @@ const legacyToNestedMap: Record<string, string> = {
   "/services/rust-and-oxidation-removal": "/services/rust-removal",
   "/services/residential-rust-removal": "/services/rust-removal",
   "/services/oxidation-removal": "/services/rust-removal",
+  "/services/rust-removal-green-bay{/}?": "/services/rust-removal",
   "/services/hoa-multi-unit-cleaning": "/services/hoa-services",
   "/services/apartment-exterior-cleaning": "/services/hoa-services",
   "/services/apartment-hoa-cleaning": "/services/hoa-services",

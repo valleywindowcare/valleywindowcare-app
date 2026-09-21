@@ -10,6 +10,7 @@ const CANNIBALIZATION_REDIRECTS: Record<string, string> = {
   '/blog/gutter-cleaning-services-in-green-bay-wisconsin': 'https://valleyexteriorpros.com/services/gutter-cleaning',
   '/services/permanent-holiday-lighting': 'https://valleyexteriorpros.com/services/permanent-led-lighting',
   '/services/power-washing': 'https://valleyexteriorpros.com/services/pressure-washing',
+  '/services/rust-removal-green-bay': 'https://valleyexteriorpros.com/services/rust-removal',
 };
 
 export function middleware(request: NextRequest) {
