@@ -235,7 +235,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     intersectionPaths.add("/service-areas/green-bay/pressure-washing");
     intersectionPaths.add("/service-areas/green-bay/roof-cleaning");
     intersectionPaths.add("/service-areas/appleton/pressure-washing");
-    intersectionPaths.add("/service-areas/appleton/house-washing");
 
     // Add target intersections matching target criteria
     specificRoutes.forEach((route) => {
@@ -306,8 +305,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
             const explicit = [
                 "/service-areas/green-bay/pressure-washing",
                 "/service-areas/green-bay/roof-cleaning",
-                "/service-areas/appleton/pressure-washing",
-                "/service-areas/appleton/house-washing"
+                "/service-areas/appleton/pressure-washing"
             ];
             
             if (explicit.includes(routePath)) {
