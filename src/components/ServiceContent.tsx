@@ -7,7 +7,7 @@ interface ServiceContentProps {
     description: React.ReactNode;
     benefits: (string | React.ReactNode)[];
     process: (string | React.ReactNode)[];
-    protectionProtocols?: { title: string; description: string }[];
+    protectionProtocols?: { title: string; description: string | React.ReactNode }[];
     city?: string; // Optional city injection for local SEO
     image?: string; // High-res architectural payload
     imageAlt?: string; // High-density SEO alt

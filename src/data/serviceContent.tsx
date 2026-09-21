@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-export const serviceContentMap: Record<string, { pageH1?: string, description: React.ReactNode, benefits: (string | React.ReactNode)[], process: (string | React.ReactNode)[], protectionProtocols?: { title: string, description: string }[], pricing?: { title: string, description: string, rateTitle: string, ratePrice: string, rateDetails: string, minimumPrice: string, minimumDetails: string, variableTitle: string, variableDetails: string }, image?: string, faqs?: { question: string, answer: string }[] }> = {
+export const serviceContentMap: Record<string, { pageH1?: string, description: React.ReactNode, benefits: (string | React.ReactNode)[], process: (string | React.ReactNode)[], protectionProtocols?: { title: string, description: string | React.ReactNode }[], pricing?: { title: string, description: string, rateTitle: string, ratePrice: string, rateDetails: string, minimumPrice: string, minimumDetails: string, variableTitle: string, variableDetails: string }, image?: string, faqs?: { question: string, answer: string }[] }> = {
     "roof-cleaning": {
         description: (
             <section className="eeat-service-block space-y-8">
@@ -54,7 +54,11 @@ export const serviceContentMap: Record<string, { pageH1?: string, description: R
             },
             {
                 title: "Downspout Bagging & Filtration",
-                description: "We physically wrap and bag the ends of your downspouts to catch all heavy chemical runoff and dead algae, preventing toxic accumulation in your soil or garden beds."
+                description: (
+                    <>
+                        We physically wrap and bag the ends of your downspouts to catch all heavy chemical runoff and dead algae, preventing toxic accumulation in your soil or garden beds. Because roof cleaning flushes years of shingle grit and dead organic matter into the gutter line, this is the natural moment to add <Link href="/services/gutter-guards" className="text-navy font-bold underline hover:text-gold transition-colors">micro-mesh gutter guards</Link> — the debris load is already cleared, so the system starts clean.
+                    </>
+                )
             },
             {
                 title: "Low-Pressure Assurances",

@@ -370,7 +370,7 @@ export default function GutterCleaningPage() {
                         </h2>
                         <div className="space-y-4 text-base text-slate-700 leading-relaxed">
                             <p>
-                                Fox Valley homes take a harder spring hit than most of our Green Bay customers. The oak canopy through Appleton, Neenah, Menasha, and Kaukauna drops tassels in May in volumes that overwhelm gutter guards and pack downspout openings solid. Riverside properties along the Fox add cottonwood fluff to the mix, which mats with the first rain and turns into a felt-like plug.
+                                Fox Valley homes take a harder spring hit than most of our Green Bay customers. The oak canopy through Appleton, Neenah, Menasha, and Kaukauna drops tassels in May in volumes that overwhelm <Link href="/services/gutter-guards" className="text-blue-600 hover:text-navy font-bold underline decoration-blue-300 underline-offset-4 transition-colors">standard gutter guards</Link> and pack downspout openings solid. Riverside properties along the Fox add cottonwood fluff to the mix, which mats with the first rain and turns into a felt-like plug.
                             </p>
                             <p>
                                 We schedule Fox Valley spring cleanings deliberately late — after the oaks finish dropping, not during — so you pay for one visit instead of two.
@@ -389,7 +389,7 @@ export default function GutterCleaningPage() {
                         </h2>
                         <div className="text-base text-slate-700 leading-relaxed">
                             <p>
-                                De Pere is home. Our shop is on South Good Hope Road, which means shorter drive times, tighter scheduling windows, and the ability to come back quickly if something isn&apos;t right. Many De Pere properties combine mature hardwoods in the older grid near the river with newer subdivisions on the south end — we handle both, plus the commercial buildings and apartment properties along the Highway 41 corridor.
+                                De Pere is home. Our shop is on South Good Hope Road, which means shorter drive times, tighter scheduling windows, and the ability to come back quickly if something isn&apos;t right. See everything we cover locally on our <Link href="/service-areas/de-pere" className="text-blue-600 hover:text-navy font-bold underline decoration-blue-300 underline-offset-4 transition-colors">De Pere service area page</Link>. Many De Pere properties combine mature hardwoods in the older grid near the river with newer subdivisions on the south end — we handle both, plus the commercial buildings and apartment properties along the Highway 41 corridor.
                             </p>
                         </div>
                     </div>
