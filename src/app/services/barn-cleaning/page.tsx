@@ -8,18 +8,13 @@ import {
     MapPin,
     ArrowRight,
     Sparkles,
-    Check,
     Building2,
     Warehouse,
     Tractor,
     Droplets,
-    Wind,
     Flame,
-    Wrench,
     ShieldAlert,
     Gauge,
-    Layers,
-    Activity,
     Shield
 } from "lucide-react";
 import ServiceGrid from "@/components/ServiceGrid";
@@ -46,7 +41,7 @@ export const metadata: Metadata = {
                 url: "https://valleyexteriorpros.com/images/portfolio/commercial-roof-cleaning.webp",
                 width: 1200,
                 height: 630,
-                alt: "Wisconsin Agricultural Barn Cleaning, Roof Soft Washing & Interior Restoration",
+                alt: "Agricultural & Dairy Barn Cleaning in the Fox Valley and Northeast Wisconsin",
             }
         ]
     },
@@ -61,7 +56,7 @@ export const metadata: Metadata = {
 const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "Wisconsin Agricultural Barn Cleaning, Roof Soft Washing & Interior Restoration",
+    "name": "Agricultural & Dairy Barn Cleaning in the Fox Valley and Northeast Wisconsin",
     "serviceType": "Agricultural Barn Soft Washing & Interior Facility Sanitation",
     "description": "Statewide Wisconsin barn roof soft washing & interior deep cleaning. Dairy parlors, historic timber frames, equine facilities, pole barns. Free custom quote.",
     "provider": {
@@ -166,42 +161,42 @@ const faqSchema = {
     "mainEntity": [
         {
             "@type": "Question",
-            "name": "Do you travel throughout the entire state of Wisconsin for barn cleaning?",
+            "name": "What exactly do you do between farms to prevent carrying disease onto our operation?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Yes. While based in De Pere, Valley Property Services provides mobile barn roof soft washing and interior washouts across all of Wisconsin, including multi-building dairy operations, equine facilities, and historic event barns."
+                "text": "The rig gets a full wash-down before it leaves the previous site — exterior, tires, wheel wells, hose reels, wands, surface cleaners, and lift equipment — followed by disinfectant on every contact surface that touched a livestock area, held for full label contact time. Crews change into clean boots at your perimeter and use dedicated PPE. If your operation has a written biosecurity plan, a Line of Separation, or a required entry point, we follow yours rather than ours. We also won't run two livestock operations back-to-back without a complete decontamination cycle in between."
             }
         },
         {
             "@type": "Question",
-            "name": "What if our rural barn property has low water pressure or a weak well?",
+            "name": "Will washing our metal barn roof cause leaks?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Our commercial mobile wash trailers are equipped with large onboard water buffer tanks. This allows us to wash at high flow rates without draining or overheating your property's residential or agricultural well pump."
+                "text": "Not the way we do it. Leaks come from high-pressure washing, which loosens seam crimps and drives water up under flashings and fastener heads. We apply biodegradable algaecide under 300 PSI and let the chemistry kill the lichen and moss at the root, then rinse at low pressure. Nothing about the process flexes the panel or disturbs the seam. On older roofs with already-failing fasteners we'll tell you what we find before we start."
             }
         },
         {
             "@type": "Question",
-            "name": "Can you clean 30-foot cathedral timber ceilings and roof rafters?",
+            "name": "Can you actually remove milkstone, or just clean around it?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Yes. We utilize articulating aerial lifts, specialized high-reach carbon-fiber lances, and high-volume air sweeps to remove heavy dust, bird waste, and cobwebs from peak rafters and timber trusses safely."
+                "text": "Remove it. Milkstone is a calcium and magnesium mineral scale bonded with milk protein, and it's the reason parlors that get washed every week still look grey. Alkaline detergent alone will not touch the mineral component — it needs a dedicated acid descaling pass to dissolve the scale, usually alternated with an alkaline pass for the organic layer, both at temperature. Anyone quoting a parlor wash without describing a two-chemistry approach is planning to clean the surface film and leave the scale."
             }
         },
         {
             "@type": "Question",
-            "name": "How do you wash metal barn roofs without causing leaks or damage?",
+            "name": "Our well is weak — will you drain it?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "We strictly use dedicated low-pressure chemical soft washing—never high pressure. Our process eliminates lichen, moss, and algae at the root under gentle pressure, protecting fastener gaskets, lap seams, and painted finishes."
+                "text": "No. We assume rural water constraints by default. Many farms here run 3–5 GPM private wells, which cannot sustain commercial washing. Our rigs carry high-capacity buffer tanks and haul water in, so we're not drawing from your supply and your milkhouse and house pressure are unaffected while we work."
             }
         },
         {
             "@type": "Question",
-            "name": "Do you prepare historic barns for rustic wedding and event venue conversions?",
+            "name": "Do you clean 30-foot cathedral timber ceilings and truss structures?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Yes. We frequently work with venue owners to transform dusty agricultural barns into clean event spaces, neutralizing odors, removing decades of bat and bird residue, and restoring weathered timber surfaces."
+                "text": "Yes — aerial reach systems and high-reach air and water lances handle full-height timber barns, cathedral ceilings, and truss webs. This is the work that matters most in feed-handling areas, where accumulated dust on ledges and trusses is a genuine explosion hazard rather than an appearance problem, and in equine facilities where rafter dust drives respiratory issues."
             }
         }
     ]
@@ -209,24 +204,24 @@ const faqSchema = {
 
 const faqs = [
     {
-        question: "Do you travel throughout the entire state of Wisconsin for barn cleaning?",
-        answer: "Yes. While based in De Pere, Valley Property Services provides mobile barn roof soft washing and interior washouts across all of Wisconsin, including multi-building dairy operations, equine facilities, and historic event barns."
+        question: "What exactly do you do between farms to prevent carrying disease onto our operation?",
+        answer: "The rig gets a full wash-down before it leaves the previous site — exterior, tires, wheel wells, hose reels, wands, surface cleaners, and lift equipment — followed by disinfectant on every contact surface that touched a livestock area, held for full label contact time. Crews change into clean boots at your perimeter and use dedicated PPE. If your operation has a written biosecurity plan, a Line of Separation, or a required entry point, we follow yours rather than ours. We also won't run two livestock operations back-to-back without a complete decontamination cycle in between."
     },
     {
-        question: "What if our rural barn property has low water pressure or a weak well?",
-        answer: "Our commercial mobile wash trailers are equipped with large onboard water buffer tanks. This allows us to wash at high flow rates without draining or overheating your property's residential or agricultural well pump."
+        question: "Will washing our metal barn roof cause leaks?",
+        answer: "Not the way we do it. Leaks come from high-pressure washing, which loosens seam crimps and drives water up under flashings and fastener heads. We apply biodegradable algaecide under 300 PSI and let the chemistry kill the lichen and moss at the root, then rinse at low pressure. Nothing about the process flexes the panel or disturbs the seam. On older roofs with already-failing fasteners we'll tell you what we find before we start."
     },
     {
-        question: "Can you clean 30-foot cathedral timber ceilings and roof rafters?",
-        answer: "Yes. We utilize articulating aerial lifts, specialized high-reach carbon-fiber lances, and high-volume air sweeps to remove heavy dust, bird waste, and cobwebs from peak rafters and timber trusses safely."
+        question: "Can you actually remove milkstone, or just clean around it?",
+        answer: "Remove it. Milkstone is a calcium and magnesium mineral scale bonded with milk protein, and it's the reason parlors that get washed every week still look grey. Alkaline detergent alone will not touch the mineral component — it needs a dedicated acid descaling pass to dissolve the scale, usually alternated with an alkaline pass for the organic layer, both at temperature. Anyone quoting a parlor wash without describing a two-chemistry approach is planning to clean the surface film and leave the scale."
     },
     {
-        question: "How do you wash metal barn roofs without causing leaks or damage?",
-        answer: "We strictly use dedicated low-pressure chemical soft washing—never high pressure. Our process eliminates lichen, moss, and algae at the root under gentle pressure, protecting fastener gaskets, lap seams, and painted finishes."
+        question: "Our well is weak — will you drain it?",
+        answer: "No. We assume rural water constraints by default. Many farms here run 3–5 GPM private wells, which cannot sustain commercial washing. Our rigs carry high-capacity buffer tanks and haul water in, so we're not drawing from your supply and your milkhouse and house pressure are unaffected while we work."
     },
     {
-        question: "Do you prepare historic barns for rustic wedding and event venue conversions?",
-        answer: "Yes. We frequently work with venue owners to transform dusty agricultural barns into clean event spaces, neutralizing odors, removing decades of bat and bird residue, and restoring weathered timber surfaces."
+        question: "Do you clean 30-foot cathedral timber ceilings and truss structures?",
+        answer: "Yes — aerial reach systems and high-reach air and water lances handle full-height timber barns, cathedral ceilings, and truss webs. This is the work that matters most in feed-handling areas, where accumulated dust on ledges and trusses is a genuine explosion hazard rather than an appearance problem, and in equine facilities where rafter dust drives respiratory issues."
     }
 ];
 
@@ -252,7 +247,7 @@ export default function BarnCleaningPage() {
                 <div className="absolute inset-0 z-0">
                     <Image
                         src="/images/portfolio/commercial-roof-cleaning.webp"
-                        alt="Wisconsin Agricultural Barn Cleaning, Roof Soft Washing & Interior Restoration"
+                        alt="Agricultural & Dairy Barn Cleaning in the Fox Valley and Northeast Wisconsin"
                         fill
                         priority={true}
                         quality={90}
@@ -265,12 +260,12 @@ export default function BarnCleaningPage() {
                 <div className="container mx-auto px-4 relative z-20 max-w-4xl text-center">
                     {/* H1 */}
                     <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-tight tracking-tight drop-shadow-md text-white mb-6">
-                        Wisconsin Agricultural Barn Cleaning, Roof Soft Washing &amp; Interior Restoration
+                        Agricultural &amp; Dairy Barn Cleaning in the Fox Valley and Northeast Wisconsin
                     </h1>
 
-                    {/* Subhead */}
+                    {/* Subhead / Hero Subtext */}
                     <p className="text-lg sm:text-xl text-slate-200 font-medium max-w-3xl mx-auto mb-8 leading-relaxed">
-                        Statewide mobile service for dairy facilities, horse stables, modern pole buildings, and historic timber barns. Equipped with commercial hot-water rigs, remote water buffer tanks, and aerial reach systems to handle multi-acre agricultural properties with zero down-time.
+                        Mobile barn washing, roof soft washing, and interior facility sanitation for dairy operations, livestock housing, horse stables, modern pole buildings, and historic timber barns across Brown, Outagamie, Kewaunee, Manitowoc, Shawano, and Winnebago counties. Commercial 200°F hot-water rigs, on-board water buffer tanks, aerial reach systems, and full between-site biosecurity decontamination.
                     </p>
 
                     {/* CTAs */}
@@ -291,14 +286,118 @@ export default function BarnCleaningPage() {
                         </a>
                     </div>
 
-                    {/* Authority Badges */}
+                    {/* Authority Badges / Trust Bar */}
                     <div className="pt-3 text-xs sm:text-sm text-slate-300 font-semibold tracking-wide border-t border-white/15 inline-block max-w-3xl">
-                        Statewide Wisconsin Travel · $2M Commercial Liability · On-Site Water Buffer Support · Bio-Security Protocol Compliant
+                        $2M Commercial Liability · On-Site Water Buffer Support · Between-Farm Biosecurity Protocol · Statewide Travel Available
                     </div>
                 </div>
             </section>
 
-            {/* SECTION 1: EXTERIOR AGRICULTURAL WASHING CAPABILITIES */}
+            {/* SECTION 1: NORTHEAST WISCONSIN AGRICULTURE */}
+            <section className="py-16 sm:py-20 bg-white border-b border-slate-100">
+                <div className="container mx-auto px-4 max-w-4xl">
+                    <div className="max-w-3xl mx-auto mb-10">
+                        <div className="inline-flex items-center gap-2 text-gold font-extrabold text-xs sm:text-sm uppercase tracking-widest mb-2">
+                            <Tractor size={16} />
+                            <span>Northeast Wisconsin Agriculture</span>
+                        </div>
+                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-navy tracking-tight mb-4">
+                            Built for the Farms Between Green Bay and the Fox River
+                        </h2>
+                        <div className="space-y-4 text-slate-700 text-base sm:text-lg leading-relaxed">
+                            <p>
+                                Northeast Wisconsin runs a particular kind of agriculture, and it makes particular messes. Brown, Kewaunee, and Manitowoc counties carry one of the densest concentrations of dairy operations in the country — a mix of legacy tie-stall barns still in daily use, 1990s freestall expansions, and new-build parlors on the same section of road. Outagamie and Shawano add cash crop and mixed livestock. Door County adds orchard and equine.
+                            </p>
+                            <p>
+                                That mix matters because a 1920s gambrel with original timber decking and a six-year-old steel-clad freestall cannot be cleaned the same way, and a contractor who only owns a pressure washer will damage one of them.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div className="bg-slate-50 p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm">
+                        <h3 className="text-lg sm:text-xl font-bold text-navy mb-2 flex items-center gap-2">
+                            <MapPin size={18} className="text-gold" />
+                            Where we work
+                        </h3>
+                        <p className="text-slate-700 text-base sm:text-lg leading-relaxed">
+                            Green Bay, De Pere, Kaukauna, Little Chute, Wrightstown, Seymour, Pulaski, Denmark, Luxemburg, Casco, Algoma, Kewaunee, Two Rivers, Shawano, Appleton, and surrounding agricultural townships. Statewide travel remains available for multi-building facilities and major agricultural operations across Wisconsin.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            {/* SECTION 2: BETWEEN-SITE DECONTAMINATION */}
+            <section className="py-16 sm:py-20 bg-slate-50 border-b border-slate-100">
+                <div className="container mx-auto px-4 max-w-4xl">
+                    <div className="max-w-3xl mx-auto mb-10">
+                        <div className="inline-flex items-center gap-2 text-gold font-extrabold text-xs sm:text-sm uppercase tracking-widest mb-2">
+                            <ShieldAlert size={16} />
+                            <span>Between-Site Decontamination</span>
+                        </div>
+                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-navy tracking-tight mb-4">
+                            Biosecurity Is the First Thing We Do, Not a Line in the Brochure
+                        </h2>
+                        <div className="space-y-4 text-slate-700 text-base sm:text-lg leading-relaxed">
+                            <p>
+                                This is the section to read carefully if you run livestock, because it is where most exterior cleaning contractors will fail you.
+                            </p>
+                            <p>
+                                A pressure washing rig is an outstanding disease vector. It carries water, organic material, boot traffic, hose that drags across bedding and manure, and tires that sat in another producer&apos;s yard yesterday. Pathogens that matter in this region — <strong>PRRS</strong> in swine, <strong>Salmonella</strong> and <strong>Mycoplasma</strong> in dairy, <strong>avian influenza</strong> in poultry, and <strong>H5N1</strong> circulating in dairy cattle — move between operations on exactly this kind of equipment. A contractor who drives from one farm to the next without a wash-out between them is carrying whatever was on the last floor onto yours.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div className="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm">
+                        <h3 className="text-lg sm:text-xl font-bold text-navy mb-4">
+                            Our between-site protocol
+                        </h3>
+                        <ol className="space-y-4 text-slate-700 text-base sm:text-lg">
+                            <li className="flex items-start gap-3">
+                                <span className="w-7 h-7 rounded-full bg-navy text-gold font-black flex items-center justify-center text-sm shrink-0 mt-0.5">
+                                    1
+                                </span>
+                                <div>
+                                    <strong>Full equipment wash-down before we leave the previous site:</strong> Rig exterior, wheel wells, tires, hose reels, wands, surface cleaners, ladders, and lift equipment are washed before the truck goes back on the road — not after it arrives at yours.
+                                </div>
+                            </li>
+                            <li className="flex items-start gap-3">
+                                <span className="w-7 h-7 rounded-full bg-navy text-gold font-black flex items-center justify-center text-sm shrink-0 mt-0.5">
+                                    2
+                                </span>
+                                <div>
+                                    <strong>Disinfectant application to all contact surfaces:</strong> Hoses, lances, nozzles, boots, and any tooling that touched a livestock surface receive an EPA-registered agricultural peroxygen or quaternary ammonium disinfectant held for full label contact time.
+                                </div>
+                            </li>
+                            <li className="flex items-start gap-3">
+                                <span className="w-7 h-7 rounded-full bg-navy text-gold font-black flex items-center justify-center text-sm shrink-0 mt-0.5">
+                                    3
+                                </span>
+                                <div>
+                                    <strong>Clean boots and dedicated PPE per site:</strong> Crews change footwear at your perimeter. Disposable coveralls are used where a producer&apos;s plan requires them.
+                                </div>
+                            </li>
+                            <li className="flex items-start gap-3">
+                                <span className="w-7 h-7 rounded-full bg-navy text-gold font-black flex items-center justify-center text-sm shrink-0 mt-0.5">
+                                    4
+                                </span>
+                                <div>
+                                    <strong>We work to your plan, not ours:</strong> If your operation has a written biosecurity plan, a designated Line of Separation, a required entry point, or a footbath station, tell us at scheduling and we follow it. If you participate in the Secure Milk Supply or a comparable program, we can work inside those requirements.
+                                </div>
+                            </li>
+                            <li className="flex items-start gap-3">
+                                <span className="w-7 h-7 rounded-full bg-navy text-gold font-black flex items-center justify-center text-sm shrink-0 mt-0.5">
+                                    5
+                                </span>
+                                <div>
+                                    <strong>Scheduling sequence:</strong> Where possible we sequence livestock operations first in the day, ahead of non-livestock work, and we will not schedule two separate livestock operations back-to-back without a full decontamination cycle between them.
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+
+            {/* SECTION 3: CHEMICAL LOW-PRESSURE PRESERVATION */}
             <section className="py-16 sm:py-20 bg-white border-b border-slate-100">
                 <div className="container mx-auto px-4 max-w-4xl">
                     <div className="max-w-3xl mx-auto mb-10">
@@ -306,151 +405,143 @@ export default function BarnCleaningPage() {
                             <Droplets size={16} />
                             <span>Chemical Low-Pressure Preservation</span>
                         </div>
-                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-navy tracking-tight">
-                            Dedicated Non-Pressure Roof &amp; Exterior Soft Washing
+                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-navy tracking-tight mb-4">
+                            Roof &amp; Exterior Soft Washing Without Stripping the Building
                         </h2>
+                        <div className="space-y-4 text-slate-700 text-base sm:text-lg leading-relaxed">
+                            <p>
+                                Decades of biological infestation — heavy lichen crusts, moss carpets, and Gloeocapsa magma algae — destroy factory coatings on corrugated metal, corrode exposed fasteners, and rot cedar shake roofing. Blasting agricultural roofs with standard high pressure strips protective paint layers, loosens metal seam crimps, and injects water under flashings, which is how a cleaning turns into a leak.
+                            </p>
+                            <p>
+                                We apply biodegradable algaecides through a custom soft wash delivery system <strong>under 300 PSI</strong>, neutralizing root structures down to the substrate. The chemistry kills the organism; it doesn&apos;t sand the building.
+                            </p>
+                        </div>
                     </div>
 
-                    <div className="bg-slate-50 p-8 sm:p-10 rounded-3xl border border-slate-200 shadow-sm space-y-6 text-slate-700 text-base sm:text-lg leading-relaxed mb-8">
-                        <p>
-                            Decades of biological infestation—heavy lichen crusts, moss carpets, and <em>Gloeocapsa magma</em> algae—destroy the factory coatings on corrugated metal, corrode exposed fasteners, and rot cedar shake roofing. Blasting agricultural roofs with standard high pressure strips protective paint layers, loosens metal seam crimps, and injects water under flashings. We utilize custom chemical soft wash delivery systems applying biodegradable algaecides under 300 PSI, neutralizing root structures down to the substrate.
-                        </p>
+                    <div className="grid sm:grid-cols-3 gap-6">
+                        <div className="bg-slate-50 p-6 sm:p-7 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                            <div>
+                                <h3 className="text-lg font-bold text-navy mb-2">
+                                    Standing seam &amp; corrugated metal roofs
+                                </h3>
+                                <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+                                    Gentle lichen dissolution and chemical rust pre-treatment without surface denting or seam degradation. Lichen on steel is not a surface stain — the rhizines penetrate the coating, and scrubbing them off takes the paint with them. Dissolving them does not.
+                                </p>
+                            </div>
+                        </div>
 
-                        <div className="pt-2">
-                            <h3 className="text-sm font-black text-navy uppercase tracking-widest mb-4">
-                                Specialized Surfaces:
-                            </h3>
-                            <div className="grid sm:grid-cols-2 gap-4">
-                                <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
-                                    <h4 className="font-bold text-navy text-base mb-1.5 flex items-center gap-2">
-                                        <span className="w-2 h-2 rounded-full bg-gold shrink-0"></span>
-                                        Standing Seam &amp; Corrugated Metal Roofs
-                                    </h4>
-                                    <p className="text-sm text-slate-600 leading-relaxed">
-                                        Gentle lichen dissolution and chemical rust pre-treatment without surface denting or seam degradation.
-                                    </p>
-                                </div>
+                        <div className="bg-slate-50 p-6 sm:p-7 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                            <div>
+                                <h3 className="text-lg font-bold text-navy mb-2">
+                                    Historic gambrel &amp; timber barn shingles
+                                </h3>
+                                <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+                                    Safe moss and mold extermination that preserves fragile decking, weathered asphalt, and cedar shakes. On century barns with original sheathing, the decking is often the most fragile component on the property and the least visible from the ground.
+                                </p>
+                            </div>
+                        </div>
 
-                                <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
-                                    <h4 className="font-bold text-navy text-base mb-1.5 flex items-center gap-2">
-                                        <span className="w-2 h-2 rounded-full bg-gold shrink-0"></span>
-                                        Historic Gambrel &amp; Timber Barn Shingles
-                                    </h4>
-                                    <p className="text-sm text-slate-600 leading-relaxed">
-                                        Safe moss and mold extermination preserving fragile decking, weathered asphalt, and cedar shakes.
-                                    </p>
-                                </div>
-
-                                <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
-                                    <h4 className="font-bold text-navy text-base mb-1.5 flex items-center gap-2">
-                                        <span className="w-2 h-2 rounded-full bg-gold shrink-0"></span>
-                                        Board &amp; Batten, Siding Panels &amp; Masonry Foundations
-                                    </h4>
-                                    <p className="text-sm text-slate-600 leading-relaxed">
-                                        Removal of road dust, soil splash-back, and biological growth from fieldstone, poured concrete, and weathered pine siding.
-                                    </p>
-                                </div>
-
-                                <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
-                                    <h4 className="font-bold text-navy text-base mb-1.5 flex items-center gap-2">
-                                        <span className="w-2 h-2 rounded-full bg-gold shrink-0"></span>
-                                        Silos &amp; Outbuildings
-                                    </h4>
-                                    <p className="text-sm text-slate-600 leading-relaxed">
-                                        High-reach soft wash cleaning of concrete stave silos, bulk feed bins, and machinery sheds.
-                                    </p>
-                                </div>
+                        <div className="bg-slate-50 p-6 sm:p-7 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                            <div>
+                                <h3 className="text-lg font-bold text-navy mb-2">
+                                    Board &amp; batten, siding panels &amp; masonry foundations
+                                </h3>
+                                <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+                                    Removal of road dust, soil splash-back, and biological growth from fieldstone, poured concrete, and weathered pine siding. Field dust loading on the prevailing-wind side of a barn is usually far heavier than owners realize until one elevation is finished.
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* SECTION 2: COMPREHENSIVE INTERIOR BARN WASHOUTS & HIGH-DUSTING */}
+            {/* SECTION 4: HEAVY ORGANIC DESCALING */}
             <section className="py-16 sm:py-20 bg-slate-50 border-b border-slate-100">
                 <div className="container mx-auto px-4 max-w-4xl">
                     <div className="max-w-3xl mx-auto mb-10">
                         <div className="inline-flex items-center gap-2 text-gold font-extrabold text-xs sm:text-sm uppercase tracking-widest mb-2">
                             <Warehouse size={16} />
-                            <span>Facility Decontamination &amp; Restoration</span>
+                            <span>Heavy Organic Descaling</span>
                         </div>
-                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-navy tracking-tight">
-                            Interior Sanitation, Truss Cobweb Blasting &amp; Deep Degreasing
+                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-navy tracking-tight mb-4">
+                            Interior Sanitation, Milkstone Removal &amp; Deep Degreasing
                         </h2>
+                        <div className="space-y-4 text-slate-700 text-base sm:text-lg leading-relaxed">
+                            <p>
+                                Interior agricultural accumulation is a genuine hazard, not a cosmetic problem. Dust loading on trusses and ledges is a <strong>dust-explosion risk</strong> in feed-handling areas, degrades air quality for both livestock and workers, and fails food-safety and insurance inspections.
+                            </p>
+                            <p>
+                                Our rigs deliver up to <strong>200°F commercial hot water</strong> with specialty high-reach air and water lances to strip decades of grime from cathedral ceilings down to concrete floors.
+                            </p>
+                        </div>
                     </div>
 
-                    <div className="bg-white p-8 sm:p-10 rounded-3xl border border-slate-200 shadow-sm space-y-6 text-slate-700 text-base sm:text-lg leading-relaxed mb-8">
-                        <p>
-                            Interior agricultural accumulations present severe dust-explosion hazards, reduce air quality, and fail municipal or food-safety inspections. Our industrial rigs deliver up to 200°F commercial hot water and specialty high-reach air/water lances to strip decades of grime from cathedral ceilings down to concrete floors.
-                        </p>
-
-                        <div className="pt-2">
-                            <h3 className="text-sm font-black text-navy uppercase tracking-widest mb-4">
-                                Facility Focus Areas:
+                    <div className="space-y-8">
+                        <div className="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm">
+                            <h3 className="text-lg sm:text-xl font-bold text-navy mb-3">
+                                Why heat is the whole job on organic soils
                             </h3>
-                            <div className="grid sm:grid-cols-2 gap-4">
-                                <div className="bg-slate-50 p-5 rounded-2xl border border-slate-200">
-                                    <div className="flex items-center gap-3 mb-2">
-                                        <div className="w-9 h-9 rounded-xl bg-navy text-gold flex items-center justify-center shrink-0">
-                                            <Tractor size={18} />
-                                        </div>
-                                        <h4 className="font-bold text-navy text-base">
-                                            Commercial Dairy Parlors &amp; Holding Areas
-                                        </h4>
+                            <p className="text-slate-700 text-base sm:text-lg leading-relaxed mb-4">
+                                Organic farm soil is a layered problem: protein, fat, and mineral, usually bonded together and baked on. Cold water and a general-purpose detergent move almost none of it.
+                            </p>
+                            <ul className="space-y-3.5 text-slate-700 text-base sm:text-lg">
+                                <li className="flex items-start gap-3">
+                                    <span className="w-2 h-2 rounded-full bg-gold shrink-0 mt-2.5"></span>
+                                    <div>
+                                        <strong>Fats and butterfat residue</strong> have a melt point. Above roughly 140°F they liquefy and release; below it, you are scraping.
                                     </div>
-                                    <p className="text-sm text-slate-600 leading-relaxed">
-                                        High-temperature washouts of parlor pits, milking stalls, stainless wash lines, and glazed tile, eliminating milkstone, organic waste, and biofilm.
-                                    </p>
-                                </div>
+                                </li>
+                                <li className="flex items-start gap-3">
+                                    <span className="w-2 h-2 rounded-full bg-gold shrink-0 mt-2.5"></span>
+                                    <div>
+                                        <strong>Protein films</strong> need alkalinity, not pressure. A chlorinated alkaline detergent breaks the protein bond so it can be rinsed rather than chiselled.
+                                    </div>
+                                </li>
+                                <li className="flex items-start gap-3">
+                                    <span className="w-2 h-2 rounded-full bg-gold shrink-0 mt-2.5"></span>
+                                    <div>
+                                        <strong>Milkstone</strong> is the hard one — a calcium-and-magnesium mineral scale bonded with milk protein that builds on parlor walls, stall dividers, glazed tile, and stainless wash lines. It does not respond to alkaline cleaners at all. It requires an <strong>acid descaling pass</strong> (phosphoric or dairy-approved acid) to dissolve the mineral component, typically alternated with an alkaline pass to take the organic layer.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
 
-                                <div className="bg-slate-50 p-5 rounded-2xl border border-slate-200">
-                                    <div className="flex items-center gap-3 mb-2">
-                                        <div className="w-9 h-9 rounded-xl bg-navy text-gold flex items-center justify-center shrink-0">
-                                            <ShieldCheck size={18} />
-                                        </div>
-                                        <h4 className="font-bold text-navy text-base">
-                                            Equine Barns, Stables &amp; Indoor Arenas
-                                        </h4>
-                                    </div>
-                                    <p className="text-sm text-slate-600 leading-relaxed">
-                                        Stall-by-stall sanitation, rubber mat extraction, wash rack degreasing, and arena rafter dust mitigation to protect equine respiratory health.
-                                    </p>
-                                </div>
+                        <div className="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm">
+                            <h3 className="text-lg sm:text-xl font-bold text-navy mb-3">
+                                High-flow hot-water rinsing
+                            </h3>
+                            <p className="text-slate-700 text-base sm:text-lg leading-relaxed">
+                                Descaling chemistry is only half the result — the rinse is the other half. We rinse at <strong>high volume and low pressure</strong>, because volume is what carries suspended organic load off a wall and down a drain. High pressure at low volume aerosolizes it instead, which on a livestock facility means you&apos;ve just put contamination into the air and onto adjacent surfaces.
+                            </p>
+                        </div>
 
-                                <div className="bg-slate-50 p-5 rounded-2xl border border-slate-200">
-                                    <div className="flex items-center gap-3 mb-2">
-                                        <div className="w-9 h-9 rounded-xl bg-navy text-gold flex items-center justify-center shrink-0">
-                                            <Sparkles size={18} />
-                                        </div>
-                                        <h4 className="font-bold text-navy text-base">
-                                            Pre-Sale Prep &amp; Wedding Venue Conversions
-                                        </h4>
-                                    </div>
-                                    <p className="text-sm text-slate-600 leading-relaxed">
-                                        Specialized deep-cleaning for historic post-and-beam structures. We strip centuries of cobwebs, swallow nests, bird droppings, and diesel soot while preserving natural aged timber patina.
-                                    </p>
-                                </div>
-
-                                <div className="bg-slate-50 p-5 rounded-2xl border border-slate-200">
-                                    <div className="flex items-center gap-3 mb-2">
-                                        <div className="w-9 h-9 rounded-xl bg-navy text-gold flex items-center justify-center shrink-0">
-                                            <Activity size={18} />
-                                        </div>
-                                        <h4 className="font-bold text-navy text-base">
-                                            Poultry &amp; Swine Housing
-                                        </h4>
-                                    </div>
-                                    <p className="text-sm text-slate-600 leading-relaxed">
-                                        Complete turn-cycle sanitation and disinfectant flushes between livestock rotations.
-                                    </p>
-                                </div>
+                        <div className="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm">
+                            <h3 className="text-lg sm:text-xl font-bold text-navy mb-4">
+                                Facility focus areas
+                            </h3>
+                            <div className="space-y-4 text-slate-700 text-base sm:text-lg leading-relaxed">
+                                <p>
+                                    <strong>Commercial dairy parlors &amp; holding areas:</strong> High-temperature washouts of parlor pits, milking stalls, stainless wash lines, and glazed tile, eliminating milkstone, organic waste, and biofilm.
+                                </p>
+                                <p>
+                                    <strong>Freestall barns &amp; tie-stall facilities:</strong> Alley, curtain, fan, and ceiling cleaning. Fan blades and shroud loading directly reduce ventilation performance, which drives heat stress and somatic cell count.
+                                </p>
+                                <p>
+                                    <strong>Equine barns, stables &amp; indoor arenas:</strong> Stall-by-stall sanitation, rubber mat extraction, wash rack degreasing, and arena rafter dust mitigation to protect equine respiratory health.
+                                </p>
+                                <p>
+                                    <strong>Poultry &amp; swine housing:</strong> Complete turn-cycle sanitation and disinfectant flushes between livestock rotations, sequenced around your placement schedule.
+                                </p>
+                                <p>
+                                    <strong>Pre-sale prep &amp; wedding venue conversions:</strong> Specialized deep-cleaning for historic post-and-beam structures. We strip generations of cobwebs, swallow nests, bird droppings, and diesel soot while preserving the aged timber patina.
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* SECTION 3: REMOTE FIELD INFRASTRUCTURE & BIO-SECURITY */}
+            {/* SECTION 5: SELF-CONTAINED RIG INFRASTRUCTURE */}
             <section className="py-16 sm:py-20 bg-white border-b border-slate-100">
                 <div className="container mx-auto px-4 max-w-4xl">
                     <div className="max-w-3xl mx-auto mb-10">
@@ -458,50 +549,30 @@ export default function BarnCleaningPage() {
                             <Gauge size={16} />
                             <span>Self-Contained Rig Infrastructure</span>
                         </div>
-                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-navy tracking-tight">
-                            Fully Self-Contained Rigs for Remote Agricultural Operations
+                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-navy tracking-tight mb-4">
+                            We Don&apos;t Drain Your Well
                         </h2>
                     </div>
 
-                    <div className="grid sm:grid-cols-3 gap-6">
-                        <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                    <div className="grid sm:grid-cols-2 gap-6">
+                        <div className="bg-slate-50 p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
                             <div>
-                                <div className="w-10 h-10 rounded-xl bg-navy text-gold flex items-center justify-center shrink-0 mb-4">
-                                    <Droplets size={20} />
-                                </div>
-                                <h3 className="text-lg font-bold text-navy mb-2">
-                                    On-Board Water Hauling &amp; Buffer Tanks
+                                <h3 className="text-lg sm:text-xl font-bold text-navy mb-3">
+                                    On-board water hauling &amp; buffer tanks
                                 </h3>
-                                <p className="text-sm text-slate-600 leading-relaxed">
-                                    Rural farms often rely on low-yield private wells (3–5 GPM). Our rigs carry high-capacity buffer tanks to ensure continuous operation without straining your well pump.
+                                <p className="text-slate-700 text-base sm:text-lg leading-relaxed">
+                                    Rural properties frequently run low-yield private wells in the <strong>3–5 GPM</strong> range. A commercial wash draws far more than that continuously, and pulling it from the house well means a burned pump and no water in the milkhouse. Our rigs carry high-capacity buffer tanks and haul water in, so the operation runs continuously without touching your supply.
                                 </p>
                             </div>
                         </div>
 
-                        <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                        <div className="bg-slate-50 p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
                             <div>
-                                <div className="w-10 h-10 rounded-xl bg-navy text-gold flex items-center justify-center shrink-0 mb-4">
-                                    <ShieldAlert size={20} />
-                                </div>
-                                <h3 className="text-lg font-bold text-navy mb-2">
-                                    Bio-Security Sanitation Protocols
+                                <h3 className="text-lg sm:text-xl font-bold text-navy mb-3">
+                                    Runoff &amp; environmental safeguards
                                 </h3>
-                                <p className="text-sm text-slate-600 leading-relaxed">
-                                    To prevent cross-farm pathogen contamination (such as avian influenza or PRRS), our equipment, hoses, and boots undergo complete disinfection before entering your biosecure perimeter.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
-                            <div>
-                                <div className="w-10 h-10 rounded-xl bg-navy text-gold flex items-center justify-center shrink-0 mb-4">
-                                    <Shield size={20} />
-                                </div>
-                                <h3 className="text-lg font-bold text-navy mb-2">
-                                    Runoff &amp; Environmental Safeguards
-                                </h3>
-                                <p className="text-sm text-slate-600 leading-relaxed">
-                                    All chemical applications are tightly metered and contained to keep wash runoff away from livestock watering troughs, surface pastures, and wetlands.
+                                <p className="text-slate-700 text-base sm:text-lg leading-relaxed">
+                                    Chemical application is tightly metered and contained to keep wash runoff away from livestock watering troughs, open pasture, field tile inlets, and wetlands. On operations with a nutrient management plan or a DNR-permitted manure storage system, we plan the wash footprint and discharge path around it rather than improvising on the day.
                                 </p>
                             </div>
                         </div>
@@ -509,63 +580,8 @@ export default function BarnCleaningPage() {
                 </div>
             </section>
 
-            {/* SECTION 4: STATEWIDE WISCONSIN SERVICE AREAS */}
-            <section className="py-16 sm:py-20 bg-slate-50 border-b border-slate-100">
-                <div className="container mx-auto px-4 max-w-4xl">
-                    <div className="bg-slate-900 text-white rounded-3xl p-8 sm:p-12 border border-slate-800 shadow-xl">
-                        <div className="inline-flex items-center gap-2 text-gold font-bold text-xs uppercase tracking-wider mb-3">
-                            <MapPin size={16} />
-                            <span>All 72 Wisconsin Counties</span>
-                        </div>
-                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-white mb-6">
-                            Serving Rural Estates, Farms &amp; Commercial Venues Statewide
-                        </h2>
-                        <div className="space-y-4 text-slate-300 text-base sm:text-lg leading-relaxed">
-                            <p>
-                                From our central shop in De Pere, our commercial crews dispatch across all 72 Wisconsin counties:
-                            </p>
-                            <div className="grid sm:grid-cols-2 gap-4 pt-2 text-sm text-slate-200">
-                                <div className="bg-slate-800/80 p-4 rounded-xl border border-slate-700">
-                                    <strong className="text-gold block mb-1">Fox Valley &amp; Lakeshore:</strong>
-                                    Brown, Outagamie, Calumet, Winnebago, Manitowoc, and Kewaunee counties.
-                                </div>
-                                <div className="bg-slate-800/80 p-4 rounded-xl border border-slate-700">
-                                    <strong className="text-gold block mb-1">Central Wisconsin Agricultural Belt:</strong>
-                                    Marathon, Clark, Wood, Portage, and Waupaca counties.
-                                </div>
-                                <div className="bg-slate-800/80 p-4 rounded-xl border border-slate-700">
-                                    <strong className="text-gold block mb-1">Southern &amp; Eastern Dairy Hubs:</strong>
-                                    Fond du Lac, Sheboygan, Dodge, Green Lake, and Dane counties.
-                                </div>
-                                <div className="bg-slate-800/80 p-4 rounded-xl border border-slate-700">
-                                    <strong className="text-gold block mb-1">Door County &amp; Northern Regions:</strong>
-                                    Agricultural estates, orchard facilities, and commercial destination event barns.
-                                </div>
-                            </div>
-                            <p className="pt-2">
-                                In addition to full barn restorations, our crews provide high-output{" "}
-                                <Link
-                                    href="/services/pressure-washing"
-                                    className="text-gold hover:text-white font-bold underline decoration-gold/50 underline-offset-4 transition-colors"
-                                >
-                                    pressure washing
-                                </Link>{" "}
-                                for milking parlor holding pens, feed alleys, and machinery pads, as well as comprehensive{" "}
-                                <Link
-                                    href="/service-areas/green-bay"
-                                    className="text-gold hover:text-white font-bold underline decoration-gold/50 underline-offset-4 transition-colors"
-                                >
-                                    commercial exterior cleaning
-                                </Link>{" "}
-                                for agribusiness operations across Wisconsin.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* SECTION 5: ADVANCED SCHEMA & STRUCTURAL FAQS */}
-            <section className="py-16 sm:py-20 bg-white border-b border-slate-100">
+            {/* SECTION 6: DIRECT ANSWERS / FAQS */}
+            <section className="py-16 sm:py-20 bg-slate-50 border-b border-slate-100" id="faq">
                 <div className="container mx-auto px-4 max-w-4xl">
                     <div className="max-w-3xl mx-auto mb-12 text-center">
                         <div className="inline-flex items-center gap-2 text-gold font-extrabold text-xs sm:text-sm uppercase tracking-widest mb-2">
@@ -581,7 +597,7 @@ export default function BarnCleaningPage() {
                         {faqs.map((faq, idx) => (
                             <div
                                 key={idx}
-                                className="bg-slate-50 p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm relative overflow-hidden"
+                                className="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm relative overflow-hidden"
                             >
                                 <div className="absolute top-0 left-0 w-2 h-full bg-gold" />
                                 <h3 className="text-lg sm:text-xl font-bold text-navy mb-3 pl-2 sm:pl-3">

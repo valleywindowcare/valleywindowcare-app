@@ -3,22 +3,15 @@ import Image from "next/image";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import {
-    ShieldCheck,
-    Phone,
-    MapPin,
-    ArrowRight,
-    Sparkles,
-    Check,
     Truck,
     Clock,
-    Droplets,
     Flame,
-    Wrench,
-    Shield,
     Leaf,
     Zap,
-    Gauge,
-    Layers
+    Layers,
+    Sparkles,
+    ArrowRight,
+    Phone
 } from "lucide-react";
 import ServiceGrid from "@/components/ServiceGrid";
 
@@ -166,39 +159,39 @@ const faqSchema = {
             "name": "How does mobile fleet washing work at our terminal or yard?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Our mobile rigs arrive at your yard equipped with onboard industrial hot-water pressure washers, commercial pumps, and water buffer tanks. We wash your vehicles directly on-site during your scheduled staging window, eliminating driver travel and facility downtime."
+                "text": "Our rigs arrive self-contained — onboard 200°F hot-water pressure washers running 1,500–1,800 PSI at 8.0 GPM, water buffer tanks, and full containment equipment. We walk the yard and seal at-risk storm drain inlets first, then wash on-site during your staging window. A full tractor-trailer clears in 15 to 20 minutes, so no driver leaves route. We need access and a place to stage; we supply water, heat, and power."
             }
         },
         {
             "@type": "Question",
-            "name": "Will two-step touchless washing damage our custom vinyl vehicle wraps?",
+            "name": "Will two-step touchless washing damage our vehicle wraps?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "No. Two-step touchless washing is specifically engineered to safely break down diesel soot and road film without abrasive brushes, protecting vehicle wraps, lettering, and clear coats from scratches and peeling."
+                "text": "No — it's specifically the method that protects them. Touchless means no brush ever contacts the laminate, so there's no abrasion at seams, rivet lines, or wrap edges where peeling starts. On wrapped units we also switch to butyl-free detergent, because butyl surfactants can cloud some wrap laminates over repeated washes even without physical contact."
             }
         },
         {
             "@type": "Question",
-            "name": "Can you wash our fleet on weekends or during overnight staging?",
+            "name": "How do you keep our facility out of a stormwater violation?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Yes. Most commercial fleet partners schedule service on Friday evenings, Saturdays, or Sundays so trucks are fully cleaned, dried, and ready for dispatch early Monday morning."
+                "text": "Containment, not just chemistry. Biodegradable detergent lowers the load, but it does not make discharge into a storm drain permissible. We seal at-risk inlets with magnetic and polyurethane drain covers, berm the wash footprint, set sediment barriers downgradient, and stage on your designated wash pad wherever one exists. This matters because under the Clean Water Act the liability for an illicit discharge typically attaches to the property owner, not only the contractor — so a wash vendor with no containment plan is your exposure, not theirs."
             }
         },
         {
             "@type": "Question",
-            "name": "How do you protect our property from environmental runoff fines?",
+            "name": "Why does hot water matter if the detergent does the work?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "We strictly adhere to Clean Water Act guidelines by utilizing biodegradable detergents and deploying storm drain containment berms and drain blockers to ensure wash wastewater does not enter municipal storm sewers."
+                "text": "Because grease has a melt point. Below it, detergent has to emulsify semi-solid residue slowly and incompletely; above it, the soil liquefies and releases with far less chemical and far less pressure. That's the entire reason we carry heat: it lets us clean harder soils at lower pressure, which is what protects paint, polished aluminum, and wraps. It's also the difference between a functional and a decorative winter undercarriage wash."
             }
         },
         {
             "@type": "Question",
-            "name": "What geographic areas do you cover for scheduled fleet washing?",
+            "name": "Can you wash on weekends or during overnight staging?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "We provide mobile on-site fleet washing across Northeast Wisconsin, including Green Bay, De Pere, Appleton, Neenah, Menasha, Kaukauna, Oshkosh, and distribution centers throughout Brown, Outagamie, and Winnebago counties."
+                "text": "Yes. Most fleet partners schedule Friday evening, Saturday, or Sunday so units are cleaned, dried, and dispatch-ready Monday morning. We service Green Bay, De Pere, Appleton, Neenah, Menasha, Kaukauna, and Oshkosh, and distribution centers throughout Brown, Outagamie, and Winnebago counties."
             }
         }
     ]
@@ -207,23 +200,23 @@ const faqSchema = {
 const faqs = [
     {
         question: "How does mobile fleet washing work at our terminal or yard?",
-        answer: "Our mobile rigs arrive at your yard equipped with onboard industrial hot-water pressure washers, commercial pumps, and water buffer tanks. We wash your vehicles directly on-site during your scheduled staging window, eliminating driver travel and facility downtime."
+        answer: "Our rigs arrive self-contained — onboard 200°F hot-water pressure washers running 1,500–1,800 PSI at 8.0 GPM, water buffer tanks, and full containment equipment. We walk the yard and seal at-risk storm drain inlets first, then wash on-site during your staging window. A full tractor-trailer clears in 15 to 20 minutes, so no driver leaves route. We need access and a place to stage; we supply water, heat, and power."
     },
     {
-        question: "Will two-step touchless washing damage our custom vinyl vehicle wraps?",
-        answer: "No. Two-step touchless washing is specifically engineered to safely break down diesel soot and road film without abrasive brushes, protecting vehicle wraps, lettering, and clear coats from scratches and peeling."
+        question: "Will two-step touchless washing damage our vehicle wraps?",
+        answer: "No — it's specifically the method that protects them. Touchless means no brush ever contacts the laminate, so there's no abrasion at seams, rivet lines, or wrap edges where peeling starts. On wrapped units we also switch to butyl-free detergent, because butyl surfactants can cloud some wrap laminates over repeated washes even without physical contact."
     },
     {
-        question: "Can you wash our fleet on weekends or during overnight staging?",
-        answer: "Yes. Most commercial fleet partners schedule service on Friday evenings, Saturdays, or Sundays so trucks are fully cleaned, dried, and ready for dispatch early Monday morning."
+        question: "How do you keep our facility out of a stormwater violation?",
+        answer: "Containment, not just chemistry. Biodegradable detergent lowers the load, but it does not make discharge into a storm drain permissible. We seal at-risk inlets with magnetic and polyurethane drain covers, berm the wash footprint, set sediment barriers downgradient, and stage on your designated wash pad wherever one exists. This matters because under the Clean Water Act the liability for an illicit discharge typically attaches to the property owner, not only the contractor — so a wash vendor with no containment plan is your exposure, not theirs."
     },
     {
-        question: "How do you protect our property from environmental runoff fines?",
-        answer: "We strictly adhere to Clean Water Act guidelines by utilizing biodegradable detergents and deploying storm drain containment berms and drain blockers to ensure wash wastewater does not enter municipal storm sewers."
+        question: "Why does hot water matter if the detergent does the work?",
+        answer: "Because grease has a melt point. Below it, detergent has to emulsify semi-solid residue slowly and incompletely; above it, the soil liquefies and releases with far less chemical and far less pressure. That's the entire reason we carry heat: it lets us clean harder soils at lower pressure, which is what protects paint, polished aluminum, and wraps. It's also the difference between a functional and a decorative winter undercarriage wash."
     },
     {
-        question: "What geographic areas do you cover for scheduled fleet washing?",
-        answer: "We provide mobile on-site fleet washing across Northeast Wisconsin, including Green Bay, De Pere, Appleton, Neenah, Menasha, Kaukauna, Oshkosh, and distribution centers throughout Brown, Outagamie, and Winnebago counties."
+        question: "Can you wash on weekends or during overnight staging?",
+        answer: "Yes. Most fleet partners schedule Friday evening, Saturday, or Sunday so units are cleaned, dried, and dispatch-ready Monday morning. We service Green Bay, De Pere, Appleton, Neenah, Menasha, Kaukauna, and Oshkosh, and distribution centers throughout Brown, Outagamie, and Winnebago counties."
     }
 ];
 
@@ -267,7 +260,7 @@ export default function FleetWashingPage() {
 
                     {/* Subhead */}
                     <p className="text-lg sm:text-xl text-slate-200 font-medium max-w-3xl mx-auto mb-8 leading-relaxed">
-                        Turnkey on-site washing for logistics hubs, distribution terminals, utility fleets, and heavy machinery. Powered by commercial 200°F hot-water rigs and self-contained water transport—scheduled during fleet staging hours with zero driver downtime.
+                        Turnkey on-site washing for logistics hubs, distribution terminals, utility fleets, and heavy machinery. Powered by commercial 200°F hot-water rigs and self-contained water transport — scheduled during fleet staging hours with zero driver downtime.
                     </p>
 
                     {/* CTAs */}
@@ -288,14 +281,14 @@ export default function FleetWashingPage() {
                         </a>
                     </div>
 
-                    {/* Authority Badges */}
+                    {/* Authority Badges / Trust Bar */}
                     <div className="pt-3 text-xs sm:text-sm text-slate-300 font-semibold tracking-wide border-t border-white/15 inline-block max-w-3xl">
                         Fully Insured ($2M Commercial Liability) · Mobile Hot-Water Rigs · EPA Stormwater Best Practices · After-Hours &amp; Weekend Availability
                     </div>
                 </div>
             </section>
 
-            {/* SECTION 1: COMMERCIAL FLEET CLASSES & EQUIPMENT WE SERVICE */}
+            {/* SECTION 1: YARD & TERMINAL STAGING TURNAROUNDS */}
             <section className="py-16 sm:py-20 bg-white border-b border-slate-100">
                 <div className="container mx-auto px-4 max-w-4xl">
                     <div className="max-w-3xl mx-auto mb-10">
@@ -303,67 +296,72 @@ export default function FleetWashingPage() {
                             <Truck size={16} />
                             <span>Yard &amp; Terminal Staging Turnarounds</span>
                         </div>
-                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-navy tracking-tight">
+                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-navy tracking-tight mb-4">
                             On-Site Washing Built for Logistics, Trades &amp; Municipalities
                         </h2>
+                        <div className="space-y-4 text-slate-700 text-base sm:text-lg leading-relaxed">
+                            <p>
+                                Commercial truck washes take drivers off route and rack up fuel and labor hours that never show up on the wash invoice. A 40-minute round trip to a tunnel wash, multiplied across a 20-truck fleet on a weekly rotation, is <strong>50+ driver-hours a month</strong> spent not moving freight.
+                            </p>
+                            <p>
+                                We mobilize directly to your yard or staging terminal across the I-41 corridor on weekly, bi-weekly, or monthly rotations. Our rigs carry their own water, their own heat, and their own containment — so the only thing we need from your facility is access and a staging window.
+                            </p>
+                        </div>
                     </div>
 
-                    <div className="bg-slate-50 p-8 sm:p-10 rounded-3xl border border-slate-200 shadow-sm space-y-6 text-slate-700 text-base sm:text-lg leading-relaxed mb-8">
-                        <p>
-                            Commercial truck washes take drivers off route and rack up costly fuel and labor hours. We mobilize directly to your yard or staging terminal across the I-41 corridor on weekly, bi-weekly, or monthly rotations.
-                        </p>
+                    <div className="grid sm:grid-cols-2 gap-6">
+                        <div className="bg-slate-50 p-6 sm:p-7 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                            <div>
+                                <h3 className="text-lg sm:text-xl font-bold text-navy mb-2 flex items-center gap-2">
+                                    <span className="w-2.5 h-2.5 rounded-full bg-gold shrink-0"></span>
+                                    Class 8 Semi-Tractors &amp; 53&apos; Trailers
+                                </h3>
+                                <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+                                    Complete cab exterior cleaning, sleeper box detailing, trailer skin restoration (reefers, dry vans, flatbeds), and rear door debrowning. Trailer skins pick up a specific stripe of traffic film along the lower third of the panel; that band needs a longer chemical dwell than the upper skin, and we adjust application accordingly rather than raising pressure.
+                                </p>
+                            </div>
+                        </div>
 
-                        <div className="pt-2">
-                            <h3 className="text-sm font-black text-navy uppercase tracking-widest mb-4">
-                                Service Categories:
-                            </h3>
-                            <div className="grid sm:grid-cols-2 gap-4">
-                                <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
-                                    <h4 className="font-bold text-navy text-base mb-1.5 flex items-center gap-2">
-                                        <span className="w-2 h-2 rounded-full bg-gold shrink-0"></span>
-                                        Class 8 Semi-Tractors &amp; 53&apos; Trailers
-                                    </h4>
-                                    <p className="text-sm text-slate-600 leading-relaxed">
-                                        Complete cab exterior cleaning, sleeper box detailing, trailer skin restoration (reefers, dry vans, flatbeds), and rear door debrowning.
-                                    </p>
-                                </div>
+                        <div className="bg-slate-50 p-6 sm:p-7 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                            <div>
+                                <h3 className="text-lg sm:text-xl font-bold text-navy mb-2 flex items-center gap-2">
+                                    <span className="w-2.5 h-2.5 rounded-full bg-gold shrink-0"></span>
+                                    Last-Mile &amp; Parcel Delivery Vans
+                                </h3>
+                                <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+                                    High-volume route turnarounds for Sprinters, Transits, and step vans. Last-mile fleets are almost always wrapped, and wraps are where pressure does the most expensive damage — lifted edges, cracked laminate, and color fade that makes a two-year-old wrap look five. Everything we do on a wrapped unit is touchless by default.
+                                </p>
+                            </div>
+                        </div>
 
-                                <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
-                                    <h4 className="font-bold text-navy text-base mb-1.5 flex items-center gap-2">
-                                        <span className="w-2 h-2 rounded-full bg-gold shrink-0"></span>
-                                        Last-Mile &amp; Parcel Delivery Vans
-                                    </h4>
-                                    <p className="text-sm text-slate-600 leading-relaxed">
-                                        High-volume route turnarounds for Sprinters, Transits, and step vans—safely maintaining painted finishes and corporate vinyl wraps.
-                                    </p>
-                                </div>
+                        <div className="bg-slate-50 p-6 sm:p-7 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                            <div>
+                                <h3 className="text-lg sm:text-xl font-bold text-navy mb-2 flex items-center gap-2">
+                                    <span className="w-2.5 h-2.5 rounded-full bg-gold shrink-0"></span>
+                                    Vocational &amp; Heavy Construction Equipment
+                                </h3>
+                                <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+                                    High-impact mud clearing and frame degreasing for dump trucks, concrete mixers, heavy haulers, and excavators. Cured concrete slurry, clay, and hydraulic residue each respond to different chemistry, and we sort them before the first trigger pull instead of trying to solve all three with pressure.
+                                </p>
+                            </div>
+                        </div>
 
-                                <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
-                                    <h4 className="font-bold text-navy text-base mb-1.5 flex items-center gap-2">
-                                        <span className="w-2 h-2 rounded-full bg-gold shrink-0"></span>
-                                        Vocational &amp; Heavy Construction Equipment
-                                    </h4>
-                                    <p className="text-sm text-slate-600 leading-relaxed">
-                                        High-impact mud clearing and frame degreasing for dump trucks, concrete mixers, heavy haulers, and excavators.
-                                    </p>
-                                </div>
-
-                                <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
-                                    <h4 className="font-bold text-navy text-base mb-1.5 flex items-center gap-2">
-                                        <span className="w-2 h-2 rounded-full bg-gold shrink-0"></span>
-                                        Municipal, Utility &amp; Service Fleets
-                                    </h4>
-                                    <p className="text-sm text-slate-600 leading-relaxed">
-                                        Consistent, clean image preservation for municipal utility trucks, work vans, and company pickups.
-                                    </p>
-                                </div>
+                        <div className="bg-slate-50 p-6 sm:p-7 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                            <div>
+                                <h3 className="text-lg sm:text-xl font-bold text-navy mb-2 flex items-center gap-2">
+                                    <span className="w-2.5 h-2.5 rounded-full bg-gold shrink-0"></span>
+                                    Municipal, Utility &amp; Service Fleets
+                                </h3>
+                                <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+                                    Consistent image preservation for municipal utility trucks, work vans, and company pickups — the units the public actually sees parked in neighborhoods. We serve commercial fleets, logistics terminals, and regional service contractors across Brown, Outagamie, and Winnebago counties.
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* SECTION 2: THE TWO-STEP TOUCHLESS CHEMISTRY & ROAD-FILM REMOVAL */}
+            {/* SECTION 2: WRAP-SAFE ELECTROSTATIC BOND BREAKING */}
             <section className="py-16 sm:py-20 bg-slate-50 border-b border-slate-100">
                 <div className="container mx-auto px-4 max-w-4xl">
                     <div className="max-w-3xl mx-auto mb-10">
@@ -371,114 +369,191 @@ export default function FleetWashingPage() {
                             <Zap size={16} />
                             <span>Wrap-Safe Electrostatic Bond Breaking</span>
                         </div>
-                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-navy tracking-tight">
-                            Advanced Two-Step Touchless Washing That Protects Vinyl Graphics
+                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-navy tracking-tight mb-4">
+                            Two-Step Touchless Washing, and Why the Chemistry Does the Work
                         </h2>
+                        <p className="text-slate-700 text-base sm:text-lg leading-relaxed">
+                            Diesel soot doesn&apos;t sit loose on a painted panel. It bonds. Exhaust particulate carries a static charge, and fine ferrous road film — brake dust, rail dust, and metallic grit off the highway — grips clear coat the way iron filings grip a magnet. Brushes remove it by abrading the surface it&apos;s stuck to. That&apos;s why brush-washed fleets develop a dull, swirled cast across the hood and doors by year three. Two-step chemistry breaks the bond instead of scrubbing it.
+                        </p>
                     </div>
 
-                    <div className="bg-white p-8 sm:p-10 rounded-3xl border border-slate-200 shadow-sm space-y-6 text-slate-700 text-base sm:text-lg leading-relaxed mb-8">
-                        <p>
-                            Brushes scratch clear coats, dull polished finishes, and peel corporate vinyl decals. We utilize an industrial two-step chemical application that breaks the static electricity bond holding diesel soot and fine magnetic road film to your paint.
-                        </p>
-
-                        <div className="pt-2">
-                            <h3 className="text-sm font-black text-navy uppercase tracking-widest mb-4">
-                                The Process:
-                            </h3>
-                            <div className="grid sm:grid-cols-3 gap-4">
-                                <div className="bg-slate-50 p-5 rounded-2xl border border-slate-200">
-                                    <div className="w-8 h-8 rounded-full bg-navy text-gold font-black flex items-center justify-center text-sm mb-3">
-                                        1
-                                    </div>
-                                    <h4 className="font-bold text-navy text-base mb-1.5">
-                                        Low-pH Pre-Conditioner
-                                    </h4>
-                                    <p className="text-sm text-slate-600 leading-relaxed">
-                                        Targets mineral deposits, road grime, and light oxidation across exterior panels.
-                                    </p>
+                    <div className="grid sm:grid-cols-3 gap-6 mb-8">
+                        <div className="bg-white p-6 sm:p-7 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                            <div>
+                                <div className="w-9 h-9 rounded-full bg-navy text-gold font-black flex items-center justify-center text-sm mb-4">
+                                    1
                                 </div>
-
-                                <div className="bg-slate-50 p-5 rounded-2xl border border-slate-200">
-                                    <div className="w-8 h-8 rounded-full bg-navy text-gold font-black flex items-center justify-center text-sm mb-3">
-                                        2
-                                    </div>
-                                    <h4 className="font-bold text-navy text-base mb-1.5">
-                                        High-pH Neutralizing Wash
-                                    </h4>
-                                    <p className="text-sm text-slate-600 leading-relaxed">
-                                        Reacts with the initial coat to lift grease, organic oils, and diesel film without abrasive friction.
-                                    </p>
-                                </div>
-
-                                <div className="bg-slate-50 p-5 rounded-2xl border border-slate-200">
-                                    <div className="w-8 h-8 rounded-full bg-navy text-gold font-black flex items-center justify-center text-sm mb-3">
-                                        3
-                                    </div>
-                                    <h4 className="font-bold text-navy text-base mb-1.5">
-                                        High-Volume Clean Rinse
-                                    </h4>
-                                    <p className="text-sm text-slate-600 leading-relaxed">
-                                        Rinses completely clean, leaving a spot-free, paint-protected finish without swirl marks.
-                                    </p>
-                                </div>
+                                <h3 className="font-bold text-navy text-lg mb-2">
+                                    Step 1 — Low-pH Pre-Conditioner
+                                </h3>
+                                <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+                                    An acidic pre-soak in the <strong>pH 1–3 range</strong> is applied cold to cool panels and allowed to dwell. It dissolves mineral scale, hard-water spotting, and light oxidation, and it strips the ferrous film that makes road grime cling. Applied bottom-up so the solution never runs over dry paint and streaks.
+                                </p>
                             </div>
                         </div>
+
+                        <div className="bg-white p-6 sm:p-7 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                            <div>
+                                <div className="w-9 h-9 rounded-full bg-navy text-gold font-black flex items-center justify-center text-sm mb-4">
+                                    2
+                                </div>
+                                <h3 className="font-bold text-navy text-lg mb-2">
+                                    Step 2 — High-pH Neutralizing Wash
+                                </h3>
+                                <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+                                    A caustic, surfactant-loaded detergent in the <strong>pH 11–13 range</strong> goes on over the still-wet acid. The two reacting against each other is the actual mechanism — the neutralization reaction lifts grease, organic oils, and diesel film off the surface and holds them in suspension so they rinse away instead of redepositing. This is the step brushes are trying to substitute for, and it does the job without touching the paint.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div className="bg-white p-6 sm:p-7 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                            <div>
+                                <div className="w-9 h-9 rounded-full bg-navy text-gold font-black flex items-center justify-center text-sm mb-4">
+                                    3
+                                </div>
+                                <h3 className="font-bold text-navy text-lg mb-2">
+                                    Step 3 — High-Volume Clean Rinse
+                                </h3>
+                                <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+                                    A high-flow, low-pressure rinse carries everything off in one pass and leaves a spot-free finish. Volume matters more than pressure here: it takes water to move suspended soil off a 53-foot trailer, and turning up the pressure only drives residue into seams and wrap edges.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm">
+                        <h3 className="text-lg sm:text-xl font-bold text-navy mb-3">
+                            Why We Don&apos;t Use Brushes on Wrapped or Polished Units
+                        </h3>
+                        <p className="text-slate-700 leading-relaxed text-base sm:text-lg">
+                            Brushes scratch clear coats, dull polished aluminum, and peel vinyl at the seams and rivet lines. On a wrapped fleet that&apos;s a direct hit to a <strong>$4,000–$6,500+</strong> wrap investment per unit. On polished tanks and bumpers it&apos;s a haze that only comes back with machine work. Touchless costs slightly more per unit in chemistry and takes slightly longer in dwell time — and it&apos;s why fleets that switch stop replacing wraps early.
+                        </p>
                     </div>
                 </div>
             </section>
 
-            {/* SECTION 3: WINTER SALT MITIGATION & DOT MECHANICAL DEGREASING */}
+            {/* SECTION 3: HOT WATER SPECIFICATIONS */}
             <section className="py-16 sm:py-20 bg-white border-b border-slate-100">
                 <div className="container mx-auto px-4 max-w-4xl">
                     <div className="max-w-3xl mx-auto mb-10">
                         <div className="inline-flex items-center gap-2 text-gold font-extrabold text-xs sm:text-sm uppercase tracking-widest mb-2">
                             <Flame size={16} />
-                            <span>High-Heat Chassis Preservation</span>
+                            <span>Hot Water Specifications</span>
                         </div>
-                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-navy tracking-tight">
-                            Undercarriage De-Icing, Salt Neutralization &amp; DOT Inspection Prep
+                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-navy tracking-tight mb-4">
+                            Why 200°F Changes What Comes Off the Truck
                         </h2>
+                        <div className="space-y-4 text-slate-700 text-base sm:text-lg leading-relaxed">
+                            <p>
+                                Temperature is the variable most mobile operators skip, because heat is expensive to carry. It&apos;s also the one that does the most work on a diesel fleet.
+                            </p>
+                            <p>
+                                Grease and oil have a melt point. Below it, detergent has to emulsify cold, semi-solid residue and the chemistry works slowly and incompletely. Above it, the soil liquefies and releases with far less chemical load and far less pressure. <strong>Our rigs deliver water at up to 200°F at the nozzle</strong>, which is the practical ceiling before flash-off wastes the energy you spent heating it.
+                            </p>
+                        </div>
                     </div>
 
-                    <div className="grid sm:grid-cols-3 gap-6">
-                        <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
-                            <div>
-                                <div className="w-10 h-10 rounded-xl bg-navy text-gold flex items-center justify-center shrink-0 mb-4">
-                                    <Flame size={20} />
+                    <div className="bg-slate-50 p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm mb-8">
+                        <h3 className="text-lg sm:text-xl font-bold text-navy mb-4">
+                            What that means in practice
+                        </h3>
+                        <ul className="space-y-4 text-slate-700 text-base sm:text-lg">
+                            <li className="flex items-start gap-3">
+                                <span className="w-2 h-2 rounded-full bg-gold shrink-0 mt-2.5"></span>
+                                <div>
+                                    <strong>Less pressure on the paint:</strong> Hot water at moderate pressure outperforms cold water at high pressure on grease. We run <strong>1,500–1,800 working PSI at 8.0 GPM</strong> and let heat, volume, and chemistry carry the load — not force.
                                 </div>
-                                <h3 className="text-lg font-bold text-navy mb-2">
-                                    High-Flow Hot Water Undercarriage Wash
+                            </li>
+                            <li className="flex items-start gap-3">
+                                <span className="w-2 h-2 rounded-full bg-gold shrink-0 mt-2.5"></span>
+                                <div>
+                                    <strong>Faster dwell-to-rinse cycles:</strong> Hot chemistry activates in a fraction of the time, which is how a full tractor-trailer clears in a single staging window.
+                                </div>
+                            </li>
+                            <li className="flex items-start gap-3">
+                                <span className="w-2 h-2 rounded-full bg-gold shrink-0 mt-2.5"></span>
+                                <div>
+                                    <strong>Better winter performance:</strong> Cold-water washing in a Wisconsin January is largely theater — the water sheets and freezes before it lifts anything. Heat is what makes December-through-March undercarriage work actually function.
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div className="bg-slate-50 p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-4 text-slate-700 text-base sm:text-lg leading-relaxed">
+                        <h3 className="text-lg sm:text-xl font-bold text-navy">
+                            Nozzle and pressure mapping by surface
+                        </h3>
+                        <p>
+                            Not every panel gets the same setup. Wrapped sides, cabs, and polished tanks get <strong>40° wide-fan nozzles</strong> at increased standoff distance, which spreads 8 GPM across a broad contact patch so the water does the carrying rather than the impact. Chassis, frame rails, wheels, and wheel wells step down to <strong>25° nozzles</strong> for the tighter, higher-impact work that caked brine and packed mud actually require.
+                        </p>
+                        <p>
+                            The 8 GPM flow rate is the specification that matters most here and the one most mobile operators can&apos;t match. Volume is what removes suspended soil from a 53-foot trailer in one pass. Operators running 4 GPM have to compensate with pressure, and pressure is what damages wraps.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            {/* SECTION 4: CHEMISTRY BY SOIL TYPE */}
+            <section className="py-16 sm:py-20 bg-slate-50 border-b border-slate-100">
+                <div className="container mx-auto px-4 max-w-4xl">
+                    <div className="max-w-3xl mx-auto mb-10">
+                        <div className="inline-flex items-center gap-2 text-gold font-extrabold text-xs sm:text-sm uppercase tracking-widest mb-2">
+                            <Layers size={16} />
+                            <span>Chemistry by Soil Type</span>
+                        </div>
+                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-navy tracking-tight mb-4">
+                            Degreasers Matched to What&apos;s Actually on the Unit
+                        </h2>
+                        <p className="text-slate-700 text-base sm:text-lg leading-relaxed">
+                            &quot;Degreaser&quot; is not one product. Using the wrong one is how aluminum gets etched and wraps get clouded.
+                        </p>
+                    </div>
+
+                    <div className="grid sm:grid-cols-2 gap-6">
+                        <div className="bg-white p-6 sm:p-7 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                            <div>
+                                <h3 className="text-lg sm:text-xl font-bold text-navy mb-2 flex items-center gap-2">
+                                    <span className="w-2.5 h-2.5 rounded-full bg-gold shrink-0"></span>
+                                    Diesel soot and traffic film
                                 </h3>
-                                <p className="text-sm text-slate-600 leading-relaxed">
-                                    200°F water strips encrusted magnesium chloride and calcium road brines from chassis rails, suspension pins, and brake lines to prevent premature corrosion.
+                                <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+                                    Handled by the two-step above. Butyl-based surfactants are effective but aggressive on some wrap laminates, so wrapped units get <strong>butyl-free, high-surfactant detergent</strong> instead.
                                 </p>
                             </div>
                         </div>
 
-                        <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                        <div className="bg-white p-6 sm:p-7 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
                             <div>
-                                <div className="w-10 h-10 rounded-xl bg-navy text-gold flex items-center justify-center shrink-0 mb-4">
-                                    <Wrench size={20} />
-                                </div>
-                                <h3 className="text-lg font-bold text-navy mb-2">
-                                    Fifth-Wheel &amp; Engine Bay Degreasing
+                                <h3 className="text-lg sm:text-xl font-bold text-navy mb-2 flex items-center gap-2">
+                                    <span className="w-2.5 h-2.5 rounded-full bg-gold shrink-0"></span>
+                                    Fifth-wheel, engine bay, and chassis grease
                                 </h3>
-                                <p className="text-sm text-slate-600 leading-relaxed">
-                                    Heavy hot-water degreasing to remove caked grease, oil, and grime so mechanics and DOT safety officers can easily inspect structural welds, kingpins, and seals.
+                                <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+                                    Heavy caked grease gets a dedicated <strong>hot-water degreasing pass</strong> with extended dwell before the body wash begins, so lifted grease never runs across clean panels. This is the step that makes kingpins, structural welds, and seals actually visible for DOT inspection — a mechanic can&apos;t find a hairline crack under a quarter inch of packed grease.
                                 </p>
                             </div>
                         </div>
 
-                        <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                        <div className="bg-white p-6 sm:p-7 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
                             <div>
-                                <div className="w-10 h-10 rounded-xl bg-navy text-gold flex items-center justify-center shrink-0 mb-4">
-                                    <Sparkles size={20} />
-                                </div>
-                                <h3 className="text-lg font-bold text-navy mb-2">
-                                    Acid-Free Aluminum Wheel &amp; Tank Brightening
+                                <h3 className="text-lg sm:text-xl font-bold text-navy mb-2 flex items-center gap-2">
+                                    <span className="w-2.5 h-2.5 rounded-full bg-gold shrink-0"></span>
+                                    Aluminum wheels, tanks, and steps
                                 </h3>
-                                <p className="text-sm text-slate-600 leading-relaxed">
-                                    Removes road haze and oxidation from fuel tanks, rims, and steps without leaving the white, chalky finish caused by harsh acid washes.
+                                <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+                                    Brightened with <strong>acid-free aluminum brightener</strong>. Traditional hydrofluoric and ammonium bifluoride brighteners flash-clean and then leave the white chalky etch that ruins polished tanks permanently. Acid-free is slower and does not etch.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div className="bg-white p-6 sm:p-7 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                            <div>
+                                <h3 className="text-lg sm:text-xl font-bold text-navy mb-2 flex items-center gap-2">
+                                    <span className="w-2.5 h-2.5 rounded-full bg-gold shrink-0"></span>
+                                    Winter brine and chloride neutralization
+                                </h3>
+                                <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+                                    Magnesium chloride and calcium chloride don&apos;t rinse off with plain water — they re-absorb moisture and keep corroding. They need a <strong>salt-neutralizing chelating rinse</strong> applied hot to chassis rails, suspension pins, air lines, and brake components, followed by a clean-water flush.
                                 </p>
                             </div>
                         </div>
@@ -486,45 +561,122 @@ export default function FleetWashingPage() {
                 </div>
             </section>
 
-            {/* SECTION 4: STORMWATER & ENVIRONMENTAL STEWARDSHIP */}
-            <section className="py-16 sm:py-20 bg-slate-50 border-b border-slate-100">
+            {/* SECTION 5: EPA CLEAN WATER COMPLIANCE */}
+            <section className="py-16 sm:py-20 bg-white border-b border-slate-100">
                 <div className="container mx-auto px-4 max-w-4xl">
-                    <div className="bg-slate-900 text-white rounded-3xl p-8 sm:p-12 border border-slate-800 shadow-xl">
-                        <div className="inline-flex items-center gap-2 text-gold font-bold text-xs uppercase tracking-wider mb-3">
+                    <div className="max-w-3xl mx-auto mb-10">
+                        <div className="inline-flex items-center gap-2 text-gold font-extrabold text-xs sm:text-sm uppercase tracking-widest mb-2">
                             <Leaf size={16} />
                             <span>EPA Clean Water Compliance</span>
                         </div>
-                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-white mb-6">
-                            Compliant On-Site Cleaning &amp; Stormwater Runoff Management
+                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-navy tracking-tight mb-4">
+                            Wash-Water Containment on the I-41 Corridor
                         </h2>
-                        <div className="space-y-4 text-slate-300 text-base sm:text-lg leading-relaxed">
+                        <p className="text-slate-700 text-base sm:text-lg leading-relaxed">
+                            This is the part that turns a wash program into a liability if it&apos;s done wrong, and it&apos;s the reason to ask any mobile vendor for their containment plan before they ever show up.
+                        </p>
+                    </div>
+
+                    <div className="space-y-8">
+                        <div className="bg-slate-50 p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-4 text-slate-700 text-base sm:text-lg leading-relaxed">
+                            <h3 className="text-lg sm:text-xl font-bold text-navy">
+                                Why storm drains are the line
+                            </h3>
                             <p>
-                                Fleet managers face strict EPA and Wisconsin DNR clean-water scrutiny. We wash using 100% biodegradable detergents. Where municipal storm sewers are present, our crews deploy specialized wash berms, drain seals, and water diversion tools to prevent oily wastewater or chemical runoff from entering local watersheds.
+                                Under the Clean Water Act, vehicle wash water is generally treated as <strong>process wastewater, not stormwater</strong>. Stormwater is rain. Wash water carries detergent, oil, grease, heavy metals from brake dust, and suspended solids — and discharging it into a municipal separate storm sewer system without authorization is a permit violation, because storm sewers in Green Bay, De Pere, Appleton, and the surrounding communities discharge largely untreated into the Fox and East rivers and ultimately the bay.
                             </p>
                             <p>
-                                In addition to scheduled truck wash rotations, our self-contained mobile rigs provide facility support including{" "}
-                                <Link
-                                    href="/services/pressure-washing"
-                                    className="text-gold hover:text-white font-bold underline decoration-gold/50 underline-offset-4 transition-colors"
-                                >
-                                    commercial pressure washing
-                                </Link>{" "}
-                                for fueling aprons and maintenance bays, as well as high-traffic{" "}
-                                <Link
-                                    href="/service-areas/green-bay"
-                                    className="text-gold hover:text-white font-bold underline decoration-gold/50 underline-offset-4 transition-colors"
-                                >
-                                    parking lot and concrete cleaning
-                                </Link>{" "}
-                                throughout logistics parks in Green Bay, Appleton, and the Fox Valley.
+                                In Wisconsin the NPDES program is delegated to the DNR and administered as <strong>WPDES</strong>, with municipal stormwater requirements under <strong>NR 216</strong>. Practically, that means the enforcement exposure usually lands on the <strong>property owner</strong> — the facility whose drain it went into — not only on the contractor who held the wand.
+                            </p>
+                        </div>
+
+                        <div className="bg-slate-50 p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm">
+                            <h3 className="text-lg sm:text-xl font-bold text-navy mb-4">
+                                What we deploy on site
+                            </h3>
+                            <ul className="space-y-3.5 text-slate-700 text-base sm:text-lg mb-6">
+                                <li className="flex items-start gap-3">
+                                    <span className="w-2 h-2 rounded-full bg-gold shrink-0 mt-2.5"></span>
+                                    <div>
+                                        <strong>Heavy-duty magnetic and polyurethane storm drain seals</strong> placed over every at-risk inlet inside the wash footprint before the first drop of water is discharged. Magnetic seals form a gasket against steel inlet frames; polyurethane mats handle concrete and irregular grates.
+                                    </div>
+                                </li>
+                                <li className="flex items-start gap-3">
+                                    <span className="w-2 h-2 rounded-full bg-gold shrink-0 mt-2.5"></span>
+                                    <div>
+                                        <strong>Containment berms</strong> to define the wash footprint and direct flow away from inlets and site perimeter.
+                                    </div>
+                                </li>
+                                <li className="flex items-start gap-3">
+                                    <span className="w-2 h-2 rounded-full bg-gold shrink-0 mt-2.5"></span>
+                                    <div>
+                                        <strong>Sediment barriers</strong> at the downgradient edge of the wash area to capture solids — grit, brake dust, and organic debris — before they can migrate.
+                                    </div>
+                                </li>
+                                <li className="flex items-start gap-3">
+                                    <span className="w-2 h-2 rounded-full bg-gold shrink-0 mt-2.5"></span>
+                                    <div>
+                                        <strong>Facility-designated wash pads</strong> wherever the site has one. Washing on a pad that drains to a sanitary connection or an oil-water separator is always the preferred setup, and we plan the staging sequence around it.
+                                    </div>
+                                </li>
+                                <li className="flex items-start gap-3">
+                                    <span className="w-2 h-2 rounded-full bg-gold shrink-0 mt-2.5"></span>
+                                    <div>
+                                        <strong>100% biodegradable detergents</strong> throughout, which lowers the load but does not by itself make discharge to a storm drain lawful — containment is what does.
+                                    </div>
+                                </li>
+                            </ul>
+                            <p className="text-slate-700 text-base sm:text-lg leading-relaxed pt-2 border-t border-slate-200/80">
+                                We walk the yard and identify inlets before the rig is staged, not after. If a site has no wash pad and no viable containment destination, we tell you that during the site assessment rather than washing anyway and leaving the exposure with you.
                             </p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* SECTION 5: FREQUENTLY ASKED QUESTIONS */}
-            <section className="py-16 sm:py-20 bg-white border-b border-slate-100">
+            {/* SECTION 6: SCHEDULING */}
+            <section className="py-16 sm:py-20 bg-slate-50 border-b border-slate-100">
+                <div className="container mx-auto px-4 max-w-4xl">
+                    <div className="max-w-3xl mx-auto mb-10">
+                        <div className="inline-flex items-center gap-2 text-gold font-extrabold text-xs sm:text-sm uppercase tracking-widest mb-2">
+                            <Clock size={16} />
+                            <span>Scheduling</span>
+                        </div>
+                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-navy tracking-tight mb-4">
+                            What a Rotation Actually Looks Like
+                        </h2>
+                    </div>
+
+                    <div className="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-4 text-slate-700 text-base sm:text-lg leading-relaxed">
+                        <p>
+                            Most fleets land on one of three cadences: <strong>weekly</strong> for parcel and last-mile units that are public-facing daily, <strong>bi-weekly</strong> for regional Class 8 tractors, and <strong>monthly</strong> with a mid-winter undercarriage add-on for vocational and municipal equipment.
+                        </p>
+                        <p>
+                            We work around dispatch, not against it. Friday evening, Saturday, and Sunday windows are the most common, with units cleaned, dried, and staged for Monday morning. <strong>A full tractor-trailer combination clears in 15 to 20 minutes</strong> — which is what makes a 20-unit yard a single-window job rather than a two-day project.
+                        </p>
+                        <p>
+                            Beyond scheduled truck rotations, our self-contained rigs handle facility support on the same visit —{" "}
+                            <Link
+                                href="/services/commercial-pressure-washing"
+                                className="text-blue-600 hover:text-navy font-bold underline decoration-blue-300 underline-offset-4 transition-colors"
+                            >
+                                commercial pressure washing
+                            </Link>{" "}
+                            for fueling aprons and maintenance bays, and{" "}
+                            <Link
+                                href="/services/parking-lot-and-garage-cleaning"
+                                className="text-blue-600 hover:text-navy font-bold underline decoration-blue-300 underline-offset-4 transition-colors"
+                            >
+                                parking lot and garage cleaning
+                            </Link>{" "}
+                            across logistics parks in Green Bay, Appleton, and the Fox Valley.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            {/* SECTION 7: DIRECT ANSWERS / FAQS */}
+            <section className="py-16 sm:py-20 bg-white border-b border-slate-100" id="faq">
                 <div className="container mx-auto px-4 max-w-4xl">
                     <div className="max-w-3xl mx-auto mb-12 text-center">
                         <div className="inline-flex items-center gap-2 text-gold font-extrabold text-xs sm:text-sm uppercase tracking-widest mb-2">
