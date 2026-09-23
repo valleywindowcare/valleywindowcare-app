@@ -37,7 +37,7 @@ export const metadata: Metadata = {
 const faqs = [
     {
         question: "Do I buy the holiday lights, or does your company lease them?",
-        answer: "We operate on a complete, all-inclusive lease model. We supply commercial-grade C9 LED lighting specifically designed and custom-cut to your home's unique roofline dimensions. Because we lease the lights, you do not have to worry about upfront bulb purchases, failing strands, or bulb deterioration. If a bulb burns out or a clip slips during the holiday season, we replace it at no charge. At the end of the season, we remove the lights, label them for your property, and store them in our climate-controlled facility. This lease structure guarantees a stress-free holiday display with brand-new, commercial-grade components every year."
+        answer: "We operate on a complete, all-inclusive seasonal lease model. We supply commercial-grade C9 LED lighting custom-cut to your home's unique roofline dimensions. Seasonal leasing is the ideal option for renters, temporary holiday themes, or property owners who want a completely hands-off experience including custom installation, proactive maintenance, post-holiday removal, and climate-controlled storage. For homeowners seeking a permanent, year-round solution with zero annual setup, we also offer custom color-matched permanent architectural LED lighting systems."
     },
     {
         question: "What is the difference between commercial-grade C9 LEDs and store-bought holiday lights?",
@@ -215,13 +215,34 @@ export default function ChristmasLightingPage() {
 
                     {/* SECTION 2: LEASING MODEL DETAIL */}
                     <section className="mb-12">
-                        <h2 className="text-3xl font-extrabold text-navy mb-6">Our Turnkey Lease & Storage Model</h2>
+                        <h2 className="text-3xl font-extrabold text-navy mb-6">Our Turnkey Seasonal Lease &amp; Storage Model</h2>
                         <p className="leading-relaxed text-lg mb-6">
-                            We operate on a complete lease model, meaning you do not have to purchase expensive lighting gear that will degrade over time. We supply the lighting strands, custom-fit clips, wiring, and phototimers. If any bulb burns out or a storm shifts a strand, our crews come out and repair it at no cost.
+                            Our all-inclusive seasonal lease model is the ideal solution for renters, homeowners who love alternating holiday themes year-to-year, or short-term property owners looking for festive cheer without long-term hardware commitments. We supply commercial-grade C9 LED strands, custom-fit roofline clips, weather-rated wiring, and automated phototimers. If any bulb burns out or winter winds shift a strand, our crews come out and repair it promptly at zero cost.
                         </p>
                         <p className="leading-relaxed text-lg mb-6">
-                            After the holidays, we remove the display, label the layout for your property, and store it in our dry, climate-controlled facility. This ensures your lights stay protected from dust, water, and pests, keeping them ready for a bright re-installation next season.
+                            After the holiday season concludes, we take down the entire display, inspect and label each strand specifically for your property, and store everything in our secure, climate-controlled warehouse until next autumn.
                         </p>
+
+                        {/* Internal CTA Box for Permanent Lighting */}
+                        <div className="my-8 p-6 sm:p-8 bg-gradient-to-br from-[#1B365D] to-navy rounded-2xl text-white shadow-xl border border-navy-light not-prose flex flex-col md:flex-row items-center justify-between gap-6">
+                            <div className="text-center md:text-left">
+                                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gold/20 text-gold font-bold text-xs uppercase tracking-wider mb-2">
+                                    Permanent Option Available
+                                </span>
+                                <h3 className="text-xl sm:text-2xl font-black text-white mb-2">
+                                    Looking for a permanent, year-round solution with zero annual setup?
+                                </h3>
+                                <p className="text-gray-200 text-sm leading-relaxed max-w-xl">
+                                    Eliminate seasonal installation entirely with our Omni Smart Track™ systems—featuring invisible daytime channels, 2700K warm-white architectural downlighting, and programmable holiday colors controlled from your phone.
+                                </p>
+                            </div>
+                            <Link
+                                href="/services/permanent-led-lighting"
+                                className="inline-flex items-center justify-center gap-2 bg-gold hover:bg-white text-navy font-black px-6 py-3.5 rounded-full text-sm sm:text-base whitespace-nowrap shadow-lg transition-all hover:scale-105 shrink-0"
+                            >
+                                Permanent Architectural LED Lighting Systems &rarr;
+                            </Link>
+                        </div>
                     </section>
 
                     {/* SECTION 3: WORKFLOW */}
