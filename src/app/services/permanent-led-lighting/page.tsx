@@ -5,7 +5,7 @@ import Image from 'next/image';
 import ServiceGrid from '@/components/ServiceGrid';
 import Hero from '@/components/Hero';
 import LightingQuoteForm from "@/components/LightingQuoteForm";
-import { ShieldCheck, CheckCircle, ArrowRight, MapPin, Phone, Mail } from 'lucide-react';
+import { ShieldCheck, CheckCircle, ArrowRight, MapPin, Phone, Mail, Clock, Sun, Layers, CreditCard } from 'lucide-react';
 import ReviewSlider from '@/components/ReviewSlider';
 import PricingMatrix from '@/components/PricingMatrix';
 import VanillaMapClient from '@/components/VanillaMapClient';
@@ -334,10 +334,47 @@ export default function PermanentLEDLightingPage() {
 
                     {/* SECTION 4: TABLE */}
                     <section className="mb-12">
-                        <h2 className="text-3xl font-extrabold text-navy mb-6">Transparent Package Pricing &amp; Investment Guide</h2>
+                        <h2 className="text-3xl font-extrabold text-navy mb-4">Transparent Package Pricing &amp; Investment Guide</h2>
                         <p className="leading-relaxed text-lg mb-6">
                             We provide flat-rate, linear-foot pricing based on the total complexity and length of your home's rooflines.
                         </p>
+
+                        {/* Visual Callout Badges for Hardware Features */}
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-6 not-prose">
+                            <div className="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 border border-gray-200/90 shadow-2xs">
+                                <div className="p-2 rounded-lg bg-navy/10 text-navy shrink-0">
+                                    <Clock size={16} />
+                                </div>
+                                <span className="text-xs font-bold text-navy leading-snug">
+                                    50,000-Hour Rated Commercial Diodes
+                                </span>
+                            </div>
+                            <div className="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 border border-gray-200/90 shadow-2xs">
+                                <div className="p-2 rounded-lg bg-amber-500/15 text-amber-600 shrink-0">
+                                    <Sun size={16} />
+                                </div>
+                                <span className="text-xs font-bold text-navy leading-snug">
+                                    Dedicated 2700K True Warm-White Diode
+                                </span>
+                            </div>
+                            <div className="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 border border-gray-200/90 shadow-2xs">
+                                <div className="p-2 rounded-lg bg-blue-500/15 text-blue-700 shrink-0">
+                                    <Layers size={16} />
+                                </div>
+                                <span className="text-xs font-bold text-navy leading-snug">
+                                    Color-Matched Custom Aluminum Channels (Invisible by Day)
+                                </span>
+                            </div>
+                            <div className="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 border border-gray-200/90 shadow-2xs">
+                                <div className="p-2 rounded-lg bg-emerald-500/15 text-emerald-700 shrink-0">
+                                    <ShieldCheck size={16} />
+                                </div>
+                                <span className="text-xs font-bold text-navy leading-snug">
+                                    IP68 Sub-Zero Weatherproof Rating
+                                </span>
+                            </div>
+                        </div>
+
                         <div className="overflow-x-auto border border-gray-200 rounded-2xl shadow-sm bg-white not-prose">
                             <table className="w-full text-left border-collapse">
                                 <thead>
@@ -353,21 +390,36 @@ export default function PermanentLEDLightingPage() {
                                     <tr className="hover:bg-slate-50 transition-colors">
                                         <td className="p-4 font-bold text-navy">Small Track Package</td>
                                         <td className="p-4">Up to 100 linear ft</td>
-                                        <td className="p-4 font-semibold">$1,500 - $2,500 </td>
+                                        <td className="p-4">
+                                            <div className="font-semibold text-navy">$1,500 - $2,500</div>
+                                            <span className="inline-flex items-center gap-1 mt-1.5 text-[11px] sm:text-xs font-bold px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200/80 shadow-2xs whitespace-nowrap">
+                                                Or as low as $49/mo via local financing
+                                            </span>
+                                        </td>
                                         <td className="p-4">Color-matched tracks, RGBW smart diodes, Omni controller, app setup</td>
                                         <td className="p-4">1 workday</td>
                                     </tr>
                                     <tr className="hover:bg-slate-50 transition-colors">
                                         <td className="p-4 font-bold text-navy">Standard Home Package</td>
                                         <td className="p-4 font-semibold">100 - 200 linear ft</td>
-                                        <td className="p-4 font-semibold">$2,500 - $4,500 </td>
+                                        <td className="p-4">
+                                            <div className="font-semibold text-navy">$2,500 - $4,500</div>
+                                            <span className="inline-flex items-center gap-1 mt-1.5 text-[11px] sm:text-xs font-bold px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200/80 shadow-2xs whitespace-nowrap">
+                                                Or as low as $79/mo via local financing
+                                            </span>
+                                        </td>
                                         <td className="p-4">Full front roofline, peaked gables, Omni controller, complete scheduling config</td>
                                         <td className="p-4">1 - 2 workdays</td>
                                     </tr>
                                     <tr className="hover:bg-slate-50 transition-colors">
                                         <td className="p-4 font-bold text-navy">Premium Estate Package</td>
                                         <td className="p-4 font-semibold">200 - 350 linear ft</td>
-                                        <td className="p-4 font-semibold">$4,500 - $7,500 </td>
+                                        <td className="p-4">
+                                            <div className="font-semibold text-navy">$4,500 - $7,500</div>
+                                            <span className="inline-flex items-center gap-1 mt-1.5 text-[11px] sm:text-xs font-bold px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200/80 shadow-2xs whitespace-nowrap">
+                                                Or as low as $129/mo via local financing
+                                            </span>
+                                        </td>
                                         <td className="p-4">Full perimeter track, multi-controller power injection, smart integration, tutorials</td>
                                         <td className="p-4">2 - 3 workdays</td>
                                     </tr>
