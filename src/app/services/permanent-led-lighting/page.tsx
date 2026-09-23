@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import ServiceGrid from '@/components/ServiceGrid';
 import Hero from '@/components/Hero';
-import HeroForm from "@/components/HeroForm";
+import LightingQuoteForm from "@/components/LightingQuoteForm";
 import { ShieldCheck, CheckCircle, ArrowRight, MapPin, Phone, Mail } from 'lucide-react';
 import ReviewSlider from '@/components/ReviewSlider';
 import PricingMatrix from '@/components/PricingMatrix';
@@ -266,7 +266,7 @@ export default function PermanentLEDLightingPage() {
                                 </a>
                             </div>
                         </div>
-                        <HeroForm />
+                        <LightingQuoteForm />
                     </div>
                 </div>
             </section>
