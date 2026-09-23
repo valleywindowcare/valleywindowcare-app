@@ -13,15 +13,15 @@ import VanillaMapClient from '@/components/VanillaMapClient';
 
 export const metadata: Metadata = {
     title: {
-        absolute: "Permanent LED Lighting Installers | Green Bay & Appleton",
+        absolute: "Permanent LED Lighting Green Bay & Appleton | Omni Track Systems",
     },
-    description: "Northeast Wisconsin's certified Omni permanent holiday and architectural lighting installers. Low-profile smart track systems for homes and businesses.",
+    description: "Professional permanent architectural LED soffit lighting in Green Bay, De Pere & Appleton, WI. Custom color-matched aluminum tracks, smartphone control, 2700K warm white & holiday colors. Get a free quote!",
     alternates: {
         canonical: "https://valleyexteriorpros.com/services/permanent-led-lighting",
     },
     openGraph: {
-        title: "Permanent LED Lighting Installers | Green Bay & Appleton",
-        description: "Northeast Wisconsin's certified Omni permanent holiday and architectural lighting installers. Low-profile smart track systems for homes and businesses.",
+        title: "Permanent LED Lighting Green Bay & Appleton | Omni Track Systems",
+        description: "Professional permanent architectural LED soffit lighting in Green Bay, De Pere & Appleton, WI. Custom color-matched aluminum tracks, smartphone control, 2700K warm white & holiday colors. Get a free quote!",
         url: "https://valleyexteriorpros.com/services/permanent-led-lighting",
         siteName: "Valley Property Services",
         locale: "en_US",
@@ -29,8 +29,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Permanent LED Lighting Installers | Green Bay & Appleton",
-        description: "Northeast Wisconsin's certified Omni permanent holiday and architectural lighting installers. Low-profile smart track systems for homes and businesses.",
+        title: "Permanent LED Lighting Green Bay & Appleton | Omni Track Systems",
+        description: "Professional permanent architectural LED soffit lighting in Green Bay, De Pere & Appleton, WI. Custom color-matched aluminum tracks, smartphone control, 2700K warm white & holiday colors. Get a free quote!",
     },
 };
 
@@ -69,7 +69,7 @@ export default function PermanentLEDLightingPage() {
     const jsonLd = {
         "@context": "https://schema.org",
         "@type": "Service",
-        "name": "Permanent LED Lighting Installation Services",
+        "name": "Permanent LED Lighting & Architectural Smart Track Systems",
         "provider": {
             "@type": "HomeAndConstructionBusiness",
             "@id": "https://valleyexteriorpros.com/#organization",
@@ -94,7 +94,7 @@ export default function PermanentLEDLightingPage() {
                 "price": "500.00"
             }
         },
-        "description": "Certified installers of Omni permanent LED holiday and architectural lighting systems."
+        "description": "Professional permanent architectural LED soffit lighting in Green Bay, De Pere & Appleton, WI. Custom color-matched aluminum tracks, smartphone control, 2700K warm white & holiday colors."
     };
 
     return (
@@ -148,9 +148,8 @@ export default function PermanentLEDLightingPage() {
                 <div className="absolute inset-0 bg-slate-900/75 z-10"></div>
                 <div className="container mx-auto px-4 relative z-20 flex flex-col items-center justify-center text-center pt-24 pb-12">
                     <div className="max-w-4xl mb-8">
-                        <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold leading-tight mb-6 tracking-tight drop-shadow-lg mx-auto text-white">
-                            Permanent <span className="text-gold">LED Lighting</span><br />
-                            <span className="text-2xl md:text-3xl mt-4 block">Green Bay & Northeast Wisconsin</span>
+                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 tracking-tight drop-shadow-lg mx-auto text-white">
+                            Permanent <span className="text-gold">LED Lighting</span> &amp; Architectural Smart Track Systems in Green Bay &amp; Appleton, WI
                         </h1>
                         <p className="text-lg md:text-xl text-gray-100 mb-6 font-semibold leading-relaxed drop-shadow-md">
                             Certified Omni Installers. Year-round smart holiday and architectural accent track systems.
@@ -212,6 +211,7 @@ export default function PermanentLEDLightingPage() {
 
                     {/* SECTION 1: INTRODUCTION */}
                     <section className="mb-12">
+                        <h2 className="text-3xl font-extrabold text-navy mb-6">Omni Smart Track™: Custom Color-Matched Architectural Soffit Lighting</h2>
                         <div className="text-lg leading-relaxed mb-8 font-bold text-navy">
                             Valley Property Services is the leading certified installer of premium Omni Permanent LED Smart Track lighting for properties throughout <Link href="/service-areas/appleton" className="text-blue-600 hover:text-gold font-semibold transition-colors">Appleton</Link>, <Link href="/service-areas/green-bay" className="text-blue-600 hover:text-gold font-semibold transition-colors">Green Bay</Link>, and <Link href="/service-areas/de-pere" className="text-blue-600 hover:text-gold font-semibold transition-colors">De Pere</Link>, WI.
                         </div>
@@ -225,7 +225,7 @@ export default function PermanentLEDLightingPage() {
 
                     {/* SECTION 2: TECHNICAL DETAILS */}
                     <section className="mb-12">
-                        <h2 className="text-3xl font-extrabold text-navy mb-6">The Technology Behind Omni Smart Track Systems</h2>
+                        <h2 className="text-3xl font-extrabold text-navy mb-6">Year-Round Flexibility: True 2700K Warm White &amp; Programmable Holiday Animations</h2>
                         <p className="leading-relaxed text-lg mb-6">
                             Many consumers compare Omni to older generation systems like Trimlight. The key difference lies in the diode structure and aluminum extrusion durability. Omni uses individually addressable LED diodes that feature a dedicated, independent warm white chip. This enables you to emit a true soft-white glow rather than the harsh, unnatural bluish-white color created by standard RGB-only tracks.
                         </p>
@@ -258,7 +258,7 @@ export default function PermanentLEDLightingPage() {
 
                     {/* SECTION 4: TABLE */}
                     <section className="mb-12">
-                        <h2 className="text-3xl font-extrabold text-navy mb-6">Scope of Work & Pricing Matrix</h2>
+                        <h2 className="text-3xl font-extrabold text-navy mb-6">Transparent Package Pricing &amp; Investment Guide</h2>
                         <p className="leading-relaxed text-lg mb-6">
                             We provide flat-rate, linear-foot pricing based on the total complexity and length of your home's rooflines.
                         </p>
@@ -310,7 +310,7 @@ export default function PermanentLEDLightingPage() {
                     {/* SECTION 5: FAQ ACCORDION */}
                     <section className="mb-12 mt-16 bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-gray-100 not-prose">
                         <div className="text-center mb-10">
-                            <h2 className="text-3xl font-extrabold text-navy mb-4">Frequently Asked Questions</h2>
+                            <h2 className="text-3xl font-extrabold text-navy mb-4">Frequently Asked Questions About Permanent Smart Lighting in Northeast Wisconsin</h2>
                             <p className="text-gray-600 text-lg">Direct, technical answers regarding our permanent LED smart lighting systems.</p>
                         </div>
                         <div className="space-y-6 text-left">
