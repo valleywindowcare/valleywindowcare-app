@@ -60,8 +60,7 @@ function getCsvRedirects() {
 }
 
 // Generate the regex string for matching valid services
-// Generate the regex string for matching valid services
-const validServicesRegex = `(roof-cleaning|house-washing|gutter-cleaning|concrete-cleaning|window-cleaning|christmas-lighting|pressure-washing|residential-permanent-led-lighting|fence-cleaning|deck-cleaning|oxidation-removal|soft-wash|driveway-cleaning|solar-panel-cleaning|rust-removal|building-washing|dumpster-pad-cleaning|permanent-led-lighting|commercial-roof-cleaning|commercial-pressure-washing|barn-cleaning|fleet-washing|graffiti-removal|hoa-multi-unit-cleaning|storefront-cleaning|premium-drive-thru-cleaning|parking-lot-and-garage-cleaning|chewing-gum-removal|commercial-awning-cleaning|gas-station-cleaning|post-construction-cleanup|paver-patio-restorations|commercial-hood-cleaning|apartment-exterior-cleaning|winter-salt-removal|hoa-services|hood-vent-cleaning|holiday-lighting)`;
+const validServicesRegex = `(roof-cleaning|house-washing|gutter-cleaning|concrete-cleaning|window-cleaning|christmas-lighting|pressure-washing|fence-cleaning|deck-cleaning|oxidation-removal|soft-wash|driveway-cleaning|solar-panel-cleaning|rust-removal|building-washing|dumpster-pad-cleaning|permanent-led-lighting|commercial-roof-cleaning|commercial-pressure-washing|barn-cleaning|fleet-washing|graffiti-removal|hoa-multi-unit-cleaning|storefront-cleaning|premium-drive-thru-cleaning|parking-lot-and-garage-cleaning|chewing-gum-removal|commercial-awning-cleaning|gas-station-cleaning|post-construction-cleanup|paver-patio-restorations|commercial-hood-cleaning|apartment-exterior-cleaning|winter-salt-removal|hoa-services|hood-vent-cleaning|holiday-lighting)`;
 
 const legacyToNestedMap: Record<string, string> = {
   "/blog/exterior-house-cleaning-checklist": "/blog/an-experts-guide-to-cleaning-the-exterior-of-your-home",
@@ -84,7 +83,7 @@ const legacyToNestedMap: Record<string, string> = {
   "/services/apartment-exterior-cleaning": "/services/hoa-services",
   "/services/apartment-hoa-cleaning": "/services/hoa-services",
   "/hoa-services": "/services/hoa-services",
-  "/services/residential-permanent-led-lighting": "/services/permanent-led-lighting",
+  "/services/residential-permanent-led-lighting{/}?": "/services/permanent-led-lighting",
   "/services/permanent-holiday-lighting": "https://valleyexteriorpros.com/services/permanent-led-lighting",
   "/permanent-holiday-lighting": "https://valleyexteriorpros.com/services/permanent-led-lighting",
   "/holiday-lighting": "/services/christmas-lighting",
@@ -375,6 +374,24 @@ const nextConfig: NextConfig = {
         // Direct alias for holiday lighting across cities
         source: '/service-areas/:city/holiday-lighting',
         destination: '/services/christmas-lighting',
+        permanent: true,
+      },
+      {
+        // Hub Alias: Residential Permanent LED Lighting across cities -> Permanent LED Lighting
+        source: '/service-areas/:city/residential-permanent-led-lighting{/}?',
+        destination: '/services/permanent-led-lighting',
+        permanent: true,
+      },
+      {
+        // Fallback: :city-residential-permanent-led-lighting -> Permanent LED Lighting
+        source: '/:city-residential-permanent-led-lighting{/}?',
+        destination: '/services/permanent-led-lighting',
+        permanent: true,
+      },
+      {
+        // Fallback: /services/residential-permanent-led-lighting-:city -> Permanent LED Lighting
+        source: '/services/residential-permanent-led-lighting-:city{/}?',
+        destination: '/services/permanent-led-lighting',
         permanent: true,
       },
       {

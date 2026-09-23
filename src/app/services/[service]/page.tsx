@@ -106,7 +106,7 @@ type PageProps = {
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
     const { service } = await params;
-    if (service === 'permanent-holiday-lighting') {
+    if (service === 'residential-permanent-led-lighting' || service === 'permanent-holiday-lighting') {
         permanentRedirect('https://valleyexteriorpros.com/services/permanent-led-lighting');
     }
     if (service === 'power-washing') {
@@ -183,10 +183,6 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         "permanent-led-lighting": {
             title: "Permanent LED Holiday Lighting | Appleton & Green Bay WI",
             description: "Professional permanent LED holiday lighting installer Appleton WI and Green Bay. Custom color-changing smart track lights for homes and businesses."
-        },
-        "residential-permanent-led-lighting": {
-            title: "Permanent LED Holiday Lighting | Appleton & Green Bay WI",
-            description: "Professional permanent LED holiday lighting installer Appleton WI and Green Bay. Custom color-changing smart track lights for homes and businesses."
         }
     };
 
@@ -235,7 +231,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function ServiceGenericPage({ params }: PageProps) {
     const { service } = await params;
-    if (service === 'permanent-holiday-lighting') {
+    if (service === 'residential-permanent-led-lighting' || service === 'permanent-holiday-lighting') {
         permanentRedirect('https://valleyexteriorpros.com/services/permanent-led-lighting');
     }
     if (service === 'power-washing') {
@@ -437,7 +433,7 @@ export default async function ServiceGenericPage({ params }: PageProps) {
             )}
 
             {/* HIGH-TICKET CRO: Flexible Financing */}
-            {['residential-permanent-led-lighting', 'permanent-holiday-lighting', 'permanent-led-lighting', 'roof-cleaning', 'paver-patio-restorations'].includes(service) && (
+            {['permanent-holiday-lighting', 'permanent-led-lighting', 'roof-cleaning', 'paver-patio-restorations'].includes(service) && (
                 <section className="container mx-auto px-4 py-8 mb-4">
                     <div className="bg-gradient-to-br from-navy to-navy-dark border border-navy-light text-white p-8 md:p-10 rounded-2xl shadow-xl text-center md:text-left flex flex-col md:flex-row items-center gap-8 max-w-5xl mx-auto relative overflow-hidden">
                         <div className="absolute top-0 right-0 p-8 opacity-10 pointer-events-none">

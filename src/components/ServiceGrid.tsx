@@ -31,7 +31,7 @@ const DEFAULT_SERVICES = [
     { name: "Window Cleaning", slug: "window-cleaning" },
     { name: "Christmas Lighting", slug: "christmas-lighting" },
     { name: "Power & Pressure Washing", slug: "pressure-washing" },
-    { name: "Residential Permanent LED Lighting", slug: "residential-permanent-led-lighting" },
+    { name: "Residential Permanent LED Lighting", slug: "permanent-led-lighting" },
     { name: "Fence Cleaning", slug: "fence-cleaning" },
     { name: "Deck Cleaning", slug: "deck-cleaning" },
     { name: "Oxidation Removal", slug: "oxidation-removal" },
