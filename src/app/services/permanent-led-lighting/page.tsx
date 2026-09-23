@@ -7,7 +7,6 @@ import Hero from '@/components/Hero';
 import HeroForm from "@/components/HeroForm";
 import { ShieldCheck, CheckCircle, ArrowRight, MapPin, Phone, Mail } from 'lucide-react';
 import ReviewSlider from '@/components/ReviewSlider';
-import FAQSchema from '@/components/FAQSchema';
 import PricingMatrix from '@/components/PricingMatrix';
 import VanillaMapClient from '@/components/VanillaMapClient';
 
@@ -66,42 +65,119 @@ const faqs = [
 ];
 
 export default function PermanentLEDLightingPage() {
-    const jsonLd = {
+    const schemaGraph = {
         "@context": "https://schema.org",
-        "@type": "Service",
-        "name": "Permanent LED Lighting & Architectural Smart Track Systems",
-        "provider": {
-            "@type": "HomeAndConstructionBusiness",
-            "@id": "https://valleyexteriorpros.com/#organization",
-            "name": "Valley Property Services",
-            "telephone": "920-609-7085",
-            "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "462 S Good Hope Rd",
-                "addressLocality": "De Pere",
-                "addressRegion": "WI",
-                "postalCode": "54115"
+        "@graph": [
+            {
+                "@type": "Service",
+                "@id": "https://valleyexteriorpros.com/services/permanent-led-lighting#service",
+                "name": "Permanent Architectural LED Lighting Installation",
+                "serviceType": "Permanent LED Lighting Installation",
+                "provider": {
+                    "@type": "HomeAndConstructionBusiness",
+                    "name": "Valley Property Services",
+                    "telephone": "(920) 609-7085",
+                    "url": "https://valleyexteriorpros.com",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "streetAddress": "462 S Good Hope Rd",
+                        "addressLocality": "De Pere",
+                        "addressRegion": "WI",
+                        "postalCode": "54115",
+                        "addressCountry": "US"
+                    }
+                },
+                "areaServed": [
+                    { "@type": "City", "name": "Green Bay" },
+                    { "@type": "City", "name": "Appleton" },
+                    { "@type": "City", "name": "De Pere" },
+                    { "@type": "AdministrativeArea", "name": "Brown County" },
+                    { "@type": "AdministrativeArea", "name": "Outagamie County" }
+                ],
+                "hasOfferCatalog": {
+                    "@type": "OfferCatalog",
+                    "name": "Permanent LED Lighting Packages",
+                    "itemListElement": [
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Small Track Package (Up to 100 LF)"
+                            },
+                            "priceSpecification": {
+                                "@type": "PriceSpecification",
+                                "minPrice": "1500",
+                                "maxPrice": "2500",
+                                "priceCurrency": "USD"
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Standard Home Package (100–200 LF)"
+                            },
+                            "priceSpecification": {
+                                "@type": "PriceSpecification",
+                                "minPrice": "2500",
+                                "maxPrice": "4500",
+                                "priceCurrency": "USD"
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Premium Estate Package (200–350 LF)"
+                            },
+                            "priceSpecification": {
+                                "@type": "PriceSpecification",
+                                "minPrice": "4500",
+                                "maxPrice": "7500",
+                                "priceCurrency": "USD"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "@type": "FAQPage",
+                "@id": "https://valleyexteriorpros.com/services/permanent-led-lighting#faq",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "Are the permanent LED tracks visible from the street during the day?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "No. Our Omni Smart Track systems utilize custom-extruded aluminum channels color-matched precisely to your home's fascia, gutters, or drip edge. Diodes are completely concealed behind the trim line during daylight."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "How do the lights handle cold Northeast Wisconsin winters?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Every system is rated IP68 waterproof and engineered for sub-zero operating temperatures, freeze-thaw cycles, and heavy snow loads with a 50,000+ hour operating life."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Can permanent lighting be used for normal architectural downlighting?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes. Unlike older RGB-only systems, our systems feature a dedicated 2700K warm-white diode that provides elegant, soft architectural downlighting for everyday evening curb appeal."
+                        }
+                    }
+                ]
             }
-        },
-        "areaServed": ["Appleton", "Green Bay", "De Pere", "Northeast Wisconsin"],
-        "offers": {
-            "@type": "Offer",
-            "priceCurrency": "USD",
-            "price": "500.00",
-            "priceSpecification": {
-                "@type": "UnitPriceSpecification",
-                "priceCurrency": "USD",
-                "price": "500.00"
-            }
-        },
-        "description": "Professional permanent architectural LED soffit lighting in Green Bay, De Pere & Appleton, WI. Custom color-matched aluminum tracks, smartphone control, 2700K warm white & holiday colors."
+        ]
     };
 
     return (
         <main className="min-h-screen bg-slate-50 text-navy">
             <script
                 type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaGraph) }}
             />
             <script
                 type="application/ld+json"
@@ -325,7 +401,6 @@ export default function PermanentLEDLightingPage() {
                 </article>
             </div>
 
-            <FAQSchema faqs={faqs} />
             <ReviewSlider />
 
             <div className="bg-white border-t border-gray-200">
