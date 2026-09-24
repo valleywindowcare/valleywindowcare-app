@@ -64,14 +64,19 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <CanonicalURL />
-        {/* Google tag (gtag.js) */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11100279971" />
+        {/* Google tag (gtag.js) — Google Ads AW-11100279971 */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=AW-11100279971"
+        />
         <script
           dangerouslySetInnerHTML={{
-            __html: `window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'AW-11100279971');`,
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'AW-11100279971');
+            `,
           }}
         />
         <Script
