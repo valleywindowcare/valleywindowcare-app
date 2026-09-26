@@ -8,6 +8,8 @@ import CanonicalURL from "@/components/CanonicalURL";
 import LocalBusinessSchema from "@/components/LocalBusinessSchema";
 import PromoModal from "@/components/PromoModal";
 import Script from "next/script";
+import { Suspense } from "react";
+import MetaPixelTracker from "@/components/MetaPixelTracker";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
@@ -79,6 +81,23 @@ export default function RootLayout({
             `,
           }}
         />
+        {/* Meta Pixel Base Code — Pixel ID 585331990290278 */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              !function(f,b,e,v,n,t,s)
+              {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+              n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+              if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+              n.queue=[];t=b.createElement(e);t.async=!0;
+              t.src=v;s=b.getElementsByTagName(e)[0];
+              s.parentNode.insertBefore(t,s)}(window, document,'script',
+              'https://connect.facebook.net/en_US/fbevents.js');
+              fbq('init', '585331990290278');
+              fbq('track', 'PageView');
+            `,
+          }}
+        />
         <Script
           id="openai-pixel"
           strategy="lazyOnload"
@@ -112,6 +131,21 @@ export default function RootLayout({
           />
         </noscript>
         {/* End Google Tag Manager (noscript) */}
+        {/* Meta Pixel (noscript) */}
+        <noscript>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            height="1"
+            width="1"
+            style={{ display: "none" }}
+            src="https://www.facebook.com/tr?id=585331990290278&ev=PageView&noscript=1"
+            alt=""
+          />
+        </noscript>
+        {/* End Meta Pixel (noscript) */}
+        <Suspense fallback={null}>
+          <MetaPixelTracker />
+        </Suspense>
         <SpeedInsights />
         <Analytics />
         {/* Commented out Google Ads Call Conversion DNI script to prevent dynamic number replacements */}
@@ -137,26 +171,6 @@ export default function RootLayout({
             />
           </>
         )} */}
-        {process.env.NEXT_PUBLIC_META_PIXEL_ID && (
-          <Script
-            id="fb-pixel"
-            strategy="lazyOnload"
-            dangerouslySetInnerHTML={{
-              __html: `
-                 !function(f,b,e,v,n,t,s)
-                 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-                 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-                 if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-                 n.queue=[];t=b.createElement(e);t.async=!0;
-                 t.src=v;s=b.getElementsByTagName(e)[0];
-                 s.parentNode.insertBefore(t,s)}(window, document,'script',
-                 'https://connect.facebook.net/en_US/fbevents.js');
-                 fbq('init', '${process.env.NEXT_PUBLIC_META_PIXEL_ID}');
-                 fbq('track', 'PageView');
-               `,
-            }}
-          />
-        )}
         <Header />
         <main className="flex-grow">
           {children}

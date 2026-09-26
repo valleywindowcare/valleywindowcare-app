@@ -26,7 +26,7 @@ export async function POST(request: Request) {
         }
         // --- 2. FIRE META CONVERSIONS API (CAPI) LEAD EVENT ---
         // Ensure tokens are present in the server environment
-        const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID;
+        const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID || "585331990290278";
         const META_CAPI_TOKEN = process.env.META_CAPI_TOKEN;
         
         if (META_PIXEL_ID && META_CAPI_TOKEN) {
