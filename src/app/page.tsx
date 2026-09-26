@@ -11,6 +11,7 @@ import dynamic from "next/dynamic";
 const ReviewSlider = dynamic(() => import("@/components/ReviewSlider"));
 import HomeExpansion from "@/components/HomeExpansion";
 import Link from 'next/link';
+import CommercialProjectSpotlight from "@/components/sections/CommercialProjectSpotlight";
 
 // Metadata inherited from strict server layout.tsx
 export const metadata: Metadata = {
@@ -46,6 +47,7 @@ export default function Home() {
       />
       <Process />
       <ServiceGrid />
+      <CommercialProjectSpotlight />
 
       {/* HIGH-AUTHORITY PAGERANK FUNNEL (SEO) */}
       <section className="bg-navy py-12 border-t border-[#1e3e6b] text-center shadow-inner relative z-10">

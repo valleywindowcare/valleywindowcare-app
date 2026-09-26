@@ -7,6 +7,7 @@ import Hero from '@/components/Hero';
 import { ShieldCheck, CheckCircle, ArrowRight, MapPin } from 'lucide-react';
 import ReviewSlider from '@/components/ReviewSlider';
 import FAQSchema from '@/components/FAQSchema';
+import CommercialProjectSpotlight from '@/components/sections/CommercialProjectSpotlight';
 
 export const metadata: Metadata = {
     title: {
@@ -279,6 +280,7 @@ export default function CommercialPressureWashingPage() {
             </div>
 
             <FAQSchema faqs={faqs} />
+            <CommercialProjectSpotlight className="my-12" />
             <ReviewSlider />
 
             <div className="bg-white border-t border-gray-200">
