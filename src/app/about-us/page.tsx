@@ -31,7 +31,7 @@ export default function AboutUsPage() {
                 "name": "James",
                 "jobTitle": "Owner & Founder",
                 "description": "Owner/Founder of Valley Property Services, exterior restoration specialist serving Green Bay & Fox Valley",
-                "image": "https://valleyexteriorpros.com/images/portfolio/building-wash-copy.webp",
+                "image": "https://valleyexteriorpros.com/images/portfolio/james-founder.webp",
                 "worksFor": { "@id": "https://valleyexteriorpros.com/#organization" },
                 "url": "https://valleyexteriorpros.com/about-us",
                 "sameAs": [
@@ -65,17 +65,17 @@ export default function AboutUsPage() {
                     <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 flex flex-col md:flex-row">
                         <div className="md:w-1/2 bg-navy text-white flex flex-col justify-between overflow-hidden relative min-h-[500px]">
                             {/* Profile Image Background */}
-                            <div className="relative w-full h-64 shrink-0 border-b border-white/10">
+                            <div className="relative w-full h-72 sm:h-80 shrink-0 border-b border-white/10">
                                 <Image
-                                    src="/images/portfolio/building-wash-copy.webp"
-                                    alt="James, Founder and Owner-Operator of Valley Property Services"
+                                    src="/images/portfolio/james-founder.webp"
+                                    alt="James, Founder and Owner-Operator of Valley Property Services with service truck and commercial equipment"
                                     fill
                                     priority
                                     className="object-cover object-center"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-[#1B365D] via-[#1B365D]/30 to-transparent"></div>
+                                <div className="absolute inset-0 bg-gradient-to-t from-[#1B365D] via-transparent to-transparent"></div>
                                 <div className="absolute bottom-4 left-6">
-                                    <span className="bg-gold text-navy font-bold px-3 py-1 rounded-full text-xs uppercase tracking-wider">Owner-Operator</span>
+                                    <span className="bg-gold text-navy font-bold px-3 py-1 rounded-full text-xs uppercase tracking-wider shadow-md">Owner-Operator</span>
                                 </div>
                             </div>
                             
