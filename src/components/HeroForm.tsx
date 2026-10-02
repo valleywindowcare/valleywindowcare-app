@@ -1,10 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import SuccessState from "./SuccessState";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { trackLeadConversion } from "@/lib/gtag";
+import { captureAttribution, getDefaultAttribution, LeadAttribution } from "@/lib/attribution";
 
 declare global {
   interface Window {
@@ -25,6 +27,16 @@ export interface LeadSubmissionPayload {
     projectDetails: string;
     servicesRequested: string;
     eventId?: string;
+    sms_consent?: string;
+    utm_source?: string;
+    utm_medium?: string;
+    utm_campaign?: string;
+    utm_term?: string;
+    utm_content?: string;
+    gclid?: string;
+    fbclid?: string;
+    landing_page?: string;
+    referrer?: string;
 }
 
 export const SERVICE_LABEL_MAP: Record<string, string> = {
@@ -46,7 +58,17 @@ export default function HeroForm({ idPrefix = "", defaultServices = [] }: { idPr
     const router = useRouter();
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
+    const [attribution, setAttribution] = useState<LeadAttribution>(getDefaultAttribution());
     const prefix = idPrefix ? `${idPrefix}-` : "";
+
+    useEffect(() => {
+        try {
+            const attr = captureAttribution();
+            setAttribution(attr);
+        } catch (e) {
+            console.error("Attribution load error:", e);
+        }
+    }, []);
 
     const isDefaultSelected = (key: string) => {
         const cleanKey = key.toLowerCase().replace(/[^a-z0-9]/g, "");
@@ -78,6 +100,21 @@ export default function HeroForm({ idPrefix = "", defaultServices = [] }: { idPr
         const safeDetails = formData.get("projectDetails")?.toString().trim() || "No details provided.";
         const safeServices = selectedServices || "No specific services selected";
 
+        // SMS consent value
+        const smsConsentChecked = formData.get("sms_consent") === "yes";
+        const smsConsentValue = smsConsentChecked ? "yes" : "no";
+
+        // Lead source attribution parameters
+        const utmSource = formData.get("utm_source")?.toString() || attribution.utm_source || "";
+        const utmMedium = formData.get("utm_medium")?.toString() || attribution.utm_medium || "";
+        const utmCampaign = formData.get("utm_campaign")?.toString() || attribution.utm_campaign || "";
+        const utmTerm = formData.get("utm_term")?.toString() || attribution.utm_term || "";
+        const utmContent = formData.get("utm_content")?.toString() || attribution.utm_content || "";
+        const gclid = formData.get("gclid")?.toString() || attribution.gclid || "";
+        const fbclid = formData.get("fbclid")?.toString() || attribution.fbclid || "";
+        const landingPage = formData.get("landing_page")?.toString() || attribution.landing_page || "";
+        const referrer = formData.get("referrer")?.toString() || attribution.referrer || "";
+
         if (!safeAddress) {
             alert("Property address is required to provide an accurate estimate.");
             setIsLoading(false);
@@ -92,7 +129,17 @@ export default function HeroForm({ idPrefix = "", defaultServices = [] }: { idPr
             squareFootage: safeSqFt,
             zip: safeZip,
             projectDetails: safeDetails,
-            servicesRequested: safeServices
+            servicesRequested: safeServices,
+            sms_consent: smsConsentValue,
+            utm_source: utmSource,
+            utm_medium: utmMedium,
+            utm_campaign: utmCampaign,
+            utm_term: utmTerm,
+            utm_content: utmContent,
+            gclid: gclid,
+            fbclid: fbclid,
+            landing_page: landingPage,
+            referrer: referrer
         };
 
         try {
@@ -117,7 +164,17 @@ export default function HeroForm({ idPrefix = "", defaultServices = [] }: { idPr
                 square_footage: safeSqFt,
                 zip_code: safeZip,
                 message: safeDetails,
-                services: safeServices
+                services: safeServices,
+                sms_consent: smsConsentValue,
+                utm_source: utmSource,
+                utm_medium: utmMedium,
+                utm_campaign: utmCampaign,
+                utm_term: utmTerm,
+                utm_content: utmContent,
+                gclid: gclid,
+                fbclid: fbclid,
+                landing_page: landingPage,
+                referrer: referrer
             };
 
             const web3Response = await fetch("https://api.web3forms.com/submit", {
@@ -179,7 +236,12 @@ export default function HeroForm({ idPrefix = "", defaultServices = [] }: { idPr
                      lastName: safeName.includes(' ') ? safeName.substring(safeName.indexOf(' ') + 1) : '',
                      postalCode: safeZip,
                      country: 'US',
-                     services: safeServices
+                     services: safeServices,
+                     sms_consent: smsConsentValue,
+                     utm_source: utmSource,
+                     utm_medium: utmMedium,
+                     utm_campaign: utmCampaign,
+                     gclid: gclid
                  });
                  window.dataLayer.push({ event: "ads_conversion_Form_1" });
             }
@@ -202,6 +264,17 @@ export default function HeroForm({ idPrefix = "", defaultServices = [] }: { idPr
             <div className="p-4 sm:p-8 h-full flex flex-col justify-center">
                 <h3 className="text-xl sm:text-2xl font-extrabold mb-4 sm:mb-6 text-navy !text-center !w-full !block">Request a Free Quote</h3>
                 <form className="space-y-4" onSubmit={handleSubmit}>
+                    {/* Hidden Lead Source Tracking Fields */}
+                    <input type="hidden" name="utm_source" value={attribution.utm_source || ""} />
+                    <input type="hidden" name="utm_medium" value={attribution.utm_medium || ""} />
+                    <input type="hidden" name="utm_campaign" value={attribution.utm_campaign || ""} />
+                    <input type="hidden" name="utm_term" value={attribution.utm_term || ""} />
+                    <input type="hidden" name="utm_content" value={attribution.utm_content || ""} />
+                    <input type="hidden" name="gclid" value={attribution.gclid || ""} />
+                    <input type="hidden" name="fbclid" value={attribution.fbclid || ""} />
+                    <input type="hidden" name="landing_page" value={attribution.landing_page || ""} />
+                    <input type="hidden" name="referrer" value={attribution.referrer || ""} />
+
                     <div>
                         <label className="sr-only" htmlFor={`${prefix}name`}>Name</label>
                         <input
@@ -331,6 +404,23 @@ export default function HeroForm({ idPrefix = "", defaultServices = [] }: { idPr
                             </div>
                         </fieldset>
                     </div>
+                    {/* SMS Consent Checkbox (Optional, Unchecked by default) */}
+                    <div className="pt-1">
+                        <label htmlFor={`${prefix}sms_consent`} className="flex items-start gap-2.5 text-xs text-gray-600 cursor-pointer select-none leading-snug">
+                            <input
+                                id={`${prefix}sms_consent`}
+                                name="sms_consent"
+                                type="checkbox"
+                                value="yes"
+                                defaultChecked={false}
+                                className="mt-0.5 w-4 h-4 rounded border-gray-300 text-navy accent-navy cursor-pointer shrink-0"
+                            />
+                            <span>
+                                I agree to receive text messages from Valley Property Services about my quote request and service appointments. Message frequency varies. Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help.
+                            </span>
+                        </label>
+                    </div>
+
                     <motion.button viewport={{ once: true }}
                         whileHover={{ scale: isLoading ? 1 : 1.05 }}
                         whileTap={{ scale: isLoading ? 1 : 0.95 }}
@@ -343,6 +433,18 @@ export default function HeroForm({ idPrefix = "", defaultServices = [] }: { idPr
                     >
                         {isLoading ? "SENDING..." : "GET QUOTE NOW"}
                     </motion.button>
+
+                    {/* Submission Disclosure */}
+                    <p className="text-[11px] text-gray-500 text-center leading-normal mt-2">
+                        By submitting this form, you agree to be contacted by Valley Property Services by phone, text and email about your request. Consent is not a condition of purchase. See our{" "}
+                        <Link href="/privacy-policy" className="underline hover:text-navy font-medium">
+                            Privacy Policy
+                        </Link>{" "}
+                        and{" "}
+                        <Link href="/sms-terms" className="underline hover:text-navy font-medium">
+                            SMS Terms
+                        </Link>.
+                    </p>
                 </form>
             </div>
         </div>

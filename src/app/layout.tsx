@@ -10,6 +10,7 @@ import PromoModal from "@/components/PromoModal";
 import Script from "next/script";
 import { Suspense } from "react";
 import MetaPixelTracker from "@/components/MetaPixelTracker";
+import AttributionTracker from "@/components/AttributionTracker";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
@@ -146,6 +147,7 @@ export default function RootLayout({
         <Suspense fallback={null}>
           <MetaPixelTracker />
         </Suspense>
+        <AttributionTracker />
         <SpeedInsights />
         <Analytics />
         {/* Commented out Google Ads Call Conversion DNI script to prevent dynamic number replacements */}

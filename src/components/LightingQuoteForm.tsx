@@ -1,9 +1,11 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { trackLeadConversion } from "@/lib/gtag";
+import { captureAttribution, getDefaultAttribution, LeadAttribution } from "@/lib/attribution";
 import { Upload, X, Camera, ShieldCheck, Sparkles } from "lucide-react";
 
 declare global {
@@ -22,10 +24,20 @@ interface LightingQuoteFormProps {
 export default function LightingQuoteForm({ idPrefix = "lighting" }: LightingQuoteFormProps) {
     const router = useRouter();
     const [isLoading, setIsLoading] = useState(false);
+    const [attribution, setAttribution] = useState<LeadAttribution>(getDefaultAttribution());
     const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
     const [isDragOver, setIsDragOver] = useState(false);
     const fileInputRef = useRef<HTMLInputElement>(null);
     const prefix = idPrefix ? `${idPrefix}-` : "";
+
+    useEffect(() => {
+        try {
+            const attr = captureAttribution();
+            setAttribution(attr);
+        } catch (e) {
+            console.error("Attribution load error:", e);
+        }
+    }, []);
 
     const handleFileSelection = (fileList: FileList | null) => {
         if (!fileList) return;
@@ -64,6 +76,21 @@ export default function LightingQuoteForm({ idPrefix = "lighting" }: LightingQuo
         const safeFootage = formData.get("footage")?.toString().trim() || "Not Sure / Please Measure for Me";
         const safeNotes = formData.get("notes")?.toString().trim() || "";
 
+        // SMS consent value
+        const smsConsentChecked = formData.get("sms_consent") === "yes";
+        const smsConsentValue = smsConsentChecked ? "yes" : "no";
+
+        // Lead source attribution parameters
+        const utmSource = formData.get("utm_source")?.toString() || attribution.utm_source || "";
+        const utmMedium = formData.get("utm_medium")?.toString() || attribution.utm_medium || "";
+        const utmCampaign = formData.get("utm_campaign")?.toString() || attribution.utm_campaign || "";
+        const utmTerm = formData.get("utm_term")?.toString() || attribution.utm_term || "";
+        const utmContent = formData.get("utm_content")?.toString() || attribution.utm_content || "";
+        const gclid = formData.get("gclid")?.toString() || attribution.gclid || "";
+        const fbclid = formData.get("fbclid")?.toString() || attribution.fbclid || "";
+        const landingPage = formData.get("landing_page")?.toString() || attribution.landing_page || "";
+        const referrer = formData.get("referrer")?.toString() || attribution.referrer || "";
+
         if (!safeAddress) {
             alert("Property address is required for satellite roofline measurement.");
             setIsLoading(false);
@@ -91,11 +118,21 @@ export default function LightingQuoteForm({ idPrefix = "lighting" }: LightingQuo
             web3FormData.append("estimated_linear_footage", safeFootage);
             web3FormData.append("service", "Permanent LED Lighting Installation");
             web3FormData.append("services", "Permanent LED Lighting");
+            web3FormData.append("sms_consent", smsConsentValue);
+            web3FormData.append("utm_source", utmSource);
+            web3FormData.append("utm_medium", utmMedium);
+            web3FormData.append("utm_campaign", utmCampaign);
+            web3FormData.append("utm_term", utmTerm);
+            web3FormData.append("utm_content", utmContent);
+            web3FormData.append("gclid", gclid);
+            web3FormData.append("fbclid", fbclid);
+            web3FormData.append("landing_page", landingPage);
+            web3FormData.append("referrer", referrer);
             web3FormData.append(
                 "message",
                 `Service: Permanent LED Lighting Installation\nEstimated Linear Footage / Home Size: ${safeFootage}\n${
                     safeNotes ? `Special Notes / Track Color: ${safeNotes}\n` : ""
-                }${selectedFiles.length > 0 ? `Attached Photos: ${selectedFiles.length} file(s)\n` : ""}`
+                }${selectedFiles.length > 0 ? `Attached Photos: ${selectedFiles.length} file(s)\n` : ""}SMS Consent: ${smsConsentValue}`
             );
 
             // Append attached home photos for Web3Forms email dispatch
@@ -135,6 +172,17 @@ export default function LightingQuoteForm({ idPrefix = "lighting" }: LightingQuo
                 }${selectedFiles.length > 0 ? ` (${selectedFiles.length} photo(s) attached)` : ""}`,
                 servicesRequested: "Permanent LED Lighting",
                 eventId: generatedEventId,
+                sms_consent: smsConsentValue,
+                smsConsent: smsConsentValue,
+                utm_source: utmSource,
+                utm_medium: utmMedium,
+                utm_campaign: utmCampaign,
+                utm_term: utmTerm,
+                utm_content: utmContent,
+                gclid: gclid,
+                fbclid: fbclid,
+                landing_page: landingPage,
+                referrer: referrer,
             };
 
             fetch("/api/lead", {
@@ -182,6 +230,11 @@ export default function LightingQuoteForm({ idPrefix = "lighting" }: LightingQuo
                     country: "US",
                     services: "Permanent LED Lighting",
                     linearFootage: safeFootage,
+                    sms_consent: smsConsentValue,
+                    utm_source: utmSource,
+                    utm_medium: utmMedium,
+                    utm_campaign: utmCampaign,
+                    gclid: gclid,
                 });
                 window.dataLayer.push({ event: "ads_conversion_Form_1" });
             }
@@ -217,6 +270,17 @@ export default function LightingQuoteForm({ idPrefix = "lighting" }: LightingQuo
                 </div>
 
                 <form className="space-y-3.5" onSubmit={handleSubmit}>
+                    {/* Hidden Lead Source Tracking Fields */}
+                    <input type="hidden" name="utm_source" value={attribution.utm_source || ""} />
+                    <input type="hidden" name="utm_medium" value={attribution.utm_medium || ""} />
+                    <input type="hidden" name="utm_campaign" value={attribution.utm_campaign || ""} />
+                    <input type="hidden" name="utm_term" value={attribution.utm_term || ""} />
+                    <input type="hidden" name="utm_content" value={attribution.utm_content || ""} />
+                    <input type="hidden" name="gclid" value={attribution.gclid || ""} />
+                    <input type="hidden" name="fbclid" value={attribution.fbclid || ""} />
+                    <input type="hidden" name="landing_page" value={attribution.landing_page || ""} />
+                    <input type="hidden" name="referrer" value={attribution.referrer || ""} />
+
                     {/* Full Name */}
                     <div>
                         <label className="sr-only" htmlFor={`${prefix}name`}>Full Name</label>
@@ -401,6 +465,23 @@ export default function LightingQuoteForm({ idPrefix = "lighting" }: LightingQuo
                         />
                     </div>
 
+                    {/* SMS Consent Checkbox (Optional, Unchecked by default) */}
+                    <div className="pt-1 text-left">
+                        <label htmlFor={`${prefix}sms_consent`} className="flex items-start gap-2.5 text-xs text-gray-600 cursor-pointer select-none leading-snug">
+                            <input
+                                id={`${prefix}sms_consent`}
+                                name="sms_consent"
+                                type="checkbox"
+                                value="yes"
+                                defaultChecked={false}
+                                className="mt-0.5 w-4 h-4 rounded border-gray-300 text-navy accent-navy cursor-pointer shrink-0"
+                            />
+                            <span>
+                                I agree to receive text messages from Valley Property Services about my quote request and service appointments. Message frequency varies. Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help.
+                            </span>
+                        </label>
+                    </div>
+
                     {/* Submit Button */}
                     <motion.button
                         viewport={{ once: true }}
@@ -417,6 +498,18 @@ export default function LightingQuoteForm({ idPrefix = "lighting" }: LightingQuo
                     >
                         {isLoading ? "Preparing Your Estimate..." : "Get My Custom Lighting Mock-Up & Estimate"}
                     </motion.button>
+
+                    {/* Submission Disclosure */}
+                    <p className="text-[11px] text-gray-500 text-center leading-normal mt-2">
+                        By submitting this form, you agree to be contacted by Valley Property Services by phone, text and email about your request. Consent is not a condition of purchase. See our{" "}
+                        <Link href="/privacy-policy" className="underline hover:text-navy font-medium">
+                            Privacy Policy
+                        </Link>{" "}
+                        and{" "}
+                        <Link href="/sms-terms" className="underline hover:text-navy font-medium">
+                            SMS Terms
+                        </Link>.
+                    </p>
 
                     {/* Micro Trust Bar */}
                     <div className="pt-2 flex flex-wrap items-center justify-center gap-3 text-[11px] text-gray-500 font-medium">

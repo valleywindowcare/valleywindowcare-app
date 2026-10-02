@@ -218,6 +218,12 @@ export default function Footer() {
                                     <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
                                 </Link>
                             </li>
+                            <li>
+                                <Link href="/sms-terms" className="hover:text-gold transition-colors inline-block relative group">
+                                    SMS Terms & Conditions
+                                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
+                                </Link>
+                            </li>
                             <li className="pt-2">
                                 <a
                                     href="https://www.google.com/search?q=valley+window+care+&sca_esv=507a868014978926&ei=3eWlacP0Kc2uqtsP0LSU8Qc&biw=1772&bih=1173&ved=0ahUKEwiD1-e1-oGTAxVNl2oFHVAaJX4Q4dUDCBE&uact=5&oq=valley+window+care+&gs_lp=Egxnd3Mtd2l6LXNlcnAiE3ZhbGxleSB3aW5kb3cgY2FyZSAyBhAAGBYYHjIGEAAYFhgeMgYQABgWGB4yBhAAGBYYHjIGEAAYFhgeMgYQABgWGB4yBhAAGBYYHjIGEAAYFhgeMgYQABgWGB4yBhAAGBYYHki4HlAAWJoRcAB4AZABAZgB3wKgAbAVqgEIMC4xOC4wLjG4AQPIAQD4AQGYAhKgAp4TwgIREC4YgAQYkQIY0QMYxwEYigXCAgsQABiABBiRAhiKBcICERAuGIAEGLEDGNEDGIMBGMcBwgIOEC4YgAQYsQMY0QMYxwHCAgUQLhiABMICBRAAGIAEwgIIEAAYgAQYsQPCAiAQLhiABBiRAhjRAxjHARiKBRiXBRjcBBjeBBjgBNgBAcICChAAGIAEGEMYigXCAgsQABiABBixAxiDAcICCxAuGIAEGLEDGIMBwgILEC4YgAQYxwEYrwHCAg0QLhiABBixAxhDGIoFwgITEC4YgAQYsQMY0QMYQxjHARiKBcICCxAuGIAEGNEDGMcBwgIOEC4YgAQYxwEYjgUYrwHCAg0QABiABBixAxhDGIoFwgIaEC4YgAQYxwEYrwEYlwUY3AQY3gQY4ATYAQHCAgsQLhiABBiRAhiKBcICERAuGIAEGLEDGIMBGMcBGK8BwgIHEAAYgAQYCsICCRAAGIAEGAoYC8ICCBAAGIAEGMkDwgIIEAAYFhgKGB7CAgIQJpgDALoGBggBEAEYFJIHBDAuMTigB_GFArIHBDAuMTi4B54TwgcGMC43LjExyAc7gAgA&sclient=gws-wiz-serp&zx=1772479974803&no_sw_cr=1#lrd=0x8802f7860e31a465:0xc422a0d3f9df71ea,1,,,,"
@@ -273,10 +279,19 @@ export default function Footer() {
 
             {/* Copyright Ribbon */}
             <div className="bg-navy py-6 border-t border-navy-dark">
-                <div className="container mx-auto px-4 text-center">
-                    <p className="text-gray-400 text-sm">
+                <div className="container mx-auto px-4 text-center flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6 text-gray-400 text-sm">
+                    <p>
                         &copy; {new Date().getFullYear()} Valley Property Services. All rights reserved.
                     </p>
+                    <div className="flex items-center gap-4 text-xs sm:text-sm">
+                        <Link href="/privacy-policy" className="hover:text-gold transition-colors underline">
+                            Privacy Policy
+                        </Link>
+                        <span>•</span>
+                        <Link href="/sms-terms" className="hover:text-gold transition-colors underline">
+                            SMS Terms
+                        </Link>
+                    </div>
                 </div>
             </div>
         </footer>
