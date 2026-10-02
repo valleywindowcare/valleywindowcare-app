@@ -84,6 +84,26 @@ export default function OnlineBookingPage() {
                         </div>
                     </div>
 
+                    {/* SMS & Contact Consent Notice */}
+                    <div className="mb-6 p-4 bg-slate-50 rounded-2xl border border-slate-200/80 text-center">
+                        <p className="text-[11px] sm:text-xs text-gray-500 leading-relaxed max-w-3xl mx-auto">
+                            By booking online, you agree to be contacted by Valley Property Services by phone, text and email about your booking and service appointments. Message frequency varies. Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help. Consent is not a condition of purchase. See our{" "}
+                            <Link href="/privacy-policy" className="underline hover:text-navy font-medium transition-colors">
+                                Privacy Policy
+                            </Link>{" "}
+                            and{" "}
+                            <Link href="/sms-terms" className="underline hover:text-navy font-medium transition-colors">
+                                SMS Terms
+                            </Link>.
+                        </p>
+                        <p className="text-xs sm:text-sm font-semibold text-navy mt-2">
+                            Prefer a quick quote instead?{" "}
+                            <Link href="/quote" className="text-navy hover:text-gold font-bold underline transition-colors inline-flex items-center gap-1">
+                                Request a free quote &rarr;
+                            </Link>
+                        </p>
+                    </div>
+
                     {/* Markate Embed Widget */}
                     <MarkateBookingWidget />
                 </div>
